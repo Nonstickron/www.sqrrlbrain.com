@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SqrrlBrain Studio — Billing</title>
+<style>
+:root {
+  --bg:#0f0f0d;--bg2:#181815;--bg3:#1f1f1b;--bg4:#252520;
+  --border:#2a2a25;--border2:#3a3a33;
+  --text:#e8e6de;--muted:#888880;--hint:#555550;
+  --amber:#e09820;--amber-dim:#a06e10;--amber-bg:#1e1800;--amber-hover:#2a2000;
+  --green:#5a9e50;--green-bg:#0a1808;--green-dim:#2a6020;
+  --blue:#4a8ec2;--blue-bg:#08141e;--blue-dim:#1a3a52;
+  --red:#c05040;--red-bg:#200a08;
+  --purple:#9060c0;--purple-bg:#14081e;
+  --mono:'Courier New',monospace;--sans:'Helvetica Neue',Helvetica,Arial,sans-serif;
+  --radius:6px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:14px;line-height:1.5;min-height:100vh}
+a{color:var(--amber);text-decoration:none}
+input,select,textarea{background:var(--bg3);border:1px solid var(--border2);color:var(--text);font-size:13px;padding:8px 10px;border-radius:var(--radius);font-family:var(--sans);width:100%;transition:border-color .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--amber-dim)}
+select option{background:var(--bg3)}
+textarea{resize:vertical;min-height:60px}
+label{font-size:11px;color:var(--muted);letter-spacing:.05em;display:block;margin-bottom:4px}
+ 
+.screen{display:none;min-height:100vh}
+.screen.active{display:flex}
+ 
+/* AUTH */
+#screen-auth{align-items:center;justify-content:center;flex-direction:column;gap:28px}
+.auth-brand{text-align:center;font-family:var(--mono);font-size:11px;color:var(--amber);letter-spacing:.15em;text-transform:uppercase}
+.auth-brand strong{display:block;font-size:22px;letter-spacing:.06em;margin-bottom:3px}
+.auth-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:32px;width:320px;display:flex;flex-direction:column;gap:16px}
+.auth-card h2{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.btn-google{display:flex;align-items:center;justify-content:center;gap:10px;background:white;border:none;color:#333;font-size:14px;padding:11px;border-radius:var(--radius);cursor:pointer;font-family:var(--sans);font-weight:500;width:100%;transition:background .1s}
+.btn-google:hover{background:#f0f0f0}
+.auth-note{font-size:11px;color:var(--hint);text-align:center;line-height:1.6}
+#auth-error{font-size:12px;color:var(--red);text-align:center;min-height:16px}
+ 
+/* APP */
+#screen-app{flex-direction:column}
+header{background:var(--bg2);border-bottom:1px solid var(--border);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;flex-shrink:0}
+.brand{font-family:var(--mono);font-size:10px;color:var(--amber);letter-spacing:.12em;text-transform:uppercase}
+.brand strong{font-size:14px;display:block;letter-spacing:.04em}
+nav{display:flex;gap:2px}
+nav button{background:transparent;border:none;color:var(--muted);font-size:13px;padding:6px 14px;cursor:pointer;border-radius:var(--radius);font-family:var(--sans);transition:all .1s}
+nav button:hover{color:var(--text);background:var(--bg3)}
+nav button.active{color:var(--amber);background:var(--amber-bg)}
+.header-right{display:flex;align-items:center;gap:10px}
+.user-chip{font-size:11px;color:var(--hint);font-family:var(--mono)}
+.btn-signout{background:transparent;border:1px solid var(--border);color:var(--hint);font-size:11px;padding:4px 10px;cursor:pointer;border-radius:3px;font-family:var(--sans)}
+.btn-signout:hover{color:var(--text);border-color:var(--border2)}
+main{flex:1;padding:24px;max-width:1100px;width:100%;margin:0 auto}
+ 
+.panel{display:none}.panel.active{display:block}
+ 
+/* CARDS */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px}
+.card-title{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--hint);margin-bottom:14px}
+.card-note{font-size:11px;color:var(--hint);line-height:1.6;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+ 
+/* JOB TYPE TABS */
+.type-tabs{display:flex;gap:0;margin-bottom:14px;border:1px solid var(--border2);border-radius:var(--radius);overflow:hidden}
+.type-tab{flex:1;background:transparent;border:none;color:var(--muted);font-size:12px;padding:8px 4px;cursor:pointer;font-family:var(--sans);transition:all .1s;border-right:1px solid var(--border2)}
+.type-tab:last-child{border-right:none}
+.type-tab:hover{background:var(--bg3);color:var(--text)}
+.type-tab.active{color:var(--amber);background:var(--amber-bg)}
+.type-tab.active-craft{color:#7ec870;background:var(--green-bg)}
+.type-tab.active-digital{color:var(--blue);background:var(--blue-bg)}
+ 
+/* GRIDS */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.fgroup{display:flex;flex-direction:column;gap:4px}
+.fstack{display:flex;flex-direction:column;gap:12px}
+.hint-text{font-size:11px;color:var(--hint);font-family:var(--mono);margin-top:4px}
+ 
+/* LAYOUT */
+.job-layout{display:grid;grid-template-columns:1fr 340px;gap:16px;align-items:start}
+.form-col{display:flex;flex-direction:column;gap:12px}
+.sidebar{position:sticky;top:24px;display:flex;flex-direction:column;gap:10px}
+ 
+/* ESTIMATE */
+.est-card{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--amber-dim);border-radius:0 var(--radius) var(--radius) 0;padding:18px 20px}
+.est-card.craft-mode{border-left-color:var(--green-dim)}
+.est-card.digital-mode{border-left-color:var(--blue-dim)}
+.est-title{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+.est-card.craft-mode .est-title{color:#7ec870}
+.est-card.digital-mode .est-title{color:var(--blue)}
+.est-row{display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:13px}
+.est-row .l{color:var(--muted)}.est-row .v{font-family:var(--mono)}
+.est-row.dim .l,.est-row.dim .v{color:var(--hint);font-size:12px}
+.est-row.waived .v{color:var(--hint);text-decoration:line-through}
+.est-hr{border:none;border-top:1px solid var(--border);margin:6px 0}
+.est-total{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0 0}
+.est-total .l{font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.est-total .v{font-family:var(--mono);font-size:24px;color:var(--amber)}
+.est-card.craft-mode .est-total .v{color:#7ec870}
+.est-card.digital-mode .est-total .v{color:var(--blue)}
+.cost-check{background:var(--bg3);border-radius:4px;padding:9px 11px;margin-top:10px;font-size:11px;color:var(--hint);font-family:var(--mono);line-height:1.9}
+.cost-check .hl{color:var(--muted)}
+ 
+/* BUTTONS */
+.btn-primary{background:var(--amber-bg);border:1px solid var(--amber-dim);color:var(--amber);font-size:13px;padding:10px;border-radius:var(--radius);cursor:pointer;font-family:var(--sans);width:100%;transition:all .1s}
+.btn-primary:hover:not(:disabled){background:var(--amber-hover)}
+.btn-primary:disabled{opacity:.35;cursor:not-allowed}
+.btn-sec{background:transparent;border:1px solid var(--border);color:var(--muted);font-size:12px;padding:8px;border-radius:var(--radius);cursor:pointer;font-family:var(--sans);width:100%}
+.btn-sec:hover{border-color:var(--border2);color:var(--text)}
+.btn-sm{font-size:11px;padding:4px 10px;border-radius:3px;cursor:pointer;font-family:var(--sans);border:1px solid var(--border);background:transparent;color:var(--muted)}
+.btn-sm:hover{color:var(--text);border-color:var(--border2)}
+.btn-del{border-color:#3a1510;color:var(--red)}
+.btn-del:hover{background:var(--red-bg);border-color:var(--red)}
+.check-row{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);cursor:pointer;user-select:none}
+.check-row input[type=checkbox]{accent-color:var(--amber);width:14px;height:14px;cursor:pointer;flex-shrink:0}
+ 
+/* STATUS BADGES */
+.badge{display:inline-block;font-size:10px;padding:2px 7px;border-radius:3px;font-family:var(--mono);letter-spacing:.05em;margin-left:6px;vertical-align:middle}
+.badge-draft{background:#181818;color:var(--muted);border:1px solid var(--border2)}
+.badge-sent{background:var(--blue-bg);color:var(--blue);border:1px solid var(--blue-dim)}
+.badge-paid{background:var(--green-bg);color:var(--green);border:1px solid var(--green-dim)}
+.badge-type-print{background:var(--amber-bg);color:var(--amber-dim);border:1px solid #2a2000;font-size:9px;padding:1px 5px}
+.badge-type-craft{background:var(--green-bg);color:#4a8040;border:1px solid #1a3010;font-size:9px;padding:1px 5px}
+.badge-type-digital{background:var(--blue-bg);color:#2a6090;border:1px solid #0a2030;font-size:9px;padding:1px 5px}
+ 
+/* LOG */
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px}
+.stat-card .sl{font-size:10px;color:var(--hint);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.stat-card .sv{font-family:var(--mono);font-size:18px}
+.stat-card .sv.amber{color:var(--amber)}
+.job-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:8px}
+.job-head{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;cursor:pointer;transition:background .1s}
+.job-head:hover{background:var(--bg3)}
+.job-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.job-inv{font-family:var(--mono);font-size:11px;color:var(--amber)}
+.job-client{font-size:14px;font-weight:500}
+.job-desc{font-size:13px;color:var(--muted)}
+.job-right{display:flex;align-items:baseline;gap:16px;flex-shrink:0}
+.job-date{font-size:11px;color:var(--hint);font-family:var(--mono)}
+.job-due{font-size:11px;font-family:var(--mono)}
+.job-due.overdue{color:var(--red)}
+.job-due.soon{color:var(--amber)}
+.job-due.ok{color:var(--hint)}
+.job-total{font-family:var(--mono);font-size:16px}
+.job-body{border-top:1px solid var(--border);padding:16px;display:none}
+.job-body.open{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.det-row{display:flex;justify-content:space-between;padding:3px 0;font-size:12px}
+.det-row .dl{color:var(--muted)}.det-row .dv{font-family:var(--mono)}
+.det-hr{border:none;border-top:1px solid var(--border);margin:6px 0}
+.det-total{display:flex;justify-content:space-between;padding:4px 0}
+.det-total .dl{font-size:12px;color:var(--muted)}.det-total .dv{font-family:var(--mono);color:var(--amber);font-size:14px}
+.det-meta{font-size:11px;color:var(--hint);font-family:var(--mono);line-height:1.9}
+.det-notes{font-size:12px;color:var(--muted);margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-style:italic}
+.job-actions{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}
+.empty{text-align:center;padding:48px 0;color:var(--hint);font-size:13px}
+.overdue-warn{background:var(--red-bg);border:1px solid #3a1510;border-radius:var(--radius);padding:10px 14px;font-size:12px;color:var(--red);margin-bottom:14px}
+ 
+/* CLIENTS */
+.client-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.client-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px}
+.client-name{font-size:14px;font-weight:500;margin-bottom:4px}
+.client-info{font-size:12px;color:var(--muted);line-height:1.8}
+.client-stats{font-size:11px;color:var(--hint);font-family:var(--mono);margin-top:8px;padding-top:8px;border-top:1px solid var(--border)}
+.client-actions{display:flex;gap:6px;margin-top:10px}
+ 
+/* SETTINGS */
+.settings-section{margin-bottom:28px}
+.settings-section h3{font-size:11px;color:var(--hint);text-transform:uppercase;letter-spacing:.1em;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid var(--border)}
+ 
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:100;overflow-y:auto;padding:32px;align-items:flex-start;justify-content:center}
+.modal-overlay.open{display:flex}
+.modal-box{background:var(--bg2);border:1px solid var(--border2);border-radius:10px;padding:24px;width:100%;max-width:500px;margin:auto}
+.modal-title{font-size:15px;font-weight:500;margin-bottom:18px}
+.modal-actions{display:flex;gap:8px;margin-top:20px}
+.modal-actions button{flex:1}
+ 
+/* INVOICE */
+.inv-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:200;overflow-y:auto;padding:24px}
+.inv-overlay.open{display:flex;flex-direction:column;align-items:center;gap:12px}
+.inv-toolbar{display:flex;gap:8px}
+.inv-toolbar button{background:var(--bg2);border:1px solid var(--border2);color:var(--text);font-size:13px;padding:8px 18px;border-radius:var(--radius);cursor:pointer;font-family:var(--sans)}
+.inv-toolbar button:hover{background:var(--bg3)}
+.inv-paper{background:white;color:#111;max-width:680px;width:100%;border-radius:4px;padding:52px 60px;font-family:var(--sans)}
+.inv-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:36px}
+.inv-brand{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#999}
+.inv-brand strong{display:block;font-size:20px;color:#111;font-weight:700;letter-spacing:.03em;margin-bottom:3px}
+.inv-brand small{font-size:10px;color:#bbb;display:block;line-height:1.7}
+.inv-numbox{text-align:right}
+.inv-numbox span{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#bbb;margin-bottom:3px}
+.inv-numbox strong{font-size:26px;font-weight:700;font-family:var(--mono);color:#111;letter-spacing:.04em}
+.inv-numbox small{display:block;font-size:11px;color:#888;margin-top:3px;line-height:1.8}
+.inv-parties{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px}
+.inv-party-lbl{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#bbb;margin-bottom:6px}
+.inv-party-name{font-size:14px;font-weight:600;margin-bottom:2px;color:#111}
+.inv-party-info{font-size:12px;color:#666;line-height:1.8}
+.inv-desc{background:#f7f7f5;border-radius:4px;padding:11px 14px;margin-bottom:28px;font-size:13px;color:#333}
+.inv-desc strong{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#bbb;display:block;margin-bottom:4px}
+table.inv-tbl{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:13px}
+table.inv-tbl th{text-align:left;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#bbb;padding:0 8px 8px 0;border-bottom:1px solid #ddd}
+table.inv-tbl th:last-child{text-align:right}
+table.inv-tbl td{padding:8px 8px 8px 0;border-bottom:1px solid #eee;color:#333;vertical-align:top}
+table.inv-tbl td:last-child{text-align:right;font-family:var(--mono);color:#111}
+table.inv-tbl tr.waived td{color:#bbb}
+table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
+.inv-totals{margin-left:auto;width:240px}
+.inv-tot-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;color:#555}
+.inv-tot-row .tv{font-family:var(--mono);color:#111}
+.inv-tot-hr{border:none;border-top:1px solid #ddd;margin:6px 0}
+.inv-tot-final{display:flex;justify-content:space-between;padding:10px 0 0;border-top:2px solid #111;margin-top:4px}
+.inv-tot-final .tl{font-size:13px;font-weight:600;color:#111;text-transform:uppercase;letter-spacing:.04em}
+.inv-tot-final .tv{font-family:var(--mono);font-size:20px;font-weight:700;color:#111}
+.inv-notes{margin-top:28px;padding-top:16px;border-top:1px solid #eee;font-size:12px;color:#888;line-height:1.7}
+.inv-notes strong{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#ccc;display:block;margin-bottom:4px}
+.inv-footer{margin-top:40px;padding-top:16px;border-top:1px solid #eee;display:flex;justify-content:space-between;font-size:10px;color:#ccc;letter-spacing:.04em}
+ 
+/* LOADING / CONFIG */
+#screen-loading{align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--muted);font-family:var(--mono);font-size:12px;letter-spacing:.08em}
+.spinner{width:28px;height:28px;border:2px solid var(--border2);border-top-color:var(--amber-dim);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+#screen-config{align-items:center;justify-content:center;flex-direction:column;gap:20px;padding:40px;text-align:center}
+.config-card{background:var(--bg2);border:1px solid var(--amber-dim);border-radius:10px;padding:32px;max-width:520px;width:100%}
+.config-card h2{color:var(--amber);font-size:16px;margin-bottom:12px}
+.config-card p{color:var(--muted);font-size:13px;line-height:1.7;margin-bottom:8px}
+.config-card code{background:var(--bg3);border:1px solid var(--border2);border-radius:3px;padding:2px 6px;font-family:var(--mono);font-size:12px;color:var(--text)}
+ 
+/* EXPENSES */
+.exp-item{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:11px 16px;margin-bottom:6px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.exp-item:hover{background:var(--bg3)}
+.exp-left{display:flex;align-items:center;gap:10px;flex:1;min-width:0}
+.exp-date{font-family:var(--mono);font-size:11px;color:var(--hint);flex-shrink:0}
+.exp-cat{font-size:10px;padding:2px 7px;border-radius:3px;font-family:var(--mono);letter-spacing:.04em;flex-shrink:0;border:1px solid var(--border2);color:var(--muted);background:var(--bg3)}
+.exp-vendor{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.exp-notes{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.exp-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.exp-vertical{font-size:10px;color:var(--hint);font-family:var(--mono)}
+.exp-deductible{font-size:10px;color:var(--green);font-family:var(--mono)}
+.exp-amount{font-family:var(--mono);font-size:15px;color:var(--red)}
+.pl-bar{height:6px;border-radius:3px;background:var(--border2);margin-top:8px;overflow:hidden}
+.pl-bar-fill{height:100%;border-radius:3px;background:var(--green);transition:width .3s}
+.pl-bar-fill.loss{background:var(--red)}
+ 
+@media print{
+  body{background:white}
+  #screen-app>header,nav,.sidebar,.btn-primary,.btn-sec,.job-actions,.stat-card,.inv-toolbar{display:none!important}
+  .inv-overlay{position:static;background:white;padding:0;display:block}
+  .inv-paper{box-shadow:none;border-radius:0}
+}
+@media(max-width:768px){
+  .job-layout,.job-body.open,.g2,.g3,.g4{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .inv-parties{grid-template-columns:1fr}
+  .inv-paper{padding:32px 24px}
+}
+</style>
+</head>
+<body>
+ 
+<div id="screen-loading" class="screen active"><div class="spinner"></div><span>initializing</span></div>
+ 
+<div id="screen-config" class="screen">
+  <div class="config-card">
+    <h2>Firebase config required</h2>
+    <p>Open this file in a text editor and replace the <code>FIREBASE_CONFIG</code> placeholder near the top of the script with your Firebase project config object.</p>
+    <p style="margin-top:12px;color:var(--hint);font-size:12px">Looking for: <code>const FIREBASE_CONFIG = null</code></p>
+  </div>
+</div>
+ 
+<div id="screen-auth" class="screen">
+  <div class="auth-brand"><strong>SqrrlBrain</strong>Studio LLC</div>
+  <div class="auth-card">
+    <h2>Sign in to continue</h2>
+    <button class="btn-google" id="btn-google-signin">
+      <svg width="18" height="18" viewBox="0 0 18 18"><path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"/><path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"/><path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/><path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"/></svg>
+      Sign in with Google
+    </button>
+    <div id="auth-error"></div>
+    <p class="auth-note">Only your authorized Google account can access this tool.</p>
+  </div>
+</div>
+ 
+<div id="screen-app" class="screen">
+  <header>
+    <div class="brand"><strong>SqrrlBrain</strong>billing</div>
+    <nav>
+      <button class="active" data-panel="new-job">new job</button>
+      <button data-panel="log">job log</button>
+      <button data-panel="clients">clients</button>
+      <button data-panel="expenses">expenses</button>
+      <button data-panel="settings">settings</button>
+    </nav>
+    <div class="header-right">
+      <span class="user-chip" id="user-email"></span>
+      <button class="btn-signout" id="btn-signout">sign out</button>
+    </div>
+  </header>
+ 
+  <main>
+    <!-- NEW JOB -->
+    <div class="panel active" id="panel-new-job">
+      <div class="job-layout">
+        <div class="form-col">
+ 
+          <!-- JOB TYPE -->
+          <div class="card">
+            <div class="card-title">job type</div>
+            <div class="type-tabs">
+              <button class="type-tab active" data-type="print">3D print</button>
+              <button class="type-tab" data-type="craft">craft / made goods</button>
+              <button class="type-tab" data-type="digital">digital / passive</button>
+            </div>
+            <div id="type-desc" style="font-size:12px;color:var(--hint);line-height:1.6">
+              Filament cost by weight + machine time + operator labor. Use for all 3D print commissions.
+            </div>
+          </div>
+ 
+          <!-- JOB INFO -->
+          <div class="card">
+            <div class="card-title">job info — invoice #<span id="inv-preview">00005</span></div>
+            <div class="fstack">
+              <div class="g2">
+                <div class="fgroup">
+                  <label>Client</label>
+                  <select id="f-client-select"><option value="">— select saved client —</option></select>
+                </div>
+                <div class="fgroup">
+                  <label>Or new client name</label>
+                  <input id="f-client-new" placeholder="First Last / Company" />
+                </div>
+              </div>
+              <div class="fgroup">
+                <label>Job description</label>
+                <input id="f-desc" placeholder="What was made or delivered?" />
+              </div>
+              <div class="g2">
+                <div class="fgroup">
+                  <label>Invoice date</label>
+                  <input id="f-date" type="date" />
+                </div>
+                <div class="fgroup">
+                  <label>Due date</label>
+                  <input id="f-due" type="date" />
+                </div>
+              </div>
+              <div class="fgroup">
+                <label>Notes / payment instructions</label>
+                <textarea id="f-notes" placeholder="Payment terms, delivery method, special conditions..."></textarea>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- 3D PRINT FIELDS -->
+          <div id="fields-print">
+            <div class="card" style="margin-bottom:12px">
+              <div class="card-title">material (filament)</div>
+              <div class="fstack">
+                <div class="g3">
+                  <div class="fgroup"><label>Grams used</label><input id="f-grams" type="number" min="0" step="1" placeholder="0" /></div>
+                  <div class="fgroup"><label>Filament cost / kg ($)</label><input id="f-cost-kg" type="number" min="0" step="0.01" value="25" /></div>
+                  <div class="fgroup"><label>Markup (×)</label><input id="f-markup" type="number" min="1" step="0.1" value="1.5" /></div>
+                </div>
+                <div class="hint-text" id="material-calc-note"></div>
+              </div>
+            </div>
+            <div class="card" style="margin-bottom:12px">
+              <div class="card-title">machine time</div>
+              <div class="fstack">
+                <div class="g2">
+                  <div class="fgroup"><label>Print hours</label><input id="f-hours" type="number" min="0" step="0.25" placeholder="0" /></div>
+                  <div class="fgroup"><label>Machine rate / hr ($)</label><input id="f-machine-rate" type="number" min="0" step="0.5" value="6" /></div>
+                </div>
+                <label class="check-row"><input type="checkbox" id="f-waive-machine" />Waive machine time (shown on invoice as WAIVED)</label>
+                <div class="card-note">Machine rate covers depreciation, wear parts, and power — not your time. Suggested: $5–8/hr for a prosumer printer. Your labor is billed separately below.</div>
+              </div>
+            </div>
+            <div class="card" style="margin-bottom:12px">
+              <div class="card-title">operator labor</div>
+              <div class="fstack">
+                <div class="g2">
+                  <div class="fgroup"><label>Labor hours (setup, post-processing, finishing)</label><input id="f-labor-hours-print" type="number" min="0" step="0.25" placeholder="0" /></div>
+                  <div class="fgroup"><label>Your labor rate / hr ($)</label><input id="f-labor-rate-print" type="number" min="0" step="1" value="25" /></div>
+                </div>
+                <div class="card-note">This is your time — loading filament, bed leveling, support removal, sanding, delivery. Separate from machine run time.</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">fees</div>
+              <div class="fstack">
+                <div class="g2">
+                  <div class="fgroup"><label>Design fee ($)</label><input id="f-design" type="number" min="0" step="1" placeholder="0" /></div>
+                  <div class="fgroup"><label>Setup / CAD fee ($)</label><input id="f-setup" type="number" min="0" step="1" placeholder="0" /></div>
+                </div>
+                <label class="check-row"><input type="checkbox" id="f-waive-design" />Waive design fee (shown on invoice as WAIVED)</label>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- CRAFT FIELDS -->
+          <div id="fields-craft" style="display:none">
+            <div class="card" style="margin-bottom:12px">
+              <div class="card-title">materials</div>
+              <div class="fstack">
+                <div class="g2">
+                  <div class="fgroup"><label>Materials cost ($) — what you spent</label><input id="f-craft-materials" type="number" min="0" step="0.01" placeholder="0.00" /></div>
+                  <div class="fgroup"><label>Markup (×)</label><input id="f-craft-markup" type="number" min="1" step="0.1" value="2" /></div>
+                </div>
+                <div class="hint-text" id="craft-material-note"></div>
+                <div class="card-note">Covers wood, leather, paper, hardware, ink, thread — whatever you actually bought. 2× is a reasonable starting markup for craft materials.</div>
+              </div>
+            </div>
+            <div class="card" style="margin-bottom:12px">
+              <div class="card-title">labor</div>
+              <div class="fstack">
+                <div class="g2">
+                  <div class="fgroup"><label>Hours worked</label><input id="f-craft-hours" type="number" min="0" step="0.25" placeholder="0" /></div>
+                  <div class="fgroup"><label>Your rate / hr ($)</label><input id="f-craft-rate" type="number" min="0" step="1" value="30" /></div>
+                </div>
+                <div class="card-note">For skilled craft work — woodburning, bookbinding, woodworking — $25–40/hr is defensible. Don't undersell your time.</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">fees & adjustments</div>
+              <div class="g2">
+                <div class="fgroup"><label>Design / commission fee ($)</label><input id="f-craft-design" type="number" min="0" step="1" placeholder="0" /></div>
+                <div class="fgroup"><label>Rush / complexity surcharge ($)</label><input id="f-craft-rush" type="number" min="0" step="1" placeholder="0" /></div>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- DIGITAL FIELDS -->
+          <div id="fields-digital" style="display:none">
+            <div class="card">
+              <div class="card-title">revenue entry</div>
+              <div class="fstack">
+                <div class="g2">
+                  <div class="fgroup">
+                    <label>Platform / source</label>
+                    <select id="f-digital-platform">
+                      <option>Shopify / Tract</option>
+                      <option>App Store / Inkwell</option>
+                      <option>Etsy</option>
+                      <option>PayPal</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="fgroup"><label>Gross revenue ($)</label><input id="f-digital-gross" type="number" min="0" step="0.01" placeholder="0.00" /></div>
+                </div>
+                <div class="g2">
+                  <div class="fgroup"><label>Platform fees ($)</label><input id="f-digital-fees" type="number" min="0" step="0.01" placeholder="0.00" /></div>
+                  <div class="fgroup"><label>COGS / fulfillment cost ($)</label><input id="f-digital-cogs" type="number" min="0" step="0.01" placeholder="0.00" /></div>
+                </div>
+                <div class="card-note">For Shopify: enter Printful cost + Shopify fees under COGS/fees. For App Store: Apple takes 30% (15% if under $1M). Net revenue = gross − fees − COGS.</div>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- SHARED ADJUSTMENTS -->
+          <div class="card" id="shared-adjustments">
+            <div class="card-title">adjustments</div>
+            <div class="g2">
+              <div class="fgroup"><label>Discount ($)</label><input id="f-discount" type="number" min="0" step="1" value="0" /></div>
+              <div class="fgroup" style="justify-content:flex-end">
+                <label>&nbsp;</label>
+                <label class="check-row" style="height:38px"><input type="checkbox" id="f-taxable" checked />Apply Florida sales tax (6.5%)</label>
+              </div>
+            </div>
+          </div>
+ 
+        </div><!-- /form-col -->
+ 
+        <div class="sidebar">
+          <div class="est-card" id="est-card">
+            <div class="est-title" id="est-title">estimate</div>
+            <div id="est-body">
+              <div class="est-row dim" id="est-material-row"><span class="l">Material cost</span><span class="v" id="est-material">$0.00</span></div>
+              <div class="est-row dim" id="est-machine-row"><span class="l">Machine time</span><span class="v" id="est-machine">$0.00</span></div>
+              <div class="est-row dim" id="est-labor-row"><span class="l">Operator labor</span><span class="v" id="est-labor">$0.00</span></div>
+              <div class="est-row dim" id="est-design-row"><span class="l">Design fee</span><span class="v" id="est-design">$0.00</span></div>
+              <div class="est-row dim" id="est-setup-row" style="display:none"><span class="l">Setup fee</span><span class="v" id="est-setup-val">$0.00</span></div>
+              <div class="est-row dim" id="est-craft-labor-row" style="display:none"><span class="l">Labor</span><span class="v" id="est-craft-labor">$0.00</span></div>
+              <div class="est-row dim" id="est-craft-rush-row" style="display:none"><span class="l">Rush fee</span><span class="v" id="est-craft-rush-val">$0.00</span></div>
+              <div class="est-row dim" id="est-digital-fees-row" style="display:none"><span class="l">Gross revenue</span><span class="v" id="est-digital-gross-val">$0.00</span></div>
+              <hr class="est-hr">
+              <div class="est-row"><span class="l">Subtotal</span><span class="v" id="est-subtotal">$0.00</span></div>
+              <div class="est-row dim" id="est-disc-row" style="display:none"><span class="l">Discount</span><span class="v" id="est-disc">−$0.00</span></div>
+              <div class="est-row dim" id="est-tax-row"><span class="l">FL tax (6.5%)</span><span class="v" id="est-tax">$0.00</span></div>
+              <div class="est-total"><span class="l" id="est-total-label">balance due</span><span class="v" id="est-total">$0.00</span></div>
+            </div>
+            <div class="cost-check" id="cost-check" style="display:none"></div>
+          </div>
+          <button class="btn-primary" id="btn-save-job">save as invoice #<span id="inv-preview2">00005</span></button>
+          <button class="btn-sec" id="btn-clear-form">clear form</button>
+          <div style="font-size:11px;color:var(--hint);text-align:center;line-height:1.6;min-height:16px" id="save-msg"></div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- JOB LOG -->
+    <div class="panel" id="panel-log">
+      <div id="overdue-banner" style="display:none"></div>
+      <div class="g4" id="stats-row" style="margin-bottom:18px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:12px">
+        <select id="log-filter" style="width:auto;font-size:12px;padding:5px 8px"><option value="all">All clients</option></select>
+        <select id="log-type-filter" style="width:auto;font-size:12px;padding:5px 8px">
+          <option value="all">All types</option>
+          <option value="print">3D print</option>
+          <option value="craft">Craft</option>
+          <option value="digital">Digital</option>
+        </select>
+        <select id="log-status-filter" style="width:auto;font-size:12px;padding:5px 8px">
+          <option value="all">All statuses</option>
+          <option value="draft">Draft</option>
+          <option value="sent">Sent</option>
+          <option value="paid">Paid</option>
+        </select>
+      </div>
+      <div id="job-list"><div class="empty">No jobs logged yet</div></div>
+    </div>
+ 
+    <!-- CLIENTS -->
+    <div class="panel" id="panel-clients">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+        <div style="font-size:13px;color:var(--muted)">Saved clients auto-populate the new job form</div>
+        <button class="btn-sm" id="btn-add-client">+ add client</button>
+      </div>
+      <div class="client-grid" id="client-grid"><div class="empty">No clients saved yet</div></div>
+    </div>
+ 
+    <!-- EXPENSES -->
+    <div class="panel" id="panel-expenses">
+ 
+      <!-- P&L SUMMARY -->
+      <div class="card" style="margin-bottom:18px;border-left:3px solid var(--green-dim);border-radius:0 var(--radius) var(--radius) 0">
+        <div class="card-title" style="color:var(--green)">profit & loss — current period</div>
+        <div class="g4" id="pl-stats" style="margin-bottom:14px"></div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <select id="pl-period" style="width:auto;font-size:12px;padding:5px 8px">
+            <option value="all">All time</option>
+            <option value="year">This year</option>
+            <option value="month" selected>This month</option>
+            <option value="quarter">This quarter</option>
+          </select>
+          <span style="font-size:11px;color:var(--hint)">Paid invoices only for revenue. All logged expenses.</span>
+        </div>
+      </div>
+ 
+      <!-- ADD EXPENSE -->
+      <div class="card" style="margin-bottom:14px">
+        <div class="card-title">log expense</div>
+        <div class="fstack">
+          <div class="g3">
+            <div class="fgroup"><label>Date</label><input id="ex-date" type="date" /></div>
+            <div class="fgroup"><label>Vendor / payee</label><input id="ex-vendor" placeholder="Printful, Amazon, etc." /></div>
+            <div class="fgroup"><label>Amount ($)</label><input id="ex-amount" type="number" min="0" step="0.01" placeholder="0.00" /></div>
+          </div>
+          <div class="g3">
+            <div class="fgroup">
+              <label>Category</label>
+              <select id="ex-category">
+                <option value="materials">Materials & supplies</option>
+                <option value="software">Software & subscriptions</option>
+                <option value="platform">Platform & marketplace fees</option>
+                <option value="equipment">Equipment & tools</option>
+                <option value="marketing">Marketing & advertising</option>
+                <option value="shipping">Shipping & postage</option>
+                <option value="professional">Professional services</option>
+                <option value="hosting">Domains & hosting</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="fgroup">
+              <label>Business line</label>
+              <select id="ex-vertical">
+                <option value="sqrrlbrain">SqrrlBrain (LLC overhead)</option>
+                <option value="print">3D Print</option>
+                <option value="tract">Tract</option>
+                <option value="inkwell">Inkwell</option>
+                <option value="craft">Craft / Made goods</option>
+              </select>
+            </div>
+            <div class="fgroup">
+              <label>Tax deductible?</label>
+              <label class="check-row" style="height:38px;margin-top:2px"><input type="checkbox" id="ex-deductible" checked />Yes — Schedule C deduction</label>
+            </div>
+          </div>
+          <div class="fgroup"><label>Notes</label><input id="ex-notes" placeholder="What was it for? Invoice or receipt ref?" /></div>
+          <div style="display:flex;gap:10px;align-items:center">
+            <button class="btn-primary" id="btn-save-expense" style="max-width:180px">log expense</button>
+            <span style="font-size:11px;color:var(--green);min-height:16px" id="expense-msg"></span>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- EXPENSE LOG -->
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:10px">
+        <div style="font-size:13px;color:var(--muted)">expense log</div>
+        <div style="display:flex;gap:8px">
+          <select id="ex-filter-cat" style="width:auto;font-size:12px;padding:5px 8px">
+            <option value="all">All categories</option>
+            <option value="materials">Materials</option>
+            <option value="software">Software</option>
+            <option value="platform">Platform fees</option>
+            <option value="equipment">Equipment</option>
+            <option value="marketing">Marketing</option>
+            <option value="shipping">Shipping</option>
+            <option value="professional">Professional</option>
+            <option value="hosting">Hosting</option>
+            <option value="other">Other</option>
+          </select>
+          <select id="ex-filter-vertical" style="width:auto;font-size:12px;padding:5px 8px">
+            <option value="all">All verticals</option>
+            <option value="sqrrlbrain">SqrrlBrain</option>
+            <option value="print">3D Print</option>
+            <option value="tract">Tract</option>
+            <option value="inkwell">Inkwell</option>
+            <option value="craft">Craft</option>
+          </select>
+        </div>
+      </div>
+      <div id="expense-list"><div class="empty">No expenses logged yet</div></div>
+    </div>
+ 
+    <!-- SETTINGS -->
+    <div class="panel" id="panel-settings">
+      <div class="settings-section">
+        <h3>Company / invoicer info</h3>
+        <div class="card">
+          <div class="g2">
+            <div class="fgroup"><label>Company name</label><input id="s-company" value="SqrrlBrain Studio LLC" /></div>
+            <div class="fgroup"><label>Your name</label><input id="s-name" value="Ron Goodrich" /></div>
+            <div class="fgroup"><label>Address</label><input id="s-address" value="2721 Victory Palm Drive" /></div>
+            <div class="fgroup"><label>Phone</label><input id="s-phone" value="386-589-9792" /></div>
+            <div class="fgroup"><label>Billing email</label><input id="s-email" placeholder="hello@sqrrlbrainstudio.com" /></div>
+            <div class="fgroup"><label>Payment instructions</label><input id="s-payment" value="paypal: rgoodrich@gmail.com" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="settings-section">
+        <h3>Default rates — 3D print</h3>
+        <div class="card">
+          <div class="g3">
+            <div class="fgroup"><label>Filament cost / kg ($)</label><input id="s-cost-kg" type="number" value="25" /></div>
+            <div class="fgroup"><label>Material markup (×)</label><input id="s-markup" type="number" value="1.5" step="0.1" /></div>
+            <div class="fgroup"><label>Machine rate / hr ($)</label><input id="s-machine-rate" type="number" value="6" step="0.5" /></div>
+          </div>
+          <div class="fgroup" style="margin-top:12px;max-width:300px"><label>Operator labor rate / hr ($)</label><input id="s-labor-rate-print" type="number" value="25" step="1" /></div>
+        </div>
+      </div>
+      <div class="settings-section">
+        <h3>Default rates — craft / made goods</h3>
+        <div class="card">
+          <div class="g3">
+            <div class="fgroup"><label>Material markup (×)</label><input id="s-craft-markup" type="number" value="2" step="0.1" /></div>
+            <div class="fgroup"><label>Labor rate / hr ($)</label><input id="s-craft-rate" type="number" value="30" step="1" /></div>
+          </div>
+        </div>
+      </div>
+      <div class="settings-section">
+        <h3>Invoice settings</h3>
+        <div class="card">
+          <div class="g2">
+            <div class="fgroup"><label>Next invoice number</label><input id="s-next-inv" type="number" value="5" min="1" /></div>
+            <div class="fgroup"><label>Default payment terms</label>
+              <select id="s-terms">
+                <option value="15">Net 15 (due in 15 days)</option>
+                <option value="30" selected>Net 30 (due in 30 days)</option>
+                <option value="0">Due on receipt</option>
+                <option value="7">Net 7</option>
+              </select>
+            </div>
+          </div>
+          <div style="font-size:12px;color:var(--hint);margin-top:8px">Next invoice: <span id="inv-preview-settings" style="color:var(--amber);font-family:var(--mono)">00005</span></div>
+        </div>
+      </div>
+      <button class="btn-primary" id="btn-save-settings" style="max-width:220px">save settings</button>
+      <div style="font-size:11px;color:var(--green);margin-top:8px;min-height:16px" id="settings-msg"></div>
+    </div>
+  </main>
+</div>
+ 
+<!-- CLIENT MODAL -->
+<div class="modal-overlay" id="modal-client">
+  <div class="modal-box">
+    <div class="modal-title" id="modal-client-title">Add client</div>
+    <div class="fstack">
+      <div class="fgroup"><label>Name</label><input id="mc-name" /></div>
+      <div class="g2">
+        <div class="fgroup"><label>Email</label><input id="mc-email" type="email" /></div>
+        <div class="fgroup"><label>Phone</label><input id="mc-phone" /></div>
+      </div>
+      <div class="fgroup"><label>Address</label><input id="mc-address" /></div>
+      <div class="fgroup"><label>Notes</label><textarea id="mc-notes" style="min-height:48px"></textarea></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-sec" id="modal-client-cancel">cancel</button>
+      <button class="btn-primary" id="modal-client-save">save client</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- INVOICE OVERLAY -->
+<div class="inv-overlay" id="inv-overlay">
+  <div class="inv-toolbar">
+    <button id="btn-inv-print">print / save PDF</button>
+    <button id="btn-inv-close">close</button>
+  </div>
+  <div class="inv-paper" id="inv-paper"></div>
+</div>
+ 
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+ 
+<script>
+// ─────────────────────────────────────────────
+// PASTE YOUR FIREBASE CONFIG HERE
+// ─────────────────────────────────────────────
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyCDf7dzCXackD7j21DQ-BxNVwiMmn5o2ng",
+  authDomain: "sqrrlbrain-billing.firebaseapp.com",
+  projectId: "sqrrlbrain-billing",
+  storageBucket: "sqrrlbrain-billing.firebasestorage.app",
+  messagingSenderId: "673586334045",
+  appId: "1:673586334045:web:910fcdf3fe60afc88540b4"
+};
+ 
+// Your authorized Google account email
+const AUTHORIZED_EMAIL = "sqrrlbrain@gmail.com";
+ 
+// ── HELPERS ──
+const $ = id => document.getElementById(id);
+const fmt = n => Number(n||0).toLocaleString("en-US",{style:"currency",currency:"USD"});
+const pad = n => String(n).padStart(5,"0");
+const today = () => new Date().toISOString().split("T")[0];
+const addDays = (dateStr, days) => { const d=new Date(dateStr); d.setDate(d.getDate()+days); return d.toISOString().split("T")[0]; };
+const showScreen = id => { document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active")); $(id).classList.add("active"); };
+ 
+if (!FIREBASE_CONFIG) { showScreen("screen-config"); }
+else {
+  firebase.initializeApp(FIREBASE_CONFIG);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  const provider = new firebase.auth.GoogleAuthProvider();
+ 
+  let currentUser=null, settings={}, clients=[], jobs=[], expenses=[];
+  let currentJobType = "print";
+ 
+  // ── AUTH ──
+  auth.onAuthStateChanged(async user => {
+    if (user) {
+      if (user.email !== AUTHORIZED_EMAIL) {
+        await auth.signOut();
+        $("auth-error").textContent = "Access denied.";
+        showScreen("screen-auth"); return;
+      }
+      currentUser = user;
+      $("user-email").textContent = user.email;
+      await loadAll();
+      showScreen("screen-app");
+    } else { currentUser=null; showScreen("screen-auth"); }
+  });
+  $("btn-google-signin").onclick = async () => {
+    $("auth-error").textContent = "";
+    try { await auth.signInWithPopup(provider); }
+    catch(e) { $("auth-error").textContent = e.message; }
+  };
+  $("btn-signout").onclick = () => auth.signOut();
+ 
+  const userDoc = path => db.collection("users").doc(currentUser.uid).collection(path);
+ 
+  async function loadAll() {
+    await loadSettings();
+    await loadClients();
+    await loadJobs();
+    await loadExpenses();
+    applySettingsToForm();
+    setTodayDates();
+    renderLog();
+    renderClients();
+    renderExpenses();
+  }
+ 
+  // ── SETTINGS ──
+  async function loadSettings() {
+    const doc = await db.collection("users").doc(currentUser.uid).collection("meta").doc("settings").get();
+    settings = doc.exists ? doc.data() : {
+      company:"SqrrlBrain Studio LLC",name:"Ron Goodrich",address:"2721 Victory Palm Drive",
+      phone:"386-589-9792",email:"",payment:"paypal: rgoodrich@gmail.com",
+      costKg:25,markup:1.5,machineRate:6,laborRatePrint:25,
+      craftMarkup:2,craftRate:30,
+      nextInv:5,terms:30
+    };
+    ["company","name","address","phone","email","payment"].forEach(k=>{const el=$("s-"+k);if(el)el.value=settings[k]||"";});
+    $("s-cost-kg").value=settings.costKg||25;
+    $("s-markup").value=settings.markup||1.5;
+    $("s-machine-rate").value=settings.machineRate||6;
+    $("s-labor-rate-print").value=settings.laborRatePrint||25;
+    $("s-craft-markup").value=settings.craftMarkup||2;
+    $("s-craft-rate").value=settings.craftRate||30;
+    $("s-next-inv").value=settings.nextInv||5;
+    $("s-terms").value=settings.terms||30;
+    updateInvPreviews();
+  }
+ 
+  async function saveSettings() {
+    settings = {
+      company:$("s-company").value, name:$("s-name").value, address:$("s-address").value,
+      phone:$("s-phone").value, email:$("s-email").value, payment:$("s-payment").value,
+      costKg:parseFloat($("s-cost-kg").value)||25, markup:parseFloat($("s-markup").value)||1.5,
+      machineRate:parseFloat($("s-machine-rate").value)||6,
+      laborRatePrint:parseFloat($("s-labor-rate-print").value)||25,
+      craftMarkup:parseFloat($("s-craft-markup").value)||2,
+      craftRate:parseFloat($("s-craft-rate").value)||30,
+      nextInv:parseInt($("s-next-inv").value)||5,
+      terms:parseInt($("s-terms").value)||30
+    };
+    await db.collection("users").doc(currentUser.uid).collection("meta").doc("settings").set(settings);
+    updateInvPreviews();
+    $("settings-msg").textContent="Settings saved.";
+    setTimeout(()=>$("settings-msg").textContent="",2500);
+  }
+ 
+  function updateInvPreviews() {
+    const n = pad(settings.nextInv||5);
+    $("inv-preview").textContent=n; $("inv-preview2").textContent=n;
+    $("inv-preview-settings").textContent=n;
+  }
+ 
+  function applySettingsToForm() {
+    $("f-cost-kg").value=settings.costKg||25;
+    $("f-markup").value=settings.markup||1.5;
+    $("f-machine-rate").value=settings.machineRate||6;
+    $("f-labor-rate-print").value=settings.laborRatePrint||25;
+    $("f-craft-markup").value=settings.craftMarkup||2;
+    $("f-craft-rate").value=settings.craftRate||30;
+  }
+ 
+  function setTodayDates() {
+    const t=today();
+    $("f-date").value=t;
+    $("f-due").value=addDays(t,settings.terms||30);
+    $("ex-date").value=t;
+  }
+ 
+  // ── CLIENTS ──
+  async function loadClients() {
+    const snap = await userDoc("clients").orderBy("name").get();
+    clients = snap.docs.map(d=>({id:d.id,...d.data()}));
+    const sel=$("f-client-select");
+    sel.innerHTML='<option value="">— select saved client —</option>';
+    clients.forEach(c=>{const o=document.createElement("option");o.value=c.id;o.textContent=c.name;sel.appendChild(o);});
+    const lf=$("log-filter");
+    lf.innerHTML='<option value="all">All clients</option>';
+    clients.forEach(c=>{const o=document.createElement("option");o.value=c.name;o.textContent=c.name;lf.appendChild(o);});
+  }
+ 
+  async function loadJobs() {
+    const snap = await userDoc("jobs").orderBy("createdAt","desc").get();
+    jobs = snap.docs.map(d=>({id:d.id,...d.data()}));
+  }
+ 
+  // ── JOB TYPE SWITCHING ──
+  const typeDescs = {
+    print:"Filament by weight + machine depreciation + operator labor. Use for all 3D print commissions.",
+    craft:"Materials cost + markup + your labor hours. Use for woodburning, bookbinding, woodworking, and other handmade goods.",
+    digital:"Log passive revenue from Shopify, App Store, Etsy, etc. Tracks gross, fees, COGS, and net."
+  };
+ 
+  document.querySelectorAll(".type-tab").forEach(btn=>{
+    btn.onclick=()=>{
+      currentJobType=btn.dataset.type;
+      document.querySelectorAll(".type-tab").forEach(b=>b.className="type-tab");
+      btn.classList.add("active");
+      if(currentJobType==="craft") btn.classList.add("active-craft");
+      else if(currentJobType==="digital") btn.classList.add("active-digital");
+      $("type-desc").textContent=typeDescs[currentJobType];
+      $("fields-print").style.display=currentJobType==="print"?"":"none";
+      $("fields-craft").style.display=currentJobType==="craft"?"":"none";
+      $("fields-digital").style.display=currentJobType==="digital"?"":"none";
+      $("shared-adjustments").style.display=currentJobType==="digital"?"none":"";
+      const ec=$("est-card");
+      ec.className="est-card"+(currentJobType==="craft"?" craft-mode":currentJobType==="digital"?" digital-mode":"");
+      $("est-title").textContent=currentJobType==="digital"?"revenue summary":"estimate";
+      $("est-total-label").textContent=currentJobType==="digital"?"net revenue":"balance due";
+      updateEstimate();
+    };
+  });
+ 
+  // ── CALC ──
+  function getFormValues() {
+    return {
+      type: currentJobType,
+      clientId: $("f-client-select").value,
+      clientNew: $("f-client-new").value.trim(),
+      desc: $("f-desc").value.trim(),
+      notes: $("f-notes").value.trim(),
+      date: $("f-date").value,
+      due: $("f-due").value,
+      // print
+      grams: parseFloat($("f-grams").value)||0,
+      costKg: parseFloat($("f-cost-kg").value)||0,
+      markup: parseFloat($("f-markup").value)||1,
+      hours: parseFloat($("f-hours").value)||0,
+      machineRate: parseFloat($("f-machine-rate").value)||0,
+      waiveMachine: $("f-waive-machine").checked,
+      laborHoursPrint: parseFloat($("f-labor-hours-print").value)||0,
+      laborRatePrint: parseFloat($("f-labor-rate-print").value)||0,
+      design: parseFloat($("f-design").value)||0,
+      waiveDesign: $("f-waive-design").checked,
+      setup: parseFloat($("f-setup").value)||0,
+      // craft
+      craftMaterials: parseFloat($("f-craft-materials").value)||0,
+      craftMarkup: parseFloat($("f-craft-markup").value)||1,
+      craftHours: parseFloat($("f-craft-hours").value)||0,
+      craftRate: parseFloat($("f-craft-rate").value)||0,
+      craftDesign: parseFloat($("f-craft-design").value)||0,
+      craftRush: parseFloat($("f-craft-rush").value)||0,
+      // digital
+      digitalGross: parseFloat($("f-digital-gross").value)||0,
+      digitalFees: parseFloat($("f-digital-fees").value)||0,
+      digitalCogs: parseFloat($("f-digital-cogs").value)||0,
+      digitalPlatform: $("f-digital-platform").value,
+      // shared
+      discount: parseFloat($("f-discount").value)||0,
+      taxable: $("f-taxable").checked,
+    };
+  }
+ 
+  function calcFromValues(v) {
+    let materialCost=0,machineCost=0,laborCost=0,designCost=0,setupCost=0,craftLaborCost=0,craftDesignCost=0,craftRushCost=0,rawMaterial=0,digitalNet=0;
+    if(v.type==="print"){
+      rawMaterial=(v.grams/1000)*v.costKg;
+      materialCost=rawMaterial*v.markup;
+      machineCost=v.waiveMachine?0:v.hours*v.machineRate;
+      laborCost=v.laborHoursPrint*v.laborRatePrint;
+      designCost=v.waiveDesign?0:v.design;
+      setupCost=v.setup;
+    } else if(v.type==="craft"){
+      materialCost=v.craftMaterials*v.craftMarkup;
+      rawMaterial=v.craftMaterials;
+      craftLaborCost=v.craftHours*v.craftRate;
+      craftDesignCost=v.craftDesign;
+      craftRushCost=v.craftRush;
+    } else if(v.type==="digital"){
+      digitalNet=v.digitalGross-v.digitalFees-v.digitalCogs;
+      return {digitalNet,digitalGross:v.digitalGross,digitalFees:v.digitalFees,digitalCogs:v.digitalCogs,subtotal:digitalNet,afterDiscount:digitalNet,tax:0,total:digitalNet,rawMaterial:0};
+    }
+    const subtotal=materialCost+machineCost+laborCost+designCost+setupCost+craftLaborCost+craftDesignCost+craftRushCost;
+    const afterDiscount=Math.max(0,subtotal-v.discount);
+    const tax=v.taxable?afterDiscount*0.065:0;
+    const total=afterDiscount+tax;
+    return {materialCost,machineCost,laborCost,designCost,setupCost,craftLaborCost,craftDesignCost,craftRushCost,subtotal,afterDiscount,tax,total,rawMaterial};
+  }
+ 
+  function updateEstimate() {
+    const v=getFormValues(), c=calcFromValues(v);
+ 
+    // show/hide rows
+    const isP=v.type==="print",isC=v.type==="craft",isD=v.type==="digital";
+    $("est-material-row").style.display=(isP||isC)?"":"none";
+    $("est-machine-row").style.display=isP?"":"none";
+    $("est-labor-row").style.display=isP?"":"none";
+    $("est-design-row").style.display=isP?"":"none";
+    $("est-setup-row").style.display=(isP&&v.setup>0)?"":"none";
+    $("est-craft-labor-row").style.display=isC?"":"none";
+    $("est-craft-rush-row").style.display=(isC&&v.craftRush>0)?"":"none";
+    $("est-digital-fees-row").style.display=isD?"":"none";
+    $("est-tax-row").style.display=(!isD&&v.taxable)?"":"none";
+    $("est-disc-row").style.display=(!isD&&v.discount>0)?"":"none";
+ 
+    if(isP){
+      $("est-material").textContent=fmt(c.materialCost);
+      $("est-machine").textContent=v.waiveMachine?`(${fmt(v.hours*v.machineRate)})`:fmt(c.machineCost);
+      $("est-machine-row").classList.toggle("waived",v.waiveMachine);
+      $("est-labor").textContent=fmt(c.laborCost);
+      $("est-design").textContent=v.waiveDesign?`(${fmt(v.design)})`:fmt(c.designCost);
+      $("est-design-row").classList.toggle("waived",v.waiveDesign);
+      $("est-setup-val").textContent=fmt(c.setupCost);
+      const check=$("cost-check");
+      if(v.grams>0&&c.materialCost>0){
+        check.style.display="";
+        check.innerHTML=`<span class="hl">raw filament:</span> ${fmt(c.rawMaterial)}<br><span class="hl">billed material:</span> ${fmt(c.materialCost)} (${v.markup.toFixed(1)}×)<br><span class="hl">material margin:</span> ${fmt(c.materialCost-c.rawMaterial)}`;
+      } else check.style.display="none";
+      const mn=$("material-calc-note");
+      mn.textContent=v.grams>0?`${v.grams}g ÷ 1000 × $${v.costKg}/kg × ${v.markup}× = ${fmt(c.materialCost)}`:"";
+    } else if(isC){
+      $("est-material").textContent=fmt(c.materialCost);
+      $("est-craft-labor").textContent=fmt(c.craftLaborCost);
+      $("est-craft-rush-val").textContent=fmt(c.craftRushCost);
+      const check=$("cost-check");
+      if(v.craftMaterials>0){
+        check.style.display="";
+        check.innerHTML=`<span class="hl">raw materials:</span> ${fmt(c.rawMaterial)}<br><span class="hl">billed materials:</span> ${fmt(c.materialCost)} (${v.craftMarkup.toFixed(1)}×)<br><span class="hl">labor (${v.craftHours}hr × $${v.craftRate}):</span> ${fmt(c.craftLaborCost)}`;
+      } else check.style.display="none";
+      const mn=$("craft-material-note");
+      mn.textContent=v.craftMaterials>0?`$${v.craftMaterials} × ${v.craftMarkup}× markup = ${fmt(c.materialCost)}`:"";
+    } else {
+      $("est-digital-gross-val").textContent=fmt(c.digitalGross);
+      const check=$("cost-check");
+      if(v.digitalGross>0){
+        check.style.display="";
+        check.innerHTML=`<span class="hl">gross:</span> ${fmt(c.digitalGross)}<br><span class="hl">fees + COGS:</span> −${fmt(v.digitalFees+v.digitalCogs)}<br><span class="hl">net:</span> ${fmt(c.digitalNet)}`;
+      } else check.style.display="none";
+    }
+ 
+    $("est-subtotal").textContent=fmt(c.subtotal);
+    $("est-disc").textContent="−"+fmt(v.discount);
+    $("est-tax").textContent=fmt(c.tax);
+    $("est-total").textContent=fmt(c.total);
+  }
+ 
+  // attach listeners
+  ["f-grams","f-cost-kg","f-markup","f-hours","f-machine-rate","f-labor-hours-print","f-labor-rate-print",
+   "f-design","f-setup","f-discount","f-craft-materials","f-craft-markup","f-craft-hours","f-craft-rate",
+   "f-craft-design","f-craft-rush","f-digital-gross","f-digital-fees","f-digital-cogs"].forEach(id=>{
+    const el=$(id); if(el) el.addEventListener("input",updateEstimate);
+  });
+  ["f-waive-machine","f-waive-design","f-taxable"].forEach(id=>{
+    const el=$(id); if(el) el.addEventListener("change",updateEstimate);
+  });
+ 
+  // ── SAVE JOB ──
+  $("btn-save-job").onclick = async () => {
+    const v=getFormValues(), c=calcFromValues(v);
+    let clientName="";
+    if(v.clientId){ const cl=clients.find(x=>x.id===v.clientId); clientName=cl?cl.name:""; }
+    else if(v.clientNew){
+      await userDoc("clients").add({name:v.clientNew,email:"",phone:"",address:"",notes:"",createdAt:firebase.firestore.FieldValue.serverTimestamp()});
+      clientName=v.clientNew;
+      await loadClients();
+    }
+    if(!clientName&&!v.clientNew){$("save-msg").textContent="Please enter a client name.";return;}
+    if(!v.desc){$("save-msg").textContent="Please enter a job description.";return;}
+ 
+    const invNo=pad(settings.nextInv);
+    const jobData={
+      invoiceNo:invNo, date:v.date, due:v.due,
+      client:clientName||v.clientNew,
+      desc:v.desc, notes:v.notes,
+      type:v.type, status:"draft",
+      formValues:v, calc:c,
+      createdAt:firebase.firestore.FieldValue.serverTimestamp()
+    };
+    const ref = await userDoc("jobs").add(jobData);
+    settings.nextInv+=1;
+    await db.collection("users").doc(currentUser.uid).collection("meta").doc("settings").update({nextInv:settings.nextInv});
+    updateInvPreviews();
+    // FIX: store the real Firestore ID
+    jobs.unshift({id:ref.id,...jobData});
+    clearForm();
+    $("save-msg").textContent=`Invoice #${invNo} saved as draft.`;
+    setTimeout(()=>$("save-msg").textContent="",3000);
+    renderLog();
+  };
+ 
+  function clearForm(){
+    $("f-client-select").value=""; $("f-client-new").value="";
+    $("f-desc").value=""; $("f-notes").value="";
+    $("f-grams").value=""; $("f-hours").value="";
+    $("f-labor-hours-print").value="";
+    $("f-design").value=""; $("f-setup").value="";
+    $("f-discount").value="0"; $("f-waive-machine").checked=false;
+    $("f-waive-design").checked=false; $("f-taxable").checked=true;
+    $("f-craft-materials").value=""; $("f-craft-hours").value="";
+    $("f-craft-design").value=""; $("f-craft-rush").value="";
+    $("f-digital-gross").value=""; $("f-digital-fees").value=""; $("f-digital-cogs").value="";
+    applySettingsToForm(); setTodayDates(); updateEstimate();
+  }
+  $("btn-clear-form").onclick = clearForm;
+ 
+  // ── LOG ──
+  function dueDateDisplay(due, status){
+    if(!due||status==="paid") return "";
+    const today_=new Date(); today_.setHours(0,0,0,0);
+    const d=new Date(due+"T00:00:00"); const diff=Math.round((d-today_)/86400000);
+    if(diff<0) return `<span class="job-due overdue">overdue ${Math.abs(diff)}d</span>`;
+    if(diff<=7) return `<span class="job-due soon">due in ${diff}d</span>`;
+    return `<span class="job-due ok">due ${new Date(due+"T00:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric"})}</span>`;
+  }
+ 
+  function renderLog(){
+    const cf=$("log-filter").value, tf=$("log-type-filter").value, sf=$("log-status-filter").value;
+    let filtered=jobs;
+    if(cf!=="all") filtered=filtered.filter(j=>j.client===cf);
+    if(tf!=="all") filtered=filtered.filter(j=>j.type===tf);
+    if(sf!=="all") filtered=filtered.filter(j=>j.status===sf);
+ 
+    const total=filtered.reduce((s,j)=>s+(j.calc?.total||0),0);
+    const unpaid=filtered.filter(j=>j.status!=="paid").reduce((s,j)=>s+(j.calc?.total||0),0);
+    const taxPaid=filtered.filter(j=>j.status==="paid"&&j.formValues?.taxable).reduce((s,j)=>s+(j.calc?.tax||0),0);
+    $("stats-row").innerHTML=[
+      ["total invoiced",fmt(total),true],
+      ["outstanding",fmt(unpaid),false],
+      ["tax (paid jobs)",fmt(taxPaid),false],
+      ["jobs",filtered.length,false],
+    ].map(([l,v,a])=>`<div class="stat-card"><div class="sl">${l}</div><div class="sv${a?" amber":""}">${v}</div></div>`).join("");
+ 
+    // overdue banner
+    const overdue=jobs.filter(j=>{
+      if(j.status==="paid"||!j.due) return false;
+      return new Date(j.due+"T00:00:00")<new Date();
+    });
+    const ob=$("overdue-banner");
+    if(overdue.length){ob.style.display="";ob.innerHTML=`<div class="overdue-warn">${overdue.length} invoice${overdue.length>1?"s are":" is"} overdue — ${overdue.map(j=>`#${j.invoiceNo} (${j.client})`).join(", ")}</div>`;}
+    else ob.style.display="none";
+ 
+    if(!filtered.length){$("job-list").innerHTML='<div class="empty">No jobs found</div>';return;}
+ 
+    $("job-list").innerHTML=filtered.map(job=>{
+      const typeBadge=`<span class="badge badge-type-${job.type||'print'}">${job.type||"print"}</span>`;
+      const statusBadge=`<span class="badge badge-${job.status||'draft'}">${job.status||"draft"}</span>`;
+      const dueBadge=dueDateDisplay(job.due,job.status);
+      const c=job.calc||{};
+      const v=job.formValues||{};
+      const isD=job.type==="digital";
+      return `<div class="job-item" id="ji-${job.id}">
+        <div class="job-head" onclick="toggleJob('${job.id}')">
+          <div class="job-left">
+            <span class="job-inv">#${job.invoiceNo}</span>
+            ${typeBadge}${statusBadge}
+            <span class="job-client">${job.client}</span>
+            <span class="job-desc">${job.desc}</span>
+          </div>
+          <div class="job-right">
+            ${dueBadge}
+            <span class="job-date">${job.date||""}</span>
+            <span class="job-total">${fmt(c.total||0)}</span>
+          </div>
+        </div>
+        <div class="job-body" id="jb-${job.id}">
+          <div>
+            ${isD?`
+              <div class="det-row"><span class="dl">Gross revenue</span><span class="dv">${fmt(c.digitalGross)}</span></div>
+              <div class="det-row"><span class="dl">Fees</span><span class="dv">−${fmt(v.digitalFees)}</span></div>
+              <div class="det-row"><span class="dl">COGS</span><span class="dv">−${fmt(v.digitalCogs)}</span></div>
+              <hr class="det-hr">
+              <div class="det-total"><span class="dl">Net revenue</span><span class="dv">${fmt(c.total)}</span></div>
+            `:`
+              ${(c.materialCost||0)>0?`<div class="det-row"><span class="dl">Material</span><span class="dv">${fmt(c.materialCost)}</span></div>`:""}
+              ${job.type==="print"&&(c.machineCost||0)>=0?`<div class="det-row"><span class="dl">Machine time${v.waiveMachine?" (waived)":""}</span><span class="dv">${fmt(v.waiveMachine?v.hours*v.machineRate:c.machineCost)}</span></div>`:""}
+              ${job.type==="print"&&(c.laborCost||0)>0?`<div class="det-row"><span class="dl">Operator labor (${v.laborHoursPrint}hr)</span><span class="dv">${fmt(c.laborCost)}</span></div>`:""}
+              ${job.type==="craft"&&(c.craftLaborCost||0)>0?`<div class="det-row"><span class="dl">Labor (${v.craftHours}hr)</span><span class="dv">${fmt(c.craftLaborCost)}</span></div>`:""}
+              ${(c.designCost||c.craftDesignCost||0)>0?`<div class="det-row"><span class="dl">Design fee</span><span class="dv">${fmt(c.designCost||c.craftDesignCost)}</span></div>`:""}
+              ${(c.setupCost||0)>0?`<div class="det-row"><span class="dl">Setup fee</span><span class="dv">${fmt(c.setupCost)}</span></div>`:""}
+              ${(c.craftRushCost||0)>0?`<div class="det-row"><span class="dl">Rush fee</span><span class="dv">${fmt(c.craftRushCost)}</span></div>`:""}
+              <hr class="det-hr">
+              <div class="det-row"><span class="dl">Subtotal</span><span class="dv">${fmt(c.subtotal)}</span></div>
+              ${(v.discount||0)>0?`<div class="det-row"><span class="dl">Discount</span><span class="dv">−${fmt(v.discount)}</span></div>`:""}
+              ${v.taxable?`<div class="det-row"><span class="dl">Tax (6.5%)</span><span class="dv">${fmt(c.tax)}</span></div>`:""}
+              <div class="det-total"><span class="dl">Total</span><span class="dv">${fmt(c.total)}</span></div>
+            `}
+            ${job.notes?`<div class="det-notes">${job.notes}</div>`:""}
+          </div>
+          <div>
+            <div class="det-meta">
+              ${job.type==="print"?`${v.grams||0}g filament @ $${v.costKg||0}/kg × ${v.markup||1}×<br>${v.hours||0}hr print @ $${v.machineRate||0}/hr<br>${v.laborHoursPrint>0?`${v.laborHoursPrint}hr labor @ $${v.laborRatePrint||0}/hr<br>`:""}${v.waiveMachine?'<span style="color:var(--amber)">machine time waived</span><br>':""}${v.waiveDesign?'<span style="color:var(--amber)">design fee waived</span><br>':""}`:
+              job.type==="craft"?`$${v.craftMaterials||0} materials × ${v.craftMarkup||1}× markup<br>${v.craftHours||0}hr labor @ $${v.craftRate||0}/hr`:
+              `${v.digitalPlatform||""}`}
+            </div>
+            <div class="job-actions">
+              ${job.type!=="digital"?`<button class="btn-sm" onclick="showInvoice('${job.id}')">view invoice</button>`:""}
+              ${job.status==="draft"?`<button class="btn-sm" onclick="setStatus('${job.id}','sent')">mark sent</button>`:""}
+              ${job.status==="sent"?`<button class="btn-sm" onclick="setStatus('${job.id}','paid')">mark paid</button><button class="btn-sm" onclick="setStatus('${job.id}','draft')">back to draft</button>`:""}
+              ${job.status==="paid"?`<button class="btn-sm" onclick="setStatus('${job.id}','sent')">mark unpaid</button>`:""}
+              <button class="btn-sm btn-del" onclick="deleteJob('${job.id}')">delete</button>
+            </div>
+          </div>
+        </div>
+      </div>`;
+    }).join("");
+  }
+ 
+  window.toggleJob=id=>{const b=$("jb-"+id);if(b)b.classList.toggle("open");};
+  window.setStatus=async(id,status)=>{
+    await userDoc("jobs").doc(id).update({status});
+    const j=jobs.find(x=>x.id===id); if(j) j.status=status;
+    renderLog();
+  };
+  window.deleteJob=async id=>{
+    if(!confirm("Delete this job?")) return;
+    await userDoc("jobs").doc(id).delete();
+    jobs=jobs.filter(j=>j.id!==id); renderLog();
+  };
+  ["log-filter","log-type-filter","log-status-filter"].forEach(id=>{
+    const el=$(id); if(el) el.addEventListener("change",renderLog);
+  });
+ 
+  // ── INVOICE ──
+  window.showInvoice=id=>{
+    const job=jobs.find(j=>j.id===id); if(!job) return;
+    const v=job.formValues||{}, c=job.calc||{}, s=settings;
+    const clientObj=clients.find(cl=>cl.name===job.client)||{};
+    let rows=[];
+    if(job.type==="print"){
+      if(v.grams>0) rows.push({label:`Filament — ${v.grams}g @ $${v.costKg}/kg × ${v.markup}× markup`,total:fmt(c.materialCost),waived:false});
+      if(v.hours>0) rows.push({label:`Machine time — ${v.hours}hr @ $${v.machineRate}/hr`,total:v.waiveMachine?"WAIVED":fmt(c.machineCost),waived:v.waiveMachine});
+      if(v.laborHoursPrint>0) rows.push({label:`Operator labor — ${v.laborHoursPrint}hr @ $${v.laborRatePrint}/hr`,total:fmt(c.laborCost),waived:false});
+      if(v.design>0) rows.push({label:"Design fee",total:v.waiveDesign?"WAIVED":fmt(c.designCost),waived:v.waiveDesign});
+      if(v.setup>0) rows.push({label:"Setup / CAD fee",total:fmt(c.setupCost),waived:false});
+    } else if(job.type==="craft"){
+      if(v.craftMaterials>0) rows.push({label:`Materials — $${v.craftMaterials} cost × ${v.craftMarkup}× markup`,total:fmt(c.materialCost),waived:false});
+      if(v.craftHours>0) rows.push({label:`Labor — ${v.craftHours}hr @ $${v.craftRate}/hr`,total:fmt(c.craftLaborCost),waived:false});
+      if(v.craftDesign>0) rows.push({label:"Design / commission fee",total:fmt(c.craftDesignCost),waived:false});
+      if(v.craftRush>0) rows.push({label:"Rush / complexity surcharge",total:fmt(c.craftRushCost),waived:false});
+    }
+    const dueStr=job.due?new Date(job.due+"T00:00:00").toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"}):"";
+    $("inv-paper").innerHTML=`
+      <div class="inv-hdr">
+        <div class="inv-brand">${s.company||""}<strong>${s.company||""}</strong><small>${s.address||""}</small><small>${s.phone||""}${s.email?` · ${s.email}`:""}</small></div>
+        <div class="inv-numbox"><span>invoice</span><strong>#${job.invoiceNo}</strong><small>issued: ${job.date||""}</small>${dueStr?`<small>due: ${dueStr}</small>`:""}</div>
+      </div>
+      <div class="inv-parties">
+        <div><div class="inv-party-lbl">from</div><div class="inv-party-name">${s.name||""}</div><div class="inv-party-info">${s.company||""}<br>${s.address||""}<br>${s.payment||""}</div></div>
+        <div><div class="inv-party-lbl">bill to</div><div class="inv-party-name">${job.client}</div><div class="inv-party-info">${clientObj.email||""}${clientObj.phone?`<br>${clientObj.phone}`:""}${clientObj.address?`<br>${clientObj.address}`:""}</div></div>
+      </div>
+      <div class="inv-desc"><strong>description</strong>${job.desc}</div>
+      <table class="inv-tbl"><thead><tr><th>Item</th><th style="text-align:right">Amount</th></tr></thead><tbody>
+        ${rows.map(r=>`<tr class="${r.waived?"waived":""}"><td>${r.label}</td><td>${r.total}</td></tr>`).join("")}
+      </tbody></table>
+      <div class="inv-totals">
+        <div class="inv-tot-row"><span>Subtotal</span><span class="tv">${fmt(c.subtotal)}</span></div>
+        ${(v.discount||0)>0?`<div class="inv-tot-row"><span>Discount</span><span class="tv">−${fmt(v.discount)}</span></div>`:""}
+        ${v.taxable?`<div class="inv-tot-row"><span>FL Sales Tax (6.5%)</span><span class="tv">${fmt(c.tax)}</span></div>`:""}
+        <div class="inv-tot-final"><span class="tl">Balance Due</span><span class="tv">${fmt(c.total)}</span></div>
+      </div>
+      ${job.notes?`<div class="inv-notes"><strong>notes / payment instructions</strong>${job.notes}</div>`:""}
+      <div class="inv-footer"><span>${s.company||""}</span><span>Invoice #${job.invoiceNo} · ${job.date||""}</span></div>`;
+    $("inv-overlay").classList.add("open");
+  };
+  $("btn-inv-close").onclick=()=>$("inv-overlay").classList.remove("open");
+  $("btn-inv-print").onclick=()=>window.print();
+ 
+  // ── CLIENTS ──
+  function renderClients(){
+    if(!clients.length){$("client-grid").innerHTML='<div class="empty">No clients saved yet</div>';return;}
+    $("client-grid").innerHTML=clients.map(c=>{
+      const cJobs=jobs.filter(j=>j.client===c.name);
+      const total=cJobs.reduce((s,j)=>s+(j.calc?.total||0),0);
+      return `<div class="client-card">
+        <div class="client-name">${c.name}</div>
+        <div class="client-info">${[c.email,c.phone,c.address].filter(Boolean).join("<br>")}</div>
+        <div class="client-stats">${cJobs.length} job${cJobs.length!==1?"s":""} · ${fmt(total)} invoiced</div>
+        <div class="client-actions">
+          <button class="btn-sm" onclick="editClient('${c.id}')">edit</button>
+          <button class="btn-sm btn-del" onclick="deleteClient('${c.id}')">delete</button>
+        </div>
+      </div>`;
+    }).join("");
+  }
+ 
+  let editingClientId=null;
+  $("btn-add-client").onclick=()=>{editingClientId=null;openClientModal();};
+  function openClientModal(client=null){
+    $("modal-client-title").textContent=client?"Edit client":"Add client";
+    $("mc-name").value=client?.name||""; $("mc-email").value=client?.email||"";
+    $("mc-phone").value=client?.phone||""; $("mc-address").value=client?.address||"";
+    $("mc-notes").value=client?.notes||"";
+    $("modal-client").classList.add("open"); $("mc-name").focus();
+  }
+  window.editClient=id=>{editingClientId=id;openClientModal(clients.find(c=>c.id===id));};
+  $("modal-client-cancel").onclick=()=>$("modal-client").classList.remove("open");
+  $("modal-client-save").onclick=async()=>{
+    const data={name:$("mc-name").value.trim(),email:$("mc-email").value.trim(),phone:$("mc-phone").value.trim(),address:$("mc-address").value.trim(),notes:$("mc-notes").value.trim()};
+    if(!data.name) return;
+    if(editingClientId) await userDoc("clients").doc(editingClientId).update(data);
+    else await userDoc("clients").add({...data,createdAt:firebase.firestore.FieldValue.serverTimestamp()});
+    $("modal-client").classList.remove("open");
+    await loadClients(); renderClients();
+  };
+  window.deleteClient=async id=>{
+    if(!confirm("Delete this client?")) return;
+    await userDoc("clients").doc(id).delete();
+    await loadClients(); renderClients();
+  };
+ 
+  // ── EXPENSES ──
+  async function loadExpenses() {
+    const snap = await userDoc("expenses").orderBy("date","desc").get();
+    expenses = snap.docs.map(d=>({id:d.id,...d.data()}));
+  }
+ 
+  const CAT_LABELS = {
+    materials:"Materials",software:"Software",platform:"Platform fees",
+    equipment:"Equipment",marketing:"Marketing",shipping:"Shipping",
+    professional:"Professional svcs",hosting:"Hosting",other:"Other"
+  };
+  const VERT_LABELS = {
+    sqrrlbrain:"SqrrlBrain",print:"3D Print",tract:"Tract",inkwell:"Inkwell",craft:"Craft"
+  };
+ 
+  $("btn-save-expense").onclick = async () => {
+    const amount = parseFloat($("ex-amount").value)||0;
+    const vendor = $("ex-vendor").value.trim();
+    if (!vendor||amount<=0) { $("expense-msg").textContent="Enter vendor and amount."; return; }
+    const data = {
+      date:$("ex-date").value, vendor, amount,
+      category:$("ex-category").value,
+      vertical:$("ex-vertical").value,
+      deductible:$("ex-deductible").checked,
+      notes:$("ex-notes").value.trim(),
+      createdAt:firebase.firestore.FieldValue.serverTimestamp()
+    };
+    const ref = await userDoc("expenses").add(data);
+    expenses.unshift({id:ref.id,...data});
+    $("ex-vendor").value=""; $("ex-amount").value=""; $("ex-notes").value="";
+    $("expense-msg").textContent="Logged.";
+    setTimeout(()=>$("expense-msg").textContent="",2000);
+    renderExpenses();
+  };
+ 
+  function getPeriodDates(period) {
+    const now = new Date();
+    if (period==="all") return {start:null,end:null};
+    if (period==="month") return {
+      start:new Date(now.getFullYear(),now.getMonth(),1).toISOString().split("T")[0],
+      end:new Date(now.getFullYear(),now.getMonth()+1,0).toISOString().split("T")[0]
+    };
+    if (period==="quarter") {
+      const q=Math.floor(now.getMonth()/3);
+      return {start:new Date(now.getFullYear(),q*3,1).toISOString().split("T")[0],
+              end:new Date(now.getFullYear(),q*3+3,0).toISOString().split("T")[0]};
+    }
+    if (period==="year") return {start:`${now.getFullYear()}-01-01`,end:`${now.getFullYear()}-12-31`};
+    return {start:null,end:null};
+  }
+ 
+  function inPeriod(dateStr,start,end) { if(!start) return true; return dateStr>=start&&dateStr<=end; }
+ 
+  function renderExpenses() {
+    const catF=$("ex-filter-cat").value, vertF=$("ex-filter-vertical").value;
+    const period=$("pl-period").value, {start,end}=getPeriodDates(period);
+ 
+    const paidRevenue=jobs.filter(j=>j.status==="paid"&&inPeriod(j.date||"",start,end))
+                          .reduce((s,j)=>s+(j.calc?.total||0),0);
+    const totalExp=expenses.filter(e=>inPeriod(e.date||"",start,end))
+                           .reduce((s,e)=>s+(e.amount||0),0);
+    const deductible=expenses.filter(e=>e.deductible&&inPeriod(e.date||"",start,end))
+                             .reduce((s,e)=>s+(e.amount||0),0);
+    const net=paidRevenue-totalExp;
+    const margin=paidRevenue>0?(net/paidRevenue)*100:0;
+ 
+    $("pl-stats").innerHTML=[
+      ["revenue (paid invoices)",fmt(paidRevenue),0],
+      ["total expenses",fmt(totalExp),1],
+      ["net profit / loss",fmt(net),2],
+      ["tax-deductible expenses",fmt(deductible),3],
+    ].map(([l,v,i])=>`<div class="stat-card">
+      <div class="sl">${l}</div>
+      <div class="sv" style="${i===2?(net>=0?"color:var(--green)":"color:var(--red)"):i===0?"color:var(--amber)":""}">${v}</div>
+      ${i===2&&paidRevenue>0?`<div class="pl-bar"><div class="pl-bar-fill${net<0?" loss":""}" style="width:${Math.min(100,Math.abs(margin)).toFixed(1)}%"></div></div>`:""}
+    </div>`).join("");
+ 
+    const filtered=expenses.filter(e=>{
+      if(catF!=="all"&&e.category!==catF) return false;
+      if(vertF!=="all"&&e.vertical!==vertF) return false;
+      return true;
+    });
+ 
+    if(!filtered.length){$("expense-list").innerHTML='<div class="empty">No expenses found</div>';return;}
+    const totalF=filtered.reduce((s,e)=>s+(e.amount||0),0);
+    $("expense-list").innerHTML=
+      `<div style="font-size:11px;color:var(--hint);font-family:var(--mono);text-align:right;margin-bottom:6px">${filtered.length} entries · ${fmt(totalF)} total</div>`+
+      filtered.map(e=>`<div class="exp-item">
+        <div class="exp-left">
+          <span class="exp-date">${e.date||""}</span>
+          <span class="exp-cat">${CAT_LABELS[e.category]||e.category}</span>
+          <div style="min-width:0">
+            <div class="exp-vendor">${e.vendor}</div>
+            ${e.notes?`<div class="exp-notes">${e.notes}</div>`:""}
+          </div>
+        </div>
+        <div class="exp-right">
+          <span class="exp-vertical">${VERT_LABELS[e.vertical]||e.vertical}</span>
+          ${e.deductible?`<span class="exp-deductible">deductible</span>`:""}
+          <span class="exp-amount">−${fmt(e.amount)}</span>
+          <button class="btn-sm btn-del" onclick="deleteExpense('${e.id}')">×</button>
+        </div>
+      </div>`).join("");
+  }
+ 
+  window.deleteExpense=async id=>{
+    if(!confirm("Delete this expense?")) return;
+    await userDoc("expenses").doc(id).delete();
+    expenses=expenses.filter(e=>e.id!==id);
+    renderExpenses();
+  };
+ 
+  ["ex-filter-cat","ex-filter-vertical","pl-period"].forEach(id=>{
+    const el=$(id); if(el) el.addEventListener("change",renderExpenses);
+  });
+ 
+  // ── SETTINGS ──
+  $("btn-save-settings").onclick=saveSettings;
+  $("s-next-inv").oninput=()=>$("inv-preview-settings").textContent=pad(parseInt($("s-next-inv").value)||1);
+ 
+  // ── NAV ──
+  document.querySelectorAll("nav button").forEach(btn=>{
+    btn.onclick=()=>{
+      document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
+      btn.classList.add("active");
+      document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
+      $("panel-"+btn.dataset.panel).classList.add("active");
+    };
+  });
+ 
+  $("f-client-select").onchange=()=>{if($("f-client-select").value)$("f-client-new").value="";};
+  $("f-client-new").oninput=()=>{if($("f-client-new").value)$("f-client-select").value="";};
+ 
+  updateEstimate();
+}
+</script>
+</body>
+</html>
