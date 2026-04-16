@@ -1195,16 +1195,16 @@ else {
     const clientObj=clients.find(cl=>cl.name===job.client)||{};
     let rows=[];
     if(job.type==="print"){
-      if(v.grams>0) rows.push({label:`Filament — ${v.grams}g @ $${v.costKg}/kg × ${v.markup}× markup`,total:fmt(c.materialCost),waived:false});
-      if(v.hours>0) rows.push({label:`Machine time — ${v.hours}hr @ $${v.machineRate}/hr`,total:v.waiveMachine?"WAIVED":fmt(c.machineCost),waived:v.waiveMachine});
-      if(v.laborHoursPrint>0) rows.push({label:`Operator labor — ${v.laborHoursPrint}hr @ $${v.laborRatePrint}/hr`,total:fmt(c.laborCost),waived:false});
-      if(v.design>0) rows.push({label:"Design fee",total:v.waiveDesign?"WAIVED":fmt(c.designCost),waived:v.waiveDesign});
-      if(v.setup>0) rows.push({label:"Setup / CAD fee",total:fmt(c.setupCost),waived:false});
+      if(v.grams>0) rows.push({label:"3D Print Materials",total:fmt(c.materialCost),waived:false});
+      if(v.hours>0) rows.push({label:"3D Print Services",total:v.waiveMachine?"WAIVED":fmt(c.machineCost),waived:v.waiveMachine});
+      if(v.laborHoursPrint>0) rows.push({label:"Labor",total:fmt(c.laborCost),waived:false});
+      if(v.design>0) rows.push({label:"Design Fee",total:v.waiveDesign?"WAIVED":fmt(c.designCost),waived:v.waiveDesign});
+      if(v.setup>0) rows.push({label:"Setup / CAD Fee",total:fmt(c.setupCost),waived:false});
     } else if(job.type==="craft"){
-      if(v.craftMaterials>0) rows.push({label:`Materials — $${v.craftMaterials} cost × ${v.craftMarkup}× markup`,total:fmt(c.materialCost),waived:false});
-      if(v.craftHours>0) rows.push({label:`Labor — ${v.craftHours}hr @ $${v.craftRate}/hr`,total:fmt(c.craftLaborCost),waived:false});
-      if(v.craftDesign>0) rows.push({label:"Design / commission fee",total:fmt(c.craftDesignCost),waived:false});
-      if(v.craftRush>0) rows.push({label:"Rush / complexity surcharge",total:fmt(c.craftRushCost),waived:false});
+      if(v.craftMaterials>0) rows.push({label:"Materials",total:fmt(c.materialCost),waived:false});
+      if(v.craftHours>0) rows.push({label:"Labor",total:fmt(c.craftLaborCost),waived:false});
+      if(v.craftDesign>0) rows.push({label:"Design / Commission Fee",total:fmt(c.craftDesignCost),waived:false});
+      if(v.craftRush>0) rows.push({label:"Rush / Complexity Surcharge",total:fmt(c.craftRushCost),waived:false});
     }
     const dueStr=job.due?new Date(job.due+"T00:00:00").toLocaleDateString("en-US",{year:"numeric",month:"long",day:"numeric"}):"";
     $("inv-paper").innerHTML=`
