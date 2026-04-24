@@ -245,9 +245,10 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
 
 @media print{
   body{background:white}
-  #screen-app>header,nav,.sidebar,.btn-primary,.btn-sec,.job-actions,.stat-card,.inv-toolbar{display:none!important}
-  .inv-overlay{position:static;background:white;padding:0;display:block}
-  .inv-paper{box-shadow:none;border-radius:0}
+  #screen-app>header,nav,main{display:none!important}
+  .inv-overlay{position:static!important;background:white!important;padding:0!important;display:block!important}
+  .inv-toolbar{display:none!important}
+  .inv-paper{box-shadow:none;border-radius:0;max-width:100%;padding:40px 48px}
 }
 @media(max-width:768px){
   .job-layout,.job-body.open,.g2,.g3,.g4{grid-template-columns:1fr}
