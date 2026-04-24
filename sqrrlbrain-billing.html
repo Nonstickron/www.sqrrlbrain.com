@@ -186,36 +186,36 @@ main{flex:1;padding:24px;max-width:1100px;width:100%;margin:0 auto}
 .inv-toolbar button:hover{background:var(--bg3)}
 .inv-paper{background:white;color:#111;max-width:680px;width:100%;border-radius:4px;padding:52px 60px;font-family:var(--sans)}
 .inv-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:36px}
-.inv-brand{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#999}
+.inv-brand{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#555}
 .inv-brand strong{display:block;font-size:20px;color:#111;font-weight:700;letter-spacing:.03em;margin-bottom:3px}
-.inv-brand small{font-size:10px;color:#bbb;display:block;line-height:1.7}
+.inv-brand small{font-size:10px;color:#555;display:block;line-height:1.7}
 .inv-numbox{text-align:right}
-.inv-numbox span{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#bbb;margin-bottom:3px}
+.inv-numbox span{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#555;margin-bottom:3px}
 .inv-numbox strong{font-size:26px;font-weight:700;font-family:var(--mono);color:#111;letter-spacing:.04em}
-.inv-numbox small{display:block;font-size:11px;color:#888;margin-top:3px;line-height:1.8}
+.inv-numbox small{display:block;font-size:11px;color:#444;margin-top:3px;line-height:1.8}
 .inv-parties{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px}
-.inv-party-lbl{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#bbb;margin-bottom:6px}
+.inv-party-lbl{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#555;margin-bottom:6px}
 .inv-party-name{font-size:14px;font-weight:600;margin-bottom:2px;color:#111}
-.inv-party-info{font-size:12px;color:#666;line-height:1.8}
-.inv-desc{background:#f7f7f5;border-radius:4px;padding:11px 14px;margin-bottom:28px;font-size:13px;color:#333}
-.inv-desc strong{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#bbb;display:block;margin-bottom:4px}
+.inv-party-info{font-size:12px;color:#444;line-height:1.8}
+.inv-desc{background:#f7f7f5;border-radius:4px;padding:11px 14px;margin-bottom:28px;font-size:13px;color:#222}
+.inv-desc strong{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#555;display:block;margin-bottom:4px}
 table.inv-tbl{width:100%;border-collapse:collapse;margin-bottom:24px;font-size:13px}
-table.inv-tbl th{text-align:left;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#bbb;padding:0 8px 8px 0;border-bottom:1px solid #ddd}
+table.inv-tbl th{text-align:left;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#555;padding:0 8px 8px 0;border-bottom:1px solid #ddd}
 table.inv-tbl th:last-child{text-align:right}
-table.inv-tbl td{padding:8px 8px 8px 0;border-bottom:1px solid #eee;color:#333;vertical-align:top}
+table.inv-tbl td{padding:8px 8px 8px 0;border-bottom:1px solid #eee;color:#222;vertical-align:top}
 table.inv-tbl td:last-child{text-align:right;font-family:var(--mono);color:#111}
-table.inv-tbl tr.waived td{color:#bbb}
+table.inv-tbl tr.waived td{color:#999}
 table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
 .inv-totals{margin-left:auto;width:240px}
-.inv-tot-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;color:#555}
+.inv-tot-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;color:#333}
 .inv-tot-row .tv{font-family:var(--mono);color:#111}
 .inv-tot-hr{border:none;border-top:1px solid #ddd;margin:6px 0}
 .inv-tot-final{display:flex;justify-content:space-between;padding:10px 0 0;border-top:2px solid #111;margin-top:4px}
 .inv-tot-final .tl{font-size:13px;font-weight:600;color:#111;text-transform:uppercase;letter-spacing:.04em}
 .inv-tot-final .tv{font-family:var(--mono);font-size:20px;font-weight:700;color:#111}
-.inv-notes{margin-top:28px;padding-top:16px;border-top:1px solid #eee;font-size:12px;color:#888;line-height:1.7}
-.inv-notes strong{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#ccc;display:block;margin-bottom:4px}
-.inv-footer{margin-top:40px;padding-top:16px;border-top:1px solid #eee;display:flex;justify-content:space-between;font-size:10px;color:#ccc;letter-spacing:.04em}
+.inv-notes{margin-top:28px;padding-top:16px;border-top:1px solid #eee;font-size:12px;color:#444;line-height:1.7}
+.inv-notes strong{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#555;display:block;margin-bottom:4px}
+.inv-footer{margin-top:40px;padding-top:16px;border-top:1px solid #eee;display:flex;justify-content:space-between;font-size:10px;color:#888;letter-spacing:.04em}
 
 /* LOADING / CONFIG */
 #screen-loading{align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--muted);font-family:var(--mono);font-size:12px;letter-spacing:.08em}
@@ -290,6 +290,7 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
       <button data-panel="log">job log</button>
       <button data-panel="clients">clients</button>
       <button data-panel="expenses">expenses</button>
+      <button data-panel="reports">reports</button>
       <button data-panel="settings">settings</button>
     </nav>
     <div class="header-right">
@@ -621,6 +622,22 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
         </div>
       </div>
       <div id="expense-list"><div class="empty">No expenses logged yet</div></div>
+    </div>
+
+    <!-- REPORTS -->
+    <div class="panel" id="panel-reports">
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:18px">
+        <select id="rpt-year" style="width:auto;font-size:12px;padding:5px 8px"></select>
+        <span style="font-size:11px;color:var(--hint)">Revenue = paid invoices only.</span>
+      </div>
+      <div class="g4" id="rpt-summary" style="margin-bottom:18px"></div>
+      <div class="g2" style="gap:16px;margin-bottom:16px">
+        <div class="card"><div class="card-title">revenue by type</div><div id="rpt-by-type"></div></div>
+        <div class="card"><div class="card-title">expenses by category</div><div id="rpt-by-cat"></div></div>
+      </div>
+      <div class="card" style="margin-bottom:16px"><div class="card-title">monthly breakdown</div><div id="rpt-monthly"></div></div>
+      <div class="card" style="margin-bottom:16px"><div class="card-title">revenue by client</div><div id="rpt-by-client"></div></div>
+      <div class="card"><div class="card-title">tax summary</div><div id="rpt-tax"></div></div>
     </div>
 
     <!-- SETTINGS -->
@@ -1392,6 +1409,73 @@ else {
     const el=$(id); if(el) el.addEventListener("change",renderExpenses);
   });
 
+  // ── REPORTS ──
+  function renderReports() {
+    const yearSel = $("rpt-year");
+    const nowYear = new Date().getFullYear();
+    const allYears = new Set([String(nowYear)]);
+    jobs.forEach(j => { if(j.date) allYears.add(j.date.substring(0,4)); });
+    expenses.forEach(e => { if(e.date) allYears.add(e.date.substring(0,4)); });
+    const years = Array.from(allYears).sort().reverse();
+    const prevVal = yearSel.value;
+    yearSel.innerHTML = years.map(y=>`<option value="${y}">${y}</option>`).join("");
+    yearSel.value = (prevVal && years.includes(prevVal)) ? prevVal : String(nowYear);
+    const year = yearSel.value;
+
+    const yJobs = jobs.filter(j=>(j.date||"").startsWith(year));
+    const paidJobs = yJobs.filter(j=>j.status==="paid");
+    const yExp = expenses.filter(e=>(e.date||"").startsWith(year));
+
+    const revenue = paidJobs.reduce((s,j)=>s+(j.calc?.total||0),0);
+    const outstanding = yJobs.filter(j=>j.status!=="paid").reduce((s,j)=>s+(j.calc?.total||0),0);
+    const totalExp = yExp.reduce((s,e)=>s+(e.amount||0),0);
+    const net = revenue - totalExp;
+
+    $("rpt-summary").innerHTML = [
+      ["revenue (paid)", fmt(revenue), "color:var(--amber)"],
+      ["outstanding",    fmt(outstanding), ""],
+      ["expenses",       fmt(totalExp), ""],
+      ["net profit",     fmt(net), net>=0?"color:var(--green)":"color:var(--red)"],
+    ].map(([l,v,s])=>`<div class="stat-card"><div class="sl">${l}</div><div class="sv" style="${s}">${v}</div></div>`).join("");
+
+    const typeRevenue = {print:0, craft:0, digital:0};
+    paidJobs.forEach(j=>{ typeRevenue[j.type||"print"]=(typeRevenue[j.type||"print"]||0)+(j.calc?.total||0); });
+    const maxTypeRev = Math.max(...Object.values(typeRevenue), 1);
+    $("rpt-by-type").innerHTML = [["print","3D Print"],["craft","Craft"],["digital","Digital"]].map(([k,l])=>{
+      const v=typeRevenue[k]||0;
+      return `<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px"><span style="color:var(--muted)">${l}</span><span style="font-family:var(--mono)">${fmt(v)}</span></div><div class="pl-bar"><div class="pl-bar-fill" style="width:${(v/maxTypeRev*100).toFixed(1)}%"></div></div></div>`;
+    }).join("")+(revenue===0?'<div class="empty" style="padding:16px 0">No paid jobs this year</div>':"");
+
+    const catTotals={};
+    yExp.forEach(e=>{ catTotals[e.category]=(catTotals[e.category]||0)+e.amount; });
+    const sortedCats=Object.entries(catTotals).sort((a,b)=>b[1]-a[1]);
+    const maxCat=Math.max(...Object.values(catTotals),1);
+    $("rpt-by-cat").innerHTML=sortedCats.length?sortedCats.map(([k,v])=>`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px"><span style="color:var(--muted)">${CAT_LABELS[k]||k}</span><span style="font-family:var(--mono)">${fmt(v)}</span></div><div class="pl-bar"><div class="pl-bar-fill loss" style="width:${(v/maxCat*100).toFixed(1)}%"></div></div></div>`).join(""):'<div class="empty" style="padding:16px 0">No expenses this year</div>';
+
+    const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const months=MON.map((name,i)=>{
+      const key=`${year}-${String(i+1).padStart(2,"0")}`;
+      const moRev=paidJobs.filter(j=>(j.date||"").startsWith(key)).reduce((s,j)=>s+(j.calc?.total||0),0);
+      const moExp=yExp.filter(e=>(e.date||"").startsWith(key)).reduce((s,e)=>s+(e.amount||0),0);
+      return {name,moRev,moExp,moNet:moRev-moExp};
+    });
+    $("rpt-monthly").innerHTML=`<table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr>${["Month","Revenue","Expenses","Net"].map((h,i)=>`<th style="text-align:${i>0?"right":"left"};padding:4px 8px 8px 0;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--hint);border-bottom:1px solid var(--border)">${h}</th>`).join("")}</tr></thead><tbody>${months.map(({name,moRev,moExp,moNet})=>`<tr style="${moRev===0&&moExp===0?"opacity:.35":""}"><td style="padding:5px 8px 5px 0;color:var(--muted)">${name}</td><td style="padding:5px 8px 5px 0;text-align:right;font-family:var(--mono);color:var(--amber)">${moRev>0?fmt(moRev):"—"}</td><td style="padding:5px 8px 5px 0;text-align:right;font-family:var(--mono);color:var(--red)">${moExp>0?fmt(moExp):"—"}</td><td style="padding:5px 0;text-align:right;font-family:var(--mono);color:${moNet>=0?"var(--green)":"var(--red)"}">${moRev>0||moExp>0?fmt(moNet):"—"}</td></tr>`).join("")}</tbody></table>`;
+
+    const clientRevenue={};
+    paidJobs.forEach(j=>{ clientRevenue[j.client]=(clientRevenue[j.client]||0)+(j.calc?.total||0); });
+    const sortedCl=Object.entries(clientRevenue).sort((a,b)=>b[1]-a[1]);
+    const maxCl=Math.max(...Object.values(clientRevenue),1);
+    $("rpt-by-client").innerHTML=sortedCl.length?sortedCl.map(([name,v])=>`<div style="margin-bottom:10px"><div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px"><span style="color:var(--muted)">${name}</span><span style="font-family:var(--mono)">${fmt(v)}</span></div><div class="pl-bar"><div class="pl-bar-fill" style="width:${(v/maxCl*100).toFixed(1)}%"></div></div></div>`).join(""):'<div class="empty" style="padding:16px 0">No paid clients this year</div>';
+
+    const taxCollected=paidJobs.filter(j=>j.formValues?.taxable).reduce((s,j)=>s+(j.calc?.tax||0),0);
+    const deductTotal=yExp.filter(e=>e.deductible).reduce((s,e)=>s+(e.amount||0),0);
+    const deductByCat={};
+    yExp.filter(e=>e.deductible).forEach(e=>{ deductByCat[e.category]=(deductByCat[e.category]||0)+e.amount; });
+    const sortedDeduct=Object.entries(deductByCat).sort((a,b)=>b[1]-a[1]);
+    $("rpt-tax").innerHTML=`<div class="g2" style="margin-bottom:${sortedDeduct.length?14:0}px"><div class="stat-card"><div class="sl">FL sales tax collected</div><div class="sv">${fmt(taxCollected)}</div></div><div class="stat-card"><div class="sl">deductible expenses (Schedule C)</div><div class="sv" style="color:var(--green)">${fmt(deductTotal)}</div></div></div>${sortedDeduct.length?`<div style="font-size:10px;color:var(--hint);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">Deductible by category</div><table style="width:100%;border-collapse:collapse;font-size:12px"><tbody>${sortedDeduct.map(([k,v])=>`<tr><td style="padding:4px 8px 4px 0;color:var(--muted)">${CAT_LABELS[k]||k}</td><td style="padding:4px 0;text-align:right;font-family:var(--mono)">${fmt(v)}</td></tr>`).join("")}</tbody></table>`:""}`;
+  }
+  $("rpt-year").addEventListener("change", renderReports);
+
   // ── SETTINGS ──
   $("btn-save-settings").onclick=saveSettings;
   $("s-next-inv").oninput=()=>$("inv-preview-settings").textContent=pad(parseInt($("s-next-inv").value)||1);
@@ -1403,6 +1487,7 @@ else {
       btn.classList.add("active");
       document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
       $("panel-"+btn.dataset.panel).classList.add("active");
+      if(btn.dataset.panel==="reports") renderReports();
     };
   });
 
