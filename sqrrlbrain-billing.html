@@ -216,6 +216,16 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
 .inv-notes{margin-top:28px;padding-top:16px;border-top:1px solid #ddd;font-size:13px;color:#111;line-height:1.7}
 .inv-notes strong{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#111;font-weight:700;display:block;margin-bottom:4px}
 .inv-footer{margin-top:40px;padding-top:16px;border-top:1px solid #ddd;display:flex;justify-content:space-between;font-size:11px;color:#111;letter-spacing:.04em}
+.inv-photos{margin-top:24px;padding-top:16px;border-top:1px solid #ddd;page-break-inside:avoid}
+.inv-photos strong{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#111;font-weight:700;display:block;margin-bottom:10px}
+.inv-photos-grid{display:grid;gap:10px}
+.inv-photos-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;border:1px solid #ddd;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+.job-photo-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;margin-bottom:4px}
+.job-photo-thumb{position:relative;width:72px;height:72px}
+.job-photo-thumb img{width:100%;height:100%;object-fit:cover;border-radius:4px;border:1px solid var(--border2)}
+.photo-del{position:absolute;top:2px;right:2px;background:rgba(0,0,0,.65);border:none;color:white;font-size:10px;padding:1px 5px;border-radius:2px;cursor:pointer;line-height:1.5}
+.job-photo-add{width:72px;height:72px;border:1px dashed var(--border2);border-radius:4px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:22px;color:var(--hint);transition:all .1s}
+.job-photo-add:hover{border-color:var(--amber);color:var(--amber)}
 
 /* LOADING / CONFIG */
 #screen-loading{align-items:center;justify-content:center;flex-direction:column;gap:12px;color:var(--muted);font-family:var(--mono);font-size:12px;letter-spacing:.08em}
@@ -732,6 +742,7 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
 
 <script>
 // ─────────────────────────────────────────────
@@ -762,6 +773,7 @@ else {
   firebase.initializeApp(FIREBASE_CONFIG);
   const auth = firebase.auth();
   const db = firebase.firestore();
+  const storage = firebase.storage();
   const provider = new firebase.auth.GoogleAuthProvider();
 
   let currentUser=null, settings={}, clients=[], jobs=[], expenses=[];
@@ -1179,6 +1191,10 @@ else {
               job.type==="craft"?`$${v.craftMaterials||0} materials × ${v.craftMarkup||1}× markup<br>${v.craftHours||0}hr labor @ $${v.craftRate||0}/hr`:
               `${v.digitalPlatform||""}`}
             </div>
+            <div class="job-photo-row">
+              ${(job.photos||[]).map((url,i)=>`<div class="job-photo-thumb"><img src="${url}"><button class="photo-del" onclick="deletePhoto('${job.id}',${i})">×</button></div>`).join("")}
+              ${(job.photos||[]).length<3?`<label class="job-photo-add" title="Add photo (up to 3)">+<input type="file" accept="image/*" style="display:none" onchange="uploadPhoto('${job.id}',this)"></label>`:""}
+            </div>
             <div class="job-actions">
               ${job.type!=="digital"?`<button class="btn-sm" onclick="showInvoice('${job.id}')">view invoice</button>`:""}
               ${job.status==="draft"?`<button class="btn-sm" onclick="setStatus('${job.id}','sent')">mark sent</button>`:""}
@@ -1246,6 +1262,7 @@ else {
         <div class="inv-tot-final"><span class="tl">Balance Due</span><span class="tv">${fmt(c.total)}</span></div>
       </div>
       ${job.notes?`<div class="inv-notes"><strong>notes / payment instructions</strong>${job.notes}</div>`:""}
+      ${job.photos&&job.photos.length?`<div class="inv-photos"><strong>work photos</strong><div class="inv-photos-grid" style="grid-template-columns:repeat(${Math.min(job.photos.length,3)},1fr)">${job.photos.map(url=>`<img src="${url}">`).join("")}</div></div>`:""}
       <div class="inv-footer"><span>${s.company||""}</span><span>Invoice #${job.invoiceNo} · ${job.date||""}</span></div>`;
     $("inv-overlay").classList.add("open");
   };
@@ -1399,6 +1416,36 @@ else {
         </div>
       </div>`).join("");
   }
+
+  window.uploadPhoto = async (jobId, input) => {
+    const file = input.files[0];
+    if (!file) return;
+    const job = jobs.find(j => j.id === jobId);
+    if (!job || (job.photos||[]).length >= 3) return;
+    input.disabled = true;
+    try {
+      const ref = storage.ref(`users/${currentUser.uid}/jobs/${jobId}/${Date.now()}_${file.name}`);
+      await ref.put(file);
+      const url = await ref.getDownloadURL();
+      const photos = [...(job.photos||[]), url];
+      await userDoc("jobs").doc(jobId).update({photos});
+      job.photos = photos;
+      renderLog();
+      const b = $("jb-"+jobId); if(b) b.classList.add("open");
+    } catch(e) { alert("Upload failed: "+e.message); input.disabled = false; }
+  };
+
+  window.deletePhoto = async (jobId, idx) => {
+    if (!confirm("Remove this photo?")) return;
+    const job = jobs.find(j => j.id === jobId);
+    if (!job || !job.photos) return;
+    try { await storage.refFromURL(job.photos[idx]).delete(); } catch(e) {}
+    const photos = job.photos.filter((_,i) => i !== idx);
+    await userDoc("jobs").doc(jobId).update({photos});
+    job.photos = photos;
+    renderLog();
+    const b = $("jb-"+jobId); if(b) b.classList.add("open");
+  };
 
   window.deleteExpense=async id=>{
     if(!confirm("Delete this expense?")) return;
