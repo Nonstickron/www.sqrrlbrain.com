@@ -244,11 +244,11 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
 .pl-bar-fill.loss{background:var(--red)}
 
 @media print{
-  body{background:white}
-  #screen-app>header,nav,main{display:none!important}
-  .inv-overlay{position:static!important;background:white!important;padding:0!important;display:block!important}
+  body{background:white;margin:0;padding:0}
+  body>*{display:none!important}
+  .inv-overlay{display:block!important;position:static!important;background:white!important;padding:0!important}
   .inv-toolbar{display:none!important}
-  .inv-paper{box-shadow:none;border-radius:0;max-width:100%;padding:40px 48px}
+  .inv-paper{box-shadow:none!important;border-radius:0!important;max-width:100%!important;padding:40px 48px!important}
 }
 @media(max-width:768px){
   .job-layout,.job-body.open,.g2,.g3,.g4{grid-template-columns:1fr}
