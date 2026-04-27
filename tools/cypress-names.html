@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cypress — Name Generator</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #0e1410;
+      color: #e0d8c8;
+      min-height: 100vh;
+      padding: 28px 24px;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      letter-spacing: 0.06em;
+      color: #c9a84c;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 0.82rem;
+      color: #4a5e42;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    .layout {
+      display: flex;
+      gap: 24px;
+      max-width: 860px;
+    }
+
+    .generator { flex: 1; }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 6px 16px;
+      border: 1px solid #253025;
+      background: #161e16;
+      color: #5a6e52;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+      font-family: inherit;
+      transition: all 0.12s;
+    }
+
+    .tab:hover {
+      border-color: #3a5030;
+      color: #8aa870;
+    }
+
+    .tab.active {
+      background: #202e20;
+      border-color: #6a9050;
+      color: #c9a84c;
+    }
+
+    .reg-desc {
+      font-size: 0.78rem;
+      color: #4a5a42;
+      margin-bottom: 14px;
+      font-style: italic;
+      min-height: 1.1em;
+      letter-spacing: 0.02em;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .btn-gen {
+      padding: 9px 22px;
+      background: #2e4228;
+      border: 1px solid #507040;
+      color: #b8d090;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 0.9rem;
+      letter-spacing: 0.06em;
+      font-family: inherit;
+      transition: all 0.12s;
+    }
+
+    .btn-gen:hover {
+      background: #3a5232;
+      border-color: #70a058;
+      color: #d0e8a8;
+    }
+
+    .count-sel {
+      padding: 7px 10px;
+      background: #161e16;
+      border: 1px solid #253025;
+      color: #7a9068;
+      border-radius: 3px;
+      font-size: 0.85rem;
+      font-family: inherit;
+    }
+
+    /* Names grid */
+    .names-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-height: 90px;
+      align-content: flex-start;
+    }
+
+    .name-pill {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 11px 5px 12px;
+      background: #182018;
+      border: 1px solid #283428;
+      border-radius: 18px;
+    }
+
+    .name-pill.kept {
+      border-color: #c9a84c55;
+      background: #211f10;
+    }
+
+    .name-text {
+      font-size: 0.98rem;
+      letter-spacing: 0.05em;
+      color: #c8dab0;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+      padding: 0;
+    }
+
+    .name-text:hover { color: #c9a84c; }
+
+    .btn-keep {
+      background: none;
+      border: none;
+      color: #3a4a32;
+      cursor: pointer;
+      font-size: 0.85rem;
+      padding: 0;
+      line-height: 1;
+      font-family: inherit;
+      transition: color 0.1s;
+    }
+
+    .btn-keep:hover { color: #c9a84c; }
+
+    .empty-msg {
+      color: #2e3a28;
+      font-style: italic;
+      font-size: 0.88rem;
+      padding: 10px 0;
+    }
+
+    /* Saved panel */
+    .saved-panel {
+      width: 200px;
+      flex-shrink: 0;
+    }
+
+    .saved-panel h2 {
+      font-size: 0.88rem;
+      color: #6a8a52;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid #202e20;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .saved-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      min-height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .saved-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 6px;
+      background: #161e16;
+      border-radius: 3px;
+    }
+
+    .saved-left { flex: 1; min-width: 0; }
+
+    .saved-name {
+      font-size: 0.88rem;
+      color: #c0d0a0;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      font-family: inherit;
+      background: none;
+      border: none;
+      padding: 0;
+      text-align: left;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .saved-name:hover { color: #c9a84c; }
+
+    .saved-reg {
+      font-size: 0.68rem;
+      color: #3e5038;
+      font-style: italic;
+    }
+
+    .btn-remove {
+      background: none;
+      border: none;
+      color: #2e3e28;
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 0 2px;
+      line-height: 1;
+      flex-shrink: 0;
+      font-family: inherit;
+    }
+
+    .btn-remove:hover { color: #8a4040; }
+
+    .btn-copy-all {
+      width: 100%;
+      padding: 7px;
+      background: #161e16;
+      border: 1px solid #253025;
+      color: #5a7050;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      font-family: inherit;
+      transition: all 0.12s;
+    }
+
+    .btn-copy-all:hover {
+      border-color: #4a6840;
+      color: #8aaa68;
+    }
+
+    .saved-empty {
+      color: #2a382a;
+      font-style: italic;
+      font-size: 0.8rem;
+      padding: 6px 2px;
+    }
+
+    /* Flash */
+    .flash {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background: #1e2e18;
+      border: 1px solid #507040;
+      color: #90c070;
+      padding: 7px 16px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      opacity: 0;
+      transition: opacity 0.18s;
+      pointer-events: none;
+    }
+
+    .flash.show { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<h1>Cypress — Name Generator</h1>
+<p class="subtitle">Calusa / Timucua inspired &middot; five registers</p>
+
+<div class="layout">
+  <div class="generator">
+    <div class="tabs" id="tabs"></div>
+    <div class="reg-desc" id="reg-desc"></div>
+    <div class="controls">
+      <button class="btn-gen" id="btn-gen">Generate</button>
+      <select class="count-sel" id="count-sel">
+        <option value="6">6 names</option>
+        <option value="10" selected>10 names</option>
+        <option value="20">20 names</option>
+      </select>
+    </div>
+    <div class="names-grid" id="names-grid"></div>
+  </div>
+
+  <div class="saved-panel">
+    <h2>Saved</h2>
+    <div class="saved-list" id="saved-list"></div>
+    <button class="btn-copy-all" id="btn-copy-all">Copy All</button>
+  </div>
+</div>
+
+<div class="flash" id="flash"></div>
+
+<script>
+  // ── Phoneme palette ──────────────────────────────────────────────────────────
+  const V    = ['a', 'e', 'i', 'o'];
+  const SOFT = ['k', 's', 't', 'n', 'm', 'h', 'l', 'w'];
+  const HARD = ['ch', 'sh', 'sk'];
+  const CODA = ['n', 'm', 'l', 'k', 't'];
+
+  const ENDS = {
+    place: ['a', 'ok', 'an', 'om', 'ama', 'aka'],
+    title: ['ek', 'an', 'ot', 'ok', 'em', 'al'],
+    storm: ['an', 'ok', 'em'],
+  };
+
+  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+  function cap(s)    { return s.charAt(0).toUpperCase() + s.slice(1); }
+  function cv()      { return pick(SOFT) + pick(V); }
+
+  // ── Registers ────────────────────────────────────────────────────────────────
+  const REGISTERS = [
+    {
+      key: 'personal',
+      label: 'Personal',
+      desc: '2–3 syllable · vowel-final · soft onsets · given names',
+      gen() {
+        const len = Math.random() < 0.45 ? 2 : 3;
+        let s = '';
+        for (let i = 0; i < len; i++) s += cv();
+        return cap(s);
+      }
+    },
+    {
+      key: 'place',
+      label: 'Place',
+      desc: '2–3 syllable · ends in -a, -ok, -an, -om, -ama · settlements, waterways',
+      gen() {
+        const len = Math.random() < 0.5 ? 1 : 2;
+        let s = '';
+        for (let i = 0; i < len; i++) s += cv();
+        return cap(s + pick(ENDS.place));
+      }
+    },
+    {
+      key: 'title',
+      label: 'Title',
+      desc: '1–2 syllable · consonant-final · earned honorifics',
+      gen() {
+        return Math.random() < 0.4
+          ? cap(pick(SOFT) + pick(V) + pick(CODA))
+          : cap(cv() + pick(ENDS.title));
+      }
+    },
+    {
+      key: 'storm',
+      label: 'Storm',
+      desc: '1–2 syllable · hard consonants · Storm Doctrine & ritual names',
+      gen() {
+        const hard = () => pick(HARD) + pick(V);
+        const core = Math.random() < 0.5 ? hard() : hard() + hard();
+        return cap(core + pick(ENDS.storm));
+      }
+    },
+    {
+      key: 'house',
+      label: 'House',
+      desc: 'Compound two-root · lineage & clan names',
+      gen() {
+        const root1 = pick(SOFT) + pick(V) + pick(['s', 'k', 'n', 'm']);
+        const root2 = pick(V) + pick(SOFT) + pick(V);
+        return cap(root1 + root2);
+      }
+    },
+  ];
+
+  // ── State ────────────────────────────────────────────────────────────────────
+  let activeIdx   = 0;
+  let currentNames = [];  // [{name, kept}]
+  let savedNames   = [];  // [{name, register}]
+
+  // ── DOM helpers ──────────────────────────────────────────────────────────────
+  function mk(tag, cls) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    return e;
+  }
+
+  function flash(msg) {
+    const el = document.getElementById('flash');
+    el.textContent = msg;
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 1500);
+  }
+
+  function copyText(text) {
+    navigator.clipboard.writeText(text).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    });
+    flash('Copied!');
+  }
+
+  // ── Render: tabs ─────────────────────────────────────────────────────────────
+  function renderTabs() {
+    const container = document.getElementById('tabs');
+    container.textContent = '';
+    REGISTERS.forEach((reg, i) => {
+      const btn = mk('button', 'tab' + (i === activeIdx ? ' active' : ''));
+      btn.textContent = reg.label;
+      btn.addEventListener('click', () => {
+        activeIdx = i;
+        currentNames = [];
+        renderTabs();
+        renderDesc();
+        renderGrid();
+      });
+      container.appendChild(btn);
+    });
+  }
+
+  function renderDesc() {
+    document.getElementById('reg-desc').textContent = REGISTERS[activeIdx].desc;
+  }
+
+  // ── Render: names grid ───────────────────────────────────────────────────────
+  function renderGrid() {
+    const grid = document.getElementById('names-grid');
+    grid.textContent = '';
+
+    if (currentNames.length === 0) {
+      const msg = mk('span', 'empty-msg');
+      msg.textContent = 'Hit Generate to make names.';
+      grid.appendChild(msg);
+      return;
+    }
+
+    currentNames.forEach((nameObj) => {
+      const pill = mk('div', 'name-pill' + (nameObj.kept ? ' kept' : ''));
+
+      const nameBtn = mk('button', 'name-text');
+      nameBtn.textContent = nameObj.name;
+      nameBtn.title = 'Click to copy';
+      nameBtn.addEventListener('click', () => copyText(nameObj.name));
+
+      const keepBtn = mk('button', 'btn-keep');
+      keepBtn.textContent = nameObj.kept ? '★' : '☆';
+      keepBtn.title = nameObj.kept ? 'Unsave' : 'Save';
+      keepBtn.addEventListener('click', () => {
+        if (nameObj.kept) {
+          nameObj.kept = false;
+          savedNames = savedNames.filter(s => s.name !== nameObj.name);
+        } else {
+          nameObj.kept = true;
+          savedNames.push({ name: nameObj.name, register: REGISTERS[activeIdx].label });
+        }
+        renderGrid();
+        renderSaved();
+      });
+
+      pill.appendChild(nameBtn);
+      pill.appendChild(keepBtn);
+      grid.appendChild(pill);
+    });
+  }
+
+  // ── Render: saved panel ──────────────────────────────────────────────────────
+  function renderSaved() {
+    const list = document.getElementById('saved-list');
+    list.textContent = '';
+
+    if (savedNames.length === 0) {
+      const msg = mk('span', 'saved-empty');
+      msg.textContent = 'No names saved yet.';
+      list.appendChild(msg);
+      return;
+    }
+
+    savedNames.forEach((item, idx) => {
+      const row  = mk('div', 'saved-entry');
+      const left = mk('div', 'saved-left');
+
+      const nameBtn = mk('button', 'saved-name');
+      nameBtn.textContent = item.name;
+      nameBtn.title = 'Click to copy';
+      nameBtn.addEventListener('click', () => copyText(item.name));
+
+      const regSpan = mk('div', 'saved-reg');
+      regSpan.textContent = item.register;
+
+      left.appendChild(nameBtn);
+      left.appendChild(regSpan);
+
+      const removeBtn = mk('button', 'btn-remove');
+      removeBtn.textContent = '×';
+      removeBtn.title = 'Remove';
+      removeBtn.addEventListener('click', () => {
+        const match = currentNames.find(n => n.name === item.name);
+        if (match) match.kept = false;
+        savedNames.splice(idx, 1);
+        renderGrid();
+        renderSaved();
+      });
+
+      row.appendChild(left);
+      row.appendChild(removeBtn);
+      list.appendChild(row);
+    });
+  }
+
+  // ── Generate ─────────────────────────────────────────────────────────────────
+  function generate() {
+    const count = parseInt(document.getElementById('count-sel').value, 10);
+    const reg   = REGISTERS[activeIdx];
+    const kept  = currentNames.filter(n => n.kept);
+    const fresh = [];
+    for (let i = 0; i < count; i++) {
+      fresh.push({ name: reg.gen(), kept: false });
+    }
+    currentNames = [...kept, ...fresh];
+    renderGrid();
+  }
+
+  // ── Events ───────────────────────────────────────────────────────────────────
+  document.getElementById('btn-gen').addEventListener('click', generate);
+
+  document.getElementById('btn-copy-all').addEventListener('click', () => {
+    if (savedNames.length === 0) { flash('Nothing saved yet.'); return; }
+    const text = savedNames.map(s => s.name + ' (' + s.register + ')').join('\n');
+    navigator.clipboard.writeText(text).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    });
+    flash('Copied ' + savedNames.length + ' names!');
+  });
+
+  // ── Init ─────────────────────────────────────────────────────────────────────
+  renderTabs();
+  renderDesc();
+  renderGrid();
+</script>
+</body>
+</html>
