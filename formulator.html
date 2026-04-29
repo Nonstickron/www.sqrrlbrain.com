@@ -500,6 +500,16 @@
   const pantrySearch = document.getElementById('pantrySearch');
   const pantrySuggest = document.getElementById('pantrySuggest');
 
+  function addToPantry(name) {
+    const n = name.trim();
+    if (!n || ownedHas(n)) return;
+    if (!data.ingredients.some(i => norm(i).toLowerCase() === norm(n).toLowerCase())) {
+      data.ingredients.push(n);
+    }
+    owned.add(n); saveOwned(); updateInvBadge(); renderPantry(); renderRecipes();
+    pantrySearch.value = ''; pantrySuggest.classList.remove('show');
+  }
+
   pantrySearch.addEventListener('input', () => {
     const q = pantrySearch.value.trim().toLowerCase();
     pantrySuggest.textContent = '';
@@ -510,17 +520,24 @@
       if (ownedHas(i) || !n.includes(q) || seenNorm.has(n)) return false;
       seenNorm.add(n); return true;
     }).slice(0, 10);
-    if (!matches.length) { pantrySuggest.classList.remove('show'); return; }
     matches.forEach(ing => {
       const li = el('li', null, ing);
-      li.addEventListener('mousedown', e => {
-        e.preventDefault();
-        owned.add(ing); saveOwned(); updateInvBadge(); renderPantry(); renderRecipes();
-        pantrySearch.value = ''; pantrySuggest.classList.remove('show');
-      });
+      li.addEventListener('mousedown', e => { e.preventDefault(); addToPantry(ing); });
       pantrySuggest.appendChild(li);
     });
+    // Always offer "Add [typed]" if exact match isn't already owned
+    const typed = pantrySearch.value.trim();
+    if (typed && !ownedHas(typed)) {
+      const li = document.createElement('li');
+      li.style.cssText = 'color:var(--gold);border-top:1px solid var(--border)';
+      li.textContent = '+ Add "' + typed + '"';
+      li.addEventListener('mousedown', e => { e.preventDefault(); addToPantry(typed); });
+      pantrySuggest.appendChild(li);
+    }
     pantrySuggest.classList.add('show');
+  });
+  pantrySearch.addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); addToPantry(pantrySearch.value); }
   });
   pantrySearch.addEventListener('blur', () => setTimeout(() => pantrySuggest.classList.remove('show'), 150));
 
