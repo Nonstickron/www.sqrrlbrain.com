@@ -220,8 +220,7 @@
 
     .swap-add-form { display: flex; flex-direction: column; gap: 7px; }
     .swap-add-form label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); }
-    .swap-sel { width: 100%; background: var(--surface-hi); border: 1px solid var(--border); color: var(--text-mid); border-radius: 5px; padding: 6px 8px; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; }
-    .swap-sel:focus { outline: none; border-color: var(--gold-dim); }
+    .swap-search-wrap { position: relative; }
     .swap-add-btn { width: 100%; padding: 7px; border-radius: 5px; border: 1px dashed var(--border-hi); background: transparent; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--text-dim); cursor: pointer; transition: all 0.12s; }
     .swap-add-btn:hover { color: var(--text-mid); border-color: var(--gold-dim); }
 
@@ -345,9 +344,15 @@
     <ul class="swap-rules" id="swapRules"></ul>
     <div class="swap-add-form">
       <label>I don't have…</label>
-      <select class="swap-sel" id="swapFrom"></select>
+      <div class="swap-search-wrap">
+        <input class="pantry-search" id="swapFromInput" type="text" placeholder="Search ingredient…" autocomplete="off">
+        <ul class="pantry-suggest" id="swapFromSuggest"></ul>
+      </div>
       <label>Use instead…</label>
-      <select class="swap-sel" id="swapTo"></select>
+      <div class="swap-search-wrap">
+        <input class="pantry-search" id="swapToInput" type="text" placeholder="Search what you own…" autocomplete="off">
+        <ul class="pantry-suggest" id="swapToSuggest"></ul>
+      </div>
       <button class="swap-add-btn" id="swapAddBtn">+ Add swap rule</button>
     </div>
   </div>
@@ -551,25 +556,51 @@
       rm.addEventListener('click', () => { delete swaps[from]; saveSwaps(); renderSwaps(); renderRecipes(); });
       li.appendChild(rm); list.appendChild(li);
     });
-    // Populate dropdowns
-    const fSel = document.getElementById('swapFrom'), tSel = document.getElementById('swapTo');
-    const sv = {f: fSel.value, t: tSel.value};
-    fSel.textContent = ''; tSel.textContent = '';
-    const p1 = el('option', null, 'Select ingredient…'); p1.value = ''; fSel.appendChild(p1);
-    const p2 = el('option', null, 'Select substitute…'); p2.value = ''; tSel.appendChild(p2);
-    data.ingredients.forEach(i => {
-      const o1 = el('option', null, i); o1.value = i; fSel.appendChild(o1);
-      const o2 = el('option', null, i); o2.value = i; tSel.appendChild(o2);
-    });
-    if (sv.f) fSel.value = sv.f;
-    if (sv.t) tSel.value = sv.t;
   }
 
+  let swapFromVal = '', swapToVal = '';
+
+  function makeSwapSearch(inputId, suggestId, getList) {
+    const inp = document.getElementById(inputId);
+    const sug = document.getElementById(suggestId);
+    let selectedVal = '';
+    inp.addEventListener('input', () => {
+      const q = inp.value.trim().toLowerCase();
+      sug.textContent = '';
+      selectedVal = '';
+      if (inputId === 'swapFromInput') swapFromVal = ''; else swapToVal = '';
+      if (!q) { sug.classList.remove('show'); return; }
+      const seenNorm = new Set();
+      const matches = getList().filter(i => {
+        const n = norm(i).toLowerCase();
+        if (!n.includes(q) || seenNorm.has(n)) return false;
+        seenNorm.add(n); return true;
+      }).sort((a,b) => a.localeCompare(b)).slice(0, 12);
+      if (!matches.length) { sug.classList.remove('show'); return; }
+      matches.forEach(ing => {
+        const li = el('li', null, ing);
+        li.addEventListener('mousedown', e => {
+          e.preventDefault();
+          inp.value = ing; selectedVal = ing;
+          if (inputId === 'swapFromInput') swapFromVal = ing; else swapToVal = ing;
+          sug.classList.remove('show');
+        });
+        sug.appendChild(li);
+      });
+      sug.classList.add('show');
+    });
+    inp.addEventListener('blur', () => setTimeout(() => sug.classList.remove('show'), 150));
+  }
+
+  makeSwapSearch('swapFromInput', 'swapFromSuggest', () => data.ingredients);
+  makeSwapSearch('swapToInput',   'swapToSuggest',   () => [...owned].sort());
+
   document.getElementById('swapAddBtn').addEventListener('click', () => {
-    const from = document.getElementById('swapFrom').value, to = document.getElementById('swapTo').value;
-    if (!from || !to || from === to) return;
-    swaps[from] = to; saveSwaps(); renderSwaps(); renderRecipes();
-    document.getElementById('swapFrom').value = ''; document.getElementById('swapTo').value = '';
+    if (!swapFromVal || !swapToVal || swapFromVal === swapToVal) return;
+    swaps[swapFromVal] = swapToVal; saveSwaps(); renderSwaps(); renderRecipes();
+    document.getElementById('swapFromInput').value = '';
+    document.getElementById('swapToInput').value = '';
+    swapFromVal = ''; swapToVal = '';
   });
 
   // ── Drawer + tabs ──────────────────────────────────────
