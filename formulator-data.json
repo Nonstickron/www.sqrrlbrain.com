@@ -512,7 +512,70 @@
     "Cedarwood essential oil",
     "Perfumery alcohol",
     "Labdanum essential oil",
-    "Rose absolute"
+    "Rose absolute",
+    "Fision® HydraTress",
+    "Rice flour",
+    "Abyssinian Seed Oil",
+    "Solagum AX",
+    "Wildflower Honey fragrance oil",
+    "Water-soluble orange dye",
+    "Sodium C14-16 Olefin Sulfonate",
+    "Siligel&#x2122;",
+    "Tetrasodium Glutamate Diacetate",
+    "Moringa oil",
+    "Wintery fragrance or essential oil of choice",
+    "Abyssinian oil",
+    "Cationic guar gum",
+    "Polyquaternium 10",
+    "Roughly powdered Sodium Cocoyl Isethionate",
+    "Essential oil or fragrance of choice",
+    "Red #40",
+    "Powdered Sodium Cocoyl Isethionate",
+    "Dry surfactants + 6% liquid Cocamidopropyl Betaine makes for some slightly damp-ish dry surfactants, so to round that out and create something useful and press-able, we need some melted hard fats to hold everything together. I went with a blend of cocoa butter and stearic acid, choosing unrefined cocoa butter for a delicious chocolate-y scent that pairs nicely with the brown colour we get from the rhassoul clay. I further complimented that scent with a blend of two Brambleberry fragrances; Kentucky Bourbon and Cinnamon Cocoa. I used a variety of scents throughout the development and testing of these bars and found fragrances and essential oils that pair well with chocolate are downright lovely; if you want to use something that doesn&#8217;t work well with cocoa I&#8217;d recommend using deodorized cocoa butter instead. Something I find fun about fragrances vs. essential oils in shampoo bars is how the scent lingers in my hair post-washing; essential oils just don&#8217;t do that. This isn&#8217;t a good or bad thing, it&#8217;s just a thing to keep in mind based on your preferences &#x1f60a;",
+    "Kentucky Bourbon fragrance",
+    "Cinnamon Cocoa fragrance",
+    "Broccoli seed oil",
+    "Cetrimonium chloride",
+    "Lard",
+    "Avocado oil",
+    "Walnut oil",
+    "Superfat",
+    "Hot",
+    "Powdered BTMS-25",
+    "Oil of choice",
+    "Hydrolyzed protein of choice",
+    "Sodium cocoamphoacetate",
+    "Red dye",
+    "Behentrimonium chloride",
+    "Fragrance and/or essential oil of choice",
+    "Hydrolyzed baobab protein",
+    "Sodium Cocoamphoacetate",
+    "Daikon seed extract",
+    "Orange water soluble dye",
+    "Orange essential oil or fragrance of choice",
+    "PEG-8 dimethicone",
+    "Beachwood Vetiver fragrance oil",
+    "Cognac essential oil",
+    "Brassica Campestris/Aleurites Fordi Oil Copolymer",
+    "Varisoft EQ 65",
+    "Plant-derived keratin",
+    "Bamboo bioferment",
+    "Silicone ester copolymer",
+    "SiClone® SR-5",
+    "Oil soluble calendula extract",
+    "Natural fragrance oil or essential oil",
+    "TKB’s thickening clay",
+    "Cyclopentasiloxane",
+    "Isododecane",
+    "Silica microspheres further add to the dry-touch finish of the product and lend a very “expensive” feel, reminiscent of high-end commercial hair serums.",
+    "Varisoft® EQ 65",
+    "Silica microspheres",
+    "Bezoin resinoid",
+    "LexFeel N5",
+    "Shavegrass extract",
+    "Oak moss absolute",
+    "CO2 extracted ginger essential oil",
+    "Kentucky Bourbon fragrance oil"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -15575,6 +15638,3332 @@
         }
       ],
       "notes": ""
+    },
+    {
+      "id": "charcoal-bentonite-clarifying-shampoo-bar",
+      "name": "Charcoal  Bentonite Clarifying Shampoo Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/charcoal-bentonite-clarifying-shampoo-bar/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "What is a &#8220;clarifying&#8221; shampoo? Clarifying shampoos are designed to “reset” your hair, removing product build up and excess oil. If your hair is feeling limp or looking dull, it could be time for a clarifying wash. I try to clarify regula…",
+      "ingredients": [
+        {
+          "name": "Sodium Lauryl Sulfoacetate",
+          "pct": 40
+        },
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 26
+        },
+        {
+          "name": "Bentonite clay",
+          "pct": 5
+        },
+        {
+          "name": "Activated charcoal",
+          "pct": 0.5
+        },
+        {
+          "name": "Geogard® ECT",
+          "pct": 1
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 13.1
+        },
+        {
+          "name": "Citric acid",
+          "pct": 0.1
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 2
+        },
+        {
+          "name": "Fragrance",
+          "pct": 0.8
+        },
+        {
+          "name": "Hydrolyzed rice protein",
+          "pct": 2
+        },
+        {
+          "name": "Jojoba oil",
+          "pct": 9.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the formulation, you will get a different final product than I did."
+    },
+    {
+      "id": "creamy-french-shampoo-bar",
+      "name": "Creamy French Shampoo Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/creamy-french-shampoo-bar/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I think these might be the prettiest shampoo bars I&#8217;ve made yet They&#8217;re not only pretty, but they kick out loads of luscious lather and leave your hair feeling fabulous. Let&#8217;s dive in!",
+      "ingredients": [
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 49
+        },
+        {
+          "name": "Sodium Lauryl Sulfoacetate",
+          "pct": 20
+        },
+        {
+          "name": "Guar gum",
+          "pct": 3.5
+        },
+        {
+          "name": "French green clay",
+          "pct": 5
+        },
+        {
+          "name": "Distilled water",
+          "pct": 4.25
+        },
+        {
+          "name": "Caprylyl/Capryl Glucoside",
+          "pct": 10
+        },
+        {
+          "name": "Citric acid",
+          "pct": 1
+        },
+        {
+          "name": "Jojoba oil",
+          "pct": 5
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.25
+        },
+        {
+          "name": "Fragrance oil",
+          "pct": 1
+        },
+        {
+          "name": "Optiphen™ Plus",
+          "pct": 1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the formulation, you will get a different final product than I did."
+    },
+    {
+      "id": "castor-rice-sulfate-free-shampoo-bar",
+      "name": "Castor  Rice Sulfate-Free Shampoo Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/castor-rice-sulfate-free-shampoo-bar/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "These sparkly, sudsy shampoo bars feature two trending all-natural ingredients with long histories in hair care: castor oil and rice. These inexpensive ingredients are said to help strengthen the hair, boost growth, and improve hair health, so includ…",
+      "ingredients": [
+        {
+          "name": "Ultra fine rice flour",
+          "pct": 17.25
+        },
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 35
+        },
+        {
+          "name": "Sodium Lauryl Sulfoacetate",
+          "pct": 25
+        },
+        {
+          "name": "Citric acid",
+          "pct": 0.25
+        },
+        {
+          "name": "Fision® HydraTress",
+          "pct": 5
+        },
+        {
+          "name": "Castor oil",
+          "pct": 4.9
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.1
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 10.5
+        },
+        {
+          "name": "Optiphen™ Plus",
+          "pct": 1
+        },
+        {
+          "name": "Fragrance",
+          "pct": 1
+        }
+      ],
+      "notes": "The dry phaseThe wet phaseEquipment you&#8217;ll needHow long do these bars need to dry?Relevant links &amp; further readingCastor &amp; Rice Sulfate-Free Shampoo BarSubstitutionsSimilar Formulations The dry phase There are four ingredients in the dry phase of these shampoo bars."
+    },
+    {
+      "id": "simple-sulfate-free-shampoo-bar",
+      "name": "Simple Sulfate-Free Shampoo Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/simple-sulfate-free-shampoo-bar/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Today we&#8217;re kneading up a really simple shampoo bar that kicks out oodles of silky, luscious lather. You&#8217;ll only need seven ingredients, there&#8217;s no heat required, and you can whip up a batch in less than twenty minutes!",
+      "ingredients": [
+        {
+          "name": "Sodium Lauryl Sulfoacetate",
+          "pct": 60
+        },
+        {
+          "name": "Rice flour",
+          "pct": 14
+        },
+        {
+          "name": "Distilled water",
+          "pct": 4
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 10
+        },
+        {
+          "name": "Optiphen™ Plus",
+          "pct": 1.5
+        },
+        {
+          "name": "Fragrance or essential oil",
+          "pct": 0.5
+        },
+        {
+          "name": "Fractionated coconut oil",
+          "pct": 10
+        }
+      ],
+      "notes": "What else is in the formulation? Some oil—I used Fractionated coconut oil but you could easily swap that out—re-fats the bar so the shampoo doesn&#8217;t dry out your hair."
+    },
+    {
+      "id": "champagne-shampoo-bars",
+      "name": "Champagne Shampoo Bars",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/champagne-shampoo-bars/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "This champagne-scented ultra-sudsy solid shampoo bar was inspired by the 110th anniversary of the maiden voyage of the RMS Titanic. I&#8217;ve shared a few Titanic-inspired formulations (and costumes!) in the past, and I thought we were overdue for a…",
+      "ingredients": [
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 43.3
+        },
+        {
+          "name": "Sodium Coco Sulfate",
+          "pct": 20
+        },
+        {
+          "name": "White kaolin clay",
+          "pct": 15
+        },
+        {
+          "name": "Abyssinian Seed Oil",
+          "pct": 11
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 1.5
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 7.4
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Champagne toast fragrance oil",
+          "pct": 0.7
+        },
+        {
+          "name": "90% lactic acid solution",
+          "pct": 0.6
+        }
+      ],
+      "notes": "Creamy white kaolin clay ensures the lather is extra rich and slippy, and it also makes the bars a bit more doughy and easier to shape—with or without a press or mould. You could use a different clay if you want, but I&#8217;d stick to smooth, creamy clays for this bar. French green clay and zeolite would be lovely; bentonite and rhassoul are more coarse/sandy than I want for these bars (though cl"
+    },
+    {
+      "id": "all-natural-perky-peppermint-shampoo",
+      "name": "All-Natural Perky Peppermint Shampoo",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/all-natural-perky-peppermint-shampoo/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Today&#8217;s formulation is for an all-natural liquid shampoo featuring peppermint essential oil for a fresh, minty kick and pea extract—an active said to have hair thickening and growth-boosting benefits!",
+      "ingredients": [
+        {
+          "name": "Solagum AX",
+          "pct": 2.3
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 5
+        },
+        {
+          "name": "Coco Glucoside",
+          "pct": 5
+        },
+        {
+          "name": "Natra Pep Pea",
+          "pct": 5
+        },
+        {
+          "name": "Peppermint essential oil",
+          "pct": 1
+        },
+        {
+          "name": "Geogard Ultra™",
+          "pct": 1.5
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 1
+        },
+        {
+          "name": "Caprylyl/Capryl Glucoside",
+          "pct": 24
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 15
+        },
+        {
+          "name": "Distilled water",
+          "pct": 40.2
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "sulfate-free-shampoo-bar-with-rice-starch",
+      "name": "Sulfate-Free Shampoo Bar with Rice Starch",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/sulfate-free-shampoo-bar-with-rice-starch/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "This sulfate-free shampoo bar formulation blends super-sudsy shampooing with a rice water rinse in a long-lasting, no-fuss bar form. You can also use this bar as body wash, it doesn&#8217;t require any heat to make, and you can have fun with the colo…",
+      "ingredients": [
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 40
+        },
+        {
+          "name": "Sodium Lauryl Sulfoacetate",
+          "pct": 23
+        },
+        {
+          "name": "Rice flour",
+          "pct": 15
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 11.99
+        },
+        {
+          "name": "Water-soluble dye",
+          "pct": 0.01
+        },
+        {
+          "name": "Hydrolyzed rice protein",
+          "pct": 4
+        },
+        {
+          "name": "Camellia seed oil",
+          "pct": 5
+        },
+        {
+          "name": "Wildflower Honey fragrance oil",
+          "pct": 0.4
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "more-mango-sulfate-free-shampoo-bar",
+      "name": "More Mango Sulfate-Free Shampoo Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/more-mango-sulfate-free-shampoo-bar/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "ingredients": [
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 13
+        },
+        {
+          "name": "Water-soluble orange dye",
+          "pct": 0.1
+        },
+        {
+          "name": "Sodium C14-16 Olefin Sulfonate",
+          "pct": 30
+        },
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 45
+        },
+        {
+          "name": "Mango butter",
+          "pct": 9.5
+        },
+        {
+          "name": "Natural mango fragrance oil",
+          "pct": 1
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 1
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.4
+        }
+      ],
+      "notes": "I swapped 2019&#8217;s conditioning ingredient (BTMS-25) for the easier-to-use and still very awesome Polyquaternium 7. Since it&#8217;s liquid, it&#8217;s super easy to incorporate. I find the BTMS&#8217; difficult to melt and fast to solidify, making them a bit of a pain to try to evenly disperse into a dough. Polyquaternium 7 is wonderfully cooperative and works beautifully."
+    },
+    {
+      "id": "rose-silk-clarifying-shampoo",
+      "name": "Rose  Silk Clarifying Shampoo",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rose-silk-clarifying-shampoo/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "With that in mind, my product/formulation philosophy was to create high-performing natural haircare products that meet the standards of the customer who is interested in natural, but not willing to compromise on performance; knowing they’ve gone back…",
+      "ingredients": [
+        {
+          "name": "Siligel&#x2122;",
+          "pct": 2
+        },
+        {
+          "name": "Propanediol 1,3",
+          "pct": 5
+        },
+        {
+          "name": "Sodium lactate",
+          "pct": 1
+        },
+        {
+          "name": "Citric acid",
+          "pct": 0.3
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Hydrolyzed silk",
+          "pct": 0.5
+        },
+        {
+          "name": "Plantapon® TF",
+          "pct": 20
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 10
+        },
+        {
+          "name": "Distilled water",
+          "pct": 34.6
+        },
+        {
+          "name": "Rose hydrosol",
+          "pct": 25
+        },
+        {
+          "name": "Geogard® ECT",
+          "pct": 1
+        },
+        {
+          "name": "Tetrasodium Glutamate Diacetate",
+          "pct": 0.1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "ice-palace-sulfate-free-shampoo-bar",
+      "name": "Ice Palace Sulfate-Free Shampoo Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/ice-palace-sulfate-free-shampoo-bar/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "ingredients": [
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 37
+        },
+        {
+          "name": "Sodium Lauryl Sulfoacetate",
+          "pct": 20
+        },
+        {
+          "name": "Corn starch",
+          "pct": 11
+        },
+        {
+          "name": "White kaolin clay",
+          "pct": 5
+        },
+        {
+          "name": "Citric acid",
+          "pct": 0.25
+        },
+        {
+          "name": "Moringa oil",
+          "pct": 4.5
+        },
+        {
+          "name": "Wintery fragrance or essential oil of choice",
+          "pct": 0.5
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 6.75
+        },
+        {
+          "name": "Decyl glucoside",
+          "pct": 14
+        },
+        {
+          "name": "Optiphen™ Plus",
+          "pct": 1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "french-green-clay-sulphate-free-shampoo-bar",
+      "name": "French Green Clay Sulphate-Free Shampoo Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/french-green-clay-sulphate-free-shampoo-bar/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "ingredients": [
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 49
+        },
+        {
+          "name": "Sodium Lauryl Sulfoacetate",
+          "pct": 21.1
+        },
+        {
+          "name": "Iota carrageenan",
+          "pct": 4
+        },
+        {
+          "name": "French green clay",
+          "pct": 5
+        },
+        {
+          "name": "Distilled water",
+          "pct": 5
+        },
+        {
+          "name": "Caprylyl/Capryl Glucoside",
+          "pct": 10
+        },
+        {
+          "name": "Abyssinian oil",
+          "pct": 5
+        },
+        {
+          "name": "Lavender essential oil",
+          "pct": 0.25
+        },
+        {
+          "name": "Rosemary essential oil",
+          "pct": 0.25
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.4
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "silk-shine-shampoo",
+      "name": "Silk  Shine Shampoo",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/silk-shine-shampoo/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I&#8217;ve found liquid shampoo to be a rather finicky thing to formulate. It seems like it should be simple enough, especially since solid shampoos are fairly straightforward&#8230; but no. My first liquid shampoo experiments (those ones don&#8217;t…",
+      "ingredients": [
+        {
+          "name": "Vegetable glycerine",
+          "pct": 5
+        },
+        {
+          "name": "Cationic guar gum",
+          "pct": 0.5
+        },
+        {
+          "name": "Hydrolyzed silk",
+          "pct": 1
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Olivem300",
+          "pct": 0.5
+        },
+        {
+          "name": "Polyquaternium 10",
+          "pct": 0.3
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.3
+        },
+        {
+          "name": "Fragrance or essential oil of choice",
+          "pct": 0.5
+        },
+        {
+          "name": "Sodium Laureth Sulfate",
+          "pct": 33
+        },
+        {
+          "name": "Caprylyl/Capryl Glucoside",
+          "pct": 15
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 15
+        },
+        {
+          "name": "Distilled water",
+          "pct": 28.4
+        }
+      ],
+      "notes": "For some fancying-up ingredients, I&#8217;ve included small amounts of panthenol (Vitamin B5) and hydrolyzed silk, both of which are lovely for the hair, offering more shine and bounce. If you&#8217;re looking for a vegan option for the hydrolyzed silk you can swap it out for a different hydrolyzed protein, like hydrolyzed rice protein or hydrolyzed quinoa protein."
+    },
+    {
+      "id": "pink-clay-mosaic-shampoo-bars",
+      "name": "Pink Clay Mosaic Shampoo Bars",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/pink-clay-mosaic-shampoo-bars/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "ingredients": [
+        {
+          "name": "Kokum butter",
+          "pct": 7
+        },
+        {
+          "name": "Stearic acid",
+          "pct": 3
+        },
+        {
+          "name": "Australian Pink Clay",
+          "pct": 12.5
+        },
+        {
+          "name": "Roughly powdered Sodium Cocoyl Isethionate",
+          "pct": 40
+        },
+        {
+          "name": "Sodium Lauryl Sulfoacetate",
+          "pct": 30
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 6
+        },
+        {
+          "name": "Essential oil or fragrance of choice",
+          "pct": 1
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "argan-rose-pressed-shampoo-bars",
+      "name": "Argan Rose Pressed Shampoo Bars",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/argan-rose-pressed-shampoo-bars/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "ingredients": [
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 49
+        },
+        {
+          "name": "Sodium Coco Sulfate",
+          "pct": 37.99
+        },
+        {
+          "name": "Iota carrageenan",
+          "pct": 4
+        },
+        {
+          "name": "Red #40",
+          "pct": 0.01
+        },
+        {
+          "name": "Distilled water",
+          "pct": 2.75
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 1.75
+        },
+        {
+          "name": "50% citric acid",
+          "pct": 0.25
+        },
+        {
+          "name": "Argan oil",
+          "pct": 3
+        },
+        {
+          "name": "Rose fragrance oil",
+          "pct": 0.5
+        },
+        {
+          "name": "Lemon slices fragrance oil",
+          "pct": 0.5
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.25
+        }
+      ],
+      "notes": "Add the secondary phase and mix thoroughly with your hands. Add the tertiary phase, and blend again. You could add the secondary and tertiary phases at the same time if you wanted to—I split them up to encourage/force more mixing for a thoroughly blended product! Whatever you do, be sure the carrageenan is well distributed before you get water anywhere near it to avoid creating a solid blob of glo"
+    },
+    {
+      "id": "white-chocolate-peppermint-shampoo-bars",
+      "name": "White Chocolate Peppermint Shampoo Bars",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/white-chocolate-peppermint-shampoo-bars/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "ingredients": [
+        {
+          "name": "Cocoa butter",
+          "pct": 15
+        },
+        {
+          "name": "Powdered Sodium Cocoyl Isethionate",
+          "pct": 49
+        },
+        {
+          "name": "Sodium Lauryl Sulfoacetate",
+          "pct": 25
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 4.5
+        },
+        {
+          "name": "Hydrolyzed quinoa protein",
+          "pct": 4.5
+        },
+        {
+          "name": "Peppermint essential oil",
+          "pct": 1
+        },
+        {
+          "name": "Optiphen&#x2122; Plus",
+          "pct": 1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "chocolate-rhassoul-shampoo-bars",
+      "name": "Chocolate Rhassoul Shampoo Bars",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/chocolate-rhassoul-shampoo-bars/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "ingredients": [
+        {
+          "name": "Dry surfactants + 6% liquid Cocamidopropyl Betaine makes for some slightly damp-ish dry surfactants, so to round that out and create something useful and press-able, we need some melted hard fats to hold everything together. I went with a blend of cocoa butter and stearic acid, choosing unrefined cocoa butter for a delicious chocolate-y scent that pairs nicely with the brown colour we get from the rhassoul clay. I further complimented that scent with a blend of two Brambleberry fragrances; Kentucky Bourbon and Cinnamon Cocoa. I used a variety of scents throughout the development and testing of these bars and found fragrances and essential oils that pair well with chocolate are downright lovely; if you want to use something that doesn&#8217;t work well with cocoa I&#8217;d recommend using deodorized cocoa butter instead. Something I find fun about fragrances vs. essential oils in shampoo bars is how the scent lingers in my hair post-washing; essential oils just don&#8217;t do that. This isn&#8217;t a good or bad thing, it&#8217;s just a thing to keep in mind based on your preferences &#x1f60a;",
+          "pct": 70
+        },
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 40
+        },
+        {
+          "name": "Sodium Coco Sulfate",
+          "pct": 30
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 6
+        },
+        {
+          "name": "Kentucky Bourbon fragrance",
+          "pct": 0.5
+        },
+        {
+          "name": "Cinnamon Cocoa fragrance",
+          "pct": 0.5
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Cocoa butter",
+          "pct": 7
+        },
+        {
+          "name": "Stearic acid",
+          "pct": 3
+        },
+        {
+          "name": "Rhassoul clay",
+          "pct": 12.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "mango-mango-shampoo-bar",
+      "name": "Mango Mango Shampoo Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/mango-mango-shampoo-bar/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Today’s recipe is definitely long overdue, but I wanted to make sure it was on point before I shared it—it’s a sulphate free shampoo bar. I started working on this back in January 2018 and have been testing and tweaking ever since. About six weeks ag…",
+      "ingredients": [
+        {
+          "name": "Sea buckthorn fruit oil",
+          "pct": 0.9
+        },
+        {
+          "name": "Orange lake dye",
+          "pct": 0.1
+        },
+        {
+          "name": "Sodium C14-16 Olefin Sulfonate",
+          "pct": 22
+        },
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 34
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 17
+        },
+        {
+          "name": "Tucuma butter",
+          "pct": 8
+        },
+        {
+          "name": "BTMS-25",
+          "pct": 7
+        },
+        {
+          "name": "Stearic acid",
+          "pct": 6
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 3.5
+        },
+        {
+          "name": "Natural mango fragrance oil",
+          "pct": 1
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        }
+      ],
+      "notes": "When made as written, the pH of these shampoo bars is approximately 4–4.5, which is suitable for the hair. If you make any alterations/substitutions please test and adjust the pH as necessary."
+    },
+    {
+      "id": "silky-volumizing-conditioning-shampoo",
+      "name": "Silky Volumizing Conditioning Shampoo",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/silky-volumizing-conditioning-shampoo/",
+      "heatRequired": false,
+      "equipment": [
+        "Blender"
+      ],
+      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "ingredients": [
+        {
+          "name": "Sodium Cocoyl Isethionate",
+          "pct": 14
+        },
+        {
+          "name": "Foaming silk",
+          "pct": 5
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 11
+        },
+        {
+          "name": "Broccoli seed oil",
+          "pct": 5
+        },
+        {
+          "name": "Glycol distearate",
+          "pct": 4
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 5
+        },
+        {
+          "name": "Guar gum",
+          "pct": 0.5
+        },
+        {
+          "name": "Distilled water",
+          "pct": 45
+        },
+        {
+          "name": "Sodium lactate",
+          "pct": 2
+        },
+        {
+          "name": "Cetrimonium chloride",
+          "pct": 4
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 3
+        },
+        {
+          "name": "Labdanum essential oil",
+          "pct": 1
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "mermaid-silk-shampoo-bars",
+      "name": "Mermaid Silk Shampoo Bars",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/mermaid-silk-shampoo-bars/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "Prepare to feel like you&#8217;re sudsing up in a lagoon in Neverland with the mermaids; these seriously beautiful Mermaid Silk Shampoo Bars are just the sort of thing I imagine mermaids would use (do mermaids wash their hair? A question for another …",
+      "ingredients": [
+        {
+          "name": "Refined coconut oil",
+          "pct": 25
+        },
+        {
+          "name": "Unrefined shea butter",
+          "pct": 15
+        },
+        {
+          "name": "Beef tallow",
+          "pct": 35
+        },
+        {
+          "name": "Castor oil",
+          "pct": 15
+        }
+      ],
+      "notes": "1.5 teaspoons silk peptides (need a substitute?) 2 tbsp white white kaolin clay (USA / Canada) 13g | 0.46oz lime essential oil 18g | 0.63oz spearmint essential oil Blue ultramarine, as needed Hydrated chromium green oxide, as needed Silver mica, as needed"
+    },
+    {
+      "id": "coconut-aloe-shampoo-bars",
+      "name": "Coconut Aloe Shampoo Bars",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/coconut-aloe-shampoo-bars/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "ingredients": [
+        {
+          "name": "Refined coconut oil",
+          "pct": 25
+        },
+        {
+          "name": "Unrefined shea butter",
+          "pct": 15
+        },
+        {
+          "name": "Beef tallow",
+          "pct": 35
+        },
+        {
+          "name": "Castor oil",
+          "pct": 15
+        }
+      ],
+      "notes": "You could do more &#8220;u&#8221;&#8216;s if you wanted to for more obvious swirls; these ones were definitely more subtle than I&#8217;d imagined."
+    },
+    {
+      "id": "peppermint-tingle-shampoo",
+      "name": "Peppermint Tingle Shampoo",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/peppermint-tingle-shampoo/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "French green clay gives the batch it&#8217;s base green colour and boosts the cleansing power as well as allows the shampoo to double as a great shave bar. Green oxide added to half the batch gives us some nice contrast for swirls. If you don&#8217;t…",
+      "ingredients": [
+        {
+          "name": "Refined coconut oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 15
+        },
+        {
+          "name": "Unrefined shea butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor oil",
+          "pct": 10
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "cinnamon-swirl-soap-shampoo",
+      "name": "Cinnamon Swirl Soap  Shampoo",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/cinnamon-swirl-soap-shampoo/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Cinnamon is known to increase circulation, making it popular in lip glosses that are designed to naturally plump and redden lips. It also smells fantastic, and the light grit from the ground spice makes for a bit of fantastic, light exfoliation—perfe…",
+      "ingredients": [
+        {
+          "name": "Refined coconut oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 15
+        },
+        {
+          "name": "Unrefined shea butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor oil",
+          "pct": 10
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "lemongrass-seaweed-shampoo",
+      "name": "Lemongrass  Seaweed Shampoo",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lemongrass-seaweed-shampoo/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Seaweed contains vitamins A &amp; C, as well as lots of beneficial minerals. Seaweed is also a natural moisturizer, and it has great detoxing properties. It&#8217;s great for the skin and is said to help with dandruff. And, perhaps best of all, seawe…",
+      "ingredients": [
+        {
+          "name": "Refined coconut oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 15
+        },
+        {
+          "name": "Unrefined shea butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor oil",
+          "pct": 10
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "latt-shampoo",
+      "name": "Latté Shampoo",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/latte-shampoo/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Because I wanted milk and coffee swirls, this soap got tricky. This is because the coffee and the milk would usually be the bases of the soaps, not add-ins. They&#8217;re what you mix the lye into. So I could make two separate batches of soap, and co…",
+      "ingredients": [
+        {
+          "name": "Castor oil",
+          "pct": 20
+        },
+        {
+          "name": "Refined coconut oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef tallow",
+          "pct": 15
+        },
+        {
+          "name": "Unrefined shea butter",
+          "pct": 10
+        }
+      ],
+      "notes": "It&#8217;s awesome! If you want to amp up the scent you can look into coffee and vanilla EOs 🙂"
+    },
+    {
+      "id": "shea-butter-citrus-shampoo-bar",
+      "name": "Shea Butter  Citrus Shampoo Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/shea-butter-citrus-shampoo-bar/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "This is the second batch of soap I ever made, and it&#8217;s become one of my favourites over time. The long curing time is definitely beneficial because I used unrefined shea butter (USA / Canada) as my hard oil (and as far as hard oils go, it&#8217…",
+      "ingredients": [
+        {
+          "name": "Castor oil",
+          "pct": 19
+        },
+        {
+          "name": "Unrefined shea butter",
+          "pct": 14
+        },
+        {
+          "name": "Virgin coconut oil",
+          "pct": 25
+        },
+        {
+          "name": "Avocado oil",
+          "pct": 14
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "diy-shampoo-bars",
+      "name": "DIY Shampoo Bars",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/diy-shampoo-bars/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "I&#8217;ve been making my own shampoo bars for about a year, and I love them. There&#8217;s really very little difference between a shampoo bar and a bar of plain &#8216;ol cold processed soap. Shampoo bars tend to be a bit more gentle and more lathe…",
+      "ingredients": [
+        {
+          "name": "Castor oil",
+          "pct": 20
+        },
+        {
+          "name": "Refined coconut oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef tallow",
+          "pct": 25
+        },
+        {
+          "name": "Walnut oil",
+          "pct": 10
+        },
+        {
+          "name": "Superfat",
+          "pct": 7
+        }
+      ],
+      "notes": "Amy—I&#8217;m a vegetarian as well, and here&#8217;s why I use beef tallow or lard instead of the commonly used substitute palm oil:"
+    },
+    {
+      "id": "dry-argan-oil-hair-mist",
+      "name": "Dry Argan Oil Hair Mist",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/dry-argan-oil-hair-mist/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I store my argan oil in the fridge, and here you can see it&#8217;s still solid and looks rather curdled—no worries, it melted in a few minutes!",
+      "ingredients": [
+        {
+          "name": "Cyclomethicone",
+          "pct": 69.2
+        },
+        {
+          "name": "C12-15 alkyl benzoate",
+          "pct": 10
+        },
+        {
+          "name": "Argan oil",
+          "pct": 20
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        },
+        {
+          "name": "Fragrance or essential oil of choice",
+          "pct": 0.3
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "how-to-make-your-own-co-wash-3-ways",
+      "name": "How to Make Your Own Co-Wash: 3 Ways",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/how-to-make-your-own-co-wash-3-ways/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "Today we&#8217;re going to make three different easy co-washes (or cleansing conditioners), and I&#8217;ll also be sharing some ideas and pointers to help you customize these formulations to create something that&#8217;s perfect for your hair. Let&#8…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 81.5
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 4
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 4
+        },
+        {
+          "name": "Apricot kernel oil",
+          "pct": 8
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 2
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Compared to BTMS-25, BTMS-50 is twice as conditioning (it contains 50% behentrimonium methosulfate vs. the 25% of BTMS-25) and doesn&#8217;t thicken formulations nearly as much (it contains approximately 40% Cetyl Alcohol vs. the 75% Cetearyl Alcohol content of BTMS-25). You can use BTMS-25 instead of BTMS-50 in these formulations; this swap will result in a less conditioning, thicker final formul"
+    },
+    {
+      "id": "2-creamy-conditioners-with-btms-25-light-rich",
+      "name": "2 Creamy Conditioners with BTMS-25: Light  Rich",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/2-creamy-conditioners-with-btms-25-light-rich/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "How do the two conditioners differ? The key difference between these two formulations is the size of the oil phase and the weight of the emollients in the oil phase. The light, fast-absorbing conditioner has a small oil phase and features a lightweig…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 83.2
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Propanediol 1,3",
+          "pct": 4
+        },
+        {
+          "name": "BTMS-25",
+          "pct": 3
+        },
+        {
+          "name": "Isoamyl Laurate",
+          "pct": 5
+        },
+        {
+          "name": "Cationic guar gum",
+          "pct": 0.2
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Hydrolyzed quinoa protein",
+          "pct": 3
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.4
+        },
+        {
+          "name": "Fragrance oil",
+          "pct": 0.2
+        },
+        {
+          "name": "Distilled water",
+          "pct": 63.2
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Propanediol 1,3",
+          "pct": 4
+        },
+        {
+          "name": "BTMS-25",
+          "pct": 6
+        },
+        {
+          "name": "Jojoba oil",
+          "pct": 10
+        },
+        {
+          "name": "Unrefined shea butter",
+          "pct": 8
+        },
+        {
+          "name": "Argan oil",
+          "pct": 4
+        },
+        {
+          "name": "Cationic guar gum",
+          "pct": 0.2
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Hydrolyzed quinoa protein",
+          "pct": 3
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.4
+        },
+        {
+          "name": "Fragrance oil",
+          "pct": 0.2
+        }
+      ],
+      "notes": "If you don&#8217;t have isoamyl laurate you could use a different lightweight ester instead: Coco-Caprylate, isoamyl cocoate, and Neossance® Hemisqualane would all be lovely choices. If you wanted a slightly richer conditioner you could use a lightweight or midweight liquid oil instead; Camellia Seed Oil, Argan Oil, and Coconut Oil could all be lovely. Please read the Super Simple Creamy Hair Cond"
+    },
+    {
+      "id": "super-simple-creamy-hair-conditioner-3-ways",
+      "name": "Super Simple Creamy Hair Conditioner: 3 Ways",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/super-simple-creamy-hair-conditioner-3-ways/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "The partner video for this project is focussed a lot more on technique and showing you the consistencies of the finished conditioners, while this post will focus more on the ingredients and formulation.",
+      "ingredients": [
+        {
+          "name": "Hot",
+          "pct": 95.5
+        },
+        {
+          "name": "Powdered BTMS-25",
+          "pct": 4
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Hot",
+          "pct": 87
+        },
+        {
+          "name": "Powdered BTMS-25",
+          "pct": 4
+        },
+        {
+          "name": "Oil of choice",
+          "pct": 8
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Fragrance or essential oil of choice",
+          "pct": 0.5
+        },
+        {
+          "name": "Hot",
+          "pct": 84.5
+        },
+        {
+          "name": "Powdered BTMS-25",
+          "pct": 4
+        },
+        {
+          "name": "Oil of choice",
+          "pct": 8
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Fragrance or essential oil of choice",
+          "pct": 0.5
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Hydrolyzed protein of choice",
+          "pct": 2
+        }
+      ],
+      "notes": "The extra ingredients Liquid oil In version two (and three) we are harnessing BTMS-25&#8217;s emulsifying abilities and including 8% oil to boost the richness, viscosity, and emollience of the hair conditioner. This is not the limit of BTMS-25&#8217;s emulsifying abilities; you could include up to ~19% oil with 4% BTMS-25 if you wanted to. I&#8217;ve included more BTMS-25 than is required to creat"
+    },
+    {
+      "id": "strawberry-kiwi-cleansing-conditioner",
+      "name": "Strawberry Kiwi Cleansing Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/strawberry-kiwi-cleansing-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "Save 8% on kiwi seed oil and everything else at Mystic Moments with coupon code HUMBLEBEE &nbsp;",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 41.29
+        },
+        {
+          "name": "Strawberry distillate",
+          "pct": 30
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 5
+        },
+        {
+          "name": "Sodium cocoamphoacetate",
+          "pct": 4
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Citric acid",
+          "pct": 0.2
+        },
+        {
+          "name": "Water-soluble red dye",
+          "pct": 0.01
+        },
+        {
+          "name": "BTMS-25",
+          "pct": 4
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 3
+        },
+        {
+          "name": "Kiwi seed oil",
+          "pct": 9
+        },
+        {
+          "name": "Cationic guar gum",
+          "pct": 0.2
+        },
+        {
+          "name": "Hydrolyzed quinoa protein",
+          "pct": 2
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.3
+        }
+      ],
+      "notes": "Our strawberry-y goodness comes from fragrant, juicy-smelling strawberry distillate. It&#8217;s a delicious and all-natural way to get a rich, lovely strawberry scent in our products. If you don&#8217;t have it, I&#8217;d replace the distillate with more distilled water and include 0.1–0.2% strawberry fragrance oil in the cool down phase."
+    },
+    {
+      "id": "strawberry-kiwi-conditioning-hair-treatment",
+      "name": "Strawberry Kiwi Conditioning Hair Treatment",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/strawberry-kiwi-conditioning-hair-treatment/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "We get even more conditioning from some cationic guar gum (which isn&#8217;t the same thing as regular guar gum) and some polyquaternium 7. If you don&#8217;t have either of these ingredients you don&#8217;t strictly need them, though they are lovely…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 31.69
+        },
+        {
+          "name": "Strawberry distillate",
+          "pct": 30
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 5
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 2
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Red dye",
+          "pct": 0.01
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 6.5
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 4
+        },
+        {
+          "name": "Kiwi seed oil",
+          "pct": 12
+        },
+        {
+          "name": "Cationic guar gum",
+          "pct": 0.2
+        },
+        {
+          "name": "Hydrolyzed quinoa protein",
+          "pct": 4
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.3
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 3
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Allantoin",
+          "pct": 0.3
+        }
+      ],
+      "notes": "We get even more conditioning from some cationic guar gum (which isn&#8217;t the same thing as regular guar gum) and some polyquaternium 7. If you don&#8217;t have either of these ingredients you don&#8217;t strictly need them, though they are lovely. There are more details in the substitutions list at the end of this post and in the Humblebee &amp; Me DIY Encyclopedia."
+    },
+    {
+      "id": "cocoa-coconut-simple-conditioner-bars",
+      "name": "Cocoa Coconut Simple Conditioner Bars",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/cocoa-coconut-simple-conditioner-bars/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "In keeping with the &#8220;simple&#8221; theme, there is no water part to these conditioner bars. If you&#8217;d like to make a more complex conditioner bar that incorporates some water-soluble goodies, I recommend checking out this Cranberry Orange …",
+      "ingredients": [
+        {
+          "name": "Cocoa butter",
+          "pct": 30
+        },
+        {
+          "name": "Traditional virgin coconut oil",
+          "pct": 17
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 20
+        },
+        {
+          "name": "Stearic acid",
+          "pct": 7
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 25
+        },
+        {
+          "name": "Optiphen™ Plus",
+          "pct": 1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "silk-camellia-seed-leave-in-hair-conditioner",
+      "name": "Silk  Camellia Seed Leave-In Hair Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/silk-camellia-seed-leave-in-hair-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "The oil phase in this leave-in hair conditioner is small—just 6.5%. it&#8217;s mostly camellia seed oil; an ultra-light liquid carrier oil made from the seeds of the same plant we get tea from! It has been prized for hair and skincare in Japan and Ch…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 89.9
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 0.5
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 1
+        },
+        {
+          "name": "Hydrolyzed silk",
+          "pct": 1
+        },
+        {
+          "name": "Behentrimonium chloride",
+          "pct": 0.5
+        },
+        {
+          "name": "Camellia seed oil",
+          "pct": 5
+        },
+        {
+          "name": "Cationic guar gum",
+          "pct": 0.3
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 1
+        },
+        {
+          "name": "Fragrance and/or essential oil of choice",
+          "pct": 0.5
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.3
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "passionfruit-coconut-conditioning-body-lotion-hair-condition",
+      "name": "Passionfruit Coconut Conditioning Body Lotion + Hair Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/passionfruit-coconut-conditioning-body-lotion-hair-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "Save 8% on passionfruit oil and everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 75.9
+        },
+        {
+          "name": "Sodium lactate",
+          "pct": 5
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 4
+        },
+        {
+          "name": "Passionfruit oil",
+          "pct": 5
+        },
+        {
+          "name": "Virgin coconut oil",
+          "pct": 5
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 2.5
+        },
+        {
+          "name": "Hydrolyzed baobab protein",
+          "pct": 2
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.3
+        },
+        {
+          "name": "Passion fruit natural fragrance oil",
+          "pct": 0.3
+        }
+      ],
+      "notes": "The oil phase for this lotion is predominantly silky, lightweight passionfruit oil and a gorgeous ultra-fragrant virgin coconut oil. I’ve also included a small amount of cetyl alcohol for its lightweight, silky thickening. If you don’t have cetyl alcohol you could use cetearyl alcohol instead, but that will make for a fluffier end product. You could also replace the cetyl alcohol with more coconut"
+    },
+    {
+      "id": "passionfruit-coconut-conditioner-bar",
+      "name": "Passionfruit Coconut Conditioner Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/passionfruit-coconut-conditioner-bar/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Today we&#8217;re making a lovely solid conditioner bar starring exotic passionfruit oil and richly conditioning BTMS-25! When you run this solid bar over wet hair, it transforms into creamy, slippy hair conditioner—leaving your hair soft and silky, …",
+      "ingredients": [
+        {
+          "name": "BTMS-25",
+          "pct": 60
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 17
+        },
+        {
+          "name": "Passionfruit oil",
+          "pct": 9
+        },
+        {
+          "name": "Virgin coconut oil",
+          "pct": 4
+        },
+        {
+          "name": "Hydrolyzed oat protein",
+          "pct": 1.5
+        },
+        {
+          "name": "Cetrimonium chloride",
+          "pct": 1
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 1
+        },
+        {
+          "name": "Passion fruit natural fragrance oil",
+          "pct": 1
+        },
+        {
+          "name": "Optiphen™ Plus",
+          "pct": 1
+        },
+        {
+          "name": "Distilled water",
+          "pct": 4.5
+        }
+      ],
+      "notes": "BTMS-25 contains 25% Behentrimonium Methosulfate (the active conditioning ingredient), while the other 75% is cetearyl alcohol. In contrast, BTMS-50 contains 50% Behentrimonium Methosulfate, with the remaining 50% comprised of cetyl alcohol and butylene glycol. That means BTMS-25 contains half of the active ingredient, but far more thickening/hardening ingredients. That means if you replace BTMS-5"
+    },
+    {
+      "id": "argan-rose-cleansing-conditioner",
+      "name": "Argan Rose Cleansing Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/argan-rose-cleansing-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "Save 5% on sodium cocoamphoacetate, rose hydrosol, hydrolyzed quinoa protein, and everything else at Essential Wholesale &amp; Labs with coupon code HUMBLEBEE",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 43.25
+        },
+        {
+          "name": "Rose hydrosol",
+          "pct": 30
+        },
+        {
+          "name": "Panthenol",
+          "pct": 2
+        },
+        {
+          "name": "Sodium lactate",
+          "pct": 2
+        },
+        {
+          "name": "Sodium Cocoamphoacetate",
+          "pct": 4
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 3.5
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 2
+        },
+        {
+          "name": "Argan oil",
+          "pct": 5
+        },
+        {
+          "name": "Daikon seed extract",
+          "pct": 3
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 1.5
+        },
+        {
+          "name": "Hydrolyzed quinoa protein",
+          "pct": 3
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Lemon slices fragrance oil",
+          "pct": 0.25
+        }
+      ],
+      "notes": "Our scent comes from two places; sensual and stunning Lebanese rose hydrosol, and sweet and juicy lemon slices fragrance oil. If you prefer to use essential oils rather than fragrance oils you could easily use lemon essential oil instead, but I&#8217;d use a bit more—the fragrance is strong enough to come across well at 0.25%, but I&#8217;d probably double that if you want to use the essential oil"
+    },
+    {
+      "id": "featherweight-leave-in-hair-conditioner",
+      "name": "Featherweight Leave-In Hair Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/featherweight-leave-in-hair-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "Weigh the behentrimonium chloride (BTMC), cetearyl alcohol, and panthenol into a small beaker.",
+      "ingredients": [
+        {
+          "name": "Behentrimonium chloride",
+          "pct": 1
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 1
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 1
+        },
+        {
+          "name": "Distilled water",
+          "pct": 94
+        },
+        {
+          "name": "Hydrolyzed rice protein",
+          "pct": 2
+        },
+        {
+          "name": "Fragrance or essential oil of choice",
+          "pct": 0.5
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        }
+      ],
+      "notes": "I used that simple concoction (plus preservative and some fragrance) for the better part of a year before realizing I should really share it with you guys! I amped it up a bit, including some panthenol to reduce breakage and add shine, and some hydrolyzed rice protein to volumize and moisturize the hair, but the overall formulation is still fairly simple with just seven ingredients (and you can le"
+    },
+    {
+      "id": "cranberry-orange-conditioner-bar",
+      "name": "Cranberry Orange Conditioner Bar",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/cranberry-orange-conditioner-bar/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "The new water soluble dyes from YellowBee are insanely potent! I&#8217;m having a lot of fun working with them.",
+      "ingredients": [
+        {
+          "name": "BTMS-50",
+          "pct": 30
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 30
+        },
+        {
+          "name": "Mango butter",
+          "pct": 15
+        },
+        {
+          "name": "Cranberry seed oil",
+          "pct": 15
+        },
+        {
+          "name": "Orange water soluble dye",
+          "pct": 0.01
+        },
+        {
+          "name": "Hydrolyzed silk",
+          "pct": 2
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 1.5
+        },
+        {
+          "name": "Orange essential oil or fragrance of choice",
+          "pct": 0.99
+        },
+        {
+          "name": "Optiphen&#x2122; Plus",
+          "pct": 1
+        },
+        {
+          "name": "Distilled water",
+          "pct": 4.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "shine-detangle-conditioning-hair-rinse",
+      "name": "Shine  Detangle Conditioning Hair Rinse",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/shine-detangle-conditioning-hair-rinse/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Weigh the PEG-8 dimethicone and fragrance into a small beaker and whisk to combine. Add the remaining ingredients, one at a time, whisking between additions. Add the water slowly and gently to avoid too many bubbles.",
+      "ingredients": [
+        {
+          "name": "PEG-8 dimethicone",
+          "pct": 2
+        },
+        {
+          "name": "Beachwood Vetiver fragrance oil",
+          "pct": 0.5
+        },
+        {
+          "name": "Cetrimonium chloride",
+          "pct": 2
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 2
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Hydrolyzed quinoa protein",
+          "pct": 4
+        },
+        {
+          "name": "Sodium lactate",
+          "pct": 4
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Distilled water",
+          "pct": 84.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "ros-conditioning-hair-foam",
+      "name": "Rosé Conditioning Hair Foam",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rose-conditioning-hair-foam/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Today we&#8217;re creating a fun new hair product—a lightweight Rosé Conditioning Hair Foam! This delicate foam contains some fabulous-for-hair goodies for smoothing and volumizing. It also smells fabulous and comes together in a flash. And did I men…",
+      "ingredients": [
+        {
+          "name": "Polysorbate 20",
+          "pct": 2
+        },
+        {
+          "name": "Cognac essential oil",
+          "pct": 0.35
+        },
+        {
+          "name": "Lemon slices fragrance oil",
+          "pct": 0.15
+        },
+        {
+          "name": "Caprylyl/Capryl Glucoside",
+          "pct": 1
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 2
+        },
+        {
+          "name": "Hydrolyzed rice protein",
+          "pct": 4
+        },
+        {
+          "name": "Sodium lactate",
+          "pct": 4
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 1
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Distilled water",
+          "pct": 55
+        },
+        {
+          "name": "Rose hydrosol",
+          "pct": 30
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "rich-strawberry-rose-hair-conditioner",
+      "name": "Rich Strawberry Rose Hair Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rich-strawberry-rose-hair-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "If you&#8217;re looking for a richer hair conditioner to pamper your lovely locks with, I think you&#8217;re going to like this Rich Strawberry Rose Hair Conditioner. A fragrant blend of summery hydrosols blends with some rich conditioners and moistu…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 18.5
+        },
+        {
+          "name": "Strawberry hydrosol",
+          "pct": 15
+        },
+        {
+          "name": "Rose hydrosol",
+          "pct": 30
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 2
+        },
+        {
+          "name": "Cetrimonium chloride",
+          "pct": 2
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 2
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 5
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 3
+        },
+        {
+          "name": "Babassu oil",
+          "pct": 10
+        },
+        {
+          "name": "Brassica Campestris/Aleurites Fordi Oil Copolymer",
+          "pct": 3
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 4
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 2
+        },
+        {
+          "name": "Hydrolyzed rice protein",
+          "pct": 3
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "ros-leave-in-hair-conditioner",
+      "name": "Rosé Leave-In Hair Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rose-leave-in-hair-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "I can hardly believe it, but I don’t think I’ve ever shared a formula for a leave-in hair conditioner before. I’ve had plenty of requests, but somehow such a thing has slipped through the cracks—until now! This lightweight Rosé Leave In Hair Conditio…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 37.95
+        },
+        {
+          "name": "Rose hydrosol",
+          "pct": 50
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 2
+        },
+        {
+          "name": "Cetrimonium chloride",
+          "pct": 0.8
+        },
+        {
+          "name": "Sodium lactate",
+          "pct": 2
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 2
+        },
+        {
+          "name": "Argan oil",
+          "pct": 2
+        },
+        {
+          "name": "Green cognac essential oil",
+          "pct": 0.5
+        },
+        {
+          "name": "Grapefruit essential oil",
+          "pct": 0.25
+        },
+        {
+          "name": "Hydrolyzed rice protein",
+          "pct": 2
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "mango-mango-cleansing-conditioner",
+      "name": "Mango Mango Cleansing Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/mango-mango-cleansing-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "Products made with Varisoft® EQ 655 need to have a pH below 5 as it tends to break down in higher pH environments. We generally want haircare products to be in the 3.5–5.5 range, and with this emulsifier we are aiming for something above 3.5 and belo…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 71.96
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 4
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 1
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 1
+        },
+        {
+          "name": "Cetrimonium chloride",
+          "pct": 2
+        },
+        {
+          "name": "Varisoft EQ 65",
+          "pct": 4
+        },
+        {
+          "name": "Sea buckthorn fruit oil",
+          "pct": 2
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 2.5
+        },
+        {
+          "name": "LuxGlide N350",
+          "pct": 3
+        },
+        {
+          "name": "Hydrolyzed quinoa protein",
+          "pct": 3
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 4
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.04
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Mango natural fragrance oil",
+          "pct": 1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "sugar-plum-cleansing-conditioner",
+      "name": "Sugar Plum Cleansing Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/sugar-plum-cleansing-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "Our oil phase is simple; conditioning emulsifier BTMS-50, fragrant plum oil, and thickening cetearyl alcohol. I find the scent of the plum oil comes through even at 3%! I&#8217;ve combined that scent with vanilla-like benzoin resinoid and bright, swe…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 74.96
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 4
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 1
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 1
+        },
+        {
+          "name": "Cetrimonium chloride",
+          "pct": 2
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 2
+        },
+        {
+          "name": "Plum oil",
+          "pct": 3
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 3
+        },
+        {
+          "name": "Hydrolyzed rice protein",
+          "pct": 3
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 4
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.04
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Cardamom essential oil",
+          "pct": 0.5
+        },
+        {
+          "name": "Benzoin resinoid",
+          "pct": 1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "rose-cardamom-cleansing-conditioner",
+      "name": "Rose Cardamom Cleansing Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rose-cardamom-cleansing-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "In the water phase you’ll find some rose hydrosol for fantastic rose scent, and some plant-sourced keratin for some shine and bounce. Panthenol (vitamin B5) helps add lustre and shine, and cocamidopropyl betaine gives us the gentle cleansing and easy…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 51.94
+        },
+        {
+          "name": "Rose hydrosol",
+          "pct": 20
+        },
+        {
+          "name": "Plant-derived keratin",
+          "pct": 2
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 4
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 3
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 4
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 4
+        },
+        {
+          "name": "Virgin coconut oil",
+          "pct": 3
+        },
+        {
+          "name": "Jojoba oil",
+          "pct": 2
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 3
+        },
+        {
+          "name": "Bamboo bioferment",
+          "pct": 2
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.06
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Cardamom essential oil",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "cream-of-earl-grey-cleansing-conditioner",
+      "name": "Cream of Earl Grey Cleansing Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/cream-of-earl-grey-cleansing-conditioner/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "Our cool down phase features a new-to-the-blog ingredient: silicone ester copolymer from Windy Point (thanks, Michele!). I&#8217;ve included it at just 1% for added shine and slip. Our essential oil blend is vanilla-like benzoin, bright bergamot, and…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 74.69
+        },
+        {
+          "name": "Plant-derived keratin",
+          "pct": 2
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 3
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 3
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 2
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 4
+        },
+        {
+          "name": "Virgin coconut oil",
+          "pct": 3
+        },
+        {
+          "name": "Argan oil",
+          "pct": 3
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 2
+        },
+        {
+          "name": "Silicone ester copolymer",
+          "pct": 1
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.06
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Benzoin resinoid",
+          "pct": 0.5
+        },
+        {
+          "name": "Palmarosa essential oil",
+          "pct": 0.75
+        },
+        {
+          "name": "Bergamot essential oil",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "simple-silicone-free-hair-oil-2-ways",
+      "name": "Simple Silicone-Free Hair Oil (2 ways!)",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/simple-silicone-free-hair-oil/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "So, yeah&#8230; if you’ve ever had a similar experience with oils, you’re definitely not alone! So, let’s get into why that happens and how to make hair oils that deliver the fairytale princess magic I was dreaming of. I&#8217;m sharing two silicone-…",
+      "ingredients": [
+        {
+          "name": "SiClone® SR-5",
+          "pct": 89
+        },
+        {
+          "name": "Jojoba oil",
+          "pct": 8
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 1
+        },
+        {
+          "name": "Oil soluble calendula extract",
+          "pct": 1
+        },
+        {
+          "name": "Fragrance oil",
+          "pct": 1
+        },
+        {
+          "name": "Hydrogenated Ethylhexyl Olivate",
+          "pct": 83
+        },
+        {
+          "name": "Camellia seed oil",
+          "pct": 10
+        },
+        {
+          "name": "Castor oil",
+          "pct": 3
+        },
+        {
+          "name": "Medium chain triglycerides",
+          "pct": 2
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 1
+        },
+        {
+          "name": "Natural fragrance oil or essential oil",
+          "pct": 1
+        }
+      ],
+      "notes": "I&#8217;m keeping this formulation super light, so the amount of oil in here is quite low at just 8%. I&#8217;ve chosen jojoba oil as the star oil because it doesn&#8217;t penetrate the hair, instead boosting shine and improving slip. An oil soluble botanical extract adds some herbal loveliness, but you could replace it with more jojoba oil if you don&#8217;t have one. Vitamin E—an antioxidant—hel"
+    },
+    {
+      "id": "bi-phase-hyaluronic-acid-hair-serum",
+      "name": "Bi-Phase Hyaluronic Acid Hair Serum",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/bi-phase-hyaluronic-acid-hair-serum/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The water phase stars hyaluronic acid to help hydrate and moisturize the hair. You&#8217;ll also find some richly conditioning polyquaternium 7, volumizing hydrolyzed rice protein, and shine-boosting panthenol. The hydrolyzed rice protein is brown, s…",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 64.7
+        },
+        {
+          "name": "Low molecular weight 1% hyaluronic acid solution",
+          "pct": 20
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 1
+        },
+        {
+          "name": "Hydrolyzed rice protein",
+          "pct": 3
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Neossance® Hemisqualane",
+          "pct": 5
+        },
+        {
+          "name": "Camellia seed oil",
+          "pct": 5
+        },
+        {
+          "name": "Fragrance oil or essential oil of choice",
+          "pct": 0.1
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.2
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "summer-shimmer-hair-oil",
+      "name": "Summer Shimmer Hair Oil",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/summer-shimmer-hair-oil/",
+      "heatRequired": false,
+      "equipment": [
+        "Blender"
+      ],
+      "description": "Today we&#8217;re creating an ultra-lightweight Summer Shimmer Hair Oil that is brilliant for adding shine, smoothing flyaways, and adding a bit of sparkle to your locks. The shimmer and scent are completely customizable, and this is so easy to make …",
+      "ingredients": [
+        {
+          "name": "TKB’s thickening clay",
+          "pct": 1
+        },
+        {
+          "name": "Coloured mica of choice",
+          "pct": 5
+        },
+        {
+          "name": "Cyclopentasiloxane",
+          "pct": 53
+        },
+        {
+          "name": "Isododecane",
+          "pct": 30
+        },
+        {
+          "name": "Argan oil",
+          "pct": 10
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        },
+        {
+          "name": "Fragrance or essential oil of choice",
+          "pct": 0.5
+        }
+      ],
+      "notes": "I chose argan oil as the oil for this formulation, but you could easily swap that for any liquid oil that your hair loves! If you like Moroccanoil, it is basically argan oil diluted in cyclomethicone with some added fragrance and colour, so&#8230; yeah. This formulation is more or less a shimmery budget alternative to Moroccanoil!"
+    },
+    {
+      "id": "featherweight-hair-oil",
+      "name": "Featherweight Hair Oil",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/featherweight-hair-oil/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Today we&#8217;re creating an ultra-lightweight hair oil that&#8217;s designed for hair that&#8217;s really not very tolerant of oils (like mine). Some of my favourite-for-hair oils are blended into a silky, fast-evaporating base to create a water-fr…",
+      "ingredients": [
+        {
+          "name": "Cyclomethicone",
+          "pct": 60.5
+        },
+        {
+          "name": "Isododecane",
+          "pct": 30
+        },
+        {
+          "name": "Dimethicone 350",
+          "pct": 1
+        },
+        {
+          "name": "Camellia seed oil",
+          "pct": 5
+        },
+        {
+          "name": "Fractionated coconut oil",
+          "pct": 2
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        },
+        {
+          "name": "Fragrance",
+          "pct": 1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "sweetgrass-conditioning-hair-gel-serum",
+      "name": "Sweetgrass Conditioning Hair Gel Serum",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/sweetgrass-conditioning-hair-gel-serum/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Making is simple but does require some sitting time so the hydroxyethylcellulose can fully hydrate and create the gel. There&#8217;s no heat required, so you can more or less stir, wait, and stir some more. The end result is a smooth, silky gel that …",
+      "ingredients": [
+        {
+          "name": "Hydroxyethylcellulose",
+          "pct": 2
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 4
+        },
+        {
+          "name": "Olivem 300",
+          "pct": 4
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 2
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 2
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Distilled water",
+          "pct": 55.5
+        },
+        {
+          "name": "Sweetgrass hydrosol",
+          "pct": 30
+        }
+      ],
+      "notes": "On the moisturizing front, I&#8217;ve included some vegetable glycerin and panthenol (vitamin B5). Our scent comes entirely from some beautiful sweetgrass hydrosol. You could easily alter the scent by choosing a different hydrosol (or blend of hydrosols). If you want to include some essential or fragrance oils start with 0.5%; Olivem 300 does have some solubilizing powers, but you&#8217;ll need to"
+    },
+    {
+      "id": "smooth-shine-hair-serum",
+      "name": "Smooth  Shine Hair Serum",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/smooth-shine-hair-serum/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Up next, panthenol: how I love thee. Panthenol (AKA vitamin B5) is a great hair moisturizer, making the hair softer and shinier, and making it more elastic. Some vegetable glycerine also further increases the moisturizing properties of the serum.",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 73.75
+        },
+        {
+          "name": "Rose hydrosol",
+          "pct": 20
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 2
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 2
+        },
+        {
+          "name": "Cetrimonium chloride",
+          "pct": 0.25
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Cromollient SCE",
+          "pct": 1
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        }
+      ],
+      "notes": "The scent comes entirely from our hydrosol; I&#8217;ve gone with rose because I am positively addicted to rose, but you could easily use something else instead. I&#8217;ve also provided guidelines for using a fragrance or essential oil instead instead—those are in the handy &#8220;Substitutions&#8221; section at the end of the recipe!"
+    },
+    {
+      "id": "silky-camellia-hair-serum",
+      "name": "Silky Camellia Hair Serum",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/silky-camellia-hair-serum/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I used a 30mL/1oz bottle with a treatment pump top—you can see it&#8217;s quite a tiny pump!",
+      "ingredients": [
+        {
+          "name": "BTMS-50",
+          "pct": 12
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 2
+        },
+        {
+          "name": "Camellia seed oil",
+          "pct": 45
+        },
+        {
+          "name": "Neossance® Hemisqualane",
+          "pct": 40
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        },
+        {
+          "name": "Essential oil",
+          "pct": 0.5
+        }
+      ],
+      "notes": "You can use more camellia seed oil, keeping in mind this will make for a heavier final product You can replace it with half camellia seed oil, and half cyclomethicone, adding the cyclomethicone with the cool down phase You can replace it with another lightweight carrier oil, like squalane, macadamia nut oil, rosehip oil, or hazelnut oil, keeping in mind this will still make for a heavier final pro"
+    },
+    {
+      "id": "candlelight-rich-hair-mask",
+      "name": "Candlelight Rich Hair Mask",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/candlelight-rich-hair-mask/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "Save 10% on shea butter and everything else at Baraka Shea Butter with coupon code HUMBLEBEE",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 50.85
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 4
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 1
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 2
+        },
+        {
+          "name": "BTMS-25",
+          "pct": 6
+        },
+        {
+          "name": "Unrefined shea butter",
+          "pct": 10
+        },
+        {
+          "name": "Jojoba oil",
+          "pct": 12
+        },
+        {
+          "name": "Castor oil",
+          "pct": 5
+        },
+        {
+          "name": "Polyquaternium 7",
+          "pct": 3
+        },
+        {
+          "name": "Hydrolyzed quinoa protein",
+          "pct": 5
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.3
+        },
+        {
+          "name": "Warm fragrance oil",
+          "pct": 0.35
+        }
+      ],
+      "notes": "The water phase of this formulation contains some moisturizing glycerin and some lovely panthenol (Vitamin B5) for added shine and bounce. I&#8217;ve also included some amphoteric Cocamidopropyl Betaine for improved rinse-out. If you don&#8217;t have it and you&#8217;ll be shampooing this out anyways, you can replace the Cocamidopropyl Betaine with more water."
+    },
+    {
+      "id": "double-butter-conditioning-hair-mask",
+      "name": "Double Butter Conditioning Hair Mask",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/double-butter-conditioning-hair-mask/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "Save 8% on murumuru butter and everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "ingredients": [
+        {
+          "name": "Distilled water",
+          "pct": 51.5
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 10
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 4
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 6.5
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 4
+        },
+        {
+          "name": "Cupuacu butter",
+          "pct": 10
+        },
+        {
+          "name": "Murumuru butter",
+          "pct": 5
+        },
+        {
+          "name": "Açaí berry oil",
+          "pct": 3
+        },
+        {
+          "name": "Cationic guar gum",
+          "pct": 0.2
+        },
+        {
+          "name": "Polyquaternium-10",
+          "pct": 0.5
+        },
+        {
+          "name": "Hydrolyzed baobab protein",
+          "pct": 4
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.3
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "&#8220;Bum Bum Type&#8221; fragrance oil",
+          "pct": 0.5
+        }
+      ],
+      "notes": "The oil phase of this hair mask features two butters—you probably could&#8217;ve guessed from the name &#x1f609; I used refined cupuaçu butter and unrefined murumuru butter. The product that inspired this formulation also used tucumã butter, but I didn&#8217;t have any. You could easily swap half of the cupuaçu butter for tucumã butter if you do—that&#8217;s what I&#8217;d originally planned to do"
+    },
+    {
+      "id": "rose-tea-ultra-light-conditioning-hair-balm",
+      "name": "Rose  Tea Ultra-Light Conditioning Hair Balm",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rose-tea-ultra-light-conditioning-hair-balm/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Because this product is designed for customers with hair that is not very tolerant of oils, it is primarily comprised of very lightweight emollients. To that end, Neossance® Hemisqualane and LuxFeel N5, two natural cyclomethicone alternatives, consti…",
+      "ingredients": [
+        {
+          "name": "Silica microspheres further add to the dry-touch finish of the product and lend a very “expensive” feel, reminiscent of high-end commercial hair serums.",
+          "pct": 3
+        },
+        {
+          "name": "Varisoft® EQ 65",
+          "pct": 10
+        },
+        {
+          "name": "Neossance® Hemisqualane",
+          "pct": 20
+        },
+        {
+          "name": "Camellia seed oil",
+          "pct": 15
+        },
+        {
+          "name": "Refined coconut oil",
+          "pct": 10
+        },
+        {
+          "name": "Silica microspheres",
+          "pct": 3
+        },
+        {
+          "name": "Rose wax",
+          "pct": 0.4
+        },
+        {
+          "name": "Candelilla wax",
+          "pct": 3
+        },
+        {
+          "name": "Stearic acid",
+          "pct": 10
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 5
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.4
+        },
+        {
+          "name": "Bezoin resinoid",
+          "pct": 0.3
+        },
+        {
+          "name": "LexFeel N5",
+          "pct": 20
+        },
+        {
+          "name": "Daikon seed extract",
+          "pct": 2.9
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "silk-shine-conditioning-hair-mask",
+      "name": "Silk  Shine Conditioning Hair Mask",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/silk-shine-conditioning-hair-mask/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "I tried an earlier version of this hair mask with more cationic guar gum (0.5% instead of the 0.2% seen here) and polyquaternium 10 (1% vs. 0.2%) and that made for a much gummier end product. I share a side-by-side comparison in the video so you can …",
+      "ingredients": [
+        {
+          "name": "Vegetable glycerine",
+          "pct": 10
+        },
+        {
+          "name": "Cationic guar gum",
+          "pct": 0.2
+        },
+        {
+          "name": "Polyquaternium 10",
+          "pct": 0.2
+        },
+        {
+          "name": "Distilled water",
+          "pct": 60.5
+        },
+        {
+          "name": "Panthenol powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Hydrolyzed silk",
+          "pct": 2
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 2
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 6
+        },
+        {
+          "name": "Argan oil",
+          "pct": 7
+        },
+        {
+          "name": "Cetearyl alcohol",
+          "pct": 4
+        },
+        {
+          "name": "Virgin coconut oil",
+          "pct": 7
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Fragrance or essential oil of choice",
+          "pct": 0.1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "argan-rose-conditioning-hair-balm",
+      "name": "Argan Rose Conditioning Hair Balm",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/argan-rose-conditioning-hair-balm/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "The conditioning kick comes from BTMS-50, which contains 50% Behentrimonium Methosulfate—the positively charged conditioning active. The inclusion of BTMS-50 in this hair balm gives it the most divine skin and hair feel, and it&#8217;s what makes thi…",
+      "ingredients": [
+        {
+          "name": "BTMS-50",
+          "pct": 10
+        },
+        {
+          "name": "Rose wax",
+          "pct": 1
+        },
+        {
+          "name": "Refined coconut oil",
+          "pct": 22
+        },
+        {
+          "name": "Argan oil",
+          "pct": 30
+        },
+        {
+          "name": "Neossance® Hemisqualane",
+          "pct": 15
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 7.25
+        },
+        {
+          "name": "Stearic acid",
+          "pct": 10
+        },
+        {
+          "name": "Candelilla wax",
+          "pct": 4
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        },
+        {
+          "name": "Lemon slices fragrance oil",
+          "pct": 0.25
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "conditioning-super-nourishing-hair-balm",
+      "name": "Conditioning Super Nourishing Hair Balm",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/conditioning-super-nourishing-hair-balm/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Thing #4: I wanted to add some conditioning! That was easy enough—10% BTMS-50 et voila. The inclusion of the BTMS-50 also means the balm can self-emulsify with water, so it applies nicely to damp hair. Wash-out is also improved. Double awesomeness!",
+      "ingredients": [
+        {
+          "name": "BTMS-50",
+          "pct": 10
+        },
+        {
+          "name": "Refined shea butter",
+          "pct": 10
+        },
+        {
+          "name": "Virgin coconut oil",
+          "pct": 10
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 5
+        },
+        {
+          "name": "Stearic acid",
+          "pct": 12
+        },
+        {
+          "name": "Beeswax",
+          "pct": 5
+        },
+        {
+          "name": "Camellia seed oil",
+          "pct": 30
+        },
+        {
+          "name": "Jojoba oil",
+          "pct": 16.5
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        },
+        {
+          "name": "Labdanum essential oil",
+          "pct": 0.5
+        },
+        {
+          "name": "Benzoin resinoid",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "ginger-oak-moss-hair-masque",
+      "name": "Ginger Oak Moss Hair Masque",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/ginger-oak-moss-hair-masque/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "The hair masque in the advertisement was mostly water and BTMS, with some coconut oil, shea butter, and a whackload of obscure botanical extracts that couldn&#8217;t have been included at more than 1%. So, basically hair conditioner with lots of fanc…",
+      "ingredients": [
+        {
+          "name": "Sodium lactate",
+          "pct": 2
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 2
+        },
+        {
+          "name": "Cetrimonium chloride",
+          "pct": 4
+        },
+        {
+          "name": "Plant-derived keratin",
+          "pct": 2
+        },
+        {
+          "name": "Shavegrass extract",
+          "pct": 2
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 5
+        },
+        {
+          "name": "Cetyl alcohol",
+          "pct": 2
+        },
+        {
+          "name": "Argan oil",
+          "pct": 3
+        },
+        {
+          "name": "Castor oil",
+          "pct": 3
+        },
+        {
+          "name": "Virgin coconut oil",
+          "pct": 8
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Oak moss absolute",
+          "pct": 0.1
+        },
+        {
+          "name": "CO2 extracted ginger essential oil",
+          "pct": 0.2
+        },
+        {
+          "name": "Michelia alba",
+          "pct": 0.1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "midwinter-conditioning-beard-balm",
+      "name": "Midwinter Conditioning Beard Balm",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/midwinter-conditioning-beard-balm/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Prepare a water bath by bringing about 3cm/1&#8243; of water to a bare simmer over low to medium-low heat in a small saucepan.",
+      "ingredients": [
+        {
+          "name": "BTMS-25",
+          "pct": 20
+        },
+        {
+          "name": "Virgin coconut oil",
+          "pct": 20
+        },
+        {
+          "name": "Castor oil",
+          "pct": 12
+        },
+        {
+          "name": "Beeswax",
+          "pct": 6
+        },
+        {
+          "name": "Jojoba oil",
+          "pct": 21.3
+        },
+        {
+          "name": "Argan oil",
+          "pct": 20
+        },
+        {
+          "name": "Kentucky Bourbon fragrance oil",
+          "pct": 0.2
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "conditioning-ginger-oak-moss-beard-oil",
+      "name": "Conditioning Ginger Oak Moss Beard Oil",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/conditioning-ginger-oak-moss-beard-oil/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "For some silky, pampering spoiling, I&#8217;ve included some BTMS-50—a cationic emulsifying wax. We&#8217;re including it more for its cationic conditioning properties than its emulsifying properties, but since it is an emulsifier that means this bea…",
+      "ingredients": [
+        {
+          "name": "Olive squalane",
+          "pct": 34.1
+        },
+        {
+          "name": "BTMS-50",
+          "pct": 5
+        },
+        {
+          "name": "Camellia seed oil",
+          "pct": 20
+        },
+        {
+          "name": "Argan oil",
+          "pct": 20
+        },
+        {
+          "name": "Jojoba oil",
+          "pct": 20
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        },
+        {
+          "name": "Oak moss absolute",
+          "pct": 0.1
+        },
+        {
+          "name": "CO2 extracted ginger essential oil",
+          "pct": 0.2
+        },
+        {
+          "name": "Michelia alba",
+          "pct": 0.1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
     }
   ]
 }
