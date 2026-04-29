@@ -33,7 +33,8 @@
     "Hyaluronic Acid",
     "Mica / Shimmer",
     "Fragrance Oil",
-    "Essential Oil"
+    "Essential Oil",
+    "Versagel"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -51,9 +52,25 @@
     "Witch Hazel",
     "Corn Starch",
     "Cocoa Powder",
-    "Fragrance Oil"
+    "Fragrance Oil",
+    "Versagel"
   ],
   "recipes": [
+    {
+      "id": "versagel-lip-gloss",
+      "name": "Basic Versagel Lip Gloss",
+      "source": "custom",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Simple lip gloss base using Versagel. High shine, non-sticky finish. Add flavor oil or fragrance and mica for color.",
+      "ingredients": [
+        { "name": "Versagel", "pct": 88 },
+        { "name": "Castor Oil", "pct": 8 },
+        { "name": "Vitamin E Oil", "pct": 1 },
+        { "name": "Fragrance Oil", "pct": 3 }
+      ],
+      "notes": "Versagel is thick — warm gently between palms or in a warm water bath to make it workable. Castor oil adds extra gloss and slip. Mica can be stirred in for tinted gloss."
+    },
     {
       "id": "whipped-shea-4",
       "name": "4-Ingredient Whipped Shea Butter",
