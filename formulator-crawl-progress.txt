@@ -1,0 +1,93 @@
+# Formulator Crawl Progress
+# Format: STATUS | URL | Recipe ID added (or SKIPPED reason)
+
+PROCESSED | https://www.humblebeeandme.com/jojoba-mint-natural-foot-cream/ | jojoba-mint-foot-cream
+PROCESSED | https://www.humblebeeandme.com/sugar-plum-fairy-shimmer-oil/ | sugar-plum-shimmer-oil
+PROCESSED | https://www.humblebeeandme.com/soothing-hydrating-hyaluronic-acid-serum/ | hyaluronic-acid-serum
+PROCESSED | https://www.humblebeeandme.com/make-your-own-super-nourishing-hair-balm/ | hair-balm-nourishing
+PROCESSED | https://www.humblebeeandme.com/super-simple-lightweight-hair-conditioner-3-ways/ | lightweight-hair-conditioner
+PROCESSED | https://www.humblebeeandme.com/banish-ingrown-hairs-with-my-diy-version-of-tend-skin/ | SKIPPED (salicylic acid / alcohol formula, not skin cream)
+PROCESSED | https://www.humblebeeandme.com/coco-cocoawhipped-body-butter/ | coco-cocoa-whipped-body-butter
+PROCESSED | https://www.humblebeeandme.com/tropical-shimmer-body-butter-shimmer-optional/ | tropical-shimmer-body-butter
+PROCESSED | https://www.humblebeeandme.com/perfect-massage-oil/ | perfect-massage-oil
+PROCESSED | https://www.humblebeeandme.com/my-favourite-argan-oil-serum/ | argan-oil-facial-serum
+PROCESSED | https://www.humblebeeandme.com/argan-serum-for-mature-skin/ | argan-serum-mature-skin
+PROCESSED | https://www.humblebeeandme.com/rosehip-tamanu-healing-facial-serum/ | rosehip-healing-facial-serum
+PROCESSED | https://www.humblebeeandme.com/intensely-moisturizing-shea-butter-lip-balm/ | shea-lip-balm
+PROCESSED | https://www.humblebeeandme.com/peppermint-cocoa-lip-balm/ | peppermint-cocoa-lip-balm
+PROCESSED | https://www.humblebeeandme.com/coconut-body-butter/ | coconut-body-butter-beeswax
+PROCESSED | https://www.humblebeeandme.com/shimmery-body-oil/ | shimmer-body-oil-mica
+PROCESSED | https://www.humblebeeandme.com/oat-milk-dream-cream/ | oat-milk-dream-cream
+PROCESSED | https://www.humblebeeandme.com/anti-frizz-hair-mist/ | anti-frizz-hair-mist
+PROCESSED | https://www.humblebeeandme.com/hydrating-body-mist/ | hydrating-body-mist
+PROCESSED | https://www.humblebeeandme.com/vegan-hemp-butter/ | vegan-hemp-body-butter-wax
+PROCESSED | https://www.humblebeeandme.com/creamy-shea-exfoliating-scrub/ | creamy-shea-exfoliating-scrub
+PROCESSED | https://www.humblebeeandme.com/diy-lotion/ | diy-lotion-basic
+PROCESSED | https://www.humblebeeandme.com/sugar-plum-fairy-natural-hand-body-lotion/ | SKIPPED (plum kernel oil too specialty, olivem 1000 required)
+PROCESSED | https://www.humblebeeandme.com/healing-winter-lotion/ | SKIPPED (camellia + specialty EOs, ritamulse required)
+PROCESSED | https://www.humblebeeandme.com/chocolate-hazelnut-body-lotion/ | SKIPPED (hazelnut oil not in inventory, cocoa butter required)
+PROCESSED | https://www.humblebeeandme.com/coco-lemon-body-lotion/ | SKIPPED (uses tea infusion + ritamulse, specialty setup)
+PROCESSED | https://www.humblebeeandme.com/rose-lavender-bath-oil/ | SKIPPED (requires Turkey Red Oil / sulfated castor)
+PROCESSED | https://www.humblebeeandme.com/peppermint-cocoa-sugar-body-scrub/ | SKIPPED (requires Turkey Red Oil)
+PROCESSED | https://www.humblebeeandme.com/warming-spiced-sugar-scrub/ | SKIPPED (no usable percentages, Turkey Red Oil required)
+PROCESSED | https://www.humblebeeandme.com/honey-ginger-hand-lotion/ | SKIPPED (ritamulse/safflower/honey powder required)
+PROCESSED | https://www.humblebeeandme.com/soothing-sunburn-lotion/ | SKIPPED (specialty ingredients: bee pollen, emu oil, propolis)
+PROCESSED | https://www.humblebeeandme.com/naked-lip-balm/ | SKIPPED (sweet almond + cocoa butter heavy; similar to peppermint-cocoa)
+PROCESSED | https://www.humblebeeandme.com/gingerbread-lip-balm/ | SKIPPED (author deprecated recipe)
+
+# --- SITEMAP URLS COLLECTED (not yet processed) ---
+# Body butters / balms:
+PENDING | https://www.humblebeeandme.com/wood-shed-hippy-body-butter/
+PENDING | https://www.humblebeeandme.com/coconut-monoi-body-butter/
+PENDING | https://www.humblebeeandme.com/spice-infused-body-butter/
+PENDING | https://www.humblebeeandme.com/mexican-chocolate-body-butter/
+PENDING | https://www.humblebeeandme.com/cupuacu-mint-and-monoi-body-butter/
+PENDING | https://www.humblebeeandme.com/coco-mango-body-balm/
+PENDING | https://www.humblebeeandme.com/honey-coconut-body-butter/
+PENDING | https://www.humblebeeandme.com/homemade-shealoe-butter-cream/
+
+# Lotions / creams:
+PENDING | https://www.humblebeeandme.com/mocha-body-lotion/
+PENDING | https://www.humblebeeandme.com/candy-cane-body-lotion/
+PENDING | https://www.humblebeeandme.com/rose-cardamom-body-lotion/
+PENDING | https://www.humblebeeandme.com/healing-herbal-hemp-shea-lotion/
+PENDING | https://www.humblebeeandme.com/vanilla-coco-body-lotion/
+PENDING | https://www.humblebeeandme.com/avo-oat-milk-body-lotion/
+PENDING | https://www.humblebeeandme.com/summer-shimmer-body-lotion/
+PENDING | https://www.humblebeeandme.com/pumpkin-spice-body-lotion/
+PENDING | https://www.humblebeeandme.com/loccitane-lavender-hand-lotion/
+
+# Facial:
+PENDING | https://www.humblebeeandme.com/brighten-renew-facial-serum/
+PENDING | https://www.humblebeeandme.com/immortelle-primrose-facial-serum/
+PENDING | https://www.humblebeeandme.com/magical-primrose-argan-serum/
+PENDING | https://www.humblebeeandme.com/winterlight-argan-serum/
+PENDING | https://www.humblebeeandme.com/lavender-cleansing-milk/
+PENDING | https://www.humblebeeandme.com/gentle-facial-cleansing-balm/
+PENDING | https://www.humblebeeandme.com/cold-snap-cleansing-balm/
+
+# Lip products:
+PENDING | https://www.humblebeeandme.com/cranberry-lip-balm/
+PENDING | https://www.humblebeeandme.com/coral-lip-balm/
+PENDING | https://www.humblebeeandme.com/mocha-lip-balm/
+PENDING | https://www.humblebeeandme.com/maple-syrup-lip-balm/
+PENDING | https://www.humblebeeandme.com/rose-spearmint-lip-balm/
+PENDING | https://www.humblebeeandme.com/lemony-cuticle-butter/
+PENDING | https://www.humblebeeandme.com/blushing-argan-lip-balm/
+PENDING | https://www.humblebeeandme.com/homemade-lip-gloss/
+
+# Hair care:
+PENDING | https://www.humblebeeandme.com/olive-and-jojoba-silk-conditioner/
+PENDING | https://www.humblebeeandme.com/bamboo-silk-hair-milk/
+PENDING | https://www.humblebeeandme.com/restorative-hydrating-hair-conditioner/
+PENDING | https://www.humblebeeandme.com/sleek-shiny-hair-mist/
+PENDING | https://www.humblebeeandme.com/midnight-coffee-beard-oil/
+PENDING | https://www.humblebeeandme.com/spiced-bergamot-beard-oil/
+PENDING | https://www.humblebeeandme.com/cedar-smoke-beard-balm/
+
+# Scrubs / soaks:
+PENDING | https://www.humblebeeandme.com/orange-tea-tree-foot-soak/
+PENDING | https://www.humblebeeandme.com/tingly-eucalyptus-peppermint-foot-scrub/
+PENDING | https://www.humblebeeandme.com/seaweed-scrub-foot-mask/
+PENDING | https://www.humblebeeandme.com/honey-ginger-sugar-scrub/
+PENDING | https://www.humblebeeandme.com/milky-chai-bath-salts/

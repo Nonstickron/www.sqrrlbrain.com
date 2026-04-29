@@ -34,7 +34,21 @@
     "Mica / Shimmer",
     "Fragrance Oil",
     "Essential Oil",
-    "Versagel"
+    "Versagel",
+    "Cocoa Butter",
+    "Emulsifying Wax",
+    "Olive Oil",
+    "Grapeseed Oil",
+    "Camellia Oil",
+    "Avocado Oil",
+    "Stearic Acid",
+    "Panthenol",
+    "Allantoin",
+    "Sugar",
+    "Salt",
+    "Pumice",
+    "Colloidal Oatmeal",
+    "Plum Kernel Oil"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -323,6 +337,397 @@
         { "name": "Essential Oil", "pct": 1 }
       ],
       "notes": "Sweet almond oil not in inventory. Sub with apricot kernel (similar profile) or hemp seed."
+    },
+    {
+      "id": "jojoba-mint-foot-cream",
+      "name": "Jojoba Mint Natural Foot Cream",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/jojoba-mint-natural-foot-cream/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Immersion blender"],
+      "description": "Rich, velvety emulsified foot cream with jojoba and shea. Peppermint essential oil provides a cooling tingle.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 60.8 },
+        { "name": "Emulsifying Wax", "pct": 5 },
+        { "name": "Jojoba Oil", "pct": 5 },
+        { "name": "Shea Butter", "pct": 8 },
+        { "name": "Cetyl Alcohol", "pct": 5 },
+        { "name": "Stearic Acid", "pct": 2 },
+        { "name": "Sodium Lactate", "pct": 2 },
+        { "name": "Vitamin E Oil", "pct": 0.5 },
+        { "name": "Essential Oil", "pct": 0.7 }
+      ],
+      "notes": "Cetyl alcohol thickens and gives a silky feel. Sodium lactate is a natural humectant that also adjusts pH. Requires a pH in the 4.8–5 range for preservative efficacy. Store in a wide-mouthed jar."
+    },
+    {
+      "id": "sugar-plum-shimmer-oil",
+      "name": "Sugar Plum Fairy Shimmer Oil",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/sugar-plum-fairy-shimmer-oil/",
+      "heatRequired": true,
+      "equipment": ["Stove"],
+      "description": "Luxurious shimmer body/face/hair oil with plum kernel and apricot kernel. Iridescent mica creates a fairy-like glow.",
+      "ingredients": [
+        { "name": "Apricot Kernel Oil", "pct": 77 },
+        { "name": "Plum Kernel Oil", "pct": 20 },
+        { "name": "Mica / Shimmer", "pct": 1 },
+        { "name": "Vitamin E Oil", "pct": 1 },
+        { "name": "Fragrance Oil", "pct": 0.5 }
+      ],
+      "notes": "Original uses Crystal Clear Wax (0.5%) to suspend mica — can omit but mica will settle. Sub plum kernel with apricot kernel. No water = no preservative needed."
+    },
+    {
+      "id": "hyaluronic-acid-serum",
+      "name": "Soothing Hydrating Hyaluronic Acid Serum",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/soothing-hydrating-hyaluronic-acid-serum/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Lightweight water-based serum with hyaluronic acid for deep hydration. No heating required — just mix and let hydrate.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 55.5 },
+        { "name": "Hyaluronic Acid", "pct": 30 },
+        { "name": "Panthenol", "pct": 4 },
+        { "name": "Sodium Lactate", "pct": 3 },
+        { "name": "Allantoin", "pct": 0.3 },
+        { "name": "Liquid Germall Plus", "pct": 1 },
+        { "name": "Glycerin", "pct": 5 },
+        { "name": "Xanthan Gum", "pct": 0.2 }
+      ],
+      "notes": "Hyaluronic acid here is used as a 1% pre-dissolved solution (30% of batch = 30g of that solution). Let xanthan gum hydrate for at least 20 minutes before use. Target pH 5–5.5. Preservative required."
+    },
+    {
+      "id": "hair-balm-nourishing",
+      "name": "Super Nourishing Hair Balm",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/make-your-own-super-nourishing-hair-balm/",
+      "heatRequired": true,
+      "equipment": ["Stove"],
+      "description": "Anhydrous balm for dry hair ends. Beeswax provides hold, shea and jojoba add deep conditioning.",
+      "ingredients": [
+        { "name": "Shea Butter", "pct": 30 },
+        { "name": "Coconut Oil", "pct": 15 },
+        { "name": "Jojoba Oil", "pct": 10 },
+        { "name": "Castor Oil", "pct": 2 },
+        { "name": "Beeswax", "pct": 11 },
+        { "name": "Vitamin E Oil", "pct": 0.5 },
+        { "name": "Essential Oil", "pct": 1.5 }
+      ],
+      "notes": "Original includes cocoa butter (15%), camellia seed oil (10%), walnut oil (6%) not in inventory. Sub with more shea and coconut. Use sparingly on hair ends only — a little goes a long way."
+    },
+    {
+      "id": "lightweight-hair-conditioner",
+      "name": "Super Simple Lightweight Hair Conditioner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/super-simple-lightweight-hair-conditioner-3-ways/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Immersion blender"],
+      "description": "Beginner-friendly rinse-out conditioner. Just 4–6 ingredients, silky slip, and a clean rinse.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 86.8 },
+        { "name": "MCT Oil", "pct": 6 },
+        { "name": "BTMS-50", "pct": 6 },
+        { "name": "Panthenol", "pct": 0.5 },
+        { "name": "Liquid Germall Plus", "pct": 0.5 },
+        { "name": "Fragrance Oil", "pct": 0.2 }
+      ],
+      "notes": "BTMS-50 is the key conditioning emulsifier (not in inventory). Sub MCT with fractionated coconut. Heat water and BTMS-50 together at 75–80°C; blend; cool to 40°C before adding preservative."
+    },
+    {
+      "id": "coco-cocoa-whipped-body-butter",
+      "name": "Coco-Cocoa Whipped Body Butter",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/coco-cocoawhipped-body-butter/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Stand/hand mixer"],
+      "description": "Decadent whipped butter made from just cocoa butter and coconut oil — naturally scented chocolate-coconut.",
+      "ingredients": [
+        { "name": "Cocoa Butter", "pct": 50 },
+        { "name": "Coconut Oil", "pct": 49 },
+        { "name": "Vitamin E Oil", "pct": 1 }
+      ],
+      "notes": "Melt both together, cool to near-solid, then whip with electric beaters. Chill slightly between whipping rounds. Cocoa butter not in inventory — it is the dominant ingredient. Optional: add a few drops of essential oil."
+    },
+    {
+      "id": "tropical-shimmer-body-butter",
+      "name": "Tropical Shimmer Body Butter",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/tropical-shimmer-body-butter-shimmer-optional/",
+      "heatRequired": true,
+      "equipment": ["Stove"],
+      "description": "Firm anhydrous body butter with a natural chocolate-coconut aroma. Mica optional for a subtle shimmer.",
+      "ingredients": [
+        { "name": "Mango Butter", "pct": 31 },
+        { "name": "Coconut Oil", "pct": 31 },
+        { "name": "Cocoa Butter", "pct": 31 },
+        { "name": "Vitamin E Oil", "pct": 3 },
+        { "name": "Mica / Shimmer", "pct": 1 }
+      ],
+      "notes": "Melt together, stir continuously as it cools to custard-like texture, then pour into tin. A little goes a long way — firm texture prevents over-application. Cocoa butter not in inventory."
+    },
+    {
+      "id": "perfect-massage-oil",
+      "name": "Perfect Massage Oil",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/perfect-massage-oil/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Simple anhydrous massage oil — liquid at room temperature, glides smoothly on skin.",
+      "ingredients": [
+        { "name": "Coconut Oil", "pct": 40 },
+        { "name": "Apricot Kernel Oil", "pct": 59 },
+        { "name": "Vitamin E Oil", "pct": 0.5 },
+        { "name": "Essential Oil", "pct": 0.05 }
+      ],
+      "notes": "Coconut oil melts at 24°C — it may need gentle warming to blend. Sub apricot kernel with sweet almond. Cinnamon bark essential oil used at only 0.05% (safety limit). Warm in hands before applying."
+    },
+    {
+      "id": "argan-oil-facial-serum",
+      "name": "Argan Oil Facial Serum",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/my-favourite-argan-oil-serum/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "100% oil-based facial serum — just argan oil and a few drops of essential oils. No preservative needed.",
+      "ingredients": [
+        { "name": "Argan Oil", "pct": 99 },
+        { "name": "Essential Oil", "pct": 1 }
+      ],
+      "notes": "Argan oil is not in inventory. Use 4–5 drops on face once or twice daily. Store in dark amber glass bottle. Shelf life ~1 year. For sensitive skin, start without essential oils."
+    },
+    {
+      "id": "argan-serum-mature-skin",
+      "name": "Argan Serum for Mature Skin",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/argan-serum-for-mature-skin/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Anti-aging facial serum with argan oil and carrot seed essential oil — rich in antioxidants.",
+      "ingredients": [
+        { "name": "Argan Oil", "pct": 98 },
+        { "name": "Essential Oil", "pct": 2 }
+      ],
+      "notes": "Essential oils: carrot seed + chamomile. Argan not in inventory — sub with rosehip (excellent for mature skin). Use dark glass dropper bottle. Start with 3 drops carrot seed EO; it has a strong earthy smell."
+    },
+    {
+      "id": "rosehip-healing-facial-serum",
+      "name": "Rosehip & Healing Facial Serum",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rosehip-tamanu-healing-facial-serum/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Two-oil healing serum for scars and hyperpigmentation. Rosehip regenerates, tamanu heals.",
+      "ingredients": [
+        { "name": "Rosehip Oil", "pct": 67 },
+        { "name": "Jojoba Oil", "pct": 33 }
+      ],
+      "notes": "Original uses tamanu oil (not in inventory) — sub with jojoba for a gentle, non-comedogenic version. Add 2 drops frankincense + 1 drop helichrysum EO per 15mL for enhanced healing. No heat, no preservative needed."
+    },
+    {
+      "id": "shea-lip-balm",
+      "name": "Intensely Moisturizing Shea Butter Lip Balm",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/intensely-moisturizing-shea-butter-lip-balm/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Lip balm tubes"],
+      "description": "Rich, healing lip balm with shea butter and beeswax. Melts perfectly at body temperature.",
+      "ingredients": [
+        { "name": "Shea Butter", "pct": 25 },
+        { "name": "Beeswax", "pct": 20 },
+        { "name": "Cocoa Butter", "pct": 15 },
+        { "name": "Olive Oil", "pct": 20 },
+        { "name": "Avocado Oil", "pct": 20 },
+        { "name": "Vitamin E Oil", "pct": 0.5 },
+        { "name": "Essential Oil", "pct": 0.5 }
+      ],
+      "notes": "Olive oil and avocado oil not in inventory — sub with apricot kernel or sweet almond. Melt together in a double boiler, add EO off heat, pour immediately into tubes. Yields 4–5 tubes."
+    },
+    {
+      "id": "peppermint-cocoa-lip-balm",
+      "name": "Peppermint Cocoa Lip Balm",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/peppermint-cocoa-lip-balm/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Lip balm tubes"],
+      "description": "Classic lip balm with a peppermint tingle. Cocoa butter provides natural chocolate fragrance.",
+      "ingredients": [
+        { "name": "Sweet Almond Oil", "pct": 38.8 },
+        { "name": "Coconut Oil", "pct": 24.5 },
+        { "name": "Beeswax", "pct": 20.4 },
+        { "name": "Cocoa Butter", "pct": 14.3 },
+        { "name": "Vitamin E Oil", "pct": 2 },
+        { "name": "Essential Oil", "pct": 0.1 }
+      ],
+      "notes": "Sweet almond and cocoa butter not in inventory — sub almond with apricot kernel. Essential oil is peppermint (20 drops per ~49g batch). Yields ~10–11 tubes. Melt together, add EO off heat."
+    },
+    {
+      "id": "coconut-body-butter-beeswax",
+      "name": "Coconut & Beeswax Body Butter",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/coconut-body-butter/",
+      "heatRequired": true,
+      "equipment": ["Stove"],
+      "description": "Simple tropical body butter — just coconut oil and beeswax. Solid at room temperature, melts on contact.",
+      "ingredients": [
+        { "name": "Coconut Oil", "pct": 74 },
+        { "name": "Beeswax", "pct": 12 },
+        { "name": "Jojoba Oil", "pct": 9 },
+        { "name": "Apricot Kernel Oil", "pct": 5 }
+      ],
+      "notes": "Melt all together, pour into shallow tin. Original uses kukuinut and baobab oil — sub with jojoba and apricot kernel. No preservative needed (anhydrous). Coconut provides a natural tropical scent."
+    },
+    {
+      "id": "shimmer-body-oil-mica",
+      "name": "Shimmery Body Oil with Mica",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/shimmery-body-oil/",
+      "heatRequired": true,
+      "equipment": ["Stove"],
+      "description": "Fast-absorbing shimmer oil using grapeseed and a small amount of butter. Mica settles unless shaken.",
+      "ingredients": [
+        { "name": "Grapeseed Oil", "pct": 67 },
+        { "name": "Shea Butter", "pct": 27 },
+        { "name": "Mica / Shimmer", "pct": 3 },
+        { "name": "Essential Oil", "pct": 0.5 }
+      ],
+      "notes": "Grapeseed not in inventory — sub with apricot kernel or sunflower. Melt butter into oil, cool, add mica in bottle. Shake before each use. Any fine mica color works."
+    },
+    {
+      "id": "oat-milk-dream-cream",
+      "name": "Oat Milk Dream Cream",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/oat-milk-dream-cream/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Immersion blender"],
+      "description": "Gentle lotion with colloidal oatmeal and olive oil. Soothing for dry or sensitive skin.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 60 },
+        { "name": "Glycerin", "pct": 1.7 },
+        { "name": "Colloidal Oatmeal", "pct": 0.8 },
+        { "name": "Emulsifying Wax", "pct": 5.8 },
+        { "name": "Cocoa Butter", "pct": 5.8 },
+        { "name": "Olive Oil", "pct": 9.2 },
+        { "name": "Liquid Germall Plus", "pct": 0.4 },
+        { "name": "Essential Oil", "pct": 1.3 }
+      ],
+      "notes": "Olive oil and cocoa butter not in inventory — sub olive with sunflower or apricot kernel, cocoa butter with mango butter. Colloidal oatmeal is soothing for eczema-prone skin."
+    },
+    {
+      "id": "anti-frizz-hair-mist",
+      "name": "Anti-Frizz Hair Mist",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/anti-frizz-hair-mist/",
+      "heatRequired": false,
+      "equipment": ["Spray bottle"],
+      "description": "Lightweight spray that controls frizz without weighing hair down. Polysorbate-20 disperses oil in water.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 68.8 },
+        { "name": "Polysorbate-20", "pct": 12.5 },
+        { "name": "Apricot Kernel Oil", "pct": 11.3 },
+        { "name": "Essential Oil", "pct": 0.5 },
+        { "name": "Liquid Germall Plus", "pct": 0.5 }
+      ],
+      "notes": "Original uses camellia oil — apricot kernel is a great sub. Polysorbate-20 is in inventory. Spray sparingly; too much = greasy. Preservative required (water-based)."
+    },
+    {
+      "id": "hydrating-body-mist",
+      "name": "Hydrating Body Mist",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/hydrating-body-mist/",
+      "heatRequired": false,
+      "equipment": ["Spray bottle"],
+      "description": "Aloe-based body spray with a touch of oil for post-shower hydration. Quick, no-rub moisture.",
+      "ingredients": [
+        { "name": "Aloe Vera", "pct": 82 },
+        { "name": "Apricot Kernel Oil", "pct": 7 },
+        { "name": "Polysorbate-20", "pct": 7 },
+        { "name": "Glycerin", "pct": 2 },
+        { "name": "Liquid Germall Plus", "pct": 0.5 },
+        { "name": "Essential Oil", "pct": 0.5 }
+      ],
+      "notes": "All core ingredients in inventory. Sub grapeseed oil with apricot kernel. Shake before use if no Polysorbate-20 is added. Apply immediately after toweling off."
+    },
+    {
+      "id": "vegan-hemp-body-butter-wax",
+      "name": "Vegan Hemp Body Butter",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/vegan-hemp-butter/",
+      "heatRequired": true,
+      "equipment": ["Stove"],
+      "description": "All-hemp seed oil body butter firmed with vegan waxes. Glassy green appearance, smooth texture.",
+      "ingredients": [
+        { "name": "Hemp Seed Oil", "pct": 83 },
+        { "name": "Candelilla Wax", "pct": 10 },
+        { "name": "Beeswax", "pct": 7 }
+      ],
+      "notes": "Hemp seed oil in inventory! Use double boiler — hemp has a low smoke point. Needs 3 days to cure before use. Original uses bayberry wax + candelilla wax; beeswax is a substitute (not fully vegan). Sub candelilla with more beeswax if needed."
+    },
+    {
+      "id": "sugar-scrub-simple",
+      "name": "Simple Sugar Body Scrub",
+      "source": "humblebeeandme.com",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Classic two-ingredient sugar scrub — oil and sugar. Exfoliates and moisturizes in one step.",
+      "ingredients": [
+        { "name": "Coconut Oil", "pct": 33 },
+        { "name": "Apricot Kernel Oil", "pct": 17 },
+        { "name": "Sugar", "pct": 50 }
+      ],
+      "notes": "Use Polysorbate-20 (~10%) to make it rinse cleanly and reduce slip hazard. Coconut oil and apricot kernel in inventory. Keep dry — water contamination causes mold. Store outside shower."
+    },
+    {
+      "id": "massage-oil-warming",
+      "name": "Warming Coconut Massage Oil",
+      "source": "humblebeeandme.com",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Simple warming massage oil for sore muscles. Coconut provides slip, apricot kernel absorbs well.",
+      "ingredients": [
+        { "name": "Coconut Oil", "pct": 40 },
+        { "name": "Apricot Kernel Oil", "pct": 55 },
+        { "name": "Vitamin E Oil", "pct": 1 },
+        { "name": "Essential Oil", "pct": 1 },
+        { "name": "Castor Oil", "pct": 3 }
+      ],
+      "notes": "All ingredients in inventory. Castor oil adds extra slip. Warm in hands before applying. Use ginger or peppermint EO for warming/cooling effect."
+    },
+    {
+      "id": "creamy-shea-exfoliating-scrub",
+      "name": "Creamy Shea Exfoliating Scrub",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/creamy-shea-exfoliating-scrub/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Immersion blender"],
+      "description": "Emulsified scrub that rinses clean and leaves skin soft. Lotion base with pumice or salt exfoliants.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 70 },
+        { "name": "Glycerin", "pct": 5 },
+        { "name": "Shea Butter", "pct": 18 },
+        { "name": "Emulsifying Wax", "pct": 7 }
+      ],
+      "notes": "Original adds pumice (1 tbsp) and coarse salt (1 tsp) after emulsion forms. Essential oils (lavender + fir) add fragrance. Shea butter in inventory. Use corn starch instead of pumice if needed for gentler scrub."
+    },
+    {
+      "id": "diy-lotion-basic",
+      "name": "Basic DIY Body Lotion",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/diy-lotion/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Blender"],
+      "description": "Old-school cold cream style lotion. Heavier and more occlusive than modern emulsifier-based lotions.",
+      "ingredients": [
+        { "name": "Apricot Kernel Oil", "pct": 24 },
+        { "name": "Jojoba Oil", "pct": 6.3 },
+        { "name": "Coconut Oil", "pct": 1.6 },
+        { "name": "Beeswax", "pct": 8 },
+        { "name": "Vitamin E Oil", "pct": 1.6 },
+        { "name": "Distilled Water", "pct": 46 },
+        { "name": "Glycerin", "pct": 1.6 },
+        { "name": "Liquid Germall Plus", "pct": 0.5 },
+        { "name": "Essential Oil", "pct": 0.5 }
+      ],
+      "notes": "This is a cold-cream style formula — greasy and occlusive. Good as a night cream. Cool both phases separately before combining. Grapeseed oil in original — subbed with apricot kernel."
     }
   ]
 }
