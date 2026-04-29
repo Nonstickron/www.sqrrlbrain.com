@@ -97,7 +97,7 @@ const ING_LINE = /(\d+(?:\.\d+)?)\s*g\s*\|\s*(\d+(?:\.\d+)?)%\s+([^(|\n<]+)/i;
 const PCT_ONLY = /^(\d+(?:\.\d+)?)%\s+([^(|\n<]{3,})/;
 
 function capitalizeFirst(s) {
-  return s.charAt(0).toUpperCase() + s.slice(1);
+  return s.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 }
 
 function parseIngredients(paragraphs) {

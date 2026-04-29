@@ -500,8 +500,10 @@
   const pantrySearch = document.getElementById('pantrySearch');
   const pantrySuggest = document.getElementById('pantrySuggest');
 
+  function toTitle(s) { return s.trim().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '); }
+
   function addToPantry(name) {
-    const n = name.trim();
+    const n = toTitle(name);
     if (!n || ownedHas(n)) return;
     if (!data.ingredients.some(i => norm(i).toLowerCase() === norm(n).toLowerCase())) {
       data.ingredients.push(n);
@@ -801,7 +803,7 @@
     const name = document.getElementById('rfName').value.trim();
     if (!name) { document.getElementById('rfName').focus(); return; }
     const ings = [...document.getElementById('ingRows').querySelectorAll('.ing-row')].map(row => ({
-      name: row.querySelector('.ing-row-name').value.trim(),
+      name: toTitle(row.querySelector('.ing-row-name').value),
       pct: parseFloat(row.querySelector('.ing-row-pct').value) || 0,
     })).filter(i => i.name);
     if (!ings.length) { alert('Add at least one ingredient.'); return; }
