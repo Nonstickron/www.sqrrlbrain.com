@@ -166,6 +166,32 @@
 
     .flag-count { font-size: 0.78rem; color: #d4a96a; }
 
+    .panel-divider { border: none; border-top: 1px solid #2e2e38; margin: 14px 0; }
+
+    .swaps-list { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
+    .swap-row {
+      display: flex; align-items: center; gap: 6px; font-size: 0.78rem; color: #aaa;
+    }
+    .swap-row .swap-arrow { color: #555; flex-shrink: 0; }
+    .swap-row .swap-sub { color: #4acf8a; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .swap-row .swap-orig { color: #cf6a4a; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .swap-remove { background: none; border: none; color: #444; cursor: pointer; font-size: 0.9rem; padding: 0 2px; flex-shrink: 0; }
+    .swap-remove:hover { color: #888; }
+
+    .swap-form { display: flex; flex-direction: column; gap: 6px; }
+    .swap-select {
+      width: 100%; background: #1a1a1e; border: 1px solid #333; color: #c8bfb0;
+      border-radius: 5px; padding: 4px 6px; font-size: 0.78rem;
+    }
+    .swap-select:focus { outline: none; border-color: #d4a96a; }
+    .swap-add-btn {
+      width: 100%; font-size: 0.75rem; padding: 5px; border-radius: 5px;
+      border: 1px solid #333; background: transparent; color: #888; cursor: pointer;
+    }
+    .swap-add-btn:hover { background: #2e2e38; color: #e8e0d4; }
+
+    .ing-swap { color: #7acfa0; }
+
     .empty-state { text-align: center; padding: 48px 0; color: #444; font-size: 0.9rem; }
 
     .toast {
@@ -191,6 +217,15 @@
   <aside class="inventory-panel">
     <div class="panel-title">My Inventory</div>
     <ul class="inventory-list" id="inventoryList"></ul>
+
+    <hr class="panel-divider">
+    <div class="panel-title">My Swaps</div>
+    <ul class="swaps-list" id="swapsList"></ul>
+    <div class="swap-form">
+      <select class="swap-select" id="swapFrom" title="Ingredient I don't have"></select>
+      <select class="swap-select" id="swapTo" title="Ingredient I'll use instead"></select>
+      <button class="swap-add-btn" id="swapAddBtn">+ Add swap</button>
+    </div>
   </aside>
   <main class="recipes-panel">
     <div class="filter-bar">
@@ -218,10 +253,21 @@
 
   let owned   = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY)  || 'null') ?? data.userInventory);
   let flagged = new Set(JSON.parse(localStorage.getItem(FLAGGED_KEY)  || '[]'));
-  let notes   = JSON.parse(localStorage.getItem(NOTES_KEY) || '{}');
+  let notes   = JSON.parse(localStorage.getItem(NOTES_KEY)   || '{}');
+  // swaps: { "Argan Oil": "Apricot Kernel Oil" } — key=missing, value=substitute
+  let swaps   = JSON.parse(localStorage.getItem('5daughters_swaps') || '{}');
 
   function saveFlagged() { localStorage.setItem(FLAGGED_KEY, JSON.stringify([...flagged])); }
   function saveNotes()   { localStorage.setItem(NOTES_KEY,   JSON.stringify(notes)); }
+  function saveSwaps()   { localStorage.setItem('5daughters_swaps', JSON.stringify(swaps)); }
+
+  // Returns true if ingredient is available (owned or has a swap that's owned)
+  function hasIngredient(name) {
+    if (owned.has(name)) return true;
+    const sub = swaps[name];
+    return sub ? owned.has(sub) : false;
+  }
+  function swapFor(name) { return (!owned.has(name) && swaps[name] && owned.has(swaps[name])) ? swaps[name] : null; }
 
   function updateFlagCount() {
     const el = document.getElementById('flagCount');
@@ -239,7 +285,7 @@
 
   function matchInfo(recipe) {
     const total = recipe.ingredients.length;
-    const have = recipe.ingredients.filter(i => owned.has(i.name)).length;
+    const have = recipe.ingredients.filter(i => hasIngredient(i.name)).length;
     const pct = Math.round((have / total) * 100);
     return { have, total, pct };
   }
@@ -285,6 +331,57 @@
       list.appendChild(li);
     });
   }
+
+  // ── Swaps panel ──────────────────────────────────────
+
+  function renderSwaps() {
+    const list = document.getElementById('swapsList');
+    list.textContent = '';
+    Object.entries(swaps).forEach(([from, to]) => {
+      const li = document.createElement('li');
+      li.className = 'swap-row';
+      const origEl = el('span', 'swap-orig', from);
+      const arrow  = el('span', 'swap-arrow', '→');
+      const subEl  = el('span', 'swap-sub', to);
+      const rmBtn  = el('button', 'swap-remove', '✕');
+      rmBtn.title = 'Remove swap';
+      rmBtn.addEventListener('click', () => {
+        delete swaps[from];
+        saveSwaps();
+        renderSwaps();
+        renderRecipes();
+      });
+      li.appendChild(origEl); li.appendChild(arrow); li.appendChild(subEl); li.appendChild(rmBtn);
+      list.appendChild(li);
+    });
+
+    // Populate dropdowns with all known ingredients
+    const fromSel = document.getElementById('swapFrom');
+    const toSel   = document.getElementById('swapTo');
+    const saved   = { from: fromSel.value, to: toSel.value };
+    fromSel.textContent = '';
+    toSel.textContent   = '';
+    const placeholder1 = el('option', null, 'I don\'t have…'); placeholder1.value = ''; fromSel.appendChild(placeholder1);
+    const placeholder2 = el('option', null, 'I\'ll use…');    placeholder2.value = ''; toSel.appendChild(placeholder2);
+    data.ingredients.forEach(ing => {
+      const o1 = el('option', null, ing); o1.value = ing; fromSel.appendChild(o1);
+      const o2 = el('option', null, ing); o2.value = ing; toSel.appendChild(o2);
+    });
+    if (saved.from) fromSel.value = saved.from;
+    if (saved.to)   toSel.value   = saved.to;
+  }
+
+  document.getElementById('swapAddBtn').addEventListener('click', () => {
+    const from = document.getElementById('swapFrom').value;
+    const to   = document.getElementById('swapTo').value;
+    if (!from || !to || from === to) return;
+    swaps[from] = to;
+    saveSwaps();
+    renderSwaps();
+    renderRecipes();
+    document.getElementById('swapFrom').value = '';
+    document.getElementById('swapTo').value   = '';
+  });
 
   // ── Recipes panel ────────────────────────────────────
 
@@ -362,8 +459,11 @@
       const tr = document.createElement('tr');
       const tdName = document.createElement('td');
       const have = owned.has(ing.name);
-      tdName.className = have ? 'ing-have' : 'ing-missing';
-      tdName.textContent = (have ? '✓ ' : '✗ ') + ing.name;
+      const sub  = swapFor(ing.name);
+      tdName.className = have ? 'ing-have' : sub ? 'ing-swap' : 'ing-missing';
+      tdName.textContent = have ? ('✓ ' + ing.name)
+                         : sub  ? ('⇄ ' + ing.name + ' → ' + sub)
+                         :        ('✗ ' + ing.name);
 
       const tdPct = document.createElement('td');
       tdPct.className = 'ing-pct';
@@ -488,6 +588,7 @@
   document.getElementById('flaggedOnly').addEventListener('change', renderRecipes);
 
   renderInventory();
+  renderSwaps();
   renderRecipes();
   updateFlagCount();
 })();
