@@ -392,7 +392,12 @@
     const q = pantrySearch.value.trim().toLowerCase();
     pantrySuggest.textContent = '';
     if (!q) { pantrySuggest.classList.remove('show'); return; }
-    const matches = data.ingredients.filter(i => !ownedHas(i) && norm(i).toLowerCase().includes(q)).slice(0, 10);
+    const seenNorm = new Set();
+    const matches = data.ingredients.filter(i => {
+      const n = norm(i).toLowerCase();
+      if (ownedHas(i) || !n.includes(q) || seenNorm.has(n)) return false;
+      seenNorm.add(n); return true;
+    }).slice(0, 10);
     if (!matches.length) { pantrySuggest.classList.remove('show'); return; }
     matches.forEach(ing => {
       const li = el('li', null, ing);
