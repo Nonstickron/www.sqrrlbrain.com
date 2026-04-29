@@ -141,6 +141,31 @@
     .source-link { font-size: 0.72rem; color: #555; text-decoration: none; margin-left: auto; }
     .source-link:hover { color: #888; }
 
+    .flag-btn {
+      background: none; border: none; cursor: pointer; font-size: 1rem;
+      padding: 2px 4px; flex-shrink: 0; opacity: 0.3; transition: opacity 0.15s, transform 0.15s;
+      line-height: 1;
+    }
+    .flag-btn:hover { opacity: 0.7; }
+    .flag-btn.flagged { opacity: 1; transform: scale(1.1); }
+    .recipe-card.flagged-card { border-color: #5a4a2a; }
+    .recipe-card.flagged-card .recipe-header { background: #1e1a10; }
+
+    .user-notes-label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #555; margin-bottom: 5px; margin-top: 14px; display: block;
+    }
+    .user-notes {
+      width: 100%; min-height: 60px; background: #1a1a1e; border: 1px solid #333;
+      color: #c8bfb0; border-radius: 6px; padding: 8px 10px;
+      font-size: 0.82rem; line-height: 1.5; resize: vertical; font-family: inherit;
+      margin-bottom: 12px;
+    }
+    .user-notes:focus { outline: none; border-color: #5a4a2a; }
+    .user-notes::placeholder { color: #444; }
+
+    .flag-count { font-size: 0.78rem; color: #d4a96a; }
+
     .empty-state { text-align: center; padding: 48px 0; color: #444; font-size: 0.9rem; }
 
     .toast {
@@ -172,7 +197,11 @@
       <label class="toggle-label">
         <input type="checkbox" id="noHeatOnly"> No-heat only
       </label>
+      <label class="toggle-label">
+        <input type="checkbox" id="flaggedOnly"> Flagged only
+      </label>
       <span class="match-count" id="matchCount"></span>
+      <span class="flag-count" id="flagCount"></span>
     </div>
     <div id="recipeList"></div>
   </main>
@@ -183,11 +212,21 @@
 <script>
 (async () => {
   const data = await fetch('formulator-data.json').then(r => r.json());
-  const STORAGE_KEY = '5daughters_inventory';
+  const STORAGE_KEY       = '5daughters_inventory';
+  const FLAGGED_KEY       = '5daughters_flagged';
+  const NOTES_KEY         = '5daughters_notes';
 
-  let owned = new Set(
-    JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') ?? data.userInventory
-  );
+  let owned   = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY)  || 'null') ?? data.userInventory);
+  let flagged = new Set(JSON.parse(localStorage.getItem(FLAGGED_KEY)  || '[]'));
+  let notes   = JSON.parse(localStorage.getItem(NOTES_KEY) || '{}');
+
+  function saveFlagged() { localStorage.setItem(FLAGGED_KEY, JSON.stringify([...flagged])); }
+  function saveNotes()   { localStorage.setItem(NOTES_KEY,   JSON.stringify(notes)); }
+
+  function updateFlagCount() {
+    const el = document.getElementById('flagCount');
+    if (el) el.textContent = flagged.size > 0 ? `★ ${flagged.size} flagged` : '';
+  }
 
   // ── Helpers ──────────────────────────────────────────
 
@@ -267,15 +306,39 @@
     card.dataset.id = recipe.id;
 
     // Header
+    const isFlagged = flagged.has(recipe.id);
+    if (isFlagged) card.classList.add('flagged-card');
+
     const header = el('div', 'recipe-header');
     const badge = el('span', badgeClass(pct), pct + '%');
     const name = el('span', 'recipe-name', recipe.name);
     const heatTag = el('span', 'heat-tag ' + (recipe.heatRequired ? 'heat-yes' : 'heat-no'),
                        recipe.heatRequired ? '🔥 heat' : '❄ no heat');
+
+    const flagBtn = el('button', 'flag-btn' + (isFlagged ? ' flagged' : ''), '★');
+    flagBtn.title = isFlagged ? 'Unflag' : 'Flag to make';
+    flagBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      if (flagged.has(recipe.id)) {
+        flagged.delete(recipe.id);
+        flagBtn.classList.remove('flagged');
+        card.classList.remove('flagged-card');
+        flagBtn.title = 'Flag to make';
+      } else {
+        flagged.add(recipe.id);
+        flagBtn.classList.add('flagged');
+        card.classList.add('flagged-card');
+        flagBtn.title = 'Unflag';
+      }
+      saveFlagged();
+      updateFlagCount();
+    });
+
     const chevron = el('span', 'chevron', '▶');
     header.appendChild(badge);
     header.appendChild(name);
     header.appendChild(heatTag);
+    header.appendChild(flagBtn);
     header.appendChild(chevron);
 
     // Body
@@ -329,6 +392,23 @@
       body.appendChild(notes);
     }
 
+    // Notes
+    const notesLabel = el('span', 'user-notes-label', 'My notes');
+    const notesArea = document.createElement('textarea');
+    notesArea.className = 'user-notes';
+    notesArea.placeholder = 'Batch size, substitutions tried, rating, anything…';
+    notesArea.value = notes[recipe.id] || '';
+    notesArea.addEventListener('input', () => {
+      if (notesArea.value.trim()) {
+        notes[recipe.id] = notesArea.value;
+      } else {
+        delete notes[recipe.id];
+      }
+      saveNotes();
+    });
+    body.appendChild(notesLabel);
+    body.appendChild(notesArea);
+
     // Actions
     const actions = el('div', 'recipe-actions');
 
@@ -379,9 +459,11 @@
   }
 
   function renderRecipes() {
-    const noHeat = document.getElementById('noHeatOnly').checked;
+    const noHeat     = document.getElementById('noHeatOnly').checked;
+    const flaggedOnly = document.getElementById('flaggedOnly').checked;
     let recipes = data.recipes;
-    if (noHeat) recipes = recipes.filter(r => !r.heatRequired);
+    if (noHeat)      recipes = recipes.filter(r => !r.heatRequired);
+    if (flaggedOnly) recipes = recipes.filter(r => flagged.has(r.id));
 
     recipes = [...recipes].sort((a, b) => {
       const diff = matchInfo(b).pct - matchInfo(a).pct;
@@ -403,9 +485,11 @@
   }
 
   document.getElementById('noHeatOnly').addEventListener('change', renderRecipes);
+  document.getElementById('flaggedOnly').addEventListener('change', renderRecipes);
 
   renderInventory();
   renderRecipes();
+  updateFlagCount();
 })();
 </script>
 </body>
