@@ -325,8 +325,10 @@
   const saveNotes   = () => localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
   const saveSwaps   = () => localStorage.setItem(SWAPS_KEY, JSON.stringify(swaps));
 
-  function hasIng(name) { return owned.has(name) || (swaps[name] && owned.has(swaps[name])); }
-  function swapFor(name) { return (!owned.has(name) && swaps[name] && owned.has(swaps[name])) ? swaps[name] : null; }
+  function norm(s) { return s.replace(/[™®]/g, '').trim(); }
+  function ownedHas(name) { const n = norm(name); return [...owned].some(o => norm(o) === n); }
+  function hasIng(name) { return ownedHas(name) || (swaps[name] && ownedHas(swaps[name])); }
+  function swapFor(name) { return (!ownedHas(name) && swaps[name] && ownedHas(swaps[name])) ? swaps[name] : null; }
   function matchPct(r) {
     if (!r.ingredients?.length) return 0;
     return Math.round(r.ingredients.filter(i => hasIng(i.name)).length / r.ingredients.length * 100);
@@ -390,7 +392,7 @@
     const q = pantrySearch.value.trim().toLowerCase();
     pantrySuggest.textContent = '';
     if (!q) { pantrySuggest.classList.remove('show'); return; }
-    const matches = data.ingredients.filter(i => !owned.has(i) && i.toLowerCase().includes(q)).slice(0, 10);
+    const matches = data.ingredients.filter(i => !ownedHas(i) && norm(i).toLowerCase().includes(q)).slice(0, 10);
     if (!matches.length) { pantrySuggest.classList.remove('show'); return; }
     matches.forEach(ing => {
       const li = el('li', null, ing);
@@ -490,7 +492,7 @@
     (recipe.ingredients || []).forEach(ing => {
       const tr   = document.createElement('tr');
       const sub  = swapFor(ing.name);
-      const have = owned.has(ing.name);
+      const have = ownedHas(ing.name);
       const tdN  = document.createElement('td');
 
       if (have) {
