@@ -575,7 +575,10 @@
     "Shavegrass extract",
     "Oak moss absolute",
     "CO2 extracted ginger essential oil",
-    "Kentucky Bourbon fragrance oil"
+    "Kentucky Bourbon fragrance oil",
+    "Washing soda",
+    "Hydrogen peroxide",
+    "D-limonene"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -18964,6 +18967,134 @@
         }
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "solid-dishwashing-brick",
+      "name": "Solid Dishwashing Brick",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/solid-dishwashing-brick/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The other major part of this Solid Dishwashing Brick is washing soda, aka sodium carbonate, to further boost the de-greasing powers of the brick. Due to the washing soda content, you&#8217;ll want to avoid using this on aluminum things (or at least o…",
+      "ingredients": [
+        {
+          "name": "Sodium Coco Sulfate",
+          "pct": 56.4
+        },
+        {
+          "name": "Washing soda",
+          "pct": 27
+        },
+        {
+          "name": "Iota carrageenan",
+          "pct": 2.7
+        },
+        {
+          "name": "Distilled water",
+          "pct": 5.6
+        },
+        {
+          "name": "Caprylyl/Capryl Glucoside",
+          "pct": 4.4
+        },
+        {
+          "name": "Vegetable glycerine",
+          "pct": 3.7
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.2
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "how-to-clean-textured-tiles",
+      "name": "How to Clean Textured Tiles",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/how-to-clean-textured-tiles/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "So—these tiles. They were the bane of my clean-floor-desiring existence whilst I lived in that house. They had lines running parallel to the length of the tiles, and these lines we just barely three dimensional—perhaps raised as much as a coarse hair…",
+      "ingredients": [
+        {
+          "name": "Baking soda",
+          "pct": 45
+        },
+        {
+          "name": "Sodium Laureth Sulfate",
+          "pct": 1
+        },
+        {
+          "name": "Hydrogen peroxide",
+          "pct": 53
+        },
+        {
+          "name": "D-limonene",
+          "pct": 1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "super-concentrated-lemon-dishwashing-paste",
+      "name": "Super Concentrated Lemon Dishwashing Paste",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/super-concentrated-lemon-dishwashing-paste/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "This is the paste you&#8217;ll have when the surfactants finish melting.",
+      "ingredients": [
+        {
+          "name": "Sodium Coco Sulfate",
+          "pct": 44
+        },
+        {
+          "name": "Cocamidopropyl Betaine",
+          "pct": 13.5
+        },
+        {
+          "name": "Sodium C14-16 Alpha Olefin Sulfonate",
+          "pct": 14
+        },
+        {
+          "name": "Baking soda",
+          "pct": 14
+        },
+        {
+          "name": "D-limonene",
+          "pct": 14
+        },
+        {
+          "name": "Liquid germall plus",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did."
+    },
+    {
+      "id": "simple-cleaning-soap",
+      "name": "Simple Cleaning Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/simple-cleaning-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "This recipe may not be all that romantic, but I can promise it&#8217;s wonderfully practical. It yields hard white bars that are inexpensive to make and nicely bubbly. The bars shred down beautifully into soapy flakes and bits that make great laundry…",
+      "ingredients": [
+        {
+          "name": "Refined coconut oil",
+          "pct": 50
+        },
+        {
+          "name": "Stearic acid",
+          "pct": 1
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "I&#8217;ve included stearic acid as a bit of an experiment. I bought it for liquid soap making, and now that I have so much of it I thought I&#8217;d see what else it&#8217;s good for. The internet told me it&#8217;s good for hardening up soaps in relatively small concentrations, and I thought these bars would be a good place to test that hypothesis. If you don&#8217;t have any on hand, just repla"
     }
   ]
 }
