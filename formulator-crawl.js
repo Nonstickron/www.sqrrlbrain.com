@@ -241,6 +241,7 @@ async function main() {
       let suffix = 2;
       while (existingIds.has(id)) { id = `${recipe.id}-${suffix++}`; }
       recipe.id = id;
+      recipe.category = catName;
 
       registerIngredients(data, recipe);
       data.recipes.push(recipe);

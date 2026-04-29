@@ -452,12 +452,8 @@
     return 'match-badge match-low';
   }
   function recipeCategory(r) {
-    if (r.source === 'custom') return r.category || 'custom';
-    const u = r.sourceUrl || '';
-    if (/face-recipes|facial/.test(u)) return 'face';
-    if (/hair/.test(u)) return 'hair';
-    if (/cleaning/.test(u)) return 'cleaning';
-    if (/homemade-skin|body/.test(u)) return 'body';
+    if (r.category) return r.category;
+    if (r.source === 'custom') return 'custom';
     return 'other';
   }
 
