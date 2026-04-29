@@ -9,389 +9,245 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:           #131209;
-      --surface:      #1c1912;
-      --surface-hi:   #242018;
-      --surface-top:  #2a2519;
-      --border:       #302b1e;
-      --border-hi:    #4a4333;
-      --gold:         #c4993a;
-      --gold-dim:     #7a5f22;
-      --gold-bg:      #1e1a0e;
-      --text:         #e6dcc4;
-      --text-dim:     #7a7060;
-      --text-mid:     #b8a888;
-      --green:        #6ba87a;
-      --green-bg:     #0e1a10;
-      --red:          #b87560;
-      --red-bg:       #1a0e0a;
-      --teal:         #6aabaa;
-      --teal-bg:      #0e1a1a;
-      --heat:         #c47a4a;
-      --heat-bg:      #1e1208;
+      --bg:         #131209;
+      --surface:    #1c1912;
+      --surface-hi: #242018;
+      --border:     #302b1e;
+      --border-hi:  #4a4333;
+      --gold:       #c4993a;
+      --gold-dim:   #7a5f22;
+      --gold-bg:    #1e1a0e;
+      --text:       #e6dcc4;
+      --text-dim:   #7a7060;
+      --text-mid:   #b8a888;
+      --green:      #6ba87a;
+      --green-bg:   #0e1a10;
+      --red:        #b87560;
+      --red-bg:     #1a0e0a;
+      --teal:       #6aabaa;
+      --teal-bg:    #0e1a1a;
+      --heat:       #c47a4a;
+      --heat-bg:    #1e1208;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-    }
-
-    /* ── Top bar ── */
+    /* ── Topbar ── */
     .topbar {
       display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 28px 14px;
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-      position: sticky; top: 0; z-index: 50;
+      padding: 18px 28px 14px; border-bottom: 1px solid var(--border);
+      background: var(--surface); position: sticky; top: 0; z-index: 50;
     }
+    .brand { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 500; color: var(--gold); line-height: 1; }
+    .brand-sub { font-family: 'DM Mono', monospace; font-size: 0.62rem; font-weight: 300; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-dim); margin-top: 3px; }
 
-    .brand {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem; font-weight: 500; letter-spacing: 0.04em;
-      color: var(--gold); line-height: 1;
-    }
-    .brand-sub {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.62rem; font-weight: 300; letter-spacing: 0.18em;
-      text-transform: uppercase; color: var(--text-dim); margin-top: 3px;
-    }
-
-    .topbar-right { display: flex; align-items: center; gap: 10px; }
-
-    .inv-btn {
-      display: flex; align-items: center; gap: 8px;
-      padding: 7px 14px; border-radius: 6px;
+    .pantry-btn {
+      display: flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 6px;
       border: 1px solid var(--border-hi); background: transparent;
-      font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--text-mid);
-      cursor: pointer; transition: all 0.15s;
+      font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--text-mid); cursor: pointer; transition: all 0.15s;
     }
-    .inv-btn:hover { background: var(--surface-hi); color: var(--text); border-color: var(--gold-dim); }
-    .inv-badge {
-      background: var(--gold-bg); color: var(--gold);
-      border-radius: 12px; padding: 1px 7px;
-      font-family: 'DM Mono', monospace; font-size: 0.7rem;
-    }
+    .pantry-btn:hover { background: var(--surface-hi); color: var(--text); border-color: var(--gold-dim); }
+    .pantry-badge { background: var(--gold-bg); color: var(--gold); border-radius: 12px; padding: 1px 7px; font-family: 'DM Mono', monospace; font-size: 0.7rem; }
 
-    /* ── Search & filters ── */
-    .controls {
-      padding: 18px 28px 12px;
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-    }
-
+    /* ── Controls ── */
+    .controls { padding: 18px 28px 12px; background: var(--surface); border-bottom: 1px solid var(--border); }
     .search-wrap { position: relative; margin-bottom: 12px; }
-    .search-icon {
-      position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
-      color: var(--text-dim); font-size: 0.9rem; pointer-events: none;
-    }
+    .search-icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-dim); font-size: 0.9rem; pointer-events: none; }
     .search-input {
-      width: 100%; max-width: 560px;
-      background: var(--surface-hi); border: 1px solid var(--border-hi);
-      color: var(--text); border-radius: 8px;
-      padding: 10px 14px 10px 38px;
-      font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
-      transition: border-color 0.15s;
+      width: 100%; max-width: 560px; background: var(--surface-hi); border: 1px solid var(--border-hi);
+      color: var(--text); border-radius: 8px; padding: 10px 14px 10px 38px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.9rem; transition: border-color 0.15s;
     }
     .search-input:focus { outline: none; border-color: var(--gold-dim); }
     .search-input::placeholder { color: var(--text-dim); }
 
     .filter-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-
     .cat-pills { display: flex; gap: 5px; flex-wrap: wrap; }
     .cat-pill {
       padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 500;
       border: 1px solid var(--border-hi); background: transparent;
-      color: var(--text-dim); cursor: pointer; transition: all 0.12s;
-      font-family: 'DM Sans', sans-serif;
+      color: var(--text-dim); cursor: pointer; transition: all 0.12s; font-family: 'DM Sans', sans-serif;
     }
-    .cat-pill:hover { color: var(--text-mid); border-color: var(--border-hi); }
+    .cat-pill:hover { color: var(--text-mid); }
     .cat-pill.active { background: var(--gold-bg); color: var(--gold); border-color: var(--gold-dim); }
-
     .filter-sep { width: 1px; height: 20px; background: var(--border); flex-shrink: 0; }
-
-    .toggle-label {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 0.75rem; color: var(--text-dim); cursor: pointer; user-select: none;
-      white-space: nowrap;
-    }
+    .toggle-label { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--text-dim); cursor: pointer; user-select: none; white-space: nowrap; }
     .toggle-label input { accent-color: var(--gold); cursor: pointer; }
-    .toggle-label.active-filter { color: var(--gold); }
-
-    .result-info {
-      font-family: 'DM Mono', monospace; font-size: 0.68rem;
-      color: var(--text-dim); margin-left: auto; white-space: nowrap;
-    }
-    .flag-pill {
-      font-family: 'DM Mono', monospace; font-size: 0.68rem;
-      color: var(--gold); white-space: nowrap;
-    }
+    .result-info { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--text-dim); margin-left: auto; white-space: nowrap; }
+    .flag-pill { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--gold); white-space: nowrap; }
 
     /* ── Recipe list ── */
-    .recipe-list {
-      max-width: 860px; margin: 0 auto;
-      padding: 20px 28px 60px;
-    }
+    .recipe-list { max-width: 860px; margin: 0 auto; padding: 20px 28px 60px; }
 
-    .recipe-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 8px; margin-bottom: 8px; overflow: hidden;
-      transition: border-color 0.12s;
-    }
+    .recipe-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px; overflow: hidden; transition: border-color 0.12s; }
     .recipe-card:hover { border-color: var(--border-hi); }
     .recipe-card.flagged-card { border-color: var(--gold-dim); background: var(--gold-bg); }
 
-    .recipe-header {
-      display: flex; align-items: center; gap: 10px;
-      padding: 11px 14px; cursor: pointer; user-select: none;
-    }
+    .recipe-header { display: flex; align-items: center; gap: 10px; padding: 11px 14px; cursor: pointer; user-select: none; }
     .recipe-header:hover { background: var(--surface-hi); }
     .recipe-card.flagged-card .recipe-header:hover { background: #201c0f; }
 
-    .match-badge {
-      font-family: 'DM Mono', monospace; font-size: 0.65rem; font-weight: 400;
-      padding: 2px 7px; border-radius: 4px; flex-shrink: 0; min-width: 38px; text-align: center;
-    }
+    .match-badge { font-family: 'DM Mono', monospace; font-size: 0.65rem; padding: 2px 7px; border-radius: 4px; flex-shrink: 0; min-width: 38px; text-align: center; }
     .match-100  { background: var(--green-bg); color: var(--green); }
     .match-high { background: #1a1a0a; color: #c4c44a; }
     .match-mid  { background: #1a140a; color: var(--heat); }
     .match-low  { background: var(--red-bg); color: var(--red); }
 
-    .recipe-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.0rem; font-weight: 500; color: var(--text);
-      flex: 1; line-height: 1.3;
-    }
-
-    .heat-tag {
-      font-size: 0.65rem; padding: 2px 7px; border-radius: 4px;
-      flex-shrink: 0; font-family: 'DM Mono', monospace;
-    }
+    .recipe-name { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 500; color: var(--text); flex: 1; line-height: 1.3; }
+    .heat-tag { font-size: 0.65rem; padding: 2px 7px; border-radius: 4px; flex-shrink: 0; font-family: 'DM Mono', monospace; }
     .heat-yes { background: var(--heat-bg); color: var(--heat); }
     .heat-no  { background: var(--green-bg); color: var(--green); }
 
-    .flag-btn {
-      background: none; border: none; cursor: pointer;
-      font-size: 0.9rem; padding: 2px 4px; flex-shrink: 0;
-      opacity: 0.25; transition: opacity 0.15s; line-height: 1; color: var(--gold);
-    }
+    .flag-btn { background: none; border: none; cursor: pointer; font-size: 0.9rem; padding: 2px 4px; flex-shrink: 0; opacity: 0.25; transition: opacity 0.15s; line-height: 1; color: var(--gold); }
     .flag-btn:hover { opacity: 0.7; }
     .flag-btn.flagged { opacity: 1; }
-
-    .chevron {
-      color: var(--text-dim); font-size: 0.65rem; flex-shrink: 0;
-      transition: transform 0.18s;
-    }
+    .chevron { color: var(--text-dim); font-size: 0.65rem; flex-shrink: 0; transition: transform 0.18s; }
     .recipe-card.open .chevron { transform: rotate(90deg); }
 
-    /* ── Recipe body ── */
-    .recipe-body {
-      display: none; padding: 0 14px 14px;
-      border-top: 1px solid var(--border);
-    }
+    .recipe-body { display: none; padding: 0 14px 14px; border-top: 1px solid var(--border); }
     .recipe-card.open .recipe-body { display: block; }
-
-    .recipe-desc {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.95rem; color: var(--text-dim); margin: 10px 0 12px;
-      line-height: 1.6; font-style: italic;
-    }
+    .recipe-desc { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--text-dim); margin: 10px 0 12px; line-height: 1.6; font-style: italic; }
 
     .ing-table { width: 100%; border-collapse: collapse; margin-bottom: 4px; }
-    .ing-table th {
-      text-align: left; color: var(--text-dim);
-      font-family: 'DM Mono', monospace; font-size: 0.6rem; font-weight: 400;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      padding: 3px 8px; border-bottom: 1px solid var(--border);
-    }
-    .ing-table td { padding: 5px 8px; border-bottom: 1px solid #1e1b12; font-size: 0.82rem; }
+    .ing-table th { text-align: left; color: var(--text-dim); font-family: 'DM Mono', monospace; font-size: 0.6rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border-bottom: 1px solid var(--border); }
+    .ing-table td { padding: 5px 8px; border-bottom: 1px solid #1e1b12; font-size: 0.82rem; vertical-align: middle; }
     .ing-table tr:last-child td { border-bottom: none; }
 
     .ing-have    { color: var(--green); }
     .ing-missing { color: var(--red); }
     .ing-swap    { color: var(--teal); }
 
-    .pct-cell { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-dim); }
-    .pct-input {
-      width: 58px; background: var(--bg); border: 1px solid var(--border);
-      color: var(--text); border-radius: 4px; padding: 2px 6px;
-      font-family: 'DM Mono', monospace; font-size: 0.78rem;
+    .swap-inline-btn {
+      font-size: 0.65rem; padding: 1px 6px; border-radius: 3px; margin-left: 6px;
+      border: 1px solid var(--teal-bg); background: var(--teal-bg); color: var(--teal);
+      cursor: pointer; font-family: 'DM Mono', monospace; transition: all 0.1s;
+      vertical-align: middle;
     }
-    .pct-input:focus { outline: none; border-color: var(--gold-dim); }
+    .swap-inline-btn:hover { border-color: var(--teal); }
 
-    .pct-total {
-      font-family: 'DM Mono', monospace; font-size: 0.7rem;
-      margin: 4px 0 12px; padding-left: 8px;
+    .swap-inline-select {
+      margin-left: 6px; font-size: 0.72rem; background: var(--surface-hi);
+      border: 1px solid var(--teal); color: var(--teal); border-radius: 3px;
+      padding: 1px 4px; font-family: 'DM Sans', sans-serif;
     }
+    .swap-inline-select:focus { outline: none; }
+
+    .pct-cell { font-family: 'DM Mono', monospace; font-size: 0.78rem; color: var(--text-dim); }
+    .pct-input { width: 58px; background: var(--bg); border: 1px solid var(--border); color: var(--text); border-radius: 4px; padding: 2px 6px; font-family: 'DM Mono', monospace; font-size: 0.78rem; }
+    .pct-input:focus { outline: none; border-color: var(--gold-dim); }
+    .pct-total { font-family: 'DM Mono', monospace; font-size: 0.7rem; margin: 4px 0 12px; padding-left: 8px; }
     .pct-ok   { color: var(--green); }
     .pct-warn { color: var(--red); }
 
-    .source-notes {
-      font-size: 0.75rem; color: var(--text-dim); line-height: 1.5;
-      margin-bottom: 12px; padding: 8px 10px;
-      background: var(--surface-hi); border-radius: 5px;
-      border-left: 2px solid var(--border-hi);
-    }
-
-    .notes-label {
-      font-family: 'DM Mono', monospace; font-size: 0.6rem; font-weight: 400;
-      letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim);
-      margin: 12px 0 5px; display: block;
-    }
-    .user-notes {
-      width: 100%; min-height: 52px;
-      background: var(--bg); border: 1px solid var(--border);
-      color: var(--text-mid); border-radius: 5px; padding: 8px 10px;
-      font-family: 'DM Sans', sans-serif; font-size: 0.8rem; line-height: 1.5;
-      resize: vertical; margin-bottom: 12px;
-    }
+    .source-notes { font-size: 0.75rem; color: var(--text-dim); line-height: 1.5; margin-bottom: 12px; padding: 8px 10px; background: var(--surface-hi); border-radius: 5px; border-left: 2px solid var(--border-hi); }
+    .notes-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin: 12px 0 5px; display: block; }
+    .user-notes { width: 100%; min-height: 52px; background: var(--bg); border: 1px solid var(--border); color: var(--text-mid); border-radius: 5px; padding: 8px 10px; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; line-height: 1.5; resize: vertical; margin-bottom: 12px; }
     .user-notes:focus { outline: none; border-color: var(--gold-dim); }
     .user-notes::placeholder { color: var(--text-dim); }
-    .has-notes { border-color: var(--gold-dim) !important; }
+    .user-notes.has-notes { border-color: var(--gold-dim); }
 
     .card-actions { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
-    .btn {
-      font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
-      padding: 4px 12px; border-radius: 5px;
-      border: 1px solid var(--border-hi); background: transparent;
-      color: var(--text-dim); cursor: pointer; transition: all 0.12s;
-    }
+    .btn { font-family: 'DM Sans', sans-serif; font-size: 0.72rem; padding: 4px 12px; border-radius: 5px; border: 1px solid var(--border-hi); background: transparent; color: var(--text-dim); cursor: pointer; transition: all 0.12s; }
     .btn:hover { background: var(--surface-hi); color: var(--text); }
     .btn-gold { border-color: var(--gold-dim); color: var(--gold); }
     .btn-gold:hover { background: var(--gold-bg); }
-
-    .src-link {
-      font-family: 'DM Mono', monospace; font-size: 0.65rem;
-      color: var(--text-dim); text-decoration: none; margin-left: auto;
-    }
+    .src-link { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--text-dim); text-decoration: none; margin-left: auto; }
     .src-link:hover { color: var(--text-mid); }
 
-    /* ── Load more ── */
-    .load-more {
-      display: block; width: 100%; margin-top: 4px;
-      padding: 12px; border-radius: 7px;
-      border: 1px dashed var(--border-hi); background: transparent;
-      font-family: 'Cormorant Garamond', serif; font-size: 0.95rem;
-      color: var(--text-dim); cursor: pointer; transition: all 0.15s; letter-spacing: 0.02em;
-    }
+    .load-more { display: block; width: 100%; margin-top: 4px; padding: 12px; border-radius: 7px; border: 1px dashed var(--border-hi); background: transparent; font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--text-dim); cursor: pointer; transition: all 0.15s; }
     .load-more:hover { color: var(--text-mid); border-color: var(--gold-dim); }
+    .empty-state { text-align: center; padding: 60px 0; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-style: italic; color: var(--text-dim); }
 
-    .empty-state {
-      text-align: center; padding: 60px 0;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem; font-style: italic; color: var(--text-dim);
-    }
-
-    /* ── Inventory drawer ── */
-    .drawer-overlay {
-      display: none; position: fixed; inset: 0;
-      background: rgba(0,0,0,0.6); z-index: 100;
-    }
+    /* ── Drawer ── */
+    .drawer-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 100; }
     .drawer-overlay.open { display: block; }
-
-    .drawer {
-      position: fixed; top: 0; left: -380px; bottom: 0;
-      width: 360px; background: var(--surface);
-      border-right: 1px solid var(--border-hi);
-      z-index: 101; transition: left 0.22s ease;
-      display: flex; flex-direction: column;
-      overflow: hidden;
-    }
+    .drawer { position: fixed; top: 0; left: -400px; bottom: 0; width: 380px; background: var(--surface); border-right: 1px solid var(--border-hi); z-index: 101; transition: left 0.22s ease; display: flex; flex-direction: column; overflow: hidden; }
     .drawer.open { left: 0; }
 
-    .drawer-header {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 20px 14px;
-      border-bottom: 1px solid var(--border);
-      flex-shrink: 0;
-    }
-    .drawer-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem; font-weight: 500; color: var(--gold);
-    }
-    .drawer-close {
-      background: none; border: none; color: var(--text-dim);
-      font-size: 1.1rem; cursor: pointer; padding: 4px 6px;
-    }
+    .drawer-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px 0; flex-shrink: 0; }
+    .drawer-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 500; color: var(--gold); }
+    .drawer-close { background: none; border: none; color: var(--text-dim); font-size: 1.1rem; cursor: pointer; padding: 4px 6px; }
     .drawer-close:hover { color: var(--text); }
 
-    .drawer-body { overflow-y: auto; padding: 16px 20px 24px; flex: 1; }
+    /* Tabs */
+    .drawer-tabs { display: flex; gap: 0; padding: 14px 20px 0; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+    .drawer-tab { flex: 1; padding: 8px 0; background: none; border: none; border-bottom: 2px solid transparent; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--text-dim); cursor: pointer; transition: all 0.15s; margin-bottom: -1px; }
+    .drawer-tab:hover { color: var(--text-mid); }
+    .drawer-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
 
-    .drawer-section-title {
-      font-family: 'DM Mono', monospace; font-size: 0.62rem; font-weight: 400;
-      letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim);
-      margin-bottom: 10px; margin-top: 18px;
+    .drawer-pane { display: none; overflow-y: auto; padding: 16px 20px 24px; flex: 1; }
+    .drawer-pane.active { display: block; }
+
+    /* Pantry search */
+    .pantry-search-wrap { position: relative; margin-bottom: 14px; }
+    .pantry-search {
+      width: 100%; background: var(--surface-hi); border: 1px solid var(--border-hi);
+      color: var(--text); border-radius: 7px; padding: 9px 12px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.85rem;
     }
-    .drawer-section-title:first-child { margin-top: 0; }
+    .pantry-search:focus { outline: none; border-color: var(--gold-dim); }
+    .pantry-search::placeholder { color: var(--text-dim); }
 
-    .inv-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
-    .inv-list li { display: flex; align-items: center; gap: 8px; }
-    .inv-list input[type=checkbox] { accent-color: var(--gold); cursor: pointer; flex-shrink: 0; }
-    .inv-lbl { font-size: 0.82rem; color: var(--text-mid); cursor: pointer; }
-    .inv-lbl.on { color: var(--text); }
-
-    .drawer-divider { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
-
-    .swap-list { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 12px; }
-    .swap-row { display: flex; align-items: center; gap: 5px; font-size: 0.78rem; }
-    .swap-from { color: var(--red); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .swap-arr   { color: var(--text-dim); flex-shrink: 0; }
-    .swap-to    { color: var(--teal); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-    .swap-rm    { background: none; border: none; color: var(--text-dim); cursor: pointer; font-size: 0.8rem; flex-shrink: 0; padding: 0 2px; }
-    .swap-rm:hover { color: var(--text); }
-
-    .swap-form { display: flex; flex-direction: column; gap: 6px; }
-    .swap-sel {
-      width: 100%; background: var(--surface-hi); border: 1px solid var(--border);
-      color: var(--text-mid); border-radius: 5px; padding: 5px 8px;
-      font-family: 'DM Sans', sans-serif; font-size: 0.78rem;
+    .pantry-suggest {
+      display: none; position: absolute; top: 100%; left: 0; right: 0; z-index: 10;
+      background: var(--surface-top, #2a2519); border: 1px solid var(--border-hi);
+      border-radius: 0 0 7px 7px; list-style: none; max-height: 200px; overflow-y: auto;
     }
+    .pantry-suggest.show { display: block; }
+    .pantry-suggest li { padding: 8px 12px; font-size: 0.82rem; cursor: pointer; color: var(--text-mid); }
+    .pantry-suggest li:hover { background: var(--surface-hi); color: var(--text); }
+
+    /* Chips */
+    .pantry-count { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--text-dim); margin-bottom: 10px; letter-spacing: 0.06em; }
+    .pantry-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip {
+      display: flex; align-items: center; gap: 5px; padding: 4px 10px;
+      background: var(--green-bg); border: 1px solid #1e3a22; border-radius: 20px;
+      font-size: 0.75rem; color: var(--green);
+    }
+    .chip-rm { background: none; border: none; color: #3a6040; cursor: pointer; font-size: 0.8rem; padding: 0; line-height: 1; }
+    .chip-rm:hover { color: var(--green); }
+
+    /* Swaps pane */
+    .swap-explainer { font-size: 0.78rem; color: var(--text-dim); line-height: 1.5; margin-bottom: 14px; padding: 8px 10px; background: var(--surface-hi); border-radius: 5px; border-left: 2px solid var(--border-hi); }
+    .swap-rules { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .swap-rule { display: flex; align-items: center; gap: 6px; padding: 6px 10px; background: var(--surface-hi); border-radius: 5px; font-size: 0.8rem; }
+    .swap-rule-from { color: var(--red); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .swap-rule-arr  { color: var(--text-dim); flex-shrink: 0; font-size: 0.7rem; }
+    .swap-rule-to   { color: var(--teal); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .swap-rule-rm   { background: none; border: none; color: var(--text-dim); cursor: pointer; font-size: 0.8rem; padding: 0 2px; flex-shrink: 0; }
+    .swap-rule-rm:hover { color: var(--text); }
+
+    .swap-add-form { display: flex; flex-direction: column; gap: 7px; }
+    .swap-add-form label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); }
+    .swap-sel { width: 100%; background: var(--surface-hi); border: 1px solid var(--border); color: var(--text-mid); border-radius: 5px; padding: 6px 8px; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; }
     .swap-sel:focus { outline: none; border-color: var(--gold-dim); }
-    .swap-add {
-      width: 100%; padding: 6px; border-radius: 5px;
-      border: 1px dashed var(--border-hi); background: transparent;
-      font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: var(--text-dim);
-      cursor: pointer; transition: all 0.12s;
-    }
-    .swap-add:hover { color: var(--text-mid); border-color: var(--gold-dim); }
+    .swap-add-btn { width: 100%; padding: 7px; border-radius: 5px; border: 1px dashed var(--border-hi); background: transparent; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--text-dim); cursor: pointer; transition: all 0.12s; }
+    .swap-add-btn:hover { color: var(--text-mid); border-color: var(--gold-dim); }
 
-    /* ── Toast ── */
-    .toast {
-      position: fixed; bottom: 24px; right: 24px;
-      background: var(--green-bg); color: var(--green);
-      border: 1px solid var(--green); border-radius: 7px;
-      padding: 10px 18px; font-size: 0.78rem;
-      font-family: 'DM Mono', monospace;
-      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 200;
-    }
+    /* Toast */
+    .toast { position: fixed; bottom: 24px; right: 24px; background: var(--green-bg); color: var(--green); border: 1px solid var(--green); border-radius: 7px; padding: 10px 18px; font-size: 0.78rem; font-family: 'DM Mono', monospace; opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 200; }
     .toast.show { opacity: 1; }
 
     @media (max-width: 600px) {
-      .topbar { padding: 14px 16px; }
-      .controls { padding: 12px 16px 10px; }
+      .topbar, .controls { padding-left: 16px; padding-right: 16px; }
       .recipe-list { padding: 14px 16px 40px; }
     }
   </style>
 </head>
 <body>
 
-<!-- Top bar -->
 <header class="topbar">
   <div>
     <div class="brand">5 Daughters</div>
     <div class="brand-sub">Formulary</div>
   </div>
-  <div class="topbar-right">
-    <button class="inv-btn" id="openDrawerBtn">
-      Ingredients &amp; Swaps
-      <span class="inv-badge" id="invBadge">—</span>
-    </button>
-  </div>
+  <button class="pantry-btn" id="openDrawerBtn">
+    My Pantry
+    <span class="pantry-badge" id="invBadge">—</span>
+  </button>
 </header>
 
-<!-- Search + filters -->
 <div class="controls">
   <div class="search-wrap">
     <span class="search-icon">⌕</span>
@@ -400,37 +256,47 @@
   <div class="filter-row">
     <div class="cat-pills" id="catPills"></div>
     <div class="filter-sep"></div>
-    <label class="toggle-label" id="heatLabel">
-      <input type="checkbox" id="noHeatOnly"> No heat
-    </label>
-    <label class="toggle-label" id="flagLabel">
-      <input type="checkbox" id="flaggedOnly"> Flagged
-    </label>
+    <label class="toggle-label"><input type="checkbox" id="noHeatOnly"> No heat</label>
+    <label class="toggle-label"><input type="checkbox" id="flaggedOnly"> Flagged</label>
     <span class="result-info" id="resultInfo"></span>
     <span class="flag-pill" id="flagPill"></span>
   </div>
 </div>
 
-<!-- Recipe list -->
 <div class="recipe-list" id="recipeList"></div>
 
-<!-- Inventory drawer overlay -->
+<!-- Drawer -->
 <div class="drawer-overlay" id="drawerOverlay"></div>
 <aside class="drawer" id="drawer">
   <div class="drawer-header">
-    <span class="drawer-title">Ingredients &amp; Swaps</span>
+    <span class="drawer-title">My Pantry</span>
     <button class="drawer-close" id="closeDrawerBtn">✕</button>
   </div>
-  <div class="drawer-body">
-    <div class="drawer-section-title">My Inventory</div>
-    <ul class="inv-list" id="invList"></ul>
-    <hr class="drawer-divider">
-    <div class="drawer-section-title">Swaps</div>
-    <ul class="swap-list" id="swapList"></ul>
-    <div class="swap-form">
+  <div class="drawer-tabs">
+    <button class="drawer-tab active" data-tab="pantry">Ingredients</button>
+    <button class="drawer-tab" data-tab="swaps">Swaps</button>
+  </div>
+
+  <!-- Pantry pane -->
+  <div class="drawer-pane active" id="paneIngredients">
+    <div class="pantry-search-wrap">
+      <input class="pantry-search" id="pantrySearch" type="text" placeholder="Add an ingredient…" autocomplete="off">
+      <ul class="pantry-suggest" id="pantrySuggest"></ul>
+    </div>
+    <div class="pantry-count" id="pantryCount"></div>
+    <div class="pantry-chips" id="pantryChips"></div>
+  </div>
+
+  <!-- Swaps pane -->
+  <div class="drawer-pane" id="paneSwaps">
+    <p class="swap-explainer">When a recipe calls for something you don't have, a swap tells the tool to use a substitute you own instead — it counts toward match % and shows in the recipe.</p>
+    <ul class="swap-rules" id="swapRules"></ul>
+    <div class="swap-add-form">
+      <label>I don't have…</label>
       <select class="swap-sel" id="swapFrom"></select>
+      <label>Use instead…</label>
       <select class="swap-sel" id="swapTo"></select>
-      <button class="swap-add" id="swapAddBtn">+ Add swap rule</button>
+      <button class="swap-add-btn" id="swapAddBtn">+ Add swap rule</button>
     </div>
   </div>
 </aside>
@@ -441,11 +307,11 @@
 (async () => {
   const data = await fetch('formulator-data.json').then(r => r.json());
 
-  const INV_KEY    = '5daughters_inventory';
-  const FLAG_KEY   = '5daughters_flagged';
-  const NOTES_KEY  = '5daughters_notes';
-  const SWAPS_KEY  = '5daughters_swaps';
-  const PAGE_SIZE  = 30;
+  const INV_KEY   = '5daughters_inventory';
+  const FLAG_KEY  = '5daughters_flagged';
+  const NOTES_KEY = '5daughters_notes';
+  const SWAPS_KEY = '5daughters_swaps';
+  const PAGE_SIZE = 30;
 
   let owned   = new Set(JSON.parse(localStorage.getItem(INV_KEY)   || 'null') ?? data.userInventory);
   let flagged = new Set(JSON.parse(localStorage.getItem(FLAG_KEY)  || '[]'));
@@ -459,31 +325,21 @@
   const saveNotes   = () => localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
   const saveSwaps   = () => localStorage.setItem(SWAPS_KEY, JSON.stringify(swaps));
 
-  function hasIng(name) {
-    if (owned.has(name)) return true;
-    const sub = swaps[name];
-    return sub ? owned.has(sub) : false;
+  function hasIng(name) { return owned.has(name) || (swaps[name] && owned.has(swaps[name])); }
+  function swapFor(name) { return (!owned.has(name) && swaps[name] && owned.has(swaps[name])) ? swaps[name] : null; }
+  function matchPct(r) {
+    if (!r.ingredients?.length) return 0;
+    return Math.round(r.ingredients.filter(i => hasIng(i.name)).length / r.ingredients.length * 100);
   }
-  function swapFor(name) {
-    return (!owned.has(name) && swaps[name] && owned.has(swaps[name])) ? swaps[name] : null;
-  }
-  function matchPct(recipe) {
-    if (!recipe.ingredients?.length) return 0;
-    const have = recipe.ingredients.filter(i => hasIng(i.name)).length;
-    return Math.round((have / recipe.ingredients.length) * 100);
-  }
-  function badgeCls(pct) {
-    if (pct === 100) return 'match-badge match-100';
-    if (pct >= 75)  return 'match-badge match-high';
-    if (pct >= 50)  return 'match-badge match-mid';
+  function badgeCls(p) {
+    if (p === 100) return 'match-badge match-100';
+    if (p >= 75)  return 'match-badge match-high';
+    if (p >= 50)  return 'match-badge match-mid';
     return 'match-badge match-low';
   }
-
-  // Category from source field
   function recipeCategory(r) {
-    if (!r.source || r.source === 'custom') return 'custom';
-    // Try to infer from source URL path
     const u = r.sourceUrl || '';
+    if (!r.source || r.source === 'custom') return 'custom';
     if (/face-recipes|facial/.test(u)) return 'face';
     if (/hair/.test(u)) return 'hair';
     if (/cleaning/.test(u)) return 'cleaning';
@@ -491,105 +347,182 @@
     return 'other';
   }
 
-  const CATS = [
-    { id: 'all',      label: 'All' },
-    { id: 'face',     label: 'Face' },
-    { id: 'body',     label: 'Body' },
-    { id: 'hair',     label: 'Hair' },
-    { id: 'cleaning', label: 'Cleaning' },
-    { id: 'custom',   label: 'Custom' },
-  ];
+  function el(tag, cls, txt) { const e = document.createElement(tag); if (cls) e.className = cls; if (txt !== undefined) e.textContent = txt; return e; }
+  function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2000); }
+  function updateFlagPill() { const p = document.getElementById('flagPill'); p.textContent = flagged.size > 0 ? `★ ${flagged.size}` : ''; }
+  function updateInvBadge() { document.getElementById('invBadge').textContent = owned.size; }
 
-  // ── Category pills ───────────────────────────────────
+  // ── Category pills ─────────────────────────────────────
+  const CATS = [
+    {id:'all',label:'All'},{id:'face',label:'Face'},{id:'body',label:'Body'},
+    {id:'hair',label:'Hair'},{id:'cleaning',label:'Cleaning'},{id:'custom',label:'Custom'},
+  ];
   function renderCatPills() {
-    const wrap = document.getElementById('catPills');
-    wrap.textContent = '';
-    CATS.forEach(cat => {
-      const btn = document.createElement('button');
-      btn.className = 'cat-pill' + (cat.id === activeCategory ? ' active' : '');
-      btn.textContent = cat.label;
-      btn.addEventListener('click', () => {
-        activeCategory = cat.id;
-        shownCount = PAGE_SIZE;
-        renderCatPills();
-        renderRecipes();
-      });
-      wrap.appendChild(btn);
+    const wrap = document.getElementById('catPills'); wrap.textContent = '';
+    CATS.forEach(c => {
+      const b = el('button', 'cat-pill' + (c.id === activeCategory ? ' active' : ''), c.label);
+      b.addEventListener('click', () => { activeCategory = c.id; shownCount = PAGE_SIZE; renderCatPills(); renderRecipes(); });
+      wrap.appendChild(b);
     });
   }
 
-  // ── Helpers ──────────────────────────────────────────
-  function el(tag, cls, text) {
-    const e = document.createElement(tag);
-    if (cls) e.className = cls;
-    if (text !== undefined) e.textContent = text;
-    return e;
+  // ── Pantry (chips) ─────────────────────────────────────
+  function renderPantry() {
+    const chips = document.getElementById('pantryChips');
+    chips.textContent = '';
+    const sorted = [...owned].sort((a,b) => a.localeCompare(b));
+    document.getElementById('pantryCount').textContent =
+      `${sorted.length} ingredient${sorted.length !== 1 ? 's' : ''} in your pantry`;
+    sorted.forEach(ing => {
+      const chip = el('div', 'chip');
+      chip.appendChild(el('span', null, ing));
+      const rm = el('button', 'chip-rm', '✕'); rm.title = 'Remove';
+      rm.addEventListener('click', () => { owned.delete(ing); saveOwned(); updateInvBadge(); renderPantry(); renderRecipes(); });
+      chip.appendChild(rm); chips.appendChild(chip);
+    });
   }
 
-  function showToast(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2000);
+  // Pantry search autocomplete
+  const pantrySearch = document.getElementById('pantrySearch');
+  const pantrySuggest = document.getElementById('pantrySuggest');
+
+  pantrySearch.addEventListener('input', () => {
+    const q = pantrySearch.value.trim().toLowerCase();
+    pantrySuggest.textContent = '';
+    if (!q) { pantrySuggest.classList.remove('show'); return; }
+    const matches = data.ingredients.filter(i => !owned.has(i) && i.toLowerCase().includes(q)).slice(0, 10);
+    if (!matches.length) { pantrySuggest.classList.remove('show'); return; }
+    matches.forEach(ing => {
+      const li = el('li', null, ing);
+      li.addEventListener('mousedown', e => {
+        e.preventDefault();
+        owned.add(ing); saveOwned(); updateInvBadge(); renderPantry(); renderRecipes();
+        pantrySearch.value = ''; pantrySuggest.classList.remove('show');
+      });
+      pantrySuggest.appendChild(li);
+    });
+    pantrySuggest.classList.add('show');
+  });
+  pantrySearch.addEventListener('blur', () => setTimeout(() => pantrySuggest.classList.remove('show'), 150));
+
+  // ── Swaps pane ─────────────────────────────────────────
+  function renderSwaps() {
+    const list = document.getElementById('swapRules'); list.textContent = '';
+    Object.entries(swaps).forEach(([from, to]) => {
+      const li = el('li', 'swap-rule');
+      li.appendChild(el('span', 'swap-rule-from', from));
+      li.appendChild(el('span', 'swap-rule-arr', '→'));
+      li.appendChild(el('span', 'swap-rule-to', to));
+      const rm = el('button', 'swap-rule-rm', '✕'); rm.title = 'Remove swap';
+      rm.addEventListener('click', () => { delete swaps[from]; saveSwaps(); renderSwaps(); renderRecipes(); });
+      li.appendChild(rm); list.appendChild(li);
+    });
+    // Populate dropdowns
+    const fSel = document.getElementById('swapFrom'), tSel = document.getElementById('swapTo');
+    const sv = {f: fSel.value, t: tSel.value};
+    fSel.textContent = ''; tSel.textContent = '';
+    const p1 = el('option', null, 'Select ingredient…'); p1.value = ''; fSel.appendChild(p1);
+    const p2 = el('option', null, 'Select substitute…'); p2.value = ''; tSel.appendChild(p2);
+    data.ingredients.forEach(i => {
+      const o1 = el('option', null, i); o1.value = i; fSel.appendChild(o1);
+      const o2 = el('option', null, i); o2.value = i; tSel.appendChild(o2);
+    });
+    if (sv.f) fSel.value = sv.f;
+    if (sv.t) tSel.value = sv.t;
   }
 
-  function updateFlagPill() {
-    const p = document.getElementById('flagPill');
-    p.textContent = flagged.size > 0 ? `★ ${flagged.size}` : '';
-  }
+  document.getElementById('swapAddBtn').addEventListener('click', () => {
+    const from = document.getElementById('swapFrom').value, to = document.getElementById('swapTo').value;
+    if (!from || !to || from === to) return;
+    swaps[from] = to; saveSwaps(); renderSwaps(); renderRecipes();
+    document.getElementById('swapFrom').value = ''; document.getElementById('swapTo').value = '';
+  });
 
-  function updateInvBadge() {
-    document.getElementById('invBadge').textContent =
-      `${owned.size} / ${data.ingredients.length}`;
-  }
+  // ── Drawer + tabs ──────────────────────────────────────
+  function openDrawer()  { document.getElementById('drawer').classList.add('open'); document.getElementById('drawerOverlay').classList.add('open'); }
+  function closeDrawer() { document.getElementById('drawer').classList.remove('open'); document.getElementById('drawerOverlay').classList.remove('open'); }
 
-  // ── Recipe card ──────────────────────────────────────
+  document.getElementById('openDrawerBtn').addEventListener('click', openDrawer);
+  document.getElementById('closeDrawerBtn').addEventListener('click', closeDrawer);
+  document.getElementById('drawerOverlay').addEventListener('click', closeDrawer);
+
+  document.querySelectorAll('.drawer-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.drawer-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.drawer-pane').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('pane' + tab.dataset.tab.charAt(0).toUpperCase() + tab.dataset.tab.slice(1)).classList.add('active');
+    });
+  });
+
+  // ── Recipe card ────────────────────────────────────────
   function buildCard(recipe) {
     const pct = matchPct(recipe);
     const card = document.createElement('div');
     card.className = 'recipe-card' + (flagged.has(recipe.id) ? ' flagged-card' : '');
-    card.dataset.id = recipe.id;
 
     // Header
     const hdr = el('div', 'recipe-header');
-    const badge = el('span', badgeCls(pct), pct + '%');
-    const name  = el('span', 'recipe-name', recipe.name);
-    const heat  = el('span', 'heat-tag ' + (recipe.heatRequired ? 'heat-yes' : 'heat-no'),
-                     recipe.heatRequired ? 'heat' : 'no heat');
+    hdr.appendChild(el('span', badgeCls(pct), pct + '%'));
+    hdr.appendChild(el('span', 'recipe-name', recipe.name));
+    hdr.appendChild(el('span', 'heat-tag ' + (recipe.heatRequired ? 'heat-yes' : 'heat-no'), recipe.heatRequired ? 'heat' : 'no heat'));
     const flagBtn = el('button', 'flag-btn' + (flagged.has(recipe.id) ? ' flagged' : ''), '★');
-    flagBtn.title = flagged.has(recipe.id) ? 'Unflag' : 'Flag to make';
     flagBtn.addEventListener('click', e => {
       e.stopPropagation();
       if (flagged.has(recipe.id)) { flagged.delete(recipe.id); flagBtn.classList.remove('flagged'); card.classList.remove('flagged-card'); }
       else                        { flagged.add(recipe.id);    flagBtn.classList.add('flagged');    card.classList.add('flagged-card'); }
       saveFlagged(); updateFlagPill();
     });
-    const chev = el('span', 'chevron', '▶');
-    hdr.appendChild(badge); hdr.appendChild(name); hdr.appendChild(heat);
-    hdr.appendChild(flagBtn); hdr.appendChild(chev);
+    hdr.appendChild(flagBtn);
+    hdr.appendChild(el('span', 'chevron', '▶'));
 
     // Body
     const body = el('div', 'recipe-body');
     if (recipe.description) body.appendChild(el('p', 'recipe-desc', recipe.description));
 
     // Ingredient table
-    const tbl  = document.createElement('table'); tbl.className = 'ing-table';
-    const head = document.createElement('thead');
-    const hr   = document.createElement('tr');
+    const tbl = document.createElement('table'); tbl.className = 'ing-table';
+    const thead = document.createElement('thead'), hr = document.createElement('tr');
     hr.appendChild(el('th', null, 'Ingredient')); hr.appendChild(el('th', null, '%'));
-    head.appendChild(hr); tbl.appendChild(head);
+    thead.appendChild(hr); tbl.appendChild(thead);
     const tbody = document.createElement('tbody');
+
     (recipe.ingredients || []).forEach(ing => {
       const tr   = document.createElement('tr');
       const sub  = swapFor(ing.name);
       const have = owned.has(ing.name);
       const tdN  = document.createElement('td');
-      tdN.className = have ? 'ing-have' : sub ? 'ing-swap' : 'ing-missing';
-      tdN.textContent = have ? '✓ ' + ing.name : sub ? '⇄ ' + ing.name + ' → ' + sub : '✗ ' + ing.name;
+
+      if (have) {
+        tdN.className = 'ing-have';
+        tdN.textContent = '✓ ' + ing.name;
+      } else if (sub) {
+        tdN.className = 'ing-swap';
+        tdN.textContent = '⇄ ' + ing.name + ' → ' + sub;
+      } else {
+        tdN.className = 'ing-missing';
+        const span = el('span', null, '✗ ' + ing.name);
+        tdN.appendChild(span);
+        // Quick swap button for missing ingredients
+        const swapBtn = el('button', 'swap-inline-btn', '⇄ swap?');
+        swapBtn.addEventListener('click', e => {
+          e.stopPropagation();
+          swapBtn.style.display = 'none';
+          const sel = document.createElement('select'); sel.className = 'swap-inline-select';
+          const def = el('option', null, 'use…'); def.value = ''; sel.appendChild(def);
+          [...owned].sort().forEach(o => { const opt = el('option', null, o); opt.value = o; sel.appendChild(opt); });
+          sel.addEventListener('change', () => {
+            if (!sel.value) return;
+            swaps[ing.name] = sel.value; saveSwaps(); renderSwaps(); renderRecipes();
+          });
+          tdN.appendChild(sel);
+        });
+        tdN.appendChild(swapBtn);
+      }
+
       const tdP = document.createElement('td'); tdP.className = 'pct-cell';
       const inp = document.createElement('input');
-      inp.className = 'pct-input'; inp.type = 'number'; inp.step = '0.5'; inp.min = '0'; inp.max = '100';
-      inp.value = ing.pct;
+      inp.className = 'pct-input'; inp.type = 'number'; inp.step = '0.5'; inp.min = '0'; inp.max = '100'; inp.value = ing.pct;
       inp.addEventListener('input', () => updateTotal(card));
       tdP.appendChild(inp);
       tr.appendChild(tdN); tr.appendChild(tdP); tbody.appendChild(tr);
@@ -598,7 +531,6 @@
 
     const totalEl = el('div', 'pct-total pct-warn', '');
     body.appendChild(totalEl);
-
     if (recipe.notes) body.appendChild(el('div', 'source-notes', recipe.notes));
 
     // My notes
@@ -619,8 +551,8 @@
     const copyBtn = el('button', 'btn btn-gold', 'Copy JSON');
     copyBtn.addEventListener('click', () => {
       const inputs = card.querySelectorAll('.pct-input');
-      const tweaked = { ...recipe, ingredients: (recipe.ingredients||[]).map((ing,i) => ({...ing, pct: parseFloat(inputs[i]?.value ?? ing.pct)})) };
-      navigator.clipboard.writeText(JSON.stringify(tweaked, null, 2)).then(() => showToast('Copied'));
+      const t = {...recipe, ingredients: (recipe.ingredients||[]).map((i,idx) => ({...i, pct: parseFloat(inputs[idx]?.value ?? i.pct)}))};
+      navigator.clipboard.writeText(JSON.stringify(t, null, 2)).then(() => showToast('Copied'));
     });
     const resetBtn = el('button', 'btn', 'Reset %');
     resetBtn.addEventListener('click', () => {
@@ -629,154 +561,59 @@
     });
     acts.appendChild(copyBtn); acts.appendChild(resetBtn);
     if (recipe.sourceUrl) {
-      const a = document.createElement('a'); a.href = recipe.sourceUrl; a.target = '_blank';
-      a.rel = 'noopener noreferrer'; a.className = 'src-link'; a.textContent = '↗ source';
+      const a = document.createElement('a'); a.href = recipe.sourceUrl; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'src-link'; a.textContent = '↗ source';
       acts.appendChild(a);
     }
     body.appendChild(acts);
-
     card.appendChild(hdr); card.appendChild(body);
-    hdr.addEventListener('click', () => {
-      card.classList.toggle('open');
-      if (card.classList.contains('open')) updateTotal(card);
-    });
+    hdr.addEventListener('click', () => { card.classList.toggle('open'); if (card.classList.contains('open')) updateTotal(card); });
     return card;
   }
 
   function updateTotal(card) {
     const inputs = card.querySelectorAll('.pct-input');
-    const total  = [...inputs].reduce((s,i) => s + (parseFloat(i.value)||0), 0);
+    const total = [...inputs].reduce((s,i) => s + (parseFloat(i.value)||0), 0);
     const r = Math.round(total * 10) / 10;
-    const el = card.querySelector('.pct-total');
-    if (el) { el.textContent = 'Total: ' + r + '%'; el.className = 'pct-total ' + (Math.abs(r-100) < 0.5 ? 'pct-ok' : 'pct-warn'); }
+    const el2 = card.querySelector('.pct-total');
+    if (el2) { el2.textContent = 'Total: ' + r + '%'; el2.className = 'pct-total ' + (Math.abs(r-100) < 0.5 ? 'pct-ok' : 'pct-warn'); }
   }
 
-  // ── Render recipes ───────────────────────────────────
+  // ── Render recipes ──────────────────────────────────────
   function getFiltered() {
-    const query    = document.getElementById('searchInput').value.trim().toLowerCase();
-    const noHeat   = document.getElementById('noHeatOnly').checked;
+    const q = document.getElementById('searchInput').value.trim().toLowerCase();
+    const noHeat = document.getElementById('noHeatOnly').checked;
     const flagOnly = document.getElementById('flaggedOnly').checked;
-
     return data.recipes
       .filter(r => {
-        if (noHeat   && r.heatRequired)             return false;
-        if (flagOnly && !flagged.has(r.id))         return false;
+        if (noHeat  && r.heatRequired)                          return false;
+        if (flagOnly && !flagged.has(r.id))                     return false;
         if (activeCategory !== 'all' && recipeCategory(r) !== activeCategory) return false;
-        if (query && !r.name.toLowerCase().includes(query) &&
-            !(r.description||'').toLowerCase().includes(query)) return false;
+        if (q && !r.name.toLowerCase().includes(q) && !(r.description||'').toLowerCase().includes(q)) return false;
         return true;
       })
-      .sort((a,b) => {
-        const d = matchPct(b) - matchPct(a);
-        return d !== 0 ? d : a.name.localeCompare(b.name);
-      });
+      .sort((a,b) => { const d = matchPct(b)-matchPct(a); return d !== 0 ? d : a.name.localeCompare(b.name); });
   }
 
   function renderRecipes() {
-    const list  = document.getElementById('recipeList');
-    list.textContent = '';
+    const list = document.getElementById('recipeList'); list.textContent = '';
     const all = getFiltered();
-
-    document.getElementById('resultInfo').textContent =
-      `${all.length} recipe${all.length !== 1 ? 's' : ''}`;
-
-    if (all.length === 0) {
-      list.appendChild(el('div', 'empty-state', 'No recipes match your filters.'));
-      return;
-    }
-
-    const slice = all.slice(0, shownCount);
-    slice.forEach(r => list.appendChild(buildCard(r)));
-
+    document.getElementById('resultInfo').textContent = `${all.length} recipe${all.length !== 1 ? 's' : ''}`;
+    if (!all.length) { list.appendChild(el('div', 'empty-state', 'No recipes match your filters.')); return; }
+    all.slice(0, shownCount).forEach(r => list.appendChild(buildCard(r)));
     if (all.length > shownCount) {
-      const more = document.createElement('button');
-      more.className = 'load-more';
-      more.textContent = `Show ${Math.min(PAGE_SIZE, all.length - shownCount)} more of ${all.length - shownCount} remaining`;
+      const more = el('button', 'load-more', `Show ${Math.min(PAGE_SIZE, all.length - shownCount)} more of ${all.length - shownCount} remaining`);
       more.addEventListener('click', () => { shownCount += PAGE_SIZE; renderRecipes(); });
       list.appendChild(more);
     }
   }
 
-  // ── Inventory drawer ─────────────────────────────────
-  function openDrawer()  { document.getElementById('drawer').classList.add('open'); document.getElementById('drawerOverlay').classList.add('open'); }
-  function closeDrawer() { document.getElementById('drawer').classList.remove('open'); document.getElementById('drawerOverlay').classList.remove('open'); }
-
-  document.getElementById('openDrawerBtn').addEventListener('click', openDrawer);
-  document.getElementById('closeDrawerBtn').addEventListener('click', closeDrawer);
-  document.getElementById('drawerOverlay').addEventListener('click', closeDrawer);
-
-  function renderInvList() {
-    const list = document.getElementById('invList');
-    list.textContent = '';
-    data.ingredients.forEach(ing => {
-      const li  = document.createElement('li');
-      const id  = 'inv_' + ing.replace(/\W/g,'_');
-      const cb  = document.createElement('input'); cb.type = 'checkbox'; cb.id = id; cb.checked = owned.has(ing);
-      const lbl = document.createElement('label'); lbl.htmlFor = id; lbl.textContent = ing;
-      lbl.className = 'inv-lbl' + (owned.has(ing) ? ' on' : '');
-      cb.addEventListener('change', e => {
-        if (e.target.checked) owned.add(ing); else owned.delete(ing);
-        lbl.className = 'inv-lbl' + (e.target.checked ? ' on' : '');
-        saveOwned(); updateInvBadge(); renderRecipes();
-      });
-      li.appendChild(cb); li.appendChild(lbl); list.appendChild(li);
-    });
-  }
-
-  function renderSwapList() {
-    const list = document.getElementById('swapList');
-    list.textContent = '';
-    Object.entries(swaps).forEach(([from, to]) => {
-      const li = document.createElement('li'); li.className = 'swap-row';
-      li.appendChild(el('span', 'swap-from', from));
-      li.appendChild(el('span', 'swap-arr', '→'));
-      li.appendChild(el('span', 'swap-to', to));
-      const rm = el('button', 'swap-rm', '✕'); rm.title = 'Remove';
-      rm.addEventListener('click', () => { delete swaps[from]; saveSwaps(); renderSwapList(); renderRecipes(); });
-      li.appendChild(rm); list.appendChild(li);
-    });
-
-    // Populate dropdowns
-    const fromSel = document.getElementById('swapFrom');
-    const toSel   = document.getElementById('swapTo');
-    const sv = { f: fromSel.value, t: toSel.value };
-    fromSel.textContent = ''; toSel.textContent = '';
-    const p1 = el('option', null, 'I don\'t have…'); p1.value = ''; fromSel.appendChild(p1);
-    const p2 = el('option', null, 'I\'ll use instead…'); p2.value = ''; toSel.appendChild(p2);
-    data.ingredients.forEach(ing => {
-      const o1 = el('option', null, ing); o1.value = ing; fromSel.appendChild(o1);
-      const o2 = el('option', null, ing); o2.value = ing; toSel.appendChild(o2);
-    });
-    if (sv.f) fromSel.value = sv.f;
-    if (sv.t) toSel.value   = sv.t;
-  }
-
-  document.getElementById('swapAddBtn').addEventListener('click', () => {
-    const from = document.getElementById('swapFrom').value;
-    const to   = document.getElementById('swapTo').value;
-    if (!from || !to || from === to) return;
-    swaps[from] = to; saveSwaps(); renderSwapList(); renderRecipes();
-    document.getElementById('swapFrom').value = '';
-    document.getElementById('swapTo').value   = '';
-  });
-
-  // ── Search & filter wiring ───────────────────────────
-  let searchTimer;
-  document.getElementById('searchInput').addEventListener('input', () => {
-    clearTimeout(searchTimer);
-    shownCount = PAGE_SIZE;
-    searchTimer = setTimeout(renderRecipes, 160);
-  });
+  // ── Wire up ─────────────────────────────────────────────
+  let st;
+  document.getElementById('searchInput').addEventListener('input', () => { clearTimeout(st); shownCount = PAGE_SIZE; st = setTimeout(renderRecipes, 160); });
   document.getElementById('noHeatOnly').addEventListener('change', () => { shownCount = PAGE_SIZE; renderRecipes(); });
   document.getElementById('flaggedOnly').addEventListener('change', () => { shownCount = PAGE_SIZE; renderRecipes(); });
 
-  // ── Init ─────────────────────────────────────────────
-  renderCatPills();
-  renderInvList();
-  renderSwapList();
-  renderRecipes();
-  updateFlagPill();
-  updateInvBadge();
+  renderCatPills(); renderPantry(); renderSwaps(); renderRecipes(); updateFlagPill(); updateInvBadge();
 })();
 </script>
 </body>
