@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Daughters — Skincare Formulator</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #1a1a1e;
+      color: #e8e0d4;
+      min-height: 100vh;
+      padding: 24px 20px;
+    }
+
+    h1 { font-size: 1.5rem; font-weight: 700; color: #d4a96a; margin-bottom: 2px; }
+    .subtitle { font-size: 0.8rem; color: #555; margin-bottom: 24px; }
+
+    .layout { display: flex; gap: 20px; max-width: 1100px; align-items: flex-start; }
+
+    .inventory-panel {
+      width: 240px; flex-shrink: 0;
+      background: #23232a; border-radius: 10px; padding: 16px;
+    }
+
+    .panel-title {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #888; margin-bottom: 10px;
+    }
+
+    .inventory-list { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+
+    .inventory-list li {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.82rem; cursor: pointer; user-select: none;
+    }
+
+    .inventory-list li input[type=checkbox] {
+      accent-color: #d4a96a; cursor: pointer; width: 14px; height: 14px;
+    }
+
+    .inv-label { cursor: pointer; color: #c8bfb0; }
+    .inv-label.checked { color: #e8e0d4; }
+
+    .recipes-panel { flex: 1; min-width: 0; }
+
+    .filter-bar {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 16px; flex-wrap: wrap;
+    }
+
+    .toggle-label {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.82rem; color: #aaa; cursor: pointer; user-select: none;
+    }
+
+    .toggle-label input { accent-color: #d4a96a; cursor: pointer; }
+    .match-count { font-size: 0.78rem; color: #555; }
+
+    .recipe-card {
+      background: #23232a; border-radius: 10px; margin-bottom: 12px;
+      overflow: hidden; border: 1px solid #2e2e38; transition: border-color 0.15s;
+    }
+
+    .recipe-card:hover { border-color: #444; }
+
+    .recipe-header {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px; cursor: pointer;
+    }
+
+    .recipe-header:hover { background: #27272f; }
+
+    .match-badge {
+      font-size: 0.72rem; font-weight: 700; padding: 3px 8px;
+      border-radius: 20px; min-width: 42px; text-align: center; flex-shrink: 0;
+    }
+
+    .match-100 { background: #2a4a2a; color: #7ecf7e; }
+    .match-high { background: #3a3a1a; color: #d4c44a; }
+    .match-mid  { background: #3a2a1a; color: #d4944a; }
+    .match-low  { background: #3a1a1a; color: #d45a5a; }
+
+    .recipe-name { font-size: 0.95rem; font-weight: 600; color: #e8e0d4; flex: 1; }
+
+    .heat-tag { font-size: 0.7rem; padding: 2px 8px; border-radius: 20px; flex-shrink: 0; }
+    .heat-yes { background: #3a1a0a; color: #c47a4a; }
+    .heat-no  { background: #0a2a1a; color: #4acf8a; }
+
+    .chevron { color: #444; font-size: 0.75rem; flex-shrink: 0; transition: transform 0.2s; }
+    .recipe-card.open .chevron { transform: rotate(90deg); }
+
+    .recipe-body { display: none; padding: 0 16px 16px; border-top: 1px solid #2e2e38; }
+    .recipe-card.open .recipe-body { display: block; }
+
+    .recipe-desc { font-size: 0.82rem; color: #888; margin: 12px 0 10px; line-height: 1.5; }
+
+    .ingredient-table { width: 100%; border-collapse: collapse; margin-bottom: 6px; font-size: 0.82rem; }
+    .ingredient-table th {
+      text-align: left; color: #555; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 8px; border-bottom: 1px solid #2e2e38;
+    }
+    .ingredient-table td { padding: 5px 8px; border-bottom: 1px solid #28282e; }
+    .ingredient-table tr:last-child td { border-bottom: none; }
+
+    .ing-have    { color: #4acf8a; }
+    .ing-missing { color: #cf6a4a; }
+    .ing-pct { color: #888; font-variant-numeric: tabular-nums; }
+
+    .pct-input {
+      width: 60px; background: #1a1a1e; border: 1px solid #333;
+      color: #e8e0d4; border-radius: 4px; padding: 2px 6px;
+      font-size: 0.82rem; font-variant-numeric: tabular-nums;
+    }
+    .pct-input:focus { outline: none; border-color: #d4a96a; }
+
+    .pct-total { font-size: 0.75rem; margin-bottom: 10px; }
+    .pct-ok   { color: #4acf8a; }
+    .pct-warn { color: #cf6a4a; }
+
+    .recipe-notes {
+      font-size: 0.78rem; color: #666; line-height: 1.5; margin-bottom: 12px;
+      padding: 8px 10px; background: #1e1e24; border-radius: 6px;
+      border-left: 3px solid #333;
+    }
+
+    .recipe-actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+    .btn {
+      font-size: 0.78rem; padding: 5px 14px; border-radius: 6px;
+      border: 1px solid #333; background: transparent; color: #aaa;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .btn:hover { background: #2e2e38; color: #e8e0d4; }
+    .btn-primary { border-color: #d4a96a55; color: #d4a96a; }
+    .btn-primary:hover { background: #2e2518; }
+
+    .source-link { font-size: 0.72rem; color: #555; text-decoration: none; margin-left: auto; }
+    .source-link:hover { color: #888; }
+
+    .empty-state { text-align: center; padding: 48px 0; color: #444; font-size: 0.9rem; }
+
+    .toast {
+      position: fixed; bottom: 24px; right: 24px;
+      background: #2e3a2e; color: #7ecf7e; border: 1px solid #4a6a4a;
+      border-radius: 8px; padding: 10px 18px; font-size: 0.82rem;
+      opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 100;
+    }
+    .toast.show { opacity: 1; }
+
+    @media (max-width: 680px) {
+      .layout { flex-direction: column; }
+      .inventory-panel { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<h1>5 Daughters — Skincare Formulator</h1>
+<p class="subtitle">Check what you have · find what you can make · tweak to taste</p>
+
+<div class="layout">
+  <aside class="inventory-panel">
+    <div class="panel-title">My Inventory</div>
+    <ul class="inventory-list" id="inventoryList"></ul>
+  </aside>
+  <main class="recipes-panel">
+    <div class="filter-bar">
+      <label class="toggle-label">
+        <input type="checkbox" id="noHeatOnly"> No-heat only
+      </label>
+      <span class="match-count" id="matchCount"></span>
+    </div>
+    <div id="recipeList"></div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(async () => {
+  const data = await fetch('formulator-data.json').then(r => r.json());
+  const STORAGE_KEY = '5daughters_inventory';
+
+  let owned = new Set(
+    JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null') ?? data.userInventory
+  );
+
+  // ── Helpers ──────────────────────────────────────────
+
+  function el(tag, cls, text) {
+    const e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
+  function matchInfo(recipe) {
+    const total = recipe.ingredients.length;
+    const have = recipe.ingredients.filter(i => owned.has(i.name)).length;
+    const pct = Math.round((have / total) * 100);
+    return { have, total, pct };
+  }
+
+  function badgeClass(pct) {
+    if (pct === 100) return 'match-badge match-100';
+    if (pct >= 75)  return 'match-badge match-high';
+    if (pct >= 50)  return 'match-badge match-mid';
+    return 'match-badge match-low';
+  }
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2200);
+  }
+
+  // ── Inventory panel ──────────────────────────────────
+
+  function renderInventory() {
+    const list = document.getElementById('inventoryList');
+    list.textContent = '';
+    data.ingredients.forEach(ing => {
+      const li = document.createElement('li');
+      const id = 'inv_' + ing.replace(/\W/g, '_');
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.id = id;
+      cb.checked = owned.has(ing);
+      cb.addEventListener('change', e => {
+        if (e.target.checked) owned.add(ing); else owned.delete(ing);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify([...owned]));
+        lbl.className = 'inv-label' + (e.target.checked ? ' checked' : '');
+        renderRecipes();
+      });
+      const lbl = document.createElement('label');
+      lbl.htmlFor = id;
+      lbl.textContent = ing;
+      lbl.className = 'inv-label' + (owned.has(ing) ? ' checked' : '');
+      li.appendChild(cb);
+      li.appendChild(lbl);
+      list.appendChild(li);
+    });
+  }
+
+  // ── Recipes panel ────────────────────────────────────
+
+  function updateTotal(card, recipe) {
+    const inputs = card.querySelectorAll('.pct-input');
+    const total = [...inputs].reduce((sum, i) => sum + (parseFloat(i.value) || 0), 0);
+    const rounded = Math.round(total * 10) / 10;
+    const totalEl = card.querySelector('.pct-total');
+    if (totalEl) {
+      totalEl.textContent = 'Total: ' + rounded + '%';
+      totalEl.className = 'pct-total ' + (Math.abs(rounded - 100) < 0.5 ? 'pct-ok' : 'pct-warn');
+    }
+  }
+
+  function buildRecipeCard(recipe) {
+    const { pct } = matchInfo(recipe);
+    const card = document.createElement('div');
+    card.className = 'recipe-card';
+    card.dataset.id = recipe.id;
+
+    // Header
+    const header = el('div', 'recipe-header');
+    const badge = el('span', badgeClass(pct), pct + '%');
+    const name = el('span', 'recipe-name', recipe.name);
+    const heatTag = el('span', 'heat-tag ' + (recipe.heatRequired ? 'heat-yes' : 'heat-no'),
+                       recipe.heatRequired ? '🔥 heat' : '❄ no heat');
+    const chevron = el('span', 'chevron', '▶');
+    header.appendChild(badge);
+    header.appendChild(name);
+    header.appendChild(heatTag);
+    header.appendChild(chevron);
+
+    // Body
+    const body = el('div', 'recipe-body');
+    const desc = el('p', 'recipe-desc', recipe.description);
+    body.appendChild(desc);
+
+    // Ingredient table
+    const table = document.createElement('table');
+    table.className = 'ingredient-table';
+    const thead = document.createElement('thead');
+    const hrow = document.createElement('tr');
+    const th1 = el('th', null, 'Ingredient');
+    const th2 = el('th', null, '%');
+    hrow.appendChild(th1); hrow.appendChild(th2);
+    thead.appendChild(hrow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement('tbody');
+    recipe.ingredients.forEach(ing => {
+      const tr = document.createElement('tr');
+      const tdName = document.createElement('td');
+      const have = owned.has(ing.name);
+      tdName.className = have ? 'ing-have' : 'ing-missing';
+      tdName.textContent = (have ? '✓ ' : '✗ ') + ing.name;
+
+      const tdPct = document.createElement('td');
+      tdPct.className = 'ing-pct';
+      const input = document.createElement('input');
+      input.className = 'pct-input';
+      input.type = 'number';
+      input.step = '0.5';
+      input.min = '0';
+      input.max = '100';
+      input.value = ing.pct;
+      input.addEventListener('input', () => updateTotal(card, recipe));
+      tdPct.appendChild(input);
+
+      tr.appendChild(tdName);
+      tr.appendChild(tdPct);
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    body.appendChild(table);
+
+    const totalEl = el('div', 'pct-total pct-warn', 'Total: 0%');
+    body.appendChild(totalEl);
+
+    if (recipe.notes) {
+      const notes = el('div', 'recipe-notes', recipe.notes);
+      body.appendChild(notes);
+    }
+
+    // Actions
+    const actions = el('div', 'recipe-actions');
+
+    const copyBtn = el('button', 'btn btn-primary', 'Copy JSON');
+    copyBtn.addEventListener('click', () => {
+      const inputs = card.querySelectorAll('.pct-input');
+      const tweaked = { ...recipe, ingredients: recipe.ingredients.map((ing, i) => ({
+        ...ing, pct: parseFloat(inputs[i]?.value ?? ing.pct)
+      })) };
+      navigator.clipboard.writeText(JSON.stringify(tweaked, null, 2))
+        .then(() => showToast('Recipe JSON copied to clipboard'));
+    });
+
+    const resetBtn = el('button', 'btn', 'Reset %');
+    resetBtn.addEventListener('click', () => {
+      card.querySelectorAll('.pct-input').forEach((input, i) => {
+        input.value = recipe.ingredients[i]?.pct ?? input.value;
+      });
+      updateTotal(card, recipe);
+    });
+
+    actions.appendChild(copyBtn);
+    actions.appendChild(resetBtn);
+
+    if (recipe.sourceUrl) {
+      const link = document.createElement('a');
+      link.href = recipe.sourceUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.className = 'source-link';
+      link.textContent = '↗ source';
+      actions.appendChild(link);
+    } else {
+      actions.appendChild(el('span', 'source-link', 'custom'));
+    }
+
+    body.appendChild(actions);
+
+    card.appendChild(header);
+    card.appendChild(body);
+
+    header.addEventListener('click', () => {
+      card.classList.toggle('open');
+      if (card.classList.contains('open')) updateTotal(card, recipe);
+    });
+
+    return card;
+  }
+
+  function renderRecipes() {
+    const noHeat = document.getElementById('noHeatOnly').checked;
+    let recipes = data.recipes;
+    if (noHeat) recipes = recipes.filter(r => !r.heatRequired);
+
+    recipes = [...recipes].sort((a, b) => {
+      const diff = matchInfo(b).pct - matchInfo(a).pct;
+      return diff !== 0 ? diff : a.name.localeCompare(b.name);
+    });
+
+    document.getElementById('matchCount').textContent =
+      `${recipes.length} recipe${recipes.length !== 1 ? 's' : ''}`;
+
+    const list = document.getElementById('recipeList');
+    list.textContent = '';
+
+    if (recipes.length === 0) {
+      list.appendChild(el('div', 'empty-state', 'No recipes match current filters.'));
+      return;
+    }
+
+    recipes.forEach(r => list.appendChild(buildRecipeCard(r)));
+  }
+
+  document.getElementById('noHeatOnly').addEventListener('change', renderRecipes);
+
+  renderInventory();
+  renderRecipes();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+{
+  "ingredients": [
+    "Apricot Kernel Oil",
+    "Hemp Seed Oil",
+    "Arrowroot Powder",
+    "Shea Butter",
+    "Coconut Oil",
+    "Mango Butter",
+    "Vitamin E Oil",
+    "Castor Oil",
+    "Glycerin",
+    "Liquid Germall Plus",
+    "Aloe Vera",
+    "Polysorbate-20",
+    "Witch Hazel",
+    "Corn Starch",
+    "Cocoa Powder",
+    "Distilled Water",
+    "Beeswax",
+    "Candelilla Wax",
+    "Cetyl Alcohol",
+    "BTMS-50",
+    "Sodium Lactate",
+    "Xanthan Gum",
+    "Sunflower Oil",
+    "Jojoba Oil",
+    "Sweet Almond Oil",
+    "Rosehip Oil",
+    "MCT Oil",
+    "Fractionated Coconut Oil",
+    "Argan Oil",
+    "Niacinamide",
+    "Hyaluronic Acid",
+    "Mica / Shimmer",
+    "Fragrance Oil",
+    "Essential Oil"
+  ],
+  "userInventory": [
+    "Apricot Kernel Oil",
+    "Hemp Seed Oil",
+    "Arrowroot Powder",
+    "Shea Butter",
+    "Coconut Oil",
+    "Mango Butter",
+    "Vitamin E Oil",
+    "Castor Oil",
+    "Glycerin",
+    "Liquid Germall Plus",
+    "Aloe Vera",
+    "Polysorbate-20",
+    "Witch Hazel",
+    "Corn Starch",
+    "Cocoa Powder",
+    "Fragrance Oil"
+  ],
+  "recipes": [
+    {
+      "id": "whipped-shea-4",
+      "name": "4-Ingredient Whipped Shea Butter",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/4-ingredient-whipped-shea-butter/",
+      "heatRequired": false,
+      "equipment": ["Stand/hand mixer"],
+      "description": "The simplest whipped body butter — just shea, a liquid oil, vitamin E, and fragrance. Fluffy, melt-on-skin texture.",
+      "ingredients": [
+        { "name": "Shea Butter", "pct": 70 },
+        { "name": "Sunflower Oil", "pct": 29 },
+        { "name": "Vitamin E Oil", "pct": 0.5 },
+        { "name": "Fragrance Oil", "pct": 0.5 }
+      ],
+      "notes": "No heat needed if shea is already soft/fluffy. Sub sunflower with any light liquid oil (apricot kernel, sweet almond, hemp seed)."
+    },
+    {
+      "id": "whipped-shea-5",
+      "name": "5-Ingredient Whipped Shea Butter",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/5-ingredient-whipped-shea-butter/",
+      "heatRequired": false,
+      "equipment": ["Stand/hand mixer"],
+      "description": "Adds arrowroot or corn starch to reduce the greasy feel — silkier finish on skin.",
+      "ingredients": [
+        { "name": "Shea Butter", "pct": 60 },
+        { "name": "Sunflower Oil", "pct": 24 },
+        { "name": "Arrowroot Powder", "pct": 15 },
+        { "name": "Vitamin E Oil", "pct": 0.5 },
+        { "name": "Fragrance Oil", "pct": 0.5 }
+      ],
+      "notes": "Corn starch works as a 1:1 sub for arrowroot. Whip shea first, add oil gradually, fold in starch last."
+    },
+    {
+      "id": "whipped-shea-9",
+      "name": "9-Ingredient Whipped Shea Butter",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/9-ingredient-whipped-shea-butter/",
+      "heatRequired": false,
+      "equipment": ["Stand/hand mixer"],
+      "description": "More complex whipped butter with multiple oils for a richer skin feel.",
+      "ingredients": [
+        { "name": "Shea Butter", "pct": 45 },
+        { "name": "Mango Butter", "pct": 15 },
+        { "name": "Coconut Oil", "pct": 10 },
+        { "name": "Sunflower Oil", "pct": 14 },
+        { "name": "Jojoba Oil", "pct": 7 },
+        { "name": "Arrowroot Powder", "pct": 7 },
+        { "name": "Vitamin E Oil", "pct": 0.5 },
+        { "name": "Fragrance Oil", "pct": 1 },
+        { "name": "Essential Oil", "pct": 0.5 }
+      ],
+      "notes": "Coconut oil may require brief melt in warm weather. Mango butter adds firmness and a smoother melt point."
+    },
+    {
+      "id": "aloe-vera-gel",
+      "name": "DIY Aloe Vera Gel",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/diy-aloe-vera-gel/",
+      "heatRequired": false,
+      "equipment": ["Blender"],
+      "description": "Simple water-based gel. Lightweight, soothing, good for oily or sensitive skin. Needs preservative.",
+      "ingredients": [
+        { "name": "Aloe Vera", "pct": 90 },
+        { "name": "Glycerin", "pct": 5 },
+        { "name": "Xanthan Gum", "pct": 0.5 },
+        { "name": "Liquid Germall Plus", "pct": 0.5 }
+      ],
+      "notes": "Xanthan gum is a thickener not in current inventory — recipe still works without it but will be thinner. Preservative required since water-based."
+    },
+    {
+      "id": "dry-summer-body-oil",
+      "name": "Dry Summer Body Oil",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/dry-summer-body-oil/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Lightweight, non-greasy body oil blend. Absorbs fast. No water phase = no preservative needed.",
+      "ingredients": [
+        { "name": "MCT Oil", "pct": 60 },
+        { "name": "Rosehip Oil", "pct": 20 },
+        { "name": "Apricot Kernel Oil", "pct": 10 },
+        { "name": "Vitamin E Oil", "pct": 1 },
+        { "name": "Fragrance Oil", "pct": 1 }
+      ],
+      "notes": "Sub MCT with fractionated coconut or apricot kernel. Rosehip is not in inventory but optional — sub with hemp seed."
+    },
+    {
+      "id": "hemp-apricot-body-oil",
+      "name": "Hemp & Apricot Body Oil",
+      "source": "custom",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Custom blend using on-hand oils. Hemp seed adds anti-inflammatory properties, apricot kernel absorbs quickly.",
+      "ingredients": [
+        { "name": "Apricot Kernel Oil", "pct": 70 },
+        { "name": "Hemp Seed Oil", "pct": 20 },
+        { "name": "Castor Oil", "pct": 8 },
+        { "name": "Vitamin E Oil", "pct": 1 },
+        { "name": "Fragrance Oil", "pct": 1 }
+      ],
+      "notes": "All ingredients in inventory. Castor adds slip and gloss. Adjust ratios to preference."
+    },
+    {
+      "id": "easy-emulsified-body-butter",
+      "name": "Easy Emulsified Body Butter",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/easy-emulsified-body-butter/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Immersion blender"],
+      "description": "Lotion-like body butter with water phase for a lighter feel. Needs emulsifier and preservative.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 38 },
+        { "name": "Aloe Vera", "pct": 10 },
+        { "name": "Shea Butter", "pct": 15 },
+        { "name": "Coconut Oil", "pct": 10 },
+        { "name": "BTMS-50", "pct": 8 },
+        { "name": "Mango Butter", "pct": 7 },
+        { "name": "Apricot Kernel Oil", "pct": 8 },
+        { "name": "Vitamin E Oil", "pct": 0.5 },
+        { "name": "Liquid Germall Plus", "pct": 0.5 },
+        { "name": "Fragrance Oil", "pct": 3 }
+      ],
+      "notes": "BTMS-50 (conditioning emulsifier) not in inventory. Sub with Polysorbate-20 at slightly higher % but texture will differ."
+    },
+    {
+      "id": "shimmery-body-oil-spray",
+      "name": "Shimmery Body Oil Spray",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/shimmery-body-oil-spray/",
+      "heatRequired": true,
+      "equipment": ["Stove"],
+      "description": "Spray-on body oil with shimmer. Needs heat to dissolve mica into oil phase.",
+      "ingredients": [
+        { "name": "Fractionated Coconut Oil", "pct": 50 },
+        { "name": "Sweet Almond Oil", "pct": 30 },
+        { "name": "Polysorbate-20", "pct": 15 },
+        { "name": "Mica / Shimmer", "pct": 3 },
+        { "name": "Fragrance Oil", "pct": 2 }
+      ],
+      "notes": "Polysorbate-20 in inventory. Sub fractionated coconut with apricot kernel or hemp seed."
+    },
+    {
+      "id": "whipped-shea-lighter",
+      "name": "Lighter Whipped Shea Butter",
+      "source": "humblebeeandme.com",
+      "heatRequired": true,
+      "equipment": ["Stove", "Stand/hand mixer"],
+      "description": "Partially melted shea blended with lighter oils for a less waxy finish.",
+      "ingredients": [
+        { "name": "Shea Butter", "pct": 50 },
+        { "name": "Coconut Oil", "pct": 20 },
+        { "name": "Apricot Kernel Oil", "pct": 18 },
+        { "name": "Arrowroot Powder", "pct": 10 },
+        { "name": "Vitamin E Oil", "pct": 1 },
+        { "name": "Fragrance Oil", "pct": 1 }
+      ],
+      "notes": "Heat to melt coconut oil fully, then cool to just-solidified before whipping."
+    },
+    {
+      "id": "hemp-body-lotion",
+      "name": "Hemp Seed Body Lotion",
+      "source": "custom",
+      "heatRequired": true,
+      "equipment": ["Stove", "Immersion blender"],
+      "description": "Water-based lotion using hemp seed and apricot kernel. Needs emulsifier — Polysorbate-20 can work at higher %.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 55 },
+        { "name": "Aloe Vera", "pct": 10 },
+        { "name": "Hemp Seed Oil", "pct": 15 },
+        { "name": "Apricot Kernel Oil", "pct": 5 },
+        { "name": "Polysorbate-20", "pct": 10 },
+        { "name": "Glycerin", "pct": 3 },
+        { "name": "Vitamin E Oil", "pct": 0.5 },
+        { "name": "Liquid Germall Plus", "pct": 0.5 },
+        { "name": "Fragrance Oil", "pct": 1 }
+      ],
+      "notes": "Polysorbate-20 is a light emulsifier — may need higher % for stable emulsion. Proper emulsifiers (BTMS-50, Emulsifying Wax) give better texture."
+    },
+    {
+      "id": "witch-hazel-toner",
+      "name": "Witch Hazel Aloe Toner",
+      "source": "custom",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Simple face/body toner. Witch hazel tones and tightens, aloe soothes, glycerin hydrates.",
+      "ingredients": [
+        { "name": "Witch Hazel", "pct": 60 },
+        { "name": "Aloe Vera", "pct": 30 },
+        { "name": "Glycerin", "pct": 5 },
+        { "name": "Polysorbate-20", "pct": 4.5 },
+        { "name": "Liquid Germall Plus", "pct": 0.5 }
+      ],
+      "notes": "All ingredients in inventory. Polysorbate-20 solubilizes any added fragrance or essential oil. Preservative required — water-based product."
+    },
+    {
+      "id": "raspberry-no-melt-body-butter",
+      "name": "Raspberry Mint No-Melt Summer Body Butter",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/raspberry-mint-no-melt-summer-body-butter/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Stand/hand mixer"],
+      "description": "Stable in heat — uses higher-melting waxes to prevent summer melt.",
+      "ingredients": [
+        { "name": "Mango Butter", "pct": 35 },
+        { "name": "Shea Butter", "pct": 25 },
+        { "name": "Candelilla Wax", "pct": 10 },
+        { "name": "Apricot Kernel Oil", "pct": 20 },
+        { "name": "Arrowroot Powder", "pct": 8 },
+        { "name": "Vitamin E Oil", "pct": 1 },
+        { "name": "Essential Oil", "pct": 1 }
+      ],
+      "notes": "Candelilla wax not in inventory. Beeswax could sub but changes texture significantly."
+    },
+    {
+      "id": "happy-hemp-hand-cream",
+      "name": "Happy Hemp Hand Cream",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/happy-hemp-hand-cream/",
+      "heatRequired": true,
+      "equipment": ["Stove", "Immersion blender"],
+      "description": "Rich hand cream with hemp seed oil. Water phase requires heat and proper emulsification.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 45 },
+        { "name": "Aloe Vera", "pct": 10 },
+        { "name": "Hemp Seed Oil", "pct": 20 },
+        { "name": "Shea Butter", "pct": 10 },
+        { "name": "BTMS-50", "pct": 8 },
+        { "name": "Glycerin", "pct": 4 },
+        { "name": "Vitamin E Oil", "pct": 0.5 },
+        { "name": "Liquid Germall Plus", "pct": 0.5 },
+        { "name": "Fragrance Oil", "pct": 2 }
+      ],
+      "notes": "BTMS-50 not in inventory. Without it, emulsion won't hold properly. Note for shopping list."
+    },
+    {
+      "id": "autumn-spice-body-butter",
+      "name": "Autumn Spice Whipped Body Butter",
+      "source": "humblebeeandme.com",
+      "heatRequired": true,
+      "equipment": ["Stove", "Stand/hand mixer"],
+      "description": "Seasonal scented whipped butter. Melt-and-whip method.",
+      "ingredients": [
+        { "name": "Shea Butter", "pct": 40 },
+        { "name": "Mango Butter", "pct": 20 },
+        { "name": "Coconut Oil", "pct": 15 },
+        { "name": "Sweet Almond Oil", "pct": 14 },
+        { "name": "Arrowroot Powder", "pct": 9 },
+        { "name": "Vitamin E Oil", "pct": 1 },
+        { "name": "Essential Oil", "pct": 1 }
+      ],
+      "notes": "Sweet almond oil not in inventory. Sub with apricot kernel (similar profile) or hemp seed."
+    }
+  ]
+}
