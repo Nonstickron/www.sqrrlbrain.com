@@ -229,6 +229,55 @@
     .toast { position: fixed; bottom: 24px; right: 24px; background: var(--green-bg); color: var(--green); border: 1px solid var(--green); border-radius: 7px; padding: 10px 18px; font-size: 0.78rem; font-family: 'DM Mono', monospace; opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 200; }
     .toast.show { opacity: 1; }
 
+    /* New Recipe button */
+    .new-recipe-btn {
+      display: flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 6px;
+      border: 1px solid var(--gold-dim); background: var(--gold-bg);
+      font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--gold); cursor: pointer; transition: all 0.15s;
+    }
+    .new-recipe-btn:hover { background: #272010; }
+
+    /* Modal */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 200; align-items: flex-start; justify-content: center; padding: 24px 16px; overflow-y: auto; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: var(--surface); border: 1px solid var(--border-hi); border-radius: 10px; width: 100%; max-width: 520px; display: flex; flex-direction: column; margin: auto; }
+    .modal-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px 14px; border-bottom: 1px solid var(--border); }
+    .modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 500; color: var(--gold); }
+    .modal-close { background: none; border: none; color: var(--text-dim); font-size: 1.1rem; cursor: pointer; padding: 4px 6px; }
+    .modal-close:hover { color: var(--text); }
+    .modal-body { padding: 18px 20px; display: flex; flex-direction: column; gap: 14px; }
+    .form-row { display: flex; gap: 10px; }
+    .form-field { display: flex; flex-direction: column; gap: 5px; flex: 1; }
+    .form-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); }
+    .form-input, .form-select, .form-textarea {
+      background: var(--surface-hi); border: 1px solid var(--border-hi); color: var(--text);
+      border-radius: 6px; padding: 8px 10px; font-family: 'DM Sans', sans-serif; font-size: 0.82rem;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--gold-dim); }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--text-dim); }
+    .form-textarea { min-height: 60px; resize: vertical; }
+    .form-check-row { display: flex; align-items: center; gap: 8px; }
+    .form-check-row input { accent-color: var(--gold); width: 14px; height: 14px; cursor: pointer; }
+    .form-check-row label { font-size: 0.8rem; color: var(--text-mid); cursor: pointer; }
+    .ing-rows { display: flex; flex-direction: column; gap: 7px; }
+    .ing-row { display: flex; gap: 7px; align-items: center; }
+    .ing-row-name { flex: 1; background: var(--surface-hi); border: 1px solid var(--border-hi); color: var(--text); border-radius: 6px; padding: 6px 9px; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; }
+    .ing-row-name:focus { outline: none; border-color: var(--gold-dim); }
+    .ing-row-name::placeholder { color: var(--text-dim); }
+    .ing-row-pct { width: 64px; background: var(--surface-hi); border: 1px solid var(--border-hi); color: var(--text); border-radius: 6px; padding: 6px 9px; font-family: 'DM Mono', monospace; font-size: 0.78rem; }
+    .ing-row-pct:focus { outline: none; border-color: var(--gold-dim); }
+    .ing-row-rm { background: none; border: none; color: var(--text-dim); cursor: pointer; font-size: 0.9rem; padding: 0 4px; flex-shrink: 0; }
+    .ing-row-rm:hover { color: var(--red); }
+    .add-ing-btn { align-self: flex-start; padding: 5px 12px; border-radius: 5px; border: 1px dashed var(--border-hi); background: transparent; font-family: 'DM Sans', sans-serif; font-size: 0.75rem; color: var(--text-dim); cursor: pointer; transition: all 0.12s; margin-top: 2px; }
+    .add-ing-btn:hover { color: var(--text-mid); border-color: var(--gold-dim); }
+    .modal-footer { display: flex; gap: 8px; justify-content: flex-end; padding: 14px 20px 18px; border-top: 1px solid var(--border); }
+    .modal-save-btn { padding: 8px 20px; border-radius: 6px; border: 1px solid var(--gold-dim); background: var(--gold-bg); font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--gold); cursor: pointer; transition: all 0.12s; }
+    .modal-save-btn:hover { background: #272010; }
+    .modal-cancel-btn { padding: 8px 16px; border-radius: 6px; border: 1px solid var(--border-hi); background: transparent; font-family: 'DM Sans', sans-serif; font-size: 0.82rem; color: var(--text-dim); cursor: pointer; transition: all 0.12s; }
+    .modal-cancel-btn:hover { color: var(--text); background: var(--surface-hi); }
+    .btn-danger { border-color: var(--red); color: var(--red); }
+    .btn-danger:hover { background: var(--red-bg); }
+
     @media (max-width: 600px) {
       .topbar, .controls { padding-left: 16px; padding-right: 16px; }
       .recipe-list { padding: 14px 16px 40px; }
@@ -242,10 +291,13 @@
     <div class="brand">5 Daughters</div>
     <div class="brand-sub">Formulary</div>
   </div>
-  <button class="pantry-btn" id="openDrawerBtn">
-    My Pantry
-    <span class="pantry-badge" id="invBadge">—</span>
-  </button>
+  <div style="display:flex;gap:8px;align-items:center">
+    <button class="new-recipe-btn" id="newRecipeBtn">+ New Recipe</button>
+    <button class="pantry-btn" id="openDrawerBtn">
+      My Pantry
+      <span class="pantry-badge" id="invBadge">—</span>
+    </button>
+  </div>
 </header>
 
 <div class="controls">
@@ -301,22 +353,79 @@
   </div>
 </aside>
 
+<!-- Add / Edit Recipe Modal -->
+<div class="modal-overlay" id="recipeModal">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title" id="modalTitle">New Recipe</span>
+      <button class="modal-close" id="modalCloseBtn">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-field">
+        <label class="form-label">Recipe name *</label>
+        <input class="form-input" id="rfName" type="text" placeholder="e.g. Rosewater Toner">
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label class="form-label">Category</label>
+          <select class="form-select" id="rfCat">
+            <option value="face">Face</option>
+            <option value="body">Body</option>
+            <option value="hair">Hair</option>
+            <option value="cleaning">Cleaning</option>
+          </select>
+        </div>
+        <div class="form-field" style="justify-content:flex-end">
+          <label class="form-label">&nbsp;</label>
+          <div class="form-check-row">
+            <input type="checkbox" id="rfHeat">
+            <label for="rfHeat">Requires heat</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Source URL (optional)</label>
+        <input class="form-input" id="rfUrl" type="url" placeholder="https://…">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Description (optional)</label>
+        <textarea class="form-textarea" id="rfDesc" placeholder="Brief description…"></textarea>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Ingredients *</label>
+        <div class="ing-rows" id="ingRows"></div>
+        <button class="add-ing-btn" id="addIngBtn">+ Add ingredient</button>
+      </div>
+      <div class="form-field">
+        <label class="form-label">Notes (optional)</label>
+        <textarea class="form-textarea" id="rfNotes" placeholder="Tips, substitutions…"></textarea>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-cancel-btn" id="modalCancelBtn">Cancel</button>
+      <button class="modal-save-btn" id="modalSaveBtn">Save Recipe</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
 (async () => {
   const data = await fetch('formulator-data.json').then(r => r.json());
 
-  const INV_KEY   = '5daughters_inventory';
-  const FLAG_KEY  = '5daughters_flagged';
-  const NOTES_KEY = '5daughters_notes';
-  const SWAPS_KEY = '5daughters_swaps';
-  const PAGE_SIZE = 30;
+  const INV_KEY    = '5daughters_inventory';
+  const FLAG_KEY   = '5daughters_flagged';
+  const NOTES_KEY  = '5daughters_notes';
+  const SWAPS_KEY  = '5daughters_swaps';
+  const CUSTOM_KEY = '5daughters_custom_recipes';
+  const PAGE_SIZE  = 30;
 
   let owned   = new Set(JSON.parse(localStorage.getItem(INV_KEY)   || 'null') ?? data.userInventory);
   let flagged = new Set(JSON.parse(localStorage.getItem(FLAG_KEY)  || '[]'));
   let notes   = JSON.parse(localStorage.getItem(NOTES_KEY) || '{}');
   let swaps   = JSON.parse(localStorage.getItem(SWAPS_KEY) || '{}');
+  let customRecipes = JSON.parse(localStorage.getItem(CUSTOM_KEY) || '[]');
   let activeCategory = 'all';
   let shownCount = PAGE_SIZE;
 
@@ -324,6 +433,9 @@
   const saveFlagged = () => localStorage.setItem(FLAG_KEY,  JSON.stringify([...flagged]));
   const saveNotes   = () => localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
   const saveSwaps   = () => localStorage.setItem(SWAPS_KEY, JSON.stringify(swaps));
+  const saveCustom  = () => localStorage.setItem(CUSTOM_KEY, JSON.stringify(customRecipes));
+
+  function allRecipes() { return [...customRecipes, ...data.recipes]; }
 
   function norm(s) { return s.replace(/[™®]/g, '').trim(); }
   function ownedHas(name) { const n = norm(name); return [...owned].some(o => norm(o) === n); }
@@ -340,8 +452,8 @@
     return 'match-badge match-low';
   }
   function recipeCategory(r) {
+    if (r.source === 'custom') return r.category || 'custom';
     const u = r.sourceUrl || '';
-    if (!r.source || r.source === 'custom') return 'custom';
     if (/face-recipes|facial/.test(u)) return 'face';
     if (/hair/.test(u)) return 'hair';
     if (/cleaning/.test(u)) return 'cleaning';
@@ -567,6 +679,18 @@
       updateTotal(card);
     });
     acts.appendChild(copyBtn); acts.appendChild(resetBtn);
+    if (recipe.source === 'custom') {
+      const editBtn = el('button', 'btn', 'Edit');
+      editBtn.addEventListener('click', e => { e.stopPropagation(); openRecipeModal(recipe); });
+      const delBtn = el('button', 'btn btn-danger', 'Delete');
+      delBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        if (!confirm('Delete "' + recipe.name + '"?')) return;
+        customRecipes = customRecipes.filter(r => r.id !== recipe.id);
+        saveCustom(); renderRecipes();
+      });
+      acts.appendChild(editBtn); acts.appendChild(delBtn);
+    }
     if (recipe.sourceUrl) {
       const a = document.createElement('a'); a.href = recipe.sourceUrl; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'src-link'; a.textContent = '↗ source';
       acts.appendChild(a);
@@ -590,7 +714,7 @@
     const q = document.getElementById('searchInput').value.trim().toLowerCase();
     const noHeat = document.getElementById('noHeatOnly').checked;
     const flagOnly = document.getElementById('flaggedOnly').checked;
-    return data.recipes
+    return allRecipes()
       .filter(r => {
         if (noHeat  && r.heatRequired)                          return false;
         if (flagOnly && !flagged.has(r.id))                     return false;
@@ -613,6 +737,78 @@
       list.appendChild(more);
     }
   }
+
+  // ── Custom recipe modal ─────────────────────────────────
+  let editingId = null;
+
+  function makeIngRow(name, pct) {
+    const row = el('div', 'ing-row');
+    const ni = document.createElement('input'); ni.className = 'ing-row-name'; ni.type = 'text'; ni.placeholder = 'Ingredient name'; ni.value = name || '';
+    const pi = document.createElement('input'); pi.className = 'ing-row-pct'; pi.type = 'number'; pi.placeholder = '%'; pi.min = '0'; pi.max = '100'; pi.step = '0.5'; pi.value = pct || '';
+    const rm = el('button', 'ing-row-rm', '✕'); rm.type = 'button'; rm.title = 'Remove';
+    rm.addEventListener('click', () => row.remove());
+    row.appendChild(ni); row.appendChild(pi); row.appendChild(rm);
+    return row;
+  }
+
+  function openRecipeModal(recipe) {
+    editingId = recipe ? recipe.id : null;
+    document.getElementById('modalTitle').textContent = recipe ? 'Edit Recipe' : 'New Recipe';
+    document.getElementById('rfName').value  = recipe?.name || '';
+    document.getElementById('rfCat').value   = recipe?.category || 'face';
+    document.getElementById('rfHeat').checked = recipe?.heatRequired || false;
+    document.getElementById('rfUrl').value   = recipe?.sourceUrl || '';
+    document.getElementById('rfDesc').value  = recipe?.description || '';
+    document.getElementById('rfNotes').value = recipe?.notes || '';
+    const rows = document.getElementById('ingRows'); rows.textContent = '';
+    const ings = recipe?.ingredients?.length ? recipe.ingredients : [{name:'',pct:''}];
+    ings.forEach(i => rows.appendChild(makeIngRow(i.name, i.pct)));
+    document.getElementById('recipeModal').classList.add('open');
+    document.getElementById('rfName').focus();
+  }
+
+  function closeRecipeModal() {
+    document.getElementById('recipeModal').classList.remove('open');
+    editingId = null;
+  }
+
+  document.getElementById('newRecipeBtn').addEventListener('click', () => openRecipeModal(null));
+  document.getElementById('modalCloseBtn').addEventListener('click', closeRecipeModal);
+  document.getElementById('modalCancelBtn').addEventListener('click', closeRecipeModal);
+  document.getElementById('recipeModal').addEventListener('click', e => { if (e.target === e.currentTarget) closeRecipeModal(); });
+  document.getElementById('addIngBtn').addEventListener('click', () => {
+    document.getElementById('ingRows').appendChild(makeIngRow('', ''));
+  });
+
+  document.getElementById('modalSaveBtn').addEventListener('click', () => {
+    const name = document.getElementById('rfName').value.trim();
+    if (!name) { document.getElementById('rfName').focus(); return; }
+    const ings = [...document.getElementById('ingRows').querySelectorAll('.ing-row')].map(row => ({
+      name: row.querySelector('.ing-row-name').value.trim(),
+      pct: parseFloat(row.querySelector('.ing-row-pct').value) || 0,
+    })).filter(i => i.name);
+    if (!ings.length) { alert('Add at least one ingredient.'); return; }
+    const recipe = {
+      id: editingId || ('custom-' + Date.now()),
+      name,
+      source: 'custom',
+      category: document.getElementById('rfCat').value,
+      sourceUrl: document.getElementById('rfUrl').value.trim(),
+      heatRequired: document.getElementById('rfHeat').checked,
+      equipment: [],
+      description: document.getElementById('rfDesc').value.trim(),
+      ingredients: ings,
+      notes: document.getElementById('rfNotes').value.trim(),
+    };
+    if (editingId) {
+      const idx = customRecipes.findIndex(r => r.id === editingId);
+      if (idx !== -1) customRecipes[idx] = recipe; else customRecipes.unshift(recipe);
+    } else {
+      customRecipes.unshift(recipe);
+    }
+    saveCustom(); closeRecipeModal(); renderRecipes();
+    showToast(editingId ? 'Recipe updated' : 'Recipe saved');
+  });
 
   // ── Wire up ─────────────────────────────────────────────
   let st;
