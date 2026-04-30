@@ -894,13 +894,7 @@
       });
       acts.appendChild(editBtn); acts.appendChild(delBtn);
     }
-    if (recipe.sourceUrl) {
-      const a = document.createElement('a'); a.href = recipe.sourceUrl; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'src-link';
-      let srcLabel = recipe.source || 'source';
-      try { srcLabel = new URL(recipe.sourceUrl).hostname.replace('www.', ''); } catch {}
-      a.textContent = '↗ ' + srcLabel;
-      acts.appendChild(a);
-    }
+    // sourceUrl kept in data for internal reference; not shown in UI
     body.appendChild(acts);
 
     // Shop missing ingredients
