@@ -21595,6 +21595,38 @@
       ],
       "notes": "",
       "category": "soap"
+    },
+    {
+      "id": "diy-whipped-soap-base",
+      "name": "DIY Whipped Soap Base",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/diy-whipped-soap-base/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "From what I gleaned from my Yahoo-group-free research, stearic acid is a big part of cream soap. Also, you use both Potassium Hydroxide and Sodium Hydroxide. And, at some point, you whip it (whip it good). After that, well, it was an open playing fie…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
     }
   ]
 }

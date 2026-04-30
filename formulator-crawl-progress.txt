@@ -807,3 +807,8 @@ PROCESSED | https://www.humblebeeandme.com/egyptian-magic-cleansing-balm/ | SKIP
 PROCESSED | https://www.humblebeeandme.com/shea-butter-vanilla-body-wash/ | SKIPPED
 PROCESSED | https://www.humblebeeandme.com/liquid-peppermint-hand-soap/ | SKIPPED
 PROCESSED | https://www.humblebeeandme.com/how-to-make-liquid-soap-easy-way/ | how-to-make-liquid-soap-the-easy-way
+PROCESSED | https://www.humblebeeandme.com/exfoliating-creamy-cleansing-balm/ | SKIPPED
+PROCESSED | https://www.humblebeeandme.com/lemon-meringue-whipped-soap/ | SKIPPED
+PROCESSED | https://www.humblebeeandme.com/cocoa-peppermint-whipped-cream-soap/ | SKIPPED
+PROCESSED | https://www.humblebeeandme.com/labdanum-fir-whipped-soap/ | SKIPPED
+PROCESSED | https://www.humblebeeandme.com/diy-whipped-soap-base/ | diy-whipped-soap-base
