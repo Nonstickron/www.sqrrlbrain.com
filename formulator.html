@@ -159,6 +159,14 @@
     .btn-gold:hover { background: var(--gold-bg); }
     .src-link { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--text-dim); text-decoration: none; margin-left: auto; }
     .src-link:hover { color: var(--text-mid); }
+    .shop-panel { margin-top: 10px; margin-bottom: 4px; }
+    .shop-panel-header { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 7px; }
+    .shop-row { display: flex; align-items: baseline; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--border); font-size: 0.8rem; }
+    .shop-row:last-child { border-bottom: none; }
+    .shop-ing { flex: 1; color: var(--text-mid); }
+    .shop-links { display: flex; gap: 6px; flex-shrink: 0; }
+    .shop-link { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--gold); text-decoration: none; padding: 1px 6px; border: 1px solid var(--gold-dim); border-radius: 3px; background: var(--gold-bg); white-space: nowrap; }
+    .shop-link:hover { background: #272010; }
 
     .load-more { display: block; width: 100%; margin-top: 4px; padding: 12px; border-radius: 7px; border: 1px dashed var(--border-hi); background: transparent; font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--text-dim); cursor: pointer; transition: all 0.15s; }
     .load-more:hover { color: var(--text-mid); border-color: var(--gold-dim); }
@@ -803,6 +811,34 @@
       acts.appendChild(a);
     }
     body.appendChild(acts);
+
+    // Shop missing ingredients
+    const missing = (recipe.ingredients || []).filter(i => !hasIng(i.name));
+    if (missing.length) {
+      const SUPPLIERS = [
+        { label: 'Bulk Apothecary', url: 'https://www.bulkapothecary.com/search/?q=' },
+        { label: 'Making Cosmetics', url: 'https://www.makingcosmetics.com/search?q=' },
+        { label: 'Bramble Berry',    url: 'https://www.brambleberry.com/search#q=' },
+      ];
+      const shopPanel = el('div', 'shop-panel');
+      shopPanel.appendChild(el('div', 'shop-panel-header', 'Shop missing ingredients'));
+      missing.forEach(ing => {
+        const row = el('div', 'shop-row');
+        row.appendChild(el('span', 'shop-ing', ing.name));
+        const links = el('div', 'shop-links');
+        SUPPLIERS.forEach(s => {
+          const a = document.createElement('a');
+          a.href = s.url + encodeURIComponent(ing.name);
+          a.target = '_blank'; a.rel = 'noopener noreferrer';
+          a.className = 'shop-link'; a.textContent = s.label;
+          links.appendChild(a);
+        });
+        row.appendChild(links);
+        shopPanel.appendChild(row);
+      });
+      body.appendChild(shopPanel);
+    }
+
     card.appendChild(hdr); card.appendChild(body);
     hdr.addEventListener('click', () => { card.classList.toggle('open'); if (card.classList.contains('open')) updateTotal(card); });
     return card;
