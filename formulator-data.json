@@ -543,7 +543,13 @@
     "Kentucky Bourbon Fragrance Oil",
     "Washing Soda",
     "Hydrogen Peroxide",
-    "D-limonene"
+    "D-limonene",
+    "Palm Oil",
+    "Canola Oil",
+    "Beef Tallow Or Lard",
+    "Soybean Oil",
+    "Soya Bean Oil Or Olive Oil",
+    "Lard Or Beef Tallow"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -19798,6 +19804,1765 @@
       ],
       "notes": "I&#8217;ve included stearic acid as a bit of an experiment. I bought it for liquid soap making, and now that I have so much of it I thought I&#8217;d see what else it&#8217;s good for. The internet told me it&#8217;s good for hardening up soaps in relatively small concentrations, and I thought these bars would be a good place to test that hypothesis. If you don&#8217;t have any on hand, just repla",
       "category": "cleaning"
+    },
+    {
+      "id": "rustic-clay-soap",
+      "name": "Rustic Clay Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rustic-clay-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "These bars have a really lovely creamy, low lather that&#8217;s quite decadent. Enjoy!",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Coconut Oil",
+          "pct": 20
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "The colour for this soap comes from two clays. The entire batch contains a good dose of white kaolin clay for both a creamy appearance and creamy lather. I&#8217;ve used a bit of French Green Clay to colour the top layer of the soap; if you wanted that layer to be a different colour you could use a different clay, like French pink or French yellow. You could also use a mica instead, though you won",
+      "category": "soap"
+    },
+    {
+      "id": "candlelight-christmas-soap",
+      "name": "Candlelight Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/candlelight-christmas-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "It&#8217;s time for our second Christmas soap (and Christmas theme) of 2021: Candlelight Christmas Soap. It&#8217;s a warm, rich soap that I designed to look like a glowing candle and smell like cozy, fireside cuddles. Let&#8217;s get started!",
+      "ingredients": [
+        {
+          "name": "Coconut Oil",
+          "pct": 20
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "soap"
+    },
+    {
+      "id": "frosted-cranberry-christmas-soap",
+      "name": "Frosted Cranberry Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/frosted-cranberry-christmas-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "The soap will be ready to slice after about 24 hours in the mould; leave it to age for 3–4 weeks before gifting. Enjoy!",
+      "ingredients": [
+        {
+          "name": "Coconut Oil",
+          "pct": 33
+        },
+        {
+          "name": "Palm Oil",
+          "pct": 33
+        },
+        {
+          "name": "Canola Oil",
+          "pct": 16
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 14.9
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 3
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "soap"
+    },
+    {
+      "id": "almond-oat-soap",
+      "name": "Almond Oat Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/almond-oat-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "The star oil of this soap is sweet almond oil, in keeping with our theme. You could use a different liquid oil if you wanted to (rice bran oil would be nice), but of course, this will rather remove the &#8220;almond&#8221; part of this Almond Oat Soa…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "The star oil of this soap is sweet almond oil, in keeping with our theme. You could use a different liquid oil if you wanted to (rice bran oil would be nice), but of course, this will rather remove the &#8220;almond&#8221; part of this Almond Oat Soap!",
+      "category": "soap"
+    },
+    {
+      "id": "ice-palace-soap",
+      "name": "Ice Palace Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/ice-palace-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The rest of the fat blend is a combination of soybean oil and castor oil. You could easily use a different pale liquid oil instead of soybean oil, but please leave the castor oil—it&#8217;s a very unique oil in soap, contributing both beautiful lathe…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 7
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "soap"
+    },
+    {
+      "id": "argan-rose-soap",
+      "name": "Argan Rose Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/argan-rose-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Argan Rose Soap 30% beef tallow (USA / Canada) (wondering why?)",
+      "ingredients": [
+        {
+          "name": "Olive Oil",
+          "pct": 40
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 20
+        },
+        {
+          "name": "Argan Oil",
+          "pct": 5
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "These bars are unscented, but you could easily incorporate a fragrance or essential oil if you wanted to. Whatever you choose, make sure it&#8217;s not going to accelerate trace—this batter already thickens up pretty quickly, and we don&#8217;t need to speed that up! If you are eyeing up a fragrance oil you haven&#8217;t soaped with before I recommend reading reviews on it—whether or not a fragran",
+      "category": "soap"
+    },
+    {
+      "id": "lavender-aloe-soap",
+      "name": "Lavender Aloe Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lavender-aloe-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Lavender Aloe Soap 30% beef tallow (USA / Canada) (wondering why?)",
+      "ingredients": [
+        {
+          "name": "Olive Oil",
+          "pct": 25
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 20
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 20
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "white-chocolate-peppermint-christmas-soap",
+      "name": "White Chocolate Peppermint Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/white-chocolate-peppermint-christmas-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I opted for a simple in-the-pot swirl, mostly letting the pouring do the swirling. I poured the green into the white, and then dumped that whole lot into the mould. A bit of a toothpick swirl on the surface was the finishing touch, and then the bars …",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 20
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 15
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "I&#8217;ve kept the colourants simple; titanium dioxide for a white half, and French green clay for the green half. The contrast is fairly soft when done that way—if you wanted to amp it up I&#8217;d recommend adding some green mica to the green portion. Because of the ample dose of titanium dioxide I&#8217;ve also incorporated a fairly steep water discount to avoid glycerin rivers—a strategy I le",
+      "category": "soap"
+    },
+    {
+      "id": "cranberry-orange-christmas-soap",
+      "name": "Cranberry Orange Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/cranberry-orange-christmas-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Because this soap batter is on the softer side I&#8217;d recommend making these bars no later than mid-November if you intend to gift them around mid-December—we&#8217;ll want a good three to four weeks of aging time, depending on how dry your home i…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 20
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Cranberry Seed Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "ros-soap",
+      "name": "Rosé Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rose-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Today we&#8217;re making a type of soap I haven&#8217;t made before—cold processed soap with wine! As a continuation of our rosé series, I&#8217;m using rosé wine as part of the water for this soap, complementing it with a fresh rose fragrance oil an…",
+      "ingredients": [
+        {
+          "name": "Olive Oil",
+          "pct": 30
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 35
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "But if I want to replace the rose wine or remove it what should I do?",
+      "category": "soap"
+    },
+    {
+      "id": "sweetgrass-gradient-swirl-soap",
+      "name": "Sweetgrass Gradient Swirl Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/sweetgrass-gradient-swirl-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "If you want to incorporate a fragrance or essential oil, feel free, but make sure to research your fragrance oil beforehand to ensure it won&#8217;t accelerate trace. We need a pourable batter for this soap, so a fragrance oil that turns your batter …",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 45
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "If you want to incorporate a fragrance or essential oil, feel free, but make sure to research your fragrance oil beforehand to ensure it won&#8217;t accelerate trace. We need a pourable batter for this soap, so a fragrance oil that turns your batter into pudding isn&#8217;t a good choice!",
+      "category": "soap"
+    },
+    {
+      "id": "strawberry-rose-soap",
+      "name": "Strawberry Rose Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/strawberry-rose-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "If fragrances aren’t your jam (ha) I’d probably recommend leaving these bars unscented, or perhaps trying something like white grapefruit essential oil for something that’s still juicy/fruity while being all-natural. If you opt to use a different fra…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 45
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Lovely soap! What is a good substitute for the Australian Pink Clay to get those same pretty pink shades? You mentioned you wouldn&#8217;t buy it just for this recipe but I didn&#8217;t see a substitution recommendation. Thank you so much for all your DIY help!",
+      "category": "soap"
+    },
+    {
+      "id": "pemberley-soap",
+      "name": "Pemberley Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/pemberley-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The bar on the left was cut with wire, and looks like it has tiny beads in it. The bar on the right was cut with a knife and just has tiny bubbles/holes in it.",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 45
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "For the discolouration if you swap out the benzoin and use vanilla, it all depends. There are some vanilla fragrance oils that actually won&#8217;t discolour, others that will discolour to a dark chocolate colour even at lowerish amounts. It depends on so much and what kind of oil you will use. Safe beat is to check with your supplier to see if they have any pictures or info regarding discolourati",
+      "category": "soap"
+    },
+    {
+      "id": "mango-mango-soap",
+      "name": "Mango Mango Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/mango-mango-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The fat blend is fairly simple, balanced more towards softer fats to give us more working time before a really thick trace sets in. You can probably guess from some of my more recent soap recipes that I’ve got a lot of olive oil I need to use up—if y…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 45
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "I was aiming for a bit of a drop swirl when I poured these bars, but that didn’t end up happening—I got more of a dancing yellowy cloud cover over a sea of orange. If you want more swirl going on, break out your hanger-swirl tool and swirl away before leaving the soap to saponify. I did manage to get the swirls on the top to turn out, though—I swirled together leftover orange mica and the two colo",
+      "category": "soap"
+    },
+    {
+      "id": "lemongrass-gradient-soap",
+      "name": "Lemongrass Gradient Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lemongrass-gradient-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "As you can probably guess it&#8217;s important to maintain a pretty liquidy trace throughout this process so the batter can inter-mix, giving a fade instead of distinct layers. For this reason my batter features a lot of liquid oils and no water disc…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 45
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "blue-marble-soap",
+      "name": "Blue Marble Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/blue-marble-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I was thinking these bars would be a bit more on the swirly side, but when I cut them open I was excited to see a beautiful marble-esque pattern. I let the weight of the pour do all the mixing in the mold—I didn&#8217;t introduce any kind of hanger o…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 45
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "red-red-rose-soap",
+      "name": "Red Red Rose Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/red-red-rose-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Here you can see a little brown hotspot or two and some white wispy bits. I&#8217;m a on the fence about using this soap due to concerns about those higher concentration spots of fragrance being potentially irritating—what do you think?",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 45
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "christmas-tree-soap",
+      "name": "Christmas Tree Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/christmas-tree-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I find the finished bars to be quite serene, just like a walk through a snow-dusted forest in the winter. I hope you love them as much as I do!",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Canola Oil",
+          "pct": 35
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "sugar-plum-christmas-soap",
+      "name": "Sugar Plum Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/sugar-plum-christmas-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Our fat blend is designed to be relatively slow tracing so we&#8217;ve got time to swirl—I did make it a bit faster tracing than some previous fat blends, though, as I knew I&#8217;d want a bit of viscosity without waiting absolutely ages. I achieved…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Canola Oil",
+          "pct": 35
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Our fat blend is designed to be relatively slow tracing so we&#8217;ve got time to swirl—I did make it a bit faster tracing than some previous fat blends, though, as I knew I&#8217;d want a bit of viscosity without waiting absolutely ages. I achieved this by swapping 10% of the canola oil for 10% shea butter.",
+      "category": "soap"
+    },
+    {
+      "id": "citrus-poppy-seed-swirl-soap",
+      "name": "Citrus Poppy Seed Swirl Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/citrus-poppy-seed-swirl-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Citrus Poppy Seed Swirl Soap 25% refined coconut oil (USA / Canada)",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Canola Oil",
+          "pct": 45
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "cream-of-earl-grey-soap",
+      "name": "Cream of Earl Grey Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/cream-earl-grey-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "Our essential oil blend is sweet, tea-like palmarosa, bright bergamot, and warm, sugary benzoin resinoid. It smells all kinds of sweet and warm and tea-like, and makes me think of chunky knits and handmade pottery and foamy milk on the top of lattes.…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 50
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Marie, I have just subscribed to you and have a question. I want to make your dishwashing paste but can&#8217;t find bioterge as40. I live in California usa I tried all the places you have listed and have had no luck. I have ordered the other ingredients from 3 different places. Why is this so hard to find and can a substitution be made?",
+      "category": "soap"
+    },
+    {
+      "id": "lavender-spruce-soap",
+      "name": "Lavender Spruce Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lavender-spruce-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Kick things off by calculating out your recipe for the amount of soap you&#8217;re making to get the finite amounts of the fats, lye, and water. Unsure about how to use SoapCalc? I made a video to walk you through it! Please ensure you&#8217;re famil…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 50
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "winter-custard-soap",
+      "name": "Winter Custard Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/winter-custard-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "These bars are pretty simple, so if making your own soap is one of your new year&#8217;s resolutions, this is a pretty good place to start. The batter traces well, but not too quickly, and we aren&#8217;t doing anything too fussy with it (other than …",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Thank you for responding regarding my question regarding substitutions for lard. I realized after I sent the message that the recipe was written in percentages not ounces, and that it is meant to be put through a lye calculator after I sent the message. So sorry. Thanks again!",
+      "category": "soap"
+    },
+    {
+      "id": "aurora-borealis-soap",
+      "name": "Aurora Borealis Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/aurora-borealis-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I hope you&#8217;ll have as much fun making this soap as I did, and relish the fun of cutting it and seeing how your northern lights turned out. Happy soaping!",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "setTimeout(function(){var ct_input_name = \"ct_checkjs_6ea9ab1baa0efb9e19094440c317e21b\";if (document.getElementById(ct_input_name) !== null) {var ct_input_value = document.getElementById(ct_input_name).value;document.getElementById(ct_input_name).value = document.getElementById(ct_input_name).value.replace(ct_input_value, '3392d76d4c50ff8d24d6970e1c9506e814caf25f74087be469c1fc6583f3c40b');}}, 1000",
+      "category": "soap"
+    },
+    {
+      "id": "snowflake-christmas-soap",
+      "name": "Snowflake Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/snowflake-christmas-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Kick things off by calculating out your recipe for the amount of soap you&#8217;re making to get the finite amounts of the fats, lye, and water. Unsure about how to use SoapCalc? I made a video to walk you through it! Please ensure you&#8217;re famil…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 10
+        }
+      ],
+      "notes": "What a lovely looking soap Marie. I think I might add a touch of peppermint if I try this. I know I&#8217;d be able to smell the tallow or imagine I smell it. I must say thank you for influencing me to get back to using tallow in soap. I got caught up on the vegan band wagon and for years stopped using it and replaced it with palm. I get my tallow from either Can Wax (my favorite) or Voyageur and ",
+      "category": "soap"
+    },
+    {
+      "id": "vanilla-spice-christmas-soap",
+      "name": "Vanilla Spice Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/vanilla-spice-christmas-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I owe Crystal a thanks for this theme—she sent in a recipe request for something similar to the (discontinued) Christmas Vanilla Spice scent from The Body Shop. I have no experience with the original, but I loved the idea of sweet, warm vanilla accen…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "This looks amazing! I have a question about the essential oils since I recently bought cinnamon leaf oil. I just looked at your essential oils substitutions page and since cinnamon leaf and cinnamon bark oils are both healing oils they are interchangeable, correct? Why do you prefer cinnamon bark over cinnamon leaf? Is it more potent? Thank you! And Happy Thanksgiving!",
+      "category": "soap"
+    },
+    {
+      "id": "minty-forest-soap",
+      "name": "Minty Forest Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/minty-forest-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "If you&#8217;re a somewhat experienced cold processed soap maker and you enjoy fresh, clean, slightly earthy scents, I think you&#8217;ll really love these bars! There&#8217;s nothing terribly tricky about making them, you just want to be at the soap…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 30
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "lemon-basil-soap-with-fresh-click-grow-basil",
+      "name": "Lemon Basil Soap (with fresh Click  Grow basil!)",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lemon-basil-soap-fresh-click-grow-basil/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Click and Grow did send me their Smart Garden in exchange for a review, but left me to write the review all on my own.",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 30
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "morning-frost-soap",
+      "name": "Morning Frost Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/morning-frost-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Colour-wise, the scene was excellent inspiration. A bottom layer of gold echoes the fading prairie grasses, beginning to wilt and sag under the weight of more and more frosty nights. Above that, blue and white swirl and bob, like blue skies and passi…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 35
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Rice Bran Oil",
+          "pct": 20
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "1 tsp silk peptides (wondering about substitutions?) 2 tbsp white white kaolin clay (USA / Canada) 10g | 0.35oz camphor essential oil 7g | 0.25oz benzoin essential oil 13g | 0.46oz cedarwood essential oil Gold micaoryellow iron oxide, as needed Titanium dioxide, as needed Blue ultramarine, as needed White-silver mica, as needed Extra rice bran oil, to disperse the pigments, as needed",
+      "category": "soap"
+    },
+    {
+      "id": "chocolate-and-roses-valentine-soap",
+      "name": "Chocolate and Roses Valentine Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/chocolate-and-roses-valentine-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "Thanks to all the cocoa butter we&#8217;re using we don&#8217;t need another hardening oil, either—that means these bars are vegan! I was going to add some silk but opted not to in order to keep them vegan, but you definitely could add some if you&#8…",
+      "ingredients": [
+        {
+          "name": "Cocoa Butter",
+          "pct": 30
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "I would recommend soaping these bars a bit warmer than room temperature—especially if your home is as chilly as mine is these days. Thanks to the liberal dose of cocoa butter in these bars you&#8217;ll find the batter gets quite thick, quite fast (as you can see in the video), so if you want a smooth pour, it&#8217;s definitely in your best interest to work at a slightly warmer temperature (~38°C/",
+      "category": "soap"
+    },
+    {
+      "id": "gentle-hemp-and-shea-soap",
+      "name": "Gentle Hemp and Shea Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/gentle-hemp-and-shea-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "As is becoming normal for me whenever I make soap, I added a lot of white white kaolin clay (USA / Canada). Yes, I really do mean that much! That is not a typo! I use even more in my Lots and Lots of Clay soap, and I wanted to share this comment from…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow Or Lard",
+          "pct": 30
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Hemp Seed Oil",
+          "pct": 17
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 13
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "winter-wonderland-christmas-soap",
+      "name": "Winter Wonderland Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/winter-wonderland-christmas-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "This beautiful dusty-blue gradiated Winter Wonderland Christmas Soap is my last soap of the 2016 Christmas soaping season, and I love it. I tried a new technique for the first time, and while I&#8217;m super excited to play with it more and improve, …",
+      "ingredients": [
+        {
+          "name": "Olive Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Soybean Oil",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "I used indigo to colour the soap, and I am smitten with it. It gives a much more muted, cooler blue than ultramarine blue, and I love its subtlety. You can absolutely use blue ultramarine instead if that&#8217;s what you&#8217;ve got, or if you want a brighter blue.",
+      "category": "soap"
+    },
+    {
+      "id": "lumps-of-coal-christmas-soap",
+      "name": "Lumps of Coal Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lumps-coal-christmas-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "For scent, I went with a blend of sweet, vanilla-like benzoin, warm cedarwood, and just the teensiest hint of smoky birch tar for a soap that smells like woodsy vanilla with just a bare hint of smoke. Be careful with your smoky essential oil! It&#821…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow Or Lard",
+          "pct": 30
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Hemp Seed Oil",
+          "pct": 17
+        },
+        {
+          "name": "Sunflower Seed Oil",
+          "pct": 7
+        },
+        {
+          "name": "Soybean Oil",
+          "pct": 6
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "minty-poppy-seed-scrubby-soap",
+      "name": "Minty Poppy Seed Scrubby Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/minty-poppy-seed-scrubby-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "If you’re familiar with cold process soap making, you’ll find these bars come together quite easily. You can use a loaf mould or a cavity mould—it&#8217;s all up to you! You will need extra indigo powder if you choose a cavity mould, though, as you&#…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow Or Lard",
+          "pct": 35
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Rice Bran Oil",
+          "pct": 8
+        },
+        {
+          "name": "Soya Bean Oil Or Olive Oil",
+          "pct": 12
+        }
+      ],
+      "notes": "Their website isn&#8217;t great, but it&#8217;s definitely worth calling them if you want great products at decent prices: http://www.earthues.com/",
+      "category": "soap"
+    },
+    {
+      "id": "citrus-summer-punch-swirl-soap",
+      "name": "Citrus Summer Punch Swirl Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/citrus-summer-punch-swirl-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "These bright, colourful Citrus Summer Punch Swirl Soap bars are perfect for summer. They smell like fresh, juicy grapefruit and they&#8217;re basically a swirly chunk of beautiful sunny weather in sudsible form. This soap recipe is also the first soa…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow Or Lard",
+          "pct": 35
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Rice Bran Oil",
+          "pct": 8
+        },
+        {
+          "name": "Soya Bean Oil Or Olive Oil",
+          "pct": 12
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "maple-syrup-soap",
+      "name": "Maple Syrup Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/maple-syrup-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "Welcome to the next recipe in my very Canadian quest to maple syrup ALL the things! This lovely, creamy bar of maple syrup soap incorporates a wee bit of dark maple syrup for added lather and the fun of knowing you&#8217;re sudsing up with the best p…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Safflower Oil",
+          "pct": 15
+        },
+        {
+          "name": "Rice Bran Oil",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "fairy-bread-soap",
+      "name": "Fairy Bread Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/fairy-bread-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "I started by tipping my scrap collection into my blender and blitzing everything into a chunky sprinkle-like rainbow powder (tip: go through and pick out any stray hairs that might be embedded in bits of used soap first—yuck!). If your blender isn&#8…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Safflower Oil",
+          "pct": 15
+        },
+        {
+          "name": "Rice Bran Oil",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "I started by tipping my scrap collection into my blender and blitzing everything into a chunky sprinkle-like rainbow powder (tip: go through and pick out any stray hairs that might be embedded in bits of used soap first—yuck!). If your blender isn&#8217;t very powerful, a foot processor with a chopping attachment might be a better option.",
+      "category": "soap"
+    },
+    {
+      "id": "lots-lots-of-clay-soap",
+      "name": "Lots  Lots of Clay Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lots-lots-clay-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "I adore clay in my soap, so I thought I&#8217;d try a bar with lots of the stuff. The general rule of thumb I&#8217;ve been following is one tablespoon per 500g/pound of oils so I decided to take that up by about 10x and I&#8217;m loving the results.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "love-lines-valentine-soap",
+      "name": "Love Lines Valentine Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/love-lines-valentine-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "This pretty Love Lines Valentine Soap is great for use all year, but the pretty red mica veins in it are quite lovely for Valentine&#8217;s Day, as are the pretty shimmery swirls on top. It also smells like roses and vanilla—yum!",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "fruitcake-soap",
+      "name": "Fruitcake Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/fruitcake-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "Anyhow, I thought I’d make a Fruitcake soap to add to world’s supply of dense slices embedded with flecks of green, red, and yellow. The multicolour bit requires a bit more effort, but hey—it’s Christmas, right? It’s also a pretty neat effect.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Using an immersion blender (important! Don&#8217;t do this without a blender if you want even, uniform colour), blend the oxides into their respective third of the batch, ensuring you break up all the clods for even colour. You can always add more oxide, so start low and work your way up. Aim for a pastel shade as I&#8217;ve found too many oxides can cause glycerin rivers.",
+      "category": "soap"
+    },
+    {
+      "id": "chocolate-orange-christmas-soap",
+      "name": "Chocolate Orange Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/chocolate-orange-christmas-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "Terry’s Chocolate Oranges have been a Christmas constant to me for most of my life. The square little box filled with an orange foil-wrapped globe of orange-scented chocolate was usually found near the toe of my stocking, and was quickly rapped on a …",
+      "ingredients": [
+        {
+          "name": "Cocoa Butter",
+          "pct": 28
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 7
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "sparkly-snowball-soap-balls",
+      "name": "Sparkly Snowball Soap Balls",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/sparkly-snowball-soap-balls/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "These pretty, sparkly balls of soapy, sudsy goodness are pretty cool. They look like snowballs (or candies), but are perfectly at home in your soap dish or on your Christmas tree. They’re great for guest bathrooms or traveling, and are just neat in g…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "And that’s it. Cool, no? If you want to use them as a Christmas tree decoration, poke a hole through the balls with a toothpick after they&#8217;ve been rolled in sugar, and then thread fishing wire through them to hang them on your tree. You can use them as soaps after the tree comes down 🙂",
+      "category": "soap"
+    },
+    {
+      "id": "second-summer-soap",
+      "name": "Second Summer Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/second-summer-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "Those bubbles are why we rap the mould on the corner. They aren&#8217;t really noticeable in the final soap, but it&#8217;s still best to avoid them if we can 🙂",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Using an immersion blender (important! Don&#8217;t do this without a blender if you want even, uniform colour), blend a small amount of blue ultramarine into the batter until you have a pale, yet distinct, blue. You&#8217;ll be amazed at how potent the ultramarine is—you can see in a photo above how much I used.",
+      "category": "soap"
+    },
+    {
+      "id": "lemon-meringue-soap",
+      "name": "Lemon Meringue Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lemon-meringue-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "The meringue part gets its lovely whiteness from the addition of some titanium dioxide. I don&#8217;t recommend adding too much more than I&#8217;ve used or you could end up with glycerin rivers through your meringue. I&#8217;ve found the soap tends …",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "You can definitely leave them out (just replace the missing amount with more water), but I really do recommend having at least one hydrolyzed protein because they are wonderful. I put hydrolyzed silk in probably 50% of the things I make haha.",
+      "category": "soap"
+    },
+    {
+      "id": "rose-lavender-princess-silk-soap",
+      "name": "Rose  Lavender Princess Silk Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rose-lavender-princess-silk-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "A few months ago I got to thinking about princess soap. Something the littler ladies would love. Something with a bit of sparkle and swirl, and some pretty colours. Something that would smell pretty and be perfectly at home with a Disney Princess sho…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "mojito-soap",
+      "name": "Mojito Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/mojito-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "My deep dive into beverage themed soaps continues with this minty lime tribute to the Mojito. It&#8217;s bright green and smells wonderfully fresh, and I just love the sprinkling of coarse sugar on the top for a hint of sweet sparkle.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "If you want to do a hanger swirl, now is the time. You&#8217;ll need a hanger that you&#8217;ve bent so it resembles a rather square &#8220;U&#8221;. The bottom should be more or less flat and as wide as your mould is long. The sides should come straight up (more or less&#8230;) and be longer than your mould is deep.",
+      "category": "soap"
+    },
+    {
+      "id": "pink-lemonade-soap",
+      "name": "Pink Lemonade Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/pink-lemonade-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "I think it&#8217;s about time we welcomed summer with a straight up summery soap (even if it is barely spring&#8230; let&#8217;s just say we&#8217;ve built in ample aging time). This pretty pink bar is a tribute to pink lemonade, and as such it smell…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "I should be able to substitute lard for the tallow, right? I&#8217;ll run it thru a calculator though&#8230;.",
+      "category": "soap"
+    },
+    {
+      "id": "lavender-vanilla-soap",
+      "name": "Lavender Vanilla Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lavender-vanilla-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "If you&#8217;re familiar with cold process soap making, you&#8217;ll find this soap comes together quickly and easily. A fun mica swirl on top looks impressive, but certainly isn&#8217;t difficult.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "ber-anti-acne-soap",
+      "name": "Über Anti-Acne Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/uber-anti-acne-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "After years of DIYing, I’ve got a pretty good cache of acne-fighting ingredients. From clays to herbs to essential oils, my basement cupboards are a veritable arsenal of zit-busting weaponry, and these bars of soap have it all. They’re designed to cl…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "winter-solstice-soap",
+      "name": "Winter Solstice Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/winter-solstice-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "This winter solstice soap is my sudsy tribute to this, the darkest day of the year. With Dead Sea mud and Australian black clay to darken it up, and some clods of white clay and titanium dioxide to act as stars, it’s a striking bar.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "14g | 0.49oz cajeput essential oil 15g | 0.53oz eucalyptus radiata essential oil (can substitute eucalyptus globulus) 1g | 0.03oz cade essential oil (can substitute vetiver or birch tar essential oil—feel free to reduce for a lighter smoke note) 1 tbsp Dead Sea mud 1 tsp Australian black clay or black iron oxide 1 tsp silver mica (optional) 1 tbsp white kaolin clay (USA / Canada) 1 tsp titanium di",
+      "category": "soap"
+    },
+    {
+      "id": "cranberry-sauce-soap",
+      "name": "Cranberry Sauce Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/cranberry-sauce-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "I bought a bag of bright red cranberry seeds last year, and found them in the back of my cupboard just in time to make a Cranberry Sauce soap as my second Christmas soap for 2014. These pretty reddish bars are bright and spicy, and feature a sprinkli…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "I like to leave my soaps to age right up until use/gifting—the longer a bar ages, the harder it will be and the longer it will last once it is in use. The trade-off is the loss of scent over time, though. If you want to keep more scent after 3–4 weeks of aging you can wrap the bars in clingfilm 🙂",
+      "category": "soap"
+    },
+    {
+      "id": "blizzard-soap",
+      "name": "Blizzard Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/blizzard-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "This crisp, clean white bar smells of cold air and cool mint, and is just perfect for winter. It&#8217;s my first Christmas soap for 2014, and I&#8217;m not quite sure how it&#8217;s Christmas soaping season already.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Hi what can I use instead of tallow? We don&#8217;t get that in my country. Can I substitute with sunflower oil? Thanks",
+      "category": "soap"
+    },
+    {
+      "id": "pumpkin-pie-soap",
+      "name": "Pumpkin Pie Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/pumpkin-pie-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "The base of this soap is a slightly modified version of my all-in-one soap, with a bit more beef tallow (USA / Canada) than the original for a harder final product. As always, it makes for a lovely smooth bar with luxurious lather and a reasonably qu…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "aloe-vera-citrus-soap",
+      "name": "Aloe Vera Citrus Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/aloe-vera-citrus-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "This pretty yellow and green soap smells of fresh citrus, suds up beautifully, and leaves your skin clean and happy.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "I used a few grams of 200x concentrated aloe vera powder to work the aloe into the soap, but if you only have the juice, just replace half the water in the recipe with aloe vera juice and carry on as usual.",
+      "category": "soap"
+    },
+    {
+      "id": "pooch-poo-dog-shampoo",
+      "name": "Pooch Poo (Dog Shampoo)",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/pooch-poo-dog-shampoo/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "This specific shampoo bar was inspired by one my Aunt Karla and Uncle Randy had for their chocolate lab, Kady. It had a cute, amusing name, and from the looks of the ingredients list, it was a good bar of handmade soap. Together the sudsed Katy from …",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "low-tide-soap",
+      "name": "Low Tide Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/low-tide-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "I am thoroughly smitten with these pretty, seaside inspired low tide soap bars. With their dusty turquoise tone, deep green seaweed seam, and sparkling coarse salt topping, they&#8217;re just beautiful.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow Or Lard",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "chai-latt-soap",
+      "name": "Chai Latté Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/chai-latte-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The magical red colour is a result of milk and cinnamon bark essential oil (cinnamomun cassia blume) mingling together in a bar of soap. The red colour isn&#8217;t as pronounced here as it is in the Cinnamon Oatmeal soap I made a few months ago becau…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 15
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 10
+        }
+      ],
+      "notes": "",
+      "category": "soap"
+    },
+    {
+      "id": "my-all-in-one-soap-recipe",
+      "name": "My All-in-One Soap Recipe",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/my-all-in-one-soap-recipe/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "I&#8217;m not a big fan of having my shower crowded with two dozen bottles. I&#8217;ve had friends with roommates that had so many shower products there was barely room to stand in the shower! Their showers were crowded with a different shampoo and c…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Lard Or Beef Tallow",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "Got a question (don&#8217;t we all?). If you had to replace the coconut oil with something else (makes me scaly), what would you use?",
+      "category": "soap"
+    },
+    {
+      "id": "self-cleaning-you-homemade-soap",
+      "name": "Self-Cleaning You: Homemade Soap!",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/self-cleaning-you-homemade-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "There are countless other reasons that natural soap is better for you and the environment than the mass-produced stuff, but I’m climb down off my soapbox (haha, couldn’t resist) and get to the chemistry part of things now!",
+      "ingredients": [
+        {
+          "name": "Olive Oil",
+          "pct": 30
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
     }
   ]
 }
