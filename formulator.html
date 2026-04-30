@@ -208,6 +208,15 @@
     .chip-rm { background: none; border: none; color: #3a6040; cursor: pointer; font-size: 0.8rem; padding: 0; line-height: 1; }
     .chip-rm:hover { color: var(--green); }
 
+    /* Recommendations */
+    .rec-section { margin-top: 20px; }
+    .rec-header { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 8px; }
+    .rec-list { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+    .rec-item { display: flex; align-items: center; gap: 8px; padding: 7px 10px; background: var(--surface-hi); border-radius: 6px; border: 1px solid var(--border); }
+    .rec-name { flex: 1; font-size: 0.82rem; color: var(--text-mid); }
+    .rec-completes { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--green); white-space: nowrap; }
+    .rec-helps { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--text-dim); white-space: nowrap; }
+
     /* Swaps pane */
     .swap-explainer { font-size: 0.78rem; color: var(--text-dim); line-height: 1.5; margin-bottom: 14px; padding: 8px 10px; background: var(--surface-hi); border-radius: 5px; border-left: 2px solid var(--border-hi); }
     .swap-rules { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
@@ -336,6 +345,7 @@
     </div>
     <div class="pantry-count" id="pantryCount"></div>
     <div class="pantry-chips" id="pantryChips"></div>
+    <div class="rec-section" id="recSection"></div>
   </div>
 
   <!-- Swaps pane -->
@@ -481,6 +491,40 @@
     });
   }
 
+  // ── Recommendations ────────────────────────────────────
+  function getRecommendations(n = 5) {
+    const counts = {};
+    allRecipes().forEach(r => {
+      if (matchPct(r) === 100) return;
+      const missing = r.ingredients.filter(i => !hasIng(i.name));
+      missing.forEach(ing => {
+        const k = norm(ing.name).toLowerCase();
+        if (!counts[k]) counts[k] = { name: ing.name, completes: 0, helps: 0 };
+        counts[k].helps++;
+        if (missing.length === 1) counts[k].completes++;
+      });
+    });
+    return Object.values(counts)
+      .sort((a, b) => (b.completes - a.completes) || (b.helps - a.helps))
+      .slice(0, n);
+  }
+
+  function renderRecommendations() {
+    const sec = document.getElementById('recSection'); sec.textContent = '';
+    const recs = getRecommendations();
+    if (!recs.length) return;
+    sec.appendChild(el('div', 'rec-header', 'What To Buy Next'));
+    const ul = el('ul', 'rec-list');
+    recs.forEach(r => {
+      const li = el('li', 'rec-item');
+      li.appendChild(el('span', 'rec-name', r.name));
+      if (r.completes > 0) li.appendChild(el('span', 'rec-completes', 'finishes ' + r.completes));
+      li.appendChild(el('span', 'rec-helps', 'in ' + r.helps + ' recipes'));
+      ul.appendChild(li);
+    });
+    sec.appendChild(ul);
+  }
+
   // ── Pantry (chips) ─────────────────────────────────────
   function renderPantry() {
     const chips = document.getElementById('pantryChips');
@@ -495,6 +539,7 @@
       rm.addEventListener('click', () => { owned.delete(ing); saveOwned(); updateInvBadge(); renderPantry(); renderRecipes(); });
       chip.appendChild(rm); chips.appendChild(chip);
     });
+    renderRecommendations();
   }
 
   // Pantry search autocomplete
@@ -782,6 +827,7 @@
       more.addEventListener('click', () => { shownCount += PAGE_SIZE; renderRecipes(); });
       list.appendChild(more);
     }
+    renderRecommendations();
   }
 
   // ── Custom recipe modal ─────────────────────────────────
