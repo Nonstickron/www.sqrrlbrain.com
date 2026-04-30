@@ -240,6 +240,64 @@
       margin-top: .4rem;
     }
 
+    /* APPS */
+    .apps {
+      padding: 6rem 3rem;
+      border-bottom: 1px solid rgba(58,26,0,.08);
+    }
+
+    .app-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      max-width: 960px;
+    }
+
+    .app-card-text h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.14;
+      letter-spacing: -.025em;
+      margin-bottom: 1rem;
+    }
+    .app-card-text p {
+      font-size: .97rem;
+      line-height: 1.82;
+      color: var(--brown-mid);
+      margin-bottom: 1.6rem;
+      max-width: 44ch;
+    }
+
+    .app-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      border: 1px solid rgba(184,140,90,.4);
+      padding: .35rem .8rem;
+    }
+
+    .app-visual {
+      background: var(--ink);
+      aspect-ratio: 1;
+      max-width: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2.5rem;
+    }
+    .app-visual img { width: 100%; height: auto; opacity: .75; }
+
+    @media (max-width: 760px) {
+      .apps { padding: 4rem 1.5rem; }
+      .app-card { grid-template-columns: 1fr; gap: 2rem; }
+      .app-visual { display: none; }
+    }
+
     /* CONTACT */
     .contact {
       background: var(--warm);
@@ -335,6 +393,7 @@
     </div>
     <nav>
       <a href="#services">Services</a>
+      <a href="#apps">Apps</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -403,6 +462,20 @@
     </div>
   </section>
 
+  <section class="apps" id="apps">
+    <p class="section-label">Apps</p>
+    <div class="app-card">
+      <div class="app-card-text">
+        <h2>Inkwell — AI Story Engine</h2>
+        <p>Inkwell is an AI-powered interactive fiction app that puts you inside a living story. Every choice shapes the narrative — characters remember, worlds evolve, and no two playthroughs are alike. Built for readers who want to do more than read.</p>
+        <span class="app-badge">Coming to iOS &amp; Android</span>
+      </div>
+      <div class="app-visual">
+        <img src="images/icon.svg" alt="Inkwell" />
+      </div>
+    </div>
+  </section>
+
   <section class="contact" id="contact">
     <h2>Let's make<br>something<br><em>worth keeping.</em></h2>
     <div class="contact-info">
@@ -424,7 +497,7 @@
   <footer>
     <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
     <img src="images/logo-website.svg" alt="Sqrrlbrain.com" style="height:28px;width:auto;opacity:.45;" />
-    <p>All rights reserved</p>
+    <p><a href="/privacy.html" style="font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--brown-light);text-transform:uppercase;text-decoration:none;">Privacy Policy</a></p>
   </footer>
 
 </body>
