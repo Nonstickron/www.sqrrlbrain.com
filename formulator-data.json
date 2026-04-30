@@ -4849,7 +4849,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/strawberry-rose-clay-face-mask/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re putting on our super-crunchy DIY boots and whipping up a summery Strawberry Rose Clay Face Mask. This pink mask pairs fresh, in-season strawberries with golden honey, fragrant rose hydrosol, and creamy clays for a sumptuous and simp…",
+      "description": "A clay-based face mask formulated with fresh strawberries, honey, and rose hydrosol. Combines the natural acidity of fruit with the absorbent properties of pink and bentonite clays.",
       "ingredients": [
         {
           "name": "Fresh Strawberry, Rinsed And Trimmed",
@@ -4878,7 +4878,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Mash the strawberry together with the honey—the mixture will suddenly become very watery! Mash until the mixture is as smooth as possible—there will likely still be some lumps, depending on your berry, but do your best. Up next, mash in the rose water.\nNow it's time to add the clay! Add it about one gram at a time, stirring and blending between additions, until you have a relatively smooth paste with a nice spreadable consistency. It is very likely you'll need to adjust the amount of clay from what I've listed above, so use your best judgement.\nFollow up with a favourite lotion or oil serum. Enjoy!"
+      "process": "1. Mash the fresh fruit and honey together until the mixture reaches a liquid consistency.\n2. Incorporate the hydrosol and mix thoroughly.\n3. Gradually add the clays while stirring to achieve a uniform, spreadable paste.\n4. Apply to the skin and follow with a moisturizing agent after removal.",
+      "processRewritten": true
     },
     {
       "id": "sweetgrass-honey-face-mask",
@@ -4887,7 +4888,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/sweetgrass-honey-face-mask/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re embracing the crunchy side of DIY skin care with a beautiful four ingredient clay face mask. It&#8217;s smooth and creamy, smells of honey and summer days, and leaves your skin feeling rejuvenated and refreshed. It&#8217;s perfect f…",
+      "description": "A four-ingredient clay mask utilizing sweetgrass hydrosol and raw honey. Formulated with a blend of kaolin and French green clays for a non-drying, deep cleanse.",
       "ingredients": [
         {
           "name": "Raw Honey",
@@ -4908,7 +4909,8 @@
       ],
       "notes": "While this mask is so simple that any changes will be pretty substantial, I have still provided some substitution suggestions at the end of the post to try to make this DIY as accessible as possible. Happy masking!",
       "category": "face",
-      "process": "Weigh the honey and sweetgrass hydrosol into a small bowl and whisk to combine. Slowly add the clays, whisking between additions, until you have a thick, creamy mixture. You may wish to adjust the amount of clay to get your desired end consistency; more clay will make for a thicker, stiffer mask. Less clay will make for a thinner, runnier mask.\nFollow up with your favourite facial lotion or oil serum!"
+      "process": "1. Combine the honey and hydrosol in a bowl and whisk until uniform.\n2. Gradually incorporate the clays while whisking to reach a thick, creamy consistency.\n3. Adjust clay levels as needed to achieve desired viscosity.\n4. Apply to the face and follow with a topical moisturizer upon removal.",
+      "processRewritten": true
     },
     {
       "id": "rose-bentonite-clay-facial-mask",
@@ -4917,7 +4919,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/rose-bentonite-clay-facial-mask/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today&#8217;s recipe is a super-crunchy, super simple clay mask starring four lovely, natural ingredients. Fragrant rose hydrosol and moisturizing vegetable glycerin team up with creamy French green clay and powerfully absorbent bentonite to create a…",
+      "description": "A simple, water-based clay mask formulated with rose hydrosol, glycerin, and absorbent clays. Designed for effective removal of excess sebum and environmental debris.",
       "ingredients": [
         {
           "name": "Vegetable Glycerine",
@@ -4938,7 +4940,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the glycerin and hyrosol into a small dish. Whisk to combine.\nAdd the French green clay, whisk until smooth. Add the bentonite clay, and whisk until smooth.\nTo use, apply to the face immediately, avoiding the eyes, mouth, and nostrils. Let dry for 10–15 minutes before rinsing off (I like to rinse masks off in the shower for the smallest possible mess). Follow up with your current favourite facial lotion and/or serum. That's it!"
+      "process": "1. Blend the glycerin and hydrosol in a container until uniform.\n2. Incorporate the French green clay and whisk until smooth.\n3. Add the bentonite clay and continue whisking until a uniform paste is formed.\n4. Apply immediately to the skin, avoiding sensitive areas, and rinse after 10–15 minutes.",
+      "processRewritten": true
     },
     {
       "id": "herbs-honey-pink-clay-mask",
@@ -4949,7 +4952,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "After that we&#8217;ve got a blend of pink and white kaolin clays, a rich medley of botanicals, some essential oils, and a few other things, like a gum for texture and preservatives. It&#8217;s a pretty decked-out face mask and there&#8217;s lots of …",
+      "description": "A botanical-infused clay mask featuring white kaolin and pink clays. Formulated with willow bark, calendula, and rose petals in a nourishing oil base for deep cleansing.",
       "ingredients": [
         {
           "name": "White Kaolin Clay",
@@ -5002,7 +5005,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the heated phase ingredients into a small heat-resistant glass measuring cup or beaker. Stir to combine and transfer to a 60mL (2 fl oz) bottle. Now you have a hydrating rose toner and some liquid for making this mask with!\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the recipe, you will get a different final product than I did.\nAs I've provided this recipe in percentages as well as grams you can easily calculate it to any size using a simple spreadsheet as I've explained in this post. As written in grams this recipe will make 50g clay paste.\nYou can try different lightweight clays like French green in place of the Australian pink clay. Do not use bentonite or rhassoul. You could also use more white kaolin.\nIf you want a less scrubby mask, or if it's what you have, feel free to use pre-powdered versions of the herbs. You can also mix up the herbs to better suit your skin, or dial back the amounts, making up the difference with more kaolin clay.\nYou can substitute another lightweight oil like sweet almond, grapeseed, or sunflower seed for the camellia seed oil.\nThe white plastic jar was gifted by YellowBee. The hyaluronic acid was gifted by Pure Nature.\nSimilar Formulations\nPink Rose Clay BarAfter falling madly in love with my Everyday French Green Clay Bar I decided I needed more of them. Clay bars are downright fantastic for\nFrench Face MaskThis simple clay based face mask is delightfully simple and effective. Inspired by my love of , it does a fantastic job of clearing out\nHoney Bee Face MaskSpring has sprung here in Calgary! We've got blooming tulips, budding roses, leafy trees, green grass, and lovely bumbling bees again, and all of this\nHumblebee & Me is an Amazon Associate and earns income from qualifying purchases. This is at no additional cost to you.\nHelp support Humblebee & Me"
+      "process": "1. Combine the heated phase ingredients in a heat-safe container and mix until uniform.\n2. Incorporate the botanical powders and clays into the oil base.\n3. Stir until the mixture is smooth and free of large clumps.\n4. Package the resulting paste in a wide-mouthed jar for use.",
+      "processRewritten": true
     },
     {
       "id": "rose-silk-hydrating-sheet-mask",
@@ -5011,7 +5015,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/rose-silk-hydrating-sheet-mask/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Sheet masks are all the rage these days, but they are also usually at least $1–2 a piece, and you only get to use them once, and that’s a bit ridiculous. I have a few (mostly from last October&#8217;s trip to NYC) and I find myself hoarding them (lik…",
+      "description": "A hydrating serum designed for use with sheet masks. Formulated with hyaluronic acid, hydrolyzed silk, and rose hydrosol to provide intensive humectant-based moisture.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -5056,7 +5060,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Transfer to a bottle or squeeze tube that is around 50mL/2 fl oz in capacity. I used a 50mL frosted squeeze tube from YellowBee.\nThis recipe makes enough liquid for approximately five sheet masks."
+      "process": "1. Combine the liquid ingredients in a container and stir until the mixture is uniform and the silk is fully dissolved.\n2. Transfer the serum to a bottle or squeeze tube for storage.\n3. To use, saturate a compressed sheet mask with the serum before applying to the face.",
+      "processRewritten": true
     },
     {
       "id": "easy-niacinamide-serums-for-beginners",
@@ -5065,7 +5070,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/easy-niacinamide-serums-for-beginners/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Niacinamide—also known as Vitamin B3—is a potent, effective, and popular active ingredient with amazing brightening and barrier-boosting skincare benefits. But, it can be a bit intimidating to work with. So, if you’ve been wanting to start formulatin…",
+      "description": "A series of simplified niacinamide (Vitamin B3) serums designed for skin brightening and barrier support. Available in multiple variations with differing levels of complexity and viscosity.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -5154,7 +5159,8 @@
       ],
       "notes": "What formulation considerations should you keep in mind when working with niacinamide? Niacinamide is pretty easy to work with. Niacinamide is water soluble, so if you want it to dissolve, water is required. This can be distilled water or a mostly water ingredient like a hydrosol, aloe vera juice, or witch hazel (or a blend!).",
       "category": "face",
-      "process": "Weigh the soft xanthan gum, glycerin, and Liquid Germall&#x2122; Plus into a beaker. Stir to combine.\nAdd the remaining ingredients; stir.\nCover and leave the mixture to allow the soft xanthan gum time to hydrate and activate.\nAfter 20–30 minutes the soft xanthan gum should be all hydrated. Stir the mixture until uniform, and then it’s ready to package!\nThis formulation is noticeably thicker than the 5-ingredient one, but it’s still pretty fluid. I recommend a bottle fitted with an orifice reducer, a treatment pump cap, or an eye dropper top for formulations with this level of viscosity.\nOur fourth formulation can be found here: Brighten & Boost Facial Serum. This formulation lives up to its name, featuring the powerful brightening duo of niacinamide (Vitamin B3) and N-Acetyl Glucosamine (NAG), plus a collection of ingredients to boost barrier performance and keep the skin hydrated, calm, and happy.\nHow long will these serums last?\nThese serums should easily last at least a year—likely closer to 2.\nHow should I use these serums?\nI like to apply my niacinamide (Vitamin B3) serums after cleansing and before oil serums and/or creams. In the summer I love to use the mist whenever I'm feeling hot and could use a bit of topical refreshment.\nFor best results, I do recommend following up these serums (and any watery serums/toners/solutions) with a cream or oil serum to help keep the hydration in.\nIs niacinamide (Vitamin B3) considered natural?\nIs niacinamide (Vitamin B3) vegan?\nRelevant links & further reading\nNiacinamide (Vitamin B3) in the Humblebee & Me Encyclopedia\nPanthenol (Vitamin B5) in the Humblebee & Me Encyclopedia\nHyaluronic Acid in the Humblebee & Me Encyclopedia\nVegetable Glycerin in the Humblebee & Me Encyclopedia\nLiquid Germall Plus in the Humblebee & Me Encyclopedia\nDistilled water in the Humblebee & Me Encyclopedia\nXanthan Gum in the Humblebee & Me Encyclopedia\nCitric Acid in the Humblebee & Me Encyclopedia\nWatch glass in the Humblebee & Me Encyclopedia\nWh"
+      "process": "1. Blend the thickener and humectant in a beaker until smooth.\n2. Incorporate the active ingredients and distilled water, stirring well.\n3. Allow the mixture to sit for 20–30 minutes to ensure full hydration of the gelling agent.\n4. Verify the final pH level and adjust as necessary to ensure skin compatibility.\n5. Transfer to a bottle equipped with a dropper or treatment pump.",
+      "processRewritten": true
     },
     {
       "id": "hyaluronic-acid-serum-3-vs-5-vs-8-ingredients",
@@ -5163,7 +5169,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/hyaluronic-acid-serum-3-vs-5-vs-8-ingredients/",
       "heatRequired": false,
       "equipment": [],
-      "description": "In this post I&#8217;m going to teach you how to make three different hyaluronic acid serums; one with 3 ingredients, one with 5, and one with 8. Each formulation builds on the one before it so you can see how to modify and expand on (or, if done in …",
+      "description": "A modular series of hyaluronic acid serums designed for intensive hydration. Formulated with varying levels of active ingredients, including panthenol and rice protein.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -5232,7 +5238,8 @@
       ],
       "notes": "Save 20% on soft xanthan gum and everything else at Formulator Sample Shop with coupon code HUMBLEBEE If you don&#8217;t have xanthan gum you could try a different gelling ingredient or gum instead; I think a 1-for-1 swap to Polyacrylate crosspolymer-6 (Sepimax ZEN), Ammonium Acryloyldimethyltaurate/VP Copolymer (Aristoflex AVC), Hydroxyethylcellulose, or Solagum AX could work well. Other gelling ",
       "category": "face",
-      "process": "Weigh the soft xanthan gum and Liquid Germall&#x2122; Plus into a beaker. Stir to combine, and then add the protein. Stir again.\nAdd the hyaluronic acid solution and rose hydrosol, stirring between additions.\nAdd the panthenol (Vitamin B5) and allantoin; stir.\nAdd the distilled water; stir.\nCover and leave the mixture to allow the soft xanthan gum time to hydrate and activate.\nAfter 20–30 minutes the soft xanthan gum should be all hydrated. Stir the mixture until uniform, and then it's ready to package!\nThis formulation is a bit thicker than the 3-ingredient one, but it's still pretty fluid. I like a bottle fitted with an orifice reducer for formulations with this level of viscosity; this allows me to shake a few drops into my palm to apply. A bottle with a dropper top will also work.\nHow long will these serums last?\nThese serums should easily last at least a year—likely closer to 2.\nHow should I use these serums?\nI like to apply hyaluronic acid serums after cleansing and before oil serums and/or creams. If you're using my Easy DIY Vitamin C Suspension (Just 3 ingredients!) these hyaluronic acid solutions are perfect for palm mixing with it to pre-dissolve the L-ascorbic acid in the moment before use.\nFor best results, I do recommend following up these serums (and any watery serums/toners/solutions) with a cream or oil serum to help keep the hydration in.\nCan I use more hyaluronic acid?\nYou can, but you don't need to. It's a really expensive ingredient, so I opt for a low-but-effective concentration.\nWhy do big companies use higher concentrations of hyaluronic acid?\nProbably because they've got far stronger purchasing power than we do, so they can really drive the cost per gram down when they buy their hyaluronic acid 1000kg at a time. Studies have shown 0.2% is effective, but for consumers who haven't read those studies, 2% sounds better.\nRelevant links & further reading\nHyaluronic Acid in the Humblebee & Me Encyclopedia\nAllantoin in the Humblebee & Me Encyclopedia"
+      "process": "1. Combine the gelling agent and preservative in a beaker and stir until uniform.\n2. Incorporate the active solutions and hydrosols while stirring steadily.\n3. Add the remaining water-soluble ingredients and water, then mix well.\n4. Allow the serum to sit for at least 30 minutes for full hydration before packaging.",
+      "processRewritten": true
     },
     {
       "id": "easy-2-salicylic-acid-solution",
@@ -5241,7 +5248,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/easy-2-salicylic-acid-solution/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This post and the partner video are sponsored by Essential Wholesale.",
+      "description": "A 2% BHA (salicylic acid) solution designed for chemical exfoliation. Formulated with propylene glycol as a solvent to ensure stability and effectiveness.",
       "ingredients": [
         {
           "name": "Salicylic Acid Powder",
@@ -5278,7 +5285,8 @@
       ],
       "notes": "The key ingredientsThe starThe solventSoothing ActivesPreservativepH adjustmentA bit about our sponsorRelevant links &amp; further readingEasy 2% BHA SolutionShelf Life &amp; StorageSubstitutionsSimilar Formulations The key ingredients",
       "category": "face",
-      "process": "Weigh the salicylic acid and propylene glycol in a beaker. Stir to combine, cover, and leave to dissolve. This will take about an hour.\nIn a second beaker, combine the distilled water, panthenol, and allantoin. Stir to combine, cover, and leave to dissolve.\nWhen the salicylic acid has dissolved, stir the water and salicylic acid mixtures together. Add the phenoxyethanol and NaOH solution. Stir to combine.\nOnce the mixture is uniform, it's time to test and adjust the pH."
+      "process": "1. Measure the salicylic acid and solvent into a beaker, cover, and allow to sit until fully dissolved.\n2. In a separate container, combine the water and water-soluble soothing agents.\n3. Once the acid is dissolved, merge the two mixtures and stir until uniform.\n4. Test the pH and adjust to a skin-compatible range before storage.",
+      "processRewritten": true
     },
     {
       "id": "easy-diy-vitamin-c-suspension-just-3-ingredients",
@@ -5287,7 +5295,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/3-ingredient-vitamin-c/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Learn more: Ultimate Vitamin C Skincare Guide Part 1: Ascorbic Acid (with video) from Lab Muffin",
+      "description": "An anhydrous vitamin C suspension featuring 23% L-ascorbic acid. Formulated with silicone gel to provide a stable, water-free delivery system for the active ingredient.",
       "ingredients": [
         {
           "name": "L-ascorbic Acid, 21% Isoamyl Cocoate, 76% Silicone Gel 5% L-ascorbic Acid, 21% Isoamyl Cocoate, 74% Silicone Gel 10% L-ascorbic Acid, 20% Isoamyl Cocoate, 70% Silicone Gel 15% L-ascorbic Acid, 19% Isoamyl Cocoate, 66% Silicone Gel 20% L-ascorbic Acid, 18% Isoamyl Cocoate, 62% Silicone Gel",
@@ -5308,7 +5316,8 @@
       ],
       "notes": "If you can’t get a silicone gel you’ll need some sort of ultra-lightweight, water-free gel/paste/soft solid to suspend the vitamin C in. I&#8217;m afraid I don&#8217;t have any readily available suggestions for this, especially if you want something natural. (Aloe vera gel is not water free—it&#8217;s almost entirely water and will absolutely not work for this formulation).",
       "category": "face",
-      "process": "Using a precise scale, weigh all the ingredients for the base into a beaker. Stir thoroughly to combine. Once the mixture is uniform, package it up!\nYou can also weigh the ingredients into a plastic bag; smoosh to combine, and then you can snip off a corner to pipe the suspension into its packaging.\nTo use this formulation, mix a small amount (about half of a pea-sized amount) in your palm with a mild skincare product that contains some water, and massage that mixture into your face.\nI typically apply my vitamin C as the first step after cleansing, and then follow up with a lotion or oil-based serum. I usually apply my vitamin C in the morning (where it can help boost sunscreen performance), saving other potentially irritating products like my lactic acid solution for the evening."
+      "process": "1. Measure all ingredients into a beaker or mixing bag.\n2. Stir or knead the mixture until the powder is uniformly suspended and no clumps remain.\n3. Transfer to a squeeze tube or bottle.\n4. For use, mix a small amount in the palm with a water-based product immediately before application.",
+      "processRewritten": true
     },
     {
       "id": "5-lactic-acid-hyaluronic-acid-exfoliating-serum",
@@ -5317,7 +5326,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/5-lactic-acid-hyaluronic-acid-exfoliating-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Save 20% on soft xanthan gum and everything else at Formulator Sample Shop with coupon code HUMBLEBEE",
+      "description": "A 5% lactic acid and hyaluronic acid serum designed for gentle chemical exfoliation and hydration. Formulated with skin-soothing allantoin and panthenol.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -5362,7 +5371,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the formulation, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the water, hyaluronic acid solution, panthenol, and allantoin into a beaker. Stir to combine, cover, and leave to dissolve.\nWhile you're waiting, stir the propanediol, soft xanthan gum, and Polyquaternium 10 together in a second beaker.\nAdd the lactic acid, Liquid Germall&#x2122; Plus, and NaOH solution to the water mixture. Stir.\nPour the water mixture into the gum mixture, and stir to combine. Cover the mixture and give the thickeners time to fully hydrate; you can speed this along by blending the mixture with a Mini Mixer.\nOnce the mixture is uniform, it's time to test and adjust the pH."
+      "process": "1. Combine the water, hyaluronic acid solution, and dry soothing agents in a beaker and stir until dissolved.\n2. In a separate beaker, blend the humectant and gelling agents until smooth.\n3. Merge the two mixtures and add the lactic acid and preservative.\n4. Stir vigorously until uniform and allow the thickeners to hydrate before final pH adjustment.",
+      "processRewritten": true
     },
     {
       "id": "beginner-friendly-salicylic-acid-squalane-serum",
