@@ -748,7 +748,7 @@
     const totalEl = el('div', 'pct-total pct-warn', '');
     body.appendChild(totalEl);
 
-    if (recipe.process) {
+    if (recipe.process && recipe.heatRequired) {
       const tog = el('button', 'process-toggle', '');
       tog.appendChild(el('span', 'ptoggle-arrow', '▶'));
       tog.appendChild(el('span', null, ' Process'));
