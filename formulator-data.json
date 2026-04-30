@@ -604,7 +604,13 @@
     "Patchouli",
     "Cedarwood",
     "Sage",
-    "Vetiver"
+    "Vetiver",
+    "Best For Kids &amp; Elderly",
+    "For Adults",
+    "For Remedies &amp; Specific Issues",
+    "Of The Total Weight 10% Of The Total Weight 20% Of The Total Weight",
+    "Soy Bean Oil",
+    "Superfat/lye Discount"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -22851,6 +22857,972 @@
       ],
       "notes": "While I was in grade school we lived in China for 3 months, due to my fathers work. I LOVE Oolong tea. However, I can not find it anywhere, with the exception of a bulk store and you have to buy 20 boxes. As much as I love tea, that&#8217;s a bit much. I thought World Market would have it, but our store doesn&#8217;t carry it. Suggestions on a substitution, or shall I continue my search? 🙂",
       "category": "simple"
+    },
+    {
+      "id": "vegan-cocoa-coconut-nanaimo-bar-soap",
+      "name": "Vegan Cocoa Coconut Nanaimo Bar Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/vegan-cocoa-coconut-nanaimo-bar-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The Nanaimo bar-y tribute starts right with the fat blend—a vegan mixture starring mouthwatering cocoa butter and virgin coconut oil, both from Baraka Shea Butter (which is headquartered about an hour&#8217;s drive from the home of the Nanaimo bar!).…",
+      "ingredients": [
+        {
+          "name": "Virgin Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 20
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "super-simple"
+    },
+    {
+      "id": "watermelon-mint-lip-scrub",
+      "name": "Watermelon Mint Lip Scrub",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/watermelon-mint-lip-scrub/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Save 8% on watermelon seed oil and everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "ingredients": [
+        {
+          "name": "Watermelon Seed Oil",
+          "pct": 35.5
+        },
+        {
+          "name": "Stearic Acid",
+          "pct": 11
+        },
+        {
+          "name": "White Sugar",
+          "pct": 50
+        },
+        {
+          "name": "Pink Mica",
+          "pct": 0.5
+        },
+        {
+          "name": "Poppy Seeds",
+          "pct": 1.5
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        },
+        {
+          "name": "Peppermint Essential Oil",
+          "pct": 1
+        }
+      ],
+      "notes": "A touch of pink mica colours the bulk of the scrub a pretty melon-y pink, and some peppermint essential oil gives the whole thing a lovely minty scent. If you want to incorporate a watermelon-y note you could look for a watermelon flavour oil; don&#8217;t use a fragrance oil, as they aren&#8217;t approved for use in lip products. The finished scrub is lovely in a small tin or jar, and is just the ",
+      "category": "super-simple"
+    },
+    {
+      "id": "white-chocolate-peppermint-lip-scrub",
+      "name": "White Chocolate Peppermint Lip Scrub",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/white-chocolate-peppermint-lip-scrub/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Rounding out the scrub is a bit of tingly peppermint essential oil and some vitamin E to help delay the onset of rancidity, extending the shelf life. The finished scrub is soft, squishy, and scrubby—simply buff a small amount into your lips, rinse, a…",
+      "ingredients": [
+        {
+          "name": "Cocoa Butter",
+          "pct": 18
+        },
+        {
+          "name": "Fractionated Coconut Oil",
+          "pct": 30.5
+        },
+        {
+          "name": "White Sugar",
+          "pct": 50
+        },
+        {
+          "name": "Peppermint",
+          "pct": 1
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "super-simple"
+    },
+    {
+      "id": "puppy-paw-paste",
+      "name": "Puppy Paw Paste",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/puppy-paw-paste/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Puppy Paw Paste is simple. Three, easy peasy ingredients. Soft, creamy mango butter. A lightweight oil—I used sweet almond, but apricot kernel, safflower oil, or grapeseed oil would all be easy alternatives. There&#8217;s a touch of vitamin E oil to …",
+      "ingredients": [
+        {
+          "name": "Mango Butter",
+          "pct": 50
+        },
+        {
+          "name": "Sweet Almond Oil",
+          "pct": 49.5
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "super-simple"
+    },
+    {
+      "id": "relaxing-essential-oil-roller",
+      "name": "Relaxing Essential Oil Roller",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/relaxing-essential-oil-roller/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "When you start researching relaxing and calming essential oils there&#8217;s certainly no shortage of suggestions, and while it&#8217;s always tempting to make a mega-melange of every essential oil anybody has ever thought was relaxing, I made a cons…",
+      "ingredients": [
+        {
+          "name": "Best For Kids &amp; Elderly",
+          "pct": 1
+        },
+        {
+          "name": "For Adults",
+          "pct": 2
+        },
+        {
+          "name": "For Remedies &amp; Specific Issues",
+          "pct": 3
+        }
+      ],
+      "notes": "Looking for information on essential oil substitutions? Read this.",
+      "category": "super-simple"
+    },
+    {
+      "id": "green-tea-silk-soap",
+      "name": "Green Tea  Silk Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/green-tea-and-silk-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "Annie was the first person who suggested silk soap to me, and it was like a thunderclap. I immediately wondered what rock I&#8217;d been living under for the past few years as it is such a brilliant idea (thanks, Annie!). So, silk soap has been on my…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "1 tbsp white kaolin clay (USA / Canada) 1 tsp silk peptides or silk powder 1 tbsp green tea botanical extract or matcha powder or replace the water with chilled green tea",
+      "category": "super-simple"
+    },
+    {
+      "id": "lavender-bergamot-soap",
+      "name": "Lavender  Bergamot Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lavender-bergamot-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "I may have a lavender problem. At last count, I had six different types of lavender essential oil in my cupboard (though in my defense, New Directions had a lavender sale last year). Anyhow, that surplus got me thinking about all the different things…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Of The Total Weight 10% Of The Total Weight 20% Of The Total Weight",
+          "pct": 50
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "dead-sea-soap",
+      "name": "Dead Sea Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/dead-sea-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "The base is a variation on my all in one soap, with slightly more beef tallow (USA / Canada) and a bit less olive oil (pomace) (USA / Canada). I let the oils and lye water come to room temperature overnight before combining them, so I had some time t…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "campfire-soap",
+      "name": "Campfire Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/campfire-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "These lovely bars are reminiscent of a summer twilight campfire—smoke, pine, and hippies (perhaps from the next campsite?). They&#8217;re like a small burst of summer.",
+      "ingredients": [
+        {
+          "name": "Soy Bean Oil",
+          "pct": 20
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Lard",
+          "pct": 14
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Stearic Acid",
+          "pct": 1
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "Smokey, woodsy, speaking of which..what are your thoughts on substituting Ucuuba (woodsy!) for the shea butter?",
+      "category": "super-simple"
+    },
+    {
+      "id": "gentle-coconut-milk-soap",
+      "name": "Gentle Coconut Milk Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/gentle-coconut-milk-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "Gentle Coconut Milk Soap 20% olive oil (pomace) (USA / Canada)",
+      "ingredients": [
+        {
+          "name": "Soy Bean Oil",
+          "pct": 20
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Lard",
+          "pct": 14
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Stearic Acid",
+          "pct": 1
+        }
+      ],
+      "notes": "Love the idea of a gentle soap like this! Wonder if I could substitute Oat oil instead of the Soy bean oil? Or is it not as thick? Thank you again for sharing such awesome recipes!",
+      "category": "super-simple"
+    },
+    {
+      "id": "peppermint-eucalyptus-soap",
+      "name": "Peppermint  Eucalyptus Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/peppermint-eucalyptus-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "I chose to colour the soap blue and green, using clay and some blue ultramarine. The shades I blended up really remind me of the Blue Mountains in Australia. Deep green trees, with a blue misty haze floating above them, blending into the sky. Sigh. I…",
+      "ingredients": [
+        {
+          "name": "Soy Bean Oil",
+          "pct": 20
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Lard",
+          "pct": 14
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Stearic Acid",
+          "pct": 1
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "lavender-lemon-soap",
+      "name": "Lavender  Lemon Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lavender-lemon-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "I chose lavender &amp; white swirls, but lavender &amp; yellow, or yellow and white are also great ideas, depending on what you&#8217;ve got on hand. I elected to leave out lavender buds for a smoother soap, but they&#8217;d make an excellent additio…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 20
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "candy-cane-christmas-soap",
+      "name": "Candy Cane Christmas Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/candy-cane-christmas-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "Anyhow, I digress. I just loved the idea of a candy cane soap for Christmas this year. Something crisp and bright, with a mellowing note of vanilla, and fun swirls of red, green, and white. So perfect for Christmas that it&#8217;s pretty much cliché.…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard Or Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "If you want to get fancy, you can also add a bit of French Green clay to the green part, and some Australian red reef clay to the red part. I did this, but left it out of the recipe since it didn&#8217;t really make that big of a difference in the final product and requires more ingredients.",
+      "category": "super-simple"
+    },
+    {
+      "id": "hot-chocolate-soap",
+      "name": "Hot Chocolate Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/hot-chocolate-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The subtle scent comes from all over—high quality cocoa powder, vanilla flecks, cocoa absolute, and vanilla essential oil. The base is whole milk and coffee, lending a creamy, deeply nuanced base to the bar. Dark rhassoul and French Red clay boost th…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard Or Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "The subtle scent comes from all over—high quality cocoa powder, vanilla flecks, cocoa absolute, and vanilla essential oil. The base is whole milk and coffee, lending a creamy, deeply nuanced base to the bar. Dark rhassoul and French Red clay boost the bar’s slip and cleansing power, while contributing to the final colour. I’ll forgive you if you want to eat the bars, but I wouldn’t recommend it.",
+      "category": "super-simple"
+    },
+    {
+      "id": "tigger-soap-halloween-soap",
+      "name": "Tigger Soap (Halloween Soap)",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/tigger-soap-halloween-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The orange stripes get their colour from buriti oil. It’s a bright orange carrier oil that supposedly has a host of benefits and what not, but I’ve never really liked it for anything other than its colour in soap (mostly because its colour in anythin…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard Or Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "cinnamon-patchouli-soap",
+      "name": "Cinnamon  Patchouli Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/cinnamon-patchouli-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Right around this time of year I find I’m really drawn to deep, spicy, complex scents. Something interesting and unique, with just a hint of the familiar. Something like cinnamon and patchouli.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard Or Beef Tallow",
+          "pct": 15
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 10
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "lavender-patchouli-soap",
+      "name": "Lavender Patchouli Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lavender-patchouli-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "My inner hippie (who is not very inner, let&#8217;s be honest) loves patchouli. And lavender. And the smell of rotting trees in the forest, and of the dirt and moss waking up in the spring. Fantastic. This soap is those things. Deep, earthy, a bit sm…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 15
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 10
+        }
+      ],
+      "notes": "20g lavender essential oil 14g dark patchouli essential oil 3g curcuma essential oil (optional, can replace with patchouli) 3g hydacheim essential oil (optional, can replace with patchouli) 1 tsp ultramarine pink oxide 1 tbsp white kaolin clay (USA / Canada) 1 tbsp rhassoul clay",
+      "category": "super-simple"
+    },
+    {
+      "id": "gin-tonic-soap",
+      "name": "Gin  Tonic Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/gin-tonic-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "This soap smells wonderfully of summer, assuming you associate the smell of gin and tonic with the smell of summer. Otherwise, it smells mostly of citrus, with a hint of dry juniper. It&#8217;s yellow with orange swirls, and just the thing for summer…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 15
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 10
+        }
+      ],
+      "notes": "Can the lard be replaced with Crisco?",
+      "category": "super-simple"
+    },
+    {
+      "id": "cinnamon-oatmeal-soap",
+      "name": "Cinnamon Oatmeal Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/cinnamon-oatmeal-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "I&#8217;ve wanted to make an oatmeal milk bar for a long time—they&#8217;re one of the quintessential bars of soap. Mild, classic, and comforting. So I finally got around to making one&#8230; and the strangest thing happened overnight. It turned brig…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard Or Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Oat Oil",
+          "pct": 5
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "jasmine-lavender-and-sandalwood-soap",
+      "name": "Jasmine, Lavender, and Sandalwood Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/jasmine-lavender-and-sandalwood-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "This soap is rather intoxicating; sweet, spicy, and reminiscent of steamy beaches in southern Asia (if I had any memories such memories, that is). I love its soft purple swirl, its rich lather, and the slip the clay adds, making it a great shaving so…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 20
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "patchouli-mint-swirl-soap",
+      "name": "Patchouli Mint Swirl Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/patchouli-mint-swirl-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "The entire batch is green thanks to some Australian Olive Green clay, and the darker streaks come from a bit of added green chromium oxide. You could also use French Green clay, or go another route entirely and use something brown or taupe.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 20
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "Anyhow, this soap combines the wonderful, dusty/spicy earthiness of patchouli with the bright, clean scents of spearmint and eucalyptus. You could say this is a more manly soap if you wanted too—I&#8217;ve certainly never objected to men smelling of patchouli. It makes me want to go explore the forest with them, where we will hopefully stumble upon Woodstock and go live in a world of free love and",
+      "category": "super-simple"
+    },
+    {
+      "id": "grapefruit-calendula-soap",
+      "name": "Grapefruit  Calendula Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/grapefruit-calendula-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "There&#8217;s something about citrus that makes it perfect for morning showers. Bright, happy, clean, and refreshing. Grapefruit is a nice quasi fringe citrus fruit—lemon and lime are so cliché, don&#8217;t you think?",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Lard Or Beef Tallow",
+          "pct": 15
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Can I replace the lard/tallow in this recipe with more sheabutter?",
+      "category": "super-simple"
+    },
+    {
+      "id": "vinolia-soap-re-creation-the-soap-on-the-rms-titanic",
+      "name": "Vinolia Soap Re-Creation (The Soap on the RMS Titanic)",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/vinolia-soap-re-creation-the-soap-on-the-rms-titanic/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "It was only a matter of time before my love of Titanic merged with my new soaping hobby. The first class soap on the RMS Titanic was called Vinolia—Vinolia Otto Toilet Soap. The &#8220;otto&#8221; being for the type of rose, I presume, as the soap is…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 20
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "snowdrift-soap",
+      "name": "Snowdrift Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/snowdrift-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Back when Jess &amp; I made Christmas Stripe soap, we also made this soap, which I&#8217;m calling Snowdrift soap. It smells of wintergreen and spearmint, and has a nice wintery, holiday feel without taking the traditional red/white/green + cinnamon …",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Lard",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Have fun with your soap &#038; let me know how it goes! You can post a photo on my Facebook page if you want 🙂",
+      "category": "super-simple"
+    },
+    {
+      "id": "christmas-stripe-soap",
+      "name": "Christmas Stripe Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/christmas-stripe-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "This may seem a bit early for Christmas, but with soap&#8217;s minimum 3-week aging time, it&#8217;s actually a bit late. I made this soap the second week of November with my friend Jess to have it ready in time to give as Christmas gifts. It&#8217;s…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "setTimeout(function(){var ct_input_name = \"ct_checkjs_ce78d1da254c0843eb23951ae077ff5f\";if (document.getElementById(ct_input_name) !== null) {var ct_input_value = document.getElementById(ct_input_name).value;document.getElementById(ct_input_name).value = document.getElementById(ct_input_name).value.replace(ct_input_value, '3392d76d4c50ff8d24d6970e1c9506e814caf25f74087be469c1fc6583f3c40b');}}, 1000",
+      "category": "super-simple"
+    },
+    {
+      "id": "autumn-shea-soap",
+      "name": "Autumn Shea Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/autumn-shea-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I&#8217;m a big fan of Shea butter, and while it&#8217;s great in body butters, I find I like it best in soap. It&#8217;s nicely moisturizing and I find the lather is luxuriously creamy. It&#8217;s not a particularly hard fat, so soaps made with Shea…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "setTimeout(function(){var ct_input_name = \"ct_checkjs_2f55707d4193dc27118a0f19a1985716\";if (document.getElementById(ct_input_name) !== null) {var ct_input_value = document.getElementById(ct_input_name).value;document.getElementById(ct_input_name).value = document.getElementById(ct_input_name).value.replace(ct_input_value, '3392d76d4c50ff8d24d6970e1c9506e814caf25f74087be469c1fc6583f3c40b');}}, 1000",
+      "category": "super-simple"
+    },
+    {
+      "id": "lavender-rosemary-soap",
+      "name": "Lavender  Rosemary Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lavender-rosemary-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I settled on making 1.5kg of soap as that&#8217;s all my mold can hold. I used white kaolin clay (USA / Canada) since it&#8217;s white, and a combination of unrefined shea butter (USA / Canada) and beef tallow (USA / Canada) for the hard oils. I bash…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 13
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 7
+        },
+        {
+          "name": "Superfat/lye Discount",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "coconut-lime-soap",
+      "name": "Coconut Lime Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/coconut-lime-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I&#8217;m a big fan of coconut. It smells just like summer. And pina coladas. And yum. Unfortunately, there is no such thing as coconut essential oil, so I had to go the fragrance oil route if I wanted a coconut scented anything. After holding out fo…",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 15
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "Have you every tried replacing the beef tallow with lard, would it work just as well? I would like to try this recipe but I don&#8217;t have beef tallow.",
+      "category": "super-simple"
+    },
+    {
+      "id": "5-alive-soap",
+      "name": "5-Alive Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/5-alive-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I worked the soap to a thick trace and layered the different colours and scents to create a pretty 5-layered soap. It smells pretty, works well, and looks pretty groovy.",
+      "ingredients": [
+        {
+          "name": "Olive Oil",
+          "pct": 30
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 15
+        }
+      ],
+      "notes": "setTimeout(function(){var ct_input_name = \"ct_checkjs_afd4836712c5e77550897e25711e1d96\";if (document.getElementById(ct_input_name) !== null) {var ct_input_value = document.getElementById(ct_input_name).value;document.getElementById(ct_input_name).value = document.getElementById(ct_input_name).value.replace(ct_input_value, '3392d76d4c50ff8d24d6970e1c9506e814caf25f74087be469c1fc6583f3c40b');}}, 1000",
+      "category": "super-simple"
+    },
+    {
+      "id": "shave-it-up-homemade-shaving-soap",
+      "name": "Shave it up: Homemade Shaving Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/shave-it-up/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Follow the directions I&#8217;ve laid out in my entry on making your own soap, adding the clay to the oils as they cool.",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Beef Tallow",
+          "pct": 20
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 10
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
     }
   ]
 }
