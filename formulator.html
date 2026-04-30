@@ -140,6 +140,12 @@
     .pct-warn { color: var(--red); }
 
     .source-notes { font-size: 0.75rem; color: var(--text-dim); line-height: 1.5; margin-bottom: 12px; padding: 8px 10px; background: var(--surface-hi); border-radius: 5px; border-left: 2px solid var(--border-hi); }
+    .process-toggle { background: none; border: none; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); cursor: pointer; padding: 8px 0 4px; display: flex; align-items: center; gap: 5px; }
+    .process-toggle:hover { color: var(--text-mid); }
+    .process-toggle .ptoggle-arrow { font-size: 0.5rem; transition: transform 0.15s; }
+    .process-toggle.open .ptoggle-arrow { transform: rotate(90deg); }
+    .process-body { display: none; font-size: 0.78rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 12px; padding: 8px 10px; background: var(--surface-hi); border-radius: 5px; border-left: 2px solid var(--heat-bg); white-space: pre-wrap; }
+    .process-body.open { display: block; }
     .notes-label { font-family: 'DM Mono', monospace; font-size: 0.6rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin: 12px 0 5px; display: block; }
     .user-notes { width: 100%; min-height: 52px; background: var(--bg); border: 1px solid var(--border); color: var(--text-mid); border-radius: 5px; padding: 8px 10px; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; line-height: 1.5; resize: vertical; margin-bottom: 12px; }
     .user-notes:focus { outline: none; border-color: var(--gold-dim); }
@@ -741,6 +747,16 @@
 
     const totalEl = el('div', 'pct-total pct-warn', '');
     body.appendChild(totalEl);
+
+    if (recipe.process) {
+      const tog = el('button', 'process-toggle', '');
+      tog.appendChild(el('span', 'ptoggle-arrow', '▶'));
+      tog.appendChild(el('span', null, ' Process'));
+      const pb = el('div', 'process-body', recipe.process);
+      tog.addEventListener('click', () => { tog.classList.toggle('open'); pb.classList.toggle('open'); });
+      body.appendChild(tog); body.appendChild(pb);
+    }
+
     if (recipe.notes) body.appendChild(el('div', 'source-notes', recipe.notes));
 
     // My notes
