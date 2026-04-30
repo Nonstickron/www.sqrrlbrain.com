@@ -25830,7 +25830,7 @@
         "Immersion blender",
         "Stand/hand mixer"
       ],
-      "description": "DIY Green Smoothie Whipped Body Butter DIY from Soap Queen.",
+      "description": "A nutrient-rich whipped body butter featuring avocado butter and green tea extract. Formulated for high emolliency and a soft, airy texture with a skin-compatible pH.",
       "ingredients": [
         {
           "name": "Avocado Butter",
@@ -25842,8 +25842,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large bowl, measure out 15 oz. of avocado butter. Using a hand blender or stand mixer, whip the butter on medium speed until it’s fluffy and smooth. This will take about 1-2 minutes. Periodically scrape the sides of the bowl with a spatula.\nAdd 4.2 oz. of grapeseed oil, 5 mL of green tea extract and 5 mL of Green Smoothie Fragrance Oil. Turn the hand blender on low so the oil doesn’t splatter out of the bowl, then gradually increase the speed to medium. Whip for another minute, scraping the sides of the bowl with a spatula periodically, until the liquids are fully incorporated.\nAdd 5 tsp. of arrowroot powder. Using a spatula, hand stir the powder until it’s mostly mixed in. Then, mix with the hand blender on low speed and gradually increase to medium. Blend for another 1-2 minutes to fully incorporate all the ingredients. Spoon the butter evenly into jars and enjoy!",
-      "category": "body"
+      "process": "1. Soften the avocado butter in a large mixing bowl using a hand or stand mixer on medium speed for 2 minutes.\n2. Gradually incorporate the liquid carrier oils, green tea extract, and fragrance.\n3. Whip for one minute until the liquids are fully integrated.\n4. Fold in the starch and perform a final whip for 2 minutes until the butter is light and fluffy.\n5. Transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "sunshine-lotion-tutorial",
@@ -25855,7 +25856,7 @@
         "Immersion blender",
         "Stove"
       ],
-      "description": "DIY Sunshine Lotion Tutorial from Soap Queen.",
+      "description": "A brightening facial lotion featuring argan oil and oat extract. Formulated for high stability and a lightweight, fast-absorbing skin finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -25891,8 +25892,9 @@
         }
       ],
       "notes": "",
-      "process": "In a heat safe container, combine the sweet almond oil, argan oil, emulsifying wax and stearic acid. Heat the container in the microwave using 30-60 second bursts until the waxes have fully melted and the mixture is about 160° F. Set aside.\nIn a separate container, add the distilled water and glycerin. Heat to 160° F.\nAdd the diluted Canary LabColor and stick blend it in thoroughly. Be sure to dilute your LabColor before use! Learn how to dilute LabColors here.\nAdd the Sunflower Fragrance Oil and Southern Peach Fragrance Oils. Stick blend to combine.\nOnce the lotion is below 120°F, add the oat extract and Optiphen. Using the stick blender, mix for an additional 60-90 seconds until the mixture is fully incorporated.\nCarefully pour it into bottles. Let the bottles sit overnight without a cap (otherwise condensation can form inside the bottle). Once completely cooled, place the caps on the bottles and enjoy!",
-      "category": "body"
+      "process": "1. Heat the oil phase and emulsifiers in a water bath or microwave until the temperature reaches 70°C (160°F).\n2. Heat the distilled water and humectants to the same temperature in a separate container.\n3. Combine the phases and blend with an immersion blender to form a stable emulsion.\n4. Once the mixture drops below 49°C (120°F), incorporate the active extracts and preservative.\n5. Continue blending for 90 seconds and transfer to storage bottles.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "gingerbread-man-lotion-bars",
@@ -25903,7 +25905,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Gingerbread Man Lotion Bars from Soap Queen.",
+      "description": "Seasonal solid lotion bars featuring coffee butter and avocado oil. Designed to provide a protective, gingerbread-scented emollient layer that melts on skin contact.",
       "ingredients": [
         {
           "name": "White Beeswax",
@@ -25923,8 +25925,9 @@
         }
       ],
       "notes": "",
-      "process": "In a small heat safe container, add the white beeswax, coffee butter, cocoa butter, jojoba oil and avocado oil. Place in the microwave and melt using 1 minute bursts until all the oils, butter and wax is completely melted. Be very careful when removing the container, it may be very hot.\nMeasure out the Cinnamon Sugar Fragrance Oil, and add to the melted mixture. Use a spoon to thoroughly mix in the fragrance oil.\nIf the mixture is extremely hot (over 140° F), stir the mixture until it cools. If you pour the mixture into the mold while it’s extremely hot, it may warp the mold. Once it has cooled to below 140° F, carefully pour the mixture into the molds and allow to thoroughly cool and harden. This can take several hours, so be patient =)\nOnce the bars have completely cooled, remove them from the mold by pulling on the sides of the mold to release the airlock. Then, firmly press the back of each cavity with your thumb or the palm of your hand until the bars pop out. Next, mix 1/2 tsp. Copper Sparkle Mica into 1/2 Tbs. rubbing alcohol. Stir to get rid of any clumps.\nUse a small paintbrush to paint the details of the gingerbread man mold with the mica mixture. Allow the mica details to completely dry.\nOnce you’ve painted all the details, the bars are ready to use! For the first couple uses, the mica will leave a soft shimmer on the skin. Store these bars in a cool place, because they can melt in higher temperatures!",
-      "category": "body"
+      "process": "1. Melt the base oils, butters, and waxes in a heat-safe container using one-minute microwave bursts.\n2. Stir in the fragrance oils until fully integrated.\n3. Allow the mixture to cool below 60°C (140°F) before pouring into silicone moulds.\n4. Allow the bars to solidify completely for several hours.\n5. Optionally, decorate the set bars with a mica and alcohol slurry.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "whipped-amber-bronzing-body-butter",
@@ -25936,7 +25939,7 @@
         "Stand/hand mixer",
         "Stove"
       ],
-      "description": "DIY Whipped Amber Bronzing Body Butter from Soap Queen.",
+      "description": "A shimmering whipped body butter featuring avocado and coffee butters. Formulated with bronze-toned micas for a radiant skin finish and intensive hydration.",
       "ingredients": [
         {
           "name": "Avocado Butter",
@@ -25952,8 +25955,9 @@
         }
       ],
       "notes": "",
-      "process": "In a heat safe container, add the cocoa butter and melt in the microwave using 1 minute bursts until the butter is liquid. Make sure your container can withstand high heat, as cocoa butter melts around 100 degrees F. Once melted, set aside to cool. If you are working with large chunks of cocoa butter, cut it into small pieces for easier melting.\nIn a large mixing bowl, add the avocado and coffee butters. Use a hand mixer (or stand mixer) to whip the butters together until completely smooth. Scrap the edges of the bowl to ensure the entire mixture is incorporated. Continue to whip the mixture on medium to ensure a smooth texture.\nCheck the temperature of your cocoa butter. You want it to be around 120 degrees or below. Very slowly, add about 1/4 of the melted cocoa butter, and whip until fully incorporated.\nContinue adding small amounts of the cocoa butter to the mixture, whipping between each addition until all the cocoa butter has been added. Continue to whip the mixture for several minutes to ensure the butters are fully mixed and completely smooth.\nAdd the Amber and Ancient Sedona Fragrance Oils. Whip for several seconds to fully mix in the fragrances.\nAdd the tapioca powder, and use a spatula to incorporate. Once it has been mixed in, whip with the hand mixer to further blend in the powder.\nAdd the Copper Sparkle Mica, and use the hand mixer to blend in until completely incorporated. Test the color on your skin. If you prefer a deeper color, add more Copper Sparkle Mica into the mixture 1 teaspoon at a time until you are happy with the color. Transfer the body butter into jars, and seal.",
-      "category": "body"
+      "process": "1. Melt the cocoa butter phase and set aside to cool below 49°C (120°F).\n2. Whip the avocado and coffee butters in a separate bowl until smooth.\n3. Gradually incorporate the melted cocoa butter into the whipped base, blending thoroughly.\n4. Add the fragrance, starch, and mica shimmer.\n5. Perform a final whip for several minutes until fluffy and transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "rose-aloe-in",
@@ -25966,7 +25970,7 @@
         "Stand/hand mixer",
         "Stove"
       ],
-      "description": "DIY Rose & Aloe In from Soap Queen.",
+      "description": "A hydrating rose and aloe-based emulsion formulated with green tea seed oil. Designed for high conditioning performance and intensive skin nourishment.",
       "ingredients": [
         {
           "name": "Aloe Vera Liquid",
@@ -25986,8 +25990,9 @@
         }
       ],
       "notes": "",
-      "process": "In a heat safe container, combine the avocado oil, green tea seed oil, BTMS-50, emulsifying wax, sodium lactate, glycerin and vitamin E oil. Heat the container in the microwave using 1 minute bursts until the waxes have fully melted. Set aside.\nIn a separate container, add the aloe vera liquid and heat to 150°F. Add the DL-panthenol to the liquid and stir to dissolve.\nOnce the lotion is below 120°F, add the aloe extract and optiphen. Using the stick blender, mix for an additional 60-90 seconds until the mixture is fully incorporated.\nAdd the Fuchsia Labcolor and stick blend to thoroughly combine.\nAdd the Crisp Apple Rose Fragrance Oil and stick blend to combine.\nWhen the lotion drops below 110°F, pour it into bottles. Let the bottles sit overnight without a cap (otherwise condensation can form inside the bottle).",
-      "category": "body"
+      "process": "1. Heat the oil phase and emulsifiers in a water bath until fully melted.\n2. Heat the aloe vera liquid to 65°C (150°F) and dissolve the panthenol.\n3. Combine the phases and blend with an immersion blender to form a stable emulsion.\n4. Once the mixture is below 49°C (120°F), incorporate the extracts and preservative.\n5. Continue blending and transfer to storage bottles when the temperature is below 43°C (110°F).",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "argan-oil-shampoo-recipe",
@@ -25999,7 +26004,7 @@
         "Immersion blender",
         "Stove"
       ],
-      "description": "DIY Argan Oil Shampoo Recipe from Soap Queen.",
+      "description": "A professional-grade liquid shampoo featuring argan oil and Potassium Cocoate. Designed for effective hair cleansing and improved shine with a skin-compatible pH.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -26011,8 +26016,9 @@
         }
       ],
       "notes": "",
-      "process": "EQUIPMENT PREP: Disinfect your utensils by dipping them in a 5% bleach water solution and allowing to dry. This includes mixing containers, your stick blender, and any spoons or spatulas that may come in contact with your lotion. Your products must be absolutely 100% free of germs, bacteria, microbes or anything so be safe and bleach water all your utensils.\nMeasure the distilled water into a disinfected heatsafe container. Heat the water in the microwave on 1 minute bursts until it reaches 150 degrees F.\nIn a second disinfected container, combine and heat the Potassium Cocoate, Argan Oil, and Liquid Crothix. Heat until the mixture reaches 150 degrees F.\nAdd the water to the oils. Stir or stick blend for 15 – 20 seconds to combine.\nOnce the temperature drops below 140 degrees F, add the Coconut Lemongrass Fragrance Oil, Optiphen ND and Carrot and Nettle Extracts. You can use a scale and measure in ounces, or use droppers to measure in milliliters (we found using droppers and measuring in milliliters was easier since the amounts are so small). Stir to combine.\nPour into bottles and leave uncovered overnight. Your shampoo is ready to use!",
-      "category": "body"
+      "process": "1. Disinfect all utensils. Heat the distilled water to 65°C (150°F).\n2. Heat the surfactant phase and argan oil in a separate container to 65°C (150°F).\n3. Merge the phases and blend with an immersion blender for 20 seconds.\n4. Once the temperature drops below 60°C (140°F), incorporate the extracts, fragrance, and preservative.\n5. Transfer to storage bottles and allow to set overnight.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "moisturizing-heel-butter-diy-free-label",
@@ -26023,7 +26029,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Moisturizing Heel Butter DIY + Free Label from Soap Queen.",
+      "description": "An intensive anhydrous balm for dry heels featuring shea butter and Cera Bellina. Designed for long-lasting protection and high skin-lipid replenishment.",
       "ingredients": [
         {
           "name": "Fractionated Coconut Oil",
@@ -26047,8 +26053,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large container, combine the Fractionated Coconut Oil, Avocado Oil and Castor Oil.\nIn a separate heat safe container, melt the Shea Butter, Cera Bellina Wax and Deodorized Cocoa Butter. Be sure to use an appropriate size container because if there is too much head space, you risk exploding the container in the microwave. Place in the microwave and heat on 30 second bursts until the mixture is liquid.\nAdd wax mixture to Fractionated Coconut Oil mixture and stir.\nNote: If the wax mixture solidifies as shown below, microwave the container on 30 second bursts until the mixture is fully melted and combined.\nPour heel butter into 8 oz. Bail Jar and allow to fully cool for 3 – 4 hours before using.\nYour balm is ready to use once it is solid! Store in a dry cool place to prevent it from melting.",
-      "category": "body"
+      "process": "1. Combine the liquid carrier oils in a large container.\n2. Melt the butter phase and waxes in a separate heat-safe beaker until liquid.\n3. Incorporate the melted wax mixture into the oil mixture and stir until uniform.\n4. Transfer to a storage jar and allow it to solidify for 4 hours.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "argan-shea-lotion",
@@ -26114,7 +26121,7 @@
         "Blender",
         "Stove"
       ],
-      "description": "DIY Whipped Coffee Body Butter Tutorial from Soap Queen.",
+      "description": "An energizing whipped body butter featuring coffee butter and tamanu oil. Formulated for high emolliency and a soft, airy texture with a natural coffee aroma.",
       "ingredients": [
         {
           "name": "Coffee Butter",
@@ -26130,8 +26137,9 @@
         }
       ],
       "notes": "",
-      "process": "Whip the Coffee Butter on a low speed using a hand-held or stand mixer for 30 seconds to 1 minute to lighten up the texture a bit.\nAdd the Rice Bran Oil, Tamanu Oil, Vanilla Select Fragrance Oil, and Almond Cybilla Fragrance Oil. Continue to whip the mixture on low until all of the oils are fully incorporated. Increase the speed of the mixer and whip until the butter has taken on a light and fluffy texture.\nUsing a spoon or spatula, scoop the whipped butter into the bail jars (tap the jars on your work surface to pack the butter in there) and secure the lids. You’re done!",
-      "category": "body"
+      "process": "1. Whip the coffee butter on low speed for one minute to soften the texture.\n2. Gradually incorporate the liquid carrier oils and fragrances while continuing to whip.\n3. Increase the mixer speed and whip until the butter reaches a light, fluffy consistency.\n4. Transfer to storage jars and tap to settle the product.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "how-to-make-perfume-video",
@@ -26176,7 +26184,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Winter Body Balm Recipe + Free Printable from Soap Queen.",
+      "description": "A protective winter body balm formulated with candelilla wax and meadowfoam oil. Designed for high stability and intensive hydration in cold environmental conditions.",
       "ingredients": [
         {
           "name": "Candellila Wax",
@@ -26200,8 +26208,9 @@
         }
       ],
       "notes": "",
-      "process": "Combine the Candellila Wax, Meadowfoam and Olive Oil in a heat safe container. Put it in the microwave for 1 minute and 30 seconds then take it out and stir with a spoon. Repeat 2 more times until the wax is fully melted.\nStir in the avocado butter until fully incorporated. Some butters can get grainy if heated to high temperatures so I’ve just gotten used to always stirring in the butters. If it starts to cool down too quickly, pop it back into the microwave for 20 seconds until it’s back to a translucent liquid.\nMix in the fragrance oil and Dulse Extract. Give it a good stir and it’s ready to pour into the bail jars.\nA little divot can form in the center as the balm cools. To achieve a nice smooth top, gently heat the surface with a heat gun so some of the melted balm fills in any cracks.",
-      "category": "body"
+      "process": "1. Melt the waxes and carrier oils in a heat-safe container until fully liquid.\n2. Stir in the avocado butter until melted and uniform.\n3. Incorporate the fragrance and botanical extracts.\n4. Pour into storage jars and allow to set. Optionally, use a heat gun to smooth the surface if a divot forms during cooling.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "cashmere-sugar-body-scrub",
@@ -26212,7 +26221,7 @@
       "equipment": [
         "Immersion blender"
       ],
-      "description": "DIY Cashmere Sugar Body Scrub from Soap Queen.",
+      "description": "A luxurious foaming sugar scrub featuring oat oil and liquid cashmere. Designed for intensive physical exfoliation and a smooth, cashmere-like skin finish.",
       "ingredients": [
         {
           "name": "Foaming Bath Butter",
@@ -26236,8 +26245,9 @@
         }
       ],
       "notes": "",
-      "process": "Add 32 ounces of Foaming Bath Butter to a large mixing bowl. Turn your mixer on low and break up the clumps of Foaming Bath Butter. Increase the speed and continue to whip until the butter is soft and there are no large chunks.\nAdd 1 ounce of oat oil. Turn your mixer on low to slowly incorporate the oil. Once it’s mostly incorporated, increase the speed and continue to whip the ingredients for about 30-60 seconds.\nAdd 0.3 ounces of liquid cashmere and 0.7 ounces of Cashmere Fragrance Oil. Whip until they’re completely combined. The mixture should be smooth and slightly fluffy.\nAdd 10 ounces of granulated sugar and whip. Add another 10 ounces of sugar and continue to mix. Scrape down the sides of the bowl with a spatula and continue to whip until all the ingredients are completely incorporated.\nScoop the scrub into the jars (or any other containers you prefer). We filled about four jars with a little bit left over. Store in a cool and dry place. To use, apply to wet skin and scrub. Wash off. Enjoy!",
-      "category": "body"
+      "process": "1. Soften the foaming bath butter in a large bowl using an electric mixer until no chunks remain.\n2. Gradually incorporate the oat oil and perform a secondary whip for one minute.\n3. Add the active extracts and fragrance, whipping until smooth and fluffy.\n4. Incorporate the sugar in two batches, continuing to whip until the exfoliant is evenly distributed.\n5. Transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "soothing-oat-bath-salts",
@@ -26246,7 +26256,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soothing-oat-bath-salts/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Soothing Oat Bath Salts from Soap Queen.",
+      "description": "A soothing bath salt formulation featuring colloidal oatmeal and Epsom salts. Designed for a skin-calming bath soak with high levels of mineral-loading.",
       "ingredients": [
         {
           "name": "Epsom Salt Extra Fine",
@@ -26278,8 +26288,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large bowl, mix together 32 ounces of extra fine Epsom salt and 1 ounce of colloidal oatmeal. Use your hands or a whisk to mix and break up the clumps.\nIn a separate bowl, add 0.5 ounces of oat oil, 0.5 ounces of Oatmeal Milk and Honey Fragrance Oil, 0.5 ounces of oat extract, and 0.5 ounces of polysorbate 80. Use a spoon to mix together all the ingredients.\nPour the oil mixture into the salt mixture. Use your hands or a large spatula to thoroughly mix.\nAdd 1 ounce of oatmeal. We used quick oats, but traditional oatmeal works as well.\nSpoon the mixture into jars. To use, add several large tablespoons of the salt into a hot bathtub. It can also be used as a scrub. Enjoy.",
-      "category": "body"
+      "process": "1. Whisk the Epsom salts and colloidal oatmeal together in a large bowl.\n2. In a separate container, combine the carrier oils, fragrance, and solubilizer.\n3. Gradually incorporate the oil mixture into the salts, blending thoroughly by hand.\n4. Fold in the whole oats before packaging in jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "volcanic-sand-charcoal-face-scrub",
@@ -26290,7 +26301,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Volcanic Sand & Charcoal Face Scrub from Soap Queen.",
+      "description": "A detoxifying facial scrub featuring volcanic sand and activated charcoal. Formulated with liquid castile soap for a deep, non-stripping cleanse and effective exfoliation.",
       "ingredients": [
         {
           "name": "Kaolin Clay",
@@ -26318,8 +26329,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large bowl, mix together 11 ounces of kaolin clay, 3 ounces of Icelandic black sand, and 0.6 ounces of activated charcoal.\nAdd 1 ounce of seaweed extract and 10 ounces of Natural Castile Liquid Soap Base. Stir until all the ingredients are completely combined.\nAdd 6 mL of Coastal Rain Fragrance Oil and 0.2 ounces of Optiphen. Stir the mixture thoroughly.\nPour or scoop the mixture into jars. To use, apply the scrub to clean, wet skin. Gently scrub in circular motions for about 30-60 seconds and wash off. Enjoy.",
-      "category": "body"
+      "process": "1. Whisk the clays and charcoal together in a large bowl.\n2. Incorporate the liquid soap base and botanical extracts, stirring until uniform.\n3. Add the fragrance and preservative, continuing to stir until the mixture is homogeneous.\n4. Transfer to storage jars for use.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "pumice-sea-salt-scrub-diy",
@@ -26328,7 +26340,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pumice-sea-salt-scrub-diy/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Pumice & Sea Salt Scrub DIY from Soap Queen.",
+      "description": "A high-performance salt scrub featuring Dead Sea salt and pumice sand. Designed for intensive physical exfoliation and removal of environmental debris.",
       "ingredients": [
         {
           "name": "Fine Grained Dead Sea Salt",
@@ -26352,8 +26364,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large bowl, mix together 32 ounces of fine grained Dead Sea salt and 8 ounces of pumice sand.\nAdd 2 ounces of seaweed extract, 0.6 ounces of Sea Salt Fragrance Oil, and 0.1 ounce of peppermint essential oil. Use your hands or a spatula to thoroughly mix together all the ingredients.\nTransfer the scrub to your containers. We used 8 ounce quilted jelly jars. This recipe made 7 jars – each one had about 5.5 ounces of scrub.\nTo use, apply the scrub to wet skin and gently scrub. Wash off and pat skin dry. Enjoy.",
-      "category": "body"
+      "process": "1. Combine the salt and pumice sand in a large mixing bowl.\n2. Incorporate the botanical extracts, fragrance, and essential oils.\n3. Stir thoroughly with a spatula until all components are evenly distributed.\n4. Transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "raspberry-jam-scrub-diy",
@@ -26362,7 +26375,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/raspberry-jam-scrub-diy-kit/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Raspberry Jam Scrub DIY from Soap Queen.",
+      "description": "A fruit-themed salt scrub featuring raspberry seed oil and exfoliating poppy seeds. Formulated for gentle resurfacing and high skin emolliency.",
       "ingredients": [
         {
           "name": "Himalayan Pink Sea Salt Extra Small",
@@ -26378,8 +26391,9 @@
         }
       ],
       "notes": "",
-      "process": "Add 16 ounces of pink sea salt and 0.2 ounces of poppy seeds to a medium container. Add 1/2 teaspoon of beet root powder. Mix in with a spoon. Break up any clumps of beet root powder with your fingers if necessary.\nAdd 0.5 ounces of raspberry seed oil to the salt. Using the dropper, add 6 mL of Raspberry Jam Fragrance Oil. Stir to fully incorporate.\nCarefully spoon the scrub evenly into the four jars. To use, apply to wet skin and scrub in circular motions. Rinse off and pat dry.",
-      "category": "body"
+      "process": "1. Combine the salt, poppy seeds, and botanical powder in a mixing bowl.\n2. Incorporate the raspberry seed oil and fragrance, stirring with a spoon until the texture is uniform.\n3. Transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "wild-rose-bath-salt-diy",
@@ -26388,7 +26402,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/rose-bath-salt-diy/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Wild Rose Bath Salt DIY from Soap Queen.",
+      "description": "A fragrant bath salt blend featuring rose petals and jasmine flowers. Designed for a skin-softening, aromatherapeutic bath experience.",
       "ingredients": [
         {
           "name": "Pink Sea Salt Medium",
@@ -26400,8 +26414,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large mixing bowl, combine 16 ounces of the pink sea salt and 16 ounces of the medium grain Dead Sea salt.\nUsing a dropper, add 7 mL of the Wild Rose Fragrance Oil. If you prefer a stronger scent, you can add more according to the Bramble Berry Fragrance Calculator. Use a spoon to thoroughly mix the fragrance oil into the salts.\nStir in pink rose petals and jasmine flowers until you’re happy with the look. We used several tablespoons of each, but you can add more or less depending on your personal preference.\nTransfer the bath salts to your containers. To use, add a handful of salts to a hot bath and enjoy.",
-      "category": "body"
+      "process": "1. Whisk the various salt textures together in a large bowl.\n2. Incorporate the fragrance oil using a dropper and stir thoroughly to ensure even distribution.\n3. Fold in the dried botanicals before packaging in storage containers.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "diy-salt-scrub-cubes",
@@ -26412,7 +26427,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY DIY Salt Scrub Cubes from Soap Queen.",
+      "description": "Single-use salt scrub cubes formulated with cocoa and avocado butters. Designed to provide both physical exfoliation and intensive skin nourishment in a convenient format.",
       "ingredients": [
         {
           "name": "Cocoa Butter Pastilles",
@@ -26432,8 +26447,9 @@
         }
       ],
       "notes": "",
-      "process": "In a heat-safe container, add 2.5 oz. of cocoa butter and 4 oz. of avocado butter. Melt in the microwave using 30-60 second bursts. Don’t let the butters get too hot because it can take awhile for them to cool to about 110° F.\nOnce the butters are melted, add 0.7 oz. of polysorbate 80 and thoroughly mix in.\nAdd 16 oz. of Epsom salt and thoroughly mix in.\nOPTIONAL STEP: To give the cubes a little extra shimmer, dust the molds with Light Gold Mica using the Powder Sprayer. It doesn’t show up well in photos, but looks pretty in person.\nUse a spoon to fill the cavities of the Small Cubes Mold & Package. Tap the mold on the counter to disperse the mixture evenly. Continue filling the molds with each color of mixture. We had enough mixture to fill two molds of each color.\nAllow the scrubs to fully cool and harden. We found they release easier from the mold if placed in the fridge for about two hours. Without placing them in the fridge, they may stick to the mold.\nStore the cubes in a dry, cool place. Once you’re ready to use, apply the cube to wet skin and massage in. Rinse off. The butters in the scrub do leave a moisturizing feel on the skin, but the polysorbate 80 helps it to wash off cleanly without an overly oily feel.",
-      "category": "body"
+      "process": "1. Melt the butter phase in a water bath until liquid.\n2. Incorporate the solubilizer and Epsom salts, stirring until uniform.\n3. Optionally, add mica shimmer for decorative effect.\n4. Spoon the mixture into silicone cube moulds and tap to settle.\n5. Refrigerate for 2 hours to ensure a smooth release from the moulds.\n6. Store the cubes in a dry, cool location.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "luxurious-lavender-bath-salt-diy",
@@ -26442,7 +26458,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lavender-bath-salts/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Luxurious Lavender Bath Salt DIY from Soap Queen.",
+      "description": "A premium bath salt formulation featuring lavender essential oil and dried botanicals. Designed for a relaxing, mineral-rich bath soak.",
       "ingredients": [
         {
           "name": "Epsom Salt Extra Fine",
@@ -26458,8 +26474,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large mixing bowl, combine the Epsom salt and both sizes of pink sea salt. Mix together.\nAdd the Bulgarian Lavender Essential Oil. Use your hands to thoroughly mix in.\nAdd the lavender buds and cornflower petals. Mix in thoroughly.\nTransfer the salt to the bail jars. Store the salts in a dry cool place. Once you’re ready to use, add a large handful to hot bath water. Enjoy!",
-      "category": "body"
+      "process": "1. Combine the various salt types in a large mixing bowl.\n2. Incorporate the essential oil and massage by hand until uniform.\n3. Fold in the dried lavender and cornflower petals.\n4. Transfer to storage jars and store in a cool, dry place.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "diy-coffee-body-scrub",
@@ -26470,7 +26487,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY DIY Coffee Body Scrub from Soap Queen.",
+      "description": "An energizing body scrub featuring coffee grounds and coffee butter. Formulated with liquid castile soap for a non-greasy, effectively cleansing exfoliation experience.",
       "ingredients": [
         {
           "name": "Fresh Coffee Grounds",
@@ -26498,8 +26515,9 @@
         }
       ],
       "notes": "",
-      "process": "In a heat-safe container, add the sweet almond oil and coffee butter. Place the container in the microwave and heat using 20-30 second bursts until the coffee butter is melted.\nAdd the coffee oil to the warm oils and stir to combine. Add the potassium cocoate, Optiphen, and Espresso Fragrance Oil to the mixture and stir until everything is completely mixed together.\nMeasure the coffee grounds into a large mixing bowl. Pour the warm oil mixture into the coffee grounds and stir to fully combine.\nTo use, apply the coffee grounds to wet skin and scrub. Rinse off and pat dry.",
-      "category": "body"
+      "process": "1. Melt the carrier oil and coffee butter in a heat-safe container.\n2. Incorporate the liquid soap, preservative, and fragrance into the melted fats.\n3. Gradually pour the liquid mixture over the coffee grounds and stir until fully combined.\n4. Transfer to a storage container.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "orange-butter-body-scrub-diy",
@@ -26510,7 +26528,7 @@
       "equipment": [
         "Stand/hand mixer"
       ],
-      "description": "DIY Orange Butter Body Scrub DIY from Soap Queen.",
+      "description": "A citrus-scented foaming sugar scrub featuring orange butter. Formulated for high lather and effective removal of dry skin with a bright, refreshed finish.",
       "ingredients": [
         {
           "name": "Foaming Bath Butter",
@@ -26530,8 +26548,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large mixing bowl, add the Foaming Bath Butter and orange butter. Use a hand mixer to beat together until smooth.\nAdd the Orange Peel Cybilla Fragrance Oil. Turn the beater on low, and mix until combined.\nAdd the granulated sugar, and use the hand mixer on low to fully incorporate all the ingredients.\nOnce the scrub is completely smooth and combined, transfer it to jars. To use, apply to wet skin and scrub. Enjoy!",
-      "category": "body"
+      "process": "1. Whip the foaming bath butter and orange butter together until smooth.\n2. Incorporate the fragrance oil on low speed.\n3. Add the sugar and perform a final whip until the mixture is uniform.\n4. Transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "diy-turmeric-ginger-body-scrub",
