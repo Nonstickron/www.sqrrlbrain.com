@@ -18582,7 +18582,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Save 8% on passionfruit oil and everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "description": "A multi-functional emulsion featuring passionfruit oil and coconut oil. Formulated to serve as both a high-emolliency body lotion and a rinse-out or leave-in hair conditioner.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -18623,7 +18623,8 @@
       ],
       "notes": "The oil phase for this lotion is predominantly silky, lightweight passionfruit oil and a gorgeous ultra-fragrant virgin coconut oil. I’ve also included a small amount of cetyl alcohol for its lightweight, silky thickening. If you don’t have cetyl alcohol you could use cetearyl alcohol instead, but that will make for a fluffier end product. You could also replace the cetyl alcohol with more coconut",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nAfter about 20–30 minutes the oil part should be completely melted and the water part should be thoroughly dissolved (I find BTMS-50 can be a bit stubborn to melt; zap your heated oil phase for ~30 seconds in the microwave if that's the case for you).\nWorking quickly, remove the water bath from the heat and weigh the water phase. Add enough hot distilled water to the heated water phase to bring the weight back up to what it was before heating, and then pour the water part into the oil part. Stir with a flexible silicone spatula to incorporate.\nTo use: this works beautifully as a body lotion for dry skin, but you can also use it as a hair conditioner! Type 1 & 2 hair will probably appreciate it more as a rinse-out hair conditioner or hair mask, while types 3 & 4 hair may find it works nicely as a leave-in conditioner. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Once the oil phase is fully melted, combine the two phases.\n3. Use an immersion blender to create a stable, uniform emulsion.\n4. Allow the mixture to cool to room temperature.\n5. Incorporate the cooling phase ingredients and transfer to a storage bottle.",
+      "processRewritten": true
     },
     {
       "id": "passionfruit-coconut-conditioner-bar",
@@ -19566,7 +19567,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/featherweight-hair-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re creating an ultra-lightweight hair oil that&#8217;s designed for hair that&#8217;s really not very tolerant of oils (like mine). Some of my favourite-for-hair oils are blended into a silky, fast-evaporating base to create a water-fr…",
+      "description": "An ultra-lightweight, anhydrous hair oil formulated for hair with low oil tolerance. Features a blend of fast-evaporating emollients for a non-greasy shine boost.",
       "ingredients": [
         {
           "name": "Cyclomethicone",
@@ -19599,7 +19600,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Weigh all the ingredients into a small beaker or measuring cup and stir to combine (alternatively you could weigh everything directly into the bottle and shake to combine). That's it! Transfer to a 15mL (1/2 fl oz) bottle with a dropper top and you're done!\nTo use, smooth a few drops over your hair as needed for a bit of fly-away taming and a shine boost."
+      "process": "1. Combine all carrier oils and emollients in a small beaker or directly in the final storage bottle.\n2. Stir or shake until the mixture is completely uniform.\n3. Transfer to a 15mL glass bottle equipped with a dropper top.",
+      "processRewritten": true
     },
     {
       "id": "sweetgrass-conditioning-hair-gel-serum",
@@ -19608,7 +19610,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/sweetgrass-conditioning-hair-gel-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Making is simple but does require some sitting time so the hydroxyethylcellulose can fully hydrate and create the gel. There&#8217;s no heat required, so you can more or less stir, wait, and stir some more. The end result is a smooth, silky gel that …",
+      "description": "A water-based hair gel serum featuring sweetgrass hydrosol and hydroxyethylcellulose. Designed to provide lightweight hold and conditioning benefits with a smooth, non-sticky finish.",
       "ingredients": [
         {
           "name": "Hydroxyethylcellulose",
@@ -19645,7 +19647,8 @@
       ],
       "notes": "On the moisturizing front, I&#8217;ve included some vegetable glycerin and panthenol (vitamin B5). Our scent comes entirely from some beautiful sweetgrass hydrosol. You could easily alter the scent by choosing a different hydrosol (or blend of hydrosols). If you want to include some essential or fragrance oils start with 0.5%; Olivem 300 does have some solubilizing powers, but you&#8217;ll need to",
       "category": "hair",
-      "process": "Weigh the hydroxyethylcellulose and glycerine into a small heat-resistant glass measuring cup or beaker and whisk to combine. Add the remaining ingredients, one at a time, stirring between additions.\nCover the beaker and leave it overnight to fully gel. Once it's jelled, stir thoroughly until the mixture is uniform. After that all that's left is to package it up—I used a 30mL (1fl oz) jar from New Directions Aromatics. To use, work small amounts of gel through your hair as needed. Works on wet or dry hair."
+      "process": "1. Measure the gelling agent and glycerin into a small beaker and whisk until uniform.\n2. Sequentially add the remaining conditioning agents and hydrosol, stirring well between additions.\n3. Cover the container and allow it to sit for at least 12 hours to achieve full hydration.\n4. Perform a final whisk until the gel is smooth and transfer to a pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "smooth-shine-hair-serum",
@@ -19700,7 +19703,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/silky-camellia-hair-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "I used a 30mL/1oz bottle with a treatment pump top—you can see it&#8217;s quite a tiny pump!",
+      "description": "A high-shine hair serum featuring camellia seed oil and hemisqualane. Formulated with BTMS-50 for a silky, conditioned hair finish without a heavy lipid load.",
       "ingredients": [
         {
           "name": "BTMS-50",
@@ -19729,7 +19732,8 @@
       ],
       "notes": "You can use more camellia seed oil, keeping in mind this will make for a heavier final product You can replace it with half camellia seed oil, and half cyclomethicone, adding the cyclomethicone with the cool down phase You can replace it with another lightweight carrier oil, like squalane, macadamia nut oil, rosehip oil, or hazelnut oil, keeping in mind this will still make for a heavier final pro",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the BTMS, cetyl alcohol, camellia seed oil, and Neossance&#x2122; Hemisqualane into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nTo use, take a drop or two of the product in your palms, and disperse it across your hands before running it through your hair from about the ears down. Go slowly—you can always add more, but if you overdo it you'll need a shower sooner rather than later. Enjoy!"
+      "process": "1. Heat the conditioning agent, fatty alcohol, and carrier oils in a small beaker using a water bath.\n2. Once melted, remove from heat and allow the mixture to cool undisturbed until it reaches room temperature.\n3. Incorporate the cooling phase ingredients and stir until uniform.\n4. Transfer to a glass bottle equipped with a treatment pump.",
+      "processRewritten": true
     },
     {
       "id": "candlelight-rich-hair-mask",
@@ -19741,7 +19745,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Save 10% on shea butter and everything else at Baraka Shea Butter with coupon code HUMBLEBEE",
+      "description": "An intensive, emulsified hair mask featuring shea butter and rose hydrosol. Formulated for high conditioning performance and deep hydration of dry or damaged hair.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -19798,7 +19802,8 @@
       ],
       "notes": "The water phase of this formulation contains some moisturizing glycerin and some lovely panthenol (Vitamin B5) for added shine and bounce. I&#8217;ve also included some amphoteric Cocamidopropyl Betaine for improved rinse-out. If you don&#8217;t have it and you&#8217;ll be shampooing this out anyways, you can replace the Cocamidopropyl Betaine with more water.",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I recommend using a wide-mouthed jar as this formulation is quite thick when it sets up.\nHow you'll want to use this Candlelight Rich Hair Mask will depend a lot on your hair type; please read the full post for more information. I have type 1B hair and I need to shampoo this hair mask out."
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Combine the phases and blend thoroughly with an immersion blender to form a stable emulsion.\n3. Allow the mask to cool and thicken naturally.\n4. Incorporate the cooling phase ingredients and transfer to a wide-mouthed jar for storage.",
+      "processRewritten": true
     },
     {
       "id": "double-butter-conditioning-hair-mask",
@@ -19810,7 +19815,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Save 8% on murumuru butter and everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "description": "A dense, rich hair mask featuring murumuru and shea butters. Formulated with BTMS-50 for high-performance conditioning and a non-greasy, self-emulsifying finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -19871,7 +19876,8 @@
       ],
       "notes": "The oil phase of this hair mask features two butters—you probably could&#8217;ve guessed from the name &#x1f609; I used refined cupuaçu butter and unrefined murumuru butter. The product that inspired this formulation also used tucumã butter, but I didn&#8217;t have any. You could easily swap half of the cupuaçu butter for tucumã butter if you do—that&#8217;s what I&#8217;d originally planned to do",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! This is far too thick for any sort of pump-top bottle; I used a 100g clear plastic jar from YellowBee.\nThere are lots of different ways to use this product, depending on your hair and your preferences. Please read the blog post to learn more!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Combine the phases and blend thoroughly with an immersion blender to form a stable emulsion.\n3. Allow the mask to cool to room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a wide-mouthed storage jar.",
+      "processRewritten": true
     },
     {
       "id": "rose-tea-ultra-light-conditioning-hair-balm",
@@ -22320,7 +22326,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/diy-blur-primer/",
       "heatRequired": false,
       "equipment": [],
-      "description": "These formulations were inspired by the Yves Saint Laurent Touche Eclat Blur Face Primer; a $52USD/oz. blurring facial primer that makes your skin look airbrushed. I&#8217;ll teach you how to make this primer for less than 1/5 the price, plus how to …",
+      "description": "Anhydrous facial primers available in three variations. Formulated with silicone gels and specialized micas to provide a soft-focus, airbrushed skin finish.",
       "ingredients": [
         {
           "name": "Silicone Gel",
@@ -22377,7 +22383,8 @@
       ],
       "notes": "Version 1 This version is a simplified version of a dupe-y riff on the Yves Saint Laurent original; check out the video if you want the full dupe formulation.",
       "category": "makeup",
-      "process": "Using a precise scale, weigh all the ingredients for the base into a small disposable mixing cup or tiny beaker. Stir thoroughly to combine. If your ingredient amounts aren't absolutely perfect, that's ok.\nOnce the mixture is uniform, that's it! Package it up and you're done &#x1f642;\nIs there any way to modify these formulations to be natural?\nHow much oil can I add?\nI've tested up to 6.5% successfully, and I know 42.5% is far too much and will split. I suspect up to 8–10% would be ok.\nDo these primers need a preservative?\nNo; there's no water, so they don't need a preservative. You could add an antioxidant if you wanted to, but given only 3% (at most) of these formulations can oxidize, I decided not to.\nHow should I package these primers?\nThe easiest way to package these primers is in a small wide-mouthed jar.\nI packaged some of them in 2-dram HDPE bottles with a pointed dropper top, and that worked really well! This is probably my favourite option.\nIn the video I use 5mL doe-foot tubes with silver caps from TKB Trading. These look great and work pretty well, but I think I prefer the squeezy bottles.\nThe Yves Saint Laurent product is packaged in a bottle with a treatment pump. I haven't tried that, but it seems to work for them.\nAs these primers are fairly thick, you may need to use a small syringe or a piping bag to fill your container if the opening is quite narrow.\nIf you know you'll need to pipe the primer into your package it's a good idea to make it right in a baggie—smoosh to combine, snip off a corner, and you're off to the races!\nHow long will these primers last?\nAs the bulk of these formulations is ultra-long-lasting silicone gel, you'll probably get at least a year or two of shelf life out of these formulations. The tiny amounts of oil in the formulation will eventually oxidize, but I'd be surprised if you noticed!"
+      "process": "1. Measure all base ingredients into a small beaker.\n2. Stir thoroughly until the mixture is completely uniform and free of clumps.\n3. Transfer the primer to a small wide-mouthed jar or dropper bottle for use.",
+      "processRewritten": true
     },
     {
       "id": "transfer-resistant-cream-foundation",
@@ -22388,7 +22395,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "You will need a batch of your own custom-blended mineral makeup for the coverage and colour matching. I go into a ton of detail on how to make your very own bespoke mineral makeup in my book, Make it Up: The Essential Guide to DIY Makeup and Skin Car…",
+      "description": "A high-coverage cream foundation formulated for long-lasting wear. Features customized mineral pigments in a stable, anhydrous base for a smooth skin finish.",
       "ingredients": [
         {
           "name": "Mineral Makeup",
@@ -22413,7 +22420,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Weigh all the ingredients into a beaker or heat-resistant glass measuring cup. Stir to combine; it'll be lumpy and pasty, and that's ok.\nYou'll want to heat this with direct heat. If you're using a beaker and you have a glass-top stove or a hot plate you can put the beaker straight onto the surface of the stove and melt everything over low heat. Keep a close eye on it to avoid scorching the mixture.\nIf placing the mixture directly on a heat source isn't an option you can use your oven; place your beaker or measuring cup on a baking sheet and set your oven to around 100°C (220°F).\nIt's a good idea to pre-heat your packaging—if possible and safe—to make pouring the makeup easier. It sets up really quickly, and will solidify almost instantly if poured into a cold pan. I used a standalone 36mm round pan from TKB Trading and put that on the hot plate next to the beaker.\nOnce the mixture has melted, stir to combine and then quickly pour it into your packaging before it solidifies. This can be a bit messy, especially if your packaging is cold. Please watch the video for tips and tricks!\nLeave the foundation to solidify, and that's it!\nI like to use my fingers to apply this foundation, but you can blend it out with a brush if you prefer."
+      "process": "1. Measure all base ingredients and pigments into a heat-safe beaker.\n2. Heat gently until the waxes and oils are fully melted, ensuring no scorching occurs.\n3. Stir vigorously to ensure even distribution of the mineral pigments.\n4. Quickly pour the liquid foundation into pre-heated pans or containers before it solidifies.\n5. Allow to set completely before its first use.",
+      "processRewritten": true
     },
     {
       "id": "frosted-cranberry-matte-lip-cheek-colour",
@@ -22422,7 +22430,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/frosted-cranberry-matte-lip-cheek-colour/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This Frosted Cranberry Matte Lip &amp; Cheek Colour is really neat; it&#8217;s a hybrid between a matte liquid lipstick and a lip stain. It has a creamy consistency that dries down to a powdery, transfer-resistant finish. Richly coloured, it both wea…",
+      "description": "A hybrid matte liquid pigment for lips and cheeks. Formulated for a creamy application that dries down to a powdery, transfer-resistant finish.",
       "ingredients": [
         {
           "name": "TKB Mousse Medium",
@@ -22495,7 +22503,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Just weigh everything out and stir it until smooth. That's it! The TKB Trading 5mL black doe-foot tubes have really wide openings so they're pretty easy to fill—watch the video to see that in action.\nTo use—I like to dab a small amount of product onto my lips and cheeks and blend out with a fingertip. Please watch the video to see this in action!"
+      "process": "1. Combine the base emollients and pigments in a beaker.\n2. Stir until the mixture is completely smooth and no clumps remain.\n3. Transfer the liquid color to a doe-foot applicator tube for storage.",
+      "processRewritten": true
     },
     {
       "id": "liquid-blurring-skin-tint",
@@ -22504,7 +22513,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/liquid-blurring-skin-tint/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Weigh the fractionated coconut oil and optiblur into a small container—I recommend a small disposable mixing cup, like the sort used to measure out liquid medicines. Use a small wire whisk or a small hand-held battery powered mixer to first mash the …",
+      "description": "A lightweight liquid foundation featuring silica microspheres for a blurring effect. Designed for easy application and a natural, skin-like finish.",
       "ingredients": [
         {
           "name": "Fractionated Coconut Oil",
@@ -22537,7 +22546,8 @@
       ],
       "notes": "The finished Liquid Blurring Skin Tint is silky smooth, with an expensive-feeling dry-touch finish. It offers optical skin-perfecting along with some mild colour correction and complexion-evening, and it&#8217;s easy to apply with fingers or a damp sponge. If you want to increase the amount of coverage you can always use more mineral makeup, reducing the argan oil to make room for it. I hope you l",
       "category": "makeup",
-      "process": "Weigh the fractionated coconut oil and optiblur into a small container—I recommend a small disposable mixing cup, like the sort used to measure out liquid medicines. Use a small wire whisk or a small hand-held battery powered mixer to first mash the mixture together to break the optiblur into smaller pieces, and then blend to thoroughly combine.\nAdd the mineral makeup, stir, and then blend. Add the argan oil and vitamin E.\nPut on your dust mask (USA / Canada). Weigh the silica microspheres and thickening clay into the mixture, stir, and then blend. Once the mixture is uniform, you're done!\nFor packaging, I used a 10mL plastic squeeze bottle with a dropper top, and that worked perfectly. I recommend something that will allow you to dispense just a drop or two of product at a time.\nTo use, shake the bottle and dispense a few drops onto fingertips. Glide the skin tint over the skin, blending it in with fingers or a damp sponge (I find this foundation doesn't work as well with brushes). Enjoy!"
+      "process": "1. Combine the primary emollients and gelling agent in a mixing cup.\n2. Blend thoroughly using a high-speed mixer until the mixture is uniform.\n3. Incorporate the mineral pigments and active oils, continuing to blend until smooth.\n4. Wear a dust mask and stir in the silica microspheres and thickening clay.\n5. Transfer to a plastic squeeze bottle equipped with a dropper top.",
+      "processRewritten": true
     },
     {
       "id": "second-skin-cream-foundation",
@@ -22548,7 +22558,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "When it comes to application I&#8217;d recommend gently working it into the skin with your fingertips. I also experimented with brushes and sponges, but I find the finger application gets the most skin-like look in the end, really helping the product…",
+      "description": "A high-emolliency cream foundation designed to mimic natural skin texture. Formulated for buildable coverage and a radiant finish.",
       "ingredients": [
         {
           "name": "Mineral Makeup",
@@ -22581,7 +22591,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Prepare a water bath by heating about ~0.7–1cm of water until it's just steaming in a wide, flat-bottomed sauté pan.\nPlace the measuring cup in your prepared water bath to melt everything through. You'll want to stir as it melts (maybe three or four times—it doesn't need to be constant) to make sure everything has melted and break up any clumps.\nTo use, work tiny amounts of the foundation into your skin with your fingertips, layering it up to build coverage as needed (brushes & sponges also work, but I like finger application best for this foundation). Enjoy!"
+      "process": "1. Heat the base ingredients in a water bath until fully melted.\n2. Incorporate the custom mineral pigments and stir thoroughly.\n3. Allow the foundation to cool undisturbed until it reaches a semi-solid state.\n4. Package the final product in a compact or small jar.",
+      "processRewritten": true
     },
     {
       "id": "ros-cream-blush",
@@ -22592,7 +22603,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "This formulation is a riff on the Cream Luminizer I shared a couple of months ago. It was based on a popular storebought product from a brand that has an entire line of creamy shimmery, colourful cosmetics, so I thought I&#8217;d work off that base t…",
+      "description": "A creamy, pigmented blush featuring rose-toned oxides and micas. Formulated for easy blending and a long-lasting, natural-looking cheek flush.",
       "ingredients": [
         {
           "name": "Castor Oil",
@@ -22625,7 +22636,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Prepare a water bath by heating about 1.5cm/ ½\" of water until it is steaming, but not simmering, in a wide, flat-bottomed sauté pan.\nWeigh the heated phase ingredients into a small glass prep cup. Place the cup in your prepared water bath to melt everything through.\nStir the mixture with a flexible silicone spatula to incorporate. Make sure you're smearing the spatula across the bottom of the prep cup to blend in the pigments. Watch this video to learn more!\nWhen the mixture is thoroughly melted and blended, remove it from the heat and quickly blend in the vitamin E. Dry off the outside of the prep cup and carefully pour it into a small (5g) jar and leave the cream blush to set up. That's it!\nTo use, use your fingertips or a brush to tap a small amount of product onto your cheeks and/or lips, and blend as desired."
+      "process": "1. Heat the base oils and waxes in a water bath until fully melted.\n2. Incorporate the pigments and micas, stirring thoroughly with a spatula to ensure even color distribution.\n3. Remove from heat and stir in the vitamin E.\n4. Pour the liquid blush into a small jar and allow it to solidify at room temperature.",
+      "processRewritten": true
     },
     {
       "id": "cream-luminizer",
@@ -22636,7 +22648,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Once you&#8217;re done you&#8217;ll have a pot of firm-yet-creamy luminizer that can be easy massaged into cheekbones, brow bones, the inner eye, your cupid&#8217;s bow, and anywhere else you please (try your collarbones for a night out!). I have bee…",
+      "description": "A firm yet creamy luminizer formulated for targeted highlighting of facial features. Features high levels of reflective mica for a radiant finish.",
       "ingredients": [
         {
           "name": "Castor Oil",
@@ -22669,7 +22681,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dish towel. Stir with a flexible silicone spatula to incorporate.\nQuickly add the cool down phase, stir to combine, and transfer to a small 5g jar to set up. Once it's set up, you're done! To use, blend a small amount into brow bones, cheek bones, and any other part of the face that could use a bit of extra shimmer."
+      "process": "1. Melt the heated phase ingredients in a water bath until liquid.\n2. Remove from heat and incorporate the mica shimmer, stirring until uniform.\n3. Add the cooling phase ingredients and stir well.\n4. Transfer to a small jar and allow to set.",
+      "processRewritten": true
     },
     {
       "id": "silky-cream-foundation",
@@ -22680,7 +22693,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "I chose cetearyl alcohol as our thickener so we could have rich-yet-lightweight thickening without any wax. I wanted something a bit heavier than cetyl alcohol, but not quite as rich as stearic acid. If you don&#8217;t have cetearyl alcohol I&#8217;d…",
+      "description": "A smooth, emulsified foundation featuring cetearyl alcohol for rich yet lightweight thickening. Designed for buildable coverage and a velvety skin finish.",
       "ingredients": [
         {
           "name": "Mineral Makeup",
@@ -22713,7 +22726,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small, narrow container—I recommend a 50mL beaker. If you're going to use a small electric mixer to blend everything together (highly recommended) you'll want to make sure you can corner the (relatively small amount of) melted liquid and not spray it everywhere.\nPlace the beaker in your prepared water bath to melt everything through.\nLet the mixture solidify, and you're done! To use, spread some makeup across your face (straight from the tube or with a brush) and blend with a kabuki brush as required."
+      "process": "1. Heat the base ingredients in a narrow container using a water bath.\n2. Blend the mixture thoroughly using a high-speed mixer to ensure uniform pigment distribution.\n3. Allow the foundation to solidify completely.\n4. Apply to the skin using a brush or fingertips.",
+      "processRewritten": true
     },
     {
       "id": "sheer-satin-cheek-lip-tint",
@@ -22722,7 +22736,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/sheer-satin-cheek-lip-tint/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The liquid base is simple: lightweight fractionated coconut oil and some isopropyl myristate to help everything set relatively quickly. Some thickening clay from TKB keeps everything in suspension fairly well, though it will settle a bit if you leave…",
+      "description": "A dual-purpose liquid tint featuring high-potency pigments suspended in a lightweight oil base. Designed for a sheer, buildable satin finish on both cheeks and lips.",
       "ingredients": [
         {
           "name": "Carmine Or Red Lake Dye",
@@ -22747,7 +22761,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Put on your dust mask (USA / Canada). Weigh the red pigment and thickening clay into a small container—you'll need an accurate scale (preferably one accurate to 0.01g). I weighed everything into a disposable plastic mixing cup for ease of cleanup, and because the cups are so light you don't risk overshooting the maximum weight on your scale.\nUse a little electric mixer (I used the MICROMini&#x2122; Mixer from Lotion Crafter) to blend everything together. If you don't have a wee electric mixer that will work, I recommend adding the liquid oils a wee bit at a time and stirring with a toothpick to create a thick, smooth paste before slowly blending in the rest of the oil.\nThat's it! Transfer to your container; I recommend a wee 5mL nail polish bottle. To use, dot a few drops onto lips and cheeks and blend in with a finger top."
+      "process": "1. Wear a dust mask and gloves. Combine the pigments and thickening clay in a mixing cup.\n2. Incorporate the liquid oils slowly while stirring with a high-speed mixer or tool to ensure a smooth paste.\n3. Continue to add the remaining ingredients and blend until the mixture is uniform.\n4. Transfer to a small glass bottle equipped with a dropper or applicator brush.",
+      "processRewritten": true
     },
     {
       "id": "center-stage-glow-serum",
@@ -22756,7 +22771,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/center-stage-glow-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The making of is quite simple. You&#8217;ll begin by stirring together all the powders, and then blend in a small amount of the liquid oils to create a smooth paste (similar to create a roux) before slowly blending in the remaining oils. And that&#82…",
+      "description": "A shimmery oil serum featuring a high load of reflective micas. Designed to provide a radiant, luminous glow when applied alone or mixed with other products.",
       "ingredients": [
         {
           "name": "TKB Thickening Clay",
@@ -22785,7 +22800,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Weigh the powdered ingredients into a small bowl or beaker, and stir until thoroughly combine.\nAdd 2g (13%) liquid oil and stir to create a smooth, uniform paste. Once you've got a smooth, shimmery paste, slowly stir in the rest of the liquid oils.\nThat's it! Pour into a 15mL/half ounce glass bottle with a dropper top. A clear bottle will really let the shimmer shine, but it's certainly not necessary.\nThe blog version used 0.1g artisan coral mica and 0.12g glimmer beige mica. The video version used 0.15g silver mica and 0.1g artisan coral mica."
+      "process": "1. Combine all dry pigments and micas in a small beaker and stir.\n2. Add a small portion of the carrier oil and stir to create a smooth roux-like paste.\n3. Gradually incorporate the remaining liquid oils while stirring steadily.\n4. Transfer to a glass bottle equipped with a dropper top.",
+      "processRewritten": true
     },
     {
       "id": "snowy-dawn-cream-luminizer",
@@ -22794,7 +22810,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/snowy-dawn-cream-luminizer/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Prepare a water bath by bringing about 3cm/1&#8243; of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.",
+      "description": "A bright, iridescent cream luminizer formulated for a cool-toned highlight. Designed for high reflectivity and intensive skin nourishment.",
       "ingredients": [
         {
           "name": "Jojoba Oil",
@@ -22827,7 +22843,8 @@
       ],
       "notes": "This looks so amazing! I am trying to be as earth friendly as possible in things I want to make. Is there something I can substitute the silica micro beads for or can they be left out?",
       "category": "makeup",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWhile the mixture melts, place a 5g jar on a plate so you can easily move it to the fridge to cool.\nOnce everything has melted through, remove the glass dish from the heat and stir in the vitamin E oil. Quickly transfer the melted mixture to your 5g jar, and then gently and smoothly move that jar on the plate to the fridge to cool.\nWhen the luminizer has fully set up (give it about twenty minutes), you're done! To use, swipe your finger across the surface of the luminizer and apply to cheekbones, brow bones, your cupid's bow, or wherever else you'd like a little more light. Enjoy!"
+      "process": "1. Melt the base ingredients in a water bath until fully liquid.\n2. Remove from heat and incorporate the vitamin E and mica shimmer.\n3. Quickly transfer the mixture to a small jar.\n4. Refrigerate for approximately 20 minutes to ensure a smooth, uniform set.",
+      "processRewritten": true
     },
     {
       "id": "diy-color-changing-lip-gloss",
@@ -22836,7 +22853,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/diy-color-changing-lip-gloss/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Back in 2016 I was wandering through London and a display in the window of a fancy cosmetics shop caught my eye; it was Lipstick Queen&#8217;s Frog Prince lipstick, and it was deeply, froggily green! I obviously had to try it, so in I went to swatch …",
+      "description": "A specialized lip gloss featuring color-changing pigments that react to skin pH. Formulated for high shine and a customized, long-lasting tint.",
       "ingredients": [
         {
           "name": "Very Thoroughly Mixed Presto Change-o Magic Color",
@@ -22849,7 +22866,8 @@
       ],
       "notes": "If you want to make a blush with this I&#8217;d include some mica so you can apply based on where you see the mica and then wait for the pink to pop up.",
       "category": "makeup",
-      "process": "Protect your workspace, put on gloves, and make sure you're wearing clothes that you're ok with getting stained. Ensure all your tools are dry.\nWeigh all the ingredients into a glass beaker or measuring cup, and stir to combine with a stainless steel tool.\nAlternatively, weigh all the ingredients into a disposable plastic piping bag and smoosh everything together through the bag. I didn't do this as I was having issues with static electricity throwing off my scale whenever I used a piping bag, but if it works for you it's definitely the way to go!\nPour or pipe the lip oil into your containers.\nUse as you'd use a tinted lip balm. Enjoy!"
+      "process": "1. Ensure all tools are completely dry. Combine the base oils and pigments in a beaker.\n2. Stir thoroughly until the mixture is uniform and the pigments are fully suspended.\n3. Transfer the liquid gloss to a squeeze tube or applicator bottle for use.",
+      "processRewritten": true
     },
     {
       "id": "frosted-cranberry-lip-oil",
