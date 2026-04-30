@@ -28020,7 +28020,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/karma-bath-bomb-tutorial/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Karma Bath Bomb Tutorial from Soap Queen.",
+      "description": "Multi-colored bath bombs featuring a vibrant orange-and-blue aesthetic. Formulated with sweet almond oil for intensive skin softening and high effervescence.",
       "ingredients": [
         {
           "name": "Sweet Almond Oil",
@@ -28032,8 +28032,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large bowl, mix together the baking soda and citric acid. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nIn a separate fragrance oil-safe container, add the sweet almond oil, polysorbate 80, and Bramble Berry's Karma Type Fragrance Oil. Mix thoroughly.\nAdd the oil mixture to the baking soda and citric acid. Use your hands to thoroughly mix the wet and dry ingredients.\nSplit the mixture in half. Each container will weigh about 22 ounces. To one container, add drops of the Cornflower Blue La Bomb, and to the other add drops of the Cantaloupe La Bomb. A little La Bomb colorant goes a long way; about 4-5 drops of each achieves the colors shown here. Use your hands to break up the drops of color and disperse them throughout the mixture.\nBegin spritzing each container with witch hazel while mixing with your hands or a spatula. Continue spritzing until the mixture feels similar to wet sand and holds its shape when squeezed. This means that the mixture will hold its shape in the mold as well.\nOnce the bath bomb mixture has the correct texture, it’s time to start filling the molds. Working in one half of the mold, add some of the orange mixture and then some of the blue mixture. Once this half is full, press the mixture down to compress it and continue layering the colors.",
-      "category": "body"
+      "process": "1. Whisk the dry base ingredients in a large bowl. Wear gloves to protect against acidity.\n2. Combine the liquid carrier oils, fragrance, and solubilizer in a separate container.\n3. Incorporate the liquid mixture into the powders, blending thoroughly by hand.\n4. Divide the mixture into two portions and color with orange and blue micas.\n5. Spritz with witch hazel until the texture resembles damp sand.\n6. Layer the colored powders into spherical moulds and compress firmly.\n7. Allow the bombs to dry for 24 hours before use.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "diy-oatmeal-bath-bombs",
@@ -28044,7 +28045,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY DIY Oatmeal Bath Bombs from Soap Queen.",
+      "description": "Soothing bath bombs featuring colloidal oatmeal and cocoa butter. Designed for a skin-calming soak with high emolliency and a natural oatmeal-honey fragrance.",
       "ingredients": [
         {
           "name": "Colloidal Oatmeal",
@@ -28068,8 +28069,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large bowl, mix together the baking soda, citric acid, and colloidal oatmeal. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nAdd the cocoa butter to a small heat and fragrance-safe container and melt in the microwave using 30-60 second bursts. Be careful when removing from the microwave as the container may be hot. Add 0.7 ounces of Oatmeal Milk and Honey Fragrance Oil, 0.6 ounces of polysorbate 80, and 1 ounce of oat extract to the melted butter. Use a spoon to fully mix the ingredients together.\nAdd the oil mixture to the powder mixture. Use your hands to fully mix the ingredients together.\nRepeat the process with the other bath bombs. When they’re unmolded, allow them to sit for 24 hours before using or wrapping in plastic wrap to protect them from excess moisture. Learn more about packing and storing your bath bombs in the How to Store Handmade Bath Products post.",
-      "category": "body"
+      "process": "1. Whisk the baking soda, citric acid, and colloidal oatmeal together in a large bowl.\n2. Melt the cocoa butter in a heat-safe container and incorporate the fragrance, solubilizer, and oat extract.\n3. Gradually add the butter mixture to the powders, blending with gloved hands until uniform.\n4. Press the mixture firmly into moulds and allow to dry for 24 hours.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "iridescent-pearl-bath-bomb-diy",
@@ -28661,7 +28663,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Shimmery Ski Lip Balm Tutorial from Soap Queen.",
+      "description": "A high-stability lip balm featuring white beeswax and protective waxes. Formulated with reflective micas for a shimmery finish, suitable for cold-weather lip protection.",
       "ingredients": [
         {
           "name": "Avocado Oil",
@@ -28677,8 +28679,9 @@
         }
       ],
       "notes": "",
-      "process": "In a small heatsafe container, add the coconut oil and avocado oil. If your coconut oil is solid, melt before adding to the container. Then, add the vitamin E oil and stir to combine.\nAdd the white beeswax and cera bellina wax into the container, and heat the container in the microwave using 30 second bursts until the waxes have completely melted. Be careful when removing the container from the microwave, as it may be very hot.\nAdd the Winter Clementine Flavor Oil and stir to combine.\nAdd the Peach Shimmer Mica, and stir thoroughly to combine and get rid of any clumps. If you prefer more color and shimmer, feel free to add more until you are happy with the effect. To test the color, try the Spoon Trick!\nOnce the mica is thoroughly mixed in, check the temperature of the mixture. You don’t want to pour the mixture while it’s too hot, or the mica may sink to the bottom. Once the mixture has cooled to about 130-140 ° F, carefully pour the mixture into the push tubes and allow to fully cool and harden. Enjoy!",
-      "category": "face"
+      "process": "1. Melt the base oils and waxes in a water bath or microwave until fully liquid.\n2. Remove from heat and stir in the mica shimmer until evenly distributed.\n3. Incorporate the essential oils and vitamin E.\n4. Pour the liquid balm into tubes and allow to solidify completely.",
+      "category": "face",
+      "processRewritten": true
     },
     {
       "id": "labeling-your-products-lip-balm",
@@ -28999,7 +29002,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Mini Lemon Poppy Seed Soap DIY from Soap Queen.",
+      "description": "Exfoliating mini soap bars featuring poppy seeds and lemon peel powder. Formulated with a white soap base for a creamy lather and a refreshing citrus scent.",
       "ingredients": [
         {
           "name": "White Melt & Pour Soap Base",
@@ -29011,8 +29014,9 @@
         }
       ],
       "notes": "",
-      "process": "Chop 9 oz. of White Melt and Pour Soap Base into small, uniform cubes. Place them into a heat-safe container and melt in the microwave using 10-15 second bursts.\nAdd 0.2 oz. of Sweet Meyer Lemon Fragrance Oil. Use a spoon to fully incorporate the fragrance.\nAdd 1/2 tsp. of poppy seeds and 1/2 tsp. of lemon peel powder. Stir until all the chunks of lemon peel powder are gone.\nCheck the temperature of the soap. It’s best to pour around 125-130° F so the poppy seeds don’t fall to the bottom. Once the soap is at the right temperature, pour it into each mold cavity. After each pour, spray with 99% isopropyl alcohol to get rid of bubbles.\nContinue until each cavity is full. Allow the soap to fully cool and harden for 2-4 hours, then remove from the mold. Wrap the soap in plastic wrap to prevent glycerin dew. Enjoy.",
-      "category": "soap"
+      "process": "1. Melt the white soap base using short microwave bursts.\n2. Incorporate the fragrance and stir thoroughly.\n3. Add the poppy seeds and lemon peel powder, stirring until no clumps remain.\n4. Verify the soap temperature is between 51–54°C (125–130°F) before pouring into moulds to prevent seed settling.\n5. Spritz with alcohol and allow to solidify for 2–4 hours.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "diy-rosehip-melt-pour-soap",
@@ -29023,7 +29027,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY DIY Rosehip Melt & Pour Soap from Soap Queen.",
+      "description": "A skin-softening soap bar featuring rose clay and rosehip powder. Designed for a gentle, mineral-rich cleanse with an exfoliating poppy seed texture.",
       "ingredients": [
         {
           "name": "White Melt & Pour Soap Base",
@@ -29043,8 +29047,9 @@
         }
       ],
       "notes": "",
-      "process": "Chop 32 ounces of White Melt and Pour Soap Base into small uniform pieces. Place all the soap into a large heat-safe bowl. Place the bowl into the microwave and melt the soap using 30 second bursts. Between each burst, stir the soap to help it melt evenly and prevent overheating. Continue heating and stirring until the base is completely melted.\nAdd all of the dispersed rose clay and rosehip powder to the melted soap and stir to fully mix in the powders.\nAdd 0.3 oz. of lavender 40/42 essential oil, 0.3 oz. of lemongrass essential oil, and 2 Tbsp. of poppy seeds. Stir to fully mix in the ingredients.\nSpritz the top with 99% isopropyl alcohol to get rid of bubbles. Allow the soap to fully cool and harden for at least 4 hours or up to overnight.\nOnce the soap is completely cool and hard, remove from the mold. Use a crinkle cutter to cut the soap into bars. Cut them as thin or as thick as you’d like. You can use a non-serrated knife if you prefer a smooth look. Wrap the soap in plastic wrap to prevent glycerin dew and enjoy.",
-      "category": "soap"
+      "process": "1. Melt the white soap base until fully liquid (approx. 130°F).\n2. Disperse the rose clay and rosehip powder in alcohol and stir into the melted base.\n3. Incorporate the essential oils and poppy seeds, blending thoroughly.\n4. Pour into moulds and spritz with alcohol to remove bubbles.\n5. Allow to solidify completely for 4 hours before cutting with a crinkle cutter.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "candy-corn-soap-tutorial",
@@ -29055,7 +29060,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Candy Corn Soap Tutorial from Soap Queen.",
+      "description": "Seasonal tri-colored soap bars featuring a candy-corn aesthetic. Formulated with white and clear soap bases for a multi-layered, festive bath experience.",
       "ingredients": [
         {
           "name": "Clear Melt & Pour Soap Base",
@@ -29075,8 +29080,9 @@
         }
       ],
       "notes": "",
-      "process": "Once the yellow layer has hardened and can support a layer on top, add a chunk of Perfect Orange Color Block to container B. Melt the soap in the microwave using 30 second bursts. Between each burst, stir the soap to help it melt evenly.\nAllow the soap to fully cool and harden for at least 3 hours or up to overnight. Remove from the mold and cut into bars about 1″ thick. Then cut the bars into a triangle shapes with the white layer at the top. Repeat this process for the entire loaf. TIP: Save all the extra soap for embeds for a future batch, or remelt all the soap together for light orange bars.\nUse the Clean Up Tool to round out the edges of each bar until you’re happy with the look. Enjoy! Wrap them in plastic wrap to avoid glycerin dew.",
-      "category": "soap"
+      "process": "1. Melt three portions of soap base. Color one yellow and one orange using color blocks.\n2. Pour the yellow layer into a loaf mould, spritz with alcohol, and allow to set.\n3. Pour the orange layer over the yellow layer once it has cooled to 130°F.\n4. Repeat with the final white layer.\n5. Once solidified, slice the loaf into triangular bars to mimic candy corn shapes.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "caramel-apple-soap-diy",
@@ -29115,7 +29121,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Gardener Melt & Pour Soap Kit from Soap Queen.",
+      "description": "A high-performance soap kit featuring exfoliating walnut shells and shredded loofah. Designed for intensive hand cleaning with a skin-conditioning goat milk base.",
       "ingredients": [
         {
           "name": "Goat Milk Melt And Pour Soap Base",
@@ -29127,8 +29133,9 @@
         }
       ],
       "notes": "",
-      "process": "For the first layer, chop 10.5 oz. of the Goat Milk Melt & Pour Base into small cubes. Place the soap into a heat-safe container and melt in the microwave using 30 second bursts. After each burst, stir the soap. Be careful not to overheat and burn the soap.\nOnce melted, add 1 Tbsp. of walnut shells. Stir to combine. Use the dropper to add 4 mL of fragrance oil and stir. Pour the soap into the mold. Spritz with alcohol to get rid of bubbles. Allow to cool and harden for 5-10 minutes while you prepare the next layer.\nFor the second layer, chop 10.5 oz. of Goat Milk Melt & Pour Base into small cubes. Place the soap into a heat-safe container and melt in the microwave using 30 second bursts. After each burst, stir the soap. Be careful not to overheat and burn the soap.\nAdd shavings of the Green Color Block to the melted soap until you get a light green. Add 4 mL of the fragrance oil. Stir well and let the soap cool to 130° F or cooler so that it doesn’t melt the first layer.\nOnce cooled, spritz the first layer with alcohol to help the second layer adhere. Pour the green soap into the mold on top of the first layer. After pouring, spritz with alcohol to get rid of bubbles. Allow to cool and harden for 5-10 minutes while you prepare the next layer.\nFor the last layer, chop 10.5 oz. of the Clear Melt & Pour Base into small cubes. Place the soap into a heat-safe container and melt in the microwave using 30 second bursts. After each burst, stir the soap. Be careful not to overheat and burn the soap.\nAdd shavings of the Green Color Block to the melted soap until you get a dark green. Add 1 Tbsp. of shredded loofah and 4 mL of the fragrance oil. Stir everything together. Let the soap cool to between 125° F and 130° F to allow the loofah to suspend evenly throughout the soap and to prevent melting the layer below.\nSpritz the second layer with alcohol to help the third layer adhere, then pour into the mold. After pouring, spritz with alcohol to get rid of bubbles.\nLet the soap h",
-      "category": "soap"
+      "process": "1. Layer 1: Mix melted goat milk base with walnut shells and fragrance. Pour into a mould and allow to set.\n2. Layer 2: Color melted goat milk base with green oxide. Pour over the first layer once cooled to 130°F.\n3. Layer 3: Mix melted clear base with dark green colorant and shredded loofah. Pour over the second layer.\n4. Spritz with alcohol between layers to ensure adhesion.\n5. Allow the loaf to solidify completely before unmoulding.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "sparkling-fig-melt-pour-soap-tutorial",
@@ -29139,7 +29146,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Sparkling Fig Melt & Pour Soap Tutorial from Soap Queen.",
+      "description": "A decorative swirled soap featuring honey and goat milk bases. Formulated for high emolliency and a festive, sparkling aesthetic with seasonal micas.",
       "ingredients": [
         {
           "name": "Honey Melt And Pour Soap Base",
@@ -29155,8 +29162,9 @@
         }
       ],
       "notes": "",
-      "process": "Chop 32 ounces of Honey Melt and Pour Soap Base into small uniform pieces. Place 16 ounces of the chopped Honey Melt and Pour Soap Base into one heat-safe container, and the remaining 16 ounces into another heat-safe container. Then, chop 22 oz. of Goat Milk Melt and Pour Soap Base into small uniform pieces. Place all of the Goat Milk Melt and Pour Soap Base into one large heat-safe container.\nPlace the container of Goat Milk Melt and Pour Soap Base into the microwave and melt using 30-60 second bursts. Between each burst, stir the soap to help it melt evenly and prevent overheating. Continue heating and stirring until the base is completely melted.\nMelt both containers of Honey Melt and Pour Soap Base in the microwave using about 30-40 second bursts. Mix between each burst to help it melt evenly and prevent overheating. Continue heating and stirring until the base is completely melted.\nAdd all of the dispersed Evergreen Mica to the melted goat milk soap and stir to combine. Then, add all of the dispersed Gold Sparkle Mica to one container of melted honey soap, and all of the dispersed Merlot Sparkle Mica to the other container of melted honey soap. Stir to combine.\nAdd 0.3 ounces of the Cranberry Fig Fragrance Oil to the green soap and stir until completely combined. Then add 0.2 ounces of the Cranberry Fig Fragrance Oil to the gold and burgundy soap. Stir completely to combine the colorants.\nCheck the temperature of each container of soap. The ideal temperature for swirling melt and pour is around 125 ° F. If the soap is too hot the colors will muddle together, but if it’s too cold they won’t swirl. If some of the soap has cooled too much, place it in the microwave and reheat using short 5-10 second bursts.\nSpritz the soap in the mold with alcohol to help the layers stick together. Pour a thin layer of the green soap, spritz with alcohol to get rid of bubbles, then pour burgundy and gold soap soap in random areas to create a swirl effect. Spritz with alcohol to ge",
-      "category": "soap"
+      "process": "1. Melt one portion of goat milk base and two portions of honey soap base.\n2. Color the goat milk base green and the honey bases gold and burgundy using micas.\n3. Incorporate the fragrance into each portion.\n4. Pour a base layer of green soap into a loaf mould, then swirl in the gold and burgundy portions while the soap is at 125°F.\n5. Spritz with alcohol and allow to solidify completely.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "rose-quartz-melt-pour-soap-tutorial",
@@ -29167,7 +29175,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Rose Quartz Melt & Pour Soap Tutorial from Soap Queen.",
+      "description": "Crystal-shaped soaps featuring a rose-quartz aesthetic. Formulated with a blend of white and clear soap bases for a translucent, mineral-like appearance.",
       "ingredients": [
         {
           "name": "Clear Melt & Pour Soap Base",
@@ -29179,8 +29187,9 @@
         }
       ],
       "notes": "",
-      "process": "Chop 16 ounces of White Melt and Pour Soap and 16 ounces of Clear Melt and Pour Soap into small uniform pieces. Place them into separate heat safe containers, and melt in the microwave using 30 second bursts.\nOnce the bases are completely melted, disperse 1 teaspoon Rose Gold Mica into 1 tablespoon 99% isopropyl alcohol. Mix to get rid of any chunks of mica. Add all the dispersed mica into the melted clear soap.\nAdd 5 mL Rose Quartz Fragrance Oil into the melted clear soap, and the melted white soap. Stir in completely.\nRepeat this process until all the soap is poured. Allow the soap to fully cool and harden for several hours or up to overnight. Remove them from the mold.\nUse a sharp non-serrated knife to cut the soaps into gem shapes. There is no right or wrong way to do it, just have fun with it.\nWrap the bars in plastic wrap to help prevent glycerin dew. Enjoy!",
-      "category": "soap"
+      "process": "1. Melt white and clear soap bases in separate containers.\n2. Disperse rose-gold mica in alcohol and incorporate into the clear soap base.\n3. Add fragrance to both bases.\n4. Layer and swirl the two bases in a loaf mould to create a marbled effect.\n5. Once solidified, use a sharp knife to hand-carve the bars into geometric gem shapes.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "diy-turmeric-melt-pour-soap",
@@ -29191,7 +29200,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY DIY Turmeric Melt & Pour Soap from Soap Queen.",
+      "description": "A brightening soap bar featuring natural turmeric powder and citrus essential oils. Formulated with goat milk soap base for a creamy, skin-softening lather.",
       "ingredients": [
         {
           "name": "Goat Milk Melt And Pour Soap Base",
@@ -29203,8 +29212,9 @@
         }
       ],
       "notes": "",
-      "process": "Chop 60 ounces of Goat Milk Melt and Pour Soap Base into small, uniform cubes. Place the soap into a large, heat-safe container and melt in the microwave using 60-second bursts. Because it's such a large amount of soap, it will take a little longer to melt.\nWhile the soap is in the microwave, mix 2 teaspoons of turmeric powder with 2 tablespoons of 99% isopropyl alcohol. Doing so helps the turmeric more easily mix into the melted soap without chunks.\nIn a glass, essential oil-safe container, measure 0.8 ounces of Orange 10X Essential Oil.\nOnce the soap is melted, add all the dispersed turmeric powder and the Orange 10X Essential Oil. Use a spatula to mix the ingredients thoroughly.\nPour the soap into each cavity of the mold. After each pour, spray the top of the bars with 99% isopropyl alcohol to help get rid of bubbles. Allow the soap to fully cool and harden. Remove from the mold and enjoy! Wrap the soap in plastic wrap after unmolding to prevent glycerin dew.",
-      "category": "soap"
+      "process": "1. Melt the goat milk soap base until fully liquid.\n2. Disperse the turmeric powder in alcohol and stir into the melted base until no clumps remain.\n3. Incorporate the orange essential oil and blend thoroughly.\n4. Pour into silicone moulds and spritz with alcohol.\n5. Allow to solidify completely before unmoulding.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "lily-rain-melt-and-pour-soap-tutorial",
@@ -29215,7 +29225,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Lily & Rain Melt and Pour Soap Tutorial from Soap Queen.",
+      "description": "A tri-layered floral soap featuring aqua and green clear bases. Formulated for high transparency and a sophisticated lily scent with intensive skin softening.",
       "ingredients": [
         {
           "name": "Clear Melt And Pour Soap Base",
@@ -29231,8 +29241,9 @@
         }
       ],
       "notes": "",
-      "process": "Chop and melt 16 ounces of the Clear Melt and Pour Soap in the microwave using 30-60 second bursts. Once melted, add all of the dispersed Aqua Pearl Mica and stir to fully combine. Add 0.2 ounces of the Amazon Lily & Rain Fragrance Oil and stir to fully combine.\nSpritz the mold with 99% isopropyl alcohol. This helps the soap spread smoothly into the mold. To keep the layers as exact as possible, place the mold on a scale and press the tare button. Pour 8 ounces of the blue soap into the mold and spritz with 99% isopropyl alcohol to get rid of bubbles.\nAfter about 5-10 minutes, test the bottom layer to see if it’s firm enough to support a layer on top. If it has formed a firm skin, chop and melt 16 ounces of the White Melt and Pour Soap Base using 30-60 second bursts. Once completely melted, add 0.2 ounces of Amazon Lily & Rain Fragrance Oil and stir to fully incorporate.\nt’s below 130 ° F, spritz the blue layer with 99% isopropyl alcohol (this helps the layers stick together), and pour 5.3 ounces of the white soap into the mold. Spritz the top with 99% alcohol to help get rid of bubbles. Allow the layer to harden and cool for about 5-10 minutes.\nChop and melt 16 ounces of the Clear Melt and Pour Soap in the microwave using 30-60 second bursts. Once melted, add all of the dispersed Kermit Green Mica to the soap and stir to fully combine. Add 0.2 ounces of the Amazon Lily & Rain Fragrance Oil and stir to fully combine.\nTest the white layer to make sure it’s firm enough to support the green layer. Test the temperature of the green soap. If the green soap is below 130 ° F, spritz the white soap with 99% isopropyl alcohol and pour 8 ounces of the green soap into the mold. Spritz the top with 99% isopropyl alcohol to get rid of bubbles. Allow to cool and harden for about 5-10 minutes.\nOnce the blue layer has hardened, reheat the remaining white soap in the microwave using 10-15 second bursts. Be careful to not scorch the soap. Once the blue layer is firm and the white soa",
-      "category": "soap"
+      "process": "1. Layer 1: Color melted clear base with aqua mica and fragrance. Pour into a mould and allow to set.\n2. Layer 2: Melt white soap base and incorporate fragrance. Pour over the first layer once cooled to 130°F.\n3. Layer 3: Color melted clear base with green mica. Pour over the white layer.\n4. Spritz with alcohol between each pour to ensure layer stability.\n5. Allow the loaf to solidify completely before slicing.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "diy-rose-clay-milk-soap-bars",
@@ -29243,7 +29254,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY DIY Rose Clay Milk Soap Bars from Soap Queen.",
+      "description": "Decorative soap bars featuring intricate rose-clay details. Formulated with goat milk soap base for a luxurious lather and effective mineral-based cleansing.",
       "ingredients": [
         {
           "name": "Goat Milk Melt And Pour Soap Base",
@@ -29259,8 +29270,9 @@
         }
       ],
       "notes": "",
-      "process": "In a small container, mix 1 tsp. rose clay into 1 Tbsp. isopropyl alcohol. This will help the clay mix into the soap without clumping. Cut 4 oz. of Clear Melt and Pour into small, even pieces. Place the soap in a heat-safe container and melt on 5 second bursts. Using short bursts prevents the soap from burning. Add 1 Tbsp. of dispersed clay and mix to fully incorporate.\nCut a very small amount off the tip of the Injector Tool. You still want the hole of the Injector Tool to be small, but making it slightly larger helps prevent it from clogging. Fill a small cup with very hot water. Have the hot water nearby while you fill in the details of the mold with white soap. Use it to clear the Injector Tool if the soap begins to cool and harden in the tool.\nWhen the soap is firm – after about 5-10 minutes – use the Clean Up Tool to remove any spills.\nCut 32 oz. of Goat Milk Melt and Pour into small, even pieces. In a large heat-safe container, melt the soap on 30 second bursts. Add 0.9 oz. of Dogwood and Ginger Blossom Fragrance Oil and stir to fully incorporate. Wait until the soap is around 125-130 ° F so it won’t melt the red soap.\nThen, spritz the red soap with alcohol to help the layers stick. Slowly and carefully pour the white soap into the mold and spritz with 99% isopropyl alcohol to pop any bubbles. Let the soap harden for 4 hours or overnight. Unmold, cut into 8 bars along the score marks and enjoy! To avoid glycerin dew, wrap them immediately in plastic wrap or another airtight packaging option.",
-      "category": "soap"
+      "process": "1. Disperse rose clay in alcohol and incorporate into melted clear soap base.\n2. Use a precision injector to fill the intricate details of a mould with the red clay soap.\n3. Once the details have set, melt goat milk base and incorporate fragrance.\n4. Pour the white soap over the set details once it has cooled to 130°F.\n5. Allow to solidify for 4 hours before unmoulding.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "animal-melt-pour-soap-tutorial",
@@ -29271,7 +29283,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Animal Melt & Pour Soap Tutorial from Soap Queen.",
+      "description": "Whimsical animal-shaped soaps featuring multi-colored details. Formulated with goat milk and clear soap bases for a gentle, family-friendly bath experience.",
       "ingredients": [
         {
           "name": "Clear Melt And Pour Soap Base",
@@ -29283,8 +29295,9 @@
         }
       ],
       "notes": "",
-      "process": "Once the brown soap has cooled (should only take a few minutes), reheat the remaining black soap if necessary using 5 second bursts. Spritz the monkey cavity with 99% isopropyl alcohol and place a very small amount of black soap onto the details of the face. You don’t need to cover the entire mold. Spritz with alcohol to get rid of any bubbles.\nChop and melt 3 ounces of White Melt and Pour Soap Base in a small, heat safe container using 5-10 second bursts in the microwave. add 1 mL of the Sugared Grape Fragrance Oil. Spritz the penguin mold with 99% isopropyl alcohol and use white soap to fill in the entire cavity. Spritz with 99% isopropyl alcohol to get rid of any bubbles.\nAllow the soaps to cool and harden for several hours, up to overnight. Once they are completely cooled, remove them from the mold and wrap them in plastic wrap to help prevent glycerin dew. Enjoy!",
-      "category": "soap"
+      "process": "1. Melt small portions of soap base and color with various dyes for animal features (face, eyes, etc.).\n2. Use a precision tool to fill the detail cavities of the animal moulds.\n3. Once the details have set, pour a contrasting base soap (goat milk or clear) over the top until the mould is full.\n4. Spritz with alcohol and allow to solidify completely.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "pure-charcoal-melt-pour-soap-diy",
@@ -29296,7 +29309,7 @@
         "Blender",
         "Stove"
       ],
-      "description": "DIY Pure Charcoal Melt & Pour Soap DIY from Soap Queen.",
+      "description": "A detoxifying soap bar featuring activated charcoal and tea tree essential oil. Formulated with an aloe vera soap base for a clarifying yet non-stripping cleanse.",
       "ingredients": [
         {
           "name": "Aloe Vera Melt And Pour",
@@ -29312,8 +29325,9 @@
         }
       ],
       "notes": "",
-      "process": "Chop 3 ounces of White Melt and Pour Soap Base into small chunks, place them in a small heat safe container and melt in the microwave using 5-10 second bursts. Melt and pour is easy to burn when melting such a small amount, so use short bursts and do not let the soap boil.\nCut a very small amount off the tip of the Injector Tool. You still want the hole of the Injector Tool to be small, but making it slightly larger helps avoid the tool from becoming clogged. Fill a small cup with very hot water. Have the hot water nearby while you fill in the details of the mold with white soap. Use it to clear the Injector Tool if the soap begins to cool and harden in the tool.\nSpritz the mold with 99% isopropyl alcohol. Spritzing the mold allows the soap to spread easily into the details. Fill up the Injector Tool with the white soap and carefully fill in the details of the mold. Have the spray bottle filled with alcohol nearby to get rid of any bubbles. Work carefully but quickly to prevent the soap from hardening in the Injector Tool.\nContinue filling in the details of each cavity. If you make a mistake, allow the soap to fully cool and harden and use the Clean Up Tool to get rid of imperfections.\nWhile the white soap fully hardens, chop 32 ounces of Aloe Vera Melt and Pour Soap Base into small chunks. Place them in a large heat safe container and melt in the microwave using 30-60 second bursts. Between each burst, stir the soap to help it melt evenly. It can take a few minutes to fully melt depending on the strength of your microwave.\nMix 2 teaspoons of activated charcoal with 2 tablespoons of 99% isopropyl alcohol. Stir together to help get rid of large clumps. Add all of the dispersed charcoal into the melted soap and stir to fully combine.\nAdd the tea tree essential oil to the soap and stir to fully combine. Take the temperature of the soap. If the soap is poured into the mold when it's hotter than 130 ° F, it may melt the white details in the mold. Allow the soap to cool t",
-      "category": "soap"
+      "process": "1. Use a precision tool to fill detail cavities with white soap base. Allow to set.\n2. Melt the aloe vera soap base until liquid (approx. 130°F).\n3. Disperse activated charcoal in alcohol and stir into the melted base until uniform.\n4. Incorporate the tea tree essential oil.\n5. Pour the black soap over the set white details once it has cooled to 130°F.\n6. Allow to solidify completely before unmoulding.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "blueberry-tart-melt-pour-soap-diy",
@@ -29324,7 +29338,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Blueberry Tart Melt & Pour Soap DIY from Soap Queen.",
+      "description": "A decorative tart-shaped soap featuring embedded soap blueberries. Formulated with a white soap base for a creamy aesthetic and a fruity tart fragrance.",
       "ingredients": [
         {
           "name": "Clear Melt And Pour Soap Base",
@@ -29340,8 +29354,9 @@
         }
       ],
       "notes": "",
-      "process": "Reheat the remaining white soap on 10 second bursts. Spritz the top of the soap and the blueberry embeds with alcohol. Place three embeds on top of each bar. Then, slowly and carefully pour the white soap in until the cavity is full. Spritz with alcohol to disperse any bubbles. Let the soap fully cool and harden, which will take about an hour.",
-      "category": "soap"
+      "process": "1. Create blueberry embeds by melting soap base with blue colorant and pouring into small spherical moulds.\n2. Melt white soap base and incorporate fragrance.\n3. Pour a base layer into a tart mould and allow to set slightly.\n4. Position three blueberry embeds on top of each bar.\n5. Pour the remaining white soap around the embeds and spritz with alcohol.\n6. Allow to solidify completely for one hour.",
+      "category": "soap",
+      "processRewritten": true
     },
     {
       "id": "midnight-plum-melt-pour-soap-diy",
