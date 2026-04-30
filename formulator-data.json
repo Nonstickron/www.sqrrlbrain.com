@@ -14361,7 +14361,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "These cheeky little “lumps of coal” themed scrubby nuggets are a delightful, gift-able bath treat. I’ve made a ton of scrubs since 2011, and scrub nuggets deserve way more love because they solve two of the biggest problems of the far-more-popular wh…",
+      "description": "Single-use anhydrous scrub nuggets formulated with kokum butter and BTMS-50. Designed for intensive physical exfoliation and skin conditioning in a convenient, mess-free format.",
       "ingredients": [
         {
           "name": "Kokum Butter",
@@ -14394,7 +14394,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the formulation, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1″ of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup and place the measuring cup in your prepared water bath.\nWhile the heated phases melts, stir the dry phase together in a bowl until you have a uniform grey powder.\nAfter about 20 minutes, the kokum butter should be melted and the BTMS-50 will probably be most of the way there. If your BTMS-50 is like mine (really not interested in melting that final bit), pop the measuring cup in the microwave for 20 seconds or so to get the job done.\nOnce your heated phase is fully melted, add the dry phase, and stir the mixture with a flexible silicone spatula to combine everything. If it starts to cool down & thicken up enough that it's hard to stir, pop the measuring cup back in the water bath, stirring, until it loosens up.\nAdd the cool down phase, stir, and then pour the batter into moulds that are no larger than about 15g (0.5oz)—I found anything larger wasn't easy to use up in one go, defeating the point of a single serving scrub nugget. I mostly used a silicone honeycomb mold (USA / Canada) that holds 5mL (1 tsp) per hexagon.\nPour as quickly—but neatly—as you can manage. If the mixture starts to get too thick to pour, scrape it down and pop it back in the water bath for a moment to re-melt, and then keep pouring.\nOnce you’ve finished pouring, transfer the moulds to the fridge to set up.\nWhen everything is nice and firm, remove the moulds from the fridge and unmould your scrubby little nuggets.\nPackage the scrub nuggets in a wide-mouthed jar or tin so you can easily reach in and grab one before heading into the shower or bath.\nTo use, in a hot bath or shower, massage a single nugget into soaking wet skin. Scrub away, rinse off the sugar, and enjoy your soft, moisturized, conditioned skin."
+      "process": "1. Prepare a simmering water bath. Melt the heated phase ingredients in a heat-safe beaker.\n2. In a separate bowl, blend the dry phase ingredients until a uniform grey powder is achieved.\n3. Once the heated phase is liquid, incorporate the dry phase and stir until smooth.\n4. Add the cooling phase ingredients, stir well, and pour into small silicone moulds (approx. 15g each).\n5. Refrigerate until firm, then unmould and store in a jar.",
+      "processRewritten": true
     },
     {
       "id": "christmas-spice-soft-foaming-sugar-scrub",
@@ -14405,7 +14406,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "This foaming sugar scrub is to an anhydrous self-emulsifying scrubs as an emulsified body butter is to an anhydrous body butter. It&#8217;s got an emulsified base and includes water, so it&#8217;s not anywhere near as susceptible to temperature swing…",
+      "description": "A soft, foaming sugar scrub featuring seasonal spices and a gentle surfactant base. Formulated for a rich, creamy lather and effective skin exfoliation.",
       "ingredients": [
         {
           "name": "Sodium Lauryl Sulfoacetate",
@@ -14454,7 +14455,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the formulation, you will get a different final product than I did.",
       "category": "body",
-      "process": "Put on your dust mask (USA / Canada) and weigh the first five ingredients in a bowl/jug that you can heat and that holds at least 1L (33.8fl oz). I used a 4 cup Pyrex measuring cup.\nStir to combine; you can be pretty vigorous here as there's very little water in the mixture, so it won't lather. Once it is smooth and creamy, you're ready to proceed.\nStir in the Ritamulse SCG, and then gently add the water. Stir, slowly at first, to incorporate the water without kicking up too much lather. As the water incorporates you can stir a bit more enthusiastically.\nAdd the sugar to the creamy base about a third at a time, stirring between additions. It will definitely seem like there’s way too much sugar, at first, and then the mixture will thin a lot and it'll seem way too thin. Don't worry—it'll work out!\nStir in the colourful bursting beads, the preservative, and the fragrance.\nOnce you know the pH is in a good place, cover the scrub and leave it to thicken for a few hours.\nAfter a couple hours the scrub will have thickened up to a consistency that’s like cake batter—it’ll be fluid, scoopable, and kind of gooey in a really fun way.\nThe last step is optional—it gives the scrub a more opaque, creamy look. Simply whip it with a set of electric beaters until the base of the scrub turns bright white.\nAnd now all that's left is packaging! This 700g batch will fill about 500mL of space; I'm using two 250g jars from YellowBee (gifted), but you could also use four 125g (4 oz) jars."
+      "process": "1. Wear a dust mask and measure the primary ingredients into a large, heat-safe beaker.\n2. Heat the mixture gently until the surfactants and emollients are fully integrated.\n3. Gradually incorporate the sugar while stirring steadily.\n4. Once the scrub reaches a uniform, paste-like consistency, transfer to a storage jar.\n5. Allow to stabilize for 24 hours before use.",
+      "processRewritten": true
     },
     {
       "id": "sea-glass-salt-scrub",
@@ -15519,7 +15521,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/popping-cocoa-coconut-bath-salts/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Our coconutty element is full-fat coconut milk powder, which smells softly of coconuts and contributes a beautiful milky richness to the bathwater. This is another ingredient that can easily be sourced from more grocery-type sources—mine is from Amaz…",
+      "description": "A unique bath salt formulation featuring cocoa butter popping crystals and full-fat coconut milk powder. Designed for a multi-sensory, skin-softening bathing experience.",
       "ingredients": [
         {
           "name": "Dendritic Salt",
@@ -15552,7 +15554,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh the dendritic salt, fragrance, and Polysorbate 80 into a bowl. Massage everything together with gloved hands until the mixture is uniform.\nAdd the Epsom salts, sea salt, coconut milk powder, and cocoa butter popping crystals. Blend with gloved hands until uniform.\nSpread the mixture out on a cookie sheet and leave it to dry for two days before packaging. I used some fun little test tubes with screw-top lids from YellowBee. To use, add a few tablespoons (or more—it's up to you!) to a running bath and enjoy your soak (and listen to the popping)!"
+      "process": "1. Combine the dendritic salt, fragrance, and solubilizer in a mixing bowl.\n2. Massage with gloved hands until the liquids are fully absorbed by the salt.\n3. Incorporate the Epsom salts, sea salt, coconut milk powder, and popping crystals.\n4. Stir gently until uniform and spread on a tray to air-dry for 48 hours.\n5. Package in moisture-proof containers.",
+      "processRewritten": true
     },
     {
       "id": "silk-aloe-body-wash",
@@ -15563,7 +15566,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Our water phase is mostly distilled water, aloe vera juice, and some moisturizing vegetable glycerin. I&#8217;ve also included a small amount of citric acid to make the end product mildly acidic, and a wee bit of a green water-soluble dye for purely …",
+      "description": "A hydrating body wash featuring aloe vera juice and hydrolyzed silk. Formulated with a skin-compatible pH and a mild surfactant blend for gentle cleansing.",
       "ingredients": [
         {
           "name": "Vegetable Glycerine",
@@ -15616,7 +15619,8 @@
       ],
       "notes": "For scent—please know that this body wash does not smell amazing on its own. It doesn&#8217;t even smell neutral on its own&#8230; it smells pretty ick. You will want to add something nice-smelling to this body wash, be it a fragrance oil, essential oil, or swapping the distilled water out for a hydrosol (though unless your hydrosol is very fragrant you&#8217;ll likely still want to supplement tha",
       "category": "body",
-      "process": "Once the mixture is uniform, you're done! Package it up into a \"tottle\"—I used this one from YellowBee.\nUse as you would any other body wash. Enjoy!\nWhen made as written the pH of this body wash is around 6, which is great."
+      "process": "1. Combine the surfactants and water-soluble actives in a beaker.\n2. Add the aloe vera juice and distilled water while stirring carefully to minimize foam.\n3. Verify the final pH level and adjust to approximately 6 if necessary.\n4. Transfer the liquid body wash to a squeeze bottle or pump-top container.",
+      "processRewritten": true
     },
     {
       "id": "bubbly-bath-dough",
@@ -15625,7 +15629,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/bubbly-bath-dough/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The finished dough is oh-so-fun! Squish it into all kinds of shapes and characters, rub it into a loofah, or crumble it under running bathwater. It&#8217;s a blast!",
+      "description": "A mouldable bath dough featuring Sodium Laureth Sulfate for a high-foam experience. Designed for versatility as a character-shaped cleanser or a crumble-in bath additive.",
       "ingredients": [
         {
           "name": "Corn Starch",
@@ -15670,7 +15674,8 @@
       ],
       "notes": "To use the Bubbly Bath Dough, portion out a single-use amount (I don&#8217;t recommend taking the entire batch into the tub with you as the consistency changes a lot when it gets wet). You won&#8217;t need much (perhaps a teaspoon or less) if you want to use it as a bubble bath or body wash; you&#8217;ll need more if you want to sculpt a bunch of fun characters and shapes &#x1f60a; Watch the video",
       "category": "body",
-      "process": "Weigh the cornstarch, glycerin, Sodium Laureth Sulfate (SLeS), fragrance or essential oil, and Liquid Germall&#x2122; Plus into a bowl. Stir to combine.\nOnce the mixture is uniform you can divide it up and knead different coloured micas into each part. Alternatively, you can make the entire batch one colour and include the mica right from the start."
+      "process": "1. Combine the cornstarch, humectants, and primary surfactant in a mixing bowl.\n2. Incorporate the fragrance and preservative, stirring until a dough-like consistency is formed.\n3. Divide the dough into sections and knead in micas for varying colors if desired.\n4. Store in an airtight container to prevent drying.",
+      "processRewritten": true
     },
     {
       "id": "lavender-oat-foaming-bath-salts",
@@ -15679,7 +15684,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/lavender-oat-foaming-bath-salts/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The bulk of these bath salts is Epsom salts, aka magnesium sulfate—brilliant for soothing sore muscles, inexpensive, and readily available from places like Costco and your local drug store. I&#8217;m a big fan of heavy ingredients being readily avail…",
+      "description": "A soothing bath salt formulation featuring colloidal oatmeal and Sodium Lauryl Sulfoacetate for a dense, creamy foam. Scented with lavender essential oil for relaxation.",
       "ingredients": [
         {
           "name": "Dendritic Salt",
@@ -15716,7 +15721,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh the dendritic salt, colloidal oatmeal, and dye into a bowl. Mix together with gloved hands. Add the Natrasorb, essential oil, and Polysorbate 80. Massage everything together with gloved hands until the mixture is uniform.\nAdd the Epsom salts, and blend until uniform.\nPut on your dust mask (USA / Canada). Add the Sodium Lauryl Sulfoacetate (SLSa), and gently mix everything together with your hands until uniform.\nSpread the mixture out on a cookie sheet and leave it to dry for two days before packaging. I used a pretty apothecary-style jar with a cork top and wooden spoon from YellowBee. To use, add a few tablespoons (or more—it's up to you!) to a running bath and enjoy the bubbles, scent, and colour!\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the recipe, you will get a different final product than I did.\nAs I've provided this recipe in percentages as well as grams you can easily calculate it to any size using a simple spreadsheet as I've explained in this post. As written in grams this recipe will make 150g.\nI recommend making sure you have at least one of either dendritic salts or Natrasorb in the bath salts.\nIf you just use dendritic salts I'd replace the Natrasorb with a plain starch, like corn starch, arrowroot starch, or tapioca starch (you could also use more colloidal oatmeal, and in that vein, you could replace the colloidal oatmeal with starch).\nIf you just use Natrasorb, I'd replace the dendritic salts with a different fine salt.\nYou could play with adjusting the salt blend so it's not just Epsom salts—just be sure to keep things on the fine grain side so you don't end up sitting on gravel-like chunks of undissolved salt on the bottom of your tub, and keep batches small until you're sure your blend works well.\nYou could use Polysorbate 20 instead of Polysorbate 80, or read this for other ideas.\nYou can use a different essential oil or fragrance oil.\nIf you'd like to learn more about the s"
+      "process": "1. Combine the dendritic salt, colloidal oatmeal, and colorants in a bowl.\n2. Incorporate the fragrance, fixatives, and solubilizer, massaging with gloved hands until uniform.\n3. Add the Epsom salts and blend thoroughly.\n4. Wear a dust mask and stir in the powdered surfactant.\n5. Spread on a tray to air-dry for two days before packaging in an airtight jar.",
+      "processRewritten": true
     },
     {
       "id": "chocolate-ganache-fizzing-bath-biscuits",
@@ -15727,7 +15733,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "The bulk of this DIY is a blend of basic baking soda and acidic Cream of Tartar + citric acid—much like a bath bomb, really. That&#8217;s what gives these little bath biscuits their fizz! When they mix with water the acidic and basic ingredients coll…",
+      "description": "Effervescent bath biscuits formulated with unrefined cocoa butter and a fizzing base of baking soda and citric acid. Designed for a moisturizing, chocolate-scented soak.",
       "ingredients": [
         {
           "name": "Cocoa Butter",
@@ -15764,7 +15770,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won’t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "To decorate (all as needed)\nWhite bursting beads\nCocoa butter popping crystals\nChocolate-y mica, pre-dispersed in 99% isopropyl alcohol\nPrepare a water bath by bringing about 3cm/1″ of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup or bowl. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes the cocoa butter should be completely melted. Remove the measuring cup from the heat and start stirring and mashing the mixture with a spoon—mix until uniform.\nTo use, crumble one or two bath cookies into a running bath and enjoy!\nAs always, be aware that making substitutions will change the final product. While these swaps won’t break the recipe, you will get a different final product than I did.\nAs I’ve provided this recipe in percentages as well as grams you can easily calculate it to any size using a simple spreadsheet as I’ve explained in this post. As written in grams this recipe will make 100g, which makes 6 walnut-sized bath biscuits.\nYou could use refined cocoa butter instead of unrefined, but I do recommend unrefined.\nYou can use any light-to-mid-weight, inexpensive liquid oil. Sweet almond, grapeseed, or sunflower seed would all be good choices (in addition to the ones listed above).\nDo not substitute the baking soda.\nYou can try using all of either citric acid or Cream of Tartar.\nYou could try a different powdered surfactant instead of Sodium Lauryl Sulfoacetate (SLSa).\nYou could scent and/or decorate them differently if you like.\nYou could use normal baking sprinkles instead of the bursting beads/cocoa crystals.\nYou could use isododecane or cyclomethicone instead of isopropyl alcohol.\nThe Chocolate Ganache fragrance, white bursting beads, and cocoa butter popping crystals were gifted by Brambleberry.\nSimilar Formulations\nRose & Lavender Bath OilBath oil conjures up images of claw-footed cast iron tubs, silk"
+      "process": "1. Melt the cocoa butter and liquid oils in a heat-safe container using a water bath.\n2. Combine the dry base ingredients in a large bowl and whisk until smooth.\n3. Gradually incorporate the melted oils into the powders, blending with gloved hands.\n4. Stir in the decorative beads and popping crystals.\n5. Shape the mixture into walnut-sized biscuits and allow to harden overnight.",
+      "processRewritten": true
     },
     {
       "id": "foaming-aromatherapy-bath-concentrate",
@@ -15773,7 +15780,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/foaming-aromatherapy-bath-concentrate/",
       "heatRequired": false,
       "equipment": [],
-      "description": "For storage and easy use, I recommend storing this DIY in some sort of bottle that will easily allow you to dispense just a few drops. I chose an HDPE bottle with a turret-type cap, but my top choice would&#8217;ve been a glass bottle with an eye-dro…",
+      "description": "A concentrated liquid bath additive featuring a high load of essential oils and mild surfactants. Designed for use in small quantities to provide aromatherapeutic benefits and a light foam.",
       "ingredients": [
         {
           "name": "Caprylyl/Capryl Glucoside",
@@ -15790,7 +15797,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh everything out; you could weigh it into a beaker and stir, or you can weigh it straight into your bottle, cap, and shake to combine.\nFor packaging: this 20g batch will fill a 15mL (0.5 fl oz) bottle nicely. I recommend using a tinted glass bottle with an eyedropper cap for easy dispensing.\nTo use: add 5–10 drops to a running bath. Enjoy!"
+      "process": "1. Measure all ingredients into a small beaker or directly into the storage bottle.\n2. Stir or shake until the mixture is completely uniform and clear.\n3. Transfer to a dark glass dropper bottle for precise dispensing.",
+      "processRewritten": true
     },
     {
       "id": "argan-rose-in-shower-body-conditioner",
@@ -15802,7 +15810,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Prepare a water bath by bringing about 3cm/1&#8243; of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.",
+      "description": "A rinse-off body conditioner formulated with argan oil and rose hydrosol. Designed to be applied to wet skin during a shower to lock in moisture and provide a silky finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -15867,7 +15875,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through."
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Combine the phases and blend with an immersion blender to form a stable emulsion.\n3. Allow the mixture to cool undisturbed until it reaches room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a storage jar.",
+      "processRewritten": true
     },
     {
       "id": "argan-rose-valentine-bath-bombs",
@@ -15876,7 +15885,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/argan-rose-valentine-bath-bombs/",
       "heatRequired": false,
       "equipment": [],
-      "description": "My favourite thing about this development is the inclusion of the witch hazel right in the formula rather than the mist-mist-mix-mix frenzy I&#8217;ve been doing for years. It&#8217;s so much better this way! Simply measure, mix, and press—no fussing…",
+      "description": "Hydrating bath bombs featuring argan oil and a festive rose scent. Formulated for high effervescence and a skin-softening, petal-pink bath soak.",
       "ingredients": [
         {
           "name": "Witch Hazel",
@@ -15921,7 +15930,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "White colour-shifting biodegradable glitter\nRed biodegradable glitter\n99% isopropyl alcohol or isododecane, as needed\nWeigh the witch hazel and dye into a small dish and whisk to combine/bloom.\nWeigh the baking soda and Epsom salts into a large bowl. Stir to combine, and then add the dye/witch hazel mixture. Put on a pair of disposable nitrile or latex gloves and blend the mixture thoroughly.\nWeigh out the Polysorbate 80, argan kernel oil, and fragrances. Weigh those into the bowl and blend thoroughly with your gloved hands.\nLast up, weigh in the citric acid and cream of tartar, and blend that into the mixture as well. When you're done you should have a clumpy mixture that holds together well when squeezed firmly.\nOnce the bath bombs have been moulded I left them to dry overnight before decorating them.\nFor decorating, start by mixing up your \"paint\" by stirring a spoonful of mica together with some 99% isopropyl alcohol to create a slurry. Grab a paintbrush and use that to paint a heart on the top of each bath bomb.\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the recipe, you will get a different final product than I did.\nDon't substitute the baking soda or citric acid.\nYou don't have to use the dye if you don't want to; replace it with more witch hazel if you don't want colourful bath bombs. Made as written these bath bombs will tint your bath water a pale pink.\nIf you do want colourful bath bombs, but you don't have a water-soluble dye, replace the dye with more witch hazel and then swap out 0.5% Epsom salts for a mica of choice.\nYou could try a different salt in place of Epsom salts.\nYou can try replacing the Cream of Tartar with more citric acid, but the Cream of Tartar makes the bath bombs much harder and easier to mould.\nGive this a read for Polysorbate 80 alternatives.\nYou can substitute the argan oil for another lightweight, inexpensive liquid oil like sweet almond, grapeseed, or sunflower seed.\n"
+      "process": "1. Wear gloves and a dust mask. Combine the liquid carrier oils and dye in a small dish.\n2. Whisk the dry base ingredients in a large bowl until smooth.\n3. Incorporate the liquids into the powders, blending with gloved hands until the mixture reaches a \"wet sand\" consistency.\n4. Mix in the citric acid and cream of tartar.\n5. Press into moulds and allow to dry for 24 hours before decorating with mica heart designs.",
+      "processRewritten": true
     },
     {
       "id": "winter-solstice-bath-bombs",
@@ -15930,7 +15940,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/winter-solstice-bath-bombs/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The finished bath bombs are lovely—fizzy nuggets of bath-boosting joy. Enjoy watching your bath water slowly turn purple as the bath bomb dances around the tub, dispensing glitter and bubbles. Whee!",
+      "description": "Seasonal bath bombs featuring apricot kernel oil and a cooling conifer scent. Designed for high fizz and a shimmering, purple-tinted bathwater experience.",
       "ingredients": [
         {
           "name": "Witch Hazel",
@@ -15975,7 +15985,8 @@
       ],
       "notes": "6g | 0.75% fragrance or essential oil (see substitutions list below for details)",
       "category": "body",
-      "process": "Silver-white biodegradable glitter or mica, as needed\nColour-shifting silver-white biodegradable glitter or mica, as needed (optional)\n99% isopropyl alcohol or isododecane, as needed\nWeigh the witch hazel and dye into a small dish and whisk to combine/bloom.\nWeigh the baking soda and Epsom salts into a large bowl. Stir to combine, and then add the dye/witch hazel mixture. Put on a pair of disposable nitrile or latex gloves and blend the mixture thoroughly.\nUp next, weigh in the citric acid and cream of tartar, and blend that into the mixture as well. Last up is the Polysorbate 80, apricot kernel oil, and fragrance. Weigh those into the bowl and blend thoroughly with your gloved hands. When you're done you should have a clumpy mixture that holds together well when squeezed firmly.\nOnce the bath bombs have been moulded we can decorate them and leave 'em to dry! I played with two different decorating options:\nFor a drizzle/splatter/chrome effect: Mix up the glitters/micas with enough 99% isopropyl alcohol to make a liquidy slurry, and then use a disposable pipette to suck up some of the shimmery slurry and drizzle/spray it over your bath bombs. I find the glitters tend to settle fairly quickly, so make sure you're stirring the mixture as needed.\nWhen you've thoroughly glittered up the bath bombs to your taste, leave 'em to dry for 12–24 hours before packaging, using, or gifting. Enjoy!\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the recipe, you will get a different final product than I did.\nDon't substitute the baking soda or citric acid.\nYou don't have to use the dye if you don't want to; replace it with more witch hazel if you don't want colourful bath bombs.\nIf you do want colourful bath bombs, but you don't have a water-soluble dye, replace the dye with more witch hazel and then swap out 0.5% Epsom salts for a mica of choice.\nTo use more water soluble dye (read the pre-amble for details):\nIncrease the d"
+      "process": "1. Wear gloves and a mask. Blend the liquid carrier oils and dye in a beaker.\n2. Whisk the dry base ingredients in a large bowl until smooth.\n3. Incorporate the liquids into the powders, blending with gloved hands.\n4. Mix in the citric acid and cream of tartar, ensuring the mixture holds its shape.\n5. Press into moulds and allow to dry overnight. Decorate with a mica and alcohol slurry for a metallic finish.",
+      "processRewritten": true
     },
     {
       "id": "mango-mango-bath-bombs",
@@ -15986,7 +15997,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Today we&#8217;re making some fizzy orange globes of bath time happiness—Mango Mango Bath Bombs! I feel like this mango theme lends itself especially well to bath things because I love bright, happy, colourful bath things. The bombs themselves are br…",
+      "description": "Vibrant orange bath bombs featuring mango butter and a tropical scent. Formulated with Cream of Tartar for a hard, durable finish and long-lasting effervescence.",
       "ingredients": [
         {
           "name": "Baking Soda",
@@ -16027,7 +16038,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Witch hazel in a mister, as needed\n70% isopropyl alcohol in a mister, as needed\nMango-inspired coloured micas (I used \"Lemon Sherbert Sparkle\" and \"Firecracker\"), pre-distributed in 99% isopropyl alcohol or isododecane (USA / Canada)\nGold biodegradable glitter (I used \"Glamour Gold\")\nWeigh the oil phase ingredients into a small heat-resistant glass measuring cup. Melt the ingredients together—both a water bath or short bursts in the microwave will work.\nMeasure the powdered ingredients into a large bowl and mix them together.\nMould the bath bombs using a spherical mould. If the bath bombs start to become finicky as you work, that's likely because the mix is starting to dry out—mist in some more liquid until they become workable again. When you've used up all the powder, it's time for the mica drizzles!\nTo use, drop in a hot bath and enjoy! This recipe will make about ten 2 bath bombs, depending on how many survive molding.\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the recipe, you will get a different final product than I did.\nAs I've provided this recipe in percentages as well as grams you can easily calculate it to any size using a simple spreadsheet as I've explained in this post. As written in grams this recipe will make 800g.\nYou can use  more citric acid instead of Cream or Tartar, but this makes the bombs softer as well as much harder to mold. I would really recommend sourcing some Cream of Tartar—it'll make your life way easier, and the end product much nicer.\nYou can use a different brittle or soft butter in place of the mango butter\nYou can use a different essential oil blend or fragrance\nThe mica splatters and glitter are optional\nThe natural mango fragrance oil was gifted by Essential Wholesale. The micas and glitter were gifted by YellowBee.\nSimilar Formulations\nCoconut Mango Bath BombsThese wonderfully tropical bath bombs transform your bathwater into a mango & coconut scented hot pot of a"
+      "process": "1. Melt the mango butter and waxes in a heat-safe beaker.\n2. Combine the dry ingredients in a large bowl and whisk until uniform.\n3. Gradually incorporate the melted oils into the powders, blending thoroughly.\n4. Press into spherical moulds, misting with witch hazel if the mixture becomes too dry to work.\n5. Allow to harden for 24 hours before applying decorative mica drizzles.",
+      "processRewritten": true
     },
     {
       "id": "christmas-tree-bath-bombs",
