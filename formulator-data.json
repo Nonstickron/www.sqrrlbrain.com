@@ -549,7 +549,13 @@
     "Beef Tallow Or Lard",
     "Soybean Oil",
     "Soya Bean Oil Or Olive Oil",
-    "Lard Or Beef Tallow"
+    "Lard Or Beef Tallow",
+    "TKB Mousse Medium",
+    "TKB Film Fix",
+    "Silicone Elastomer",
+    "Magnesium Stearate",
+    "Magnesium Myristate",
+    "Iron Oxide"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -21627,6 +21633,47 @@
       ],
       "notes": "",
       "category": "soap"
+    },
+    {
+      "id": "long-wear-cream-eyeliner",
+      "name": "Long-Wear Cream Eyeliner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/long-wear-cream-eyeliner/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "This is what happens if you include black FD&amp;C dye in your eyeliner—this was made with 15% oxide and 2% dye and took 12+ hours to fully rinse off after sitting on my hand for about 5 minutes.",
+      "ingredients": [
+        {
+          "name": "TKB Mousse Medium",
+          "pct": 57
+        },
+        {
+          "name": "TKB Film Fix",
+          "pct": 12.6
+        },
+        {
+          "name": "Silicone Elastomer",
+          "pct": 0.75
+        },
+        {
+          "name": "Magnesium Stearate",
+          "pct": 1.9
+        },
+        {
+          "name": "Magnesium Myristate",
+          "pct": 1.9
+        },
+        {
+          "name": "Silicone Gel",
+          "pct": 7.85
+        },
+        {
+          "name": "Iron Oxide",
+          "pct": 18
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
     }
   ]
 }
