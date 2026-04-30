@@ -846,7 +846,11 @@
     "Chamomile Essential Oil",
     "Inexpensive Cooking Oil—I Used Olive Oil",
     "Orange Wax",
-    "Gentle Carrier Oil"
+    "Gentle Carrier Oil",
+    "Lemon Juice",
+    "Steeped Citron Oolong Tea",
+    "Phytokeratin",
+    "Bioplex"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -30150,6 +30154,139 @@
       ],
       "notes": "This lip balm is essentially the same as the original recipe. The only change is the colour. I added some oil-soluble titanium dioxide for opacity, and then a mixture of red, yellow, and brown iron oxides for the colour. I decided to skip micas because I didn&#8217;t want something shimmery, but you could always add them if you want shimmer.",
       "category": "makeup"
+    },
+    {
+      "id": "lemony-cuticle-butter",
+      "name": "Lemony Cuticle Butter",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lemony-cuticle-butter/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The first thing you might be thinking is &#8220;wow, Marie, that sure is a lot of ingredients&#8221;, and you would be right. That is quite a lot of ingredients. It&#8217;s actually less than the original uses, surprisingly enough. Anyhow, that&#8217…",
+      "ingredients": [
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 26.7
+        },
+        {
+          "name": "Mango Butter",
+          "pct": 6.7
+        },
+        {
+          "name": "Virgin Coconut Oil",
+          "pct": 6.7
+        },
+        {
+          "name": "Lanolin",
+          "pct": 6.7
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 13.3
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 6.7
+        },
+        {
+          "name": "Rice Bran Oil",
+          "pct": 13.3
+        },
+        {
+          "name": "Raw Honey",
+          "pct": 6.7
+        },
+        {
+          "name": "Vegetable Glycerine",
+          "pct": 6.7
+        },
+        {
+          "name": "Lemon Juice",
+          "pct": 6.7
+        }
+      ],
+      "notes": "If you don&#8217;t like the smell of lanolin, feel free to substitute more unrefined shea butter (USA / Canada).",
+      "category": "simple"
+    },
+    {
+      "id": "citron-oolong-lotion",
+      "name": "Citron Oolong Lotion",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/citron-oolong-lotion/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Green tea is an increasingly popular ingredient in body products, so I thought I&#8217;d join in. Though I decided to use Oolong tea instead of green, mostly because I had a wee bit of some Citron Oolong from DavidsTea that was begging to be finished…",
+      "ingredients": [
+        {
+          "name": "Camellia Seed Oil",
+          "pct": 11.1
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 2.2
+        },
+        {
+          "name": "Jojoba Oil",
+          "pct": 3.3
+        },
+        {
+          "name": "Steeped Citron Oolong Tea",
+          "pct": 81.1
+        },
+        {
+          "name": "Vegetable Glycerine",
+          "pct": 2.2
+        }
+      ],
+      "notes": "Please don&#8217;t make this recipe. It&#8217;s an old one, and no longer lives up to my quality standards. If you want a beautiful lotion, check out this recipe!",
+      "category": "simple"
+    },
+    {
+      "id": "diy-hair-serum",
+      "name": "DIY Hair Serum",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/diy-hair-serum/",
+      "heatRequired": false,
+      "equipment": [
+        "Blender"
+      ],
+      "description": "Earlier this week I stumbled upon a for homemade hair serum. It looked like it was on the right track; lots of great oil and really easy. But it was pure oil, and I don&#8217;t care how careful you are about applying only the tiniest amount. Inevitab…",
+      "ingredients": [
+        {
+          "name": "Camellia Seed Oil",
+          "pct": 16.8
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 12.6
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 8.4
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 4.2
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 1.7
+        },
+        {
+          "name": "Aloe Vera Juice",
+          "pct": 50.4
+        },
+        {
+          "name": "Phytokeratin",
+          "pct": 3.4
+        },
+        {
+          "name": "Bioplex",
+          "pct": 2.5
+        }
+      ],
+      "notes": "4g phytokeratin (optional—can be replaced with more aloe vera juice)",
+      "category": "simple"
     }
   ]
 }
