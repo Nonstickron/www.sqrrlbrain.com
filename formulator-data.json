@@ -6601,7 +6601,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "The key functional ingredient in this formula is Aristoflex AVC, a gelling and emulsifying ingredient. This is what both transforms the watery bulk of this moisturizer into a gel and emulsifies in the small oil phase. It’s a cold process emulsifier, …",
+      "description": "A lightweight facial gel moisturizer formulated with Aristoflex AVC as a cold-process gelling and emulsifying agent. Features sweetgrass hydrosol and hyaluronic acid for a refreshing finish.",
       "ingredients": [
         {
           "name": "Dimethicone 350",
@@ -6642,7 +6642,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the everything except the Aristoflex AVC into a small heat-resistant glass measuring cup or beaker and stir to combine.  The dimethicone won't emulsify yet; that's ok.\nSprinkle the Aristoflex AVC overtop and blend with a mini mixer or whisk until the entire mixture has thickened and emulsified. I like to give the mixture an initial stir, wait a couple hours for the Aristoflex AVC, and then blend again. That's it!\nNow all that's left is to package it up. I put one batch in an open-mouthed jar, which worked well enough, but certainly wasn't ideal. I'd recommend a 50mL (1.69fl oz) pump bottle (airless or otherwise) or a squeeze tube for better, neater dispensing.\nTo use, smooth over the skin after cleansing and before any heavier, occlusive layers. Enjoy!"
+      "process": "1. Measure all ingredients except the gelling agent into a beaker and stir to combine.\n2. Sprinkle the gelling agent over the surface and whisk or blend until the mixture begins to thicken and emulsify.\n3. Allow the gel to sit for several hours to ensure full hydration of the gelling agent.\n4. Perform a final whisk until smooth and transfer to a pump bottle or squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "sweetgrass-facial-serum",
@@ -6651,7 +6652,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/sweetgrass-facial-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Weigh everything into a small heat-resistant glass measuring cup or beaker, and stir to combine. You may need to leave to mixture to sit for a while for it to become clear.",
+      "description": "A brightening facial serum featuring niacinamide, N-acetyl glucosamine, and sweetgrass hydrosol. Formulated to provide humectant-based hydration with a lightweight skin feel.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -6696,7 +6697,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Citric acid, as needed\nWeigh everything into a small heat-resistant glass measuring cup or beaker, and stir to combine. You may need to leave to mixture to sit for a while for it to become clear.\nTo test the pH, add 1g of product to one of the bowls containing 9g of water to create a 10% dilution, and pH check that. If necessary, add a drop of the citric acid solution to the parent batch, stir, and re-test. Continue until the pH is close to 6. Please watch the video to see this in action!\nOnce the pH is happy you're ready to package up your serum! To use, apply just a few drops after cleansing and before any oil serums or creams. You will want to follow it up with an oil serum or lotion/cream to ensure it doesn't feel tacky. Enjoy!"
+      "process": "1. Combine all ingredients in a beaker and stir until uniform.\n2. Allow the mixture to sit for several hours until all dry actives have fully dissolved and the solution is clear.\n3. Verify the final pH level and adjust to approximately 6 using a citric acid solution if necessary.\n4. Transfer the serum to a dropper or treatment-pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "hydrating-aloe-facial-mist",
@@ -6705,7 +6707,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/hydrating-aloe-facial-mist/",
       "heatRequired": false,
       "equipment": [],
-      "description": "You can absolutely choose a different hydrosol (or blend of hydrosols) for a different scent if desired. You can also replace the hydrosol with more distilled water for an unscented final product.",
+      "description": "A soothing facial mist formulated with aloe vera juice, chamomile hydrosol, and calendula extract. Designed to provide immediate hydration and skin calming benefits.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -6742,7 +6744,8 @@
       ],
       "notes": "You can absolutely choose a different hydrosol (or blend of hydrosols) for a different scent if desired. You can also replace the hydrosol with more distilled water for an unscented final product.",
       "category": "face",
-      "process": "Weigh the all the ingredients into a small heat-resistant glass measuring cup. Stir to combine.\nOnce the solution is uniform, transfer it to a 30mL (1 fl oz) bottle with a mister top. You're done!\nTo use, mist your face whenever it's feeling dry."
+      "process": "1. Combine all ingredients in a beaker or directly in the final storage bottle.\n2. Stir or shake the mixture until uniform.\n3. Transfer to a bottle equipped with a fine-mist sprayer.",
+      "processRewritten": true
     },
     {
       "id": "rose-jojoba-natural-face-lotion",
@@ -7323,7 +7326,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/cranberry-orange-facial-gel-cream/",
       "heatRequired": false,
       "equipment": [],
-      "description": "For hydration, we&#8217;ve got luxurious hyaluronic acid and propanediol 1,3. Both are fabulous humectants, helping hold water to the skin and draw it up from the deeper layers of the skin—something I can always use more of, especially in the winter.",
+      "description": "A hybrid gel-cream formulation featuring cranberry seed oil and ceramide complex. Utilizes Aristoflex AVC for a smooth, velvety texture and quick absorption.",
       "ingredients": [
         {
           "name": "Aristoflex AVC",
@@ -7368,7 +7371,8 @@
       ],
       "notes": "I have included a smidge of orange essential oil, but it is optional. If you prefer your facial skincare to be mostly unscented you can replace the 0.1% orange essential oil with more cranberry seed oil. Because of the natural scent of the cranberry seed oil, this cream isn&#8217;t completely scent-free, but it is a very soft smell.",
       "category": "face",
-      "process": "Weigh the first eight ingredients into a small beaker and stir to combine. Add the hyaluronic acid solution and water, and stir again.\nOnce the gel-cream is thick, creamy, and uniform, you're ready to package it up! I put one batch of the cream in a 50mL (1.69fl oz) jar and one in a 50mL (1.69fl oz) squeeze tube. I think I prefer the tube packaging for usage, but it's definitely easier to get the product into a jar. This would also work well in a pump-top bottle."
+      "process": "1. Measure the primary ingredients and gelling agent into a beaker and stir to combine.\n2. Incorporate the hyaluronic acid solution and distilled water, whisking steadily.\n3. Continue to stir or blend until the mixture thickens into a uniform gel-cream consistency.\n4. Transfer to a jar or squeeze tube for storage.",
+      "processRewritten": true
     },
     {
       "id": "soothing-facial-lotion",
@@ -7380,7 +7384,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Today we&#8217;re continuing our soothing series with this beautiful Soothing Facial Lotion. It&#8217;s a fairly lightweight facial lotion, positively packed with potent moisturizers, skin-soothing actives, and ingredients that help strengthen barrie…",
+      "description": "A lightweight, emulsified facial lotion formulated with evening primrose and argan oils. Features a high concentration of soothing actives, including aloe vera and urea.",
       "ingredients": [
         {
           "name": "Aloe Vera Juice",
@@ -7445,7 +7449,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nNow it's time to test and adjust the pH; we're aiming for a pH as close to 6.2 as possible for optimal urea stability. You'll likely need to add some acid to lower the pH as both sodium lactate and urea are basic.\nThat's it! Transfer the lotion to a 120ml/4oz squeeze bottle or 120mL/4oz plastic pump-top bottle (I found this formula was too thick for use with a treatment-pump top). To use, smooth a pea-ish-sized amount across the skin towards the end of your skin care routine."
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath until fully melted.\n2. Combine the phases and use an immersion blender to create a stable emulsion.\n3. Allow the lotion to cool to room temperature.\n4. Test the pH and adjust to approximately 6.2 to ensure the stability of the urea.\n5. Transfer to a squeeze bottle or pump-top container.",
+      "processRewritten": true
     },
     {
       "id": "sugar-plum-facial-lotion",
@@ -7457,7 +7462,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Phew. That was a lot of ingredient talk! Fortunately the making part is pretty easy—it&#8217;s standard lotion-y procedure with our two heated phases, some blending, and a cool down phase to wrap things up. The end product is lovely enough that you&#…",
+      "description": "A nourishing facial lotion featuring plum and argan oils. Formulated with hydrolyzed oat protein and panthenol for skin-softening and hydrating benefits.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -7526,7 +7531,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nNow you can package it! I split the batch between a 50g soft squeeze tube from YellowBee and a 50g airless pump bottle (I'm not sure where it came from)."
+      "process": "1. Melt the oil phase and water phase ingredients in separate containers within a water bath.\n2. Merge the two phases and mix thoroughly using an immersion blender.\n3. Once the emulsion has cooled to room temperature, incorporate the cooling phase ingredients.\n4. Transfer the finished lotion to a squeeze tube or airless pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "frankincense-facial-lotion",
@@ -7538,7 +7544,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Our water part features both hyaluronic acid and vegetable glycerin for some wonderful hydrating goodness, with added aloe vera juice and panthenol (vitamin B5) for some wonderful skin-soothing goodness (plus more moisturizing power—yay for multitask…",
+      "description": "A rich, emulsified facial lotion featuring macadamia nut oil and refined shea butter. Scented with frankincense and red mandarin essential oils for a luxurious finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -7607,7 +7613,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through for about 30 minutes.\nAnd that's it! Transfer to a container—a jar that holds 50–60mL/~2 fl oz is a good choice (I don't recommend a pump bottle as this lotion is too thick). I used this 50mL double-walled jar from YellowBee."
+      "process": "1. Heat the water phase and oil phase ingredients in a water bath for approximately 30 minutes until melted.\n2. Combine the phases and use an immersion blender to form a stable emulsion.\n3. Allow the mixture to cool and thicken naturally.\n4. Transfer the finished cream to a wide-mouthed jar for use.",
+      "processRewritten": true
     },
     {
       "id": "lemon-rose-facial-lotion",
@@ -7619,7 +7626,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Our oil phase is simple; Olivem1000 is our emulsifier, and argan oil is our sole oil. I love argan oil on my face, and I thought it would do well here. You could also use a different, pricier oil that your face loves—this lotion is a great place to u…",
+      "description": "A delicate facial lotion featuring argan oil and rose hydrosol. Includes hydrolyzed silk and calendula extract for a smooth, refined skin feel.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -7680,7 +7687,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the water phase into a small heat-resistant glass measuring cup. Weigh that full measuring cup and note the total weight.\nWeigh the oil phase into a second heat-resistant glass measuring cup, and pour some distilled water into a third measuring cup. Place all three measuring cups in your prepared water bath to melt everything through.\nAfter about 20–30 minutes the oil part should be completely melted and the water part should be thoroughly dissolved. Remove the water bath from the heat. Weigh the water part and top it up to the original weight with the heated distilled water before pouring the water part into the oil part. Stir with a flexible silicone spatula to incorporate.\nOnce the lotion is cool you can add your cool down ingredients, stir to combine, and transfer it to a container. I used a 50mL frosted glass bottle from New Directions with a pump-top that appears to have been discontinued, though this looks like a good alternative. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Measure and note the weight of the water phase beaker to compensate for evaporation.\n3. Once melted, combine the phases and blend thoroughly.\n4. Incorporate the cooling phase ingredients after the emulsion has reached room temperature.\n5. Transfer the lotion to a pump-top bottle.",
+      "processRewritten": true
     },
     {
       "id": "creamy-overnight-lip-mask",
@@ -7691,7 +7699,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "This formulation is the creamiest, simplest, most flexible lip mask I’ve ever formulated. You’ll need just five ingredients (three of which can be substituted), it works in a tin or a tube, it’s easy to customize, can be fully vegan, and makes brilli…",
+      "description": "A highly emollient lip mask formulated with pomegranate sterols and cranberry seed oil. Features Cera Bellina for a smooth, gel-like texture and long-lasting protection.",
       "ingredients": [
         {
           "name": "Pomegranate Sterols",
@@ -7720,7 +7728,8 @@
       ],
       "notes": "This formulation is the creamiest, simplest, most flexible lip mask I’ve ever formulated. You’ll need just five ingredients (three of which can be substituted), it works in a tin or a tube, it’s easy to customize, can be fully vegan, and makes brilliant gifts. Let’s get making!",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nQuickly add the cool down phase, stir to incorporate, and pour the lip mask into its container. This formulation works in both jars/tins and twist-up tubes, but is much to firm for a squeeze tube.\nLeave it on the counter to set up.\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the formulation, you will get a different final product than I did.\nAs I've provided this formulation in percentages as well as grams you can easily calculate it to any size using a simple spreadsheet as I've explained in this post. As written in grams, this formulation will make 25g, which will fill approximately 5 regular lip balm tubes.\nPlease read the \"How is this lip mask structured?\" section of this post for more information on substitutions and alternatives; there are quite a few!\nIf you'd like to incorporate an essential oil, please read this.\nThe castor oil was gifted by YellowBee.\nThe cranberry seed oil was gifted by Plant's Power.\nLinks to Amazon are affiliate links.\nSimilar Formulations\nCranberry Lip BalmEvery year around this time The Body Shop releases their seasonal line of cranberry inspired body products. I say \"inspired\" because they don't seem to\nMoisturizing Overnight Lip MaskBack in December I picked up Laniege’s Lip Sleeping Mask at San Francisco’s Duty Free shop during a rather long stop-over on "
+      "process": "1. Heat the oil phase ingredients in a water bath until the wax and sterols are fully melted.\n2. Remove from heat and stir until the mixture is uniform.\n3. Incorporate the cooling phase ingredients and stir well.\n4. Pour the mixture into a tin or twist-up tube while still liquid and allow it to solidify at room temperature.",
+      "processRewritten": true
     },
     {
       "id": "candy-cane-lip-scrub",
@@ -7731,7 +7740,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Winter is hard on lips, so this scrub is designed to be paired with my Candy Cane Peppermint Lip Balm to create perfectly gift-able, minty lip kit. Begin by buffing off any dry skin with this rich scrub, and then follow up with the creamy lip balm fo…",
+      "description": "An exfoliating lip scrub featuring white sugar suspended in a base of sweet almond oil and stearic acid. Scented with peppermint essential oil for a refreshing finish.",
       "ingredients": [
         {
           "name": "Sweet Almond Oil",
@@ -7764,7 +7773,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the formulation, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWeigh in the cool down phase and stir to continue.\nAt this point you've got a couple options:\nYou can package it as is.\nTransfer the product into its container; I used these cute \"mushroom style\" lip balm pots from Canwax. I ended up using gloved hands most of the time to get the scrub into the jars. Leave the jars on the counter to set up.\nTo use, massage a small amount of the scrub into your lips and rinse off the extra with a bit of water. Resist the urge to eat &#x1f61d; Enjoy!"
+      "process": "1. Melt the oil phase ingredients in a water bath until fully liquid.\n2. Remove from heat and incorporate the sugar and essential oils.\n3. Stir steadily as the mixture cools to ensure the sugar remains evenly distributed.\n4. Transfer the scrub to small jars and allow it to set completely before use.",
+      "processRewritten": true
     },
     {
       "id": "candy-cane-peppermint-lip-balm",
@@ -7776,7 +7786,7 @@
         "Stove",
         "Blender"
       ],
-      "description": "Welcome to our first holiday DIY of 2023! We&#8217;re kicking off with a lovely Candy Cane Peppermint Lip Balm as lip balm is one of the most giftable DIYs around. It&#8217;s inexpensive to make (but expensive to buy), almost everyone uses it, it&#82…",
+      "description": "A traditional lip balm formulation featuring beeswax and coconut oil. Scented with peppermint essential oil and designed for high stability and smooth application.",
       "ingredients": [
         {
           "name": "Beeswax, Refined",
@@ -7817,7 +7827,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the formulation, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup or beaker—just be sure it has a pouring spout! Place the measuring cup in your prepared water bath to melt everything through.\nIf you have a lab hot plate and borosilicate beakers you can put a beaker directly on the hot plate; I use low heat on mine and that heats to approximately the same temperature as a water bath.\nWhile everything melts, prepare your lip balm tubes with some festive washi tape.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nQuickly add the cool down phase, stir to incorporate, and pour the product into its container. Leave it on the counter to set up."
+      "process": "1. Heat the base oils and waxes in a heat-safe beaker within a water bath until completely melted.\n2. Remove the beaker from the heat and dry the exterior.\n3. Incorporate the essential oil and vitamin E, stirring well.\n4. Pour the liquid balm into tubes or tins and allow it to solidify undisturbed.",
+      "processRewritten": true
     },
     {
       "id": "hot-chocolate-lip-butter",
