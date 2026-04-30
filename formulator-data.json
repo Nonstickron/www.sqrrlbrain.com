@@ -555,7 +555,29 @@
     "Silicone Elastomer",
     "Magnesium Stearate",
     "Magnesium Myristate",
-    "Iron Oxide"
+    "Iron Oxide",
+    "Gold Reflecks",
+    "Colour-shifting Mica",
+    "Tetrahexyldecyl Ascorbate [Oil Soluble Vitamin C]",
+    "Mineral Makeup",
+    "Silica Dimethyl Silylate",
+    "Sericite Mica",
+    "Dry Pigment",
+    "Cream-to-Powder Matte Base",
+    "Carmine",
+    "Red 33",
+    "Red Iron Oxide",
+    "Red 7",
+    "OptiBlur&#x2122; Elastomer",
+    "Cereseine Wax",
+    "&#8220;Aphrodite&#8221; Pink Mica",
+    "D&amp;C Red Lake #7",
+    "Silver Mica",
+    "OptiBlur Elastomer",
+    "Carmine Or Red Lake Dye",
+    "TKB Thickening Clay",
+    "Mica Blend",
+    "Hilite Gold Mica"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -21673,6 +21695,511 @@
         }
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "diy-blurring-face-primer-3-ways",
+      "name": "DIY Blurring Face Primer: 3 Ways",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/diy-blur-primer/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "These formulations were inspired by the Yves Saint Laurent Touche Eclat Blur Face Primer; a $52USD/oz. blurring facial primer that makes your skin look airbrushed. I&#8217;ll teach you how to make this primer for less than 1/5 the price, plus how to …",
+      "ingredients": [
+        {
+          "name": "Silicone Gel",
+          "pct": 98.9
+        },
+        {
+          "name": "Passionfruit Oil",
+          "pct": 1
+        },
+        {
+          "name": "Gold Reflecks",
+          "pct": 0.1
+        },
+        {
+          "name": "Silicone Gel",
+          "pct": 96.4
+        },
+        {
+          "name": "Colour-shifting Mica",
+          "pct": 0.3
+        },
+        {
+          "name": "Silica Microspheres",
+          "pct": 0.3
+        },
+        {
+          "name": "Argan Oil",
+          "pct": 3
+        },
+        {
+          "name": "Silicone Gel",
+          "pct": 93.4
+        },
+        {
+          "name": "Tetrahexyldecyl Ascorbate [Oil Soluble Vitamin C]",
+          "pct": 3
+        },
+        {
+          "name": "Rosehip Oil",
+          "pct": 2
+        },
+        {
+          "name": "Bisabolol",
+          "pct": 0.5
+        },
+        {
+          "name": "Tocopherol",
+          "pct": 1
+        },
+        {
+          "name": "Pink Mica",
+          "pct": 0.1
+        }
+      ],
+      "notes": "Version 1 This version is a simplified version of a dupe-y riff on the Yves Saint Laurent original; check out the video if you want the full dupe formulation.",
+      "category": "makeup"
+    },
+    {
+      "id": "transfer-resistant-cream-foundation",
+      "name": "Transfer-Resistant Cream Foundation",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/transfer-resistant-cream-foundation/",
+      "heatRequired": false,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "You will need a batch of your own custom-blended mineral makeup for the coverage and colour matching. I go into a ton of detail on how to make your very own bespoke mineral makeup in my book, Make it Up: The Essential Guide to DIY Makeup and Skin Car…",
+      "ingredients": [
+        {
+          "name": "Mineral Makeup",
+          "pct": 50
+        },
+        {
+          "name": "C12-15 Alkyl Benzoate",
+          "pct": 23.5
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 20
+        },
+        {
+          "name": "Silica Dimethyl Silylate",
+          "pct": 1
+        },
+        {
+          "name": "Polyamide-3",
+          "pct": 5.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "frosted-cranberry-matte-lip-cheek-colour",
+      "name": "Frosted Cranberry Matte Lip  Cheek Colour",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/frosted-cranberry-matte-lip-cheek-colour/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "This Frosted Cranberry Matte Lip &amp; Cheek Colour is really neat; it&#8217;s a hybrid between a matte liquid lipstick and a lip stain. It has a creamy consistency that dries down to a powdery, transfer-resistant finish. Richly coloured, it both wea…",
+      "ingredients": [
+        {
+          "name": "TKB Mousse Medium",
+          "pct": 68.5
+        },
+        {
+          "name": "TKB Film Fix",
+          "pct": 10
+        },
+        {
+          "name": "Sericite Mica",
+          "pct": 10
+        },
+        {
+          "name": "White Kaolin Clay",
+          "pct": 5
+        },
+        {
+          "name": "Silicone Elastomer",
+          "pct": 1
+        },
+        {
+          "name": "Dry Pigment",
+          "pct": 5.5
+        },
+        {
+          "name": "Cream-to-Powder Matte Base",
+          "pct": 94.5
+        },
+        {
+          "name": "Carmine",
+          "pct": 5.5
+        },
+        {
+          "name": "Cream-to-Powder Matte Base",
+          "pct": 94.5
+        },
+        {
+          "name": "Red 33",
+          "pct": 3
+        },
+        {
+          "name": "Carmine",
+          "pct": 2.5
+        },
+        {
+          "name": "Cream-to-Powder Matte Base",
+          "pct": 94.5
+        },
+        {
+          "name": "Red Iron Oxide",
+          "pct": 3
+        },
+        {
+          "name": "Carmine",
+          "pct": 2.5
+        },
+        {
+          "name": "Cream-to-Powder Matte Base",
+          "pct": 94.5
+        },
+        {
+          "name": "Red 33",
+          "pct": 3
+        },
+        {
+          "name": "Red 7",
+          "pct": 2.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "liquid-blurring-skin-tint",
+      "name": "Liquid Blurring Skin Tint",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/liquid-blurring-skin-tint/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Weigh the fractionated coconut oil and optiblur into a small container—I recommend a small disposable mixing cup, like the sort used to measure out liquid medicines. Use a small wire whisk or a small hand-held battery powered mixer to first mash the …",
+      "ingredients": [
+        {
+          "name": "Fractionated Coconut Oil",
+          "pct": 19.5
+        },
+        {
+          "name": "OptiBlur&#x2122; Elastomer",
+          "pct": 7
+        },
+        {
+          "name": "Mineral Makeup",
+          "pct": 11
+        },
+        {
+          "name": "Argan Oil",
+          "pct": 57
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        },
+        {
+          "name": "Silica Microspheres",
+          "pct": 3.5
+        },
+        {
+          "name": "TKB&#8217;s Thickening Clay",
+          "pct": 1.5
+        }
+      ],
+      "notes": "The finished Liquid Blurring Skin Tint is silky smooth, with an expensive-feeling dry-touch finish. It offers optical skin-perfecting along with some mild colour correction and complexion-evening, and it&#8217;s easy to apply with fingers or a damp sponge. If you want to increase the amount of coverage you can always use more mineral makeup, reducing the argan oil to make room for it. I hope you l",
+      "category": "makeup"
+    },
+    {
+      "id": "second-skin-cream-foundation",
+      "name": "Second Skin Cream Foundation",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/second-skin-cream-foundation/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "When it comes to application I&#8217;d recommend gently working it into the skin with your fingertips. I also experimented with brushes and sponges, but I find the finger application gets the most skin-like look in the end, really helping the product…",
+      "ingredients": [
+        {
+          "name": "Mineral Makeup",
+          "pct": 50
+        },
+        {
+          "name": "Isopropyl Myristate",
+          "pct": 23
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 18.9
+        },
+        {
+          "name": "Carnauba Wax",
+          "pct": 4
+        },
+        {
+          "name": "Cereseine Wax",
+          "pct": 3
+        },
+        {
+          "name": "Silica Dimethyl Silylate",
+          "pct": 1
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "ros-cream-blush",
+      "name": "Rosé Cream Blush",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rose-cream-blush/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "This formulation is a riff on the Cream Luminizer I shared a couple of months ago. It was based on a popular storebought product from a brand that has an entire line of creamy shimmery, colourful cosmetics, so I thought I&#8217;d work off that base t…",
+      "ingredients": [
+        {
+          "name": "Castor Oil",
+          "pct": 36.5
+        },
+        {
+          "name": "Virgin Coconut Oil",
+          "pct": 33
+        },
+        {
+          "name": "Beeswax",
+          "pct": 5
+        },
+        {
+          "name": "Sericite Mica",
+          "pct": 15
+        },
+        {
+          "name": "&#8220;Aphrodite&#8221; Pink Mica",
+          "pct": 7
+        },
+        {
+          "name": "D&amp;C Red Lake #7",
+          "pct": 3
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "cream-luminizer",
+      "name": "Cream Luminizer",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/cream-luminizer/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Once you&#8217;re done you&#8217;ll have a pot of firm-yet-creamy luminizer that can be easy massaged into cheekbones, brow bones, the inner eye, your cupid&#8217;s bow, and anywhere else you please (try your collarbones for a night out!). I have bee…",
+      "ingredients": [
+        {
+          "name": "Castor Oil",
+          "pct": 32.5
+        },
+        {
+          "name": "Virgin Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Beeswax",
+          "pct": 4
+        },
+        {
+          "name": "Gold Mica",
+          "pct": 15
+        },
+        {
+          "name": "Silver Mica",
+          "pct": 15
+        },
+        {
+          "name": "Silica Microspheres",
+          "pct": 3
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "silky-cream-foundation",
+      "name": "Silky Cream Foundation",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/silky-cream-foundation/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "I chose cetearyl alcohol as our thickener so we could have rich-yet-lightweight thickening without any wax. I wanted something a bit heavier than cetyl alcohol, but not quite as rich as stearic acid. If you don&#8217;t have cetearyl alcohol I&#8217;d…",
+      "ingredients": [
+        {
+          "name": "Mineral Makeup",
+          "pct": 40
+        },
+        {
+          "name": "Cetearyl Alcohol",
+          "pct": 16
+        },
+        {
+          "name": "Neossance® Hemisqualane",
+          "pct": 10
+        },
+        {
+          "name": "C12–15 Alkyl Benzoate",
+          "pct": 16.5
+        },
+        {
+          "name": "Dimethicone 350",
+          "pct": 3
+        },
+        {
+          "name": "OptiBlur Elastomer",
+          "pct": 14
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "sheer-satin-cheek-lip-tint",
+      "name": "Sheer Satin Cheek  Lip Tint",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/sheer-satin-cheek-lip-tint/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The liquid base is simple: lightweight fractionated coconut oil and some isopropyl myristate to help everything set relatively quickly. Some thickening clay from TKB keeps everything in suspension fairly well, though it will settle a bit if you leave…",
+      "ingredients": [
+        {
+          "name": "Carmine Or Red Lake Dye",
+          "pct": 3
+        },
+        {
+          "name": "TKB Thickening Clay",
+          "pct": 3
+        },
+        {
+          "name": "Fractionated Coconut Oil",
+          "pct": 83.5
+        },
+        {
+          "name": "Isopropyl Myristate",
+          "pct": 10
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "center-stage-glow-serum",
+      "name": "Center Stage Glow Serum",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/center-stage-glow-serum/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The making of is quite simple. You&#8217;ll begin by stirring together all the powders, and then blend in a small amount of the liquid oils to create a smooth paste (similar to create a roux) before slowly blending in the remaining oils. And that&#82…",
+      "ingredients": [
+        {
+          "name": "TKB Thickening Clay",
+          "pct": 2
+        },
+        {
+          "name": "Mica Blend",
+          "pct": 1.5
+        },
+        {
+          "name": "Sericite Mica",
+          "pct": 5
+        },
+        {
+          "name": "Argan Oil",
+          "pct": 61
+        },
+        {
+          "name": "Olive Squalane",
+          "pct": 30
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "snowy-dawn-cream-luminizer",
+      "name": "Snowy Dawn Cream Luminizer",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/snowy-dawn-cream-luminizer/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Prepare a water bath by bringing about 3cm/1&#8243; of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.",
+      "ingredients": [
+        {
+          "name": "Jojoba Oil",
+          "pct": 49.75
+        },
+        {
+          "name": "Cetyl Alcohol",
+          "pct": 15
+        },
+        {
+          "name": "Silica Microspheres",
+          "pct": 5
+        },
+        {
+          "name": "Hilite Gold Mica",
+          "pct": 20
+        },
+        {
+          "name": "Gold Mica",
+          "pct": 5
+        },
+        {
+          "name": "Silver Mica",
+          "pct": 5
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.25
+        }
+      ],
+      "notes": "This looks so amazing! I am trying to be as earth friendly as possible in things I want to make. Is there something I can substitute the silica micro beads for or can they be left out?",
       "category": "makeup"
     }
   ]
