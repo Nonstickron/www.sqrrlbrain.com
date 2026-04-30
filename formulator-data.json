@@ -739,7 +739,44 @@
     "Glycerin Liquid",
     "Glass Bail Jar",
     "Calendula-Infused Sweet Almond Oil",
-    "Rhassoul Clay (Rhassoul Clay Has Been Discontinued. To Substitute, Increase The Amounts Of Bentonite And Kaolin Clay In Equal Parts .)"
+    "Rhassoul Clay (Rhassoul Clay Has Been Discontinued. To Substitute, Increase The Amounts Of Bentonite And Kaolin Clay In Equal Parts .)",
+    "Borage Oil",
+    "Baking Soda Sodium Bicarbonate",
+    "Lingonberry Seed Oil",
+    "SLSA",
+    "Pumpkin Spice Fragrance Oil",
+    "Pacific Pearl Fragrance Oil",
+    "Raspberry Jam Fragrance Oil",
+    "Cherry Blossom Fragrance Oil",
+    "Lotus Flower Extract",
+    "Wild Rose Fragrance Oil",
+    "Baby’s Breath Fragrance Oil",
+    "Cocoa Butter Mixture + Topping",
+    "Burnt Sugar Fragrance Oil",
+    "Sodium Bicarbonate",
+    "Sodium Lauryl Sulfoacetate/SLSA",
+    "Meringue Powder",
+    "Powdered Sugar Not Included In Kit",
+    "Distilled Water Not Included In Kit",
+    "Sultry Black Jasmine Fragrance Oil",
+    "Oatmeal Milk And Honey Fragrance Oil",
+    "White Rose Fragrance Oil",
+    "About 9 ML Polysorbate 80",
+    "Citric Acid About 3/4 Cup",
+    "Organic Cocoa Butter Cubes",
+    ".5 Oz. Polysorbate 80",
+    ".6 Oz. Island Escape Fragrance Oil",
+    "Coarse Pink Sea Salt",
+    ".6 Oz. Fruity Fusion Fragrance Oil",
+    "Shea Oil",
+    "Celestial Waters Fragrance Oil",
+    "SLSA (Sodium Lauryl Sulfoacetate)",
+    "Melted Cocoa Butter",
+    "Melted Shea Butter",
+    "Vanilla Select Fragrance",
+    "Dark Rich Chocolate Fragrance",
+    "Vanilla Bean Fragrance",
+    "Butter Cream And Snickerdoodle Fragrance"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -26916,6 +26953,1049 @@
         {
           "name": "Tamanu Oil",
           "pct": 14.9
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "relaxing-lavender-bath-bombs",
+      "name": "Relaxing Lavender Bath Bombs",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/relaxing-lavender-bath-bombs/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Relaxing Lavender Bath Bombs from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Baking Soda",
+          "pct": 58.2
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 29.1
+        },
+        {
+          "name": "Extra Fine Epsom Salt",
+          "pct": 7.3
+        },
+        {
+          "name": "Borage Oil",
+          "pct": 3.6
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 1.3
+        },
+        {
+          "name": "Lavender 40/42 Essential Oil",
+          "pct": 0.5
+        }
+      ],
+      "notes": "",
+      "process": "In a small container, add 2 ounces of borage oil, 0.7 ounces of polysorbate 80, 0.3 ounces of lavender 40/42 essential oil, and about 12 drops of Lilac La Bomb Colorant. Use a spoon to thoroughly mix all the ingredients together. The colorant won’t incorporate fully, but that’s okay.\nIn a large container, add 32 ounces of baking soda and 16 ounces of citric acid. To get rid of clumps, push the powder through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Add 4 ounces of Epsom salt. Thoroughly stir the ingredients together.\nAdd the oil to the dry ingredients. Use your hands to thoroughly mix the dry and wet ingredients together.\nCheck the consistency of the bath bomb mixture. The perfect consistency is similar to wet sand that holds its shape when squeezed. If it’s too dry, use one hand to spritz the mixture with witch hazel and one to mix. Continue spritzing until the mixture holds its shape.\nPlace a pinch of dried lavender in the center of one half of the Stainless Steel Bath Bomb Mold.\nFill both halves of the mold with bath bomb mixture and press it into the molds. You don’t need to press too hard – it helps the bath bomb halves stick together if some of the mixture is loose on top. Once both halves are full, press them firmly together.\nVery gently, pull the top half of the mold away while twisting. It can be a little tricky to get the bath bombs to stick together, but practice makes perfect. To safely unmold the other half, place the top of the mold back on, flip the bath bomb over, and release the other side by twisting and pulling away gently.\nPlace the bath bomb on the counter or in a container that will hold them in place without rolling away. We used the 6 Cavity Silicone Dome Mold. You can also use a large muffin tin or a soft surface like foam. Allow the bath bombs to fully dry and harden overnight. Once you’re ready to use, place in hot bath water and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "lingonberry-bath-bombs",
+      "name": "Lingonberry Bath Bombs",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lingonberry-bath-bombs/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Lingonberry Bath Bombs from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Baking Soda Sodium Bicarbonate",
+          "pct": 64.6
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 32.3
+        },
+        {
+          "name": "Lingonberry Seed Oil",
+          "pct": 2
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "In a large container, mix together 32 ounces of baking soda and 16 ounces of citric acid. To get rid of clumps, you can push the powder through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nAdd 1 ounce of lingonberry seed oil, 0.5 ounces of polysorbate 80, and 9 mL of Lingonberry Spice Fragrance Oil to the powder.\nUse your hands to thoroughly mix in the wet ingredients.\nTest the consistency of the bath bomb mixture. The perfect consistency for molding is similar to wet sand and holds its shape when squeezed. If it’s too dry, use one hand to spritz the mixture with witch hazel and one to mix. Continue spritzing until the mixture holds its shape when squeezed.\nAllow the bath bombs to harden in the mold for at least 24 hours. Remove the bath bomb from the mold to ensure it’s completely hard. Before painting the bath bomb, you want to make sure it’s fairly durable.\nUsing a small paint brush, create three circles in the center of the bath bomb using the Red Mica mixture.\nUsing a small paint brush, paint a leaf using the Evergreen Mica mixture.\nFinally, use a small paint brush to add small dots on the berries and lines on the leaves. This step really makes the design pop.\nContinue painting until all the bath bombs are decorated. Allow the bath bombs to fully dry. When you’re ready to use, drop them into a hot bath and enjoy. If you’re giving them as gifts, place them back into their mold – it doubles as packaging!",
+      "category": "body"
+    },
+    {
+      "id": "pumpkin-bubbling-bath-truffles",
+      "name": "Pumpkin Bubbling Bath Truffles",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pumpkin-spice-bubbling-bath-truffles/",
+      "heatRequired": true,
+      "equipment": [
+        "Stand/hand mixer",
+        "Stove"
+      ],
+      "description": "DIY Pumpkin Bubbling Bath Truffles from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Baking Soda Sodium Bicarbonate",
+          "pct": 38.6
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 10.8
+        },
+        {
+          "name": "Cream Of Tartar",
+          "pct": 6.2
+        },
+        {
+          "name": "SLSA",
+          "pct": 23.1
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 6.9
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 9.3
+        },
+        {
+          "name": "Pumpkin Extract",
+          "pct": 0.8
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 1.5
+        },
+        {
+          "name": "Liquid Glycerin",
+          "pct": 1.5
+        },
+        {
+          "name": "Pumpkin Spice Fragrance Oil",
+          "pct": 0.6
+        },
+        {
+          "name": "Cashmere Fragrance Oil",
+          "pct": 0.6
+        }
+      ],
+      "notes": "",
+      "process": "In a small heat-safe container, add 6 ounces of shea butter, 4.5 ounces of cocoa butter, 0.5 ounces of pumpkin extract, 1 ounce of glycerin, and 1 ounce of polysorbate 80. Place the container in the microwave and melt the butters using 30-60 bursts. The cocoa butter takes a little while to melt. Be careful when removing it from the microwave, as it may be very hot.\nAdd 0.4 ounce of Cashmere and 0.4 ounce of Pumpkin Spice Fragrance Oils. Stir and set aside.\nPlace a fine mesh sifter over a large container. Add 25 ounces of baking soda, 7 ounces of citric acid, and 4 ounces of cream of tartar. Push the ingredients through the sifter to get rid of chunks. Add dark red Brazilian clay. Use a whisk to mix the ingredients together.\nContinue adding the liquid ingredients to the dry and mix together until fully incorporated. The final texture will be very similar to bread dough – soft, workable, and slightly sticky. The texture of the mixture depends on the temperature of the butters. The warmer the dough, the softer it will be.\nWe found a dough temperature of about 85-100°F is a great moldable texture. If your dough is cooler than that, place the entire mixture into the microwave for 10-20 seconds to warm it.\nUse the ice cream scoop to scoop the mixture onto freezer paper. Wax paper or parchment paper will also work. Continue to create the scoops until all the mixture is gone.\nSprinkle with top of each truffle with Gold Sparkle Mica. If you like a heavier application of sparkle, use the Powder Duster. Use the Powder Sprayer for a lighter dusting.\nAllow the truffles to harden and dry for about 3 days. If you live in a very humid area, it may take longer. The truffles will always be a little bit delicate, even when they have hardened.\nTo use, fill the tub with hot water. Once it's about 3/4 full, break up the truffle directly under the faucet to activate the bubbles. Enjoy.",
+      "category": "body"
+    },
+    {
+      "id": "jagua-blue-extract-bath-bomb-diy",
+      "name": "Jagua Blue Extract Bath Bomb DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/jagua-blue-bath-bomb-diy/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Jagua Blue Extract Bath Bomb DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 66
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 33
+        },
+        {
+          "name": "Pacific Pearl Fragrance Oil",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "Lay out 13 Disk Molds and place a small amount of pink sea salt into the center of each one. Set the molds aside.\nIn a large bowl, add 32 ounces of baking soda and 16 ounces of citric acid. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together. Add 0.5 oz. of Pacific Pearl Fragrance Oil and stir to fully incorporate.\nIn a small container, mix 1/8 teaspoon of jagua blue extract and 1/2 tablespoon of witch hazel. Use the back of a spoon to break up any chunks in the extract. Add another 1/2 tablespoon of witch hazel if necessary. Note: Be very careful with this mixture, it will stain your skin and other porous surfaces.\nAdd about 1/3 of the jagua blue powder mixture into the dry ingredients and use your hands to mix together. Continue adding splashes of the jagua blue until all of it is added, mixing between each addition. You may find that adding that much liquid at once causes your mixture to fizz – this is fine, just mix very quickly.\nBegin filling each mold to the inner lip. Firmly compact the mixture into the mold to create a solid shape. Allow the bath bombs to dry and harden for at least 4 hours or up to overnight. To use, place in a hot bath and enjoy.",
+      "category": "body"
+    },
+    {
+      "id": "pearl-bath-bomb-diy-kit",
+      "name": "Pearl Bath Bomb DIY & Kit",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pearl-bath-bomb-kit/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Pearl Bath Bomb DIY & Kit from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Baking Soda",
+          "pct": 64.6
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 32.3
+        },
+        {
+          "name": "Seaweed Extract",
+          "pct": 2
+        },
+        {
+          "name": "Pacific Pearl Fragrance Oil",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "Push all the baking soda and citric acid through a strainer into a large mixing bowl and use your gloved hands or a spoon to mix them.\nAdd 2 teaspoons of Super Pearly White Mica and 2 teaspoons of pearl powder and stir to combine.\nAdd 1 ounce of seaweed extract, 0.5 ounces of Pacific Pearl Fragrance Oil, and 12 mL of polysorbate 80 to the powders. Use your hands to fully incorporate.\nCheck the consistency of the bath bomb mixture. The ideal texture is similar to wet sand and should hold its shape when squeezed. If it’s too dry, use one hand to spritz the mixture with witch hazel and use your other hand to mix.\nDrop a few pearls into one half of the mold. Add bath bomb mixture and press it in firmly. Fill the other half of the mold. Place loose bath bomb mixture on top of both halves. Clear any powder\nfrom the seams of the mold, match the eyelets, and close. Make sure to direct pressure on the seams to prevent dents.\nLet the bath bombs dry overnight in the mold. To use, drop into a hot bath and enjoy.",
+      "category": "body"
+    },
+    {
+      "id": "lavender-tea-tree-shower-steamers",
+      "name": "Lavender & Tea Tree Shower Steamers",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lavender-tea-tree-shower-steamers/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Lavender & Tea Tree Shower Steamers from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 66.7
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 33.3
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, combine 20 ounces of baking soda and 10 ounces of citric acid. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir everything together.\nAdd 18 mL of tea tree essential oil and 18 of mL Lavender 40/42 Essential Oil. Use your hands to fully mix into the powder mixture.\nTest the consistency of the mixture. The perfect consistency is similar to wet sand and holds its shape when squeezed. If it’s too dry, use one hand to spritz the mixture with witch hazel and one to mix. Continue spritzing until the mixture holds its shape.\nFirmly press the mixture into each cavity of the Silicone Square Mold. Allow the steamers to dry for several hours or up to overnight. Remove from the molds.",
+      "category": "body"
+    },
+    {
+      "id": "raspberry-jam-bubbling-bath-truffle",
+      "name": "Raspberry Jam Bubbling Bath Truffle",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/raspberry-jam-bubbling-bath-truffle/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Raspberry Jam Bubbling Bath Truffle from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 40.3
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 11.3
+        },
+        {
+          "name": "SLSA",
+          "pct": 21
+        },
+        {
+          "name": "Cream Of Tartar",
+          "pct": 4
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 8.9
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 8.1
+        },
+        {
+          "name": "Raspberry Seed Oil",
+          "pct": 1.6
+        },
+        {
+          "name": "Liquid Glycerin",
+          "pct": 2.4
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 1.6
+        },
+        {
+          "name": "Raspberry Jam Fragrance Oil",
+          "pct": 0.8
+        }
+      ],
+      "notes": "",
+      "process": "In a small heat-safe container, add 5 ounces of shea butter, 5.5 ounces of cocoa butter, and 1 ounce of raspberry seed oil. Place the container in the microwave and melt using 30-60 bursts. Be careful when removing it from the microwave, as it may be very hot.\nAdd 0.5 ounces of Raspberry Jam Fragrance Oil, 1 ounce of polysorbate 80, and 1.5 ounces of liquid glycerin to the melted butters. Use a spoon to thoroughly incorporate. Set aside.\nAdd about 1/3 of the oil mixture to the dry ingredients. The oil is still hot, so put on gloves and use your hands to incorporate the liquid and powder ingredients together.\nYou will have about 60 ounces of truffle mixture. Split the batch into two equal containers. To one container, add 1/2 teaspoon of poppy seeds and mix with your hands.\nTo the other container, add 1 teaspoon of Raspberry Mica. Mix until there are no streaks of color.\nLay down a sheet of wax paper on the counter and sprinkle on a thin layer of baking soda. This prevents the bath truffles from sticking to the and and it also helps when you’re rolling the batch. Lay the pink mixture on the wax paper and begin forming it into a rectangle shape.\nPlace the white mixture on top and use your hands to spread it evenly onto the pink. Create a flat rectangle shape – about 14 inches long by about 7-8 inches wide.\nUse the wax paper to roll the bubble bars. The bars may stick to the paper slightly, but that’s okay. You can use your hands to smooth out the roll if necessary.\nContinue rolling and use your hands to help create a smooth, even log.\nOnce the dough is fully rolled, use your hands to shape the log. If you feel the log is a little skinny, you can push it from the ends. You can also use your hands to make it taller or shorter.\nUse a sharp non-serrated knife to cut the log into bars. If it’s extremely soft, it can be a little sticky and needs to be handled very carefully. You can wait for about 30 minutes for it to harden slightly or cut the bars very gently.",
+      "category": "body"
+    },
+    {
+      "id": "cherry-blossom-bath-bomb-diy",
+      "name": "Cherry Blossom Bath Bomb DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cherry-blossom-bath-bomb-diy/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Cherry Blossom Bath Bomb DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 64.1
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 32.1
+        },
+        {
+          "name": "Cherry Blossom Fragrance Oil",
+          "pct": 1.9
+        },
+        {
+          "name": "Lotus Flower Extract",
+          "pct": 1.3
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 0.6
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, combine 20 oz. of baking soda and 10 oz. of citric acid. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir everything together.\nIn a small glass container, add 0.4 oz. of lotus flower extract, 0.6 oz. Cherry Blossom Fragrance Oil, and 0.2 oz. of polysorbate 80. Use a spoon to mix all the liquids together.\nAdd the oil mixture to the baking soda and citric acid mixture. Use your hands to thoroughly mix everything together.\nTest the consistency of the bath bomb mixture. The perfect consistency is similar to wet sand and holds its shape when squeezed. If it’s too dry, use one hand to spritz the mixture with witch hazel and one to mix. Continue spritzing until the mixture holds its shape.\nFirmly press the bath bomb mixture into each cavity of the Silicone Square Mold.\nAllow the bath bombs to dry for several hours or up to overnight. Remove from the molds.\nCreate a streak of pink across each bath bomb diagonally with a flat and wide paint brush.\nUse a different paint brush to splatter drops of Super Pearly White Mica on top of the bath bombs. There is no right or wrong way to do this, so have fun with it.\nAllow the bath bombs to fully dry. When you’re ready to use, drop them into a hot bath and enjoy.",
+      "category": "body"
+    },
+    {
+      "id": "painted-rose-bath-bomb-diy",
+      "name": "Painted Rose Bath Bomb DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/painted-rose-bath-bomb-diy/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Painted Rose Bath Bomb DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Baking Soda Sodium Bicarbonate",
+          "pct": 64.9
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 32.5
+        },
+        {
+          "name": "Lotus Flower Extract",
+          "pct": 1
+        },
+        {
+          "name": "Wild Rose Fragrance Oil",
+          "pct": 1
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 0.6
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, mix together 64 oz. of baking soda and 32 oz. of citric acid. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nIn a small glass container, mix together 1 oz. of lotus flower extract, 1 oz. Wild Rose Fragrance Oil, and 0.6 oz. of polysorbate 80. Use a spoon to mix all the liquids together.\nAdd the oil mixture to the baking soda and citric acid mixture. Use your hands to thoroughly mix the ingredients together.\nTest the consistency of the bath bomb mixture. The perfect consistency is similar to wet sand and it holds its shape when squeezed. If it’s too dry, use one hand to spritz the mixture with witch hazel and one to mix. Continue spritzing until the mixture holds its shape.\nPress the bath bomb mixture firmly into the molds. Only fill to the bottom lip or the lids won’t fit.\nAllow the bath bombs to dry for several hours or up to overnight. Remove from the molds. It’s time to paint.\nDip the paint brush into the Raspberry Mica. Start painting small curved lines to create the center of the rose. Continue painting these lines outward in a circular pattern.\nUse the same technique with the Party Pink Mica to create a full rose with plenty of petals. There’s no right or wrong way to paint the rose. Have fun with it!\nOnce you’re happy with the rose, use the Evergreen Mica to create a leaf. We chose to extend the leaf to the sides of the bath bomb as well.\nUse the Shamrock Green Mica to add a pop of color to the leaf.\nHave fun experimenting with different looks and rose designs. Once you’re finished, gently place the bath bombs back into the Disk Molds for storage. Once you’re ready to use, place the bath bomb into a hot tub and enjoy.",
+      "category": "body"
+    },
+    {
+      "id": "diy-babys-breath-bath-bombs",
+      "name": "DIY Babys Breath Bath Bombs",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-babys-breath-bath-bombs/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY DIY Babys Breath Bath Bombs from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 64.4
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 32.2
+        },
+        {
+          "name": "Lotus Flower Extract",
+          "pct": 2
+        },
+        {
+          "name": "Baby’s Breath Fragrance Oil",
+          "pct": 1
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 0.4
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, mix together 32 ounces of baking soda and 16 ounces of citric acid. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nAdd 1/4 teaspoon of Blue Slushy Mica. Use your hands to break up the drops and mix them into the powder. The mixture may not look very saturated, but the color will pop once the liquids are added. More color can also be added later.\nIn a separate container, mix together 1 ounce of lotus flower extract, 0.5 ounces of Baby’s Breath Fragrance Oil, and 0.2 ounces of polysorbate 80. Stir the mixture together with a spoon.\nAdd the liquid mixture to the dry ingredients and use your hands to thoroughly stir everything together.\nCheck the consistency of the bath bomb mixture. The perfect consistency is similar to wet sand that holds its shape when squeezed. If it’s too dry, use one hand to spritz the mixture with witch hazel and one to mix. Continue spritzing until the mixture holds its shape when squeezed.\nPlace jasmine flowers into the bath bomb mold.",
+      "category": "body"
+    },
+    {
+      "id": "diy-cocoa-butter-bath-bombs",
+      "name": "DIY Cocoa Butter Bath Bombs",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/bath-fizzies/cocoa-butter-bath-bombs/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY DIY Cocoa Butter Bath Bombs from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 60.5
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 30.3
+        },
+        {
+          "name": "Cocoa Butter Mixture + Topping",
+          "pct": 7.6
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 0.8
+        },
+        {
+          "name": "Pure Honey Fragrance Oil",
+          "pct": 0.9
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, mix together 64 oz. of baking soda and 32 oz. of citric acid. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nAdd 4 ounces of the cocoa butter to a small heat-safe container and melt in the microwave using 30-60 second bursts. Add 0.8 oz. of polysorbate 80 and 0.9 oz. Pure Honey Fragrance Oil. Use a spoon to fully mix the ingredients together. The polysorbate 80 is there to help disperse the cocoa butter into the tub.\nAdd the butter mixture to the baking soda and citric acid. Use your hands to thoroughly mix all the ingredients together.\nTest the consistency of the bath bomb mixture. The perfect consistency is similar to wet sand that holds its shape when squeezed. If it’s too dry, use one hand to spritz the mixture with witch hazel and one to mix. Continue spritzing until the mixture holds its shape when squeezed.",
+      "category": "body"
+    },
+    {
+      "id": "diy-salted-caramel-bath-truffles",
+      "name": "DIY Salted Caramel Bath Truffles",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/salted-caramel-bath-truffles/",
+      "heatRequired": true,
+      "equipment": [
+        "Stand/hand mixer",
+        "Stove"
+      ],
+      "description": "DIY DIY Salted Caramel Bath Truffles from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 41
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 12
+        },
+        {
+          "name": "SLSA",
+          "pct": 21
+        },
+        {
+          "name": "Cream Of Tartar",
+          "pct": 4
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Cocoa Butter Pastilles",
+          "pct": 7
+        },
+        {
+          "name": "Liquid Glycerin",
+          "pct": 3
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 1
+        },
+        {
+          "name": "Burnt Sugar Fragrance Oil",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "In a small heat-safe container, add the shea butter and cocoa butter cubes. Place the container in the microwave and melt the butters using 30-60 bursts. The cocoa butter takes a little while to melt. Be careful when removing it from the microwave, as it may be very hot.\nAdd the Burnt Sugar Fragrance Oil, polysorbate 80, and glycerin to the melted butters. Use a spoon to thoroughly incorporate. Set aside.\nYou will have about 60 ounces of mixture. Split the batch into two equal containers. You can eyeball it, or weigh it depending on your preference.\nTo one container, add 3/4 teaspoon of Bronze Mica and use your hands to thoroughly mix in the colorant into the dough. If you’d like a darker color you can add more mica, just keep in mind this may leave behind more color in the bathtub.\nUse the wax paper to roll the bubble bars. The bars may stick to the paper slightly, but that’s okay. You can use your hands to smooth out the roll if necessary.\nContinue rolling, and use your hands to help create a smooth, even log.\nOnce you’re happy with the shape, sprinkle the top with Epsom salt and press it gently into the log to help it stick.\nUse a sharp non-serrated knife to cut the log into bars. If the log is extremely soft, it can be a little sticky and needs to be handled very carefully. You can wait for about 30 minutes for it to harden slightly, or cut the bars very gently. How soft the log is will depend on how hot the butters were when mixed in, and if you placed the mixture in the microwave.\nOnce you’re ready to use the bath truffles, place them in the tub for a slow fizzing reaction with a small amount of foamy bubbles. If you want to “activate” more bubbles, hold the bar directly under the running bath faucet while breaking off small amounts of the bar.",
+      "category": "body"
+    },
+    {
+      "id": "bath-bomb-cupcake-kit",
+      "name": "Bath Bomb Cupcake Kit",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/bath-bomb-cupcake-kit/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Bath Bomb Cupcake Kit from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate",
+          "pct": 45.5
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 18.2
+        },
+        {
+          "name": "Sodium Lauryl Sulfoacetate/SLSA",
+          "pct": 13.6
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 4.5
+        },
+        {
+          "name": "Meringue Powder",
+          "pct": 4.5
+        },
+        {
+          "name": "Fragrance Oil",
+          "pct": 1.1
+        },
+        {
+          "name": "Powdered Sugar Not Included In Kit",
+          "pct": 9.1
+        },
+        {
+          "name": "Distilled Water Not Included In Kit",
+          "pct": 3.4
+        }
+      ],
+      "notes": "",
+      "process": "Add all the citric acid and baking soda into a large mixing bowl. Use your fingers to break up any clumps or push the powders through a sifter.\nUsing the dropper, add 7 ml of the fragrance oil and about 6 drops of the colorant to the mixture. Add as many drops of colorant as you would like to reach your desired color. Mix the colorant and fragrance in thoroughly, breaking up any clumps with your fingers.\nUse one hand to spritz the mixture with the witch hazel and the other to mix the ingredients. As you spritz the witch hazel, check the consistency. The ideal texture is similar to wet sand and should hold its shape when squeezed together in your hand. If it’s too dry, continue to spritz the mixture with the witch hazel. Make sure to spritz different areas as you mix.\nOnce the bath bomb mixture has reached the right texture, fill each cupcake mold cavity with the mixture. Press it firmly into each mold until full. Slightly mound and then smooth the top of each cupcake with your fingers.\nSet aside to harden and begin preparing your frosting.",
+      "category": "body"
+    },
+    {
+      "id": "black-salt-bath-bomb-diy",
+      "name": "Black Salt Bath Bomb DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/black-salt-bath-bomb-diy/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Black Salt Bath Bomb DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sweet Almond Oil",
+          "pct": 47.6
+        },
+        {
+          "name": "Sultry Black Jasmine Fragrance Oil",
+          "pct": 23.8
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 28.6
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, mix together 2 cups baking soda, 1 cup citric acid, and 1 cup fine black sea salt. To get rid of clumps in the mixture, you can push the powder through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nIn a separate fragrance oil-safe container, mix together 1 ounce of sweet almond oil, 0.6 ounces of polysorbate 80, and 0.5 ounces of Sultry Black Jasmine Fragrance Oil. Stir to combine.\nAdd the oil mixture to the salt mixture and use your hands to thoroughly combine.\nSprinkle a small amount of the coarse black sea salt into the bottom of the Disk Mold & Packages. Then, press the bath bomb mixture into the molds. Press the mixture firmly to create a solid shape. Only fill the molds up to the bottom lip, or the lids will not fit.\nContinue filling up each mold with bath bomb mixture. Allow the bath bombs to dry for several hours or up to overnight. Remove from the molds. Place the bath bomb into hot bath water and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "karma-bath-bomb-tutorial",
+      "name": "Karma Bath Bomb Tutorial",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/karma-bath-bomb-tutorial/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Karma Bath Bomb Tutorial from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sweet Almond Oil",
+          "pct": 76.9
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 23.1
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, mix together the baking soda and citric acid. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nIn a separate fragrance oil-safe container, add the sweet almond oil, polysorbate 80, and Bramble Berry's Karma Type Fragrance Oil. Mix thoroughly.\nAdd the oil mixture to the baking soda and citric acid. Use your hands to thoroughly mix the wet and dry ingredients.\nSplit the mixture in half. Each container will weigh about 22 ounces. To one container, add drops of the Cornflower Blue La Bomb, and to the other add drops of the Cantaloupe La Bomb. A little La Bomb colorant goes a long way; about 4-5 drops of each achieves the colors shown here. Use your hands to break up the drops of color and disperse them throughout the mixture.\nBegin spritzing each container with witch hazel while mixing with your hands or a spatula. Continue spritzing until the mixture feels similar to wet sand and holds its shape when squeezed. This means that the mixture will hold its shape in the mold as well.\nOnce the bath bomb mixture has the correct texture, it’s time to start filling the molds. Working in one half of the mold, add some of the orange mixture and then some of the blue mixture. Once this half is full, press the mixture down to compress it and continue layering the colors.",
+      "category": "body"
+    },
+    {
+      "id": "diy-oatmeal-bath-bombs",
+      "name": "DIY Oatmeal Bath Bombs",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/mondo-oatmeal-bath-bomb-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY DIY Oatmeal Bath Bombs from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Colloidal Oatmeal",
+          "pct": 13.7
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 54.8
+        },
+        {
+          "name": "Oat Extract",
+          "pct": 13.7
+        },
+        {
+          "name": "Oatmeal Milk And Honey Fragrance Oil",
+          "pct": 9.6
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 8.2
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, mix together the baking soda, citric acid, and colloidal oatmeal. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nAdd the cocoa butter to a small heat and fragrance-safe container and melt in the microwave using 30-60 second bursts. Be careful when removing from the microwave as the container may be hot. Add 0.7 ounces of Oatmeal Milk and Honey Fragrance Oil, 0.6 ounces of polysorbate 80, and 1 ounce of oat extract to the melted butter. Use a spoon to fully mix the ingredients together.\nAdd the oil mixture to the powder mixture. Use your hands to fully mix the ingredients together.\nRepeat the process with the other bath bombs. When they’re unmolded, allow them to sit for 24 hours before using or wrapping in plastic wrap to protect them from excess moisture. Learn more about packing and storing your bath bombs in the How to Store Handmade Bath Products post.",
+      "category": "body"
+    },
+    {
+      "id": "iridescent-pearl-bath-bomb-diy",
+      "name": "Iridescent Pearl Bath Bomb DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pearl-bath-bomb-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Iridescent Pearl Bath Bomb DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Shea Butter",
+          "pct": 75
+        },
+        {
+          "name": "White Rose Fragrance Oil",
+          "pct": 12.5
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 12.5
+        }
+      ],
+      "notes": "",
+      "process": "Add 3 ounces of shea butter to a small heat and fragrance oil-safe container and melt in the microwave using 30 second bursts. Add 0.5 ounces of polysorbate 80 and 0.5 ounces of White Rose Fragrance Oil. Use a spoon to fully mix the ingredients together.\nIn a large bowl, mix together the baking soda and citric acid. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nAdd the shea butter mixture to the baking soda and citric acid. Use your hands to thoroughly mix all the ingredients together.\nAllow the bath bombs to harden in the mold for 24 hours. Then, carefully remove them from the package. Fill a bowl with a few tablespoons of Super Pearly White Mica.\nSpritz the outside of one bath bomb lightly with 99% isopropyl alcohol. Gently roll the bath bomb in the mica until completely covered. Use your fingers to carefully brush off any excess mica.\nDip your finger into the Aqua Pearl Mica and spread it onto the bath bomb in a different area. Once the colors begin to touch, blend them together with your finger. Continue blending the micas on the bath bomb in different areas until you're happy with the effect. If necessary, sprinkle more Super Pearly White on the bath bombs to help blend the colors, add more sparkle, or lighten the colors.\nRepeat this process for each bath bomb until all are covered with color. Carefully place the bath bombs back into the mold and package until ready to use. Before placing them back into the package, you may want to wash the mold for a clean look. Just make sure they are completely dry before placing the fizzy back into the mold. To use, place the bath bomb into a hot bath and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "lavender-sleep-time-bath-truffle-diy",
+      "name": "Lavender Sleep Time Bath Truffle DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-sleep-time-bath-truffles/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Lavender Sleep Time Bath Truffle DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Baking Soda Sodium Bicarbonate",
+          "pct": 52.2
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 26.1
+        },
+        {
+          "name": "Coconut Oil",
+          "pct": 11.4
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 8.2
+        },
+        {
+          "name": "Lavender 40/42 Essential Oil",
+          "pct": 1.3
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 0.8
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, mix together the baking soda and citric acid. To get rid of clumps in the mixture, you can push the powders through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nAdd the oil mixture to the dry ingredients. Use your hands to fully combine.\nOnce the ingredients are fully combined, the mixture should hold its shape when squeezed. Split the mixture in half. You can eyeball it, but if you’d like to measure each container will weigh about 25 ounces.\nTo one half of the mixture, add 1 tsp. of the Lavender Mica and use your hands to fully mix in.\nGrab a small amount of each color and squeeze them together in your hand. Use your hands to shape into a ball. The size of each truffle is up to you. The truffles we created each weighed about 3 – 4 ounces each.\nRemove from the parchment paper and store in a cool, dry place. When you’re ready to use, place them in a hot bath and enjoy. Because the truffles contain plenty of hard butters and oils, very hot bath water works best. Enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "crescent-moon-bath-bomb-diy",
+      "name": "Crescent Moon Bath Bomb DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/crescent-moon-bath-bomb-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Crescent Moon Bath Bomb DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Coconut Oil",
+          "pct": 90.9
+        },
+        {
+          "name": "About 9 ML Polysorbate 80",
+          "pct": 9.1
+        }
+      ],
+      "notes": "",
+      "process": "Melt the coconut oil in the microwave using 30-60 second bursts. Pour 2 ounces of coconut oil, 9 mL of the Bramble Berry's Alien Type Fragrance Oil, and 9 mL of polysorbate 80 into a small, fragrance oil-safe container. Use a spoon to fully mix the ingredients together.\nAdd the oil mixture to the powder mixture. Use your hands to fully mix the ingredients together.\nFill the Disk Mold and Packages with the bath bomb mixture. Firmly compact the mixture into the mold to create a solid shape. Only fill each mold to the inner lip, or the lid will not close shut. Allow the bath bombs to dry and harden for at least 4 hours or up to overnight. If unmolded too quickly, they may fall apart.",
+      "category": "body"
+    },
+    {
+      "id": "sand-dollar-bath-bomb-diy",
+      "name": "Sand Dollar Bath Bomb DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/sand-dollar-bath-bombs/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Sand Dollar Bath Bomb DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Citric Acid About 3/4 Cup",
+          "pct": 58.3
+        },
+        {
+          "name": "Epsom Salt Extra Fine",
+          "pct": 25
+        },
+        {
+          "name": "Coconut Oil",
+          "pct": 16.7
+        }
+      ],
+      "notes": "",
+      "process": "Add 1 teaspoon of King's Gold Mica and use your hands or a whisk to fully mix it into the powders.\nMelt the coconut oil in the microwave using 30-60 second bursts. Pour 2 ounces of the melted oil, 9 mL of Tropical Vacation Fragrance Oil, and 6 mL of polysorbate 80 into a small fragrance oil-safe container. Use a spoon to fully mix the ingredients together.\nPour the oil mixture into the powder mixture and use your hands to fully incorporate the two.\nFill the sand dollar mold cavities with bath bomb mixture. Press the mixture firmly into the mold and smooth the backs with your fingers. Allow them to dry for at least 4 hours or up to overnight. To remove, gently press the back of the mold until the bath bombs pop out.\nOnce the bath bombs have been removed, use a dry paintbrush to dust the tops with Super Pearly White Mica. Doing so helps the star shape in the center pop. If you'd like more contrast, mix 1/2 teaspoon Super Pearly White Mica with 1/2 Tbsp. 99% isopropyl alcohol and paint the mixture onto the bath bombs. Allow to dry for several minutes and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "diy-mermaid-bubbling-bath-truffles",
+      "name": "DIY Mermaid Bubbling Bath Truffles",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-mermaid-bubbling-bath-truffles/",
+      "heatRequired": true,
+      "equipment": [
+        "Stand/hand mixer",
+        "Stove"
+      ],
+      "description": "DIY DIY Mermaid Bubbling Bath Truffles from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 41
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 12
+        },
+        {
+          "name": "SLSA",
+          "pct": 21
+        },
+        {
+          "name": "Cream Of Tartar",
+          "pct": 4
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Organic Cocoa Butter Cubes",
+          "pct": 7
+        },
+        {
+          "name": "Liquid Glycerin",
+          "pct": 3
+        },
+        {
+          "name": ".5 Oz. Polysorbate 80",
+          "pct": 1
+        },
+        {
+          "name": ".6 Oz. Island Escape Fragrance Oil",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "In a small heat-safe container, add the shea butter and cocoa butter cubes. Place the container in the microwave and melt the butters using 30-60 bursts. The cocoa butter takes a little while to melt. Be careful when removing it from the microwave, as it may be very hot.\nAdd the Island Escape Fragrance Oil, polysorbate 80 and glycerin to the melted butters. Use a spoon to thoroughly incorporate. Set aside.\nAdd 1 teaspoon Super Pearly White Mica to the entire batch and use the whisk to fully mix it in. The Super Pearly White gives more shimmer in the tub, but does not drastically change the color of the mixture. You can leave it out if you prefer.\nYou will have about 60 ounces of mixture. Split the batch into two containers. One container will have about 40 ounces, the other will have about 20 ounces.\nTo the larger container, add 1 teaspoon of Aqua Pearl Mica. Use your hands to thoroughly mix in the colorant until there are no streaks.\nOnce all the colors are mixed, it’s time to roll! Place a sheet of parchment or wax paper down to prevent the dough from sticking. Sprinkle your work surface with a bit of baking soda to prevent sticking. Clean off your counter space to mold the mixture and create a log shape.\nPlace chunks of the white colored bubble bar mixture onto the blue. Use your hands to spread it evenly onto the blue, and press them down on each other. Create a flat rectangle shape – about 14 inches long, by about 7-8 inches tall.\nUse the parchment paper to roll the bubble bars. The bars may stick to the parchment or wax paper slightly, but that’s okay. You can use your hands to smooth out the roll.\nContinue rolling, and use your hands to help create a smooth, even log.\nOnce you’re happy with the shape, sprinkle the top with coarse pink sea salt and press the salt into the bars to help them stick. Sprinkle the top with Gold Sparkle Mica.\nUse a sharp non-serrated knife to cut the log into bars. If the log is extremely soft, it can be a little sticky and needs to",
+      "category": "body"
+    },
+    {
+      "id": "rose-gold-bath-bomb-tutorial",
+      "name": "Rose Gold Bath Bomb Tutorial",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/rose-gold-bath-bombs/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Rose Gold Bath Bomb Tutorial from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Coarse Pink Sea Salt",
+          "pct": 47.6
+        },
+        {
+          "name": "Coconut Oil",
+          "pct": 47.6
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 4.8
+        }
+      ],
+      "notes": "",
+      "process": "Mix the coarse pink sea salt with Rose Gold Mica. Add a small amount of the salt to the bottom of the bath bomb molds and set aside. TIP: Don't add too much salt to the bottom of the molds, or a large majority of it will fall off when the bath bomb is removed from the mold.\nSift together the baking soda and citric acid. Add the extra small pink sea salt and mix to fully incorporate.\nAdd the remaining coarse pink sea salt to dry the ingredients. Mix in thoroughly.\nMelt the coconut oil in the microwave using 30-60 second bursts. In a separate fragrance oil-safe container, mix together the coconut oil, Rose Quartz Fragrance Oil, and polysorbate 80.\nAdd the wet ingredients to the dry mixture. Use your hands to fully mix together all the ingredients.\nThe perfect bath bomb texture is similar to damp sand, and holds its shape when squeezed in your hand. To achieve this texture, spritz the mixture with witch hazel with one hand and mix with your other hand. How much witch hazel you add will depend on your climate.\nOnce it's the correct texture, add the mixture into the bath bomb molds. Press the mixture firmly and use your hands to smooth the back. Fill up each mold and allow the bath bombs to harden for at least 3-4 hours, up to overnight. Remove from the molds and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "diy-rainbow-bubbling-bath-truffles",
+      "name": "DIY Rainbow Bubbling Bath Truffles",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-rainbow-bubbling-bath-truffle/",
+      "heatRequired": true,
+      "equipment": [
+        "Stand/hand mixer",
+        "Stove"
+      ],
+      "description": "DIY DIY Rainbow Bubbling Bath Truffles from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 41
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 12
+        },
+        {
+          "name": "SLSA",
+          "pct": 21
+        },
+        {
+          "name": "Cream Of Tartar",
+          "pct": 4
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Organic Cocoa Butter Cubes",
+          "pct": 7
+        },
+        {
+          "name": "Liquid Glycerin",
+          "pct": 3
+        },
+        {
+          "name": ".5 Oz. Polysorbate 80",
+          "pct": 1
+        },
+        {
+          "name": ".6 Oz. Fruity Fusion Fragrance Oil",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "In a small heat-safe container, add the shea butter and cocoa butter cubes. Place the container in the microwave and melt the butters using 30-60 bursts. The cocoa butter takes a little while to melt. Be careful when removing it from the microwave, as it may be very hot.\nAdd the Fruity Fusion Fragrance Oil, Polysorbate 80 and glycerin to the melted butters. Use a spoon to thoroughly incorporate. Set aside.\nYou will have about 60 ounces of mixture. Split the batch into 7 equal containers; each container should have about 8.5 ounces. I recommend weighing all the containers to make sure you have an equal amount, but you could eyeball it if you prefer.\nContinue making long, flat log shapes with the orange, yellow, green, blue and purple colors. Place each color on top of the last and use your hands to gently press the colors together, and form an even shape. Finally, place the uncolored portion of the mixture on top of the purple.\nUse your hands to press the colors together into one log. The log should be about 12\". If you'd like your bars to be smaller, you can stretch the log into a longer shape, or create a shorter shape for bigger bars.\nIf you’d like the colors to have a little more movement, very carefully twist the log. While twisting, be sure to press the log together to avoid large cracks or tears. This can be a little tricky, so feel free to skip it if you’re concerned with your log falling apart.\nTo help get a more even, circular shape, place the log into the liner for the Heavy Duty Column Mold. Squeeze the liner closed to create more condensed, even bars. This step can be skipped if you are happy with the shape created with rolling the log on the counter.\nIf you have not done so already, cover your surface with parchment or freezer paper. Carefully remove the log from the liner, and use a sharp knife to cut the log into bars. Do so very gently, as the bottom of the bars may want to crumble a bit. If this happens, use your hands to reshape any crumbles. We fo",
+      "category": "body"
+    },
+    {
+      "id": "heavenly-lilac-bath-truffle-tutorial-free-printable",
+      "name": "Heavenly Lilac Bath Truffle Tutorial + Free Printable",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/heavenly-bath-truffle-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Heavenly Lilac Bath Truffle Tutorial + Free Printable from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Cocoa Butter",
+          "pct": 50
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 50
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, mix together the baking soda and citric acid. Use your hands or strain the mixture through a fine mesh strainer to break up any clumps. If using your hands, I recommend wearing gloves because citric acid will strip your manicure. =)\nIn a heat safe container, combine the cocoa butter and shea butter. Melt in the microwave using 30 second bursts. Be careful when removing the container from the microwave, it will be hot.\nAdd the Lilac Fragrance Oil directly to the melted oils and stir in thoroughly.\nPour the melted oil and butter into the baking soda and citric acid mixture. Using your hands, mix together until the liquid is fully incorporated with the dry ingredients.\nAdd the Party Pink and Lavender Micas into the mixture, and use your hands to thoroughly incorporate.\nAdd the rose petals and use your hands to mix in.",
+      "category": "body"
+    },
+    {
+      "id": "midas-touch-bath-bombs",
+      "name": "Midas Touch Bath Bombs",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/midas-touch-bath-bombs/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Midas Touch Bath Bombs from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Meadowfoam Oil",
+          "pct": 60
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 40
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, add the baking soda and citric acid. Use your hands to break up any clumps. To help make the mixture extremely smooth, you can strain the mixture through a fine mesh strainer. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. =)\nUse your hands to work the oils throughout the dry ingredients. Be careful, as the oils may be very hot. Continue to mix until the oils and dry ingredients are completely combined. This may take several minutes.\nAdd about 10-12 drops of the Coral Orange La Bomb into the mixture and begin working the colorant throughout the mixture. This can take a few minutes, just keep mixing! Add more colorant if you’d like the color to be a little more saturated.\nAdd the Champagne Fragrance Oil and Orange Peel Cybilla Fragrance Oil to the mixture and use your hands to thoroughly mix in the fragrances.\nCheck the moisture of your fizzies. When squeezed with your hand, the mixture should hold its shape. If not, add spritzes of witch hazel into each container, mixing between every couple sprays, until each container has a texture similar to wet sand. Try to work as quickly as possible!\nFill two halves of the bath bomb molds, gently pressing the bath bomb mixture in each to make sure they hold their shape. Mound a little extra mixture in the center of one half of the mold. Match the eyelets of each side up, and press together. To avoid any imperfections on your bath bomb, make sure to direct pressure to the edges of the mold rather than the center.\nAllow the bath fizzies to harden in the mold for 24 hours. Then, carefully remove them from the package. Fill a bowl with a few tablespoons of King’s Gold Mica.\nSpritz the outside of one bath bomb lightly with 99% isopropyl alcohol.\nGently roll the bath bomb into the King’s Gold Mica until completely covered. Use your fingers to carefully “brush” off any excess mica.\nRepeat this process for each bath bomb, until all are covered. Carefully place the bath bom",
+      "category": "body"
+    },
+    {
+      "id": "guest-post-sherbet-surprise-bath-fizzies",
+      "name": "Guest Post: Sherbet Surprise Bath Fizzies",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/guest-post-sherbet-surprise-bath-fizzies/",
+      "heatRequired": true,
+      "equipment": [
+        "Stand/hand mixer",
+        "Stove"
+      ],
+      "description": "DIY Guest Post: Sherbet Surprise Bath Fizzies from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Shea Butter",
+          "pct": 55.6
+        },
+        {
+          "name": "Jojoba Oil",
+          "pct": 44.4
+        }
+      ],
+      "notes": "",
+      "process": "Mix all the dry ingredients (baking soda, citric acid, arrowroot powder) together in a small mixing bowl. Blend well to break down any chunks and set aside.\nMix the shea butter and jojoba oil and melt in a double boiler or microwave until completely melted and set aside. Next mix water, alcohol and scent in a small bowl. When butters and oils have cooled slightly combine the water mixture and oil mixture together. Add 2-3 tsp of the Adobe Brick La Bomb color to the liquid and stir.\nUsing a hand or stand mixer, pour the oils into the dry mixture and increase speed slightly (one notch), making sure to mix well. Turn mixer down to low, mixing for an additional 1-2 minutes. Test the mix by squeezing it to ensure it can hold its shape. Now you are ready to ball!\nYou can find a mini meat baller at most kitchen stores. Scoop up the mixture into the meat baller until overly full. Firmly squeeze the meat baller together and release. Gently remove the bath bomb and set aside to fully dry for 24 hours.\nRepeat steps one and two. Add less of the La Bomb colorant for contrast, or leave it white. I often like to leave my outer layer white because it tricks the kids 🙂 In the photos shown, I used half Irish Green La Bomb, and half Coral Orange La Bomb.\nYou’re now ready to mold together the larger and smaller layers. Fill one side of the Stainless Steel Bath Bomb Mold and gently place the mini fizzy inside. Next, mound the bath fizzy mixture on top of the mini bath bomb by mounding up the fizzy mixture like a snow cone. Place the other half of mold on top and press the two sides together until they touch.\nTurn over in your other hand and gently squeeze the flat spot on mold and lift up. Turn the bath bomb into the other hand and gently squeeze the flat spot on mold and lift!\nPlace the fizzies on bubble wrap pieces to keep the bottoms from becoming flat. Allow the fizzies to fully dry for 24 hours. Package, and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "orange-creamsicle-bath-truffle",
+      "name": "Orange Creamsicle Bath Truffle",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/bath-fizzies/orange-creamsicle-bath-truffle/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Orange Creamsicle Bath Truffle from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 57.8
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 28.9
+        },
+        {
+          "name": "Shea Oil",
+          "pct": 8.4
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 4.8
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, mix together the baking soda and citric acid. Use your hands to break up any clumps.\nIn a heat safe container, combine the cocoa butter and shea oil. Melt in the microwave using 30 second bursts. Be careful when removing the container from the microwave, it will be hot.\nPour the melted oil and butter into the baking soda and citric acid mixture. Using your hands, mix together until the liquid is fully incorporated with the dry ingredients.\nAdd the Creamsicle Fragrance Oil, and use your hands or spatula to full incorporate.\nSplit the bath truffle mixture into two equal containers. To one, add drops of the Coral Orange LaBomb Colorant, and begin incorporating the colorant in with your hands. Continue adding drops of the colorant until you have reached a pale orange color.\nFill half of the mold with the orange bath truffle mixture, pressing the mixture down to become smooth and compact in the mold. Fill the empty half of the mold with the white mixture and press down to fill the mold completely.\nPress the mixtures down firmly to ensure the two colors connect to create one disk. Smooth the top with your fingers, and place the cap on top. To use, place the bath truffle into the tub, and allow to fizz and fill the tub with luxurious oil and butter. You may find that half of one truffle is plenty for your tub!",
+      "category": "body"
+    },
+    {
+      "id": "how-to-make-solid-bubble-bath",
+      "name": "How to Make Solid Bubble Bath",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/bath-fizzies/how-to-make-solid-bubble-bath-on-soap-queen-tv/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY How to Make Solid Bubble Bath from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Liquid Glycerin",
+          "pct": 19.4
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Celestial Waters Fragrance Oil",
+          "pct": 1.9
+        },
+        {
+          "name": "Baking Soda",
+          "pct": 28
+        },
+        {
+          "name": "Cream Of Tartar",
+          "pct": 20.5
+        },
+        {
+          "name": "Corn Starch",
+          "pct": 7.5
+        },
+        {
+          "name": "Modified Tapioca Powder",
+          "pct": 1.7
+        },
+        {
+          "name": "SLSA (Sodium Lauryl Sulfoacetate)",
+          "pct": 16.1
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "making-bath-truffles-on-soap-queen-tv",
+      "name": "Making Bath Truffles on Soap Queen TV",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/bath-fizzies/making-bath-truffles-on-soap-queen-tv/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Making Bath Truffles on Soap Queen TV from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Melted Cocoa Butter",
+          "pct": 25
+        },
+        {
+          "name": "Melted Shea Butter",
+          "pct": 12.5
+        },
+        {
+          "name": "Vanilla Select Fragrance",
+          "pct": 2.5
+        },
+        {
+          "name": "Dark Rich Chocolate Fragrance",
+          "pct": 1.3
+        },
+        {
+          "name": "Vanilla Bean Fragrance",
+          "pct": 6.3
+        },
+        {
+          "name": "Butter Cream And Snickerdoodle Fragrance",
+          "pct": 2.5
+        },
+        {
+          "name": "Melted Cocoa Butter",
+          "pct": 25
+        },
+        {
+          "name": "Melted Shea Butter",
+          "pct": 12.5
+        },
+        {
+          "name": "Lavender Essential Oil",
+          "pct": 12.5
         }
       ],
       "notes": "",
