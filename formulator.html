@@ -857,7 +857,10 @@
     });
     const printBtn = el('button', 'btn', 'Print');
     printBtn.addEventListener('click', e => { e.stopPropagation(); openPrintModal(recipe); });
-    acts.appendChild(copyBtn); acts.appendChild(resetBtn); acts.appendChild(printBtn);
+    const forkBtn = el('button', 'btn', 'Fork');
+    forkBtn.title = 'Save a copy you can edit';
+    forkBtn.addEventListener('click', e => { e.stopPropagation(); openRecipeModal(recipe, true); });
+    acts.appendChild(copyBtn); acts.appendChild(resetBtn); acts.appendChild(printBtn); acts.appendChild(forkBtn);
     if (recipe.source === 'custom') {
       const editBtn = el('button', 'btn', 'Edit');
       editBtn.addEventListener('click', e => { e.stopPropagation(); openRecipeModal(recipe); });
@@ -1040,10 +1043,10 @@
     return row;
   }
 
-  function openRecipeModal(recipe) {
-    editingId = recipe ? recipe.id : null;
-    document.getElementById('modalTitle').textContent = recipe ? 'Edit Recipe' : 'New Recipe';
-    document.getElementById('rfName').value  = recipe?.name || '';
+  function openRecipeModal(recipe, isFork) {
+    editingId = (recipe && !isFork) ? recipe.id : null;
+    document.getElementById('modalTitle').textContent = isFork ? 'Fork Recipe' : (recipe ? 'Edit Recipe' : 'New Recipe');
+    document.getElementById('rfName').value  = isFork ? (recipe.name + ' (Fork)') : (recipe?.name || '');
     document.getElementById('rfCat').value   = recipe?.category || 'face';
     document.getElementById('rfHeat').checked = recipe?.heatRequired || false;
     document.getElementById('rfUrl').value   = recipe?.sourceUrl || '';
