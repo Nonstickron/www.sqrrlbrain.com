@@ -845,7 +845,8 @@
     "Clear Melt And Pour Soap",
     "Chamomile Essential Oil",
     "Inexpensive Cooking Oil—I Used Olive Oil",
-    "Orange Wax"
+    "Orange Wax",
+    "Gentle Carrier Oil"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -29962,6 +29963,100 @@
       ],
       "notes": "We also have wooden cabinets, and a wooden hearth and mantle for our propane fireplace.",
       "category": "cleaning"
+    },
+    {
+      "id": "super-gentle-homemade-eye-make-up-remover",
+      "name": "Super Gentle Homemade Eye Make-Up Remover",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/super-gentle-homemade-eye-make-up-remover/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "There are just four ingredients; water, a gentle carrier oil (I used grapeseed, but safflower, olive or, canola would work as well), vegetable glycerine (USA / Canada), and solubilizer. The solubilizer serves to easily emulsify the oil and water, and…",
+      "ingredients": [
+        {
+          "name": "Gentle Carrier Oil",
+          "pct": 22
+        },
+        {
+          "name": "Vegetable Glycerine",
+          "pct": 3
+        },
+        {
+          "name": "Distilled Water",
+          "pct": 75
+        }
+      ],
+      "notes": "",
+      "category": "makeup"
+    },
+    {
+      "id": "diy-eyebrow-fillerfixative",
+      "name": "DIY Eyebrow Filler/Fixative",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/diy-eyebrow-filler-fixative/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "As I&#8217;ve said about a million times, I am pretty low maintenance and I like it that way. When I first made mineral make-up I had no idea what to do with it. I don&#8217;t even know why I made it. Now that I have it I sometimes put it on, but I&#…",
+      "ingredients": [
+        {
+          "name": "Beeswax",
+          "pct": 27.3
+        },
+        {
+          "name": "Jojoba Oil",
+          "pct": 72.7
+        }
+      ],
+      "notes": "",
+      "category": "makeup"
+    },
+    {
+      "id": "diy-benefit-eye-bright",
+      "name": "DIY Benefit Eye Bright",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/diy-benefit-eye-bright/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "When it comes to make-up, my eyes are generally the only thing I can be bothered to pay attention to (and even that&#8217;s new). If I&#8217;m feeling lazy (but not so lazy as to forego make-up entirely, which certainly is not a rare occurrence), I&#…",
+      "ingredients": [
+        {
+          "name": "Beeswax",
+          "pct": 28.6
+        },
+        {
+          "name": "Jojoba Oil",
+          "pct": 71.4
+        }
+      ],
+      "notes": "What are some recommendation for substituting the mica ingredients? I&#8217;m worried I might be allergic to it. Thanks!",
+      "category": "makeup"
+    },
+    {
+      "id": "simple-eyelash-serum",
+      "name": "Simple Eyelash Serum",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/simple-eyelash-serum/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Castor oil is said to be great for many things, especially hair growth. It&#8217;s a thick, sticky oil said to help regrow eyebrows, eyelashes, and all other kinds of hair.",
+      "ingredients": [
+        {
+          "name": "Beeswax",
+          "pct": 66.7
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 33.3
+        }
+      ],
+      "notes": "Vegetable glycerin is a humectant, and it helps add shine and maintain moisture. You can leave it out if you want.",
+      "category": "makeup"
     }
   ]
 }
