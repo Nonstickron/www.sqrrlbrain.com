@@ -3842,7 +3842,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "50% citric acid solution, as needed\nCrothix™ Liquid (USA / Canada), as needed\nWeigh the glycerine, panthenol, Iselux Ultra Mild, hydrolyzed rice protein, and liquid germall plus into a small heat-resistant glass measuring cup. Stir to combine. Add the distilled water and hydrosol and stir gently until uniform.\nUp next, let's get set up to adjust the pH. As made I find the pH of this face wash is around 7, and we want it to be in the 5.5–6 range.\nTo test the pH, add 1g of product to one of the bowls containing 9g of water to create a 10% dilution, and pH check that. If necessary, add a drop of the citric acid solution to the parent batch, stir, and re-test. Continue until the pH is in the 5.5–6 range. Please watch the video to see this in action!\nOnce the pH is where we want it, thicken the face wash with Crothix&#x2122; liquid. For a 60g batch I'd add 1g at a time, stirring between additions and waiting five minutes or so before adding more. Crothix&#x2122; liquid can go very quickly from \"hmm, not thick enough\" to \"whoops, just made sudsy flubber\", so err on the side of slower additions!\nWhen you're happy with the viscosity you're done! Transfer to a container; I used a 60mL (2fl oz) squeezy bottle with a disc top. To use, lather up with a bit of water between your palms and use to wash your face."
+      "process": "1. Measure the glycerin, panthenol, surfactant blend, rice protein, and preservative into a heat-safe beaker.\n2. Stir to combine, then gently add the distilled water and hydrosol.\n3. Test the pH and adjust it to the 5.5–6 range using a citric acid solution.\n4. Thicken the cleanser by adding the liquid thickener in small increments, stirring well between each addition.\n5. Transfer the finished product to a squeeze bottle.",
+      "processRewritten": true
     },
     {
       "id": "mango-mango-cleansing-oil",
@@ -3884,7 +3885,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh all the ingredients into a small heat-resistant glass measuring cup or beaker and stir to combine. Once everything is all mixed up, transfer your cleansing oil to a 50mL (1.69fl oz) bottle. I used a 50mL (1.69fl oz) Zelo Frosted Glass Bottle from New Directions Aromatics with a dispensing pump.\nAlternatively, you could weigh everything right into the storage bottle, cap, and shake to combine. That's it!\nTo use, dispense a nickel sized amount of cleansing oil into your palm, and work it up with a bit of warm water. Massage that into your face before wiping it off with a damp microfibre cloth."
+      "process": "1. Combine all ingredients in a beaker or directly in the final storage bottle.\n2. Stir or shake the mixture until it is completely uniform.\n3. Transfer to a bottle equipped with a dispensing pump.",
+      "processRewritten": true
     },
     {
       "id": "gel-micellar-water",
@@ -3918,7 +3920,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the first four ingredients into a small heat-resistant glass measuring cup or beaker and stir to combine.\nSprinkle the Aristolflex AVC overtop and blend with a mini mixer or whisk until the entire mixture has thickened and emulsified. I find it's easiest to stir, leave it for about twenty minutes to fully hydrate, and then stir again. That's it!\nTo use, dispense a dollop of the gel onto a disposable cotton pad and swipe over your skin. Repeat with new pads until they come away clean. I stored my micellar gel in a soft squeeze tube."
+      "process": "1. Combine the distilled water, micellar surfactant, propanediol, and preservative in a beaker.\n2. Stir until the mixture is uniform.\n3. Add the gelling agent and continue stirring until the texture is smooth and the liquid is clear.\n4. Transfer to a squeeze bottle for storage.",
+      "processRewritten": true
     },
     {
       "id": "micellar-water-for-waterproof-makeup",
@@ -3960,7 +3963,8 @@
       ],
       "notes": "All we&#8217;re doing is swapping out some of the water for some oil. Yup, that&#8217;s it. I was looking at a store bought micellar water that was designed to remove waterproof makeup and the chief difference was the inclusion of some cyclopentasiloxane, which was floating on the top of the rest of the micellar water.",
       "category": "face",
-      "process": "Weigh everything into a 120ml/4oz squeeze bottle. Cap and shake to combine. That's it!\nTo use, soak a cotton pad in micellar water, and wipe it over your face. Repeat with fresh cotton until it comes away clean (I usually need two)."
+      "process": "1. Combine the distilled water, hydrosol, micellar surfactant, and oil in a bottle.\n2. Add the preservative and shake until uniform.\n3. Note that this formula is bi-phase and should be shaken before each use.",
+      "processRewritten": true
     },
     {
       "id": "soothing-cleansing-balm",
@@ -4020,7 +4024,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dish towel. Stir with a flexible silicone spatula to incorporate.\nPlace the container holding the melted balm in the ice bath and stir frequently until it gains a bit of viscosity. Remove it from the ice bath and weigh in the cool down phase, stirring to combine. Put the cleansing balm back into the ice bath, stirring until you reach a thin trace. Transfer it to your jar and leave the balm to set up.\nOnce the balm has set you're all done!"
+      "process": "1. Create a simmering water bath in a small pan.\n2. Melt the oil phase ingredients in a heat-safe beaker within the water bath.\n3. Prepare an ice bath in a separate bowl.\n4. Place the beaker in the ice bath and stir constantly as it cools.\n5. Once the mixture reaches a \"trace\" consistency, stir in the cooling phase ingredients.\n6. Pour the final balm into a jar to set.",
+      "processRewritten": true
     },
     {
       "id": "soothing-micellar-water",
@@ -4074,7 +4079,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh everything into a 120ml/4oz squeeze bottle. Cap and shake to combine. That's it!\nTo use, soak a cotton pad in micellar water, and wipe it over your face. Repeat with fresh cotton until it comes away clean (I usually need two)."
+      "process": "1. Measure the distilled water, aloe vera juice, and hydrosol into a bottle.\n2. Add the micellar surfactant, glycerin, and preservative.\n3. Shake or stir until the mixture is uniform and clear.\n4. Store in a bottle with a squeeze or pump top.",
+      "processRewritten": true
     },
     {
       "id": "winter-solstice-facial-polish",
@@ -4142,7 +4148,8 @@
       ],
       "notes": "The essential oil blend is mostly fresh fir needle essential oil, with cardamom and michelia alba adding a bit of spice and intrigue. See the substitutions list if you&#8217;re thinking you&#8217;d prefer something else!",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dish towel. Add the powder phase and stir with a flexible silicone spatula to incorporate and break up any clumps.\nTransfer to a wide-mouthed jar. Something around 30mL/1oz is a good size—I chose white to really set off the dark polish!\nTo use—massage a small amount (~half a teaspoon) into your face and wipe off with a damp cloth. Your skin can be wet or dry—water will make it lather up, which is neat! I don't use physical exfoliation on a daily basis, but really like it 1–2x a week. Do what works for your skin!\nPlease take precautions to keep the facial polish dry; while it does contain a broad spectrum preservative it also contains quite a lot of hard-to-preserve clay and I'm not confident the preservative is up to the task of a water-contaminated facial polish. Enjoy!"
+      "process": "1. Combine the dry ingredients (clays and exfoliants) in a mixing bowl.\n2. Stir until the powders are evenly blended.\n3. Gradually add the liquid oils and stir until the mixture forms a uniform paste.\n4. Package the polish in a wide-mouthed jar.",
+      "processRewritten": true
     },
     {
       "id": "clementine-facial-cleansing-milk",
@@ -4214,7 +4221,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the water phase into a small heat-resistant glass measuring cup. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cleansing milk is cool, transfer it to your container. I used a 2.5 fl oz \"tottle\" from Voyageur. To use, dispense a dime-sized amount of cleanser into your palm. Blend it up with a bit of warm water before massaging into your face and rinsing off. Follow up with the rest of your skin care routine!"
+      "process": "1. Set up a simmering water bath in a broad pan.\n2. Heat the water phase and oil phase ingredients in separate beakers until melted.\n3. Combine the two phases and use an immersion blender to create a stable emulsion.\n4. Allow the mixture to cool to room temperature, then stir in the preservative and fragrance.\n5. Transfer to a pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "sea-buckthorn-and-charcoal-cleansing-balm",
@@ -4274,7 +4282,8 @@
       ],
       "notes": "I&#8217;ve scented this balm with cocoa absolute for a Halloween-appropriate chocolate scent. Cocoa absolute is brown, so this does muddy the orange a bit—if you want to keep the orange as vibrant as possible orange essential oil would be a good choice! You could also use a fragrance oil; something fall-ish (apple cider, perhaps?) sounds divine!",
       "category": "face",
-      "process": "Whisk the activated charcoal together with a wee bit of the castor oil to create a drop-able liquid.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dish towel. Stir with a flexible silicone spatula to incorporate.\nOnce the balm has set and the swirls don't look wet anymore you're all done!"
+      "process": "1. Melt the oil phase ingredients in a heat-safe beaker using a water bath.\n2. Stir in the charcoal and clay until no clumps remain and the color is uniform.\n3. Place the beaker in an ice bath and stir steadily as it cools.\n4. Once the balm thickens to a \"trace\" consistency, incorporate the cooling phase ingredients.\n5. Transfer to a jar and allow it to set completely.",
+      "processRewritten": true
     },
     {
       "id": "oil-cleansing-gel",
@@ -4328,7 +4337,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "1/64 tsp mica, for colour (totally optional)\nWeigh the Sucragel ingredients into a small, high-edged bowl that you can use a single electric beater in.\nWeigh the oil phase into a small bowl or beaker and have a disposable pipette handy.\nOnce you've incorporated all the oil, weigh the final phase ingredients into the empty oil container and add those gradually—I did this in approximately four even-ish sized additions—beating thoroughly between additions.\nAnd that's it! Transfer the cleansing oil gel into a 60mL / 2oz jar.\nTo use, combine a pea-sized amount of the cleansing gel in your palm with a bit of water, massage into your face, and rinse off. I typically follow this up with a foaming cleanser, my actives, and then a few hydrating serums and lotions."
+      "process": "1. Combine the liquid oils and gelling agent in a heat-safe beaker.\n2. Heat the mixture until it becomes clear and the gelling agent is fully dissolved.\n3. Stir the mixture occasionally as it cools to room temperature to maintain a uniform gel texture.\n4. Transfer the final gel to a squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "eucalyptus-mint-soft-cleansing-balm",
@@ -4376,7 +4386,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dish towel. Stir with a flexible silicone spatula to incorporate. Set the measuring cup on a dish towel and leave to cool on the countertop for about ten minutes."
+      "process": "1. Melt the oil phase ingredients in a water bath until fully liquid.\n2. Set the container in an ice bath and stir constantly until it reaches a \"trace\" consistency.\n3. Mix in the essential oils until well distributed.\n4. Pour the balm into a jar and allow it to set at room temperature.",
+      "processRewritten": true
     },
     {
       "id": "lemon-rose-facial-cleansing-drops",
@@ -4434,7 +4445,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "To use, dispense a single drop of the cleanser into your palm and work up with water into a lovely lather before washing your face."
+      "process": "1. Combine the surfactants, humectants, and active ingredients in a small beaker.\n2. Stir gently to avoid creating excessive foam until the mixture is uniform.\n3. Incorporate the essential oils and stir well.\n4. Transfer the liquid to a dropper bottle for precise dispensing.",
+      "processRewritten": true
     },
     {
       "id": "lavender-gel-facial-cleanser",
@@ -4476,7 +4488,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Purple/lavender mica (optional)\nWeigh the glycerine into a glass bowl or beaker, and sprinkle the carrageenan overtop (we add the gum to the glycerine first to prevent clumping). Whisk to combine and leave it to sit for at least ten minutes while you prepare the remaining ingredients; I found this soaking time led to better incorporation.\nWeigh the surfactants, hydrosol, water, and preservative into another small container and whisk to combine. If you're certain you want to add a bit of mica you can add it now—1/64 tsp or less is plenty.\nOnce the gum mixture has been sitting for at least ten minutes gradually add the water mixture to it about 1/4 at a time, whisking between additions. I've tried adding the gum mixture to the water mixture and found that resulted in a lumpier end product than adding the water to the gum.\nAt this point you can whisk in the mica if you were on the fence about it and have decided you'd like to include it.\nAs I made it, the pH of this cleanser is ~5.5. I'd recommend checking the pH of your cleanser and adjusting it if necessary.\nThat's it! Transfer the gel to a container—something in the 50–60mL (~2fl oz) range is a good size.\nTo use, swipe up a small amount of gel into your palm and work it into a lather with some more water. Use to wash your face and wipe off with a damp microfibre cloth."
+      "process": "1. Measure the glycerin into a beaker and sprinkle the gelling agent over the surface to prevent clumping.\n2. Whisk the mixture and let it sit for at least ten minutes to hydrate.\n3. In a separate container, combine the surfactants, hydrosol, water, and preservative.\n4. Gradually add the water mixture to the gum mixture, whisking thoroughly after each addition.\n5. Verify the pH level is approximately 5.5 and adjust if necessary.\n6. Transfer the gel into a jar or bottle.",
+      "processRewritten": true
     },
     {
       "id": "rose-micellar-water",
@@ -4554,7 +4567,8 @@
       ],
       "notes": "PEG-6 Caprylic/Capric Triglycerides quickly distinguished themselves (itself?) as the best surfactant for this project by a wide margin. It works beautifully and doesn&#8217;t leave my skin feeling tight or coated or sticky. Fun fact—this is the same surfactant Bioderma uses in their popular (and expensive) micellar water! Please do not substitute this ingredient. From my experiments I cannot reco",
       "category": "face",
-      "process": "Weigh everything into a 120ml/4oz squeeze bottle. Cap and shake to combine. That's it!\nTo use, soak a cotton pad in micellar water, and wipe it over your face. Repeat with fresh cotton until it comes away clean (I usually need two)."
+      "process": "1. Combine the distilled water, rose hydrosol, glycerin, and micellar surfactant in a bottle.\n2. Add the preservative and shake until the mixture is uniform and clear.\n3. Store in a bottle with a squeeze or spray cap.",
+      "processRewritten": true
     },
     {
       "id": "eucalyptus-mint-cleansing-oil",
@@ -4598,7 +4612,8 @@
       ],
       "notes": "You could use stearic acid instead, though I&#8217;d use stearic at 3% You could use 10–15% of a soft butter, like mango or shea, adjusting the amount of safflower oil to keep the recipe in balance You can replace it with more safflower oil for a less viscous final product that does not require any heat to make You can also use more cetyl alcohol for a more noticeably viscous product; reduce the s",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nOnce the cetyl alcohol has melted, remove the measuring cup from the water bath and dry it off. Stir to combine, and leave the mixture to cool, stirring occasionally.\nWhen the measuring cup is barely warm to the touch, add the vitamin E and essential oils and stir to combine. It's not strictly necessary to wait until the cleanser has cooled this much, but since we can avoid exposing our essential oils to heat, we might as well.\nOnce everything is all mixed up, transfer your cleansing oil to a 120mL/4oz bottle.\nTo use, dispense a nickel sized amount of cleansing oil into your palm, and work it up with a bit of warm water. Massage that into your face before wiping it off with a damp microfibre cloth."
+      "process": "1. Heat the oil phase ingredients in a water bath until the solid components are completely melted.\n2. Remove from heat and allow the mixture to cool, stirring occasionally.\n3. Once the liquid is barely warm to the touch, incorporate the vitamin E and essential oils.\n4. Transfer the finished cleansing oil into a storage bottle.",
+      "processRewritten": true
     },
     {
       "id": "ginger-oak-moss-solid-facial-cleanser",
@@ -4662,7 +4677,8 @@
       ],
       "notes": "1g | 2% hydrolyzed silk (USA / Canada) (wondering about substitutions?)",
       "category": "face",
-      "process": "0.05g | 1 drop oak moss absolute\n0.1g |5 drops CO2 extracted ginger essential oil\n0.05g | 2 drops michelia alba (white champaca) essential oil\nCombine the Sodium Cocoyl Isethionate and Cocamidopropyl Betaine in a small saucepan and place over low heat until smooth and uniform, stirring frequently. Ensure the heat is very low!\nWhile the surfactants are melting, weigh out the cetyl alcohol, BTMS-50, mango butter, panthenol, hydrolyzed silk, and Penstia&#x2122; powder into a small bowl or beaker to add later.\nOnce the Sodium Cocoyl Isethionate and Cocamidopropyl Betaine have transformed into a smooth, uniform white paste, stir in the foaming silk. When that is uniform, add the remainder of the secondary heated phase, stirring to combine and melt through.\nOnce all the paste is packed into the tube, smooth off the top with your spatula and leave it to set up for a day before using it. To use, glide the surface of the cleanser across damp skin, and then wipe it off with a damp microfibre cloth."
+      "process": "1. Combine the primary surfactants in a small saucepan over very low heat.\n2. Stir frequently until the mixture forms a smooth, uniform paste.\n3. Mix in the secondary heated phase ingredients, stirring until everything is melted and well combined.\n4. Pack the resulting paste into a tube or mould and smooth the surface.\n5. Allow the cleanser to set for 24 hours before its first use.",
+      "processRewritten": true
     },
     {
       "id": "summer-stone-fruit-creamy-face-mask",
@@ -4714,7 +4730,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1″ of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Add the ground clays + apricot kernel powder. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Stir the mixture with a flexible silicone spatula to combine everything and ensure there are no clumps."
+      "process": "1. Set up a simmering water bath in a small saucepan.\n2. Measure the oil phase ingredients, clays, and exfoliant into a heat-safe beaker.\n3. Heat the mixture in the water bath for 20–30 minutes until fully melted.\n4. Stir the mixture with a silicone spatula to ensure it is uniform and free of clumps.\n5. Allow the mask to cool before packaging in a jar.",
+      "processRewritten": true
     },
     {
       "id": "creamy-oat-shea-face-mask",
@@ -4758,7 +4775,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nCheck the mixture on the stovetop every now and then; once it has soaked long enough that you don't see any powdery clumps you can remove the measuring cup from the heat. Stir until the mixture has thickened enough that the powders won't settle out while it cools.\nPour the product into its container and leave it on the counter to set up. I used a 30g (1.06oz) paperboard jar from YellowBee. If you use a paperboard container you'll want to be extra careful to avoid dripping any product down the outside of it as the oil will stain the paper."
+      "process": "1. Melt the oil phase ingredients in a heat-safe beaker using a water bath.\n2. Once melted, stir in the oatmeal and clay until smooth.\n3. Continue to stir as the mixture cools to prevent the powders from settling at the bottom.\n4. Once the mask has thickened, transfer it into a jar and allow it to set on the counter.",
+      "processRewritten": true
     },
     {
       "id": "chocolate-cherry-face-mask",
@@ -4788,7 +4806,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won’t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the red kaolin clay into a small dish and set it aside.\nWeigh the cocoa powder and cherry kernel oil into a second small dish; whisk to combine. Add the water, and whisk again—this mixture won't combine well, but that's ok.\nUp next, start sprinkling in the clay a little at a time, whisking between additions, until you've incorporated all the clay and you have a thick, glossy, creamy mixture.\nNow you're ready to apply! Pull back your hair and spread the mask all over your face and neck, avoiding your nostrils, lips, and eyes. Leave to dry for 10–15 minutes before rinsing off. Follow up with your favourite moisturizer. Enjoy!\nThis mask is designed to be made and used immediately; do not make a big batch for future use. If you have some extra you can cover it tightly with some cling film and keep it in the fridge for up to 3 days, but if you stick to the 10g batch size you are unlikely to have any leftovers worth keeping.\nAs always, be aware that making substitutions will change the final product. While these swaps won’t break the recipe, you will get a different final product than I did.\nYou could use a different light, smooth clay instead of red kaolin. White kaolin would be my first choice, but French green would also work well. Please remember that switching up the clay is likely to result in needing more or less of it to get the same end consisitency.\nI don't recommend swapping out the cocoa powder or dropping it. You certainly can, but it's pretty integral to the theme of this mask!\nYou can use a different liquid oil your face loves instead of cherry kernel oil.\nYou could use a hydrosol you love instead of distilled water—choose something that pairs nicely with cocoa powder if you can.\nThe cherry kernel oil was gifted by Mystic Moments.\nSimilar Formulations\nGentle Rose & Clay Face MaskA few weeks ago one of my yoga classmates gifted me a bag of rose powder. She'd heard about my DIY tendencies (addiction) and thought\nFrench Face MaskThis simple clay based fa"
+      "process": "1. Combine the cocoa powder and oil in a small dish and whisk until smooth.\n2. Add the water and whisk again.\n3. Gradually sprinkle in the clay while whisking continuously until the mixture is thick, glossy, and creamy.\n4. This mask is designed for immediate use and should not be stored long-term.",
+      "processRewritten": true
     },
     {
       "id": "creamy-french-green-clay-face-mask",
@@ -4820,7 +4839,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won’t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1″ of water to a bare simmer over low to medium-low heat in a small saucepan.\nOnce the first three ingredients have melted, stir to combine, and add the clay. Continue to heat for another 15 minutes or so; I find this additional heating helps break down any clay clumps without a ton of stirring. Alternatively, you could try sifting the clay before incorporating to remove any lumps before adding the clay to the melted base."
+      "process": "1. Create a simmering water bath in a small saucepan.\n2. Melt the oil phase ingredients in a heat-safe beaker.\n3. Stir in the clay and continue to heat for an additional 15 minutes to help break down any clumps.\n4. Stir the mixture until uniform and allow it to cool before packaging in a jar.",
+      "processRewritten": true
     },
     {
       "id": "strawberry-rose-clay-face-mask",
