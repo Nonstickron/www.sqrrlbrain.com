@@ -1027,7 +1027,7 @@
       "equipment": [
         "Blender"
       ],
-      "description": "Simple water-based gel. Lightweight, soothing, good for oily or sensitive skin. Needs preservative.",
+      "description": "A water-based gel formulation utilizing xanthan gum for viscosity. Suitable for oil-prone or sensitive skin types. Requires broad-spectrum preservation.",
       "ingredients": [
         {
           "name": "Aloe Vera",
@@ -1058,7 +1058,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/dry-summer-body-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Lightweight, non-greasy body oil blend. Absorbs fast. No water phase = no preservative needed.",
+      "description": "A lightweight, anhydrous body oil blend designed for rapid absorption. Formulated without a water phase to eliminate the need for preservation.",
       "ingredients": [
         {
           "name": "MCT Oil",
@@ -1128,7 +1128,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Lotion-like body butter with water phase for a lighter feel. Needs emulsifier and preservative.",
+      "description": "An emulsified body butter containing both oil and water phases for a non-greasy finish. Requires an emulsifying wax and broad-spectrum preservation.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -1185,7 +1185,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Spray-on body oil with shimmer. Needs heat to dissolve mica into oil phase.",
+      "description": "A sprayable body oil containing mica for a reflective finish. Requires heat during formulation to ensure uniform distribution of the mica.",
       "ingredients": [
         {
           "name": "Fractionated Coconut Oil",
@@ -1345,7 +1345,7 @@
         "Stove",
         "Stand/hand mixer"
       ],
-      "description": "Stable in heat — uses higher-melting waxes to prevent summer melt.",
+      "description": "A temperature-stable body butter formulated with high-melting-point waxes to maintain consistency in warm environments.",
       "ingredients": [
         {
           "name": "Mango Butter",
@@ -1391,7 +1391,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Rich hand cream with hemp seed oil. Water phase requires heat and proper emulsification.",
+      "description": "A rich, emulsified hand cream formulated with hemp seed oil. Requires heat-assisted emulsification and preservation.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -1488,7 +1488,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Rich, velvety emulsified foot cream with jojoba and shea. Peppermint essential oil provides a cooling tingle.",
+      "description": "A dense, emulsified foot cream utilizing jojoba oil and shea butter. Includes peppermint essential oil for a cooling effect.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -1541,7 +1541,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Luxurious shimmer body/face/hair oil with plum kernel and apricot kernel. Iridescent mica creates a fairy-like glow.",
+      "description": "A multi-purpose shimmer oil for the face, body, and hair, featuring plum and apricot kernel oils and iridescent mica.",
       "ingredients": [
         {
           "name": "Apricot Kernel Oil",
@@ -1576,7 +1576,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/soothing-hydrating-hyaluronic-acid-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Lightweight water-based serum with hyaluronic acid for deep hydration. No heating required — just mix and let hydrate.",
+      "description": "A water-based serum formulated with hyaluronic acid for hydration. This cold-process formulation does not require heating.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -1669,7 +1669,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Beginner-friendly rinse-out conditioner. Just 4–6 ingredients, silky slip, and a clean rinse.",
+      "description": "A simplified, rinse-out hair conditioner formulated with a limited ingredient list to provide slip and manageability.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -2298,7 +2298,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/gentle-low-lather-face-cleanser/",
       "heatRequired": false,
       "equipment": [],
-      "description": "If you’re looking for an ultra-gentle, super inexpensive facial cleanser for any skin type—this is it! You can make a kilo of this cleanser for about $10USD, and all of the ingredients are super versatile, inexpensive, and easy to get &#x1f604;",
+      "description": "A gentle, low-lather facial cleanser formulated with mild surfactants and skin-soothing vitamins. Suitable for all skin types.",
       "ingredients": [
         {
           "name": "Sodium Cocoyl Isethionate",
@@ -2359,7 +2359,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "The cleansing balms we&#8217;re making today are fully anhydrous, though some cleansing balm formulations do include small amounts of water.",
+      "description": "An anhydrous cleansing balm formulation designed for effective removal of debris and makeup. Available in three variations.",
       "ingredients": [
         {
           "name": "Medium Chain Triglycerides",
@@ -2416,7 +2416,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "The finished Extra Creamy Green Clay Cleansing Balm is soft and creamy, melting down into a slippy oil in no time. It rinses off the skin beautifully, leaving it feeling soft and clean. Parfait!",
+      "description": "A soft, clay-infused cleansing balm that transforms into an oil upon application. Designed for effective rinsing and skin softening.",
       "ingredients": [
         {
           "name": "Emulsifying Wax NF",
@@ -2465,7 +2465,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "I&#8217;ve used cetearyl alcohol to thicken this updated formulation, rather than the candelilla wax that thickened the 2016 version. I prefer cetearyl alcohol for formulations like this one as it has better rinse-off than true waxes and has a creami…",
+      "description": "A thickened cleansing balm utilizing cetearyl alcohol for improved rinse-off performance. Transforms into a milky emulsion upon contact with water.",
       "ingredients": [
         {
           "name": "Fractionated Coconut Oil",
@@ -2511,7 +2511,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Winter Solstice Oil-Free Facial Moisturizer Winter Solstice Bath Bombs Winter Solstice Facial Gel Cream Winter Solstice Facial Polish Winter Solstice Face Cream",
+      "description": "A dense, cream-based facial cleanser formulated for gentle removal of impurities. Suitable for dry or sensitive skin.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -2570,7 +2570,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/frosted-cranberry-powder-to-foam-facial-cleanser/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The Frosted Cranberry fun continues today with this creamy red Frosted Cranberry Powder to Foam Facial Cleanser. It&#8217;s a soft, water-free cleanser that transforms into a gentle, foaming, lightly exfoliating cleanser when you work it up between y…",
+      "description": "An anhydrous powder cleanser that transforms into a gentle foam when combined with water. Features light exfoliation from cranberry fiber.",
       "ingredients": [
         {
           "name": "White Kaolin Clay",
@@ -2615,7 +2615,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Gently cleanse your skin with this formulation for a sunshiney Natural Turmeric Foaming Face Wash. It stars anti-inflammatory turmeric extract + two of my favourite gentle surfactants, and it positively spews bright yellow bubbles when you pump it ou…",
+      "description": "A foaming liquid face wash featuring turmeric extract for its anti-inflammatory properties. Utilizes gentle surfactants for a non-drying cleanse.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -2664,7 +2664,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "I selected PEG-40 Hydrogenated Castor Oil as the rinse-off ingredient. I first tried it in a cleansing oil formulation back in early 2020, taking inspiration from a Making Cosmetics sample formulation. I really like the rinse-off and skin feel it bri…",
+      "description": "A jelly-to-oil cleanser utilizing PEG-40 Hydrogenated Castor Oil for efficient rinse-off. Provides a smooth skin feel without greasy residue.",
       "ingredients": [
         {
           "name": "Safflower Oil",
@@ -2699,7 +2699,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/super-simple-oil-to-milk-cleanser/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today&#8217;s Super Simple formulation is the most super-ly simple of the super simple formulations I&#8217;ve shared with just two ingredients! I&#8217;ve also shared two different variations and discussed how to customize it to make it as accessibl…",
+      "description": "A two-ingredient oil cleanser that emulsifies into a milk upon contact with water. Designed for minimal irritation and easy use.",
       "ingredients": [
         {
           "name": "Fractionated Coconut Oil",
@@ -2733,7 +2733,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Since this is a wash-off formulation I&#8217;ve kept it fairly simple and inexpensive. The water phase is a simple blend of distilled water, moisturizing vegetable glycerin, and just a wee bit of citric acid to bring the pH down into the mildly acidi…",
+      "description": "A gentle, conditioning face wash formulated with colloidal oatmeal and sweet almond oil. Maintains a skin-compatible pH level.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -2788,7 +2788,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/sweet-magnolia-natural-cleansing-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Making this is very simple; just stir everything together and you&#8217;re done! The polyglyceryl-4 oleate does take a while to incorporate, but keep at it—it&#8217;ll blend in. I packaged mine in a bottle with a treatment pump top, but something wit…",
+      "description": "A natural cleansing oil utilizing polyglyceryl-4 oleate for gentle emulsification. Effective for removing sunscreen and environmental debris.",
       "ingredients": [
         {
           "name": "Fractionated Coconut Oil",
@@ -2827,7 +2827,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/almond-oat-powder-to-foam-facial-cleanser/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This soft, silky powder transforms into a creamy, sudsy cleanser when you work it up with a bit of warm water between your palms. It stars soft and velvety kaolin clay and skin-soothing oats, and you can blend up a batch in just a few moments from ju…",
+      "description": "A silk-textured powder cleanser that foams upon contact with water. Formulated with kaolin clay and colloidal oatmeal for a soothing cleanse.",
       "ingredients": [
         {
           "name": "White Kaolin Clay",
@@ -2868,7 +2868,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "I haven&#8217;t included any preservative in this formulation as I know I will keep it dry as I use it. If you aren&#8217;t confident you&#8217;ll do that, or if you&#8217;re planning on gifting it to somebody who might not, I&#8217;ve included instr…",
+      "description": "A clay-based cleansing balm that emulsifies into a milk. Formulated with sweet almond oil and oatmeal for a nourishing effect.",
       "ingredients": [
         {
           "name": "Sweet Almond Oil",
@@ -2918,7 +2918,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "If you&#8217;re looking for a new indulgent, creamy facial cleanser then I think this Rich Plum Face Wash is just the thing &#x2764;&#xfe0f; Made with luxurious plum kernel oil and vitamin C rich Kakadu plum power, it&#8217;s a beautiful and gentle w…",
+      "description": "A creamy, low-pH facial cleanser formulated with plum kernel oil and Kakadu plum powder. Designed for a gentle, non-stripping cleanse.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -2973,7 +2973,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/apricot-powder-to-foam-facial-cleanser/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Want to learn how to formulate your very own powder-to-foam cleansers from scratch? Check out the Humblebee &amp; Me DIY Powder-to-Foam Workshop to learn how to formulate safe &amp; stable cleansers for the whole body using \"impossible to preserve\" i…",
+      "description": "A powder-to-foam cleanser featuring finely ground apricot kernel for gentle physical exfoliation. Utilizes kaolin and red clays for deep cleansing.",
       "ingredients": [
         {
           "name": "White Kaolin Clay",
@@ -3011,7 +3011,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Save 8% on Glyceryl Stearate (and) PEG-100 Stearate everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "description": "A dense, cream-based cleanser formulated with cocoa butter and virgin coconut oil. Designed for high emolliency and gentle cleansing.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -3070,7 +3070,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/gentle-clay-facial-cleansing-bar/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The inclusion of a large amount of corn starch led me to inspiration part 2: A request I&#8217;ve had quite a few times in the last year or two. That request was for a solid syndet bar that uses Sodium Cocoyl Isethionate (SCI) as the sole solid surfa…",
+      "description": "A solid syndet cleansing bar utilizing Sodium Cocoyl Isethionate and corn starch. Formulated to maintain a skin-compatible pH of 5.5.",
       "ingredients": [
         {
           "name": "Finely Powdered Sodium Cocoyl Isethionate",
@@ -3143,7 +3143,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "To make, this is a simple melt-trace-pour-wait. I hope you like it as much as I do!",
+      "description": "A simple, anhydrous cleansing balm formulated with rose petal powder and kaolin clay. Designed for easy melt and effective rinsing.",
       "ingredients": [
         {
           "name": "Fractionated Coconut Oil",
@@ -3186,7 +3186,7 @@
         "Immersion blender",
         "Stand/hand mixer"
       ],
-      "description": "Rose &amp; Honey Rich Cream Cleanser Lavender Aloe Cream Facial Cleanser Pemberley Foaming Facial Cleanser Sweetgrass Facial Cleanser All my facial cleanser formulations",
+      "description": "A light, whipped cream cleanser formulated with sea buckthorn oil and calendula extract. Designed for a soft, airy texture and gentle use.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -3249,7 +3249,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/creamy-jelly-facial-cleanser/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This formulation was a bit of a happy, jiggly accident. I was planning on making a gentle, wash-off micellar gel sort of thing—like a riff on this formulation from 2018, or this one from 2019. I also wanted to use a gelling agent that would allow me …",
+      "description": "A jelly-textured facial cleanser utilizing polyacrylate crosspolymer-6 as a gelling agent. Provides a unique texture and gentle cleansing action.",
       "ingredients": [
         {
           "name": "Vegetable Glycerine",
@@ -3298,7 +3298,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "For rinse-off, we&#8217;ve got a blend of PEG-40 hydrogenated castor oil and Polysorbate 80. I initially wanted to use just PEG-40 hydrogenated castor oil, but in the end, I found I needed a bit of Polysorbate 80 in the mix to get the rinse-off feel …",
+      "description": "A lightweight cleansing balm utilizing a blend of liquid emollients and surfactants for effective rinse-off. Designed for removing waterproof cosmetics.",
       "ingredients": [
         {
           "name": "C12-15 Alkyl Benzoate",
@@ -3344,7 +3344,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "I started my experiments by just using a lotion to wash my face, and that worked really well. Cool! And it makes sense that it would work—the emulsifier in the lotion not only emulsifies it, but also contributes rinse off when we decide to use it as …",
+      "description": "An emulsified cream cleanser featuring honey and rose hydrosol. Can be used as a rinse-off or wipe-off cleanser.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -3394,7 +3394,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "This lovely Soothing Creamy Facial Cleanser is a new favourite of mine for washing my face, morning and night. A gentle blend of surfactants is suspended in a creamy base with lots of moisturizing glycerin, anti-inflammatory aloe vera juice, and soot…",
+      "description": "A surfactant-infused cream cleanser formulated with aloe vera juice and calendula extract. Designed for gentle morning and evening use.",
       "ingredients": [
         {
           "name": "Vegetable Glycerine",
@@ -3472,7 +3472,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Our water phase is mostly watery things; distilled water, calming and fragrant lavender hydrosol, and soothing aloe vera juice. There&#8217;s also quite a lot of moisturizing vegetable glycerin, which I&#8217;m loving in high doses in all kinds of th…",
+      "description": "A gentle cream cleanser formulated with lavender hydrosol and aloe vera juice. Provides high levels of humectant-based hydration.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -3529,7 +3529,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Save 5% on safflower oil oil and everything else at Essential Wholesale &amp; Labs with coupon code HUMBLEBEE",
+      "description": "An unscented cleansing oil designed for sensitive skin and eye makeup removal. Features a blend of lightweight oils for a smooth finish.",
       "ingredients": [
         {
           "name": "Safflower Oil",
@@ -3566,7 +3566,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "This cheerily swirled White Chocolate Peppermint Cleansing Balm is just the thing for morning face-washing. With a refreshing pop of peppermint essential oil and gorgeous slippy texture, this cleansing balm melts quickly on the skin and rinses off re…",
+      "description": "A textured cleansing balm that melts quickly upon contact with skin. Features peppermint essential oil and cocoa butter for a refreshing cleanse.",
       "ingredients": [
         {
           "name": "Polawax",
@@ -3617,7 +3617,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/calendula-rose-foaming-cleansing-powder/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Want to learn how to formulate your very own powder-to-foam cleansers from scratch? Check out the Humblebee &amp; Me DIY Powder-to-Foam Workshop to learn how to formulate safe &amp; stable cleansers for the whole body using \"impossible to preserve\" i…",
+      "description": "An anhydrous powder cleanser featuring dried botanicals and kaolin clay. Designed for long-term stability and gentle foaming action.",
       "ingredients": [
         {
           "name": "White Kaolin Clay",
@@ -3658,7 +3658,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Today we&#8217;re creating a gentle Lavender Facial Cleansing Bar—a solid foaming facial cleanser with a skin-happy pH, creamy lather, and a lovely lavender scent. Several bees have sent in requests for another solid facial cleanser, with references …",
+      "description": "A solid foaming cleanser bar formulated with a skin-compatible pH. Features lavender essential oil and a creamy lather.",
       "ingredients": [
         {
           "name": "Xanthan Gum",
@@ -3713,7 +3713,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/pemberley-foaming-facial-cleanser/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Another reason I&#8217;ve selected Caprylyl/Capryl Glucoside is that it is a good solubilizer for fragrance and essential oils—using it removes the need for a secondary solubilizer like Polysorbate 20. For this reason, I don&#8217;t recommend substit…",
+      "description": "A liquid foaming cleanser utilizing Caprylyl/Capryl Glucoside as a primary surfactant and solubilizer. Designed for a pH-balanced, gentle cleanse.",
       "ingredients": [
         {
           "name": "Caprylyl/Capryl Glucoside",
@@ -3764,7 +3764,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/sweetgrass-micellar-water/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we’re continuing our sweetgrass series with a simple Sweetgrass Micellar Water that comes together in a flash and really lets our stunning sweetgrass hydrosol shine. This gentle facial cleanser requires no heat to make—simply weigh everything i…",
+      "description": "A simplified micellar water featuring sweetgrass hydrosol. Designed for rapid formulation and effective debris removal.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -3805,7 +3805,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Weigh the glycerine, panthenol, Iselux Ultra Mild, hydrolyzed rice protein, and liquid germall plus into a small heat-resistant glass measuring cup. Stir to combine. Add the distilled water and hydrosol and stir gently until uniform.",
+      "description": "A liquid facial cleanser formulated with mild surfactants, rice protein, and sweetgrass hydrosol. Includes instructions for pH adjustment.",
       "ingredients": [
         {
           "name": "Vegetable Glycerine",
@@ -3852,7 +3852,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/mango-mango-cleansing-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Save 5% on natural mango fragrance oil, C12–15 alkyl benzoate, and everything else at Essential Wholesale &amp; Labs with coupon code HUMBLEBEE",
+      "description": "A fragrant cleansing oil formulated with Cromollient SCE for improved rinse-off. Features a blend of liquid oils for effective cleansing.",
       "ingredients": [
         {
           "name": "Cromollient SCE",
@@ -3895,7 +3895,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/gel-micellar-water/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Weigh the first four ingredients into a small heat-resistant glass measuring cup or beaker and stir to combine.",
+      "description": "A thickened micellar water utilizing a gelling agent for improved handling and application. Provides a gentle, non-stripping cleanse.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -3930,7 +3930,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/micellar-water-for-waterproof-makeup/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today were taking something really simple (DIY micellar water) and amping up its cleansing power so it easily removes waterproof makeup. It&#8217;s a super simple modification to a more standard micellar water recipe and I think you&#8217;ll be prett…",
+      "description": "An amped-up micellar water formulation designed to remove waterproof cosmetics. Features a bi-phase oil-and-water system.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -3975,7 +3975,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "For some additional cleansing I&#8217;ve included a wee bit of kaolin clay, which also makes things a bit creamier. Some colloidal oatmeal brings some more soothing goodness, and together they offer a bit of gentle physical exfoliation if you apply t…",
+      "description": "A creamy cleansing balm containing kaolin clay and colloidal oatmeal. Provides gentle physical exfoliation and effective cleansing.",
       "ingredients": [
         {
           "name": "Polawax",
@@ -4034,7 +4034,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/soothing-micellar-water/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The making part is crazy easy—you can make it right in the bottle. Weigh, cap, shake, et voila! You&#8217;ll be almost instantly rewarded with a bottle of super awesome Soothing Micellar Water &#x1f604; Enjoy!",
+      "description": "A gentle micellar water formulated with aloe vera juice and hydrosols. Designed for quick, effective cleansing without rinsing.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -4091,7 +4091,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "The essential oil blend is mostly fresh fir needle essential oil, with cardamom and michelia alba adding a bit of spice and intrigue. See the substitutions list if you&#8217;re thinking you&#8217;d prefer something else!",
+      "description": "An oil-based facial polish containing fine clays and exfoliants. Scented with a blend of fir needle and cardamom essential oils.",
       "ingredients": [
         {
           "name": "Refined Shea Butter",
@@ -4160,7 +4160,7 @@
       "equipment": [
         "Immersion blender"
       ],
-      "description": "Today we&#8217;re making a gentle, low-foam, creamy Clementine Facial Cleansing Milk. It comes together just like a lotion, with the addition of a few grams of surfactants in the cool-down phase for a titch of cleansing power. If you&#8217;ve been lo…",
+      "description": "A low-foam, creamy cleansing milk formulated similarly to a lotion. Provides gentle cleansing with a moisturizing finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -4233,7 +4233,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "I&#8217;ve scented this balm with cocoa absolute for a Halloween-appropriate chocolate scent. Cocoa absolute is brown, so this does muddy the orange a bit—if you want to keep the orange as vibrant as possible orange essential oil would be a good choi…",
+      "description": "A detoxifying cleansing balm formulated with charcoal and clay. Features sea buckthorn oil and a chocolate-inspired scent.",
       "ingredients": [
         {
           "name": "Polawax",
@@ -4292,7 +4292,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/oil-cleansing-gel/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The first step of working with Sucragel is whipping it until it is white, like this.",
+      "description": "A unique oil-to-gel cleanser utilizing Sucragel as a gelling agent. Transforms into a milk upon contact with water for easy rinsing.",
       "ingredients": [
         {
           "name": "Sucragel",
@@ -4349,7 +4349,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "This soft, squeezable cleansing balm is rich and creamy, melts into a stunning cleanser once you start working with it, and leaves your skin feeling refreshed and just a touch minty. I love it first thing in the morning to help me hit the ground runn…",
+      "description": "A squeezable cleansing balm that melts into an oil upon application. Provides a refreshing sensation with eucalyptus and mint essential oils.",
       "ingredients": [
         {
           "name": "Emulsifying Wax NF",
@@ -4396,7 +4396,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/lemon-rose-facial-cleansing-drops/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Between the video and the blog I&#8217;ve presented two different options for scenting this cleanser. Here on the blog we&#8217;re using a blend of rose absolute and lemon essential oil, but the version on YouTube uses a new-to-me fragrance oil from …",
+      "description": "A concentrated liquid cleanser designed for use in small amounts. Features a blend of mild surfactants and essential oils.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -4455,7 +4455,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/lavender-gel-facial-cleanser/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Alright, let&#8217;s go get lavender-wobbly-bubbly and make this awesome Lavender Gel Facial Cleanser!",
+      "description": "A wobbly gel cleanser utilizing carrageenan as a gelling agent. Provides a gentle, foaming cleanse with a lavender scent.",
       "ingredients": [
         {
           "name": "Vegetable Glycerine",
@@ -4498,7 +4498,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/rose-micellar-water/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Learn more: How Does Micellar Water Work? The Science of Surfactants from Lab Muffin Beauty Science",
+      "description": "A gentle micellar water utilizing rose hydrosol and mild surfactants. Designed for effective removal of environmental debris.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -4579,7 +4579,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Prepare a water bath by bringing about 3cm/1&#8243; of water to a bare simmer over low to medium-low heat in a small saucepan.",
+      "description": "A viscosity-adjusted cleansing oil featuring eucalyptus and peppermint essential oils. Designed for refreshing morning use.",
       "ingredients": [
         {
           "name": "Safflower Oil",
@@ -4624,7 +4624,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Combine the Sodium Cocoyl Isethionate and Cocamidopropyl Betaine in a small saucepan and place over low heat until smooth and uniform, stirring frequently. Ensure the heat is very low!",
+      "description": "A solid facial cleanser bar formulated with a blend of mild surfactants and butters. Designed for a smooth, non-stripping cleanse.",
       "ingredients": [
         {
           "name": "Sodium Cocoyl Isethionate",
@@ -4689,7 +4689,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Our carrier oil blend is a combination of three stone fruit oils; apricot kernel, cherry kernel, and plum kernel. If you only have one or two of those, feel free to use what you&#8217;ve got—just make sure the total liquid oil content is still 47%. I…",
+      "description": "An oil-based face mask featuring a blend of stone fruit oils and clays. Designed for deep cleansing and skin softening.",
       "ingredients": [
         {
           "name": "White Kaolin Clay",
@@ -4742,7 +4742,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "If you&#8217;re looking for an indulgent facial, I think this Creamy Oat &amp; Shea Face Mask is just the thing. A rich base of shea butter and safflower oil suspends a blend of soothing, moisturizing ingredients to create a really decadent masking e…",
+      "description": "A rich face mask formulated with shea butter, safflower oil, and colloidal oatmeal. Designed for intensive skin hydration and soothing.",
       "ingredients": [
         {
           "name": "Safflower Oil",
@@ -4785,7 +4785,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/chocolate-cherry-face-mask/",
       "heatRequired": false,
       "equipment": [],
-      "description": "We&#8217;re keeping it ultra-simple and accessible today with this cocoa-scented Chocolate Cherry Face Mask. Four beautiful, all-natural ingredients come together to create a silky, rich face mask for some at-home pampering &#x2764;&#xfe0f;",
+      "description": "A fresh-mixed face mask formulated with cocoa powder, clay, and cherry kernel oil. Designed for immediate use and deep cleansing.",
       "ingredients": [
         {
           "name": "Red Kaolin Clay",
@@ -4818,7 +4818,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "The bulk of this Creamy French Green Clay Face Mask is safflower oil, though you could easily choose any other liquid oil (or a blend of liquid oils) that your face likes. Just make sure the percentage is the same! Apricot kernel oil, grapeseed oil, …",
+      "description": "A clay-based face mask utilizing French green clay and safflower oil. Designed to clarify the skin without excessive drying.",
       "ingredients": [
         {
           "name": "Safflower Oil",
