@@ -304,6 +304,34 @@
       .topbar, .controls { padding-left: 16px; padding-right: 16px; }
       .recipe-list { padding: 14px 16px 40px; }
     }
+
+    /* ── Print modal ── */
+    .print-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 14px; }
+    .print-tab { flex: 1; padding: 7px 0; background: none; border: none; border-bottom: 2px solid transparent; font-family: 'DM Sans', sans-serif; font-size: 0.78rem; color: var(--text-dim); cursor: pointer; margin-bottom: -1px; }
+    .print-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+    .print-fields { display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .print-field-row { display: flex; gap: 8px; }
+    .print-preview { border: 1px solid var(--border-hi); border-radius: 6px; padding: 14px; background: #fff; color: #111; min-height: 100px; }
+    .label-preview { font-family: 'Helvetica Neue', Arial, sans-serif; color: #111; }
+    .label-brand { font-size: 9pt; letter-spacing: 0.15em; text-transform: uppercase; color: #555; margin-bottom: 4px; }
+    .label-name { font-size: 13pt; font-weight: 700; margin-bottom: 6px; line-height: 1.2; }
+    .label-ings-head { font-size: 7pt; text-transform: uppercase; letter-spacing: 0.1em; color: #555; margin-bottom: 2px; margin-top: 6px; }
+    .label-ings { font-size: 7.5pt; line-height: 1.5; color: #333; }
+    .label-footer { display: flex; justify-content: space-between; margin-top: 8px; font-size: 7pt; color: #555; border-top: 1px solid #ccc; padding-top: 5px; }
+    .label-warning { font-size: 7pt; color: #666; margin-top: 4px; }
+    .card-preview { font-family: 'Helvetica Neue', Arial, sans-serif; color: #111; }
+    .card-title { font-size: 16pt; font-weight: 700; margin-bottom: 2px; }
+    .card-sub { font-size: 8pt; color: #777; margin-bottom: 10px; }
+    .card-ing-table { width: 100%; border-collapse: collapse; font-size: 8pt; margin-bottom: 8px; }
+    .card-ing-table th { text-align: left; border-bottom: 1px solid #ccc; padding: 2px 6px; color: #555; font-weight: 600; font-size: 7pt; text-transform: uppercase; }
+    .card-ing-table td { padding: 3px 6px; border-bottom: 1px solid #eee; }
+    .card-process { font-size: 8pt; line-height: 1.6; color: #333; white-space: pre-wrap; margin-top: 8px; border-top: 1px solid #ccc; padding-top: 8px; }
+
+    @media print {
+      body > * { display: none !important; }
+      #printArea { display: block !important; position: static !important; margin: 0 !important; padding: 0 !important; background: #fff !important; }
+    }
+    #printArea { display: none; }
   </style>
 </head>
 <body>
@@ -381,6 +409,40 @@
     </div>
   </div>
 </aside>
+
+<!-- Print Modal -->
+<div class="modal-overlay" id="printModal">
+  <div class="modal" style="max-width:580px">
+    <div class="modal-header">
+      <span class="modal-title">Print</span>
+      <button class="modal-close" id="printModalClose">✕</button>
+    </div>
+    <div class="modal-body" style="gap:10px">
+      <div class="print-tabs">
+        <button class="print-tab active" data-print="label">Product Label</button>
+        <button class="print-tab" data-print="card">Recipe Card</button>
+      </div>
+      <div class="print-fields">
+        <div class="print-field-row">
+          <div class="form-field"><label class="form-label">Brand name</label><input class="form-input" id="pfBrand" value="5 Daughters"></div>
+          <div class="form-field"><label class="form-label">Net weight</label><input class="form-input" id="pfWeight" placeholder="e.g. 4 oz / 113g"></div>
+        </div>
+        <div class="print-field-row">
+          <div class="form-field"><label class="form-label">Made on</label><input class="form-input" id="pfDate" type="date"></div>
+          <div class="form-field"><label class="form-label">Batch #</label><input class="form-input" id="pfBatch" placeholder="optional"></div>
+        </div>
+      </div>
+      <div class="print-preview" id="printPreview"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="modal-cancel-btn" id="printModalCancel">Cancel</button>
+      <button class="modal-save-btn" id="printGo">Print</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden print area -->
+<div id="printArea"></div>
 
 <!-- Add / Edit Recipe Modal -->
 <div class="modal-overlay" id="recipeModal">
@@ -793,7 +855,9 @@
       card.querySelectorAll('.pct-input').forEach((inp,i) => { inp.value = recipe.ingredients[i]?.pct ?? inp.value; });
       updateTotal(card);
     });
-    acts.appendChild(copyBtn); acts.appendChild(resetBtn);
+    const printBtn = el('button', 'btn', 'Print');
+    printBtn.addEventListener('click', e => { e.stopPropagation(); openPrintModal(recipe); });
+    acts.appendChild(copyBtn); acts.appendChild(resetBtn); acts.appendChild(printBtn);
     if (recipe.source === 'custom') {
       const editBtn = el('button', 'btn', 'Edit');
       editBtn.addEventListener('click', e => { e.stopPropagation(); openRecipeModal(recipe); });
@@ -819,6 +883,7 @@
         { label: 'Bulk Apothecary', url: 'https://www.bulkapothecary.com/search/?q=' },
         { label: 'Making Cosmetics', url: 'https://www.makingcosmetics.com/search?q=' },
         { label: 'Bramble Berry',    url: 'https://www.brambleberry.com/search#q=' },
+        { label: 'Amazon',           url: 'https://www.amazon.com/s?k=' },
       ];
       const shopPanel = el('div', 'shop-panel');
       shopPanel.appendChild(el('div', 'shop-panel-header', 'Shop missing ingredients'));
@@ -881,6 +946,86 @@
     }
     renderRecommendations();
   }
+
+  // ── Print modal ─────────────────────────────────────────
+  let printRecipe = null;
+  let printMode = 'label';
+
+  function sortedIngs(recipe) {
+    return [...(recipe.ingredients || [])].sort((a, b) => b.pct - a.pct);
+  }
+
+  function buildLabelHTML(recipe, brand, weight, date, batch) {
+    const ings = sortedIngs(recipe).map(i => i.name).join(', ');
+    const dateStr = date ? new Date(date).toLocaleDateString() : '';
+    return `<div class="label-preview">
+      <div class="label-brand">${brand || '5 Daughters'}</div>
+      <div class="label-name">${recipe.name}</div>
+      <div class="label-ings-head">Ingredients</div>
+      <div class="label-ings">${ings}</div>
+      <div class="label-warning">For external use only. Keep out of reach of children.</div>
+      <div class="label-footer">
+        <span>${dateStr ? 'Made: ' + dateStr : ''} ${batch ? '· Batch: ' + batch : ''}</span>
+        <span>${weight || ''}</span>
+      </div>
+    </div>`;
+  }
+
+  function buildCardHTML(recipe, brand, weight, date, batch) {
+    const ings = sortedIngs(recipe);
+    const dateStr = date ? new Date(date).toLocaleDateString() : '';
+    const rows = ings.map(i => `<tr><td>${i.name}</td><td style="text-align:right;font-variant-numeric:tabular-nums">${i.pct}%</td></tr>`).join('');
+    const meta = [brand, dateStr ? 'Made: ' + dateStr : '', batch ? 'Batch: ' + batch : '', weight].filter(Boolean).join(' · ');
+    return `<div class="card-preview">
+      <div class="card-title">${recipe.name}</div>
+      <div class="card-sub">${meta}</div>
+      <table class="card-ing-table"><thead><tr><th>Ingredient</th><th style="text-align:right">%</th></tr></thead><tbody>${rows}</tbody></table>
+      ${recipe.process ? `<div class="card-process">${recipe.process}</div>` : ''}
+    </div>`;
+  }
+
+  function refreshPrintPreview() {
+    if (!printRecipe) return;
+    const brand = document.getElementById('pfBrand').value;
+    const weight = document.getElementById('pfWeight').value;
+    const date = document.getElementById('pfDate').value;
+    const batch = document.getElementById('pfBatch').value;
+    const html = printMode === 'label'
+      ? buildLabelHTML(printRecipe, brand, weight, date, batch)
+      : buildCardHTML(printRecipe, brand, weight, date, batch);
+    document.getElementById('printPreview').innerHTML = html;
+  }
+
+  function openPrintModal(recipe) {
+    printRecipe = recipe;
+    printMode = 'label';
+    document.querySelectorAll('.print-tab').forEach(t => t.classList.toggle('active', t.dataset.print === 'label'));
+    document.getElementById('pfDate').value = new Date().toISOString().slice(0, 10);
+    refreshPrintPreview();
+    document.getElementById('printModal').classList.add('open');
+  }
+
+  document.querySelectorAll('.print-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      printMode = tab.dataset.print;
+      document.querySelectorAll('.print-tab').forEach(t => t.classList.toggle('active', t === tab));
+      refreshPrintPreview();
+    });
+  });
+  ['pfBrand','pfWeight','pfDate','pfBatch'].forEach(id =>
+    document.getElementById(id).addEventListener('input', refreshPrintPreview)
+  );
+
+  document.getElementById('printModalClose').addEventListener('click', () => document.getElementById('printModal').classList.remove('open'));
+  document.getElementById('printModalCancel').addEventListener('click', () => document.getElementById('printModal').classList.remove('open'));
+  document.getElementById('printModal').addEventListener('click', e => { if (e.target === e.currentTarget) document.getElementById('printModal').classList.remove('open'); });
+
+  document.getElementById('printGo').addEventListener('click', () => {
+    const pa = document.getElementById('printArea');
+    pa.innerHTML = document.getElementById('printPreview').innerHTML;
+    window.print();
+    pa.innerHTML = '';
+  });
 
   // ── Custom recipe modal ─────────────────────────────────
   let editingId = null;
