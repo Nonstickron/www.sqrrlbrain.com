@@ -14181,7 +14181,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/cranberry-orange-body-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The bulk of this body oil is a blend of two carrier oils; cranberry seed (of course) and apricot kernel. This blend makes for a satiny, lightweight base, and since apricot kernel oil doesn&#8217;t smell like much of anything, the tangy scent of the c…",
+      "description": "A satiny, lightweight body oil featuring cranberry seed and apricot kernel oils. Scented with a tangy orange aroma and designed for rapid skin absorption.",
       "ingredients": [
         {
           "name": "Apricot Kernel Oil",
@@ -14206,7 +14206,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh all the ingredients into a small beaker, or straight into your bottle. Stir or cap & shake to combine. That's it!\nI used a 50mL (1.69fl oz) frosted glass zelo bottle from New Directions Aromatics with a dispensing pump cap.\nTo use, smooth the oil over any skin that could use a bit of extra love!"
+      "process": "1. Combine all ingredients in a beaker or directly in the final storage bottle.\n2. Stir or shake until the mixture is uniform.\n3. Transfer to a bottle equipped with a dispensing pump.",
+      "processRewritten": true
     },
     {
       "id": "ros-shimmer-body-oil",
@@ -14215,7 +14216,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/rose-shimmer-body-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Save 5% on C12–15 alkyl benzoate and everything else at Essential Wholesale &amp; Labs with coupon code HUMBLEBEE",
+      "description": "A radiant body oil featuring camellia and jojoba oils. Formulated with thickening clay to ensure uniform mica suspension and a smooth skin feel.",
       "ingredients": [
         {
           "name": "TKB Trading&#8217;s &#8220;thickening Clay&#8221;",
@@ -14260,7 +14261,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh the thickening clay and C12-15 alkyl benzoate into a small beaker and whisk/stir thoroughly to combine.\nOnce that's smooth, stir in the mica, and then the camellia seed oil, jojoba oil, and Olivem 300, one at a time. Ensure the mixture is even and completely combined before adding the next ingredient.\nWrap up by stirring in the vitamin E, essential oils, and fragrance. That's it!\nI packaged mine in a 50mL (1.69fl oz) zelo frosted glass bottle from New Directions Aromatics with a pump-top cap. To use, smooth a desired amount over the skin. The mica will start to settle if left undisturbed for extended periods of time; shake before use if that happens."
+      "process": "1. Measure the thickening agent and solvent into a beaker and whisk until smooth.\n2. Incorporate the mica shimmer, then add the liquid carrier oils sequentially.\n3. Stir until the mixture is uniform and the mica is fully suspended.\n4. Transfer to a storage bottle; shake before use if settling occurs.",
+      "processRewritten": true
     },
     {
       "id": "mango-mango-massage-butter",
@@ -14271,7 +14273,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "As we work with the massage butter on the skin is needs to feel good throughout the massage; I find products thickened with wax eventually start to skid and warm up, so this massage butter is thickened primarily with silky smooth cetyl alcohol.",
+      "description": "A glide-optimized massage butter thickened primarily with cetyl alcohol. Formulated for a silky skin finish and effective lubrication without a waxy residue.",
       "ingredients": [
         {
           "name": "BTMS-50",
@@ -14308,7 +14310,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through. Depending on where you live, you may need to microwave it to get the BTMS-50 to fully melt; mine never wants to melt in a water bath, so I used a few 15 second bursts in the microwave.\nWhile the mixture melts, prepare an ice bath by combining some cold water and ice cubes in a bowl large enough to accommodate whatever you're melting the heated phase in.\nTo use, scoop up a small amount of massage butter and warm it between your hands before applying to bare skin and massaging away. Enjoy!"
+      "process": "1. Heat the base butters and thickeners in a water bath until fully melted.\n2. Remove from heat and stir steadily as the mixture cools.\n3. Incorporate the liquid carrier oils and vitamin E once the temperature has dropped.\n4. Once the mixture reaches a \"trace\" consistency, transfer to a storage tin and allow to set.",
+      "processRewritten": true
     },
     {
       "id": "sugar-plum-body-oil",
@@ -14317,7 +14320,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/sugar-plum-body-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "I also have a sample of plum oil from From Nature With Love and it doesn&#8217;t smell anything like the awesome oil I have from Essential Wholesale &amp; Labs, so I wouldn&#8217;t recommend buying your plum oil from From Nature With Love.",
+      "description": "A lightweight body oil featuring plum kernel oil for a natural marzipan-like scent. Formulated for quick absorption and high skin emolliency.",
       "ingredients": [
         {
           "name": "Sweet Almond Oil",
@@ -14346,7 +14349,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh everything into a beaker and stir to combine before transferring to your bottle(s); 40g (1.41oz) will make approximately 50mL (1.69 fl oz) of body oil. I recommend using a bottle with a treatment pump top or a disc top. I used a 50mL frosted glass bottle from New Directions Aromatics with their dispensing pump top.\nAlternatively, you can weigh everything directly into the bottle if you're making just one, and cap and shake to combine."
+      "process": "1. Measure all ingredients into a beaker.\n2. Stir until the mixture is uniform.\n3. Transfer to a bottle equipped with a treatment pump or dropper.",
+      "processRewritten": true
     },
     {
       "id": "lumps-of-coal-scrub-nuggets",
@@ -14459,7 +14463,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/sea-glass-salt-scrub/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re stirring up a lovely Sea Glass Salt Scrub, made with a sparkling blend of salts and a beautiful fragrance. It&#8217;s a brilliant and beautiful body scrub, and you can easily customize it to use whatever salts you have on hand. You …",
+      "description": "A sparkling salt-based body scrub featuring a blend of diverse salt textures. Designed for effective physical exfoliation and intensive skin mineral-loading.",
       "ingredients": [
         {
           "name": "Fine Epsom Salts",
@@ -14492,7 +14496,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh all the ingredients into a bowl or heat-resistant glass measuring cup. Stir to combine, and that's it!\nTransfer the mixture to a jar; I used a 250g clear screw-top jar from YellowBee and this 400g batch fit perfectly.\nTo use, portion out a small amount of scrub into a shower-safe container, and take that container into the shower or bath with you. Massage small amounts of the scrub into your skin (not your face!) and rinse off. Enjoy your lovely soft, exfoliated skin!"
+      "process": "1. Combine all ingredients in a large mixing bowl.\n2. Stir until the oils and salts are thoroughly integrated and the mixture is uniform.\n3. Transfer to a shower-safe storage jar.",
+      "processRewritten": true
     },
     {
       "id": "cinnamon-sugar-dry-foaming-body-scrub",
@@ -14501,7 +14506,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/cinnamon-sugar-dry-foaming-body-scrub/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re mixing up a fragrant, perfect-for-autumn Cinnamon Sugar Dry Foaming Body Scrub. Starring sugar, rhassoul clay, and a gentle surfactant for all kinds of gorgeous bubbles, this 7-ingredient scrub makes a great gift and a great excuse …",
+      "description": "An anhydrous, powder-based sugar scrub featuring rhassoul clay and a gentle surfactant. Designed for a rich lather and effective chemical-free exfoliation.",
       "ingredients": [
         {
           "name": "Rhassoul Clay",
@@ -14534,7 +14539,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh the first four ingredients into a bowl. Mix together with gloved hands. Add the marula oil and fragrance. Massage everything together with gloved hands until the mixture is uniform.\nPut on your dust mask (USA / Canada). Add the Sodium Cocoyl Isethionate (SCI), and gently mix everything together with your hands until uniform.\nSpread the mixture out on a cookie sheet and leave it to dry for two days before packaging. I used a couple of cute test tubes with screw-on caps from YellowBee. I found a 100g (3.5oz) batch filled 3 of the test tubes beautifully.\nTo use: for a scrub, dispense a teaspoon or two into your palm and rub into wet skin in the bath before rinsing off. For more of a body wash experience, sprinkle a teaspoon or two over a loofah, work up a lather, and wash as usual."
+      "process": "1. Combine the dry phase ingredients in a bowl and mix with gloved hands until uniform.\n2. Incorporate the liquid carrier oils and fragrance, mashing until the mixture is homogeneous.\n3. Add the powdered surfactant while wearing a dust mask and stir gently.\n4. Spread the mixture on a tray to air-dry for 48 hours before packaging in tubes.",
+      "processRewritten": true
     },
     {
       "id": "calendula-clay-soft-foaming-body-scrub",
@@ -14543,7 +14549,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/calendula-clay-soft-foaming-body-scrub/",
       "heatRequired": false,
       "equipment": [],
-      "description": "For som lovely foaming goodness, I&#8217;ve included some Sodium Cocoyl Isethionate (SCI). SCI is a gentle, anionic surfactant made from coconuts, and I positively adore its rich, gentle, fine lather. You can find Sodium Cocoyl Isethionate (SCI) sold…",
+      "description": "A soft, clay-infused foaming body scrub featuring Sodium Cocoyl Isethionate for a rich lather. Designed for gentle cleansing and intensive skin softening.",
       "ingredients": [
         {
           "name": "White Kaolin Clay",
@@ -14576,7 +14582,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Put on your dust mask (USA / Canada).\nOnce the mixture is uniform, transfer it to a shaker-top container—the sort of thing you'd get baby powder in, or even a spice shaker! I'd recommend choosing something you can close (either through twisting or with a flap-lid) so you can ensure the product stays dry.\nTo use, dispense a small amount of the powder (~1 tsp) into your palm or onto a loofah. Work the powder into a lather, massage into your skin, and rinse off as you would with any foaming body wash."
+      "process": "1. Wear a dust mask and combine the dry ingredients in a mixing bowl.\n2. Gradually incorporate the liquid oils and active extracts.\n3. Stir until the mixture reaches a uniform, dough-like consistency.\n4. Transfer to a shaker-top container and store in a dry location.",
+      "processRewritten": true
     },
     {
       "id": "passionfruit-coconut-body-scrub",
@@ -14587,7 +14594,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Save 8% on passionfruit oil and everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "description": "An anhydrous sugar scrub featuring passionfruit oil and unrefined butters. Formulated for high emolliency and a smooth, non-greasy skin finish.",
       "ingredients": [
         {
           "name": "Polysorbate 80",
@@ -14624,7 +14631,8 @@
       ],
       "notes": "For scent, I&#8217;m using a mouthwatering passionfruit natural fragrance oil from Essential Wholesale. If you love the smell of passionfruit, this stuff is very drool-worthy! You could also use a different fragrance oil you have and like (something tropical would be very appropriate), or you can replace the fragrance oil with more virgin coconut oil and let the coconutty goodness shine on its own",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1″ of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. I tried this with a metal bowl, and that was a lot harder as the mixture cooled far faster, so I really recommend sticking with glass over metal or plastic. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nOnce everything has melted, remove the measuring cup from the heat and dry the outside of it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything. Add the white sugar and stir.\nPlace the measuring cup containing the heated phase into the ice bath and cool, stirring constantly, for about thirty seconds, until the mixture has cooled down a bit. Remove the container from the water bath and add the cool down phase. Stir to incorporate.\nContinue stirring the mixture in the ice bath until you reach a fairly thick “trace”—the mixture should have enough viscosity that a spatula drawn through the mixture creates a line that holds for a few moments. Refer to the video to see it in action!"
+      "process": "1. Melt the base butters and waxes in a heat-safe container using a water bath.\n2. Remove from heat and incorporate the sugar while stirring steadily.\n3. Place the container in an ice bath and stir constantly until the mixture begins to thicken.\n4. Once a thick \"trace\" is reached, transfer to a wide-mouthed jar and allow to set.",
+      "processRewritten": true
     },
     {
       "id": "watermelon-mint-whipped-sugar-scrub",
@@ -14635,7 +14643,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Today we&#8217;re whipping up a bit of cherry pink summery fun! This perky pink sugar scrub smells wonderfully of juicy watermelon and fresh peppermint. A creamy base self-emulsifies with your bathwater, turning into lotion as you scrub away dead ski…",
+      "description": "A self-emulsifying whipped sugar scrub featuring a fruity watermelon scent. Designed to transform into a lotion upon contact with bathwater for a clean, non-oily finish.",
       "ingredients": [
         {
           "name": "Emulsifying Wax NF",
@@ -14680,7 +14688,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated phase ingredients into a medium-sized, deep, heat-resistant mixing bowl. Place the bowl in your prepared water bath to melt everything through.\nOnce the mixture has melted, remove it from the heat and stir in the sugar. Freeze the mixture in the bowl for five minutes, and then remove it promptly. Grab your electric mixer, and whip up the mixture for about 3 minutes, until it is fluffy and uniform.\nLeave the scrub to fully cool to room temperature and then whip it again—I like to do the last whipping at room temperature to make sure it'll stay nice and fluffy at room temperature. During this final whipping, you'll weigh out the cooldown phase and whip that in as well."
+      "process": "1. Melt the emulsified base ingredients in a water bath.\n2. Remove from heat and stir in the sugar.\n3. Flash-cool the mixture in the freezer for five minutes.\n4. Use an electric mixer to whip the mixture for three minutes until fluffy.\n5. Allow the scrub to reach room temperature and perform a final whip with the cooling phase ingredients.",
+      "processRewritten": true
     },
     {
       "id": "cranberry-orange-whipped-sugar-scrub",
@@ -14691,7 +14700,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "When the mixture is cloudy we&#8217;ll whip in the cool-down phase to decadent, fluffy loveliness. One last whip at total room temperature and you are ready to package up the scrub and pamper all your friends and family. Enjoy!",
+      "description": "A seasonal whipped sugar scrub featuring cranberry seed oil and exfoliating cranberry seeds. Formulated for a light, airy texture and intensive skin nourishment.",
       "ingredients": [
         {
           "name": "Polawax",
@@ -14732,7 +14741,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a medium sized, deep, heat-resistant mixing bowl. Place the bowl in your prepared water bath to melt everything through.\nOnce the mixture has melted, remove it from the heat and leave it to cool, stirring occasionally. You can speed this along by using an ice bath if you wish. The aim is to not allow the mixture to cool completely undisturbed, otherwise a harder layer will form on the surface and you won't get a thorough, even blend.\nWhen the melted mixture is mostly cool and is quite viscous, but not fully solid, add the sugar, vitamin E, and essential oils, and whip using electric beaters until light and fluffy.\nLeave the scrub to fully cool to room temperature and then whip it again—I like to do the last whipping at room temperature to make sure it'll stay nice and fluffy at room temperature. This is when you'll add the cranberry seeds, too. Whip 'em in, whip up the scrub, and that's it!\nGently spoon into a jar—I used a 100g plastic jar from YellowBee for my 100g batch, and that worked well. To use, portion out a small amount of scrub into a shower-safe container, and take that container into the shower or bath with you. Massage small amounts of the scrub into your skin and rinse off. Enjoy your lovely soft, exfoliated skin!"
+      "process": "1. Melt the base ingredients in a water bath until liquid.\n2. Allow the mixture to cool until it becomes opaque and semi-solid, stirring occasionally.\n3. Use an electric mixer to whip the base until light and fluffy.\n4. Incorporate the sugar, seeds, and cooling phase ingredients during the final stages of whipping.\n5. Transfer to a storage jar.",
+      "processRewritten": true
     },
     {
       "id": "pemberley-whipped-sugar-scrub",
@@ -14743,7 +14753,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Today we&#8217;re getting our Pemberley-themed pamper on with this lightweight sugar-studded emulsified Pemberley Whipped Sugar Scrub. A creamy, self-emulsifying base is heavily dosed with granulated sugar for a sparkly, fragrant bath treat. The beau…",
+      "description": "A high-emolliency whipped sugar scrub featuring murumuru butter and silk protein. Designed for a luxurious, sparkly bath treatment and effective skin exfoliation.",
       "ingredients": [
         {
           "name": "Polawax",
@@ -14788,7 +14798,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a medium sized, deep, heat-resistant mixing bowl. Place the bowl in your prepared water bath to melt everything through.\nOnce the mixture has melted, remove it from the heat and leave it to cool, stirring occasionally. You can speed this along by using an ice bath if you wish. The aim is to not allow the mixture to cool completely undisturbed, otherwise a harder layer will form on the surface and you won't get a thorough, even blend.\nWhen the melted mixture is mostly cool and is quite viscous, but not fully solid, add the sugar, vitamin E, and essential oils, and whip using electric beaters until light and fluffy."
+      "process": "1. Melt the base oils and butters in a water bath until fully liquid.\n2. Cool the mixture until it gains viscosity but remains pliable.\n3. Whip with an electric hand mixer until the consistency is light and airy.\n4. Gradually incorporate the sugar and essential oils while continuing to whip.\n5. Transfer the finished scrub to a storage jar.",
+      "processRewritten": true
     },
     {
       "id": "mango-mango-whipped-sugar-scrub",
@@ -14799,7 +14810,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Save 5% on natural mango fragrance oil and everything else at Essential Wholesale &amp; Labs with coupon code HUMBLEBEE",
+      "description": "A fragrant whipped sugar scrub featuring mango butter and natural fruit extracts. Formulated for high absorption and a soft, non-greasy skin finish.",
       "ingredients": [
         {
           "name": "Polawax",
@@ -14836,7 +14847,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a medium sized, deep, heat-resistant mixing bowl. Place the bowl in your prepared water bath to melt everything through.\nOnce the mixture has melted, remove it from the heat and leave it to cool, stirring occasionally. You can speed this along by using an ice bath if you wish. The aim is to not allow the mixture to cool completely undisturbed, otherwise a harder layer will form on the surface and you won't get a thorough, even blend.\nWhen the melted mixture is mostly cool and is quite viscous, but not fully solid, add the sugar, vitamin E, and mango fragrance, and whip using electric beaters until light and fluffy."
+      "process": "1. Melt the mango butter and waxes in a heat-safe container using a water bath.\n2. Allow the mixture to cool until it becomes semi-solid.\n3. Whip with an electric mixer until light and fluffy.\n4. Incorporate the sugar and botanical extracts, performing a final whip to ensure uniformity.\n5. Package in a wide-mouthed jar.",
+      "processRewritten": true
     },
     {
       "id": "christmas-tree-foaming-whipped-body-scrub",
@@ -14847,7 +14859,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Today&#8217;s DIY is a super-fun Christmas Tree Foaming Whipped Body Scrub. It&#8217;s a creamy white base speckled with green and gold VitaBurst beads. It smells like a Christmas tree and is a super fun way to pamper yourself (and your giftees!) com…",
+      "description": "A festive foaming whipped scrub featuring conifer essential oils and reflective beads. Designed for high lather and effective removal of dry skin.",
       "ingredients": [
         {
           "name": "Cocamidopropyl Betaine",
@@ -14904,7 +14916,8 @@
       ],
       "notes": "Add your exfoliant, briefly blend, and test to see if it&#8217;s scrubby enough for you. Add more exfoliant if you want more scrubby-ness.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a medium saucepan.\nWeigh the primary heated phase ingredients into a medium sized, deep, heat-resistant mixing bowl. Place the measuring cup in your prepared water bath to melt the SCI into the Cocamidopropyl Betaine.\nWhile the primary heated phase melts through, weigh out the secondary heated phase. Once the SCI/Cocamidopropyl Betaine is uniform, add the secondary heated phase and melt all that together.\nWhen everything is melted, remove the bowl from the water bath. Stir in the water, and let the mixture cool for about thirty minutes (this time will increase if you scale the recipe up)\nOnce the mixture is cool, whip it with electric beaters until it's light, fluffy, and white—about 3 minutes. Add the essential oils and preservative, and beat again.\nAdd your exfoliant, briefly blend, and test to see if it's scrubby enough for you. Add more exfoliant if you want more scrubby-ness.\nThat's it! Gently transfer it to a container—a 120mL/4oz jar would be a good size. I used a white 100g jar from YellowBee."
+      "process": "1. Melt the primary surfactants in a water bath until uniform.\n2. Incorporate the secondary heated phase and melt through.\n3. Remove from heat, stir in the water, and allow to cool for 30 minutes.\n4. Whip the mixture with an electric mixer until it turns white and fluffy.\n5. Fold in the exfoliant and active beads, then transfer to a storage jar.",
+      "processRewritten": true
     },
     {
       "id": "whipped-minty-foot-scrub",
@@ -14915,7 +14928,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "When I was dreaming up this product I knew I wanted it to be exfoliating, minty and fresh, and super effective at cleaning summer dirt off my feet. A reader sent me links to a few whipped shampoo products that were basically whipped surfactant-laced …",
+      "description": "A refreshing whipped foot scrub formulated with cooling peppermint and exfoliating jojoba beads. Designed for intensive cleaning and skin softening of the feet.",
       "ingredients": [
         {
           "name": "Cocamidopropyl Betaine",
@@ -14964,7 +14977,8 @@
       ],
       "notes": "Add your exfoliant, briefly blend, and test to see if it&#8217;s scrubby enough for you. Add more exfoliant if you want more scrubby-ness.",
       "category": "body",
-      "process": "Jojoba beads, as required (I used 3g for a 100g batch)\nPrepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a medium saucepan.\nWeigh the primary heated phase ingredients into a medium sized, deep, heat-resistant mixing bowl. Place the measuring cup in your prepared water bath to melt the SCI into the Cocamidopropyl Betaine.\nWhile the primary heated phase melts through, weigh out the secondary heated phase. Once the SCI/Cocamidopropyl Betaine is uniform, add the secondary heated phase and melt all that together.\nWhen everything is melted, remove the bowl from the water bath. Stir in the water, and let the mixture cool for about an hour.\nOnce the mixture is cool, whip it with electric beaters until it's light and fluffy—about 3 minutes. Add the essential oil, preservative, and mica, and beat again. Adjust the mica if necessary to get the colour you want.\nAdd your exfoliant, briefly blend, and test to see if it's scrubby enough for you. Add more exfoliant if you want more scrubby-ness.\nThat's it! Gently transfer it to a container—a 120mL/4oz jar would be a good size. I used a white 100g jar from YellowBee, which looks lovely, but was a bit small."
+      "process": "1. Melt the surfactant base in a water bath until smooth.\n2. Add the secondary heated phase ingredients and melt completely.\n3. Remove from heat, incorporate the water, and allow the mixture to cool for one hour.\n4. Use an electric mixer to whip the base until light and airy.\n5. Stir in the essential oils, mica, and exfoliants before packaging in a jar.",
+      "processRewritten": true
     },
     {
       "id": "lumps-of-coal-christmas-bath-bombs",
@@ -14973,7 +14987,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/lumps-of-coal-christmas-bath-bombs/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Welcome to our first DIY (and theme!) for the 2025 Humblebee &amp; Me holiday making season! We&#8217;re kicking things off with some bath bombs—a must-make for me every Christmas because my mom loves them (hi, Mom!).",
+      "description": "Detoxifying bath bombs formulated with activated charcoal and Epsom salts. Designed for an effervescent, deep-cleansing bathing experience.",
       "ingredients": [
         {
           "name": "Baking Soda",
@@ -15014,7 +15028,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "To mould: 70% isopropyl alcohol or witch hazel in a mister bottle\nPut on a pair of nitrile gloves.\nWeigh the dye and witch hazel into a small beaker and stir to dissolve the dye. Then, weigh in the Polysorbate 80, apricot kernel oil, and fragrance/essential oil into a small dish or beaker and stir to combine.\nWeigh the baking soda and Epsom salts into a large bowl and stir to combine. Add the witch hazel mixture and use your gloved hands to blend the mixture thoroughly.\nLast up, weigh in the citric acid and Cream of Tartar, and blend that into the mixture as well. When you’re done you should have a clumpy mixture that holds together well when squeezed firmly.\nOnce the bath bombs have been moulded, leave them to dry overnight .\nTo use the bath bombs, just drop one or two into a hot bath and enjoy."
+      "process": "1. Wear gloves and a dust mask. Combine the liquid ingredients and dye in a small beaker.\n2. In a large bowl, whisk the baking soda and Epsom salts until uniform.\n3. Gradually incorporate the liquid mixture into the powders, blending thoroughly by hand.\n4. Stir in the citric acid and cream of tartar, ensuring the mixture holds its shape when squeezed.\n5. Compress the mixture into moulds and allow to dry overnight.",
+      "processRewritten": true
     },
     {
       "id": "black-currant-roses-natural-body-wash",
@@ -15023,7 +15038,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/black-currant-roses-natural-body-wash/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This wine-coloured Black Currant &amp; Roses Natural Body Wash has a gorgeous runny honey-like consistency thanks to a gentle self-thickening surfactant blend—no gums or Crothix required! I&#8217;m in love with the fresh, juicy scent and plentiful bu…",
+      "description": "A self-thickening natural body wash featuring black currant and rose extracts. Formulated with a gentle surfactant blend for a non-stripping cleanse.",
       "ingredients": [
         {
           "name": "Vegetable Glycerine",
@@ -15060,7 +15075,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh the glycerin, extract, Geogard Ultra&#x2122;, lactic acid, Plantapon® SF NA, Lamesoft® PO 65, and fragrance oil into a beaker. Whisk to combine.\nGently add the water, stir, cover the mixture, and leave it for about five hours to allow the Geogard Ultra&#x2122; to dissolve and the pH of the formulation to settle.\nOnce the Geogard Ultra&#x2122; has dissolved you will have a dark red, moderately viscous body wash. Hooray!\nOnce the body wash is done, package it up! I used two 100g (3.5oz) soft squeeze tubes from YellowBee (gifted) for this 240g batch.\nUse as you'd use any body wash. Enjoy!"
+      "process": "1. Combine the surfactants and water-soluble active ingredients in a beaker.\n2. Gradually add the distilled water while stirring carefully to minimize bubbles.\n3. Cover the container and allow the mixture to sit for five hours to achieve final viscosity.\n4. Transfer the liquid body wash to a squeeze tube or pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "frosted-cranberry-bath-bombs",
@@ -15069,7 +15085,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/frosted-cranberry-bath-bombs/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Bath bombs are an every year &#8220;must make&#8221; for me as I have several lovely people (mostly my mom) on my giftee list that adore bath bombs. Once I settled on this year&#8217;s themes, I knew the bath bombs would have to be Frosted Cranberry …",
+      "description": "Seasonal bath bombs featuring cranberry oil and biodegradable glitter. Designed for high effervescence and a festive skin-softening soak.",
       "ingredients": [
         {
           "name": "Baking Soda",
@@ -15110,7 +15126,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Silvery biodegradable glitter\nTo hand mould: 70% isopropyl alcohol in a mister bottle\nWeigh the dye, witch hazel, Polysorbate 80, cranberry oil, and fragrance oil into a small dish or beaker.\nWeigh the baking soda and Epsom salts into a large bowl. Stir to combine, and then add the witch hazel mixture. Put on a pair of disposable nitrile or latex gloves and blend the mixture thoroughly.\nLast up, weigh in the citric acid and Cream of Tartar, and blend that into the mixture as well. When you’re done you should have a clumpy mixture that holds together well when squeezed firmly.\nOnce the bath bombs have been moulded I left them to dry overnight before decorating them.\nTo decorate: Use a sieve to dust the tops of the bath bombs with silver-white mica, and then sprinkle with some biodegradable glitter. That's it!\nTo use the bath bombs, just drop one or two into a hot bath. Enjoy!"
+      "process": "1. Wear gloves and a mask. Blend the liquid carrier oils and dye in a beaker.\n2. Whisk the dry base ingredients in a large bowl until smooth.\n3. Incorporate the liquids into the powders, blending with gloved hands until the mixture reaches a \"wet sand\" consistency.\n4. Mix in the citric acid and cream of tartar.\n5. Press into moulds and allow to dry for 24 hours before decorating with mica and glitter.",
+      "processRewritten": true
     },
     {
       "id": "wedding-cake-bath-bombs",
