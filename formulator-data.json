@@ -776,7 +776,10 @@
     "Vanilla Select Fragrance",
     "Dark Rich Chocolate Fragrance",
     "Vanilla Bean Fragrance",
-    "Butter Cream And Snickerdoodle Fragrance"
+    "Butter Cream And Snickerdoodle Fragrance",
+    "Kukui Nut Oil",
+    "Suspending Nail Polish Base",
+    "Nourish Lip Balm Base"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -28001,6 +28004,169 @@
       "notes": "",
       "process": "",
       "category": "body"
+    },
+    {
+      "id": "floral-sugar-lip-scrub-diy",
+      "name": "Floral Sugar Lip Scrub DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/floral-sugar-lip-scrub/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Floral Sugar Lip Scrub DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Coconut Oil",
+          "pct": 22.1
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 7.4
+        },
+        {
+          "name": "Rosehip Seed Oil",
+          "pct": 4.4
+        },
+        {
+          "name": "Granulated Sugar",
+          "pct": 66.2
+        }
+      ],
+      "notes": "",
+      "process": "In a small heat-safe bowl or container, add the coconut oil, cocoa butter, and rosehip seed oil. Place the container in the microwave on 30-60 second bursts until the cocoa butter has completely melted. Be careful when removing from the microwave as the container may be hot.\nAdd the Passionfruit Rose Fragrance and Flavor Oil into the container and stir in completely. Then add the Rose Gold Mica and stir until there are no longer any chunks of mica.\nAdd the granulated sugar to the melted oils, and stir to fully incorporate the sugar. The texture of the mixture will thicken.",
+      "category": "face"
+    },
+    {
+      "id": "kukui-nut-oil-lip-balm-diy",
+      "name": "Kukui Nut Oil Lip Balm DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lip-products/kukui-nut-oil-lip-balm-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Kukui Nut Oil Lip Balm DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Kukui Nut Oil",
+          "pct": 40
+        },
+        {
+          "name": "Coconut Oil",
+          "pct": 40
+        },
+        {
+          "name": "White Beeswax",
+          "pct": 20
+        }
+      ],
+      "notes": "",
+      "process": "Stir the ingredients together. Add the Coconut Flavor Oil and mix in with a spoon until fully incorporated.\nCarefully pour the mixture into the Slidey Lip Tins. Allow the mixture to fully cool and harden before use. Enjoy!",
+      "category": "face"
+    },
+    {
+      "id": "summer-sunburst-lip-tint-diy",
+      "name": "Summer Sunburst Lip Tint DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/orange-sunburst-lip-tint-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Summer Sunburst Lip Tint DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Coconut Oil",
+          "pct": 35.3
+        },
+        {
+          "name": "White Beeswax",
+          "pct": 35.3
+        },
+        {
+          "name": "Organic Cocoa Butter Cubes",
+          "pct": 29.4
+        }
+      ],
+      "notes": "",
+      "process": "In a small, heat-safe container, add the coconut oil, cocoa butter cubes, white beeswax and avocado oil. Place in the microwave and melt using 30-60 second bursts. Beeswax has a high melting point, and takes quite a long time to melt. Be careful – because of the high melting point, the heat-safe container can melt or explode in the microwave if it gets too hot.\nOnce everything is completely melted, add the Pineapple Flavor Oil and the Lip Smacking Sweet Flavor Oil and stir to combine.\nAdd the Sunset Orange Mica, and stir to combine. Make sure to get rid of any clumps.\nOnce the mixture is completely blended and smooth, begin pouring it into the tubes. If using the tray, don’t worry too much if some of the lip balm doesn’t make it into a tube. It can be scraped off the tray and used later! If necessary, remelt the lip balm in the microwave using 10-20 second bursts.\nOnce all the balm has been poured, allow it to harden for several minutes in the tray. Then, scrape off any lip balm from the tray that did not go into a tube with the white spatula. You can also use a kitchen knife or soap cutter. Place the leftover balm back into the container, remelt and pour it into any empty, or partially full lip balm tube.\nOnce the balm has cooled, put the caps on and enjoy. If you're selling this lip balm, check out this post to learn how to correctly label it. We have found this balm has held up well in temperatures around 75 ° F. If you live in an extremely hot climate, store the lip balm in a cool place to prevent it from melting in the tube.",
+      "category": "face"
+    },
+    {
+      "id": "rose-gold-cosmetic-collection-eyeshadow-lip-shimmer-nail-pol",
+      "name": "Rose Gold Cosmetic Collection: Eyeshadow, Lip Shimmer & Nail Polish",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/rose-gold-cosmetic-collection-eyeshadow-lip-shimmer-nail-polish/",
+      "heatRequired": false,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Rose Gold Cosmetic Collection: Eyeshadow, Lip Shimmer & Nail Polish from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Suspending Nail Polish Base",
+          "pct": 80
+        },
+        {
+          "name": "Nourish Lip Balm Base",
+          "pct": 20
+        }
+      ],
+      "notes": "",
+      "process": "Using a mini scoop, add about 20 scoops of Rose Gold Mica to each nail polish bottle. Then, add 1 nail polish mixing ball to each bottle.\nInsert the brushes into the bottles and twist the black cap over it until you hear a “click.” Once the cap is securely on the bottle, start shaking! Shake the bottle for 3-5 minutes to fully disperse the colorant into the nail polish base. When the colorant has been fully dispersed, you’re finished. Enjoy!",
+      "category": "face"
+    },
+    {
+      "id": "shimmery-ski-lip-balm-tutorial",
+      "name": "Shimmery Ski Lip Balm Tutorial",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/shimmery-ski-lip-balm-tutorial/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Shimmery Ski Lip Balm Tutorial from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Avocado Oil",
+          "pct": 60
+        },
+        {
+          "name": "Coconut Oil",
+          "pct": 20
+        },
+        {
+          "name": "White Beeswax",
+          "pct": 20
+        }
+      ],
+      "notes": "",
+      "process": "In a small heatsafe container, add the coconut oil and avocado oil. If your coconut oil is solid, melt before adding to the container. Then, add the vitamin E oil and stir to combine.\nAdd the white beeswax and cera bellina wax into the container, and heat the container in the microwave using 30 second bursts until the waxes have completely melted. Be careful when removing the container from the microwave, as it may be very hot.\nAdd the Winter Clementine Flavor Oil and stir to combine.\nAdd the Peach Shimmer Mica, and stir thoroughly to combine and get rid of any clumps. If you prefer more color and shimmer, feel free to add more until you are happy with the effect. To test the color, try the Spoon Trick!\nOnce the mica is thoroughly mixed in, check the temperature of the mixture. You don’t want to pour the mixture while it’s too hot, or the mica may sink to the bottom. Once the mixture has cooled to about 130-140 ° F, carefully pour the mixture into the push tubes and allow to fully cool and harden. Enjoy!",
+      "category": "face"
+    },
+    {
+      "id": "labeling-your-products-lip-balm",
+      "name": "Labeling Your Products : Lip Balm",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lip-products/labeling-your-products-lip-balm/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Labeling Your Products : Lip Balm from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sweet Almond Oil",
+          "pct": 71.4
+        },
+        {
+          "name": "White Beeswax",
+          "pct": 28.6
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "face"
     }
   ]
 }
