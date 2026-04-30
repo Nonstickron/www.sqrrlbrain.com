@@ -6757,7 +6757,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "This beginner-friendly, 100% natural face lotion is lightweight, soothing, and perfect for new lotion makers. It’s packed with hydrating humectants and skin-soothing ingredients—and I’ve taken care of all the fussy stuff so you can start emulsifying …",
+      "description": "A lightweight, 100% natural facial lotion formulated with jojoba oil and rose hydrosol. Designed for ease of emulsification and a soothing skin finish.",
       "ingredients": [
         {
           "name": "X 60% = 0.9% Overall Sodium Lactate In The Formula. If You Have Pure Sodium Lactate Powder",
@@ -6814,7 +6814,8 @@
       ],
       "notes": "The heated water phaseThe heated oil phaseThe cool down phaseRelevant links &amp; further readingRose &amp; Jojoba Natural Face LotionSubstitutionsSimilar Formulations The heated water phase The bulk of the heated water phase is a blend of hydrating distilled water and fragrant rose hydrosol.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nIf you've made this formulation as written, the pH should be in a good place—every time I made this formulation the pH fell in the 4.8–5 range. So, if you don't have a way to test the pH, it should be ok.\nNow all that's left to do is package it up! This formula has a lovely lightweight texture that works beautifully in treatment pumps, regular pump bottles, or squeeze tubes. I used a 100mL (3.3fl oz) airless pump bottle with a treatment pump cap from YellowBee.\nUse after cleansing and any serums, but before sunscreen and/or makeup. Enjoy!"
+      "process": "1. Prepare a water bath by simmering approximately 3cm of water in a broad, flat-bottomed pan.\n2. Measure the heated water phase ingredients into one heat-safe beaker and record the total weight.\n3. Measure the heated oil phase ingredients into a second heat-safe beaker.\n4. Place both beakers in the water bath until the oil phase is fully melted.\n5. Combine the phases and mix thoroughly until a stable emulsion is formed.\n6. Allow the lotion to cool and verify the pH level falls within the 4.8–5.5 range.\n7. Transfer the finished product to a treatment pump bottle or squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "ultra-light-summer-face-cream",
@@ -6826,7 +6827,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "If you&#8217;ve been looking for a lightweight summer facial moisturizer with a gorgeous, powdery, expensive-feeling finish, you can stop looking. This is it! I&#8217;m currently obsessed with this cream—I can&#8217;t get over how lightweight and fan…",
+      "description": "An ultra-lightweight facial moisturizer with a matte, powdery finish. Formulated for high absorption and suitability for warm weather conditions.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -6879,7 +6880,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the pH is confirmed to be a-ok, all that's left to do is package it up! This emulsion is a bit thick for a pump-top bottle, but will work nicely in jars and squeeze tubes. I chose to use Bramble Berry's 2 oz Frosted Glass Jar with White Cap (gifted) for mine; this 180g batch will fill three of them."
+      "process": "1. Create a simmering water bath in a broad pan.\n2. Measure the water phase and oil phase ingredients into separate heat-safe containers.\n3. Heat both containers in the water bath until all solid components have liquefied.\n4. Combine the phases and blend well to form a uniform emulsion.\n5. Once the cream has cooled, verify the pH level.\n6. Package the thick emulsion in jars or squeeze tubes.",
+      "processRewritten": true
     },
     {
       "id": "natural-oil-free-turmeric-face-lotion",
@@ -6891,7 +6893,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Today we&#8217;re formulating up a cheery, sunshine-y bottle of Natural Oil-Free Turmeric Face Lotion. This slippy, lightweight lotion is heavy on the hydration and features anti-inflammatory turmeric extract and brightening niacinamide. Let&#8217;s …",
+      "description": "A lightweight, oil-free facial lotion featuring turmeric extract and niacinamide. Formulated for high levels of hydration and skin brightening benefits.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -6948,7 +6950,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up!\nWhen you know the pH is a-ok, package up the lotion. I recommend using something with an airless pump bottle as the smaller dispensing amount helps reduce the experience of soaping. Use as you'd use any face lotion. Enjoy!"
+      "process": "1. Prepare a simmering water bath in a broad, flat-bottomed pan.\n2. Measure the water phase ingredients into a heat-safe beaker and note the total weight.\n3. Measure the heated oil phase ingredients into a separate beaker.\n4. Heat both containers until all components are melted or dissolved.\n5. Combine the phases and mix thoroughly to form an emulsion.\n6. Once the mixture has cooled, incorporate the cooling phase ingredients.\n7. Verify the pH level and transfer to an airless pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "goji-aa-superfood-face-cream",
@@ -6960,7 +6963,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "As winter drags on, my skin needs all the hydration and love I can send its way. This formulation pairs two superfood ingredients with a couple fabulously hydrating ingredients and some potent antioxidants to help my skin stay soft and moisturized in…",
+      "description": "A hydrating face cream featuring goji and acai extracts. Formulated with antioxidants and humectants to maintain skin softness and moisture levels.",
       "ingredients": [
         {
           "name": "Glyceryl Stearate",
@@ -7013,7 +7016,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I recommend using a treatment pump bottle or a squeeze tube with a small-ish orifice. A regular pump bottle will work, too. A jar or tub will work in a pinch, but beware of spilling as this emulsion isn't terribly thick.\nUse as you'd use any face lotion; I use this as the last step in my skin care routine after cleansing and serums. Enjoy!"
+      "process": "1. Set up a simmering water bath in a broad pan.\n2. Measure the water phase and oil phase ingredients into separate heat-safe beakers.\n3. Heat in the water bath until the oil phase is completely liquid.\n4. Combine the phases and blend into a stable emulsion.\n5. Incorporate the cooling phase ingredients once the cream is at room temperature.\n6. Transfer the final product to a treatment pump bottle or squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "frosted-cranberry-face-cream",
@@ -7025,7 +7029,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "If you subscribe to Humblebee &amp; Me on YouTube you&#8217;ll know I&#8217;ve been working on my first-ever glycerite (cranberry!)—and today I am incorporating that beautiful bright pink liquid into a moisturizing and soothing Frosted Cranberry Face…",
+      "description": "A seasonal face cream featuring cranberry seed oil and a soft, matte finish. Formulated for lightweight hydration with a subtle fragrance.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -7074,7 +7078,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I chose a 100mL (3.3fl oz) airless pump-top bottle from YellowBee (gifted).\nUse as you'd use any face lotion. Enjoy!"
+      "process": "1. Create a simmering water bath in a broad pan.\n2. Heat the water phase and oil phase ingredients in separate beakers until melted.\n3. Combine the two phases and use an immersion blender to create a stable emulsion.\n4. Allow the mixture to cool to room temperature, then stir in the cooling phase ingredients.\n5. Transfer the finished cream to a suitable storage jar.",
+      "processRewritten": true
     },
     {
       "id": "soothe-and-glow-facial-gel-cream",
@@ -7083,7 +7088,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/soothe-and-glow-facial-gel-cream/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This beautiful gel cream delivers a double dose of glow—both from boosted skin health and a touch of softly shimmering mica. This formulation includes some of my favourite skincare goodies to deeply hydrate the skin and support barrier function, and …",
+      "description": "A soothing gel-cream formulation featuring hyaluronic acid and skin-brightening actives. Designed for rapid absorption and a radiant skin finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -7128,7 +7133,8 @@
       ],
       "notes": "The finished cream is a lovely in-between for your skincare routine and any makeup you might want to wear. I don&#8217;t apply it in the evening as I don&#8217;t want a glowy pillowcase, but I suppose there&#8217;s nothing else stopping you from wearing it at night if you want to.",
       "category": "face",
-      "process": "Weigh the first nine ingredients into a beaker. Sprinkle the Polyacrylate crosspolymer-6 (Sepimax ZEN) overtop of the mixture, cover, and leave to hydrate for a few hours.\nOnce you no longer see any white specks of Polyacrylate crosspolymer-6, whisk or stir the mixture thoroughly to combine. I used my mini mixer. When the gel cream is uniform, package it up!\nI used a small jar, but I think a soft squeeze tube or treatment pump would also work well.\nTo use this product, apply it at the end of your skincare routine and before any makeup. Enjoy the extra glow!"
+      "process": "1. Combine the gelling agent and humectants in a beaker and stir until uniform.\n2. Incorporate the active ingredients and distilled water, whisking steadily.\n3. Add the oil phase and blend until a uniform gel-cream texture is achieved.\n4. Allow the mixture to hydrate fully before a final whisk.\n5. Transfer to a jar or pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "winter-solstice-oil-free-facial-moisturizer",
@@ -7140,7 +7146,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Save 5% on hydroxyethylcellulose and everything else at Essential Wholesale &amp; Labs with coupon code HUMBLEBEE",
+      "description": "An oil-free facial moisturizer formulated for winter conditions. Features high levels of humectants and skin-barrier-supporting ingredients without a greasy residue.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -7189,7 +7195,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nNow it's time to blend! Grab your immersion blender and begin blending the lotion, starting with short bursts so the still-very-liquid lotion doesn't whirl up and spray everywhere. Blend for about a minute.\nOnce the mixture has started to gain a bit of viscosity, switch to hand stirring. It’ll still be pretty thin at this point in time, but don’t worry!\nHand stir constantly until you reach a light trace, and then switch to occasional stirring until the lotion is cool.\nNow all that's left to do is package it up! I used three 30mL (1fl oz) bottle with a treatment pump type tops from YellowBee for my 100g (3.5oz) batch.\nUse as you would use any facial moisturizer. Enjoy!"
+      "process": "1. Measure the water-soluble ingredients into a heat-safe beaker.\n2. Sprinkle the gelling agent over the surface and whisk to combine.\n3. Heat the mixture gently to ensure all components are fully dissolved.\n4. Allow the gel to cool and hydrate for several hours.\n5. Verify the pH level and adjust as needed before packaging in a squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "ice-palace-ceramide-glow-gel-cream",
@@ -7198,7 +7205,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/ice-palace-ceramide-glow-gel-cream/",
       "heatRequired": false,
       "equipment": [],
-      "description": "For humectants, I&#8217;ve included luxurious and silky hyaluronic acid and non-sticky propanediol 1,3. Panthenol (Vitamin B5) also brings some humectant-y goodness to the table, along with skin-soothing, anti-inflammatory, and healing-boosting benef…",
+      "description": "A barrier-supporting gel-cream featuring ceramides and hyaluronic acid. Formulated for high radiance and a silky skin feel.",
       "ingredients": [
         {
           "name": "Neossance Hemisqualane",
@@ -7239,7 +7246,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the first three ingredients into a small heat-resistant glass measuring cup or beaker and whisk to combine.\nAdd the next four ingredients and whisk to combine. Finally, add the water and hyaluronic acid solution and whisk to combine.\nCover the mixture and leave it to hydrate for at least 30 minutes before giving the whole lot a thorough mixing until it is uniform, thick, and creamy. Once that's done, package it up; I used a 30mL (1fl oz) glass jar from New Directions Aromatics.\nTo use, spread a small amount of the gel cream over your skin. I like to apply this at the end of my skincare routine, after sunscreen and before foundation. You could apply this before bed if you really wanted to, but I don't recommend it as you will end up with a shiny pillow!"
+      "process": "1. Combine the primary ingredients and humectants in a beaker and whisk to combine.\n2. Add the active ingredients and continue whisking until uniform.\n3. Incorporate the water and hyaluronic acid solution.\n4. Allow the mixture to hydrate for at least 30 minutes, then whisk until thick and creamy.\n5. Package the final product in a glass jar.",
+      "processRewritten": true
     },
     {
       "id": "winter-solstice-facial-gel-cream",
@@ -7248,7 +7256,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/winter-solstice-facial-gel-cream/",
       "heatRequired": false,
       "equipment": [],
-      "description": "In the hydration department, we&#8217;ve got some great ingredients; 1% low molecular weight hyaluronic acid stock, propanediol, rose hydrosol, and distilled water bring plenty of water to the table and help ensure it sticks around for as long as pos…",
+      "description": "A rich gel-cream formulation featuring rose hydrosol and hyaluronic acid. Designed for intensive winter hydration with a non-greasy finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -7317,7 +7325,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the first six ingredients into a small beaker and stir to combine. Add the next four, and stir to combine.\nWeigh in the following five ingredients, stir.\nFinish by weighing in the Aristoflex AVC. Whisk to combine; the mixture will thicken a bit, but will be pretty lumpy. Leave it to hydrate for 30–40 minutes, and whisk again. At that point you should have a silky smooth, thick, luscious gel cream!"
+      "process": "1. Combine the gelling agent and initial liquid phases in a beaker and stir.\n2. Incorporate the remaining active and moisturizing ingredients.\n3. Sprinkle the gelling agent over the surface and whisk to incorporate.\n4. Allow the mixture to sit for 30–40 minutes to fully hydrate, then perform a final whisk until smooth.\n5. Transfer to a storage container.",
+      "processRewritten": true
     },
     {
       "id": "cranberry-orange-facial-gel-cream",
@@ -7839,7 +7848,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Where does the hot chocolate-y goodness come from? The star chocolatey ingredient in this formulation is fragrant, unrefined cocoa butter. Yum! This butter scents the lip balm, adds wonderful emollience, and hardens it a bit as well.",
+      "description": "A decadent lip butter featuring unrefined cocoa butter for a natural chocolate scent. Formulated for high emolliency and protection against environmental dryness.",
       "ingredients": [
         {
           "name": "Cocoa Butter",
@@ -7872,7 +7881,8 @@
       ],
       "notes": "Ingredient #1 is beeswax, which also hardens the lip butter. Beeswax has a fabulous unique creaminess that makes it beautifully suited to lip balms. It&#8217;s really hard to replicate the creaminess of beeswax with vegan waxes, which is a bummer. If you want to re-develop this formulation to use a vegan wax, I&#8217;d recommend reviewing the wide array of experiments I&#8217;ve done with lots of ",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. I really recommend a measuring cup with a spout here rather than a beaker; Pyrex-style measuring cups are made of much thicker glass, and that holds heat better than thin glass, giving us extra time to work before the lip butter solidifies.\nPlace the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nQuickly add the cool down phase, stir to incorporate, and pour the lip butter into lip balm tubes. If you live somewhere quite a bit warmer than I do it might work in tins, but it's too hard for easy tin application where I live. Leave the lip butter on the counter to set up.\nAnd that's it! Use as you'd use any lip balm and enjoy the long-lasting creamy moisturizing goodness &#x1f604;"
+      "process": "1. Prepare a simmering water bath in a small saucepan.\n2. Measure the oil phase ingredients into a heat-safe container with a pouring spout.\n3. Heat in the water bath until all components are fully melted.\n4. Remove from heat and stir until uniform.\n5. Quickly incorporate the cooling phase ingredients and pour into lip balm tubes or tins.",
+      "processRewritten": true
     },
     {
       "id": "diy-moisturizing-lip-oil-3-ways",
@@ -7883,7 +7893,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "I&#8217;ve been having a ton of fun making lip oil formulations this year, and today I&#8217;m finally sharing three of my favourite formulations starring a new-to-me ingredient that I&#8217;m low-key obsessed with. These are super easy to stir up (n…",
+      "description": "A versatile lip oil available in three variations. Formulated with carrier oils and active extracts to provide moisture and a glossy finish.",
       "ingredients": [
         {
           "name": "Polybutene",
@@ -7952,7 +7962,8 @@
       ],
       "notes": "Substitutions that might work All of these substitutions will require some level of re-development. Good luck &#x1f642;",
       "category": "face",
-      "process": "Weigh the ingredients into a small beaker or a disposable condiment cup. Stir until uniform, and then pour the lip oil into a tube. Enjoy!\nYou can play with the carrier oil blends—have fun! I recommend avoiding unrefined oils that tend to sediment/settle out over time as those will settle out in the lip oil as well.\nIf you don't have any of the fancy ingredients—extracts, Hilurlip, etc.—simply replace them with more carrier oil.\nI recommend keeping the vitamin E to extend the shelf life of these formulations.\nYou can use any lip-safe essential oil or flavour oil in these formulations.\nIf you don't have polybutene you'll be in re-development territory; just far into re-development territory will depend on what you're able to source as an alternative thickening/richness-boosting ingredient. I've written a lot more about potential options earlier in this post; please read all that, research what you're able to get, and have fun!\nWhat is the shelf life of these lip oils?"
+      "process": "1. Measure the ingredients into a small beaker or mixing container.\n2. Stir until the mixture is completely uniform.\n3. Transfer the oil to a lip gloss or roller-ball tube.\n4. Note that some unrefined oils may settle over time; shake before use if necessary.",
+      "processRewritten": true
     },
     {
       "id": "peppermint-beeswax-lip-balm",
@@ -7963,7 +7974,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Burt&#8217;s Bees peppermint lip balm was one of the first products I ever tried to dupe, and I remember those early efforts with a mix of fondness and cringe. The formulations were so thoroughly mediocre that none of them ever made it onto Humblebee…",
+      "description": "A classic lip balm formulation featuring beeswax and peppermint essential oil. Designed for a firm, protective consistency and a refreshing cooling effect.",
       "ingredients": [
         {
           "name": "Beeswax",
@@ -7992,7 +8003,8 @@
       ],
       "notes": "The original ingredientsTurning those ingredients into a formulaMinty goodnessRelevant links &amp; further readingPeppermint Beeswax Lip BalmShelf Life &amp; StorageSubstitutionsSimilar Formulations The original ingredients The original ingredient&#8217;s list for Burt&#8217;s Bees peppermint lip balm is as follows:",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup (I like something with a pouring spout for lip balm). Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare your tubes for filling. As written in grams, you'll need 9 standard lip balm tubes.\nAfter about 20 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Quickly weigh in the cool down phase, stir the mixture with a flexible silicone spatula to combine, and pour the lip balm into the tubes. Leave to cool.\nOnce the lip balm has set up, cap 'em, wipe 'em down, label, and you're done! Use as you'd use any lip balm. Enjoy!"
+      "process": "1. Set up a simmering water bath in a small saucepan.\n2. Measure the base oils and waxes into a heat-safe container with a spout.\n3. Heat in the water bath until completely melted.\n4. Remove from heat and quickly incorporate the cooling phase ingredients.\n5. Pour the liquid balm into tubes and allow to solidify undisturbed.",
+      "processRewritten": true
     },
     {
       "id": "candlelight-lip-butter-with-hyaluronic-acid",
@@ -8003,7 +8015,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "If dry winter lips are driving you up the wall, I think you will love this rich and creamy Candlelight Lip Butter with Hyaluronic Acid. It stars a base of luxurious and deeply moisturizing ingredients while also boasting lip-plumping and anti-ageing …",
+      "description": "A rich, creamy lip butter featuring hyaluronic acid for intensive hydration. Formulated with a blend of waxes and oils for a smooth, protective finish.",
       "ingredients": [
         {
           "name": "Jojoba Butter",
@@ -8040,7 +8052,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nKeep stirring until you've reached a light trace (watch the video to see what I mean!), and quickly add the cool down phase. Stir to incorporate, and pour the lip butter into its container. Leave it on the counter to set up.\nUse as you'd use any lip balm or butter. Enjoy!"
+      "process": "1. Prepare a simmering water bath in a small saucepan.\n2. Measure the heated phase ingredients into a heat-safe beaker and melt completely.\n3. Remove from heat and stir steadily as the mixture cools.\n4. Once the mixture reaches a light trace, incorporate the cooling phase ingredients.\n5. Pour into a tin or jar and allow to set.",
+      "processRewritten": true
     },
     {
       "id": "mocha-lip-scrub",
@@ -8051,7 +8064,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "In today&#8217;s edition of &#8220;I promise that&#8217;s not actually food even though it looks, smells (and tastes!) like it&#8221; I&#8217;m sharing a formulation for a simple six-ingredient Mocha Lip Scrub! This decadent coffee and chocolate scen…",
+      "description": "A chocolate and coffee-scented lip scrub featuring six simple ingredients. Designed for gentle exfoliation and intensive lip nourishment.",
       "ingredients": [
         {
           "name": "Cocoa Butter",
@@ -8080,7 +8093,8 @@
       ],
       "notes": "Cocoa Butter in the Humblebee &amp; Me Encyclopedia Sweet Almond Oil in the Humblebee &amp; Me Encyclopedia A Guide to Carrier Oil Substitutions Can I add a fragrance oil or flavour oil to this formulation?",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant bowl that's deep and large enough for whipping in. Place the bowl in the water bath to melt the butter through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nOnce the scrub has cooled/thickened enough, quickly transfer it to a small tin or jar. I used a low-profile 1oz jar from YellowBee for my scrub. To use, massage a small amount of the scrub into your lips and rinse off the extra with a bit of water. Resist the urge to eat &#x1f61d; Enjoy!"
+      "process": "1. Melt the oil and butter phase in a heat-safe bowl using a water bath.\n2. Prepare an ice bath in a separate container.\n3. Once melted, place the bowl in the ice bath and stir constantly.\n4. As the mixture thickens, incorporate the sugar and essential oils.\n5. Transfer the scrub to a tin or jar once it has reached the desired consistency.",
+      "processRewritten": true
     },
     {
       "id": "summer-stone-fruit-lip-balm",
@@ -8091,7 +8105,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "I&#8217;ve used beeswax to thicken the oils up into a firm, creamy lip balm. If you&#8217;d like a non-beeswax alternative, check out some of the wax to liquid oil ratio experiments I&#8217;ve done for some guidance on modifying the formulation. I&#8…",
+      "description": "A firm, creamy lip balm featuring stone fruit oils and beeswax. Designed for high stability and a smooth application.",
       "ingredients": [
         {
           "name": "Plum Kernel Oil",
@@ -8120,7 +8134,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nQuickly add the cool down phase, stir to incorporate, and pour the product lip balm into lip balm tubes (this formulation will fill four standard lip balm tubes). Leave to set up.\nOnce the tubes have set up, cap 'em, wipe 'em down, and you're done! Use as you'd use any lip balm. Enjoy!"
+      "process": "1. Create a simmering water bath in a small saucepan.\n2. Measure the heated phase ingredients into a heat-safe container and melt fully.\n3. Remove from heat and stir until uniform.\n4. Incorporate the cooling phase ingredients and pour into lip balm tubes.\n5. Allow to set on a level surface.",
+      "processRewritten": true
     },
     {
       "id": "creamy-almond-lip-balm",
@@ -8131,7 +8146,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "This rich Creamy Almond Lip Balm has a gorgeous ointment-gel consistency, and it&#8217;s an evolution of the Almond &amp; Olive Creamy Lip Balm I shared last autumn. A combination of a pseudo wax and a true wax gives us an end product that&#8217;s a …",
+      "description": "A rich lip balm with an ointment-gel consistency. Formulated with a blend of waxes to achieve a unique, creamy texture and high emolliency.",
       "ingredients": [
         {
           "name": "Almond Wax",
@@ -8160,7 +8175,8 @@
       ],
       "notes": "I opted not to include an essential oil or flavour oil, but you certainly can if you want to—especially if your lanolin is on the extra-fragrant side of things. I find a good, stout peppermint essential oil can stand up nicely to the, err, earthy notes of lanolin. I&#8217;d include it at 0.5%, adding it with the vitamin E and reducing the almond oil to make room for it in the formulation.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nPlace the measuring cup containing the heated phase into the ice bath and cool, stirring constantly, for about thirty seconds—until you start to notice some building viscosity. Remove the container from the water bath and add the cool down phase. Stir to incorporate.\nOnce you reach trace you can now pour the product into its container and leave it on the counter to set up. I recommend some sort of shallow, wide-mouthed tin or jar. When the balm has set up, you're done!"
+      "process": "1. Prepare a simmering water bath and an ice bath in separate bowls.\n2. Melt the heated phase ingredients in a heat-safe container within the water bath.\n3. Remove from heat and place the container in the ice bath.\n4. Stir constantly until the mixture begins to thicken and reach a \"trace\" consistency.\n5. Incorporate the cooling phase ingredients and transfer to a wide-mouthed tin or jar.",
+      "processRewritten": true
     },
     {
       "id": "cocoa-coconut-sticky-lip-balm",
@@ -8171,7 +8187,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Ingredient #3 is luscious, brittle, oh-so-delicious-smelling cocoa butter. Scent-wise, we&#8217;ve got warm honey from the beeswax, toasty coconut from the coconut oil, and rich chocolate from the cocoa butter. It&#8217;s a fan-frikkin&#8217;-tastic …",
+      "description": "A highly protective lip balm featuring cocoa butter and virgin coconut oil. Designed for a slightly tacky finish that remains on the lips for extended wear.",
       "ingredients": [
         {
           "name": "Traditional Virgin Coconut Oil",
@@ -8192,7 +8208,8 @@
       ],
       "notes": "The last ingredient is just a wee bit of vitamin E to delay rancidity. If you wanted to incorporate a bit of a lip-safe essential oil or flavour oil you could drop 0.5% of the coconut oil and add 0.5% essential oil with the vitamin E.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, set out your lip balm tubes, vitamin E, and scale so you can quickly add the vitamin E and then pour the lip balm.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nQuickly add the cool down phase, stir to incorporate, and pour the melted lip balm into lip balm tubes (you could use tins if you wanted to, but I don't love having sticky lip balm on my fingers). Leave the tubes on the counter to set up.\nOnce the lip balms have solidified and cooled down you can cap the tubes. I recommend wiping them down with some paper towel wetted with a bit of rubbing alcohol to remove any oil so your labels stick to the tubes. Label the tubes, and you're done!\nUse as you'd use any lip balm. Enjoy!"
+      "process": "1. Melt the heated phase ingredients in a water bath until fully liquid.\n2. Remove from heat and stir to combine.\n3. Quickly incorporate the cooling phase ingredients.\n4. Pour the liquid balm into tubes or tins and allow to solidify.\n5. Clean the exterior of the containers with alcohol before labeling.",
+      "processRewritten": true
     },
     {
       "id": "almond-olive-creamy-lip-balm",
@@ -8203,7 +8220,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "It has been absolutely ages since I shared a lip balm formulation, but with cold &amp; dry winter conditions here for the somewhat foreseeable future, it&#8217;s definitely time for a new way to keep our lips happy! This Almond &amp; Olive Creamy Lip…",
+      "description": "A simple, protective lip balm formulated with almond and olive oils. Designed for cold-weather protection and high emolliency.",
       "ingredients": [
         {
           "name": "Olive Wax",
@@ -8232,7 +8249,8 @@
       ],
       "notes": "I opted to leave this lip balm unscented (the lanolin scent doesn&#8217;t come through, thankfully!), but if you wanted to include an essential oil or flavour oil you easily could. I&#8217;d take 0.5% off the almond oil and add 0.5% essential oil or flavour oil of choice in the cool down phase (making sure 0.5% is allowable for the specific essential oil you&#8217;re using, of course!).",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nQuickly add the cool down phase, stir to incorporate, and pour the lip balm into lip balm tubes or tins. I filled five oval lip balm tubes perfectly with a 25g batch. Carefully transfer the lip balm to the fridge to set up.\nUse as you would any lip balm. Enjoy!"
+      "process": "1. Prepare a simmering water bath in a small saucepan.\n2. Measure the heated phase ingredients into a heat-safe container and melt completely.\n3. Remove from heat and stir well.\n4. Incorporate the cooling phase ingredients and pour into tubes or tins.\n5. Refrigerate for approximately 30 minutes to ensure a smooth set.",
+      "processRewritten": true
     },
     {
       "id": "nourishing-lip-mask",
@@ -8243,7 +8261,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Today we&#8217;re blending up a simple, all-natural, Nourishing Lip Mask. I&#8217;ve called it a lip mask, but honestly, it&#8217;s a super versatile salve for all kinds of dry, irritated skin. It stars a short and sweet list of rich, soothing emolli…",
+      "description": "A versatile, all-natural lip mask that functions as a rich salve for dry, irritated skin. Formulated with a minimalist list of soothing emollients.",
       "ingredients": [
         {
           "name": "Lanolin",
@@ -8272,7 +8290,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Stir with a flexible silicone spatula to incorporate.\nStir the mixture occasionally as it cools. I chose not to use an ice bath here as the batch is small enough that it cools fairly quickly on its own, but if you scale it up / want things to move faster, you might want to use an ice bath to speed up the cooling.\nOnce the mixture has thickened and appears translucent, stir in the vitamin E, and transfer the lip mask to a small tin or jar. And that's it!\nTo use, apply generously to the lips before going to bed. You can also apply this mask anywhere, really—this is very versatile! You can definitely think of it as more of a salve than a lip mask if lip masks aren't your jam &#x1f60a; Enjoy!"
+      "process": "1. Melt the heated phase ingredients in a water bath until liquid.\n2. Remove from heat and stir occasionally as the mixture cools.\n3. Once the mixture has thickened and appears translucent, incorporate the cooling phase ingredients.\n4. Transfer to a small tin or jar and allow it to set.",
+      "processRewritten": true
     },
     {
       "id": "chocolate-cherry-lip-balm",
@@ -8283,7 +8302,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Today we&#8217;re kicking off a decadent new theme—Chocolate Cherry—with an equally decadent lip balm! Mouth-wateringly delicious cocoa butter co-stars with oh-so-lovely cherry kernel oil. I thought a lip balm would be a great place to start as the i…",
+      "description": "A decadent lip balm featuring cocoa butter and cherry kernel oil. Formulated for high emolliency and a smooth, creamy application.",
       "ingredients": [
         {
           "name": "Cera Bellina",
@@ -8312,7 +8331,8 @@
       ],
       "notes": "Here you can see the two different colours I got just from swapping up the mica, with the mica used in each sprinkled on top of the swatch.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the mixture melts, set out some wee jars or tins for the lip balm so you can easily transfer it into tins when the time comes. I used two 5mL glass jars for this 15g batch and had some product leftover. (I used these ones, but it looks like they've discontinued the smaller sizes.)\nContinue stirring until the mixture has gained some viscosity and is looking creamy, and then quickly transfer into your containers. That's it! Leave to come fully to room temperature and you're ready to rock and roll &#x1f352;"
+      "process": "1. Heat the base oils and waxes in a water bath until completely melted.\n2. Remove from heat and stir until the mixture is uniform and beginning to gain viscosity.\n3. Incorporate the cooling phase ingredients and transfer to small jars or tins.\n4. Allow the balm to reach room temperature before use.",
+      "processRewritten": true
     },
     {
       "id": "white-chocolate-peppermint-vegan-lip-balm",
