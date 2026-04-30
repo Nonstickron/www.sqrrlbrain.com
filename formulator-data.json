@@ -30057,6 +30057,99 @@
       ],
       "notes": "Vegetable glycerin is a humectant, and it helps add shine and maintain moisture. You can leave it out if you want.",
       "category": "makeup"
+    },
+    {
+      "id": "fall-leaves-lipstick",
+      "name": "Fall Leaves Lipstick",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/fall-leaves-lipstick/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "The colour comes from a combination of white white kaolin clay (USA / Canada) and deep, deep red Australian red reef clay. The kaolin does a fantastic job of softening and brightening the deep red of the Australian clay, making the shade easier to we…",
+      "ingredients": [
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 33.3
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 19
+        },
+        {
+          "name": "Camellia Seed Oil",
+          "pct": 42.9
+        },
+        {
+          "name": "Magnesium Stearate",
+          "pct": 4.8
+        }
+      ],
+      "notes": "NOTE: I no longer recommend this formulation due to clay not being a reliable colourant, and potentially not meeting the safety requirements for lip-use pigments. My book, Make it Up: The Essential Guide to DIY Makeup and Skin Care contains far better lipstick formulations, with both vegan and non-vegan options, and a far wider array of colour possibilities.",
+      "category": "makeup"
+    },
+    {
+      "id": "red-velvet-lipstick",
+      "name": "Red Velvet Lipstick",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/red-velvet-lipstick/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "When I first published my Red Rose Lipstick, I had a few requests for something that wasn&#8217;t quite as strong. This is what I came up with. It&#8217;s fairly simple, following the same principle, and can be made with a couple different secondary …",
+      "ingredients": [
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 33.3
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 19
+        },
+        {
+          "name": "Camellia Seed Oil",
+          "pct": 42.9
+        },
+        {
+          "name": "Magnesium Stearate",
+          "pct": 4.8
+        }
+      ],
+      "notes": "NOTE: I no longer recommend this formulation due to clay not being a reliable colourant, and potentially not meeting the safety requirements for lip-use pigments. My book, Make it Up: The Essential Guide to DIY Makeup and Skin Care contains far better lipstick formulations, with both vegan and non-vegan options, and a far wider array of colour possibilities.",
+      "category": "makeup"
+    },
+    {
+      "id": "tinted-lip-balm",
+      "name": "Tinted Lip Balm",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/tinted-lip-balm/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "This lip balm is essentially the same as the original recipe. The only change is the colour. I added some oil-soluble titanium dioxide for opacity, and then a mixture of red, yellow, and brown iron oxides for the colour. I decided to skip micas becau…",
+      "ingredients": [
+        {
+          "name": "Mango Butter",
+          "pct": 31.6
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 15.8
+        },
+        {
+          "name": "Kukuinut Oil",
+          "pct": 15.8
+        },
+        {
+          "name": "Sweet Almond Oil",
+          "pct": 36.8
+        }
+      ],
+      "notes": "This lip balm is essentially the same as the original recipe. The only change is the colour. I added some oil-soluble titanium dioxide for opacity, and then a mixture of red, yellow, and brown iron oxides for the colour. I decided to skip micas because I didn&#8217;t want something shimmery, but you could always add them if you want shimmer.",
+      "category": "makeup"
     }
   ]
 }
