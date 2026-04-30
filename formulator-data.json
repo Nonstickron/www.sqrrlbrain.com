@@ -577,7 +577,27 @@
     "Carmine Or Red Lake Dye",
     "TKB Thickening Clay",
     "Mica Blend",
-    "Hilite Gold Mica"
+    "Hilite Gold Mica",
+    "Very Thoroughly Mixed Presto Change-o Magic Color",
+    "Carmine Dispersed In Castor Oil",
+    "Candy Cane Lip Liquid",
+    "Totally Blue Lip Liquid",
+    "Poppy Seed Oil",
+    "Cali Sun Lip Liquid",
+    "Sideshow Pink Lip Liquid",
+    "Black Amethyst Mica",
+    "Reflections Pink Bio-glitter",
+    "Coming Up Roses Lip Liquid",
+    "Baobab Oil",
+    "Liquid Red 33",
+    "Biodegradable Gold Glitter",
+    "Versagel 750",
+    "TKB Oil Fusion",
+    "Red #7",
+    "Red #33",
+    "Yellow #6",
+    "Pigment Of Choice",
+    "Creamy Lip Balm Base"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -22200,6 +22220,340 @@
         }
       ],
       "notes": "This looks so amazing! I am trying to be as earth friendly as possible in things I want to make. Is there something I can substitute the silica micro beads for or can they be left out?",
+      "category": "makeup"
+    },
+    {
+      "id": "diy-color-changing-lip-gloss",
+      "name": "DIY Color Changing Lip Gloss",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/diy-color-changing-lip-gloss/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Back in 2016 I was wandering through London and a display in the window of a fancy cosmetics shop caught my eye; it was Lipstick Queen&#8217;s Frog Prince lipstick, and it was deeply, froggily green! I obviously had to try it, so in I went to swatch …",
+      "ingredients": [
+        {
+          "name": "Very Thoroughly Mixed Presto Change-o Magic Color",
+          "pct": 5
+        },
+        {
+          "name": "Medium Chain Triglycerides",
+          "pct": 95
+        }
+      ],
+      "notes": "If you want to make a blush with this I&#8217;d include some mica so you can apply based on where you see the mica and then wait for the pink to pop up.",
+      "category": "makeup"
+    },
+    {
+      "id": "frosted-cranberry-lip-oil",
+      "name": "Frosted Cranberry Lip Oil",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/frosted-cranberry-lip-oil/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "I&#8217;ve had a ton of requests for a lip oil recently, and I thought this year&#8217;s Frosted Cranberry theme was a great backdrop for a shiny new lip oil formulation &#x1f604; This cheery red oil imparts moisture and shine to our lips and it smel…",
+      "ingredients": [
+        {
+          "name": "Castor Oil",
+          "pct": 63
+        },
+        {
+          "name": "Polyamide-3",
+          "pct": 1.5
+        },
+        {
+          "name": "Cranberry Seed Oil",
+          "pct": 34
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 1
+        },
+        {
+          "name": "Carmine Dispersed In Castor Oil",
+          "pct": 0.5
+        }
+      ],
+      "notes": "SUBSTITUTIONS As always, be aware that making substitutions will change the final product. While these swaps won’t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "clear-lip-gloss-base-without-versagel",
+      "name": "Clear Lip Gloss Base (without Versagel!)",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/clear-lip-gloss-base-without-versagel/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "If you&#8217;ve been wanting a transparent lip gloss base from scratch, this is the formulation for you. You&#8217;ll need just three ingredients to make a clear and versatile gloss base that you can customize in oh-so-many ways, with different carri…",
+      "ingredients": [
+        {
+          "name": "Cranberry Seed Oil",
+          "pct": 10
+        },
+        {
+          "name": "Candy Cane Lip Liquid",
+          "pct": 8
+        },
+        {
+          "name": "Totally Blue Lip Liquid",
+          "pct": 2
+        },
+        {
+          "name": "Poppy Seed Oil",
+          "pct": 15
+        },
+        {
+          "name": "Cali Sun Lip Liquid",
+          "pct": 4
+        },
+        {
+          "name": "Sideshow Pink Lip Liquid",
+          "pct": 1
+        },
+        {
+          "name": "Passionfruit Oil",
+          "pct": 15
+        },
+        {
+          "name": "Black Amethyst Mica",
+          "pct": 5
+        },
+        {
+          "name": "Traditional Virgin Coconut Oil",
+          "pct": 18
+        },
+        {
+          "name": "Reflections Pink Bio-glitter",
+          "pct": 2
+        },
+        {
+          "name": "Cranberry Seed Oil",
+          "pct": 10
+        },
+        {
+          "name": "Coming Up Roses Lip Liquid",
+          "pct": 10
+        },
+        {
+          "name": "Baobab Oil",
+          "pct": 10
+        },
+        {
+          "name": "Sideshow Pink Lip Liquid",
+          "pct": 10
+        }
+      ],
+      "notes": "Making the base is a simple matter of melting and stirring everything together. Once that&#8217;s done, the fun begins! I&#8217;ve structured the base so you&#8217;ll use it at 80% and then you&#8217;ve got 20% to play with (you could shift those ratios around if you want to, but I like the viscosity and feel of the gloss at that base to add-in ratio).",
+      "category": "makeup"
+    },
+    {
+      "id": "blackberry-lip-gloss",
+      "name": "Blackberry Lip Gloss",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/blackberry-lip-gloss/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "I packaged the finished gloss in a hard-sided 5mL lip gloss tubes with a wand applicator from TKB Trading, but you could definitely use a soft squeezy lip gloss tube if you prefer. I think this gloss is too soft/liquidy for a pot to be a good choice,…",
+      "ingredients": [
+        {
+          "name": "Blackberry Seed Oil",
+          "pct": 60
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 29
+        },
+        {
+          "name": "Polyamide-3",
+          "pct": 8
+        },
+        {
+          "name": "Liquid Red 33",
+          "pct": 2
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 1
+        },
+        {
+          "name": "Blackberry Seed Oil",
+          "pct": 53
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 29
+        },
+        {
+          "name": "Cera Bellina",
+          "pct": 15
+        },
+        {
+          "name": "Liquid Red 33",
+          "pct": 2
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 1
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "gold-dust-lip-cream",
+      "name": "Gold Dust Lip Cream",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/gold-dust-lip-cream/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Today we&#8217;re fully embracing summer with a rich, sparkly Gold Dust Lip Cream &#x2728; A creamy base carries a generous helping of shimmery gold things to bring some beautiful 24 karat loveliness to your days. Enjoy!",
+      "ingredients": [
+        {
+          "name": "Cera Bellina",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 30
+        },
+        {
+          "name": "Virgin Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Apricot Kernel Oil",
+          "pct": 21.5
+        },
+        {
+          "name": "Gold Mica",
+          "pct": 6
+        },
+        {
+          "name": "Biodegradable Gold Glitter",
+          "pct": 3
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Continue stirring until the mixture has gained some viscosity and is looking creamy, and then quickly transfer into your containers. That&#8217;s it! Leave to come fully to room temperature and you&#8217;re ready to get your gold on. I like to dab a small amount of this lip cream over top of red or pink lipstick, but feel free to experiment to figure out what you love! You could also use this as a",
+      "category": "makeup"
+    },
+    {
+      "id": "glossy-lip-stain",
+      "name": "Glossy Lip Stain",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/glossy-lip-stain/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I&#8217;ve since tweaked both the formulation and the procedure to create a strongly pigmented lip product that has the feel of a gloss, but the colour of a stain. I dithered between calling this a &#8220;Glossy Lip Stain&#8221; or a &#8220;Glossy Li…",
+      "ingredients": [
+        {
+          "name": "Versagel 750",
+          "pct": 59.2
+        },
+        {
+          "name": "TKB Oil Fusion",
+          "pct": 29.6
+        },
+        {
+          "name": "TKB Film Fix",
+          "pct": 5.2
+        },
+        {
+          "name": "Red #7",
+          "pct": 4
+        },
+        {
+          "name": "Red #33",
+          "pct": 1
+        },
+        {
+          "name": "Yellow #6",
+          "pct": 1
+        },
+        {
+          "name": "Pigment Of Choice",
+          "pct": 6
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won’t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "creamy-stick-lip-tints",
+      "name": "Creamy Stick Lip Tints",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/creamy-stick-lip-tints/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Now, if you don&#8217;t have any liquid dyes, you&#8217;ll need to make some adjustments. I don&#8217;t know the concentrations of the dyes in the castor oil base, but if we guess around 50%, you&#8217;ll need to use half the weight of powdered pigme…",
+      "ingredients": [
+        {
+          "name": "Creamy Lip Balm Base",
+          "pct": 74.47
+        },
+        {
+          "name": "Sericite Mica",
+          "pct": 8.51
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "makeup"
+    },
+    {
+      "id": "basic-moldable-lipstick-base",
+      "name": "Basic Moldable Lipstick Base",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/basic-moldable-lipstick-base/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Save $5 off TKB&#8217;s lipstick mold until August 31, 2018 with discount code Humblebee5 at TKBTrading.com!",
+      "ingredients": [
+        {
+          "name": "Castor Oil",
+          "pct": 40.5
+        },
+        {
+          "name": "Soy Lecithin",
+          "pct": 3
+        },
+        {
+          "name": "Cetearyl Alcohol",
+          "pct": 20
+        },
+        {
+          "name": "Fractionated Coconut Oil",
+          "pct": 10
+        },
+        {
+          "name": "Beeswax, Refined",
+          "pct": 15
+        },
+        {
+          "name": "Candelilla Wax",
+          "pct": 3
+        },
+        {
+          "name": "Sericite Mica",
+          "pct": 8
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Notes &amp; Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup"
     }
   ]
