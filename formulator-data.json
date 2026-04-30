@@ -2817,7 +2817,8 @@
       ],
       "notes": "This exotically-scented Sweet Magnolia Natural Cleansing Oil gently cleanses the skin, leaving your face feeling soft and nourished. It uses a new-to-me natural emulsifier and has quickly become a favourite facial cleanser for removing layers of summer sunscreen (and sweat) at the end of the day. I love the velvety way it makes my skin feel, and the scent is intoxicating. You&#8217;ll only need si",
       "category": "face",
-      "process": "Weigh all the ingredients into a small beaker, or directly into the bottle you'll be storing the cleansing oil in.\nIf it's a beaker, stir until the mixture is uniform. If you went straight for the bottle, cap and shake. Polyglyceryl-4 oleate can take a while to break down and incorporate, but it will—just keep stirring!\nTo use, massage a dime-sized amount of the cleansing oil into dry skin. As the polyglyceryl-4 oleate creates water-in-oil emulsions it isn't really strong rinse-off agent; as such, I prefer to use a damp microfibre cloth to remove this cleansing oil rather than rinsing alone."
+      "process": "1. Measure all ingredients into a small beaker or directly into the final storage bottle.\n2. If using a beaker, stir the mixture until it is completely uniform.\n3. If using a bottle, secure the cap and shake vigorously until blended.\n4. Note that the natural emulsifier may take several minutes of steady mixing to fully incorporate.\n5. Apply a small amount to dry skin and massage gently to dissolve impurities.\n6. Remove the oil with a warm, damp cloth for best results.",
+      "processRewritten": true
     },
     {
       "id": "almond-oat-powder-to-foam-facial-cleanser",
@@ -2855,7 +2856,8 @@
       ],
       "notes": "This soft, silky powder transforms into a creamy, sudsy cleanser when you work it up with a bit of warm water between your palms. It stars soft and velvety kaolin clay and skin-soothing oats, and you can blend up a batch in just a few moments from just six ingredients. You can customize the exfoliation level and easily make it nut free if you want to. Let&#8217;s get started!",
       "category": "face",
-      "process": "Put on your dust mask (USA / Canada).\nWeigh the powdered ingredients into a small bowl. Scatter the liquid ingredients over the surface of the powders, gently aggitating the mixture to coat the drops of oil in a fine coating of powder.\nOnce the mixture is uniform, all that's left is packaging up the cleanser. I used a 2oz paperboard powder shaker from YellowBee.\nTo use: dispense about 1/4–1/2 tsp of the powder cleanser into your palm. Add a bit of water and work it up into a lather; from there, use it as you'd use any foaming facial cleanser. Enjoy!"
+      "process": "1. Put on a dust mask to ensure you do not inhale the fine powders.\n2. Measure the dry ingredients into a small mixing bowl and stir until blended.\n3. Drizzle the liquid ingredients over the powders and mix gently until the oils are fully absorbed and the texture is uniform.\n4. Transfer the finished powder into a shaker-style container.\n5. To use, mix about half a teaspoon of powder with water in your palm to create a lather before massaging onto the face.",
+      "processRewritten": true
     },
     {
       "id": "almond-oat-balm-to-milk-cleanser",
@@ -2903,7 +2905,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through. Stir occasionally as the mixture heats to ensure the powders are evenly distributed.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nQuickly add the cool down phase, stir to incorporate, and pour the product into its container. Gently and quickly transfer the product to the fridge and chill to cool.\nOnce the product has set up, remove it from the fridge and let it come to room temperature. That's it!\nTo use, massage a small amount of the product into dry skin. Wet your hands, and massage your face again; you'll notice the balm transforming into a creamy milk! Wipe the product off with a damp cloth, and that's it."
+      "process": "1. Prepare a simmering water bath in a small saucepan.\n2. Measure the heated phase ingredients into a heat-safe beaker and place it in the water bath.\n3. Stir occasionally while heating for 20–30 minutes to ensure the powders remain evenly distributed.\n4. Once the mixture is completely melted, remove from the water bath and dry the exterior of the container.\n5. Quickly stir in the cooling phase ingredients until well blended.\n6. Pour the mixture into its final container and immediately place it in the refrigerator to set.\n7. Allow the balm to return to room temperature before its first use.",
+      "processRewritten": true
     },
     {
       "id": "rich-plum-face-wash",
@@ -2960,7 +2963,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! This is quite thick, so I recommend a wide-mouthed jar.\nUse this as you'd use any foaming facial cleanser.\nWhen made as written, the pH of this cleanser is approximately 4.65, which is great."
+      "process": "1. Set up a water bath by simmering roughly 3cm of water in a broad, flat pan.\n2. Measure the water phase ingredients into a heat-safe beaker and record the total weight for later reference.\n3. Measure the oil phase ingredients into a second heat-safe beaker.\n4. Heat both containers in the water bath until all solid components have liquefied.\n5. Combine the two phases and allow the resulting emulsion to thicken as it cools.\n6. Once the mixture is room temperature, incorporate the cooling phase ingredients.\n7. Package the thick, creamy cleanser into a wide-mouthed jar.\n8. Verify that the final pH level is approximately 4.65.",
+      "processRewritten": true
     },
     {
       "id": "apricot-powder-to-foam-facial-cleanser",
@@ -2994,7 +2998,8 @@
       ],
       "notes": "I&#8217;ve included a small amount—a scant 1%—of ground apricot kernel powder. This is a pretty scrubby exfoliant, hence the low amount, which is further tempered by grinding it down to an even smaller particle size. All the same, if you have very sensitive skin you may want to halve the exfoliant or remove it altogether, replacing it with more clay or a dried botanical of choice.",
       "category": "face",
-      "process": "Put on your dust mask (USA / Canada).\nOnce the mixture is uniform, that's it! Package the scrub in a bottle with a relatively narrow neck so you can sprinkle a wee bit into your palm at the time of use. A bottle with a sifter lid would also work. I used a 30mL (1fl oz) frosted glass bottle from YellowBee for the blog post and a pretty spice jar for the video.\nTo use, sprinkle half a teaspoon or so of the cleanser into your palm, and work into a lather with a bit of water before gently massaging it into your face and rinsing off."
+      "process": "1. Wear a dust mask to protect yourself from fine particles.\n2. Combine all ingredients and mix thoroughly until the texture is uniform and the liquids are absorbed.\n3. Transfer the powder into a bottle with a narrow neck or a sifter lid for easy dispensing.\n4. To use, work about half a teaspoon of the powder with a little water in your hands to create a foam before applying to the skin.",
+      "processRewritten": true
     },
     {
       "id": "cocoa-coconut-rich-cream-facial-cleanser",
@@ -3055,7 +3060,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes the heated phase should be completely liquid. Remove the water bath from the heat and weigh the heated phase. Add enough hot distilled water to the heated water phase to bring the weight back up to what it was before heating. Stir with a flexible silicone spatula to incorporate.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I recommend using a squeeze tube or tottle for this cleanser; I used a discontinued one from Voyageur, but YellowBee has some similar ones that are a great alternative.\nTo use—massage some cleanser (approximately a quarter-sized amount) into your skin. You can combine it with water first, or apply it to dry skin. Rinse or wipe off. Enjoy!"
+      "process": "1. Create a water bath by simmering roughly 3cm of water in a broad, flat-bottomed pan.\n2. Measure the heated phase ingredients into a heat-safe beaker and note the total weight.\n3. Heat the beaker in the water bath for 20–30 minutes until the contents are fully liquid.\n4. Remove from heat and add enough hot distilled water to bring the mixture back to its original weight.\n5. Stir the mixture steadily with a silicone spatula until it is completely uniform.\n6. Once the cooling phase has been added, transfer the cleanser into a squeeze tube or bottle.\n7. Apply a small amount to either damp or dry skin and rinse thoroughly.",
+      "processRewritten": true
     },
     {
       "id": "gentle-clay-facial-cleansing-bar",
@@ -3125,7 +3131,8 @@
       ],
       "notes": "Lastly, a preservative to keep things safe and stable. In 2020 I used Liquid Germall™ Plus, and in 2025 I used Optiphen™ Plus. This is a fairly easy-to-preserve formulation, so you could swap the preservative if you need/want to. Optiphen™ or Euxyl® PE 9010 would be good, easy options.",
       "category": "face",
-      "process": "Put on your dust mask (USA / Canada) and weigh the dry phase into a bowl. Stir until uniform.\nAdd the wet phase to the dry phase. Put on a pair of nitrile gloves and blend thoroughly with your hands. Once the mixture is uniform, you'll be left with a stiff, easily-mouldable paste.\nIf your dough is too sticky, you'll need to add more clay or corn starch. This is likely to happen if you used a larger grain Sodium Cocoyl Isethionate (SCI) than I did, as it has less surface area to absorb moisture.\nIf your dough is too dry, you'll need to add more Cocamidopropyl Betaine or distilled water.\nNow it's time to shape the bars!\nIn 2020 I used the cube mould, pressing the entire 70g batch at once. I highly recommend lining the top and bottom of the mould with cut-to-size pieces of parchment paper. I set the regulated pressure on my compressor to 55psi. You can see this in action in the 2020 video.\nIn 2025, I used my hands to roll and smoosh the bars into round, flat-topped bars.\nYou can also smoosh the dough into a cavity mould.\nLeave the bars to dry for at least 3–5 days before using.\nUse this bar as you'd use any bar soap. Enjoy!\nWhen made as written, the pH of both versions of this facial cleansing bar comes out to around 5.5, which is great."
+      "process": "1. Wear a dust mask and measure the dry ingredients into a mixing bowl, stirring until blended.\n2. Add the wet phase ingredients to the bowl.\n3. Use gloved hands to knead the mixture until it forms a stiff, mouldable dough.\n4. If the texture is too sticky, add small amounts of clay or starch; if too dry, add a few drops of surfactant or water.\n5. Press the dough into a mould or shape it by hand into flat-topped bars.\n6. Allow the bars to air-dry and harden for 3 to 5 days before using.\n7. Verify that the final pH level is approximately 5.5.",
+      "processRewritten": true
     },
     {
       "id": "rose-and-clay-cleansing-balm",
@@ -3165,7 +3172,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nOnce you reach trace you can now pour the cleansing balm into its container and leave it on the counter to set up. I used a 50mL (1.69fl oz) plastic jar from YellowBee.\nTo use; I like to massage a dollop of cleansing balm into dry skin and then wipe it off with a damp microfibre cloth. I wouldn't use this to remove oil makeup because of the rose powder—you don't need to exfoliate your eyelids. Enjoy!"
+      "process": "1. Prepare a simmering water bath in a small saucepan.\n2. Measure the heated phase ingredients into a heat-safe beaker and place it in the water bath.\n3. Set up an ice bath in a separate bowl with cold water and ice cubes.\n4. Heat the ingredients for 20–30 minutes until fully melted, then remove from heat and dry the container.\n5. Place the beaker in the ice bath and stir steadily until the mixture reaches a \"trace\" consistency.\n6. Pour the thickened balm into its final jar and allow it to set on the counter.\n7. To use, massage a dollop of cleansing balm into dry skin and then wipe it off with a damp microfibre cloth.",
+      "processRewritten": true
     },
     {
       "id": "whipped-cream-calendula-facial-cleanser",
@@ -3231,7 +3239,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nLeave the cream cleanser to fully cool; it will solidify. That's what we want! Now it's time to grab your electric beaters (you'll likely only need one of the beaters if you're making a 100g [3.5oz] batch) and whip the cream cleanser until it's light and fluffy.\nTo use: massage a dollop of Whipped Cream Calendula Facial Cleanser into your skin, and rinse it off with a damp microfibre cloth. You can also work it up with some water in your hands before massaging that into your face, and then rinsing that off. It's up to you!"
+      "process": "1. Set up a simmering water bath in a broad, flat-bottomed pan.\n2. Measure the water phase ingredients into one heat-safe beaker and record the total weight.\n3. Measure the oil phase ingredients into a second heat-safe beaker.\n4. Heat both containers in the water bath until the oil phase is completely liquefied.\n5. Combine the phases and allow the mixture to cool undisturbed until it solidifies.\n6. Once solid, use an electric hand mixer to whip the cleanser until it is light, airy, and fluffy.\n7. Apply a dollop to the skin and rinse away with a warm, damp cloth.",
+      "processRewritten": true
     },
     {
       "id": "creamy-jelly-facial-cleanser",
@@ -3277,7 +3286,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won’t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the Polyacrylate crosspolymer-6 and glycerine into a small beaker and stir to combine. Add the panthenol, cakendula extract, fractionated coconut oil, and liquid germall plus. Stir to combine.\nAdd the water, cover the mixture, and leave it to hydrate and dissolve—leaving it overnight is very convenient, but an hour or two will do.\nAfter the mixture has had a chance to hydrate, whisk it thoroughly to combine and make the mixture uniform. Once the mixture is perfectly smooth and well blended, weigh in the Cocamidopropyl Betaine and gently stir to combine. You'll notice the texture shift a bit to something much more jelly-like!\nUse as you would any facial cleanser—I like to work it up with a bit of water between my palms, massage that into my face, and then wipe it all off with a damp microfibre cloth. If you are wearing makeup and/or sunscreen I'd recommend using an oil based cleanser first to remove that, and then following up with this cleanser. Enjoy!"
+      "process": "1. Measure the thickener and glycerin into a small beaker and stir until smooth.\n2. Add the extract, oil, and preservative, then stir to combine.\n3. Pour in the distilled water, cover the beaker, and allow the mixture to sit for several hours or overnight to fully hydrate.\n4. Once the mixture is smooth and hydrated, whisk it vigorously until uniform.\n5. Gently fold in the surfactant, noting that the texture will shift into a jelly-like consistency.\n6. To use, lather a small amount with water in your hands before applying to the face.",
+      "processRewritten": true
     },
     {
       "id": "cream-silk-cleansing-balm",
