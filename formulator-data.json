@@ -843,7 +843,9 @@
     "Clear Soap Base",
     "White Soap Base",
     "Clear Melt And Pour Soap",
-    "Chamomile Essential Oil"
+    "Chamomile Essential Oil",
+    "Inexpensive Cooking Oil—I Used Olive Oil",
+    "Orange Wax"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -29916,6 +29918,50 @@
       ],
       "notes": "",
       "category": "body"
+    },
+    {
+      "id": "magical-sticky-label-removal-goo",
+      "name": "Magical Sticky Label Removal Goo",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/magical-sticky-label-removal-goo/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "One of my most popular entries is a short and sweet one on getting sticky labels off jars using one secret ingredient (it&#8217;s cooking oil). Consider this the 2.0 of that entry.",
+      "ingredients": [
+        {
+          "name": "Inexpensive Cooking Oil—I Used Olive Oil",
+          "pct": 83.3
+        },
+        {
+          "name": "D-Limonene",
+          "pct": 16.7
+        }
+      ],
+      "notes": "",
+      "category": "cleaning"
+    },
+    {
+      "id": "orange-wax-wood-polish",
+      "name": "Orange Wax Wood Polish",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/orange-wax-wood-polish/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "The polish comes together in a flash—melt everything together, pour it in a tin, and let it set up. That&#8217;s it! To use, buff it into tired looking wooden cutting boards, let it soak in, and then buff off any extra. The orange wax will stain ligh…",
+      "ingredients": [
+        {
+          "name": "Orange Wax",
+          "pct": 30
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 70
+        }
+      ],
+      "notes": "We also have wooden cabinets, and a wooden hearth and mantle for our propane fireplace.",
+      "category": "cleaning"
     }
   ]
 }
