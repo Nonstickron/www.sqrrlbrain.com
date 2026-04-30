@@ -26559,7 +26559,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-turmeric-ginger-body-scrub/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY DIY Turmeric & Ginger Body Scrub from Soap Queen.",
+      "description": "A vibrant anhydrous body scrub featuring turmeric powder and ginger essential oil. Formulated with sugar exfoliants for effective skin resurfacing and brightening benefits.",
       "ingredients": [
         {
           "name": "Sugar",
@@ -26583,8 +26583,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large mixing bowl, combine the sugar and turmeric powder. Stir them together to fully combine and get rid of any chunks.\nPour the oil mixture into the sugar. Use your hands or a spatula to thoroughly mix.\nTransfer the mixture into the jars. To use, apply to wet skin, scrub in circular motions, and rinse off. Enjoy!",
-      "category": "body"
+      "process": "1. Combine the sugar and turmeric powder in a large mixing bowl and stir until uniform.\n2. In a separate container, blend the liquid carrier oils and essential oils.\n3. Gradually incorporate the oil mixture into the dry phase, blending thoroughly by hand or with a spatula.\n4. Transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "diy-sugar-scrub-cubes",
@@ -26595,7 +26596,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY DIY Sugar Scrub Cubes from Soap Queen.",
+      "description": "Single-use sugar scrub cubes formulated with melt-and-pour soap base and sweet almond oil. Designed for a convenient, low-mess exfoliation experience with a mild lather.",
       "ingredients": [
         {
           "name": "Clear Melt & Pour Soap Base",
@@ -26611,8 +26612,9 @@
         }
       ],
       "notes": "",
-      "process": "Chop 2 ounces of Clear Melt and Pour Soap into small, even pieces. Place into a heat safe container. Add 2 ounces of sweet almond oil. Measure 6 ounces of granulated sugar into a separate container. Have two Rectangle Molds with Lids ready to go, with the lids off.\nChop off a hunk of the Fizzy Lemonade Color Block or Fired Up Fuchsia Color Block (depending on what color you'd like to make) and place it into the container with the melt and pour soap. Add 2 mL of Fresh Bamboo Fragrance Oil.\nPlace the container in the microwave for about 35 seconds, or until the soap is completely melted but not boiling. Remove from the microwave and stir to thoroughly mix together the soap, colorant and fragrance oil.\nPour the sugar into the mixture and stir very quickly and rigorously for about 10 seconds. Quickly pour the mixture into the 2 molds. If it becomes too thick to pour, place the mixture into the microwave using 5-10 seconds to loosen the mixture. Don't microwave for too long, or the sugar can melt.\nAllow the cubes to harden in the mold for several hours until completely cool and firm. Release from the mold and cut into 6 cubes. Store the cubes in an airtight package to prevent glycerin dew.\nTo use, break up the scrub slightly with your hand along with warm water, and apply to skin. These scrubs are great for the body, but may be a little harsh on the face. Enjoy!",
-      "category": "body"
+      "process": "1. Chop the soap base into small pieces and combine with the carrier oil in a heat-safe beaker.\n2. Melt using short microwave bursts until the soap is fully liquid (approx. 35 seconds).\n3. Incorporate the colorants and fragrance, stirring until uniform.\n4. Quickly fold in the sugar and stir vigorously for 10 seconds.\n5. Pour the mixture into silicone moulds and allow to harden for several hours before cutting into cubes.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "how-to-make-rosehip-seed-bath-salts",
@@ -26623,7 +26625,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY How to Make Rosehip Seed Bath Salts from Soap Queen.",
+      "description": "Premium bath salts featuring rosehip seed oil and evening primrose extract. Designed for a skin-softening, mineral-rich bath soak with a radiant rose-gold shimmer.",
       "ingredients": [
         {
           "name": "Fine Grained Dead Sea Salt",
@@ -26651,8 +26653,9 @@
         }
       ],
       "notes": "",
-      "process": "In a small container, mix together the rosehip seed oil, evening primrose extract, Optiphen and polysorbate 80. Mix until fully combined.\nAdd the Rose Quartz Fragrance Oil and mix together.\nIn a large bowl, add the fine grained Dead Sea salt and Rose Gold Mica. Mix together until completely combined.\nAdd the liquid mixture into the salts and use a spoon or spatula to fully mix together.\nAdd the rose petals and mix together. Feel free to add more or less rose petals if you’d like. Spoon the mixture into jars. Once you’re ready to use, add a few heaping tablespoons into the hot bath and enjoy!",
-      "category": "body"
+      "process": "1. Combine the carrier oils, botanical extracts, and preservative in a beaker and stir until uniform.\n2. In a large bowl, whisk the Dead Sea salt and mica shimmer together.\n3. Gradually incorporate the liquid mixture into the salts, stirring until the salt is evenly coated.\n4. Fold in the dried rose petals before packaging in storage containers.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "cucumber-melon-sea-salt-scrub-diy",
@@ -26697,7 +26700,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soaks-and-scrubs/wildflower-honey-sugar-scrub-diy/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Wildflower Honey Sugar Scrub DIY from Soap Queen.",
+      "description": "A hydrating sugar scrub featuring wildflower honey and strawberry seeds. Formulated with a gentle surfactant for a clean rinse and intensive skin softening.",
       "ingredients": [
         {
           "name": "Granulated Sugar",
@@ -26713,8 +26716,9 @@
         }
       ],
       "notes": "",
-      "process": "In a small container, mix together the jojoba oil and potassium cocoate. The mixture will become cloudy and thick.\nAdd the Wildflower Honey Fragrance Oil and optiphen. Use a spoon to thoroughly mix the ingredients. NOTE ABOUT PRESERVATIVES: Although this scrub doesn’t contain water, it will likely get water splashed in it during use. The extra water may cause bacteria and mold to grow. We added a preservative to be extra careful, but it is optional.\nIn a large separate container, mix together the sugar and strawberry seeds.\nAdd the liquid ingredients into the sugar and strawberry seeds. Use a spatula or gloved hands to fully combine the mixture. Spoon into jars. To use, apply to damp skin, and scrub in circular motions. Wash off. Enjoy!",
-      "category": "body"
+      "process": "1. Combine the honey, liquid carrier oils, and surfactant in a beaker and stir until uniform.\n2. In a separate bowl, whisk the sugar and strawberry seeds together.\n3. Gradually incorporate the liquid phase into the dry phase, blending thoroughly with gloved hands.\n4. Transfer the finished scrub to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "diy-violet-sugar-scrub-cubes",
@@ -26725,7 +26729,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY DIY Violet Sugar Scrub Cubes from Soap Queen.",
+      "description": "Scented sugar scrub cubes featuring a vibrant violet hue and mild lather. Formulated with a soap base and humectants for a non-drying, effectively exfoliating bath treatment.",
       "ingredients": [
         {
           "name": "Granulated Sugar",
@@ -26749,8 +26753,9 @@
         }
       ],
       "notes": "",
-      "process": "Chop and melt 11 ounces of Clear Melt and Pour Soap in the microwave using 15-20 second bursts until completely melted. Once completely melted, add the glycerin and sweet almond oil. Stir the ingredients together. The mixture will become cloudy, and oils will sit on top. This is normal.\nBegin adding drops of the Liquid Violet. I found that in order to incorporate the colorant into the mixture, I needed to “break apart” the drops with a whisk. In the photo below, you can see how the colorant is not quite mixing in. If this happens to you, grab a whisk (preferably metal) and start whisking! The colorant will start to disperse throughout the mixture.\nContinue to add drops of the Liquid Violet until you achieve a rich purple color. I used about 15 drops. Keep in mind when the sugar is added, the color will lighten. Add drops until you’re happy with the shade, and use the whisk to completely mix in.\nAdd the Violet Fragrance Oil, and use the whisk to completely mix in. At this point, the mixture will have cooled. Once the sugar is added, the mixture will cool very quickly. To keep the mixture fluid and pourable after the sugar is mixed in, check the temperature of the mixture.\nHeat in the microwave using 10 second bursts, stirring between each burst, until the mixture is about 135 ° F. Be careful to not burn the mixture.\nOpen all the molds, and have them ready on the counter. Add the granulated sugar, and use a spatula to quickly stir in.\nPour the mixture into each Small Cubes Mold and Package. Allow them to cool and harden for several hours, up to overnight with the lid open.\nOnce the cubes have fully cooled and hardened, use a knife to cut the cubes at the seam. Or, you can break off a cube once you’re ready to use.\nTo use, wet hands and break apart the cube. Apply to the skin and scrub. The cube also creates a mild lather from the soap, leaving skin feeling clean yet moisturized. Store the cubes in a dry, cool place. Avoid them from coming in contact with water prior t",
-      "category": "body"
+      "process": "1. Melt the soap base, glycerin, and carrier oils together using short microwave bursts (135°F).\n2. Incorporate the liquid colorants and fragrance, whisking thoroughly to ensure even distribution.\n3. Quickly stir in the sugar until the mixture reaches a thick, uniform consistency.\n4. Pour into silicone moulds and allow to solidify for 12–24 hours.\n5. Unmould and store in an airtight container.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "kauai-red-sea-salt-scrub-diy",
@@ -26759,7 +26764,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/kauai-red-sea-salt-scrub-diy/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Kauai Red Sea Salt Scrub DIY from Soap Queen.",
+      "description": "An exotic salt scrub featuring Kauai red sea salt and tropical fragrance oils. Formulated with liquid surfactants for effective cleansing and a smooth, non-greasy finish.",
       "ingredients": [
         {
           "name": "Kauai Red Sea Salt - Fine",
@@ -26787,8 +26792,9 @@
         }
       ],
       "notes": "",
-      "process": "In a small container, add the fractionated coconut oil, potassium cocoate and jojoba oil. Stir together.\nAdd the Pikake Flower Fragrance Oil and Passionfruit Papaya Fragrance Oil. Add the Optiphen and stir together all the ingredients.\nPour the Kauai Red Sea Salt into a large bowl. Add the liquid ingredients and stir to fully mix.\nSpoon the scrub into jars until full. Once you’re ready to use, apply the scrub to wet skin and gently scrub. Wash off. Enjoy!",
-      "category": "body"
+      "process": "1. Combine the carrier oils and surfactants in a small beaker.\n2. Incorporate the fragrance and preservative, stirring until uniform.\n3. Place the red sea salt in a large bowl and gradually add the liquid mixture.\n4. Stir until the salt is thoroughly integrated and package in jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "apple-sage-salt-scrub-diy",
@@ -26799,7 +26805,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Apple & Sage Salt Scrub DIY from Soap Queen.",
+      "description": "A multi-layered salt scrub featuring Epsom salts and a crisp apple-sage scent. Designed for a visually striking, mineral-rich exfoliation experience.",
       "ingredients": [
         {
           "name": "Epsom Salt Extra Fine",
@@ -26815,8 +26821,9 @@
         }
       ],
       "notes": "",
-      "process": "Measure out 9.3 oz. of Epsom salt into three separate containers. To one container, add 1/4 tsp. of Apple Moss Green Mica and mix thoroughly to combine. To another container, add 1/4 tsp of. Evergreen Mica and mix to combine. Leave the third container uncolored.\nSplit the liquid mixture equally between the three salt containers. You can use a scale to measure 1.3 oz. into each or just eyeball it. Stir each container until the liquid is fully incorporated.\nSpoon the Apple Moss Green salt mixture into the bottom of a bail jar. You can use a scale to measure 3.5 ounces of the mixture or just eyeball it. Use the spoon to pack the salt down and smooth it out to form an even layer.\nSpoon in the white salt and pack it down. Finally, spoon in the Evergreen salt and pack it down. Fill the other two jars. Enjoy! Note: We found the scrub does discolor a slight yellow after a few months. It still feels great on the skin, but will affect the final color.",
-      "category": "body"
+      "process": "1. Divide the Epsom salts into three portions and color two of them with different green micas.\n2. Blend the liquid carrier oils and fragrances, then divide the mixture equally between the three salt portions.\n3. Stir each portion until the salt is evenly coated with oil and color.\n4. Layer the three colors sequentially into glass jars, packing each layer down firmly.\n5. Store in a cool location to maintain color integrity.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "blueberry-jam-sugar-scrub-easy-diy",
@@ -26827,7 +26834,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Blueberry Jam Sugar Scrub Easy DIY from Soap Queen.",
+      "description": "A fruit-themed sugar scrub featuring exfoliating jojoba beads and a blueberry scent. Designed for gentle resurfacing and high skin emolliency with a clinical blue finish.",
       "ingredients": [
         {
           "name": "Granulated Sugar",
@@ -26851,8 +26858,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large container, add 1.8 oz. of Jasmine Jojoba Beads, 1.8 oz. of Sierra Sky Jojoba Beads and 20 oz. of sugar.\nThoroughly mix the jojoba beads and sugar together.\nAdd 1 oz. of potassium cocoate and 1 oz. of fractionated coconut oil into the mixture. Use a spoon to fully incorporate the liquid.\nAdd 9 mL of Blueberry Jam Fragrance Oil and 9 mL of Optiphen and stir until fully incorporated. Note: Although this scrub doesn’t contain water, it will likely get water splashed in it during use. The extra water may cause bacteria and mold to grow. We added a preservative to be extra careful but the preservative is optional. You can read more in the Talk It Out Tuesday: Preservatives post.\nUsing a spoon, scoop the scrub evenly into jars. Enjoy!",
-      "category": "body"
+      "process": "1. Whisk the sugar and jojoba beads together in a large mixing bowl.\n2. Incorporate the liquid carrier oils and surfactants, stirring until the mixture is uniform.\n3. Add the fragrance and preservative, blending thoroughly.\n4. Transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "diy-soaking-salt-scrub-wedding-favors",
@@ -26861,7 +26869,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/56981/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY DIY Soaking Salt & Scrub Wedding Favors from Soap Queen.",
+      "description": "Versatile bath salts that function as both a mineral soak and a physical exfoliant. Features customizable scents and colors suitable for personalized event favors.",
       "ingredients": [
         {
           "name": "Fine Grained Dead Sea Salt",
@@ -26881,8 +26889,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large mixing bowl, mix the fine grained Dead Sea salt and 3 oz of avocado oil. Use your hands or a spatula to thoroughly mix together.\nAdd the Optiphen and continue to mix until it’s thoroughly mixed in.\nNote: Although this scrub doesn’t contain water, it will likely get water splashed in it during use. The extra water may cause bacteria and mold to grow. We added a preservative to be extra careful. You can read more in the Talk It Out Tuesday: Preservatives post.\nSplit the salts in half. This way, you can add different color and scents. If you are only making one, do not split the batch. To one batch, add the Tobacco and Bay Leaf Fragrance Oil and 1/2 tsp. King’s Gold Mica. Use your hands or spatula to thoroughly mix in.\nTo the other batch of salts, add 1/2 tsp. Rose Gold Mica and a pinch of King’s Gold Mica to create a slightly warmer tone. Then add the Sweet Pea Fragrance Oil and use your hands or a spatula to thoroughly mix in.\nFill each jar with salts. To use as a scrub, apply to damp skin and use circular motions to gently exfoliate. This scrub is great for legs, body, hands and feet, but might be a little scratchy for the face. To use as soaking salts, scoop a heaping spoonful of the salts into hot bath water. Enjoy!",
-      "category": "body"
+      "process": "1. Combine the Dead Sea salt and carrier oil in a large bowl and massage by hand until uniform.\n2. Incorporate the preservative and stir well.\n3. Divide the batch as needed to add varying fragrance oils and mica colors.\n4. Blend thoroughly until the colors are homogeneous.\n5. Package in small jars for use as either a scrub or a bath additive.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "lovespell-solid-bubble-bath-diy",
@@ -26891,7 +26900,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lovespell-solid-bubble-bath-diy/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY LoveSpell Solid Bubble Bath DIY from Soap Queen.",
+      "description": "Mouldable solid bubble bath bars featuring a tri-layered roll design. Designed to produce a high volume of dense, creamy bubbles and a long-lasting fragrance.",
       "ingredients": [
         {
           "name": "Liquid Glycerin",
@@ -26927,8 +26936,9 @@
         }
       ],
       "notes": "",
-      "process": "In a small container, mix together the liquid glycerin, castor oil, and LoveSpell Fragrance Oil. Stir until all the wet ingredients are completely combined.\nPour the wet ingredients into the dry, and slowly work the wet into the dry. A spatula or your hands is the best way to work in the wet ingredients.\nOnce the dough is thoroughly mixed, divide it in half. To one half, add 12 mL Eastern Purple LabColor and use your gloved hands or spatula to thoroughly mix in.\nTo the other half, add 6 mL of the Pinkberry Sherbert diluted LabColor and use your gloved hands or spatula to thoroughly mix in the colorant.\nPrepare your tabletop. Place a large piece of freezer or parchment paper on your work space. Then, lightly cover the paper with a dusting of baking soda. You don't need a lot, just enough to keep the mixture from sticking to the paper. Then, take the purple \"dough\" and form a long log shape. Use your hands to flatten and spread the mixture.\nNow it’s time to roll! Starting on the side closest to you, begin to roll the dough up. With every roll, gently peel the paper back, then continue rolling. For this step, I would recommend checking out the Bubble Bath video on Soap Queen TV to get a better idea of this process.\nOnce the dough is completely rolled up, use your hands to gently press the layers together and compact the roll. You can also transfer the roll to a clean piece of parchment paper, and roll again as you shape it.\nSprinkle the top of the roll with Lavender Mica and Fine Iridescent Glitter.\nUse a sharp knife to carefully cut the roll into bars. Transfer the bars to a clean piece of parchment paper and sprinkle with more glitter. Be very careful when handling the bars, as they will be very soft and very delicate.\nAllow the bars to lay out for at least 3 days to harden. Depending on your climate, they may need over a week to fully harden. Once you’re ready to use, crumble the bars and place them into the tub while the water is running to create the fluffiest bub",
-      "category": "body"
+      "process": "1. Combine the liquid ingredients in a beaker and stir until uniform.\n2. Whisk the dry base ingredients in a bowl, then work the liquid mixture into the powders by hand until a stiff dough is formed.\n3. Divide the dough and color as desired with liquid dyes.\n4. Roll the colored portions into a log and flatten sequentially on parchment paper to create a multi-layered roll.\n5. Cut the roll into individual bars and allow them to air-dry for at least 3 days before use.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "cleansing-orange-spice-salt-scrub",
@@ -26937,7 +26947,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cleansing-orange-spice-salt-scrub/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Cleansing Orange Spice Salt Scrub from Soap Queen.",
+      "description": "An energizing salt scrub featuring orange peel and cinnamon. Formulated with liquid soap concentrate for effective cleansing and a smooth, non-oily finish on the hands and feet.",
       "ingredients": [
         {
           "name": "Fine Grained Dead Sea Salt",
@@ -26953,8 +26963,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large mixing bowl, add the fine grained Dead Sea salt. Add the orange peel to the salt and stir to mix in. Add the Racing Stripe Orange Mica and stir until completely blended.\nIn a small container, mix together the Stephenson Liquid Soap Concentrate and the olive oil. The mixture will soon turn into a creamy, opaque color.\nAdd the liquid soap mixture to the dry ingredients and stir until completely combined. If you prefer a more liquid scrub, feel free to add more Liquid Soap Concentrate or olive oil.\nAdd the Cinnamon Sticks Fragrance Oil and 10X Orange Essential Oil and stir until completely combined. If you'd like to add ground cinnamon, add a dash to the mixture and stir until completely combined. I didn't measure exactly how much I added, but it was about 1/4 to 1/2 tsp. of ground cinnamon.\nTransfer the scrub into jars, using a spoon to press the scrub into the jar to fill completely. Enjoy! I recommend using this scrub on the hands, feet and legs. Fine grained Dead Sea salt is a little bit harsh for the face. =)",
-      "category": "body"
+      "process": "1. Combine the salt, orange peel, and mica in a large bowl.\n2. Blend the liquid soap and carrier oils until they form a creamy, opaque emulsion.\n3. Gradually incorporate the liquid mixture into the dry phase, stirring until uniform.\n4. Add the essential oils and spices, performing a final blend before packaging in jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "easy-diy-cranberry-sugar-scrub",
@@ -26963,7 +26974,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soaks-and-scrubs/cranberry-sugar-scrub/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Easy DIY Cranberry Sugar Scrub from Soap Queen.",
+      "description": "A seasonal sugar scrub featuring exfoliating cranberry seeds and a festive berry scent. Designed for high emolliency and effective removal of dry skin.",
       "ingredients": [
         {
           "name": "Granulated Sugar",
@@ -26979,8 +26990,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large bowl, add the granulated sugar and cranberry seeds and mix to thoroughly combine.\nAdd 1/2 tsp. of Merlot Sparkle Mica and mix until the color is thoroughly combined into the dry ingredients.\nAdd the avocado oil, glycerin and potassium cocoate and stir to fully combine into the dry ingredients. This can take a little time! You may find it easier to use your hands to mix everything together.\nAdd the Cranberry Fig Fragrance Oil and Phenonip and continue to mix until it’s thoroughly mixed in. Note: Although this scrub doesn’t contain water, it will likely get water splashed in it during use. The extra water may cause bacteria and mold to grow. We added a preservative to be extra careful.",
-      "category": "body"
+      "process": "1. Whisk the sugar, seeds, and mica shimmer together in a large bowl.\n2. Incorporate the carrier oils and humectants, blending by hand until the mixture is homogeneous.\n3. Add the fragrance and preservative, stirring thoroughly.\n4. Transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "caramelized-copper-brown-sugar-scrub",
@@ -26991,7 +27003,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Caramelized Copper Brown Sugar Scrub from Soap Queen.",
+      "description": "A rich, copper-toned sugar scrub featuring brown sugar and avocado butter. Formulated for high emolliency and a smooth, non-greasy skin finish.",
       "ingredients": [
         {
           "name": "Avocado Butter",
@@ -27011,8 +27023,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large heat safe container, add 10 oz. brown sugar and 10 oz. white sugar. Make sure there is enough room in the bowl for the added oil, and for mixing.\nIn a small heat safe container, melt 1.5 oz. avocado butter on 5 second bursts. Stir between each burst.\nAdd 3.5 oz. of potassium cocoate to a separate heat safe container. Pour in the melted avocado butter and mix well.\nAdd 7 mL of Optiphen and .8 oz. of Burnt Sugar Fragrance Oil to the oil mixture. Mix to fully incorporate. Note: Although this scrub doesn’t contain water, it will likely get water splashed in it during use. The extra water may cause bacteria and mold to grow. We added a preservative to be extra careful. You can read more in the Talk It Out Tuesday: Preservatives post.\nPour the oil mixture into the sugar and mix well.\nAdd 2.5 tsp. of Copper Sparkle Mica and 2 tsp. King’s Gold Mica. Stir until the colorants are fully incorporated.\nPour the scrub equally into the three jars and allow them to fully cool. Enjoy!",
-      "category": "body"
+      "process": "1. Melt the avocado butter using short microwave bursts.\n2. Incorporate the surfactant and stir until uniform.\n3. Blend in the fragrance and preservative.\n4. Gradually add the butter mixture to the brown and white sugar blend, stirring vigorously.\n5. Incorporate the mica shimmer and transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "soothing-floral-bath-salt-tutorial",
@@ -27021,7 +27034,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soothing-floral-bath-salt-tutorial/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Soothing Floral Bath Salt Tutorial from Soap Queen.",
+      "description": "A botanical-rich bath salt blend featuring rose, lavender, and calendula petals. Designed for a relaxing, mineral-rich bath soak with aromatherapeutic benefits.",
       "ingredients": [
         {
           "name": "Medium Grain Dead Sea Salt",
@@ -27037,8 +27050,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large bowl, add the medium grained Dead Sea salt, fine grained Dead Sea salt and Epsom salt. Stir together with your hands.\nAdd 6 mL of Orange Blossom Candle and Soap Fragrance Oil and Lavender 40/42 Essential Oil. Using your hands, stir to fully incorporate the salts and fragrances.\nAdd 3 heaping Tbsp. of the lavender buds, rose petals and calendula.\nUsing your hands, stir in the flowers until they’re completely incorporated.\nSpoon in the mixture evenly into bail jars. Enjoy!",
-      "category": "body"
+      "process": "1. Whisk the various salt textures together in a large bowl.\n2. Incorporate the essential oils and fragrance, massaging by hand until uniform.\n3. Fold in the dried flower petals and stir gently to ensure even distribution.\n4. Transfer to storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "sparkling-snow-sugar-scrub",
@@ -27050,7 +27064,7 @@
         "Stove",
         "Stand/hand mixer"
       ],
-      "description": "DIY Sparkling Snow Sugar Scrub from Soap Queen.",
+      "description": "A high-shine sugar scrub featuring foaming bath butter and iridescent micas. Designed for a luxurious lather and effective physical exfoliation with a polished skin finish.",
       "ingredients": [
         {
           "name": "Foaming Bath Butter",
@@ -27070,8 +27084,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large mixing bowl, add the Foaming Bath Butter and whip with a handheld mixer until smooth. You can also use a stand mixer if you prefer.\nAdd the shea butter and shea oil, and use the mixer to whip until the mixture is completely blended.\nAdd the Snowflake Sparkle Mica, Super Pearly White Mica, Fresh Snow Fragrance Oil and Spring Meadow Fragrance Oil. Use the mixer to blend until smooth. Be sure to start on a low speed so the mica does not “poof!” everywhere.\nAdd sugar to the mixture, and blend until smooth.\nTransfer the scrub into the plastic bail jars, or another container. For this scrub, I chose to place the scrub into a frosting bag, and pipe the scrub into the jar for a smoother look. This step is optional, but it really makes the scrub look polished and professional.\nTo help make the scrub “pop” sprinkle a small amount of the Snowflake Sparkle Mica on top of the scrub. Store the scrub in a dry, cool place.\nA note about preservatives: Because the Foaming Bath Butter already contains a preservative, an additional preservative was not used in this recipe. If you would like to add a preservative, a .5% usage rate is recommended so as to not over preserve the product.",
-      "category": "body"
+      "process": "1. Soften the foaming bath butter in a bowl using an electric mixer until smooth.\n2. Gradually incorporate the shea butter and oils, continuing to whip until uniform.\n3. Add the micas and fragrances on low speed to prevent airborne particles.\n4. Fold in the sugar and perform a final whip until smooth.\n5. Optionally, pipe the scrub into jars for a professional aesthetic.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "walnut-facial-scrub-for-men",
@@ -27080,7 +27095,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soaks-and-scrubs/walnut-facial-scrub-for-men/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Walnut Facial Scrub for Men from Soap Queen.",
+      "description": "A targeted facial scrub for men featuring finely ground walnut shells and kaolin clay. Formulated for effective removal of debris and a non-drying, deep-cleansing finish.",
       "ingredients": [
         {
           "name": "Sodium Bicarbonate Baking Soda",
@@ -27096,8 +27111,9 @@
         }
       ],
       "notes": "",
-      "process": "In a large container, add the baking soda. Use your hands to break up any clumps.\nAdd the walnut shells and kaolin clay.\nUse your hands to mix in all the ingredients and break up any clumps.\nAdd the fragrance oil, and use your hands to fully mix in the fragrance oil. Make sure there are no clumps of fragrance oil in the mixture. Pour the scub into bail jars. To use, place a small amount of the scrub in your hands. Add a little water to the scrub to make a paste. Apply the scrub to wet skin, and move in gentle circular motions. Rinse off and apply moisturizer as usual.",
-      "category": "body"
+      "process": "1. Combine the baking soda, clay, and walnut shells in a bowl and whisk until no clumps remain.\n2. Incorporate the fragrance oil and massage by hand until evenly distributed.\n3. Transfer to storage jars.\n4. For use, mix a small portion with water in the palm to create a paste before massaging onto the skin.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "silky-coconut-milk-face-mask",
@@ -27106,7 +27122,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soaks-and-scrubs/silky-coconut-milk-face-mask/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Silky Coconut Milk Face Mask from Soap Queen.",
+      "description": "A skin-softening dry face mask featuring coconut milk powder and colloidal oatmeal. Designed for fresh preparation at the time of use to provide intensive humectant-based hydration.",
       "ingredients": [
         {
           "name": "Coconut Milk Powder",
@@ -27118,8 +27134,9 @@
         }
       ],
       "notes": "",
-      "process": "In a container, add the coconut milk powder, kaolin clay and colloidal oatmeal. Stir well.\nAdd 1.5 mL of vitamin E oil and 1.5 mL of Evening Primrose Extract and mix well. If you notice clumps forming, you can break them up with your hands or a whisk.\nSpoon the mixture evenly into the glass bail jars.\nTo hydrate and use: In a small bowl, add 1-2 teaspoons of liquid to 2 tablespoons of the mask to form a thick paste. Spread the paste on your face and leave until dry (about 10-15 minutes). Rinse the mask off with warm water, scrubbing the mask in a circular motion as you rinse for light exfoliation. Follow with your regular skin routine.",
-      "category": "body"
+      "process": "1. Whisk the dry base ingredients together in a large bowl until uniform.\n2. Incorporate the liquid extracts and vitamin E, mashing any clumps that form.\n3. Transfer to storage jars.\n4. To use, hydrate 1–2 teaspoons of the powder with water to form a thick paste and apply to the face for 10–15 minutes.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "shimmering-sea-salt-scrub-recipe",
@@ -27130,7 +27147,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Shimmering Sea Salt Scrub Recipe from Soap Queen.",
+      "description": "A radiant salt scrub featuring reflective gold micas and shea butter. Designed for high emolliency and a smooth, glowing skin finish after exfoliation.",
       "ingredients": [
         {
           "name": "Fine Grained Dead Sea Salt",
@@ -27146,8 +27163,9 @@
         }
       ],
       "notes": "",
-      "process": "DILUTING LABCOLOR: You’ll need to premix your LabColors in order to use them in this project. We like diluting the small bottle of LabColor in 4 oz. of distilled water.\nMelt the coconut oil in the heat resistant plastic pouch and pour it into a heat-safe container.\nAdd the shea butter and stir well. If the warm coconut oil doesn't melt the shea butter fully, put the container into the microwave on 10-second bursts. This ensures that the shea butter doesn't get too hot, which can cause graininess.\nAdd 8 mL of the Crisp Cotton Fragrance Oil and stir well.\nCheck the temperature of the oil mixture. If it's below 176F, add 3.5 mL of Optiphen. If your scrub is warmer than 176 F, the preservative may not be effective. Note: Although this scrub doesn’t contain water, it will likely get water splashed in it during use. The extra water may cause bacteria and mold to grow. We added a preservative to be extra careful.\nAdd 2 1/4 tsp. of the Gold (light) Mica and mix well.\nPour the oil mixture into the salt and stir well. Be sure the salts are completely enveloped in oil and no salt chunks are present.\nOnce the scrub is fully incorporated, pour into two 8 oz. Glass Bail Jar. Let it fully cool and it's ready to use and enjoy!",
-      "category": "body"
+      "process": "1. Melt the coconut oil and shea butter together using short microwave bursts until liquefied (approx. 110°F).\n2. Incorporate the fragrance and preservative, stirring until uniform.\n3. Blend in the mica shimmer.\n4. Gradually pour the oil mixture over the salt and stir until the salt is evenly coated and no clumps remain.\n5. Transfer to storage jars and allow to cool completely.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "rainbow-jojoba-bead-sugar-scrub",
