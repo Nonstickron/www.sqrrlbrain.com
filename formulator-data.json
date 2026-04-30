@@ -19657,7 +19657,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/smooth-shine-hair-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Up next, panthenol: how I love thee. Panthenol (AKA vitamin B5) is a great hair moisturizer, making the hair softer and shinier, and making it more elastic. Some vegetable glycerine also further increases the moisturizing properties of the serum.",
+      "description": "A high-performance hair serum formulated with panthenol and vegetable glycerin. Designed to provide intensive hydration and a smooth, radiant hair finish with improved elasticity.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -19694,7 +19694,8 @@
       ],
       "notes": "The scent comes entirely from our hydrosol; I&#8217;ve gone with rose because I am positively addicted to rose, but you could easily use something else instead. I&#8217;ve also provided guidelines for using a fragrance or essential oil instead instead—those are in the handy &#8220;Substitutions&#8221; section at the end of the recipe!",
       "category": "hair",
-      "process": "Weigh the everything into a small heat-resistant glass measuring cup or directly into a 30mL/1oz bottle with a treatment pump (a dropper top will also work). Stir or cap & shake to combine. If you didn't make the serum directly in your bottle, transfer it to the bottle. That's it!\nTo use, dispense a single pump into your palm, rub your hands together, and then run your hands through your hair, taking care not to deposit too much product in any one place. Repeat as necessary. That's it!"
+      "process": "1. Combine all ingredients in a small beaker or directly in the final storage bottle.\n2. Stir or shake until the mixture is completely uniform.\n3. Transfer to a 30mL bottle equipped with a treatment pump or dropper.\n4. Apply a single pump to the palms and work through the hair from the ears down.",
+      "processRewritten": true
     },
     {
       "id": "silky-camellia-hair-serum",
@@ -22878,7 +22879,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "I&#8217;ve had a ton of requests for a lip oil recently, and I thought this year&#8217;s Frosted Cranberry theme was a great backdrop for a shiny new lip oil formulation &#x1f604; This cheery red oil imparts moisture and shine to our lips and it smel…",
+      "description": "A vibrant red lip oil featuring polyamide-3 for a unique gel-like consistency. Formulated to provide intensive moisture and a high-shine finish with a seasonal berry scent.",
       "ingredients": [
         {
           "name": "Castor Oil",
@@ -22903,7 +22904,8 @@
       ],
       "notes": "SUBSTITUTIONS As always, be aware that making substitutions will change the final product. While these swaps won’t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Stovetop method: Weigh the heated phase ingredients into a small stovetop safe beaker or saucepan. Place that on the stovetop over very low heat to gently and slowly melt the polyamide-3.\nOven method: Preheat your oven to 210°F (100°C). Weigh the heated phase ingredients into a small heat-resistant glass measuring cup or a heavy glass custard cup—what makes the most sense for you will depend a lot on your batch size. Place the measuring cup in your prepared oven to melt everything through.\nOnce the mixture has cooled until it's barely warm to the touch, add the cool down phase. Stir to thoroughly combine and transfer to your packaging. I used some 5mL square tubes with wand lids from TKB Trading (gifted) and loved how that worked!"
+      "process": "1. Heat the base oils and gelling agent in a water bath or oven (100°C) until fully melted and clear.\n2. Remove from heat and allow the mixture to cool until barely warm.\n3. Incorporate the cooling phase ingredients and stir thoroughly.\n4. Transfer the liquid oil to lip gloss tubes with wand applicators.",
+      "processRewritten": true
     },
     {
       "id": "clear-lip-gloss-base-without-versagel",
@@ -22985,7 +22987,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "I packaged the finished gloss in a hard-sided 5mL lip gloss tubes with a wand applicator from TKB Trading, but you could definitely use a soft squeezy lip gloss tube if you prefer. I think this gloss is too soft/liquidy for a pot to be a good choice,…",
+      "description": "A deep-hued lip gloss formulated for high emolliency and long-lasting shine. Features a blend of lightweight oils and waxes for a smooth, non-sticky lip finish.",
       "ingredients": [
         {
           "name": "Blackberry Seed Oil",
@@ -23030,7 +23032,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Preheat your oven to 210°F (100°C).\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup or a heavy glass custard cup—what makes the most sense for you will depend a lot on your batch size. Place the measuring cup in your prepared oven to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the measuring/custard cup from the oven and set it on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nThe cera bellina version will melt just fine in a hot water bath—no need to use the oven if you don't want to.\nContinue stirring the mixture as it cools to ensure it's uniform and smooth. If you've made a larger batch you'll likely want to use an ice bath to speed things along; I found a 5g batch was fine to cool on its own, but heavy glass + a big batch will take a long time to cool without the assistance of an ice bath.\nUse as you'd use any lip gloss. Enjoy!"
+      "process": "1. Melt the oil phase and waxes in a heat-safe container using an oven (100°C) or water bath.\n2. Remove from heat and stir steadily as the mixture cools.\n3. Incorporate the pigments and fragrance once the mixture has gained some viscosity.\n4. Transfer to applicator tubes and allow to set.",
+      "processRewritten": true
     },
     {
       "id": "gold-dust-lip-cream",
@@ -23149,7 +23152,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Save $5 off TKB&#8217;s lipstick mold until August 31, 2018 with discount code Humblebee5 at TKBTrading.com!",
+      "description": "A foundational lipstick base featuring sericite mica for improved glide. Designed for high stability and compatibility with diverse cosmetic pigments and moulds.",
       "ingredients": [
         {
           "name": "Castor Oil",
@@ -23186,7 +23189,8 @@
       ],
       "notes": "Notes &amp; Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through. Stir while the base is in the water bath to ensure the sericite mica is thoroughly incorporated.\nTo use, follow the instructions in this post."
+      "process": "1. Heat the base oils and waxes in a water bath until fully melted.\n2. Stir thoroughly while heating to ensure the mica is evenly distributed.\n3. Incorporate custom pigments as required and pour into lipstick moulds.\n4. Allow to set completely before unmoulding.",
+      "processRewritten": true
     },
     {
       "id": "diy-aloe-vera-gel",
@@ -23195,7 +23199,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/diy-aloe-vera-gel/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Aloe vera gel is a gorgeous summer skincare staple, and with the right formulation, it&#8217;s also really easy (and inexpensive) to DIY! So, that&#8217;s what we&#8217;re going to do today.",
+      "description": "A lightweight facial gel featuring 98% water-based ingredients. Formulated with xanthan gum for stable viscosity and broad-spectrum preservation for long-term storage.",
       "ingredients": [
         {
           "name": "Just Isn&#8217;t Enough &#8220;room&#8221; For Any All Those Not-aloe-vera-juice Ingredients To Be Included At Effective Levels. It Could Be That They&#8217;ve Used A Concentrated Juice To Achieve This Number Rather Than 1:1 Liquid Juice, But The Formulation Cannot Contain 99.9% Fresh Liquid 1:1 Aloe Vera Juice And Also Be Gelled To A Level That Makes Sense For The Tube It Is Sold In, Neutralized, And Properly Preserved.",
@@ -23220,7 +23224,8 @@
       ],
       "notes": "The gel that&#8217;s found in side fresh aloe leaves is often referred to as aloe gel, but that&#8217;s not what we&#8217;re talking about when we talk about aloe gel as a cosmetic product. The clear gel scraped from inside fresh aloe leaves isn&#8217;t very shelf stable, so while it is lovely, if you want an aloe gel you can travel with or sell, it&#8217;s not what you want.",
       "category": "simple",
-      "process": "Can I use a different preservative?\nYes, but if you're a brand new maker I'd recommend sticking with Liquid Germall™ Plus.\nHere are some things to consider if you want to use a different preservative:\nLook at the INCI for your preservative and research it.\nMy Preservatives table is useful!\nMake sure the pH of the final product is compatible with your new preservative.\nPart of the reason I chose Liquid Germall™ Plus is because it's effective over a really broad pH range; not all preservatives are.\nRemember that many natural preservatives will cause the pH of the formulation to drop so you may need to raise it.\nOther natural preservatives will raise the pH of the formulation and require you to lower it after adding the preservative in order for the preservative to work.\nIf you use xanthan gum as your gelling ingredient you'll need a preservative that is readily water soluble as this aloe vera gel is almost entirely water.\nIf you're looking for a natural alternative I don't recommend preservatives based around benzyl alcohol, which includes Geogard® ECT and Euxyl™ k 903, as benzyl alcohol is not very water soluble. You could include a solubilizer in order to get these preservatives to blend in better, but these can negatively impact skin feel.\nGeogard Ultra™ is water soluble, but causes downwards pH drift so it requires you to build an in-situ buffer system with sodium citrate, sodium hydroxide, and possibly citric acid—I've included instructions from the manufacturer in the free Humblebee & Me DIY Encyclopedia entry on it.\nYou could try Euxyl® K 712 (INCI: Water & Sodium Benzoate & Potassium Sorbate) or your own blend of Sodium Benzoate & Potassium Sorbate\nI'd include a chelator like sodium phytate or Tetrasodium Glutamate Diacetate alongside a natural preservative. These will raise the pH, so be sure to test and adjust as required.\nIf you use Polyacrylate crosspolymer-6 (Sepimax ZEN) as your gelling ingredient you can use less water soluble preservatives.\nI've been e"
+      "process": "1. Combine the distilled water and glycerin in a beaker.\n2. Sprinkle the gelling agent over the liquid and blend with a high-speed mixer until smooth.\n3. Allow the mixture to sit for 20 minutes to ensure full hydration.\n4. Verify the pH level and incorporate the preservative.\n5. Transfer the finished gel to a pump bottle or jar.",
+      "processRewritten": true
     },
     {
       "id": "super-simple-moisturizing-lotion",
@@ -23232,7 +23237,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "This is a really simple lotion, and that&#8217;s the point. If you&#8217;re looking for something a bit fancier, you can find all my hand &amp; body lotion formulations here, and all my face lotion formulations here. As of this writing, there are nea…",
+      "description": "A foundational seven-ingredient lotion formulated for high stability and ease of preparation. Suitable for face, hand, or body application with a lightweight finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -23257,7 +23262,8 @@
       ],
       "notes": "For oil, you could choose any liquid oil, or even a butter, like mango butter or shea butter. I chose fractionated coconut oil as it&#8217;s lightweight and inexpensive, but safflower oil, grapeseed oil, apricot kernel oil, almond oil, and jojoba oil would all be good choices. If you want to get a bit more complex you could also blend a couple of different oils (or butters!)—just make sure the tot",
       "category": "simple",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nAll that's left at this point is to bottle up the lotion! This lotion is thin enough to package in a pump-top bottle or a soft squeeze tube. A 120mL (4 fl oz) package is a good choice. Use as you would any lotion. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Combine the phases and blend thoroughly with an immersion blender to form a stable emulsion.\n3. Allow the lotion to cool to room temperature.\n4. Transfer the finished lotion to a pump-top bottle or soft squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "rose-witch-hazel-facial-toner",
@@ -23266,7 +23272,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/rose-witch-hazel-facial-toner/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This sweetly fragrant, refreshing facial toner has become a fast favourite of mine. It smells deliciously of roses, features several soothing and lightly hydrating ingredients, and leaves my skin feeling revived and gently cleansed. It&#8217;s also c…",
+      "description": "A refreshing facial toner featuring rose hydrosol and witch hazel. Formulated for gentle cleansing and astringent benefits with a skin-soothing floral fragrance.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -23299,7 +23305,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "simple",
-      "process": "Weigh the all the ingredients into a small heat-resistant glass measuring cup. Stir to combine.\nOnce the solution is uniform, transfer it to a 120ml/4oz squeeze bottle. You're done!\nTo use, dispense some toner onto a cotton pad or ball and swab the skin with it."
+      "process": "1. Combine all ingredients in a small beaker.\n2. Stir until the mixture is completely uniform.\n3. Transfer the liquid toner to a squeeze bottle for storage.\n4. Apply to the skin using a cotton pad or ball.",
+      "processRewritten": true
     },
     {
       "id": "rose-pink-grapefruit-valentines-soap",
@@ -23514,7 +23521,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Save 8% on watermelon seed oil and everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "description": "A fruity lip scrub featuring watermelon seed oil and a refreshing mint scent. Formulated with sugar exfoliants suspended in a protective anhydrous base.",
       "ingredients": [
         {
           "name": "Watermelon Seed Oil",
@@ -23547,7 +23554,8 @@
       ],
       "notes": "A touch of pink mica colours the bulk of the scrub a pretty melon-y pink, and some peppermint essential oil gives the whole thing a lovely minty scent. If you want to incorporate a watermelon-y note you could look for a watermelon flavour oil; don&#8217;t use a fragrance oil, as they aren&#8217;t approved for use in lip products. The finished scrub is lovely in a small tin or jar, and is just the ",
       "category": "super-simple",
-      "process": "Prepare a water bath by bringing about 3cm/1″ of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nRegarding the sugar melting: Sugar is water soluble, so it cannot dissolve in the oil base. Its melting point is 186°C (367°F), so it cannot melt in a water bath, where the heat is capped at 100°C (212°F).\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nTo use, massage a small amount of the scrub into your lips and rinse off the extra with a bit of water. Resist the urge to eat &#x1f61d;Enjoy!"
+      "process": "1. Heat the base oils and waxes in a water bath until fully melted.\n2. Prepare an ice bath and place the container in it to cool.\n3. Stir constantly until the mixture reaches a \"trace\" consistency.\n4. Incorporate the sugar and essential oils, stirring until uniform.\n5. Transfer to small jars and allow to set.",
+      "processRewritten": true
     },
     {
       "id": "white-chocolate-peppermint-lip-scrub",
@@ -23558,7 +23566,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Rounding out the scrub is a bit of tingly peppermint essential oil and some vitamin E to help delay the onset of rancidity, extending the shelf life. The finished scrub is soft, squishy, and scrubby—simply buff a small amount into your lips, rinse, a…",
+      "description": "A seasonal lip scrub featuring unrefined cocoa butter and peppermint essential oil. Designed for gentle physical exfoliation and intensive lip protection.",
       "ingredients": [
         {
           "name": "Cocoa Butter",
@@ -23583,7 +23591,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "super-simple",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant bowl that's deep and large enough for whipping in. Place the bowl in the water bath to melt the butter through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nI used two 15g (0.5oz) slide-top tins from YellowBee for my scrub. To use, massage a small amount of the scrub into your lips and rinse off the extra with a bit of water. Resist the urge to eat &#x1f61d;Enjoy!"
+      "process": "1. Melt the butter phase in a deep bowl using a water bath.\n2. Prepare an ice bath and place the bowl in it once the butter is liquid.\n3. Whip the mixture with an electric mixer as it cools until light and fluffy.\n4. Fold in the sugar and essential oils before packaging in small tins.",
+      "processRewritten": true
     },
     {
       "id": "puppy-paw-paste",
@@ -23594,7 +23603,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Puppy Paw Paste is simple. Three, easy peasy ingredients. Soft, creamy mango butter. A lightweight oil—I used sweet almond, but apricot kernel, safflower oil, or grapeseed oil would all be easy alternatives. There&#8217;s a touch of vitamin E oil to …",
+      "description": "A protective balm for canine paw pads featuring mango butter and sweet almond oil. Formulated to provide a durable barrier against environmental cold and moisture.",
       "ingredients": [
         {
           "name": "Mango Butter",
@@ -23611,7 +23620,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "super-simple",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the mango butter into a small heat-resistant bowl—the sort of thing you can comfortably stir in. If you don't have a small bowl, a  heat-resistant glass measuring cup will work. Place the bowl in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nOnce the mango butter has melted, remove it from the heat and stir in the sweet almond oil. Then place the bowl in the ice bath and stir constantly for about one minute, until the mixture has cooled a bit but hasn't noticeably thickened or started to opacify. Weigh in the vitamin E.\nWhen you have reached trace, transfer the mixture to a 30mL/1 ounce tin and leave to set up for at least six hours (though I found it will continue to set up/mature for about a day. Do not refrigerate. That's it!\nTo use, smear a generous amount on your dog's paws before wintery walks. Enjoy!"
+      "process": "1. Melt the mango butter in a heat-safe beaker using a water bath.\n2. Remove from heat and stir in the liquid carrier oil.\n3. Place the container in an ice bath and stir constantly for one minute.\n4. Incorporate the vitamin E once the mixture reaches a \"trace\" consistency.\n5. Transfer to a storage tin and allow to set undisturbed for 24 hours.",
+      "processRewritten": true
     },
     {
       "id": "relaxing-essential-oil-roller",
@@ -24458,7 +24468,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Heart Lotion Bars from Soap Queen.",
+      "description": "Solid lotion bars featuring unrefined cocoa butter and white beeswax. Designed to melt upon contact with skin, providing a protective, long-lasting emollient layer.",
       "ingredients": [
         {
           "name": "Sweet Almond Oil",
@@ -24474,8 +24484,9 @@
         }
       ],
       "notes": "",
-      "process": "In a heat-safe container, add 4.8 ounces of white beeswax and 6.4 ounces of sweet almond oil. Melt in the microwave using 60 second bursts.\nAdd 4.8 ounces of cocoa butter wafers to the hot wax and oil mixture. Stir until the cocoa butter melts. If there are small pieces that won’t melt, place the container back in the microwave and heat using 10 second bursts.\nAdd 4 mL of Vanilla Select Fragrance Oil and stir in thoroughly.\nPlace a small pinch of rose petals into each mold cavity. Use a spoon to cover the petals with a bit of the oil mixture (this helps the petals stay in place). Allow to cool and harden for about 1 minute.\nCarefully pour the remaining oil mixture into each cavity. Place the mold in the freezer so it cools quickly. That helps prevent crystallization.\nRemove from the freezer after 30-60 minutes and enjoy!",
-      "category": "body"
+      "process": "1. Melt the beeswax and carrier oils in a heat-safe container using 60-second microwave bursts.\n2. Incorporate the cocoa butter and stir until fully melted, heating further if necessary.\n3. Add the fragrance oils and stir thoroughly.\n4. Place botanical decorations in the moulds and secure them with a thin layer of the liquid mixture.\n5. Fill the moulds and flash-freeze for 30–60 minutes to prevent crystallization.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "hydrating-body-butter-sticks",
@@ -24486,7 +24497,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "DIY Hydrating Body Butter Sticks from Soap Queen.",
+      "description": "Solid body butter in a convenient twist-up stick format. Formulated with avocado butter and beeswax for high stability and a non-greasy, protective skin finish.",
       "ingredients": [
         {
           "name": "Avocado Butter",
@@ -24510,8 +24521,9 @@
         }
       ],
       "notes": "",
-      "process": "In a heat-safe container, add 1 ounce of oat oil, 3.5 ounces of avocado butter, 3 ounces of white beeswax, and 2.5 ounces of sweet almond oil. Place the container in the microwave and melt using 30-60 second bursts. The beeswax will take longer to melt than the other ingredients. Use caution when removing the container from the microwave – it will be hot.\nAdd 0.2 ounces of Cashmere Fragrance Oil and use a spoon to thoroughly stir in.\nMake sure the clear cap is on the tube and screw the top securely. Flip over, then pull off the base cap and pour in the mixture. TIP: If you overfill the twist tubes, you can use a dropper to remove the excess oil.\nAllow the product to fully set, then press the base cap in securely and enjoy.",
-      "category": "body"
+      "process": "1. Combine the oils, butters, and waxes in a heat-safe container.\n2. Melt using short microwave bursts until the beeswax is fully liquid.\n3. Incorporate the fragrance and stir until uniform.\n4. Pour the liquid mixture into twist-up tubes from the bottom.\n5. Allow to set completely before securing the base caps.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "pumpkin-clay-face-mask",
@@ -24523,7 +24535,7 @@
         "Immersion blender",
         "Stove"
       ],
-      "description": "DIY Pumpkin & Clay Face Mask from Soap Queen.",
+      "description": "A detoxifying clay mask featuring pumpkin powder and Brazilian red clay. Formulated with BTMS-50 for a smooth, conditioning application and a non-stripping cleanse.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -24567,8 +24579,9 @@
         }
       ],
       "notes": "",
-      "process": "Disinfect your utensils by dipping them in a 5% bleach water solution and allowing to dry. This includes mixing containers, your stick blender, and any spoons or spatulas that may come in contact with your mask. Your products must be as free of germs, bacteria, and microbes as possible. To be safe, bleach water all your utensils.\nIn a heat-safe container, combine 1.3 ounces of avocado oil, 1 ounce of oat oil, 0.8 ounces of BTMS-50, and 1 ounce of Polawax Emulsifying Wax. Heat the container in the microwave using 30-60 second bursts until the waxes have fully melted. Be careful when removing the container, as it will be quite hot. Set aside.\nIn a small separate container, measure 6 ounces of kaolin clay, 0.3 ounces of dark red Brazilian clay, and 1 ounce of pumpkin powder. Mix to combine.\nIn a separate large container, heat the distilled water in the microwave (or on the stove top) until it reaches about 160°F. Once the water reaches the correct temperature, some of it may evaporate. Remeasure and add more distilled water if necessary until you have 21.4 ounces.\nCheck the temperatures of both containers. Each container should be about 150°-180° F. If the oil and wax has cooled, place back into the microwave.\nPlace the stick blender into the water and burp it to help get rid of bubbles. Pour the oil and wax mixture into the water and use a spatula to make sure every little bit is added. Begin pulsing the stick blender. The mixture will take on a milky appearance once the water, oil, and waxes have begun to emulsify. Continue to pulse and stir for about a minute.\nAdd heaping spoonfuls of the kaolin clay mixture and pulsing the stick blender until fully combined.\nContinue stick blending for about 1-2 minutes. Use a spatula to scrape down any clay that may be on the sides of the bowl. If you find the mixture is thick and difficult to mix, it may be too cool. Heat the mixture in the microwave using 30 second bursts and continue stick blending until the mixture is smooth.\n",
-      "category": "body"
+      "process": "1. Disinfect all utensils. Melt the oil phase and waxes in a water bath until liquid.\n2. In a separate container, whisk the clays and botanical powders together.\n3. Heat the distilled water to 70°C (160°F).\n4. Merge the oil phase into the hot water and blend with an immersion blender for one minute.\n5. Gradually incorporate the clay mixture while continuing to blend until a smooth, thick paste is achieved.\n6. Adjust viscosity by heating slightly if the mixture becomes too cool to work.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "turmeric-body-butter",
@@ -24577,7 +24590,7 @@
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/turmeric-body-butter/",
       "heatRequired": false,
       "equipment": [],
-      "description": "DIY Turmeric Body Butter from Soap Queen.",
+      "description": "A vibrant whipped body butter featuring turmeric shea butter and ginger essential oil. Formulated for high emolliency and intensive skin nourishment with a soft, airy texture.",
       "ingredients": [
         {
           "name": "Turmeric Shea Butter",
@@ -24589,8 +24602,9 @@
         }
       ],
       "notes": "",
-      "process": "Place 16 ounces of turmeric shea butter into a large mixing bowl. Turn your mixer on medium and begin breaking up the butter. Continue to mix until it softens.\nAdd 3 ounces of melted coconut oil to the mixing bowl. Use a spatula to mix in the coconut oil slightly.\nTurn the mixer on low and mix in the coconut oil. Gradually begin to increase the speed and mix for about 1 minute until the butter and coconut oil are combined.\nAdd 3 mL of ginger essential oil and 2 tablespoons of arrowroot powder. Use a spatula to gently fold in the powder. Then, use the mixer to whip the butter for about another minute to fully incorporate all the ingredients.\nUse a spoon to transfer the butter into jars. To use, place a small amount of butter on dry skin and rub in to absorb. Store this butter in a cool, dry place. If you live in a very hot climate, you may want to store the butter in the fridge to prevent melting. Enjoy!",
-      "category": "body"
+      "process": "1. Place the shea butter in a large mixing bowl and soften with an electric mixer.\n2. Gradually incorporate the liquid oils while continuing to mix.\n3. Add the botanical powders and essential oils.\n4. Whip the mixture for several minutes until it reaches a light, fluffy consistency.\n5. Transfer to storage jars and store in a cool location.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "oat-cashmere-lotion",
@@ -24602,7 +24616,7 @@
         "Immersion blender",
         "Stove"
       ],
-      "description": "DIY Oat & Cashmere Lotion from Soap Queen.",
+      "description": "A high-viscosity emulsified lotion featuring colloidal oatmeal and oat extract. Designed for intensive hydration and a silky, cashmere-like skin finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -24642,8 +24656,9 @@
         }
       ],
       "notes": "",
-      "process": "In a heat-safe container, add 18.5 ounces of distilled water. Heat in the microwave on 1 minute bursts until the water is about 160°F. Add 0.2 ounces of colloidal oatmeal to the water and use your stick blender to mix it in and break up any clumps.\nIn a separate heat-safe container, combine 1.7 ounces of oat oil, 0.5 ounces of avocado oil, 0.7 oz. oat extract, 1.3 ounces of Polawax Emulsifying Wax, and 0.7 ounces of BTMS-50. Heat the mixture in the microwave on 30-60 second bursts until the waxes are fully melted.\nCheck the temperature of both containers. Each one should be about 160°F (the oil mixture may be a little bit hotter). When they’re ready, tap your stick blender on the bottom of the bowl to release bubbles. Pour the oils and wax into the water and begin pulsing the stick blender. Blend the mixture for 60-90 seconds, making sure the oil and water phases are fully emulsified.\nContinue stick blending until the temperature drops to about 130-140°F. Add 0.2 ounces of Cashmere Fragrance Oil and 0.2 ounces of Optiphen. Stick blend for another 60-90 seconds to fully combine.\nCarefully pour the lotion into the containers – we used a funnel to help. Let the bottles sit overnight without a cap to prevent condensation. Once completely cooled, place the caps on the bottles, apply labels, and enjoy.",
-      "category": "body"
+      "process": "1. Heat the distilled water to 70°C (160°F) and blend in the colloidal oatmeal with an immersion blender.\n2. Heat the oil phase and emulsifiers in a separate container until fully melted.\n3. Merge the two phases and blend thoroughly for 90 seconds to ensure a stable emulsion.\n4. Allow the lotion to cool to room temperature, then incorporate the fragrance and preservative.\n5. Transfer to storage bottles and allow to set overnight.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "whipped-pearl-body-butter-diy",
@@ -24655,7 +24670,7 @@
         "Stove",
         "Stand/hand mixer"
       ],
-      "description": "DIY Whipped Pearl Body Butter DIY from Soap Queen.",
+      "description": "A luxurious whipped body butter featuring avocado butter and reflective pearl powder. Designed for a luminous skin finish and intensive moisturizing benefits.",
       "ingredients": [
         {
           "name": "Avocado Butter",
@@ -24671,8 +24686,9 @@
         }
       ],
       "notes": "",
-      "process": "Place 14 ounces of avocado butter into a large mixing bowl. Set a hand or stand mixer to low/medium and whip the butter for about 30-60 seconds to break up any large chunks and to create a smoother texture.\nAdd 1 ounce of seaweed extract, 4 mL of Pacific Pearl Fragrance Oil, and 4 mL of Island Coconut Fragrance Oil. Turn the mixer on low to slowly incorporate the wet ingredients. Then, increase to medium/high and whip for about 30 seconds.\nAdd 1/2 teaspoon of pearl powder and 1 teaspoon of Super Pearly White Mica. Turn the mixer on low to slowly incorporate the dry ingredients. Then, increase to medium/high and whip for about 30 seconds.\nAdd 0.2 ounces of arrowroot powder. Use a spatula or large spoon to fold the powder in. Once incorporated, scrape down the sides of the bowl and continue to whip the mixture for about 60 more seconds. The butter should be smooth and fluffy.\nSpoon equally into three 8 oz. bail jars. Store the butter in a dry, cool place and enjoy.",
-      "category": "body"
+      "process": "1. Whip the avocado butter in a mixing bowl for 60 seconds to break up any clumps.\n2. Incorporate the liquid extracts and fragrance, continuing to whip for 30 seconds.\n3. Add the pearl powder and mica, blending well.\n4. Fold in the starch and perform a final whip for 60 seconds until smooth and fluffy.\n5. Transfer to wide-mouthed storage jars.",
+      "category": "body",
+      "processRewritten": true
     },
     {
       "id": "seaweed-cucumber-face-mask-diy",
