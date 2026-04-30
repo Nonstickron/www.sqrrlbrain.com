@@ -842,7 +842,8 @@
     "Clear M&P Soap Base",
     "Clear Soap Base",
     "White Soap Base",
-    "Clear Melt And Pour Soap"
+    "Clear Melt And Pour Soap",
+    "Chamomile Essential Oil"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -29869,6 +29870,52 @@
       "notes": "",
       "process": "Melt 3 ounces of White Melt and Pour Soap Base in the microwave using 10 second bursts. Add 1 mL of peppermint essential oil and 0.5 ounces of liquid glycerin. Stir together. Pour the soap into the mold and spritz with 99% isopropyl alcohol to eliminate bubbles. Let the layer cool for about 5 minutes. If the soap has a skin on top that can support more soap, it's ready for the next layer.\nOnce the soap has cooled enough to unmold but is still warm, remove it from the mold and place it on a cutting board. With a craft knife and ruler, cut the soap into thin strips (about ¼ inches or smaller).\nPlace two of your freshly cut soap strands on top of each other (so they look like a checkered board) and squish them together as much as possible.\nGently twist the soap and curl the top so it looks like a candy cane. Timing is very important. You need to work quickly to mold the candy canes while the soap is till pliable. You'll have about 5 minutes to do all of your twisting before the soap gets too hard to be pliable and just breaks in your hands.\nOnce all the candy canes have been twisted, melt 4 ounces of Clear Melt and Pour Soap Base and mix in about 1/4 teaspoon of Fine Silver Rainbow EcoGlitter. Feel free to add more glitter if you prefer. Dip the candy canes in the sparkly soap. Then, you can either lay the soap flat on a silicone mold to dry, or create a \"hanging contraption\" to allow the soap to drip off.",
       "category": "soap"
+    },
+    {
+      "id": "sleepy-time-pillow-spray",
+      "name": "Sleepy Time Pillow Spray",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/sleepy-time-pillow-spray/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I love dropping a bit of lavender essential oil on my pillows at night before I go to sleep, but in drop form you end up with small drops of highly concentrated scent, which manages to be both simultaneously overwhelming and underwhelming, depending …",
+      "ingredients": [
+        {
+          "name": "Lavender Essential Oil",
+          "pct": 23.5
+        },
+        {
+          "name": "Chamomile Essential Oil",
+          "pct": 17.6
+        },
+        {
+          "name": "Distilled Water",
+          "pct": 58.8
+        }
+      ],
+      "notes": "So my question is if I can substitute the solubilizer with high proof vodka to keep it fresh and mix the oils? If so, would I substitute 1 for 1?",
+      "category": "body"
+    },
+    {
+      "id": "healing-herb-infused-massage-oil",
+      "name": "Healing Herb Infused Massage Oil",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/healing-herb-infused-massage-oil/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "If you&#8217;re looking for a quick win DIY project this week, this is it. It comes together in a flash, requires a bit of steeping time, and then you&#8217;re the proud owner of a bottle of healing, herb-spiked massage oil.",
+      "ingredients": [
+        {
+          "name": "Tamanu Oil",
+          "pct": 83.3
+        },
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 16.7
+        }
+      ],
+      "notes": "",
+      "category": "body"
     }
   ]
 }
