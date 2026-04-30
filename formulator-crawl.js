@@ -12,10 +12,18 @@ const DATA_FILE = path.join(__dirname, 'formulator-data.json');
 const PROGRESS_FILE = path.join(__dirname, 'formulator-crawl-progress.txt');
 
 const CATEGORIES = [
-  { name: 'face',     url: 'https://www.humblebeeandme.com/face-recipes/all-face-recipes/' },
-  { name: 'body',     url: 'https://www.humblebeeandme.com/homemade-skin-care-recipes/all-body-recipes/' },
-  { name: 'hair',     url: 'https://www.humblebeeandme.com/make-natural-hair-care-products/all-hair-recipes/' },
-  { name: 'cleaning', url: 'https://www.humblebeeandme.com/natural-cleaning-recipes/' },
+  { name: 'face',         url: 'https://www.humblebeeandme.com/face-recipes/all-face-recipes/' },
+  { name: 'body',         url: 'https://www.humblebeeandme.com/homemade-skin-care-recipes/all-body-recipes/' },
+  { name: 'hair',         url: 'https://www.humblebeeandme.com/make-natural-hair-care-products/all-hair-recipes/' },
+  { name: 'cleaning',     url: 'https://www.humblebeeandme.com/natural-cleaning-recipes/' },
+  { name: 'soap',         url: 'https://www.humblebeeandme.com/make-bar-soap/',                           paginated: true },
+  { name: 'soap',         url: 'https://www.humblebeeandme.com/make-liquid-soap/',                        paginated: true },
+  { name: 'soap',         url: 'https://www.humblebeeandme.com/make-cream-soap/',                         paginated: true },
+  { name: 'makeup',       url: 'https://www.humblebeeandme.com/make-eye-makeup/',                         paginated: true },
+  { name: 'makeup',       url: 'https://www.humblebeeandme.com/make-face-makup/',                         paginated: true },
+  { name: 'makeup',       url: 'https://www.humblebeeandme.com/make-lipstick-lip-stain-lip-makeup/',      paginated: true },
+  { name: 'simple',       url: 'https://www.humblebeeandme.com/simple-recipes/',                          paginated: true },
+  { name: 'super-simple', url: 'https://www.humblebeeandme.com/super-simple-recipes/',                    paginated: true },
 ];
 
 const DELAY_MS = 1200;
@@ -73,20 +81,40 @@ function gitCommit(message) {
 
 // ── URL collection ─────────────────────────────────────────────────────────────
 
-async function getRecipeUrls(indexUrl) {
-  let html;
-  try {
-    const res = await fetch(indexUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });
-    if (!res.ok) return [];
-    html = await res.text();
-  } catch { return []; }
-
-  // Extract links from <article> elements — each article is a recipe card
-  const urls = [...new Set(
+function extractArticleUrls(html) {
+  return [...new Set(
     [...html.matchAll(/<article[^>]*>[\s\S]{0,800}?href="(https:\/\/www\.humblebeeandme\.com\/[^"?#]+\/)"/g)]
       .map(m => m[1])
   )];
-  return urls;
+}
+
+async function getRecipeUrls(indexUrl, paginated = false) {
+  if (!paginated) {
+    try {
+      const res = await fetch(indexUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+      if (!res.ok) return [];
+      return extractArticleUrls(await res.text());
+    } catch { return []; }
+  }
+
+  const allUrls = new Set();
+  for (let page = 1; page <= 100; page++) {
+    const pageUrl = page === 1 ? indexUrl : `${indexUrl}page/${page}/`;
+    let html;
+    try {
+      const res = await fetch(pageUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+      if (!res.ok) break;
+      html = await res.text();
+    } catch { break; }
+
+    const urls = extractArticleUrls(html);
+    if (urls.length === 0) break;
+    const prev = allUrls.size;
+    urls.forEach(u => allUrls.add(u));
+    if (allUrls.size === prev) break;
+    if (page < 100) await sleep(DELAY_MS);
+  }
+  return [...allUrls];
 }
 
 // ── Recipe parsing ─────────────────────────────────────────────────────────────
@@ -215,10 +243,10 @@ async function main() {
   const existingIds = new Set(data.recipes.map(r => r.id));
   let totalAdded = 0;
 
-  for (const { name: catName, url: catUrl } of CATEGORIES) {
-    console.log(`\n── Category: ${catName} ──`);
+  for (const { name: catName, url: catUrl, paginated } of CATEGORIES) {
+    console.log(`\n── Category: ${catName} (${catUrl}) ──`);
 
-    const urls = await getRecipeUrls(catUrl);
+    const urls = await getRecipeUrls(catUrl, paginated);
     console.log(`  Found ${urls.length} URLs, ${urls.filter(u => !done.has(u)).length} unprocessed`);
 
     const newUrls = urls.filter(u => !done.has(u));

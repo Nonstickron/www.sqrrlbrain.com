@@ -561,7 +561,9 @@
   // ── Category pills ─────────────────────────────────────
   const CATS = [
     {id:'all',label:'All'},{id:'face',label:'Face'},{id:'body',label:'Body'},
-    {id:'hair',label:'Hair'},{id:'cleaning',label:'Cleaning'},{id:'custom',label:'Custom'},
+    {id:'hair',label:'Hair'},{id:'cleaning',label:'Cleaning'},{id:'soap',label:'Soap'},
+    {id:'makeup',label:'Makeup'},{id:'simple',label:'Simple'},{id:'super-simple',label:'Super Simple'},
+    {id:'custom',label:'Custom'},
   ];
   function renderCatPills() {
     const wrap = document.getElementById('catPills'); wrap.textContent = '';
@@ -893,7 +895,10 @@
       acts.appendChild(editBtn); acts.appendChild(delBtn);
     }
     if (recipe.sourceUrl) {
-      const a = document.createElement('a'); a.href = recipe.sourceUrl; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'src-link'; a.textContent = '↗ source';
+      const a = document.createElement('a'); a.href = recipe.sourceUrl; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.className = 'src-link';
+      let srcLabel = recipe.source || 'source';
+      try { srcLabel = new URL(recipe.sourceUrl).hostname.replace('www.', ''); } catch {}
+      a.textContent = '↗ ' + srcLabel;
       acts.appendChild(a);
     }
     body.appendChild(acts);
