@@ -12289,7 +12289,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Dehydrated skin needs water as well as oils. In this formulation, moisturizing tallow teams up with hydrating water and glycerin plus some other skincare favourites to create a non-greasy, pumpable hand lotion that leaves your skin soft and moisturiz…",
+      "description": "A moisturizing hand lotion formulated with grass-fed tallow and hydrating humectants. Designed for rapid absorption and a non-greasy skin finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12326,7 +12326,8 @@
       ],
       "notes": "I&#8217;ve written a ginormous post all about making skincare with tallow, including digging into many of the claims made about its skincare benefits. Please read that if you want to learn more.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nIf you have a pH meter it’s a good idea to check the pH of the lotion to ensure it’s in the good-for-skin (and our preservative) 4.5–5.5 range. When made as written, it should land in the 5–5.5 range thanks to the Optiphen&#x2122; Plus pulling the pH down a bit.\nPackage it in a pump-top bottle or squeeze tube.\nUse like you'd use any hand lotion. Enjoy!"
+      "process": "1. Heat the water phase and oil phase (containing tallow) in separate beakers using a water bath.\n2. Combine the phases and use an immersion blender to create a stable emulsion.\n3. Allow the mixture to cool to room temperature.\n4. Verify the pH level and adjust to the 4.5–5.5 range if necessary.\n5. Transfer the finished lotion to a pump-top bottle or squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "winter-wonderland-hand-body-lotion",
@@ -12338,7 +12339,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Shop-bought hand and body lotions are usually quite light and fast absorbing, with excellent slip and little in the way of a lingering on-skin feel.",
+      "description": "A lightweight, fast-absorbing hand and body lotion formulated for excellent slip and a minimal on-skin feel. Features a blend of liquid emollients and humectants.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12391,7 +12392,8 @@
       ],
       "notes": "Gifting considerationsOur starting point + formulation journeyRelevant links &amp; further readingWinter Wonderland Hand &amp; Body LotionSubstitutionsSimilar Formulations Gifting considerations As this lotion is designed to be giftable, I was formulating for broad appeal. The goal was to create a lotion that people who are used to shop-bought lotions from brands like St. Ives and Bath &amp; Body ",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I tried both pouring and piping; I'd recommend pouring (using a funnel if you need it) as piping was far more messy than it was worth.\nUse as you'd use any hand or body lotion! Enjoy"
+      "process": "1. Heat the water and oil phases in separate containers within a water bath.\n2. Combine the phases and blend thoroughly using an immersion blender.\n3. Allow the emulsion to cool to room temperature.\n4. Incorporate the cooling phase ingredients and stir well.\n5. Transfer the finished lotion to a pump bottle or disc-top container.",
+      "processRewritten": true
     },
     {
       "id": "easy-non-greasy-hand-lotion",
@@ -13242,7 +13244,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "I&#8217;ve included a bit of a berry-hued mica for that radiance promised in the title of the formulation. You don&#8217;t have to use it (details on that are in the substitutions list at the end of the formulation), but just know that the finished p…",
+      "description": "An emulsified body cream featuring berry-hued mica for a radiant finish. Formulated for high emolliency and intensive skin hydration.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13299,7 +13301,8 @@
       ],
       "notes": "Lipomoist&#x2122; 2036 is a rather neat blended ingredient, combining hydrolyzed proteins, humectants, and amino acids. According to Lipotec, the maker of Lipomoist&#x2122; 2036, it “forms a moisturizing protective film on the skin, increases the cellular protein levels, [and] induces formation of collage IV”. If you don&#8217;t have it I&#8217;ve included some substitution suggestions in its Humb",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I used a white 100mL (3.3fl oz) screw-top plastic jar from YellowBee. Use as you'd use any lotion or cream, taking care not to over-apply as a little goes a long way, and you'll notice soaping. Enjoy!"
+      "process": "1. Heat the water and oil phases in separate beakers using a water bath.\n2. Combine the phases and blend with an immersion blender to form a stable emulsion.\n3. Allow the mixture to cool undisturbed until it reaches room temperature.\n4. Incorporate the cooling phase ingredients and mica shimmer.\n5. Transfer the cream to a storage jar.",
+      "processRewritten": true
     },
     {
       "id": "sourdough-body-cream",
@@ -13332,7 +13335,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Today we&#8217;re blending up a product I&#8217;ve had a lot of requests for! I&#8217;m calling this pale green lotion Happy Hemp Hand Cream, and it was inspired by The Body Shop&#8217;s Hemp Hand Protector. My version is a bit lighter and more slipp…",
+      "description": "A specialized hand cream formulated with hemp seed oil for high skin protection. Features a lightweight, slippy texture and a skin-compatible pH.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13385,7 +13388,8 @@
       ],
       "notes": "The water phase for this Happy Hemp Hand Cream is very simple; just distilled water, moisturizing vegetable glycerin, and skin-soothing panthenol (Vitamin B5). If you wanted to spice things up a bit you could swap 20–30% of the distilled water for a hydrosol and/or aloe vera juice. You could also swap some (or all) of the vegetable glycerin for a homemade glycerite!",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up!\nWhen made as written this cream has a pH ~4.6–5, which is great for our skin and the preservative. If you change anything I recommend testing the pH yourself to ensure it is still around 5.5."
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers until melted.\n2. Combine the phases and use an immersion blender to create a stable emulsion.\n3. Allow the mixture to cool to room temperature.\n4. Incorporate the cooling phase ingredients and verify the pH level is within the 4.6–5.5 range.\n5. Transfer to a storage jar or tube.",
+      "processRewritten": true
     },
     {
       "id": "strawberry-kiwi-body-yogurt",
@@ -13397,7 +13401,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Today we&#8217;re whipping up an ultra-light, super-slippy, richly moisturizing Strawberry Kiwi Body Yogurt. I&#8217;ve had a ton of requests for a body yogurt formulation, and I had lots of fun working on this DIY. The scent comes from a juicy straw…",
+      "description": "An ultra-lightweight body moisturizer with high slip and intensive hydrating properties. Features a unique gel-cream consistency for rapid absorption.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13442,7 +13446,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I recommend a wide-mouthed jar—this is far too thick for a pump-top bottle. Use as you'd use any lotion; apply sparingly. A little goes a long way and too much can be sticky if over-applied.\nThe two-toned swirl is from combining two batches with slightly differing amounts of dye."
+      "process": "1. Heat the water and oil phases in separate beakers using a water bath.\n2. Combine the phases and blend until a thick, uniform emulsion is formed.\n3. Transition to manual stirring as the mixture cools.\n4. Incorporate the cooling phase ingredients once the temperature is 40°C or lower.\n5. Transfer to a wide-mouthed jar for storage.",
+      "processRewritten": true
     },
     {
       "id": "honey-bee-mine-body-lotion",
@@ -13454,7 +13459,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Save 5% on hydroxyethylcellulose and everything else at Essential Wholesale &amp; Labs with coupon code HUMBLEBEE",
+      "description": "A hydrating body lotion featuring honey and botanical extracts. Formulated for high humectancy and a smooth, non-greasy skin finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13511,7 +13516,8 @@
       ],
       "notes": "For added moisturizing goodness I&#8217;ve also included some Lipomoist&#x2122; 2036. It&#8217;s a wobbly beige-ish gel made from a blend of humectants, hydrolyzed proteins, amino acids, and gums—learn more about it (including substitution info) in the Humblebee &amp; Me DIY Encyclopedia! According to Lipotec, the maker of this ingredient, Lipomoist&#x2122; 2036 “forms a moisturizing protective fi",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up!"
+      "process": "1. Heat the water phase (containing honey) and oil phase in separate beakers.\n2. Combine the phases and blend thoroughly with an immersion blender.\n3. Allow the emulsion to cool to room temperature.\n4. Incorporate the cooling phase ingredients and package in a pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "sun-bum-body-cream",
@@ -13523,7 +13529,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Save 8% on acai berry oil, Glyceryl Stearate (and) PEG-100 Stearate and everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "description": "A rich, seasonal body cream featuring acai berry oil and high levels of humectants. Designed for intensive hydration of sun-exposed or dry skin.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13584,7 +13590,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up. This cream will continue to thicken for a day or so after being made, so resist the urge to put it in a pump-top bottle as it won't pump out for very long! I used a 100mL (3.3fl oz) screw-top plastic jar from YellowBee for mine.\nTo use, smooth some fragrant cream over any skin that could use a bit of added sunshine and moisture. Enjoy!"
+      "process": "1. Heat the water and oil phases in separate beakers until the solid components are melted.\n2. Combine the phases and blend until a stable emulsion is formed.\n3. Allow the mixture to cool and thicken naturally for at least 24 hours.\n4. Incorporate the cooling phase ingredients and transfer to a storage jar.",
+      "processRewritten": true
     },
     {
       "id": "phrynes-milk-of-roses",
@@ -13596,7 +13603,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Save 8% on Glyceryl Stearate (and) PEG-100 Stearate and everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "description": "A traditional rose-based emulsion formulated with argan oil and rose hydrosol. Designed for gentle skin softening and a subtle floral scent.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13645,7 +13652,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nTo use, smooth over any skin that could use some extra rose-y love. Enjoy!"
+      "process": "1. Heat the water and oil phases in separate beakers using a water bath.\n2. Combine the phases and blend thoroughly with an immersion blender.\n3. Allow the emulsion to cool to room temperature.\n4. Transfer the thin lotion to a pump-top or squeeze bottle.",
+      "processRewritten": true
     },
     {
       "id": "moisturizing-repair-lotion",
@@ -13657,7 +13665,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Save 8% on Glyceryl Stearate (and) PEG-100 Stearate and everything else at Mystic Moments with coupon code HUMBLEBEE",
+      "description": "A targeted repair lotion featuring niacinamide and skin-soothing botanical extracts. Formulated for high humectancy and a skin-compatible pH.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13710,7 +13718,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "90% lactic acid solution (USA / Canada) or 50% citric acid solution, as needed\nPrepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nIf necessary, add a drop of the 90% lactic acid solution to the parent batch, stir, and re-test with a new little bowl of 18g distilled water + 2g of the lotion from the parent batch. Continue until the pH is in the 5.5–6 range. I needed just one drop of 90% lactic acid for a 100g (3.5oz) batch.\nAt this point in time it's not a bad idea to re-check the pH to ensure it hasn't shifted, but in my experience adding the Optiphen Plus and niacinamide (Vitamin B3) did not change the pH at all. If you're using a different preservative that is quite pH sensitive you should re-check and adjust if needed.\nAnd we're done! Transfer the lotion to a tottle or soft squeeze tube and you're ready to moisturize up a storm (100mL [3.3fl oz] is a good size for a 100g [3.5oz] batch). Enjoy!"
+      "process": "1. Heat the water phase and oil phase in separate containers within a water bath.\n2. Combine the phases and blend until a stable emulsion is formed.\n3. Allow the mixture to cool to room temperature.\n4. Verify the pH level and adjust to the 5.5–6 range using a lactic acid solution.\n5. Incorporate the cooling phase ingredients and package in a soft squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "super-simple-moisturizing-lotion-with-glyceryl-stearate-and-",
@@ -13722,7 +13731,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Before we dive in, you need to read through the Humblebee &amp; Me DIY Encyclopedia entry on Glyceryl Stearate (and) PEG-100 Stearate. If you&#8217;re not familiar with the basics of lotion making, you should also read through the original Super Simp…",
+      "description": "A foundational moisturizing lotion formulated with Glyceryl Stearate and PEG-100 Stearate. Designed for high stability and a lightweight, fast-absorbing finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13747,7 +13756,8 @@
       ],
       "notes": "Note: For simplicity&#8217;s sake I mostly refer to Polawax as the counter-point emulsifying wax throughout this post. Please consider this to be shorthand for emulsifying waxes that work like Polawax, including Emulsifying Wax NF, Olivem 1000, Ritamulse SCG, BTMS-50, and BTMS-25. These emulsifying waxes all have similar usage rates and thicken as well as emulsify.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! This lotion is thin enough to package in a pump-top bottle or a soft squeeze tube. A 120mL (4 fl oz) package is a good choice for this 100g (3.5oz) batch. Use as you would any lotion. Enjoy!"
+      "process": "1. Heat the water and oil phases in separate beakers using a water bath.\n2. Combine the phases and blend thoroughly with an immersion blender.\n3. Allow the emulsion to cool to room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a pump-top bottle.",
+      "processRewritten": true
     },
     {
       "id": "ice-palace-body-glow-lotion",
@@ -13759,7 +13769,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "We&#8217;re continuing our Ice Palace theme today with this lovely Ice Palace Body Glow Lotion! This one is really neat in the skin feel/consistency department. In regards to viscosity and absorption speed, it&#8217;s more like a mid-weight lotion—bu…",
+      "description": "A mid-weight body lotion featuring a pearlescent finish and high emolliency. Designed for rapid absorption and a radiant skin effect.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13808,7 +13818,8 @@
       ],
       "notes": "I&#8217;ve kept the water phase quite simple; distilled water, moisturizing vegetable glycerin, and soothing vitamin b5 (panthenol). If you wanted to, you could easily swap 20–30% of the distilled water for a hydrosol of choice. In the version I show in the video I drop the fragrance oil and use 20% peppermint hydrosol in the heated water phase, and that is lovely as well!",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through."
+      "process": "1. Heat the water phase and oil phase (containing pearlescent agents) in separate containers.\n2. Combine the phases and blend with an immersion blender to form a stable emulsion.\n3. Allow the mixture to cool undisturbed until it reaches room temperature.\n4. Incorporate the cooling phase ingredients and package in a suitable container.",
+      "processRewritten": true
     },
     {
       "id": "hemp-shea-hand-and-body-lotion",
@@ -13820,7 +13831,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "This silky Hemp &amp; Shea Hand and Body Lotion is another Bee Better project, riffing on and updating the Healing Herbal Hemp &amp; Shea Lotion I shared back in October 2014. This version keeps many of the same ingredients and very much riffs on the…",
+      "description": "A silky hand and body lotion featuring hemp seed oil and shea butter. Formulated for intensive hydration with a smooth, non-greasy finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13889,7 +13900,8 @@
       ],
       "notes": "And last but not least, a tiny touch of dark patchouli essential oil. Just 0.1% is enough to softly (but stubbornly!) scent the entire batch. Patchouli doesn&#8217;t mess around! If you aren&#8217;t a patchouli fan feel free to swap it out—the 2014 version used lavender essential oil, and that was also lovely. Enjoy!",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I used a green 100mL (3.3fl oz) pump-top bottle from YellowBee—I thought the green was a great fit for this formulation &#x1f604;I would recommend sticking with a pump-top or squeeze tube/tottle for this formulation as it's a bit runny for a tub or jar."
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers until melted.\n2. Combine the phases and use an immersion blender to create a stable emulsion.\n3. Allow the mixture to cool to room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a pump bottle or squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "diy-shimmery-body-oil-spray",
@@ -13900,7 +13912,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "If you want to learn how to make your very own shimmery, sprayable body oils like the ones sold by Tom Ford and Anastasia Beverly Hills, you&#8217;ve come to the right place! In this post I&#8217;m sharing my free formula for sprayable DIY shimmer oi…",
+      "description": "A sprayable body oil containing reflective mica suspended in a blend of lightweight oils and waxes. Formulated for high radiance and quick absorption.",
       "ingredients": [
         {
           "name": "Sunflower Seed Oil",
@@ -13929,7 +13941,8 @@
       ],
       "notes": "If you want to learn how to make your very own shimmery, sprayable body oils like the ones sold by Tom Ford and Anastasia Beverly Hills, you&#8217;ve come to the right place! In this post I&#8217;m sharing my free formula for sprayable DIY shimmer oils that don&#8217;t separate or settle.",
       "category": "body",
-      "process": "Combine the heated phase ingredients in something you'll be able to heat directly. Crystal Clear Wax needs to get up to ~90°C (194°F) to melt, and that's a tall order for a water bath.\nOnce you think the Crystal Clear Wax has melted, examine the mixture really closely to ensure it has—stirring around and pulling up your spoon to see if you can find any blobs. It's so clear it vanishes into the oils even if it's still a semi-solid blob.\nWhen you are certain the Crystal Clear Wax has melted, remove the beaker from the heat and stir in the mica.\nStir until the mixture cools to room temperature to ensure a uniform final product.\nWeigh in the cool down phase, stir to combine, and package the oil in a bottle with a spray cap.\nTo use, spritz over your skin and massage in. Enjoy the shimmer!"
+      "process": "1. Melt the oil phase and waxes in a heat-safe beaker until fully liquid (approx. 90°C).\n2. Stir in the mica shimmer until evenly distributed.\n3. Continue to stir as the mixture cools to keep the mica suspended.\n4. Incorporate the cooling phase ingredients once the temperature has dropped.\n5. Transfer to a storage bottle equipped with a spray nozzle.",
+      "processRewritten": true
     },
     {
       "id": "dry-summer-body-oil-2",
@@ -13938,7 +13951,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/dry-summer-body-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Commercial body oils definitely contain oil, but they aren&#8217;t entirely oil, and that&#8217;s why they&#8217;re so much lighter than a 100% oil DIY body oil will be.",
+      "description": "A lightweight, anhydrous body oil blend designed for rapid absorption during warm weather. Features a non-greasy finish and high slip.",
       "ingredients": [
         {
           "name": "Rosehip Oil",
@@ -13967,7 +13980,8 @@
       ],
       "notes": "The star(s) Despite forming a relatively small part of this sort of formulation, the carrier oils are the star(s). Have fun with this part! Choose oils you love. Have some fun with a theme. Introduce a bit of luxury if you want to!",
       "category": "body",
-      "process": "Weigh all the ingredients into a small beaker, or directly into the bottle you'll be storing the serum in. I used two 2 oz frosted glass bottles with mister tops from Voyageur Soap and Candle Co. This formulation will also dispense well from a treatment pump, an eyedropper, or an orifice reducer.\nIf it's a beaker, stir to combine. If you went straight for the bottle, cap and shake.\nThat's it! To use, mist some product over the skin after towelling dry from a shower or bath. Be careful where you spray/mist this product. It is very easy to cover tiles and other hard surfaces with a light misting of oil over several applications, rendering that surface dangerously slippery. Massage in and enjoy!"
+      "process": "1. Combine all ingredients in a beaker or directly in the final storage bottle.\n2. Stir or shake until the mixture is completely uniform.\n3. Transfer to a bottle with an atomizer or treatment pump for application.",
+      "processRewritten": true
     },
     {
       "id": "summer-glow-body-oil",
@@ -13978,7 +13992,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Four years later, I&#8217;ve tackled these two formulation challenges differently, and I&#8217;ve also added a much-requested feature from the comments on the 2017 formulation—rub-off resistance. I&#8217;m pretty darn excited about it",
+      "description": "A rub-off resistant body oil featuring reflective micas and high-glide carrier oils. Formulated for a radiant, long-lasting skin finish.",
       "ingredients": [
         {
           "name": "Medium Chain Triglycerides",
@@ -14003,7 +14017,8 @@
       ],
       "notes": "A Guide to Carrier Oil Substitutions How long will ______ last? What is its shelf life? Substitutions in the Humblebee &amp; Me FAQ More information on Bee Better (+ more projects!)",
       "category": "body",
-      "process": "Stovetop/hot plate method: Weigh the heated phase ingredients into a small stovetop safe beaker or saucepan. Place that on the stovetop/hot plate over very low heat to gently and slowly melt the polyamide-3.\nOven method: Preheat your oven to 210°F (100°C). Weigh the heated phase ingredients into a small heat-resistant glass measuring cup or a heavy glass custard cup—what makes the most sense for you will depend a lot on your batch size. Place the measuring cup in your prepared oven to melt everything through.\nLeave the mixture to cool and thicken, stirring occasionally. Once it has cooled to room temperature and thickened up we're ready to add the cool down phase!\nTo use: smooth a small amount of the shimmer oil over your skin. It sets quite quickly, so start small and work your way up. While this body oil is rub-off resistant it isn't impervious to wear, so tread carefully when pairing it with white clothing and/or upholstery! Enjoy ✨"
+      "process": "1. Melt the heated phase ingredients (oils and thickeners) using a water bath or low direct heat until clear.\n2. Stir in the mica shimmer until uniform.\n3. Allow the mixture to cool to room temperature, stirring occasionally to maintain suspension.\n4. Incorporate the cooling phase ingredients and transfer to a storage bottle.",
+      "processRewritten": true
     },
     {
       "id": "argan-plum-body-oil",
@@ -14012,7 +14027,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/argan-plum-body-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This simple, all-natural Argan Plum Body Oil features two of my favourite carrier oils and some stunning antioxidants for an ultra-lovely skin treat that you can make in just a few minutes. You don&#8217;t need any heat—just measure, stir, package, a…",
+      "description": "A minimalist, all-natural body oil featuring argan and plum kernel oils. Formulated with antioxidants for a nourishing skin treatment that requires no heating.",
       "ingredients": [
         {
           "name": "Of Each Coenzyme Q10",
@@ -14041,7 +14056,8 @@
       ],
       "notes": "This simple, all-natural Argan Plum Body Oil features two of my favourite carrier oils and some stunning antioxidants for an ultra-lovely skin treat that you can make in just a few minutes. You don&#8217;t need any heat—just measure, stir, package, and you&#8217;re done! I designed this formulation to be a body oil, but it can also be used on the face and hair if you want. Let&#8217;s dive in!",
       "category": "body",
-      "process": "Weigh all the ingredients into a small beaker, or directly into the bottle you'll be storing the serum in.\nIf it's a beaker, stir to combine, and pour the oil into your bottle. If you went straight for the bottle, cap and shake. I used a frosted glass bottle from YellowBee with a dropper top. A treatment pump top would also work well; this product will not mist well.\nTo use, spread a few drops over the skin as needed. I especially like using this body oil directly after a bath or shower. Enjoy!"
+      "process": "1. Measure all carrier oils into a beaker or directly into the storage bottle.\n2. Add the vitamin E and stir or shake until uniform.\n3. Transfer to a dropper or treatment-pump bottle for use.",
+      "processRewritten": true
     },
     {
       "id": "passionfruit-velvet-dry-oil-mist",
@@ -14050,7 +14066,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/passionfruit-velvet-dry-oil-mist/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This formulation can be broken down into three key parts: 1) a thin, ultra-light base, 2) luxury oils, and 3) antioxidant + fragrance.",
+      "description": "A featherweight body oil mist featuring passionfruit oil. Formulated with specialized emollients for a velvet-like finish and rapid absorption.",
       "ingredients": [
         {
           "name": "Fractionated Coconut Oil",
@@ -14083,7 +14099,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh all the ingredients into a small beaker, or directly into the bottle you'll be storing the oil mist in. I used a 25mL frosted glass Zelo bottle from New Directions Aromatics with an atomizer/mister top.\nIf it's a beaker, stir to combine. If you went straight for the bottle, cap and shake.\nThat's it! To use, mist some product over the skin after towelling dry from a shower or bath. Be careful where you use this. It is very easy to cover tiles and other hard surfaces with a light misting of oil over several applications, rendering that surface dangerously slippery. Massage in and enjoy!"
+      "process": "1. Combine all ingredients in a beaker or directly in the final storage bottle.\n2. Stir or shake until the mixture is completely uniform.\n3. Transfer to a bottle equipped with an atomizer nozzle.",
+      "processRewritten": true
     },
     {
       "id": "watermelon-mint-summer-body-oil",
@@ -14092,7 +14109,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/watermelon-mint-summer-body-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "We&#8217;re continuing our Watermelon Mint series today with a silky, fruity, easy-to-make Watermelon Mint Summer Body Oil. This lovely oil leaves your skin soft and glowing without feeling greasy or heavy. It&#8217;s got a fresh, subtle scent, and c…",
+      "description": "A silky, fruit-based body oil featuring watermelon seed oil and a refreshing mint scent. Formulated for a non-greasy, glowing skin finish.",
       "ingredients": [
         {
           "name": "Watermelon Seed Oil",
@@ -14121,7 +14138,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "To use, smooth a few drops of the oil over any skin that could use a bit of pampering!"
+      "process": "1. Combine all carrier oils and essential oils in a beaker.\n2. Add the vitamin E and stir until uniform.\n3. Transfer to a storage bottle for use.",
+      "processRewritten": true
     },
     {
       "id": "cinnamon-cocoa-massage-bars",
@@ -14132,7 +14150,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "The base of these bars is a blend of fragrant cocoa butter, creamy shea butter, and silky jojoba oil. Just three anhydrous ingredients seems simple enough, no? The work was in getting the right ratios and technique to create a silky smooth end produc…",
+      "description": "Solid massage bars featuring unrefined cocoa butter and cinnamon extract. Designed to melt upon contact with skin for long-lasting lubrication during massage.",
       "ingredients": [
         {
           "name": "Cocoa Butter",
@@ -14153,7 +14171,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Stir with a flexible silicone spatula to incorporate.\nPlace the measuring cup containing the heated phase into the ice bath and cool, stirring constantly, for about thirty seconds—until you start to notice some building viscosity. Remove the container from the water bath and add the cool down phase. Stir to incorporate.\nWhen the massage bars have fully set up (give it an hour or so), remove them from their moulds. That’s it! To use, smooth the massage bar over skin until it is slippery and slidey enough for a massage, and then set the bar aside and get to work. Enjoy!"
+      "process": "1. Prepare a simmering water bath and an ice bath in separate containers.\n2. Melt the base oils and butters in a heat-safe container within the water bath.\n3. Remove from heat and place the container in the ice bath.\n4. Stir constantly until the mixture begins to thicken and reach a \"trace\" consistency.\n5. Incorporate the cooling phase ingredients and pour into silicone moulds.\n6. Allow the bars to set for at least one hour before unmoulding.",
+      "processRewritten": true
     },
     {
       "id": "cranberry-orange-body-oil",
