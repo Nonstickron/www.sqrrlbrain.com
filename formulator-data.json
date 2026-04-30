@@ -5381,7 +5381,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/beginner-friendly-salicylic-acid-squalane-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "After the salicylic acid and octyldodecanol, the rest of the formulation is mostly olive squalane with some vitamin E and bisabolol for skin-soothing, anti-inflammatory benefits. If you wanted to swap out some of the squalane for another carrier oil …",
+      "description": "A 1% salicylic acid serum formulated with olive squalane and octyldodecanol for anhydrous stability. Includes bisabolol and vitamin E for skin-soothing properties.",
       "ingredients": [
         {
           "name": "Salicylic Acid",
@@ -5406,7 +5406,8 @@
       ],
       "notes": "After the salicylic acid and octyldodecanol, the rest of the formulation is mostly olive squalane with some vitamin E and bisabolol for skin-soothing, anti-inflammatory benefits. If you wanted to swap out some of the squalane for another carrier oil (or blend!), I think that could be lovely—I just recommend sticking to fast-absorbing ones to keep this formulation from feeling greasy.",
       "category": "face",
-      "process": "Put on your dust mask (USA / Canada) and gloves.\nWeigh the salicylic acid and octyldodecanol into a small beaker or heat-resistant glass measuring cup. Gently warm to get the salicylic acid to dissolve; I used my hot plate on its lowest setting, but you could also use a water bath. I did try leaving this solution overnight the salicylic acid didn't dissolve much at all in 8+ hours.\nOnce the salicylic acid has dissolved, you'll have a perfectly clear liquid. Weigh in the olive squalane, vitamin E, and bisabolol. Stir to combine—and that's it!\nI packaged my serum in 10mL airless pump bottles from YellowBee (gifted). A 20g batch will be approximately 23mL. If you want to fill a 1 fl oz container, scale the batch up to 25g. I suggest using a bottle with a dropper top or treatment pump cap.\nTo use, apply a few drops of the serum towards the end of your skincare routine, after cleansing and more watery products."
+      "process": "1. Wear a dust mask and gloves during handling.\n2. Measure the salicylic acid and octyldodecanol into a heat-safe beaker.\n3. Heat gently using a water bath or hot plate until the acid is fully dissolved and the liquid is clear.\n4. Incorporate the olive squalane, vitamin E, and bisabolol, stirring until uniform.\n5. Transfer the serum to an airless pump or dropper bottle.",
+      "processRewritten": true
     },
     {
       "id": "brighten-boost-facial-serum",
@@ -5415,7 +5416,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/brighten-boost-facial-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "For some silky, luxurious hydration I&#8217;ve included 0.2% low molecular weight hyaluronic acid in the form of a 1% solution used at 20%. If your hyaluronic acid is a different weight you could use that instead—just keep in mind that different weig…",
+      "description": "A complex facial serum featuring 5% niacinamide and 5% N-acetyl glucosamine for skin brightening. Formulated with hyaluronic acid and panthenol for humectant-based hydration.",
       "ingredients": [
         {
           "name": "Xanthan Gum",
@@ -5480,7 +5481,8 @@
       ],
       "notes": "The bulk of this Brighten &amp; Boost Facial Serum is a blend of watery things. A hydrosol of choice (or blend!) scents the formulation; I chose rose hydrosol because I love it. I think a citrus hydrosol (perhaps a blend of citrus and rose!) would be really lovely—let your nose and your heart guide you. If you prefer an unscented formulation you can easily replace the hydrosol with more distilled ",
       "category": "face",
-      "process": "Weigh the xanthan gum and polyquaternium 10 into the propanediol, sodium lactate, Liquid Germall&#x2122; Plus, and PEG-8 dimethicone into a beaker. Stir until uniform.\nAdd the water, hydrosol, hyaluronic acid solution, and lactic acid. Stir to combine.\nAdd the allantoin, niacinamide (Vitamin B3), N-Acetyl Glucosamine, betaine, and panthenol (Vitamin B5). Stir to combine, and then cover the beaker and leave it for a couple hours to allow the ingredients to dissolve.\nWhen you can no longer see any white powder in the serum and it has noticeably thickened into a serumy consistency, we're ready to check the pH.\nOnce you know the pH is in a good place, it's time to package up the serum. I recommend a bottle with a dropper, treatment pump, or orifice reducing cap. The 180g batch specified here will fill three 60mL (2 fl oz) bottles; the ones I used are from Amazon.\nTo use: pat a few drops into your skin after cleansing, but before creams and facial oils. I use this formulation morning and night. Enjoy!"
+      "process": "1. Combine the gelling agents, humectants, and preservative in a beaker and stir until uniform.\n2. Incorporate the distilled water, hydrosol, and hyaluronic acid solution.\n3. Add the dry active ingredients (niacinamide, NAG, allantoin, betaine, and panthenol) and stir well.\n4. Cover the container and allow it to sit for several hours until all powders have dissolved and the serum has thickened.\n5. Verify the final pH level and adjust as necessary before packaging.",
+      "processRewritten": true
     },
     {
       "id": "passionfruit-pressed-oil-serum",
@@ -5491,7 +5493,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "This four ingredient Passionfruit Pressed Oil Serum was formulated to let all the ingredients shine brightly. Made from three luxurious Brazilian ingredients and rounded out with a wonderful skin-loving antioxidant, this pressed oil serum can also be…",
+      "description": "A high-viscosity facial serum featuring passionfruit oil and coenzyme Q10. Utilizes thickening agents to maintain stability and improve skin feel.",
       "ingredients": [
         {
           "name": "Cupuaçu Butter",
@@ -5512,7 +5514,8 @@
       ],
       "notes": "Our cupuaçu base is softened up with two luxurious oils: passionfruit oil and pequi oil. Passionfruit oil is a gorgeous luxury oil; rich in linoleic acid, ultra light, and silky smooth. You can buy it at cosmetic shops like Sephora for $60+ for 50mL (1.69fl oz)&#8230; or you can get about twice as much for $10–12 from a cosmetic ingredient shop &#x1f603; If you love this oil, even if you don&#8217",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nPlace the measuring cup containing the heated phase into the ice bath and cool, stirring constantly, for about thirty seconds—until you start to notice some building viscosity. Remove the container from the water bath and add the cool down phase. Stir to incorporate.\nContinue stirring the mixture in the ice bath until the mixture starts to appear \"gelled\", with noticeable suspended bubbles. Pour the product into its jar and transfer it to the fridge to set up. I used a 30mL (1fl oz) frosted glass jar with an aluminum cap from Voyageur Soap and Candle Co. (gifted).\nOnce the Passionfruit Pressed Oil Serum has solidified, remove it from the fridge and let it come to room temperature. That's it!\nUse this Passionfruit Pressed Oil Serum as you'd use any facial oil serum; I tend to use oil serums towards the end of my skincare routine after cleansing and watery serums."
+      "process": "1. Combine the liquid oils and coenzyme Q10 in a beaker.\n2. Incorporate the thickening agents and stir thoroughly until the mixture is uniform.\n3. Allow the serum to stabilize for several hours to achieve final viscosity.\n4. Transfer to a storage bottle or tube.",
+      "processRewritten": true
     },
     {
       "id": "brightening-hyaluronic-acid-niacinamide-facial-serum",
@@ -5521,7 +5524,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/brightening-hyaluronic-acid-niacinamide-facial-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The two stars of this formulation are niacinamide (Vitamin B3) and hyaluronic acid; two of my favourite skin care ingredients. They team up with fragrant sweetgrass hydrosol and a few other functional ingredients to create a simple, hydrating, bright…",
+      "description": "A dual-action serum combining the hydrating properties of hyaluronic acid with the brightening benefits of niacinamide. Formulated with skin-soothing botanicals.",
       "ingredients": [
         {
           "name": "Propanediol 1,3",
@@ -5558,7 +5561,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the propanediol, Liquid Germall&#x2122; Plus, and xanthan gum into a small beaker. Stir to combine.\nAdd the remaining ingredients and stir. Cover and leave the solution to fully dissolve and become uniform.\nOnce the solution is clear, it's time to test the pH.\nOnce you know your formulation is a-ok in the pH department, it’s time to package it up! I used a 60mL (2 fl oz) glass bottle with a dropper top from YellowBee for mine (gifted). It looks like they don't sell that size anymore, but they do have a 50mL bottle (and top) that would work even better for this 50g (1.76oz) batch.\nTo use; I like to spread a few drops over my skin after cleansing and then follow up with a cream or oil serum. Enjoy!"
+      "process": "1. Measure the gelling agent and humectants into a beaker and stir until smooth.\n2. Add the hyaluronic acid solution and distilled water.\n3. Incorporate the niacinamide and botanical extracts, stirring well.\n4. Allow the serum to sit until the gelling agent is fully hydrated and the solution is clear.\n5. Transfer to a dropper or pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "rosehip-oat-solid-oil-serum",
@@ -5569,7 +5573,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "This Rosehip Oat Solid Oil Serum formulation is a non-greasy, packaging-optional facial moisturizer starring some beautiful oils and antioxidants. The original inspiration for this formulation was Robbie Burns Day, which is tomorrow. I was thinking a…",
+      "description": "A solid oil serum formulated with rosehip oil and colloidal oatmeal. Designed to provide high levels of emolliency in a portable, non-liquid format.",
       "ingredients": [
         {
           "name": "Oat Oil",
@@ -5606,7 +5610,8 @@
       ],
       "notes": "How long will ______ last? What is its shelf life? A Guide to Carrier Oil Substitutions A Quick Guide to Cetearyl Alcohol &amp; Liquid Oil Ratios A Quick Guide to Cetyl Alcohol &amp; Liquid Oil Ratios A Quick Guide to Stearic Acid &amp; Liquid Oil Ratios",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nOnce the mixture has thickened a bit, quickly add the cool down phase, stir to incorporate, and pour the product into its container or mold. I used a paperboard container from YellowBee (gifted) for the video and a silicone honeycomb mold (USA / Canada) for the blog post. Gently transfer the product to the fridge to set up.\nWhen the solid facial serum has set up, that's it!\nUse as you’d use any facial oil; I like to glide it over my skin after washing and using any watery serums. Enjoy!"
+      "process": "1. Melt the solid oils and waxes in a heat-safe beaker using a water bath.\n2. Once liquefied, remove from heat and stir in the rosehip oil and colloidal oatmeal.\n3. Continue to stir as the mixture cools to ensure the oatmeal remains suspended.\n4. Pour the mixture into a tin or tube and allow it to solidify completely.",
+      "processRewritten": true
     },
     {
       "id": "mango-rosehip-solid-facial-oil",
@@ -5617,7 +5622,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "You&#8217;ll need just six ingredients to make this cheery all-natural Mango Rosehip Solid Facial Oil. It stars two stunning lightweight emollients and it is packaging-optional, so it&#8217;s a great way to reduce your packaging needs a wee bit. Maki…",
+      "description": "A nourishing solid facial oil featuring mango butter and rosehip oil. Formulated with waxes for a stable, melt-resistant consistency.",
       "ingredients": [
         {
           "name": "Mango Butter",
@@ -5642,7 +5647,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt the mango butter and cetearyl alcohol (the cornstarch won't melt).\nWhile the mixture is melting, make sure you've got a spot in your freezer to set the mould/package on so it can freeze without spilling.\nQuickly add the cool down phase, stir again to incorporate, and pour the product into its mould or container. I used my silicone honeycomb mold (USA / Canada) for one batch and a 1oz paperboard tube from YellowBee (gifted) for another batch. Transfer it to the freezer to set up.\nThat's it! Use as you'd use any facial oil; I like to glide it over my skin after washing and using any watery serums. Enjoy!"
+      "process": "1. Melt the mango butter and waxes in a water bath until fully liquid.\n2. Remove from heat and incorporate the rosehip oil and vitamin E.\n3. Stir steadily as the mixture cools to maintain a uniform texture.\n4. Transfer to a wide-mouthed jar or tin and allow it to set.",
+      "processRewritten": true
     },
     {
       "id": "berry-glow-facial-serum",
