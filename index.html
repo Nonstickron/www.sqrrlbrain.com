@@ -1,33 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <title>SqrrlBrain</title>  
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="styles.css">
-    </head>
-    <body class="gradient_bg">
-      <!--
-      <nav>
-        <p><a href="index.html>Home</a></p>
-        <p>Squirrels</p>
-        <p>Me</p>
-        <p>Portfolio</p>
-        <p>Squirrels</p>
-        <p>Contact Me</P>
-      </nav>
-      -->
-      <h1>My Digital SqrrlBrain</h1>
-      <section class="hero">
-        <img class="heroimage" src="https://i.imgur.com/JLAfYGt.png" alt="Creepy Squirrel" height="300px" width="300px">
-      </section>
-      <br>
-      <div class=nav>      
-        <a href="https://www.instagram.com/sqrrlbrain/" target="_blank"><img src="./images/insta-icon.svg" alt="Instagram" height="50px" width="50px" class="button"></a>
-        <a href="https://www.behance.net/rgdesignhouse" target="_blank"><img src="./images/behanced-icon.svg" alt="Behance" height="50px" width="50px" class="button"></a>
-        <a href="https://www.linkedin.com/in/nonstickron/" target="_blank"><img src="./images/linkdin-icon.svg" alt="Linked In" height="50px" width="50px" class="button"></a>
-        <a href="https://www.freecodecamp.org/fcc4126638b-e612-45c1-a43b-4dad39d44c52" target="_blank"><img src="./images/freecodecamp-icon.svg" alt="FreeCodeCamp" height="50px" width="50px" class="button"></a>
-        <a href="mailto:sqrrlbrain@gmail.com?" target="_blank"><img src="./images/email-icon.svg" alt="Email Me" height="50px" width="50px" class="button"></a>
-      </nav>
-    </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sqrrlbrain Studio — Creative Design & Packaging</title>
+  <meta name="description" content="Sqrrlbrain Studio LLC is an independent creative studio specializing in packaging design, brand identity, and visual storytelling. Based in Edgewater, Florida." />
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:         #3a1a00;
+      --brown-mid:   #7a4520;
+      --brown-light: #b88c5a;
+      --paper:       #faf6f0;
+      --warm:        #f2ebe0;
+      --mono:        'DM Mono', monospace;
+      --serif:       'Playfair Display', serif;
+      --sans:        'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      border-bottom: 1px solid rgba(58,26,0,.1);
+      animation: fadeDown .6s ease both;
+    }
+
+    .logo-wrap img { height: 46px; width: auto; display: block; }
+
+    nav { display: flex; gap: 2.5rem; align-items: center; }
+    nav a {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    nav a:hover { color: var(--ink); }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 84vh;
+      padding: 0 3rem;
+      gap: 3rem;
+      align-items: center;
+      border-bottom: 1px solid rgba(58,26,0,.08);
+    }
+
+    .hero-text { padding: 4rem 0; animation: fadeUp .7s .1s ease both; }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1.4rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 5vw, 5rem);
+      font-weight: 900;
+      line-height: 1.04;
+      letter-spacing: -.03em;
+      margin-bottom: 1.6rem;
+    }
+    h1 em { font-style: italic; color: var(--brown-mid); }
+
+    .hero-desc {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--brown-mid);
+      max-width: 42ch;
+      margin-bottom: 2.8rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: .9rem 2rem;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .cta:hover { background: var(--brown-mid); }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeUp .7s .22s ease both;
+    }
+    .hero-image img {
+      width: min(440px, 100%);
+      height: auto;
+      display: block;
+    }
+
+    /* SERVICES */
+    .services {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 6rem 3rem;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: .66rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 3.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(250,246,240,.12);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .service-item {
+      padding: 2.5rem 2rem 2.5rem 0;
+      border-top: 1px solid rgba(250,246,240,.1);
+    }
+    .service-item + .service-item {
+      border-left: 1px solid rgba(250,246,240,.07);
+      padding-left: 2rem;
+    }
+
+    .service-num {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .15em;
+      color: var(--brown-light);
+      margin-bottom: 1.1rem;
+    }
+    .service-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: .8rem;
+      color: var(--paper);
+    }
+    .service-desc {
+      font-size: .86rem;
+      line-height: 1.72;
+      color: rgba(250,246,240,.5);
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 5rem;
+      padding: 7rem 3rem;
+      border-bottom: 1px solid rgba(58,26,0,.08);
+    }
+
+    .about-body h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.2vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.18;
+      letter-spacing: -.025em;
+      margin-bottom: 1.6rem;
+    }
+    .about-body p {
+      font-size: .97rem;
+      line-height: 1.82;
+      color: var(--brown-mid);
+      max-width: 58ch;
+      margin-bottom: 1.1rem;
+    }
+
+    .about-meta {
+      display: flex;
+      gap: 3.5rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(58,26,0,.08);
+    }
+    .meta-val {
+      font-family: var(--serif);
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: var(--brown-mid);
+      letter-spacing: -.04em;
+      line-height: 1;
+    }
+    .meta-key {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-top: .4rem;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--warm);
+      padding: 6rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .contact h2 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 3.8vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -.03em;
+    }
+    .contact h2 em { font-style: italic; color: var(--brown-mid); }
+
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+
+    .contact-row .label {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: .3rem;
+    }
+    .contact-row a,
+    .contact-row span {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .contact-row a:hover { color: var(--brown-mid); }
+
+    /* FOOTER */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 3rem;
+      border-top: 1px solid rgba(58,26,0,.1);
+    }
+    footer p {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .1em;
+      color: var(--brown-light);
+      text-transform: uppercase;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .service-item:nth-child(3) { border-left: none; padding-left: 0; }
+    }
+    @media (max-width: 760px) {
+      header       { padding: 1.2rem 1.5rem; }
+      nav          { gap: 1.5rem; }
+      .hero        { grid-template-columns: 1fr; padding: 3rem 1.5rem; min-height: auto; }
+      .hero-image  { display: none; }
+      .services    { padding: 4rem 1.5rem; }
+      .about       { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 1.5rem; }
+      .about-label { display: none; }
+      .contact     { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
+      footer       { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
+    }
+    @media (max-width: 500px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .service-item + .service-item { border-left: none; padding-left: 0; }
+      .about-meta { gap: 2rem; flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-wrap">
+      <img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" />
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Independent Creative Studio &middot; Edgewater, FL</p>
+      <h1>Design that<br><em>thinks</em><br>differently.</h1>
+      <p class="hero-desc">Sqrrlbrain Studio LLC is a boutique creative studio specializing in packaging design, brand identity, and visual storytelling — built on 25 years of craft.</p>
+      <a class="cta" href="#contact">Get in touch</a>
+    </div>
+    <div class="hero-image">
+      <img src="images/icon.svg" alt="Sqrrlbrain Studio" />
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <p class="section-label">Services</p>
+    <div class="services-grid">
+      <div class="service-item">
+        <p class="service-num">01</p>
+        <h3 class="service-title">Packaging Design</h3>
+        <p class="service-desc">Structural dielines, retail-ready graphics, and print production for folding cartons, corrugated, and specialty packaging across consumer markets.</p>
+      </div>
+      <div class="service-item">
+        <p class="service-num">02</p>
+        <h3 class="service-title">Brand Identity</h3>
+        <p class="service-desc">Logo systems, typography, color, and brand guidelines built to scale — from startup concept to shelf-ready visual identity.</p>
+      </div>
+      <div class="service-item">
+        <p class="service-num">03</p>
+        <h3 class="service-title">Art Direction</h3>
+        <p class="service-desc">Campaign concepting, layout design, and creative direction for print, digital, and product marketing collateral.</p>
+      </div>
+      <div class="service-item">
+        <p class="service-num">04</p>
+        <h3 class="service-title">Print Production</h3>
+        <p class="service-desc">Press-ready file preparation, prepress review, and production management with deep expertise in commercial print standards.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-label">
+      <p class="section-label">About</p>
+    </div>
+    <div class="about-body">
+      <h2>A studio built on craft, precision, and a stubborn love of paper.</h2>
+      <p>Sqrrlbrain Studio LLC is the independent creative practice of Ronald Goodrich — a designer with over 25 years of professional experience across packaging, brand, and print. Based in Edgewater, Florida, the studio brings senior-level design thinking to projects that demand more than a template.</p>
+      <p>From complex structural packaging to complete brand systems, every project is approached with the same commitment: work that holds up under scrutiny, stands out on shelf, and means something to the people who made it.</p>
+      <div class="about-meta">
+        <div>
+          <div class="meta-val">25+</div>
+          <div class="meta-key">Years Experience</div>
+        </div>
+        <div>
+          <div class="meta-val">FL</div>
+          <div class="meta-key">Edgewater, Florida</div>
+        </div>
+        <div>
+          <div class="meta-val">LLC</div>
+          <div class="meta-key">Registered Business</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Let's make<br>something<br><em>worth keeping.</em></h2>
+    <div class="contact-info">
+      <div class="contact-row">
+        <p class="label">Email</p>
+        <a href="mailto:hello@sqrrlbrain.com">hello@sqrrlbrain.com</a>
+      </div>
+      <div class="contact-row">
+        <p class="label">Location</p>
+        <span>Edgewater, Florida</span>
+      </div>
+      <div class="contact-row">
+        <p class="label">Business</p>
+        <span>Sqrrlbrain Studio LLC</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    <img src="images/logo-website.svg" alt="Sqrrlbrain.com" style="height:28px;width:auto;opacity:.45;" />
+    <p>All rights reserved</p>
+  </footer>
+
+</body>
 </html>
