@@ -136,6 +136,11 @@
     .pct-input { width: 58px; background: var(--bg); border: 1px solid var(--border); color: var(--text); border-radius: 4px; padding: 2px 6px; font-family: 'DM Mono', monospace; font-size: 0.78rem; }
     .pct-input:focus { outline: none; border-color: var(--gold-dim); }
     .pct-total { font-family: 'DM Mono', monospace; font-size: 0.7rem; margin: 4px 0 12px; padding-left: 8px; }
+    .batch-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .batch-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--text-dim); letter-spacing: 0.08em; white-space: nowrap; }
+    .batch-input { width: 72px; background: var(--bg); border: 1px solid var(--border-hi); color: var(--text); border-radius: 4px; padding: 3px 7px; font-family: 'DM Mono', monospace; font-size: 0.78rem; }
+    .batch-input:focus { outline: none; border-color: var(--gold-dim); }
+    .g-cell { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--text-dim); padding: 5px 8px; white-space: nowrap; }
     .pct-ok   { color: var(--green); }
     .pct-warn { color: var(--red); }
 
@@ -766,10 +771,20 @@
     const body = el('div', 'recipe-body');
     if (recipe.description) body.appendChild(el('p', 'recipe-desc', recipe.description));
 
+    // Batch size row
+    const batchRow = el('div', 'batch-row');
+    batchRow.appendChild(el('span', 'batch-label', 'Batch size:'));
+    const batchInp = document.createElement('input');
+    batchInp.className = 'batch-input'; batchInp.type = 'number'; batchInp.min = '1'; batchInp.placeholder = 'g';
+    batchInp.title = 'Enter total batch weight in grams';
+    batchRow.appendChild(batchInp);
+    batchRow.appendChild(el('span', 'batch-label', 'g'));
+    body.appendChild(batchRow);
+
     // Ingredient table
     const tbl = document.createElement('table'); tbl.className = 'ing-table';
     const thead = document.createElement('thead'), hr = document.createElement('tr');
-    hr.appendChild(el('th', null, 'Ingredient')); hr.appendChild(el('th', null, '%'));
+    hr.appendChild(el('th', null, 'Ingredient')); hr.appendChild(el('th', null, '%')); hr.appendChild(el('th', null, 'g'));
     thead.appendChild(hr); tbl.appendChild(thead);
     const tbody = document.createElement('tbody');
 
@@ -789,7 +804,6 @@
         tdN.className = 'ing-missing';
         const span = el('span', null, '✗ ' + ing.name);
         tdN.appendChild(span);
-        // Quick swap button for missing ingredients
         const swapBtn = el('button', 'swap-inline-btn', '⇄ swap?');
         swapBtn.addEventListener('click', e => {
           e.stopPropagation();
@@ -811,9 +825,14 @@
       inp.className = 'pct-input'; inp.type = 'number'; inp.step = '0.5'; inp.min = '0'; inp.max = '100'; inp.value = ing.pct;
       inp.addEventListener('input', () => updateTotal(card));
       tdP.appendChild(inp);
-      tr.appendChild(tdN); tr.appendChild(tdP); tbody.appendChild(tr);
+
+      const tdG = document.createElement('td'); tdG.className = 'g-cell'; tdG.textContent = '—';
+      tr.appendChild(tdN); tr.appendChild(tdP); tr.appendChild(tdG); tbody.appendChild(tr);
     });
     tbl.appendChild(tbody); body.appendChild(tbl);
+
+    // Wire batch input to g column
+    batchInp.addEventListener('input', () => updateTotal(card));
 
     const totalEl = el('div', 'pct-total pct-warn', '');
     body.appendChild(totalEl);
@@ -918,6 +937,11 @@
     const r = Math.round(total * 10) / 10;
     const el2 = card.querySelector('.pct-total');
     if (el2) { el2.textContent = 'Total: ' + r + '%'; el2.className = 'pct-total ' + (Math.abs(r-100) < 0.5 ? 'pct-ok' : 'pct-warn'); }
+    const batchG = parseFloat(card.querySelector('.batch-input')?.value) || 0;
+    const gCells = card.querySelectorAll('.g-cell');
+    inputs.forEach((inp, i) => {
+      if (gCells[i]) gCells[i].textContent = batchG > 0 ? (Math.round((parseFloat(inp.value)||0) / 100 * batchG * 10) / 10) + 'g' : '—';
+    });
   }
 
   // ── Render recipes ──────────────────────────────────────
