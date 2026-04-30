@@ -850,7 +850,8 @@
     "Lemon Juice",
     "Steeped Citron Oolong Tea",
     "Phytokeratin",
-    "Bioplex"
+    "Bioplex",
+    "Mixture Of Buriti, Tamanu, Black Current, Kukuinut, And Seabuckthorn"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -30287,6 +30288,120 @@
       ],
       "notes": "4g phytokeratin (optional—can be replaced with more aloe vera juice)",
       "category": "simple"
+    },
+    {
+      "id": "gentle-facial-cleansing-balm",
+      "name": "Gentle Facial Cleansing Balm",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/gentle-facial-cleansing-balm/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "I am so very thrilled with this gentle facial cleanser, and I think you will be, too. It&#8217;s thick and creamy, and works into a gentle lather as you massage it into damp skin. It rinses away easily, leaving your face clean and smooth, but not ove…",
+      "ingredients": [
+        {
+          "name": "Olive Oil",
+          "pct": 60
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 40
+        }
+      ],
+      "notes": "Is there a way you can just substitute a premade liquid soap brand and thicken it? I have a wonderful natural one that I like that&#8217;s for all over.",
+      "category": "super-simple"
+    },
+    {
+      "id": "hemp-honey-dread-wax",
+      "name": "Hemp  Honey Dread Wax",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/hemp-honey-dread-wax/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "From the dream waxes I researched, and the one Ty brought in for me to feel up, they&#8217;re basically an oily paste of beeswax, assorted liquid oils, and some honey or glycerin (though those seem to be optional). So, basically body butter, often he…",
+      "ingredients": [
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 45.2
+        },
+        {
+          "name": "Hemp Seed Oil",
+          "pct": 16.1
+        },
+        {
+          "name": "Jojoba Oil",
+          "pct": 16.1
+        },
+        {
+          "name": "Honey",
+          "pct": 19.4
+        },
+        {
+          "name": "Vegetable Glycerine",
+          "pct": 3.2
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
+    },
+    {
+      "id": "intense-facial-moisturizer",
+      "name": "Intense Facial Moisturizer",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/intense-facial-moisturizer/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "Winter is always dry, but Calgary is a special case. It&#8217;s the sort of place where it is regularly thirsty out, in addition to being cold and/or windy. My skin has always been acutely aware of this, sparking a lotion-toting habit bordering on th…",
+      "ingredients": [
+        {
+          "name": "Vitamin E MT-50",
+          "pct": 27.8
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 16.7
+        },
+        {
+          "name": "Kukuinut Oil",
+          "pct": 16.7
+        },
+        {
+          "name": "Sea Buckthorn Seed Oil",
+          "pct": 16.7
+        },
+        {
+          "name": "Cupuacu Butter",
+          "pct": 22.2
+        }
+      ],
+      "notes": "It doesn&#8217;t solidify unless it&#8217;s pretty darn chilly wherever you&#8217;re storing—below 16°C or so. You definitely could put it in a pump top bottle if you wanted (part of the reason I didn&#8217;t is that the oils in here are fairly expensive and most pump top bottles I&#8217;ve seen are at least 120mL), but I would avoid a wide-mouthed container as it is usually a somewhat viscous liq",
+      "category": "super-simple"
+    },
+    {
+      "id": "the-oil-cleansing-method-or-ocm",
+      "name": "The Oil Cleansing Method (or OCM)",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/the-oil-cleansing-method-or-ocm/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I&#8217;ve always been blessed with fairly cooperative, mild-mannered skin, so I can&#8217;t say I noticed a huge difference in the condition of my skin. It does, however, seem to be clearer, and is certainly no worse off. If you have problem skin, I…",
+      "ingredients": [
+        {
+          "name": "Safflower Oil",
+          "pct": 91.7
+        },
+        {
+          "name": "Mixture Of Buriti, Tamanu, Black Current, Kukuinut, And Seabuckthorn",
+          "pct": 8.3
+        }
+      ],
+      "notes": "",
+      "category": "super-simple"
     }
   ]
 }
