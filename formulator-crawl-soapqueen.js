@@ -44,7 +44,7 @@ function slugify(str) {
 }
 
 function stripHtml(html) {
-  return html.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&[a-z]+;/g, ' ')
+  return html.replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&').replace(/&[a-z]+;/g, ' ')
     .replace(/&#\d+;/g, '').replace(/\s+/g, ' ').trim();
 }
 
