@@ -21563,6 +21563,38 @@
       ],
       "notes": "",
       "category": "soap"
+    },
+    {
+      "id": "how-to-make-liquid-soap-the-easy-way",
+      "name": "How to Make Liquid Soap (The Easy Way)",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/how-to-make-liquid-soap-easy-way/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "We started off by using almost all the same ingredients as my all-in-one bar. The only ingredient that was ditched was the beef tallow (USA / Canada) (no need for a hardening fat here) and the clay (to start with, at least). And we calculated it the …",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "soap"
     }
   ]
 }

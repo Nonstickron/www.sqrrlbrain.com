@@ -802,3 +802,8 @@ PROCESSED | https://www.humblebeeandme.com/low-tide-soap/ | low-tide-soap
 PROCESSED | https://www.humblebeeandme.com/chai-latte-soap/ | chai-latt-soap
 PROCESSED | https://www.humblebeeandme.com/my-all-in-one-soap-recipe/ | my-all-in-one-soap-recipe
 PROCESSED | https://www.humblebeeandme.com/self-cleaning-you-homemade-soap/ | self-cleaning-you-homemade-soap
+PROCESSED | https://www.humblebeeandme.com/egyptian-magic-liquid-soap/ | SKIPPED
+PROCESSED | https://www.humblebeeandme.com/egyptian-magic-cleansing-balm/ | SKIPPED
+PROCESSED | https://www.humblebeeandme.com/shea-butter-vanilla-body-wash/ | SKIPPED
+PROCESSED | https://www.humblebeeandme.com/liquid-peppermint-hand-soap/ | SKIPPED
+PROCESSED | https://www.humblebeeandme.com/how-to-make-liquid-soap-easy-way/ | how-to-make-liquid-soap-the-easy-way
