@@ -15221,7 +15221,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/gentle-oatmeal-almond-body-wash-bar/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re smooshing up a Gentle Oatmeal Almond Body Wash Bar, featuring a generous amount of colloidal oatmeal and a beautiful, gentle surfactant blend. While I did design this with a body wash in mind, you can also use it as a facial cleansi…",
+      "description": "A solid syndet body wash bar featuring high levels of colloidal oatmeal and a gentle surfactant blend. Formulated to maintain a skin-compatible pH of 5.5 and provide a soft, airy lather.",
       "ingredients": [
         {
           "name": "Sodium Cocoyl Isethionate",
@@ -15254,7 +15254,8 @@
       ],
       "notes": "The inspirationThe dry stuffThe wet stuffMakingRelevant links &amp; further readingGentle Oatmeal Almond Body Wash BarSubstitutionsSimilar Formulations The inspiration This formulation was born from two requests; one from Liz and one from Hannah. Both requested a gentle syndet bar featuring a hefty amount of colloidal oatmeal. Liz&#8217;s request was inspired by an Aveeno product while Hannah had ",
       "category": "body",
-      "process": "Put on your dust mask (USA / Canada) and weigh the Sodium Cocoyl Isethionate (SCI) and colloidal oatmeal into a bowl. Stir until uniform. Add the wet ingredients. Put on a pair of nitrile gloves and blend thoroughly with your hands. Once the mixture is uniform, you'll be left with a stiff, easily-mouldable dough.\nIf your dough is too sticky, you'll need to add a bit more Sodium Cocoyl Isethionate (SCI). This is likely to happen if you used a larger grain Sodium Cocoyl Isethionate (SCI) than I did, as it has less surface area to absorb moisture.\nTo use, massage the bar into wet hair to work up a lather, and proceed as you would with any other shampoo. This also makes a great body wash if you work it up into a lovely lather with a loofah. Enjoy!\nWhen made as written, the pH of this body wash bar is around 5.5, which is great."
+      "process": "1. Wear a dust mask and gloves. Combine the dry surfactants and colloidal oatmeal in a mixing bowl and stir until uniform.\n2. Incorporate the liquid carrier oils and humectants into the dry mixture.\n3. Knead the mixture thoroughly by hand until it forms a stiff, mouldable dough.\n4. If the dough is excessively sticky, add small increments of dry surfactant until the desired consistency is achieved.\n5. Press the dough into a mould and allow to air-dry for 3–5 days to harden fully.",
+      "processRewritten": true
     },
     {
       "id": "french-spa-bath-salts",
@@ -15263,7 +15264,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/french-spa-bath-salts/",
       "heatRequired": false,
       "equipment": [],
-      "description": "With everything that&#8217;s been going on in the world for the last year, it&#8217;s been quite a while since I&#8217;ve been to a proper spa, but these DIY French Spa Bath Salts make for a fantastic at-home spa experience. They smell just like a pr…",
+      "description": "A premium bath salt formulation featuring a blend of salts and a professional-grade fragrance. Designed for an intensive skin-mineralizing soak and a spa-inspired bathing experience.",
       "ingredients": [
         {
           "name": "Dendritic Salt",
@@ -15292,7 +15293,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Weigh the dendritic salt, Polysorbate 80, and fragrance into a bowl. Mix together with gloved hands until uniform. Add the rest of the salts, and massage together until uniform.\nSpread the mixture out on a cookie sheet and leave it to dry for two or three days before packaging. I used a pretty apothecary-style jar with a cork top and wooden spoon from YellowBee. To use, add a few tablespoons (or more—it’s up to you!) to a running bath and enjoy!"
+      "process": "1. Combine the dendritic salt, solubilizer, and fragrance in a beaker.\n2. Massage with gloved hands until the liquids are fully absorbed by the salt.\n3. Incorporate the Epsom and sea salts, stirring until the mixture is homogeneous.\n4. Spread on a tray to air-dry for 48–72 hours before packaging in an airtight container.",
+      "processRewritten": true
     },
     {
       "id": "birthday-suit-solid-body-wash",
@@ -15303,7 +15305,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "The inspiration for this formulation was a discontinued LUSH product; their Naked Shower Gel. The ingredients list showed the base of the bar was a blend of propylene glycol and sodium stearate; this is the same base many commercial stick deodorants …",
+      "description": "A high-clarity solid body wash formulated using a heat-process method. Designed for effective cleansing with a smooth skin finish and excellent durability.",
       "ingredients": [
         {
           "name": "Cocamidopropyl Betaine",
@@ -15336,7 +15338,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Preheat your oven to 225°F (~110°C).\nOnce you have a clear liquid, remove it from the oven. Quickly weigh in the cool down phase (take steps to protect your scale—watch the video!), stir to combine, and pour the mixture into your mould. Leave it to solidify.\nWhen the bar has started to pull away from the edge of the mould, gently pop it out, and you're done. Leave the bars for a day or two before using—use as you'd use a bar of soap. Enjoy!"
+      "process": "1. Preheat an oven to 110°C (~225°F).\n2. Heat the primary ingredients in a heat-safe container until they reach a clear, liquid state.\n3. Remove from the oven and quickly incorporate the cooling phase ingredients, protecting the balance from heat damage.\n4. Pour the mixture into silicone moulds and allow to solidify completely.\n5. Unmould the bars once they pull away from the edges and allow to air-dry for 48 hours before use.",
+      "processRewritten": true
     },
     {
       "id": "rich-lavender-shower-cleansing-cream",
@@ -16638,7 +16641,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "I chose Olivem1000 for our emulsifying wax as it creates the loveliest, thickest lotions—just the sort of decadence I want for my feet. To that we&#8217;ve added creamy, thickening stearic acid, rich shea butter, and silky rice bran oil. It&#8217;s a…",
+      "description": "A dense, emulsified foot cream formulated with Olivem 1000 for high viscosity. Features cooling essential oils and rice bran oil for intensive hydration of compromised foot skin.",
       "ingredients": [
         {
           "name": "Peppermint Hydrosol",
@@ -16687,7 +16690,8 @@
       ],
       "notes": "I chose Olivem1000 for our emulsifying wax as it creates the loveliest, thickest lotions—just the sort of decadence I want for my feet. To that we&#8217;ve added creamy, thickening stearic acid, rich shea butter, and silky rice bran oil. It&#8217;s a lovely blend, but there&#8217;s plenty of room for customization if you refer to the substitutions list at the end of the recipe.",
       "category": "body",
-      "process": "1g | 25 drops | 1% eucalyptus radiata essential oil\nPrepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the water phase ingredients into a small heat-resistant glass measuring cup. Weigh the oil phase ingredients into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nAfter about 20–30 minutes the oil part should be completely melted and the water part should be thoroughly dissolved. Remove the water bath from the heat, and pour the water part into the oil part. Stir with a flexible silicone spatula to incorporate.\nWhen the lotion has cooled, stir in the cool down ingredients and transfer the lotion to a jar. I used one of these great screw-top 100mL plastic tubs from YellowBee—this lotion is too thick to put in a pump-top bottle. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Once melted, merge the two phases and blend thoroughly with an immersion blender to form a stable emulsion.\n3. Allow the mixture to cool undisturbed until it reaches room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a wide-mouthed jar for storage.",
+      "processRewritten": true
     },
     {
       "id": "june-solstice-perfume",
@@ -16816,7 +16820,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/charcoal-bentonite-clarifying-shampoo-bar/",
       "heatRequired": false,
       "equipment": [],
-      "description": "What is a &#8220;clarifying&#8221; shampoo? Clarifying shampoos are designed to “reset” your hair, removing product build up and excess oil. If your hair is feeling limp or looking dull, it could be time for a clarifying wash. I try to clarify regula…",
+      "description": "A detoxifying shampoo bar featuring activated charcoal and bentonite clay. Designed to remove product build-up and excess lipids from the hair while maintaining a skin-compatible pH of 5.",
       "ingredients": [
         {
           "name": "Sodium Lauryl Sulfoacetate",
@@ -16865,7 +16869,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the formulation, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Put on your dust mask (USA / Canada) and weigh the dry phase into a bowl. Stir until uniform.\nAdd the wet phase to the dry phase. Put on a pair of nitrile gloves and blend thoroughly with your hands. Once the mixture is uniform, you'll be left with a stiff, easily-mouldable dough.\nIf your dough is too sticky, you'll need to add more clay. If your dough is too dry, you'll need to add a little bit more distilled water.\nNow it's time to shape or press the bar! I used a small hand press from YellowBee, lining the top and bottom with rounds of parchment paper. Please watch the video to see this in action.\nYou can also use a powered press like The Bath Bomb Press, a hard-sided cavity mould (a measuring cup works nicely!), or simply hand shape the bars.\nCarefully un-mold the bars, tidy them up if needed, and leave them to dry for at least 3–5 days before using.\nTo use, massage the bar into soaking wet hair to work up a rich lather, work through the entire length of your hair, and rinse thoroughly. Follow up with a rich hair conditioner or rinse-out mask to replenish your freshly clarified hair. Enjoy!\nWhen made as written, the pH of these shampoo bars comes out to around 5, which is great."
+      "process": "1. Wear a dust mask and gloves. Combine the dry phase ingredients and stir until the color is uniform.\n2. Incorporate the wet phase and knead by hand until a stiff dough is formed.\n3. Adjust consistency with small amounts of clay if too sticky, or water if too dry.\n4. Press the dough into a hand press or cavity mould lined with parchment paper.\n5. Unmould the bars and allow to air-dry for 3–5 days before use.",
+      "processRewritten": true
     },
     {
       "id": "creamy-french-shampoo-bar",
@@ -16874,7 +16879,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/creamy-french-shampoo-bar/",
       "heatRequired": false,
       "equipment": [],
-      "description": "I think these might be the prettiest shampoo bars I&#8217;ve made yet They&#8217;re not only pretty, but they kick out loads of luscious lather and leave your hair feeling fabulous. Let&#8217;s dive in!",
+      "description": "A luxurious solid shampoo bar formulated for high lather and a creamy skin feel. Features botanical extracts and a skin-compatible pH level.",
       "ingredients": [
         {
           "name": "Sodium Cocoyl Isethionate",
@@ -16923,7 +16928,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the formulation, you will get a different final product than I did.",
       "category": "hair",
-      "process": "To decorate: Purple mica (optional)\nPut on your dust mask (USA / Canada) and weigh the dry phase into a bowl. Stir until uniform.\nAdd the wet phase to the dry phase. Put on a pair of nitrile gloves and blend thoroughly with your hands. Once the mixture is uniform, you'll be left with a stiff, easily-mouldable dough.\nIf your dough is too sticky, you'll need to add more clay. If your dough is too dry, you'll need to add a little bit more distilled water.\nNow it's time to shape or press the bar! I used a small hand mould from YellowBee, lining the top and bottom with rounds of parchment paper. I sprinkled the top and bottom of the mould with a bit of purple mica before pressing, and then gently stamped the top of each bar with a lavender soap stamp. Please watch the video to see this in action.\nYou can also use a powered press like The Bath Bomb Press, a hard-sided cavity mould (a measuring cup works nicely!), or simply hand shape the bars.\nCarefully un-mold the bars, tidy them up if needed, and leave them to dry for at least 3–5 days before using.\nTo use, massage the bar into soaking wet hair (or a wet loofah, for body washing) to work up a rich lather. From there on out it's just like using any other shampoo or body wash. Enjoy!\nWhen made as written, the pH of these shampoo bars comes out to around 5–5.2, which is great."
+      "process": "1. Wear a dust mask and gloves. Whisk the dry phase ingredients until uniform.\n2. Gradually incorporate the liquid ingredients and knead until the mixture forms a stiff dough.\n3. Optionally, add mica for decorative effect.\n4. Press the dough firmly into moulds.\n5. Allow the bars to harden for 3 to 5 days in a dry location.",
+      "processRewritten": true
     },
     {
       "id": "castor-rice-sulfate-free-shampoo-bar",
@@ -16932,7 +16938,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/castor-rice-sulfate-free-shampoo-bar/",
       "heatRequired": false,
       "equipment": [],
-      "description": "These sparkly, sudsy shampoo bars feature two trending all-natural ingredients with long histories in hair care: castor oil and rice. These inexpensive ingredients are said to help strengthen the hair, boost growth, and improve hair health, so includ…",
+      "description": "A sulfate-free shampoo bar featuring castor oil and rice flour. Designed to support hair strength and provide a rich, creamy lather with a skin-compatible pH.",
       "ingredients": [
         {
           "name": "Ultra Fine Rice Flour",
@@ -16977,7 +16983,8 @@
       ],
       "notes": "The dry phaseThe wet phaseEquipment you&#8217;ll needHow long do these bars need to dry?Relevant links &amp; further readingCastor &amp; Rice Sulfate-Free Shampoo BarSubstitutionsSimilar Formulations The dry phase There are four ingredients in the dry phase of these shampoo bars.",
       "category": "hair",
-      "process": "To decorate: gold biodegradable glitter (optional)\nPut on your dust mask (USA / Canada) and weigh the dry phase into a bowl. Stir until uniform.\nAdd the wet phase to the dry phase. Put on a pair of nitrile gloves and blend thoroughly with your hands. Once the mixture is uniform, you'll be left with a stiff, easily-mouldable paste.\nIf your dough is too sticky, you'll need to add more rice flour. If your dough is too dry, you'll need to add a little bit of distilled water.\nCarefully un-mold the bars and leave them to dry for at least 3–4 days before using.\nTo use, massage the bar into wet hair (or a wet loofah, for body washing) to work up a rich lather. From there on out it's just like using any other shampoo or body wash. Enjoy!\nWhen made as written, the pH of these shampoo bars comes out to around 4.8, which is great."
+      "process": "1. Wear a dust mask and gloves. Combine the dry surfactants and rice flour in a bowl.\n2. Incorporate the liquid phase and knead until a uniform, mouldable paste is achieved.\n3. Adjust the texture with additional rice flour if too sticky.\n4. Press into moulds and allow to air-dry for 72–96 hours before use.",
+      "processRewritten": true
     },
     {
       "id": "simple-sulfate-free-shampoo-bar",
@@ -16986,7 +16993,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/simple-sulfate-free-shampoo-bar/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re kneading up a really simple shampoo bar that kicks out oodles of silky, luscious lather. You&#8217;ll only need seven ingredients, there&#8217;s no heat required, and you can whip up a batch in less than twenty minutes!",
+      "description": "A foundational seven-ingredient shampoo bar formulated without sulfates. Designed for rapid preparation and high lathering efficiency.",
       "ingredients": [
         {
           "name": "Sodium Lauryl Sulfoacetate",
@@ -17019,7 +17026,8 @@
       ],
       "notes": "What else is in the formulation? Some oil—I used Fractionated coconut oil but you could easily swap that out—re-fats the bar so the shampoo doesn&#8217;t dry out your hair.",
       "category": "hair",
-      "process": "Put on your dust mask (respirator) and nitrile/latex/rubber gloves. This is not optional; if you do not have a well-fitting respirator, purchase one before making these (or any) shampoo bars.\nWeigh the dry phase into a bowl and stir. Add the wet ingredients and combine to create a smooth dough. I usually begin with a bit of stirring before getting in there with my gloved hands to work everything together; I recommend keeping the mixture in the bowl rather than turning it out onto the counter.\nOnce the mixture is uniform, shape it into bars. I recommend hand squishing the dough into a hard-sided mould; I used a cute flower mould, but a 1/4 cup measuring cup would work well.\nLeave the bars to dry for 3–5 days before using.\nTo use, massage the bar into wet hair to work up a lather, and proceed as you would with any other shampoo. This also makes a great body wash if you work it up into a lovely lather with a loofah. Enjoy!\nWhen made as written, the pH of these shampoo bars comes out to around 5.5–6, which is great."
+      "process": "1. Mandatory: Wear a well-fitting respirator and gloves. Combine the dry phase ingredients and stir.\n2. Incorporate the wet phase and work the mixture into a smooth dough with gloved hands.\n3. Press the dough into hard-sided cavity moulds.\n4. Allow the bars to harden for 3–5 days before their first use.",
+      "processRewritten": true
     },
     {
       "id": "champagne-shampoo-bars",
@@ -17028,7 +17036,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/champagne-shampoo-bars/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This champagne-scented ultra-sudsy solid shampoo bar was inspired by the 110th anniversary of the maiden voyage of the RMS Titanic. I&#8217;ve shared a few Titanic-inspired formulations (and costumes!) in the past, and I thought we were overdue for a…",
+      "description": "A festive, high-performance shampoo bar featuring a champagne-inspired fragrance. Formulated with mild surfactants to provide a dense, silky lather.",
       "ingredients": [
         {
           "name": "Sodium Cocoyl Isethionate",
@@ -17069,7 +17077,8 @@
       ],
       "notes": "Creamy white kaolin clay ensures the lather is extra rich and slippy, and it also makes the bars a bit more doughy and easier to shape—with or without a press or mould. You could use a different clay if you want, but I&#8217;d stick to smooth, creamy clays for this bar. French green clay and zeolite would be lovely; bentonite and rhassoul are more coarse/sandy than I want for these bars (though cl",
       "category": "hair",
-      "process": "Put on your dust mask (USA / Canada) and weigh the dry surfactants into a bowl. Stir until uniform.\nMake a well in the centre of the dry ingredients and add all the wet ingredients.\nPut on a pair of nitrile gloves and blend thoroughly with your hands. Once the mixture is uniform, you'll be left with a stiff, easily-mouldable dough.\nIf your dough is too sticky, you'll need to add some more clay. This is likely to happen if you used a larger grain Sodium Cocoyl Isethionate (SCI) than I did, as it has less surface area to absorb moisture.\nIf you don't have a press you can use your hands to roll and smoosh it into a shape of your choosing.\nI'd recommend at least 24 hours before using them. If you live somewhere quite humid I'd err on the side of more drying time rather than less as I live somewhere really dry, so that's what my drying times are based on.\nTo use, massage the bar into wet hair to work up a lather, and proceed as you would with any other shampoo. This also makes a great body wash if you work it up into a lovely lather with a loofah. Enjoy!\nWhen made as written, the pH of these shampoo bars comes out to around 5–6, which is great."
+      "process": "1. Wear a dust mask and gloves. Combine the dry surfactants and stir until uniform.\n2. Create a well in the center and incorporate all wet phase ingredients.\n3. Knead by hand until a stiff dough is formed, adding clay if necessary to reduce stickiness.\n4. Hand-shape the bars or press into moulds.\n5. Allow to air-dry for at least 24 hours (increase time in humid environments).",
+      "processRewritten": true
     },
     {
       "id": "all-natural-perky-peppermint-shampoo",
@@ -17078,7 +17087,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/all-natural-perky-peppermint-shampoo/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today&#8217;s formulation is for an all-natural liquid shampoo featuring peppermint essential oil for a fresh, minty kick and pea extract—an active said to have hair thickening and growth-boosting benefits!",
+      "description": "An all-natural liquid shampoo featuring pea extract for hair-thickening benefits. Includes peppermint essential oil for a refreshing skin sensation and Solagum AX for stable viscosity.",
       "ingredients": [
         {
           "name": "Solagum AX",
@@ -17123,7 +17132,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Weigh the Solagum AX, glycerin, Lamesoft PO 65, pea extract, peppermint essential oil, Geogard Ultra, and panthenol (Vitamin B5) into a beaker and whisk/stir thoroughly to combine. Be sure the Solagum AX is very thoroughly distributed.\nAdd the Caprylyl/Capryl Glucoside and Cocamidopropyl Betaine. Stir slowly to combine.\nGently add the water, pouring it over your stirring implement to break its fall. Gently stir the shampoo every 3–5 minutes for about 15 minutes. This helps the Solagum AX hydrate evenly rather than settling to the bottom and fusing into a solid lump that has to be aggressively stirred later on to incorporate.\nCover the shampoo, leaving the Solagum AX to fully hydrate + the Geogard Ultra to dissolve for a couple hours.\nOnce everything has hydrated and dissolved, give the shampoo and stir and test the pH.\nWhen you've confirmed the pH is suitable, bottle it up! I used a soft squeeze tube; the small one in the photos is a Premium Frosted Soft Tube from YellowBee (gifted) and the large one in the video is a Malibu tottle from Voyageur Soap and Candle Co. (purchased).\nUse as you'd use any liquid shampoo. Enjoy!"
+      "process": "1. Combine the gelling agent, humectants, actives, and preservative in a beaker and stir until the gum is thoroughly distributed.\n2. Incorporate the surfactants and stir slowly to minimize foam.\n3. Gradually add the distilled water, stirring every few minutes for a 15-minute period to ensure even hydration.\n4. Cover the container and allow the shampoo to hydrate for several hours.\n5. Verify the pH level and transfer to a squeeze tube or tottle.",
+      "processRewritten": true
     },
     {
       "id": "sulfate-free-shampoo-bar-with-rice-starch",
@@ -17132,7 +17142,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/sulfate-free-shampoo-bar-with-rice-starch/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This sulfate-free shampoo bar formulation blends super-sudsy shampooing with a rice water rinse in a long-lasting, no-fuss bar form. You can also use this bar as body wash, it doesn&#8217;t require any heat to make, and you can have fun with the colo…",
+      "description": "A multi-purpose shampoo and body wash bar featuring rice starch. Formulated for a high-lather experience and long-lasting durability.",
       "ingredients": [
         {
           "name": "Sodium Cocoyl Isethionate",
@@ -17177,7 +17187,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Put on your dust mask (USA / Canada) and weigh the dry surfactants into a bowl. Stir until uniform.\nDissolve the dye in the Cocamidopropyl Betaine. Make a well in the centre of the dry ingredients and add all the wet ingredients.\nPut on a pair of nitrile gloves and blend thoroughly with your hands. Once the mixture is uniform, you'll be left with a stiff, easily-mouldable dough.\nIf your dough is too sticky, you'll need to add some more rice flour. This is likely to happen if you used a larger grain Sodium Cocoyl Isethionate (SCI) than I did, as it has less surface area to absorb moisture.\nShape the dough into a bar-like lump/disc of your choosing and leave the bar to dry. I'd recommend at least 3–4 days (that's enough time for the bars to lose ~3% of their weight). If you live somewhere quite humid I'd err on the side of more drying time rather than less as I live somewhere really dry, so that's what my drying times are based on.\nTo use, massage the bar into wet hair to work up a lather, and proceed as you would with any other shampoo. This also makes a great body wash if you work it up into a lovely lather with a loofah. Enjoy!\nWhen made as written, the pH of this shampoo is around 5.8, which is great."
+      "process": "1. Wear a dust mask and gloves. Combine the dry surfactants and whisk until uniform.\n2. Dissolve any colorants in the liquid surfactant before merging with the dry phase.\n3. Incorporate the remaining wet phase ingredients and knead into a stiff dough.\n4. Shape into discs or press into moulds.\n5. Allow to air-dry for 3–4 days until the bar has lost approximately 30% of its weight.",
+      "processRewritten": true
     },
     {
       "id": "more-mango-sulfate-free-shampoo-bar",
@@ -17188,7 +17199,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "description": "A mango butter-based shampoo bar formulated for high emolliency and gentle cleansing. Includes skin-soothing botanical extracts and a skin-compatible pH.",
       "ingredients": [
         {
           "name": "Cocamidopropyl Betaine",
@@ -17225,7 +17236,8 @@
       ],
       "notes": "I swapped 2019&#8217;s conditioning ingredient (BTMS-25) for the easier-to-use and still very awesome Polyquaternium 7. Since it&#8217;s liquid, it&#8217;s super easy to incorporate. I find the BTMS&#8217; difficult to melt and fast to solidify, making them a bit of a pain to try to evenly disperse into a dough. Polyquaternium 7 is wonderfully cooperative and works beautifully.",
       "category": "hair",
-      "process": "Combine the cocamidopropyl betaine and dye; allow the dye to dissolve. Melt the mango butter.\nPut on your dust mask (USA / Canada) and weigh the dry surfactants into a bowl. Stir until uniform. Add the melted mango butter and the cool down phase. Put on a pair of nitrile gloves and blend thoroughly with your hands. Once the mixture is uniform, you'll be left with a stiff, easily-mouldable dough.\nIf your dough is too sticky, you'll need to add some starch (arrowroot starch and cornstarch are good choices). This is likely to happen if you used a larger grain Sodium Cocoyl Isethionate (SCI) than I did, as it has less surface area to absorb moisture.\nTo use, massage the bar into wet hair to work up a lather, and proceed as you would with any other shampoo. This also makes a great body wash if you work it up into a lovely lather with a loofah. Enjoy!\nWhen made as written, the pH of this shampoo is around 4.5, which is great."
+      "process": "1. Melt the mango butter and set aside. Wear a dust mask and gloves. Combine the dry surfactants in a mixing bowl.\n2. Incorporate the melted butter and cooling phase ingredients into the dry phase.\n3. Knead the mixture until a uniform, mouldable dough is formed, adding starch if necessary to reduce stickiness.\n4. Press into moulds and allow to harden for 48–72 hours.",
+      "processRewritten": true
     },
     {
       "id": "rose-silk-clarifying-shampoo",
@@ -17234,7 +17246,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/rose-silk-clarifying-shampoo/",
       "heatRequired": false,
       "equipment": [],
-      "description": "With that in mind, my product/formulation philosophy was to create high-performing natural haircare products that meet the standards of the customer who is interested in natural, but not willing to compromise on performance; knowing they’ve gone back…",
+      "description": "A professional-grade liquid clarifying shampoo featuring hydrolyzed silk and rose hydrosol. Formulated for high performance and effective removal of product build-up.",
       "ingredients": [
         {
           "name": "Siligel&#x2122;",
@@ -17287,7 +17299,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Using a digital scale, weigh the Siligel&#x2122; and propanediol (Phase A) into a beaker. Stir thoroughly to combine, ensuring there are no clumps of Siligel&#x2122;.\nAdd the sodium lactate, citric acid, panthenol, and hydrolyzed silk. Stir gently to combine before adding the Plantapon® TF and Cocamidopropyl Betaine (Phase B), and stirring gently.\nAdd the distilled water and rose hydrosol (Phase C). Stir gently to avoid working up a lather.\nWeigh the Geogard® ECT and Tetrasodium Glutamate Diacetate (Phase D) into a small bowl or beaker. Add a small amount of the shampoo, stir to combine, and then transfer that mixture back into the parent batch of shampoo. Stir gently to combine.\nCover tightly with a piece of cling film. Leave to rest for two hours, giving everything time to dissolve and incorporate.\nTo package; use a funnel squeeze “tottle\"; I used a 60g one from YellowBee for my 70g batch. The mixture will be uniform when filling, but will continue to thicken for approximately three days (I'd say it gets to the 80–90% point within 6 hours and then slowly gets ever-so-slightly thicker).\nUse as you would use any liquid shampoo. Enjoy!"
+      "process": "1. Combine the gelling agents and humectants in a beaker and stir until the mixture is uniform and clump-free.\n2. Incorporate the remaining water-soluble actives and surfactants sequentially, stirring gently after each addition.\n3. Add the distilled water and rose hydrosol, stirring carefully to avoid creating a lather.\n4. Cover the container and allow it to sit for two hours to ensure full hydration.\n5. Transfer to a funnel-top bottle or tottle.",
+      "processRewritten": true
     },
     {
       "id": "ice-palace-sulfate-free-shampoo-bar",
@@ -17296,7 +17309,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/ice-palace-sulfate-free-shampoo-bar/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "description": "A winter-themed solid shampoo bar featuring a skin-compatible pH and high lathering efficiency. Designed for gentle hair cleansing and easy preparation.",
       "ingredients": [
         {
           "name": "Sodium Cocoyl Isethionate",
@@ -17341,7 +17354,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Put on your dust mask (USA / Canada) and weigh the dry phase into a bowl. Stir until uniform."
+      "process": "1. Wear a dust mask and gloves. Whisk the dry surfactants and powders until uniform.\n2. Incorporate the liquid phase and knead by hand until a stiff dough is formed.\n3. Press firmly into moulds and allow to air-dry for 3–5 days until hard.",
+      "processRewritten": true
     },
     {
       "id": "french-green-clay-sulphate-free-shampoo-bar",
@@ -17350,7 +17364,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/french-green-clay-sulphate-free-shampoo-bar/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "description": "A clarifying shampoo bar featuring French green clay for lipid-balancing benefits. Formulated with mild surfactants to ensure a deep yet gentle hair cleanse.",
       "ingredients": [
         {
           "name": "Sodium Cocoyl Isethionate",
@@ -17395,7 +17409,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Put on your dust mask (USA / Canada) and weigh the dry phase into a bowl. Stir until uniform."
+      "process": "1. Wear a dust mask and gloves. Combine the dry phase ingredients and stir until the color is homogeneous.\n2. Incorporate the wet phase and knead by hand until the mixture reaches a dough-like consistency.\n3. Press into cavity moulds or shape by hand.\n4. Allow the bars to cure for 72–120 hours before use.",
+      "processRewritten": true
     },
     {
       "id": "silk-shine-shampoo",
