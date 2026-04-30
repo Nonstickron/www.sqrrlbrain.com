@@ -597,7 +597,14 @@
     "Red #33",
     "Yellow #6",
     "Pigment Of Choice",
-    "Creamy Lip Balm Base"
+    "Creamy Lip Balm Base",
+    "Just Isn&#8217;t Enough &#8220;room&#8221; For Any All Those Not-aloe-vera-juice Ingredients To Be Included At Effective Levels. It Could Be That They&#8217;ve Used A Concentrated Juice To Achieve This Number Rather Than 1:1 Liquid Juice, But The Formulation Cannot Contain 99.9% Fresh Liquid 1:1 Aloe Vera Juice And Also Be Gelled To A Level That Makes Sense For The Tube It Is Sold In, Neutralized, And Properly Preserved.",
+    "Aloe Vera Juic",
+    "Ucuuba Butter",
+    "Patchouli",
+    "Cedarwood",
+    "Sage",
+    "Vetiver"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -22555,6 +22562,295 @@
       ],
       "notes": "Notes &amp; Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup"
+    },
+    {
+      "id": "diy-aloe-vera-gel",
+      "name": "DIY Aloe Vera Gel",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/diy-aloe-vera-gel/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "Aloe vera gel is a gorgeous summer skincare staple, and with the right formulation, it&#8217;s also really easy (and inexpensive) to DIY! So, that&#8217;s what we&#8217;re going to do today.",
+      "ingredients": [
+        {
+          "name": "Just Isn&#8217;t Enough &#8220;room&#8221; For Any All Those Not-aloe-vera-juice Ingredients To Be Included At Effective Levels. It Could Be That They&#8217;ve Used A Concentrated Juice To Achieve This Number Rather Than 1:1 Liquid Juice, But The Formulation Cannot Contain 99.9% Fresh Liquid 1:1 Aloe Vera Juice And Also Be Gelled To A Level That Makes Sense For The Tube It Is Sold In, Neutralized, And Properly Preserved.",
+          "pct": 0.01
+        },
+        {
+          "name": "Xanthan Gum",
+          "pct": 1.5
+        },
+        {
+          "name": "Vegetable Glycerine",
+          "pct": 3
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        },
+        {
+          "name": "Aloe Vera Juic",
+          "pct": 95
+        }
+      ],
+      "notes": "The gel that&#8217;s found in side fresh aloe leaves is often referred to as aloe gel, but that&#8217;s not what we&#8217;re talking about when we talk about aloe gel as a cosmetic product. The clear gel scraped from inside fresh aloe leaves isn&#8217;t very shelf stable, so while it is lovely, if you want an aloe gel you can travel with or sell, it&#8217;s not what you want.",
+      "category": "simple"
+    },
+    {
+      "id": "super-simple-moisturizing-lotion",
+      "name": "Super Simple Moisturizing Lotion",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/super-simple-moisturizing-lotion/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "This is a really simple lotion, and that&#8217;s the point. If you&#8217;re looking for something a bit fancier, you can find all my hand &amp; body lotion formulations here, and all my face lotion formulations here. As of this writing, there are nea…",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 76.5
+        },
+        {
+          "name": "Vegetable Glycerine",
+          "pct": 10
+        },
+        {
+          "name": "Emulsifying Wax NF",
+          "pct": 3
+        },
+        {
+          "name": "Fractionated Coconut Oil",
+          "pct": 10
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        }
+      ],
+      "notes": "For oil, you could choose any liquid oil, or even a butter, like mango butter or shea butter. I chose fractionated coconut oil as it&#8217;s lightweight and inexpensive, but safflower oil, grapeseed oil, apricot kernel oil, almond oil, and jojoba oil would all be good choices. If you want to get a bit more complex you could also blend a couple of different oils (or butters!)—just make sure the tot",
+      "category": "simple"
+    },
+    {
+      "id": "rose-witch-hazel-facial-toner",
+      "name": "Rose Witch Hazel Facial Toner",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rose-witch-hazel-facial-toner/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "This sweetly fragrant, refreshing facial toner has become a fast favourite of mine. It smells deliciously of roses, features several soothing and lightly hydrating ingredients, and leaves my skin feeling revived and gently cleansed. It&#8217;s also c…",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 37.5
+        },
+        {
+          "name": "Aloe Vera Juice",
+          "pct": 20
+        },
+        {
+          "name": "Witch Hazel",
+          "pct": 20
+        },
+        {
+          "name": "Rose Hydrosol",
+          "pct": 20
+        },
+        {
+          "name": "Vegetable Glycerine",
+          "pct": 1
+        },
+        {
+          "name": "Panthenol Powder",
+          "pct": 1
+        },
+        {
+          "name": "Liquid Germall Plus™",
+          "pct": 0.5
+        }
+      ],
+      "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
+      "category": "simple"
+    },
+    {
+      "id": "rose-pink-grapefruit-valentines-soap",
+      "name": "Rose  Pink Grapefruit Valentines Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/rose-pink-grapefruit-valentines-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "The soap gets its colour from three places. The creamy whiteness is thanks to some titanium dioxide (with a bit of help from white kaolin clay (USA / Canada)), and the pink is from a small scoop of Australian Pink Clay.",
+      "ingredients": [
+        {
+          "name": "Rice Bran Oil",
+          "pct": 20
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Lard",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "category": "simple"
+    },
+    {
+      "id": "citrussy-beer-soap",
+      "name": "Citrussy Beer Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/citrussy-beer-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "I&#8217;ve been wanting to make beer soap for ages, and I&#8217;m pleased to say I finally got around to doing it! A friend of mine makes beer (and great beer, at that!) and had some mostly flat stuff that he passed off to me for soaping purposes. An…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 15
+        },
+        {
+          "name": "Lard Or Beef Tallow",
+          "pct": 15
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "Yeah&#8230; I destroyed my DIY things coffee maker 🙁 Boooo. This wee little food processor is all Value Village had when I went to replace it. I&#8217;ll keep looking, apparently second hand coffee makers are popular for more, err, nefarious hobbies.",
+      "category": "simple"
+    },
+    {
+      "id": "jasmine-rosewood-and-ylang-ylang-soap",
+      "name": "Jasmine, Rosewood, and Ylang-Ylang Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/jasmine-rosewood-and-ylang-ylang-soap/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender"
+      ],
+      "description": "This intoxicating soap is lightly golden and reminiscent of tropical gardens and exotic locales. It makes me think of small towns in the summer time—specifically Gig Harbor, Washington. My Aunt&#8217;s family lives there, and all of my most recent vi…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Lard",
+          "pct": 20
+        },
+        {
+          "name": "Unrefined Shea Butter",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "This sounds fantastic! Thanks so much for sharing 🙂 I&#8217;d love to see a photo if you want to share it on my Facebook page or something.",
+      "category": "simple"
+    },
+    {
+      "id": "dirt-soap",
+      "name": "Dirt Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/dirt-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "A bit of an oxymoron, perhaps, but the idea of a dark, earthy scented bar was quite intriguing. Something to use up all the Ucuuba butter and rhassoul clay I&#8217;ve got in my cupboard. Something to remind me of summer and nature and all those thing…",
+      "ingredients": [
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 30
+        },
+        {
+          "name": "Lard",
+          "pct": 15
+        },
+        {
+          "name": "Ucuuba Butter",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Patchouli",
+          "pct": 80
+        },
+        {
+          "name": "Cedarwood",
+          "pct": 10
+        },
+        {
+          "name": "Sage",
+          "pct": 9
+        },
+        {
+          "name": "Vetiver",
+          "pct": 1
+        }
+      ],
+      "notes": "I want to try this recipe, but don&#8217;t have ucuuba butter. I tried to find out enough about it to make a smart substitution, but couldn&#8217;t find much information. Can you suggest a good replacement? Or is it necessary to the recipe?",
+      "category": "simple"
+    },
+    {
+      "id": "lemongrass-ginger-coconut-milk-and-oolong-soap",
+      "name": "Lemongrass, Ginger, Coconut Milk, and Oolong Soap",
+      "source": "humblebeeandme.com",
+      "sourceUrl": "https://www.humblebeeandme.com/lemongrass-ginger-coconut-milk-and-oolong-soap/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "I was at a party last month and I got to talking to someone about Thai curries. Ginger, galangal, lemongrass, coconut milk, and chilies. The idea wedged itself in my brain. The next day I went to make a batch of soap and the idea was still there.",
+      "ingredients": [
+        {
+          "name": "Beef Tallow",
+          "pct": 25
+        },
+        {
+          "name": "Refined Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 15
+        },
+        {
+          "name": "Superfat",
+          "pct": 5
+        }
+      ],
+      "notes": "While I was in grade school we lived in China for 3 months, due to my fathers work. I LOVE Oolong tea. However, I can not find it anywhere, with the exception of a bulk store and you have to buy 20 boxes. As much as I love tea, that&#8217;s a bit much. I thought World Market would have it, but our store doesn&#8217;t carry it. Suggestions on a substitution, or shall I continue my search? 🙂",
+      "category": "simple"
     }
   ]
 }
