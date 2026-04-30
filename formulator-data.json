@@ -5657,7 +5657,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/berry-glow-facial-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today&#8217;s formulation is a bit of a formulation love song—an ode, if you will. A loving ballad to beautiful, fruit berry oils. A syllable-free sonnet to anti-inflammatory, barrier-boosting, antioxidant-rich oils that smell wonderfully of fresh ai…",
+      "description": "An antioxidant-rich facial oil serum featuring blackberry, raspberry, and cranberry seed oils. Formulated with olive squalane for a lightweight, non-greasy finish.",
       "ingredients": [
         {
           "name": "Olive Squalane",
@@ -5686,7 +5686,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh all the ingredients into a small beaker, or directly into the bottle you'll be storing the serum in.\nIf it's a beaker, stir to combine. If you went straight for the bottle, cap and shake.\nFor packaging, I used a gifted 10mL airless pump bottle from Yellow Bee. I love it—it's so cute and the reduced exposure to air helps the serum last longer by delaying oxidization. You could also use a dropper-top bottle.\nTo use, spread a few drops over the skin towards the end of your skincare routine, after cleansing and using any lighter serums."
+      "process": "1. Measure all carrier oils into a beaker or directly into the storage bottle.\n2. Incorporate the vitamin E and bisabolol.\n3. Stir or shake until the mixture is uniform.\n4. Transfer to an airless pump or dropper bottle for storage.",
+      "processRewritten": true
     },
     {
       "id": "skin-brightening-toner-mist",
@@ -5697,7 +5698,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "I packaged this Skin Brightening Toner Mist in a mister bottle so I can spritz it over my skin as part of my skincare routine, but you definitely don&#8217;t have to mist this if you don&#8217;t want to. If you&#8217;re more of a toner-on-cotton-pads…",
+      "description": "A brightening facial toner mist formulated with 3% niacinamide and 3% N-acetyl glucosamine. Includes witch hazel and sodium lactate for skin-toning and hydrating benefits.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -5734,7 +5735,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup or beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Place the measuring cup in your prepared water bath until the Geogard Ultra has dissolved.\nOnce the Geogard Ultra has dissolved, remove your beaker from the water bath. Weigh the beaker and add enough distilled water to bring the weight back up to what it was before heating. Up next, add the hydrosol, sodium lactate, and panthenol. Stir to combine.\nAt this point the overall mixture should be relatively cool to the touch—if it's not, or you're not sure, leave it a while longer until it's cooled to room temperature, and then add the niacinamide (Vitamin B3) and N-Acetyl Glucosamine. Stir to combine. Once the last two ingredients have dissolved, it's time to test the pH!\nTo use; I like to mist this over my skin after cleansing and then follow up with a cream or oil serum. Enjoy!"
+      "process": "1. Heat the water phase ingredients in a water bath until the preservative is fully dissolved.\n2. Remove from heat and add enough distilled water to compensate for evaporation.\n3. Incorporate the hydrosol, sodium lactate, and panthenol.\n4. Once the mixture reaches room temperature, add the niacinamide and N-acetyl glucosamine and stir until dissolved.\n5. Verify the pH level and package in a mister bottle.",
+      "processRewritten": true
     },
     {
       "id": "summer-stone-fruit-facial-oil-serum",
@@ -5743,7 +5745,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/summer-stone-fruit-facial-oil-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re blending up a wee taste of summer in the form of a Summer Stone Fruit Facial Oil Serum. It smells softly of marzipan and stars oils from three of my favourite summer stone fruits, plus a solid dose of some potent anti-oxidants for s…",
+      "description": "A lightweight facial oil serum formulated with apricot, cherry, and plum kernel oils. Includes coenzyme Q10 for antioxidant protection.",
       "ingredients": [
         {
           "name": "Coenzyme Q10 Q-MAX",
@@ -5768,7 +5770,8 @@
       ],
       "notes": "Plum oil in the Humblebee &amp; Me Encyclopedia Apricot Kernel Oil in the Humblebee &amp; Me Encyclopedia Cherry Kernel Oil in the Humblebee &amp; Me Encyclopedia Coenzyme Q10 (Ubiquinone) in the Humblebee &amp; Me Encyclopedia A Guide to Carrier Oil Substitutions How long will ______ last? What is its shelf life?",
       "category": "face",
-      "process": "Weigh all the ingredients into a small beaker, or directly into the bottle you'll be storing the serum in.\nIf it's a beaker, stir to combine, and then pour into the bottle. If you went straight for the bottle, cap and shake.\nTo use, spread a few drops over the skin towards the end of your skincare routine, after cleansing and using any lighter serums."
+      "process": "1. Combine the carrier oils and coenzyme Q10 in a beaker.\n2. Stir until the Q10 is fully incorporated and the liquid is uniform.\n3. Add the vitamin E and stir again.\n4. Transfer to a dropper bottle.",
+      "processRewritten": true
     },
     {
       "id": "silky-soothing-facial-gel",
@@ -5777,7 +5780,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/silky-soothing-facial-gel/",
       "heatRequired": false,
       "equipment": [],
-      "description": "In addition to the moisturizing goodness from the panthenol (Vitamin B5) and allantoin, we&#8217;ve also got two great humectants in here—hyaluronic acid and propanediol 1,3. While these are both low-tack humectants, I have found gels can be tacky, s…",
+      "description": "A water-based facial gel designed to provide lightweight hydration and soothing benefits. Formulated with gelling agents for a smooth, non-sticky finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -5814,7 +5817,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh all of the ingredients into a beaker. Cover the beaker and leave everything to hydrate and dissolve for a few hours—the mixture should appear clear, though it will likely look a bit lumpy.\nStir until smooth—a small wire whisk is useful for this step. I used my mini mixer.\nThat's it! I packaged my Silky Soothing Facial Gel in a 50g (1.76oz) frosted soft squeeze tube from YellowBee. Watch the video to see how I did it! You'll need a syringe (USA / Canada).\nTo use, smooth a pea-sized amount (or more—it's up to you) across your skin after cleansing, and before heavier creams and/or oil serums. Enjoy!"
+      "process": "1. Measure the water phase ingredients into a beaker.\n2. Incorporate the gelling agent and stir until the texture is smooth and clear.\n3. Add the soothing actives and stir well.\n4. Transfer the gel to a squeeze tube or pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "aa-jojoba-facial-oil-serum",
@@ -5823,7 +5827,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/acai-jojoba-facial-oil-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re blending up an all-natural, lightweight oil serum that is rich in antioxidants and anti-inflammatory goodness. Starring exotic açaí berry oil and featherweight Neossance® Hemisqualane, you can easily mix up this serum in just a few …",
+      "description": "An antioxidant-rich oil serum featuring acai berry oil and jojoba oil. Formulated with hemisqualane for a featherweight skin feel.",
       "ingredients": [
         {
           "name": "Neossance Hemisqualane",
@@ -5848,7 +5852,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh all the ingredients into a small beaker, or directly into the bottle you'll be storing the serum in.\nIf it's a beaker, stir to combine. If you went straight for the bottle, cap and shake.\nThat's it! I used a 15mL (0.5 fl oz) glass bottle with a dropper top to store my serum.\nTo use, spread a few drops over the skin towards the end of your skincare routine, after cleansing and using any lighter serums."
+      "process": "1. Measure all ingredients into a beaker or directly into the final storage bottle.\n2. Stir or shake until the mixture is completely uniform.\n3. Transfer to a dropper bottle for storage.",
+      "processRewritten": true
     },
     {
       "id": "hyaluronic-acid-b5-facial-serum",
@@ -5857,7 +5862,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/hyaluronic-acid-b5-facial-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "For soothing, we&#8217;ve got a good dose of panthenol (vitamin B5) and some allantoin. Both are soothing and moisturizing, helping fight inflammation and irritation—fabulous skincare ingredients, really! Allantoin is not terribly water-soluble—just …",
+      "description": "A hydrating serum featuring hyaluronic acid and 4% panthenol (Vitamin B5). Formulated with allantoin for enhanced skin-soothing properties.",
       "ingredients": [
         {
           "name": "Xanthan Gum",
@@ -5898,7 +5903,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won’t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the xanthan gum and Propanediol 1,3 into a small beaker and whisk to combine.\nAdd the sodium lactate, panthenol, allantoin, PEG-8 dimethicone, and liquid germall plus. Whisk to combine.\nFinally, add the distilled water and hyaluronic acid solution. Whisk to combine, then cover the beaker and leave it to give everything time to dissolve. The allantoin ends up being the most stubborn ingredient; I recommend leaving it overnight.\nOnce everything has dissolved and you have a clear, uniform solution, you're ready to package up the serum! I use a 100mL (3.3fl oz) glass bottle with a treatment-pump type cap from YellowBee to hold two 50g (1.76oz) batches of this serum. A different bottle with a treatment pump top or an eyedropper top would also work well.\nTo use, smooth a few drops over the skin after cleansing, but before heavier things like lotions or oil serums. You will want to top this serum off with a lotion or oil serum for the best experience. Enjoy!"
+      "process": "1. Blend the gelling agent and humectant in a beaker until smooth.\n2. Incorporate the active ingredients, distilled water, and hyaluronic acid solution.\n3. Cover and allow the mixture to sit until all powders are fully dissolved.\n4. Transfer the clear, uniform solution to a treatment-pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "passionfruit-facial-glow-oil",
@@ -5907,7 +5913,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/passionfruit-facial-glow-oil/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re getting our glow on with a simple &amp; shimmery Passionfruit Facial Glow Oil. This beautiful facial oil serum features a blend of luxurious, exotic carrier oils, a potent skin-repairing antioxidant, and a touch of customizable shim…",
+      "description": "A shimmery facial oil serum featuring passionfruit oil and coenzyme Q10. Formulated with customizable mica for a reflective finish.",
       "ingredients": [
         {
           "name": "TKB&#8217;s Thickening Clay",
@@ -5936,7 +5942,8 @@
       ],
       "notes": "I&#8217;ve complimented the passionfruit oil with some olive squalane, another gorgeous carrier oil that sells for big bucks at Sephora, but is quite affordable from DIY suppliers. If you want to read a humorous and highly educational article/love letter to squalane, I highly recommend this thorough post from F.C. at Simple Skincare Science. The Coles&#8217; notes? It&#8217;s a gorgeous, non-irrit",
       "category": "face",
-      "process": "Use a little electric mixer (I used the MICROMini&#x2122; Mixer from Lotion Crafter) to blend everything together. If you don't have a wee electric mixer that will work, I recommend using a small wire whisk instead.\nOnce the mixture is uniform, that's it! Transfer to your container; I used a 1/4oz (~7ish mL) bottle (or double the as-written formulation and use a 15mL bottle).\nTo use, smooth a few drops over your skin after your watery serums and actives."
+      "process": "1. Combine the carrier oils, coenzyme Q10, and vitamin E in a beaker.\n2. Incorporate the mica and thickening agents.\n3. Blend using a high-speed mixer until the mixture is uniform.\n4. Transfer to a storage bottle.",
+      "processRewritten": true
     },
     {
       "id": "passionfruit-coconut-matte-velvet-moisturizer",
@@ -5947,7 +5954,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Today&#8217;s Passionfruit Coconut Matte Velvet Moisturizer is a riff on something I first tried back in 2016, and it&#8217;s lovely. Massage this soft, putty-like Passionfruit Coconut Matte Velvet Moisturizer into your skin and you&#8217;ll feel it …",
+      "description": "An anhydrous moisturizer with a matte finish, formulated with passionfruit oil and corn starch. Features a soft, putty-like consistency for high emolliency without shine.",
       "ingredients": [
         {
           "name": "Passionfruit Oil",
@@ -5972,7 +5979,8 @@
       ],
       "notes": "A small amount of cetyl alcohol thickens the oil and starch mixture just enough to keep everything combined. If you live somewhere substantially hotter than I do, you may wish to swap 3–5% of the fractionated coconut oil for some more cetyl alcohol or you may get some oil pooling on the surface or the end product (though you can always stir it back in if that happens—a bit like natural peanut butt",
       "category": "face",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nOnce everything has melted, remove the measuring cup from the heat and dry the outside of it off with a dish towel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nPlace the measuring cup containing the heated phase into the ice bath and cool, stirring constantly, for about thirty seconds, until the mixture has cooled down a bit. Remove the container from the water bath and add the cool down phase. Stir to incorporate.\nContinue stirring the mixture in the ice bath until you reach a fairly thick “trace”—the mixture should have enough viscosity that a spatula drawn through the mixture creates a line that holds for a few moments. Refer to the video to see it in action!\nOnce you've reached trace, transfer the product to a tin or wide-mouthed jar. I used a 30mL (1fl oz) slide-top tin from YellowBee. Leave the product to set up, and that's it!\nTo use, massage a small amount of product into your face towards the end of your skincare routine—in the same place you'd usually use an oil serum or a final lotion. Enjoy!"
+      "process": "1. Melt the oil phase ingredients and cetyl alcohol in a water bath.\n2. Incorporate the corn starch and stir until smooth.\n3. Place the container in an ice bath and stir steadily until a thick \"trace\" is achieved.\n4. Mix in the vitamin E and transfer the product to a wide-mouthed jar or tin.",
+      "processRewritten": true
     },
     {
       "id": "prickly-pear-eye-gel-cream",
@@ -5981,7 +5989,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/prickly-pear-eye-gel-cream/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re blending up a cold-processed Prickly Pear Eye Gel Cream! This lovely DIY is designed to hydrate and soothe the delicate under-eye skin, and also packs a de-puffifying (that&#8217;s a word, right?) punch thanks to the inclusion of so…",
+      "description": "A cold-processed eye gel cream formulated with prickly pear seed oil and caffeine. Designed to hydrate and reduce the appearance of under-eye puffiness.",
       "ingredients": [
         {
           "name": "Polyacrylate Crosspolymer-6",
@@ -6022,7 +6030,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the Polyacrylate crosspolymer-6 and prickly pear seed oil into a small beaker and stir to combine. Add the caffeine, allantoin, panthenol, propanediol, and liquid germall plus. Stir to combine.\nAdd the water and hyaluronic acid solution. Cover the mixture and leave it to hydrate and dissolve—leaving it overnight is very convenient, but an hour will do.\nTo use, dispense a small amount of product onto your fingertip and gently spread that onto the skin in the under-eye area. I recommend following up with something heavier, like an all-over facial lotion or oil serum. Enjoy!"
+      "process": "1. Blend the gelling agent and prickly pear seed oil in a beaker.\n2. Add the caffeine, soothing agents, and humectant, stirring to combine.\n3. Incorporate the distilled water and hyaluronic acid solution.\n4. Cover and allow the mixture to hydrate until a smooth gel cream is formed.\n5. Transfer to a small pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "brightening-gel-serum",
@@ -6031,7 +6040,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/brightening-gel-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "For awesome moisturizing, hydrating goodness we have some low molecular weight hyaluronic acid, propanediol 1,3, and panthenol. They&#8217;re all great, non-sticky humectants, and the panthenol is also anti-inflammatory and boosts healing.",
+      "description": "A multi-active gel serum featuring niacinamide, N-acetyl glucosamine, and ceramide complex. Formulated for skin brightening and barrier support with a lightweight, non-sticky finish.",
       "ingredients": [
         {
           "name": "Aristoflex AVC",
@@ -6088,7 +6097,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the primary phase ingredients into a 100mL (3.3fl oz) beaker (or similarly sized measuring cup/bowl) and whisk to combine.\nAdd the secondary phase ingredients and whisk to combine. Once the mixture is relatively uniform, add the distilled water. Stir to combine, and then cover with some cling film, and leave for at least an hour so the Aristoflex AVC can hydrate.\nMy top choice for packaging this formulation would be an airless pump bottle; for this 50g (1.76oz) batch you'd want something around 50mL (1.69fl oz)–60mL (2fl oz). This is thin enough to pump out, so a pump bottle will work, as will a tottle or squeeze tube.\nTo use, smooth a pea-sized amount over the skin after cleansing and follow up with an oil serum or cream/lotion. Enjoy!"
+      "process": "1. Combine the primary phase ingredients and gelling agent in a beaker.\n2. Whisk until uniform, then incorporate the active ingredients and distilled water.\n3. Cover and allow the gelling agent to fully hydrate.\n4. Transfer to an airless pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "cranberry-orange-facial-serum",
@@ -6097,7 +6107,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/cranberry-orange-facial-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Since everything in this formulation is liquid, go ahead and just blend everything at room temperature and then you&#8217;re done! I made it in a beaker, but you can also make it straight in the bottle you plan on storing the serum in. I used a 25mL …",
+      "description": "A simple facial oil serum featuring cranberry seed and evening primrose oils. Scented with sweet orange essential oil and boosted with coenzyme Q10.",
       "ingredients": [
         {
           "name": "Cranberry Seed Oil",
@@ -6130,7 +6140,8 @@
       ],
       "notes": "The last two details in this serum are a touch of sweet orange essential oil and some vitamin E to extend the shelf life of the serum. The orange essential oil is optional, but it does pair beautifully with the scent of the cranberry seed oil and is not a photosensitization concern. If you don&#8217;t want to use it, just replace the essential oil with more of one of the carrier oils in the formul",
       "category": "face",
-      "process": "Weigh all the ingredients into a small beaker, or directly into the bottle you plan on storing the serum in. Stir (or cap and shake) to combine. Transfer to a bottle (if you didn't start there) and you're done! A 25mL (roughly 1 fl oz) bottle is a good fit for this batch size. That's it!\nTo use, massage a few drops into your face at the end of your skincare routine."
+      "process": "1. Measure all carrier oils into a beaker or directly into the storage bottle.\n2. Add the coenzyme Q10 and vitamin E, then stir or shake until uniform.\n3. Incorporate the essential oil and mix well.\n4. Store in a dark glass bottle.",
+      "processRewritten": true
     },
     {
       "id": "rose-ceramide-facial-gel",
@@ -6139,7 +6150,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/rose-ceramide-facial-gel/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Basically, ceramides are a thing we have, but also a thing most of us could use more of. If your skin is aging, dry, sensitive, break-out prone, whatever—ceramides are probably a good idea. Ceramides are like the leafy green vegetables of your skin c…",
+      "description": "A barrier-supporting facial gel featuring a 5% ceramide complex and rose hydrosol. Formulated for a lightweight, velvety skin feel with intensive hydrating benefits.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -6176,7 +6187,8 @@
       ],
       "notes": "I designed this formula to really let the ceramide complex shine, so it’s pretty simple—a stage for a star. The bulk this gel is water, with some rose hydrosol for a soft scent. You could easily use a different hydrosol in its place for a different scent, or replace it with more distilled water for an unscented end product. Some velvety propanediol 1,3 provides some humectant-y goodness, helping k",
       "category": "face",
-      "process": "Weigh the first seven ingredients into a small heat-resistant glass measuring cup or beaker and stir to combine.\nSprinkle the Aristolflex AVC overtop and blend with a mini mixer or whisk until the entire mixture has thickened and emulsified. That's it!\nTo use, spread a small amount of the ceramide gel over your skin. I like to apply this after cleansing and before any heavier creams or oil serums."
+      "process": "1. Combine the water, hydrosol, and humectants in a beaker.\n2. Incorporate the ceramide complex and silicone alternatives.\n3. Sprinkle the gelling agent over the surface and whisk until the mixture has thickened and emulsified.\n4. Transfer to a pump bottle or squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "cacti-q10-ageless-facial-serum",
@@ -6185,7 +6197,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/cacti-q10-ageless-facial-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Save 5% on prickly pear seed oil and everything else at Essential Wholesale &amp; Labs with coupon code HUMBLEBEE",
+      "description": "A potent oil serum featuring prickly pear and sea buckthorn seed oils. Formulated with 3% coenzyme Q10 and squalane for antioxidant-rich skin support.",
       "ingredients": [
         {
           "name": "Coenzyme Q10 Q-MAX",
@@ -6210,7 +6222,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh all the ingredients into a 15mL/half ounce glass bottle with a dropper top. Cap, and shake to combine. That's it!\nTo use, smooth a few drops over your skin after your watery serums and actives."
+      "process": "1. Measure all ingredients into a dark glass bottle.\n2. Secure the cap and shake until the mixture is completely uniform.\n3. Apply a few drops to the skin after water-based serums.",
+      "processRewritten": true
     },
     {
       "id": "soothing-hyaluronic-acid-facial-serum",
@@ -6219,7 +6232,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/soothing-hyaluronic-acid-facial-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Sodium lactate and propanediol 1,3 further amp up the moisturizing awesomeness of this serum. Both are very effective, non-sticky humectants. Some calendula botanical extract adds further skin-soothing, moisturizing goodness to the serum, as well as …",
+      "description": "A highly soothing facial serum formulated with aloe vera, chamomile hydrosol, and cucumber distillate. Features 4% urea and hyaluronic acid for deep hydration.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -6272,7 +6285,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh the everything into a small heat-resistant glass measuring cup or directly into a 60mL (2 fl oz) bottle. Stir or cap & shake to combine. If you didn't make the serum directly in your bottle, transfer it to the bottle. That's it!\nTo use, gently massage a nickel-sized amount into your skin after any actives, but before heavier creams and occlusives. Make sure you do follow up with something that contains at least some oil otherwise you might find you skin feels a bit tacky after application. Enjoy!"
+      "process": "1. Combine all ingredients in a beaker or directly into the final storage bottle.\n2. Stir or shake until all dry components have fully dissolved.\n3. Transfer to a dropper bottle if not already packaged.\n4. Apply to damp skin for optimal absorption.",
+      "processRewritten": true
     },
     {
       "id": "indigo-lagoon-balm",
@@ -6283,7 +6297,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "This balm has two key parts: the oil &amp; butter blend, and the essential oil blend. The oil and butter blend forms the bulk of the product, dictating its consistency, melting point, texture, and absorbency speed. The essential oil blend brings the …",
+      "description": "A concentrated facial balm featuring indigo-infused camellia oil and a complex essential oil blend. Formulated with shea and cocoa butters for intensive skin nourishment.",
       "ingredients": [
         {
           "name": "Refined Shea Butter",
@@ -6340,7 +6354,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps likely won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "You'll want to infused the camellia seed oil first. I weighed out 0.25g (0.0088oz) indigo powder into a disposable tea bag and infused that into about 18g (0.63oz) camellia seed oil in a water bath for about one hour before proceeding. That yielded enough infused oil with a bit leftover.\nPrepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the shea and cocoa butter into a small heat-resistant bowl—the sort of thing you can comfortably stir in. If you don't have a small bowl, a  heat-resistant glass measuring cup will work. Place the bowl in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nOnce the butters have melted, remove them from the heat and stir in the infused camellia seed oil and marula oil. Then place the bowl in the ice bath and stir constantly for about one minute, until the mixture has cooled a bit but hasn't noticeably thickened or started to opacify.\nNow it's time to weigh in the essential oil blend! Carefully weigh in each oil. For the last two I recommend doing toothpick swirls if you're making a small batch—my scale definitely couldn't weigh those amounts!\nWhen you have reached trace, transfer the mixture to a 30mL/1 ounce tin and transfer it to the fridge to cool completely (typically about forty minutes). Remove from the fridge and let the balm come to room temperature. That's it!\nTo use, smooth a small amount of the balm over any skin that needs some special attention. Due to the higher essential oil content and the indigo infusion, avoid use around the eyes.  Enjoy!"
+      "process": "1. Infuse the camellia oil with indigo powder in a water bath for one hour.\n2. Melt the shea and cocoa butters in a separate water bath.\n3. Combine the butters with the infused oil and marula oil.\n4. Place the container in an ice bath and stir until the mixture begins to thicken.\n5. Incorporate the essential oil blend and continue stirring until a \"trace\" consistency is reached.\n6. Transfer to a tin and refrigerate until set.",
+      "processRewritten": true
     },
     {
       "id": "raspberry-marula-facial-serum",
@@ -6349,7 +6364,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/raspberry-marula-facial-serum/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Weigh all the ingredients into a small beaker! Stir to combine, and transfer to a 30mL/1oz bottle. I used this 30mL bottle with a treatment pump lid, but a 30mL/1oz glass bottle that has a dropper top will also work beautifully.",
+      "description": "A minimalist facial oil serum featuring red raspberry and marula oils. Formulated with olive squalane for high stability and a lightweight finish.",
       "ingredients": [
         {
           "name": "Olive Squalane",
@@ -6370,7 +6385,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product—and with a recipe as simple as this one, any changes will significantly impact the recipe. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh all the ingredients into a small beaker! Stir to combine, and transfer to a 30mL/1oz bottle. I used this 30mL bottle with a treatment pump lid, but a 30mL/1oz glass bottle that has a dropper top will also work beautifully.\nTo use, glide about three drops of the oil over your skin after applying any water-based serums. Enjoy!"
+      "process": "1. Measure all ingredients into a beaker.\n2. Stir until the mixture is uniform.\n3. Transfer to a bottle equipped with a treatment pump or dropper.",
+      "processRewritten": true
     },
     {
       "id": "de-puffing-peppermint-aloe-facial-roller",
@@ -6379,7 +6395,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/de-puffing-peppermint-aloe-facial-roller/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This De-Puffing Peppermint Aloe Face Roller features two of my favourite skin-soothing ingredients; anti-inflammatory aloe vera juice and healing-boosting, moisturizing panthenol (Vitamin B5). You&#8217;ll also find some great humectants—silky and in…",
+      "description": "A cooling facial treatment formulated with peppermint hydrosol and aloe vera juice. Includes caffeine and panthenol for targeted soothing and de-puffing benefits.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -6416,7 +6432,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh all the ingredients into a small beaker, or directly into the bottle you'll be storing the mixture in.\nIf it's a beaker, stir to combine, and then pour into the bottle. If you went straight for the bottle, cap and shake.\nTo use, massage the roller into your skin whenever you're feeling hot and sticky. Store the bottle in the fridge for an extra cooling boost!"
+      "process": "1. Combine all ingredients in a beaker and stir until uniform.\n2. Transfer the liquid into a roller-ball bottle.\n3. Store in the refrigerator for enhanced cooling effects during application.",
+      "processRewritten": true
     },
     {
       "id": "soothing-makeup-finishing-spray",
@@ -6425,7 +6442,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/soothing-makeup-finishing-spray/",
       "heatRequired": false,
       "equipment": [],
-      "description": "For soothing ingredients, we&#8217;ve got some of my favourites! These awesome ingredients aren&#8217;t just soothing, either—aloe vera and panthenol (Vitamin B5) also boost healing and are anti-inflammatory. Allantoin is an FDA recognized skin prote…",
+      "description": "A hydrating makeup finishing spray formulated with aloe vera, sweetgrass hydrosol, and caffeine. Designed to set makeup and provide a refreshed skin finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -6470,7 +6487,8 @@
       ],
       "notes": "For scent, I&#8217;ve used some astringent sweetgrass hydrosol. It smells wonderfully and warmly of honey and sunshine, and I just adore it. Sweetgrass hydrosol makes me think of summer on the prairies &#x1f60a; You could easily use a different hydrosol for a different scent, or simply replace it with more distilled water for an unscented end product.",
       "category": "face",
-      "process": "Weigh all the ingredients into a small heat-resistant glass measuring cup or beaker. Stir to combine, and then cover and leave the mixture to fully dissolve—this typically takes at least three hours. Leaving it overnight is very convenient!\nOnce everything has dissolved and the mixture is uniform with no bits at the bottom of the beaker, it's time to package it up! You'll want a 50–60mL (1.69–2fl oz) bottle with a mister top. I used a blue glass bottle from New Directions Aromatics, but as of this writing, they don't appear to have the mister tops in stock.\nTo use, mist your face (eyes closed!) after applying your makeup and let it dry before touching your face. You can also use the spray as needed throughout the day to add a bit of hydration and refresh your makeup—or use it without any makeup at all! Enjoy &#x1f60a;"
+      "process": "1. Combine all ingredients in a beaker and stir until well blended.\n2. Cover the container and allow it to sit for at least three hours to ensure all components are fully dissolved.\n3. Transfer the clear liquid to a bottle with a fine-mist sprayer.",
+      "processRewritten": true
     },
     {
       "id": "lavender-aloe-hydrating-facial-toner",
@@ -6479,7 +6497,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/lavender-aloe-hydrating-facial-toner/",
       "heatRequired": false,
       "equipment": [],
-      "description": "After sitting for 48 hours the allantoin has fully dissolved.",
+      "description": "A complex facial toner featuring lavender hydrosol, aloe vera juice, and witch hazel. Formulated with hyaluronic acid and sodium lactate for deep hydration and toning.",
       "ingredients": [
         {
           "name": "Propanediol 1,3",
@@ -6520,7 +6538,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Transfer to a 60mL (2 fl oz) bottle, cap, and you're done!\nTo use, apply to the skin after cleansing, but before heavier products like creams or oils. I usually use products like this after actives like vitamin C & AHAs, but before a gel-cream, lotion, and/or oil serum. I'll dispense a few drops into my palm and gently massage the liquid into my face."
+      "process": "1. Combine all ingredients in a container and stir until uniform.\n2. Allow the mixture to sit for up to 48 hours to ensure the allantoin is fully dissolved.\n3. Transfer to a bottle for storage and use.",
+      "processRewritten": true
     },
     {
       "id": "strawberry-rose-toning-facial-mist",
@@ -6529,7 +6548,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/strawberry-rose-toning-facial-mist/",
       "heatRequired": false,
       "equipment": [],
-      "description": "Today we&#8217;re creating a beautiful summery Strawberry Rose Toning Facial Mist—a fruity floral hydrating skin treat designed to soothe and moisturize your skin. I&#8217;m really enjoying it towards the end of my skin care routine and throughout th…",
+      "description": "A fruit-based facial mist featuring strawberry and rose hydrosols. Formulated with calendula extract and panthenol for soothing and hydrating benefits.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -6570,7 +6589,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "face",
-      "process": "Weigh all the ingredients into a small beaker. Stir to combine. Transfer to a 50mL (1.69fl oz) bottle with a mister top and you're done!\nAlternatively, you could just weigh everything directly into the bottle, cap, and shake to combine.\nTo use, mist over your face and enjoy the hydrating, refreshing goodness."
+      "process": "1. Combine all ingredients in a beaker or directly in the final storage bottle.\n2. Stir or shake until the mixture is uniform.\n3. Transfer to a bottle equipped with a mister nozzle.",
+      "processRewritten": true
     },
     {
       "id": "sweetgrass-gel-moisturizer",
