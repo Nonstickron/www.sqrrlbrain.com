@@ -610,7 +610,84 @@
     "For Remedies &amp; Specific Issues",
     "Of The Total Weight 10% Of The Total Weight 20% Of The Total Weight",
     "Soy Bean Oil",
-    "Superfat/lye Discount"
+    "Superfat/lye Discount",
+    "White Beeswax",
+    "Cocoa Butter Wafers",
+    "Avocado Butter",
+    "Cashmere Fragrance Oil",
+    "Polawax Emulsifying Wax",
+    "BTMS-50 Conditioning Emulsifier",
+    "Dark Red Brazilian Clay",
+    "Pumpkin Powder",
+    "Pumpkin Extract",
+    "Optiphen",
+    "Turmeric Shea Butter",
+    "Seaweed Extract",
+    "Cucumber Seed Oil",
+    "BTMS-50 Conditioning Emsulifier",
+    "Sea Clay",
+    "Spirulina Powder",
+    "DL-Panthenol",
+    "Carrot Seed Oil",
+    "Carrot Extract",
+    "Lavender Fine Essential Oil",
+    "Carrot Seed Essential Oil",
+    "Orchid Extract",
+    "Blushing Orchid Fragrance Oil",
+    "Lavender Butter",
+    "Moringa Seed Oil",
+    "Moringa Leaf Powder",
+    "Green Tea Extract",
+    "Allantoin Powder",
+    "Rosehip Seed Oil",
+    "Honeyquat",
+    "Or 40 Drops Lavender Absolute",
+    "Matcha Green Tea Butter",
+    "Matcha Tea Latte Fragrance Oil",
+    "Optiphen Optional",
+    "BTMS-50 Conditioning Emulsifer",
+    "Ginger Essential Oil",
+    "Rose Clay",
+    "Chamomile Extract",
+    "Optiphen Preservative",
+    "Jasmine Essential Water",
+    "Cera Bellina Wax",
+    "Meadowfoam Oil",
+    "Turmeric Powder",
+    "Ginseng Extract",
+    "BTMS-50 Conditioning Wax",
+    "Purple Brazilian Clay",
+    "Evening Primrose Extract",
+    "Coconut Oil 10 Oz. Infused Coconut Oil",
+    "Chamomile Herb",
+    "Yellow Beeswax",
+    "Green Tea Seed Oil",
+    "Sodium Bicarbonate Baking Soda",
+    "Jade Fragrance Oil",
+    "Deodorized Cocoa Butter",
+    "Fine Grained Dead Sea Salt",
+    "Lots Of Lather Quick Mix",
+    "Sodium Hydroxide Lye",
+    "Rosehip Jasmine Fragrance Oil",
+    "Tamanu Oil",
+    "Natural Castile Liquid Soap Base",
+    "White Jojoba Beads – Medium",
+    "Foaming Bath Butter",
+    "Coffee Butter",
+    "Walnut Shells",
+    "Lavender 40/42 Essential Oil",
+    "Organic Cocoa Butter Chunks",
+    "Aloe Vera Liquid",
+    "Bottles White Disk Cap (3 Bottles)",
+    "Potassium Cocoate",
+    "Tall Plastic Bail Jar",
+    "BTMS 50 Conditioning Emulsifier",
+    "Liquid Glycerin",
+    "Bottle With Pump Top",
+    "Essential Oil Blend",
+    "Candellila Wax",
+    "Meadowfoam",
+    "Dulse Extract"
   ],
   "userInventory": [
     "Apricot Kernel Oil",
@@ -23848,6 +23925,1725 @@
       ],
       "notes": "",
       "category": "super-simple"
+    },
+    {
+      "id": "heart-lotion-bars",
+      "name": "Heart Lotion Bars",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/heart-lotion-bars/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Heart Lotion Bars from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sweet Almond Oil",
+          "pct": 40
+        },
+        {
+          "name": "White Beeswax",
+          "pct": 30
+        },
+        {
+          "name": "Cocoa Butter Wafers",
+          "pct": 30
+        }
+      ],
+      "notes": "",
+      "process": "In a heat-safe container, add 4.8 ounces of white beeswax and 6.4 ounces of sweet almond oil. Melt in the microwave using 60 second bursts.\nAdd 4.8 ounces of cocoa butter wafers to the hot wax and oil mixture. Stir until the cocoa butter melts. If there are small pieces that won’t melt, place the container back in the microwave and heat using 10 second bursts.\nAdd 4 mL of Vanilla Select Fragrance Oil and stir in thoroughly.\nPlace a small pinch of rose petals into each mold cavity. Use a spoon to cover the petals with a bit of the oil mixture (this helps the petals stay in place). Allow to cool and harden for about 1 minute.\nCarefully pour the remaining oil mixture into each cavity. Place the mold in the freezer so it cools quickly. That helps prevent crystallization.\nRemove from the freezer after 30-60 minutes and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "hydrating-body-butter-sticks",
+      "name": "Hydrating Body Butter Sticks",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/hydrating-body-butter-sticks/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Hydrating Body Butter Sticks from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Avocado Butter",
+          "pct": 34.3
+        },
+        {
+          "name": "White Beeswax",
+          "pct": 29.4
+        },
+        {
+          "name": "Sweet Almond Oil",
+          "pct": 24.5
+        },
+        {
+          "name": "Oat Oil",
+          "pct": 9.8
+        },
+        {
+          "name": "Cashmere Fragrance Oil",
+          "pct": 2
+        }
+      ],
+      "notes": "",
+      "process": "In a heat-safe container, add 1 ounce of oat oil, 3.5 ounces of avocado butter, 3 ounces of white beeswax, and 2.5 ounces of sweet almond oil. Place the container in the microwave and melt using 30-60 second bursts. The beeswax will take longer to melt than the other ingredients. Use caution when removing the container from the microwave – it will be hot.\nAdd 0.2 ounces of Cashmere Fragrance Oil and use a spoon to thoroughly stir in.\nMake sure the clear cap is on the tube and screw the top securely. Flip over, then pull off the base cap and pour in the mixture. TIP: If you overfill the twist tubes, you can use a dropper to remove the excess oil.\nAllow the product to fully set, then press the base cap in securely and enjoy.",
+      "category": "body"
+    },
+    {
+      "id": "pumpkin-clay-face-mask",
+      "name": "Pumpkin & Clay Face Mask",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pumpkin-clay-face-mask/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Pumpkin & Clay Face Mask from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 63.9
+        },
+        {
+          "name": "Oat Oil",
+          "pct": 3
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 3.9
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 3
+        },
+        {
+          "name": "BTMS-50 Conditioning Emulsifier",
+          "pct": 2.4
+        },
+        {
+          "name": "Kaolin Clay",
+          "pct": 17.9
+        },
+        {
+          "name": "Dark Red Brazilian Clay",
+          "pct": 0.9
+        },
+        {
+          "name": "Pumpkin Powder",
+          "pct": 3
+        },
+        {
+          "name": "Pumpkin Extract",
+          "pct": 1.5
+        },
+        {
+          "name": "Optiphen",
+          "pct": 0.6
+        }
+      ],
+      "notes": "",
+      "process": "Disinfect your utensils by dipping them in a 5% bleach water solution and allowing to dry. This includes mixing containers, your stick blender, and any spoons or spatulas that may come in contact with your mask. Your products must be as free of germs, bacteria, and microbes as possible. To be safe, bleach water all your utensils.\nIn a heat-safe container, combine 1.3 ounces of avocado oil, 1 ounce of oat oil, 0.8 ounces of BTMS-50, and 1 ounce of Polawax Emulsifying Wax. Heat the container in the microwave using 30-60 second bursts until the waxes have fully melted. Be careful when removing the container, as it will be quite hot. Set aside.\nIn a small separate container, measure 6 ounces of kaolin clay, 0.3 ounces of dark red Brazilian clay, and 1 ounce of pumpkin powder. Mix to combine.\nIn a separate large container, heat the distilled water in the microwave (or on the stove top) until it reaches about 160°F. Once the water reaches the correct temperature, some of it may evaporate. Remeasure and add more distilled water if necessary until you have 21.4 ounces.\nCheck the temperatures of both containers. Each container should be about 150°-180° F. If the oil and wax has cooled, place back into the microwave.\nPlace the stick blender into the water and burp it to help get rid of bubbles. Pour the oil and wax mixture into the water and use a spatula to make sure every little bit is added. Begin pulsing the stick blender. The mixture will take on a milky appearance once the water, oil, and waxes have begun to emulsify. Continue to pulse and stir for about a minute.\nAdd heaping spoonfuls of the kaolin clay mixture and pulsing the stick blender until fully combined.\nContinue stick blending for about 1-2 minutes. Use a spatula to scrape down any clay that may be on the sides of the bowl. If you find the mixture is thick and difficult to mix, it may be too cool. Heat the mixture in the microwave using 30 second bursts and continue stick blending until the mixture is smooth.\n",
+      "category": "body"
+    },
+    {
+      "id": "turmeric-body-butter",
+      "name": "Turmeric Body Butter",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/turmeric-body-butter/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY Turmeric Body Butter from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Turmeric Shea Butter",
+          "pct": 84.2
+        },
+        {
+          "name": "Coconut Oil",
+          "pct": 15.8
+        }
+      ],
+      "notes": "",
+      "process": "Place 16 ounces of turmeric shea butter into a large mixing bowl. Turn your mixer on medium and begin breaking up the butter. Continue to mix until it softens.\nAdd 3 ounces of melted coconut oil to the mixing bowl. Use a spatula to mix in the coconut oil slightly.\nTurn the mixer on low and mix in the coconut oil. Gradually begin to increase the speed and mix for about 1 minute until the butter and coconut oil are combined.\nAdd 3 mL of ginger essential oil and 2 tablespoons of arrowroot powder. Use a spatula to gently fold in the powder. Then, use the mixer to whip the butter for about another minute to fully incorporate all the ingredients.\nUse a spoon to transfer the butter into jars. To use, place a small amount of butter on dry skin and rub in to absorb. Store this butter in a cool, dry place. If you live in a very hot climate, you may want to store the butter in the fridge to prevent melting. Enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "oat-cashmere-lotion",
+      "name": "Oat & Cashmere Lotion",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/oat-cashmere-lotion/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Oat & Cashmere Lotion from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 77
+        },
+        {
+          "name": "Colloidal Oatmeal",
+          "pct": 1
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 5
+        },
+        {
+          "name": "BTMS-50 Conditioning Emulsifier",
+          "pct": 3
+        },
+        {
+          "name": "Oat Oil",
+          "pct": 7
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 2
+        },
+        {
+          "name": "Oat Extract",
+          "pct": 3
+        },
+        {
+          "name": "Cashmere Fragrance Oil",
+          "pct": 1
+        },
+        {
+          "name": "Optiphen",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "In a heat-safe container, add 18.5 ounces of distilled water. Heat in the microwave on 1 minute bursts until the water is about 160°F. Add 0.2 ounces of colloidal oatmeal to the water and use your stick blender to mix it in and break up any clumps.\nIn a separate heat-safe container, combine 1.7 ounces of oat oil, 0.5 ounces of avocado oil, 0.7 oz. oat extract, 1.3 ounces of Polawax Emulsifying Wax, and 0.7 ounces of BTMS-50. Heat the mixture in the microwave on 30-60 second bursts until the waxes are fully melted.\nCheck the temperature of both containers. Each one should be about 160°F (the oil mixture may be a little bit hotter). When they’re ready, tap your stick blender on the bottom of the bowl to release bubbles. Pour the oils and wax into the water and begin pulsing the stick blender. Blend the mixture for 60-90 seconds, making sure the oil and water phases are fully emulsified.\nContinue stick blending until the temperature drops to about 130-140°F. Add 0.2 ounces of Cashmere Fragrance Oil and 0.2 ounces of Optiphen. Stick blend for another 60-90 seconds to fully combine.\nCarefully pour the lotion into the containers – we used a funnel to help. Let the bottles sit overnight without a cap to prevent condensation. Once completely cooled, place the caps on the bottles, apply labels, and enjoy.",
+      "category": "body"
+    },
+    {
+      "id": "whipped-pearl-body-butter-diy",
+      "name": "Whipped Pearl Body Butter DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pearl-body-butter-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Stand/hand mixer"
+      ],
+      "description": "DIY Whipped Pearl Body Butter DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Avocado Butter",
+          "pct": 92.1
+        },
+        {
+          "name": "Seaweed Extract",
+          "pct": 6.6
+        },
+        {
+          "name": "Arrowroot Powder",
+          "pct": 1.3
+        }
+      ],
+      "notes": "",
+      "process": "Place 14 ounces of avocado butter into a large mixing bowl. Set a hand or stand mixer to low/medium and whip the butter for about 30-60 seconds to break up any large chunks and to create a smoother texture.\nAdd 1 ounce of seaweed extract, 4 mL of Pacific Pearl Fragrance Oil, and 4 mL of Island Coconut Fragrance Oil. Turn the mixer on low to slowly incorporate the wet ingredients. Then, increase to medium/high and whip for about 30 seconds.\nAdd 1/2 teaspoon of pearl powder and 1 teaspoon of Super Pearly White Mica. Turn the mixer on low to slowly incorporate the dry ingredients. Then, increase to medium/high and whip for about 30 seconds.\nAdd 0.2 ounces of arrowroot powder. Use a spatula or large spoon to fold the powder in. Once incorporated, scrape down the sides of the bowl and continue to whip the mixture for about 60 more seconds. The butter should be smooth and fluffy.\nSpoon equally into three 8 oz. bail jars. Store the butter in a dry, cool place and enjoy.",
+      "category": "body"
+    },
+    {
+      "id": "seaweed-cucumber-face-mask-diy",
+      "name": "Seaweed & Cucumber Face Mask DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/seaweed-cucumber-face-mask-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Seaweed & Cucumber Face Mask DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 63.7
+        },
+        {
+          "name": "Cucumber Seed Oil",
+          "pct": 3
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 3.9
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 3
+        },
+        {
+          "name": "BTMS-50 Conditioning Emsulifier",
+          "pct": 2.4
+        },
+        {
+          "name": "Kaolin Clay",
+          "pct": 14.9
+        },
+        {
+          "name": "Sea Clay",
+          "pct": 6
+        },
+        {
+          "name": "Spirulina Powder",
+          "pct": 1.2
+        },
+        {
+          "name": "Seaweed Extract",
+          "pct": 1.5
+        },
+        {
+          "name": "Optiphen",
+          "pct": 0.6
+        }
+      ],
+      "notes": "",
+      "process": "In a medium container, measure 5 ounces of kaolin clay, 2 ounces of sea clay, and 0.4 ounces of spirulina powder. Mix them together thoroughly.\nIn a heat-safe container, combine the avocado oil, cucumber seed oil, BTMS-50 and Polawax. Heat the container in the microwave using 30-60 second bursts until the waxes have fully melted. Be careful when removing the container, as it will be quite hot. Set aside.\nIn a separate large container, heat the distilled water in the microwave (or on the stove top) until it reaches about 160-170 ° F. Once the water reaches the correct temperature, some of it may evaporate. Remeasure and add more distilled water if necessary until you have 21.4 ounces of hot water.\nBegin adding heaping spoonfuls of the clay mixture and pulsing the stick blender until combined. Continue to add the clay to the mixture and blend in small amounts until all the clay is added.\nContinue stick blending for about one to two minutes. Use a spatula to scrape down any clay that may be on the sides of the bowl. Check the temperature of the mixture. Once the mixture is about 130-140°F, add 0.2 oz. of Optiphen, 3 mL of ginger essential oil, and 0.5 oz. of seaweed extract. Stick blend (don’t forget to burp the stick blender) the ingredients until fully mixed.\nPour the mixture into the bail jars. Tap the jars on the counter to help get rid of bubbles. You can also spritz with alcohol to help get rid of bubbles. Allow the containers to cool for several hours with the lid open to prevent condensation.\nOnce fully cooled, the mixture will be a thick, lotion-like texture. To use, apply a medium layer to dry, clean skin. Avoid the immediate eye area. Allow the mask to sit on the skin for at least 15 minutes. Use warm water to rinse off. There is no need to wash the skin after, but you can if you prefer.",
+      "category": "body"
+    },
+    {
+      "id": "carrot-hair-conditioner-tutorial",
+      "name": "Carrot Hair Conditioner Tutorial",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/carrot-hair-conditioner-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Carrot Hair Conditioner Tutorial from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 81
+        },
+        {
+          "name": "DL-Panthenol",
+          "pct": 2
+        },
+        {
+          "name": "BTMS-50 Conditioning Emulsifier",
+          "pct": 7
+        },
+        {
+          "name": "Carrot Seed Oil",
+          "pct": 5
+        },
+        {
+          "name": "Cetearyl Alcohol",
+          "pct": 2
+        },
+        {
+          "name": "Carrot Extract",
+          "pct": 1
+        },
+        {
+          "name": "Lavender Fine Essential Oil",
+          "pct": 1
+        },
+        {
+          "name": "Carrot Seed Essential Oil",
+          "pct": 1
+        },
+        {
+          "name": "Optiphen",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "In a heat-safe container, combine 1.3 ounces of carrot seed oil, 0.3 ounces of carrot extract, 0.5 ounces of cetearyl alcohol, and 1.8 ounces of BTMS-50. Heat the mixture in the microwave on 30-60 second bursts until the waxes are fully melted and the mixture is about 180° F.\nIn a separate large container, heat 21 ounces of distilled water in the microwave until it reaches about 160-170 ° F. Once the water reaches the correct temperature, some of it may evaporate. Remeasure and add more distilled water if necessary. Add 0.5 ounces of DL-Panthenol to the hot water and stir until dissolved.\nContinue stick blending until the temperature drops to about 140° F. Add 0.1 ounce of carrot essential oil, 0.2 ounces of Lavender Fine Essential Oil, 0.3 ounces of carrot extract, and 0.3 ounces of Optiphen. Stick blend for another 2-3 minutes to fully combine.\nPour the mixture into jars. Let the jars sit overnight without the lids on (otherwise condensation can form inside the jars). Once the mixture is completely cool, shut the jars and enjoy. To use, apply the conditioner to wet hair after shampooing. Wait 2-3 minutes and rinse off.",
+      "category": "body"
+    },
+    {
+      "id": "orchid-lotion-diy",
+      "name": "Orchid Lotion DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/orchid-lotion-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Orchid Lotion DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 75
+        },
+        {
+          "name": "Jojoba Oil",
+          "pct": 10
+        },
+        {
+          "name": "Orchid Extract",
+          "pct": 5
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 6
+        },
+        {
+          "name": "BTMS-50 Conditioning Emulsifier",
+          "pct": 2
+        },
+        {
+          "name": "Optiphen",
+          "pct": 1
+        },
+        {
+          "name": "Blushing Orchid Fragrance Oil",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "In a heat-safe container, add 15 ounces of distilled water. Heat in the microwave on 1 minute bursts until the water is about 160-180° F.\nIn a separate heat-safe container, combine 2 ounces of jojoba oil, 1 ounce of orchid extract, 1.2 ounces of Polawax Emulsifying Wax, and 0.4 ounces of BTMS-50. Heat the mixture in the microwave on 30-60 second bursts until the waxes are fully melted and the mixture is about 160-180° F.\nCheck the temperature of both containers. Each one should be about 160° F. When they’re ready, tap your stick blender on the bottom of the bowl to release bubbles. Pour the oils and wax into the water and begin pulsing the stick blender. Blend the mixture for 60-90 seconds, making sure the oil and water phases are fully emulsified.\nContinue stick blending until the temperature drops to about 130-140° F. Add 0.2 ounces of Blushing Orchid Fragrance Oil and 0.2 ounces of Optiphen. Stick blend for another 60-90 seconds to fully combine.\nCarefully pour the lotion into the containers. Let the bottles sit overnight without a cap to prevent condensation. Once completely cooled, place the caps on the bottles and enjoy.",
+      "category": "body"
+    },
+    {
+      "id": "whipped-lavender-body-butter-diy",
+      "name": "Whipped Lavender Body Butter DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/whipped-lavender-body-butter/",
+      "heatRequired": false,
+      "equipment": [
+        "Stand/hand mixer"
+      ],
+      "description": "DIY Whipped Lavender Body Butter DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Lavender Butter",
+          "pct": 88.9
+        },
+        {
+          "name": "Orchid Extract",
+          "pct": 5.6
+        },
+        {
+          "name": "Arrowroot Powder",
+          "pct": 5.6
+        }
+      ],
+      "notes": "",
+      "process": "Place 16 ounces of lavender butter into a large mixing bowl. Use the whisk attachment on a hand or stand mixer and whip the butter for about 30 seconds or until it's completely smooth.\nAdd 1 oz. of orchid extract to the lavender butter. Turn the mixer on low and gently whip until the ingredients are fully mixed.\nUsing the dropper, add 6mL of the Lavender Fine Essential Oil. Turn the mixer on low and gently whip until the ingredients are fully mixed.\nAdd 1 oz. of arrowroot powder. Use a large spoon or spatula to gently fold the powder into the mixture. Scrape down any mixture from the sides of the bowl.\nUse the mixer to whip the butter for about 30 more seconds to ensure ingredients are incorporated. The mixture should be completely smooth and fluffy.\nUse a spoon to transfer the body butter into jars. Tap them firmly on the counter to help settle\nthe butter into the jars. Enjoy.",
+      "category": "body"
+    },
+    {
+      "id": "moringa-clay-mask-diy",
+      "name": "Moringa Clay Mask DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/moringa-clay-mask-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stand/hand mixer",
+        "Stove"
+      ],
+      "description": "DIY Moringa Clay Mask DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 66
+        },
+        {
+          "name": "Moringa Seed Oil",
+          "pct": 3.1
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 4
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 3.1
+        },
+        {
+          "name": "BTMS-50 Conditioning Emsulifier",
+          "pct": 2.5
+        },
+        {
+          "name": "Kaolin Clay",
+          "pct": 18.5
+        },
+        {
+          "name": "Moringa Leaf Powder",
+          "pct": 0.6
+        },
+        {
+          "name": "Green Tea Extract",
+          "pct": 1.5
+        },
+        {
+          "name": "Optiphen",
+          "pct": 0.6
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "how-to-make-essential-oil-massage-oil",
+      "name": "How to Make Essential Oil Massage Oil",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/make-essential-oil-massage-oil/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY How to Make Essential Oil Massage Oil from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Argan Oil",
+          "pct": 30
+        },
+        {
+          "name": "Jojoba Oil",
+          "pct": 30
+        },
+        {
+          "name": "Moringa Seed Oil",
+          "pct": 20
+        },
+        {
+          "name": "Fractionated Coconut Oil",
+          "pct": 20
+        }
+      ],
+      "notes": "",
+      "process": "In a small container, mix together the argan oil, jojoba oil, moringa seed oil and fractionated coconut oil. Use a spoon to mix the oils together.\nAdd the Massage Essential Oil blend to the oils. Adjust the amount of essential oil depending on your scent preference. Use a spoon to thoroughly mix in the essential oil to the oil mixture. Carefully pour the massage oil into your bottle or other container. Store in a cool, dark place.\nOnce you’re ready to use, pour a small amount of oil into your hands to warm it up. You can also place a small amount of oil in the microwave to warm it up before use if you like your massage oil hot.",
+      "category": "body"
+    },
+    {
+      "id": "lavender-honeyquat-lotion-recipe",
+      "name": "Lavender & Honeyquat Lotion Recipe",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lavender-honeyquat-lotion-recipe/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Lavender & Honeyquat Lotion Recipe from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 73
+        },
+        {
+          "name": "Allantoin Powder",
+          "pct": 0.5
+        },
+        {
+          "name": "Moringa Seed Oil",
+          "pct": 6
+        },
+        {
+          "name": "Rosehip Seed Oil",
+          "pct": 6
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 2
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 6
+        },
+        {
+          "name": "Cetearyl Alcohol",
+          "pct": 2
+        },
+        {
+          "name": "Honeyquat",
+          "pct": 3
+        },
+        {
+          "name": "Or 40 Drops Lavender Absolute",
+          "pct": 0.5
+        },
+        {
+          "name": "Optiphen",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "In a heat-safe container, combine the rosehip seed oil, moringa seed oil, shea butter, Polawax Emulsifying Wax, and cetearyl alcohol. Heat the container in the microwave in 30-second bursts until the waxes have fully melted and the mixture is about 160° F.\nPour the distilled water into a second heat-safe container. Heat in the microwave to about 160° F. Add the allantoin powder to the hot water. Use a spoon to fully mix in the powder until completely dissolved.\nContinue stick blending until the temperature drops to about 130° F. Add the honeyquat and use the stick blender to pulse for about 60 seconds to fully mix in.\nCarefully pour the lotion into bottles. Let the bottles sit overnight without a cap (otherwise condensation can form inside the bottle). Once completely cooled, place the caps on the bottles and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "diy-matcha-green-tea-body-butter",
+      "name": "DIY Matcha Green Tea Body Butter",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/whipped-matcha-green-tea-body-butter/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Stand/hand mixer",
+        "Blender"
+      ],
+      "description": "DIY DIY Matcha Green Tea Body Butter from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Shea Butter",
+          "pct": 68.2
+        },
+        {
+          "name": "Matcha Green Tea Butter",
+          "pct": 22.7
+        },
+        {
+          "name": "Green Tea Extract",
+          "pct": 1.7
+        },
+        {
+          "name": "Matcha Tea Latte Fragrance Oil",
+          "pct": 1.1
+        },
+        {
+          "name": "Arrowroot Powder",
+          "pct": 5.7
+        },
+        {
+          "name": "Optiphen Optional",
+          "pct": 0.6
+        }
+      ],
+      "notes": "",
+      "process": "Add the shea butter to a large mixing bowl. Using a hand blender or stand mixer, whip the butter on medium speed for 1-2 minutes until it’s fluffy and smooth. Periodically scrape the sides of the bowl with a spatula.\nAdd the Matcha Green Tea Butter to the shea butter. Turn the mixer on medium and whip the two butters together until they’re completely smooth.\nAdd the Matcha Tea Latte Fragrance Oil (and the Optiphen if you’re using it) to the bowl. Turn the hand blender on low so the oil doesn’t splatter out of the bowl and then gradually increase the speed to medium. Whip for another minute, scraping the sides of the bowl with a spatula periodically, until the liquids are fully incorporated.\nAdd the arrowroot powder. Using a spatula, hand stir the powder until it’s mostly mixed in. Then mix with the hand blender on low speed, gradually increasing the speed to medium. Blend for another 1-2 minutes to fully incorporate all the ingredients. Spoon the butter evenly into jars and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "diy-ginger-moringa-oil-hair-conditioner",
+      "name": "DIY Ginger & Moringa Oil Hair Conditioner",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/moringa-ginger-hair-conditioner/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY DIY Ginger & Moringa Oil Hair Conditioner from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 77.2
+        },
+        {
+          "name": "Moringa Seed Oil",
+          "pct": 10
+        },
+        {
+          "name": "BTMS-50 Conditioning Emulsifer",
+          "pct": 6.9
+        },
+        {
+          "name": "Cetearyl Alcohol",
+          "pct": 3.5
+        },
+        {
+          "name": "Ginger Essential Oil",
+          "pct": 1.2
+        },
+        {
+          "name": "Optiphen",
+          "pct": 1.2
+        }
+      ],
+      "notes": "",
+      "process": "Pour the distilled water into a heat-safe container. Heat in the microwave until it is about about 160–180° F.\nIn a separate heat-safe container, combine the moringa seed oil, cetearyl alcohol and BTMS-50. Heat the container in the microwave using 30–60 second bursts until the waxes have fully melted and the mixture is about 180° F.\nContinue stick blending until the temperature drops to about 130–140° F. Add the ginger essential oil. Stick blend until completely combined.\nOnce the mixture falls below 120° F, add the Optiphen. Using the stick blender, mix for an additional 60–90 seconds until everything is completely mixed.\nPour the mixture into jars. Let the jars sit overnight without the lids on (otherwise, condensation can form inside the jars). Once the mixture is completely cooled, shut the jars and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "rose-clay-face-mask-diy",
+      "name": "Rose Clay Face Mask DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/rose-clay-face-mask/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Rose Clay Face Mask DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 69.7
+        },
+        {
+          "name": "Rose Clay",
+          "pct": 3.3
+        },
+        {
+          "name": "Kaolin Clay",
+          "pct": 11.4
+        },
+        {
+          "name": "Rosehip Seed Oil",
+          "pct": 3.3
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 4.2
+        },
+        {
+          "name": "BTMS-50 Conditioning Emulsifier",
+          "pct": 2.6
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 3.3
+        },
+        {
+          "name": "Chamomile Extract",
+          "pct": 1.6
+        },
+        {
+          "name": "Optiphen Preservative",
+          "pct": 0.7
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "sultry-jasmine-lotion-tutorial",
+      "name": "Sultry Jasmine Lotion Tutorial",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/jasmine-lotion-tutorial/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Sultry Jasmine Lotion Tutorial from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 50
+        },
+        {
+          "name": "Jasmine Essential Water",
+          "pct": 25
+        },
+        {
+          "name": "Rosehip Seed Oil",
+          "pct": 15
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 6
+        },
+        {
+          "name": "Stearic Acid",
+          "pct": 4
+        },
+        {
+          "name": "Optiphen",
+          "pct": 1
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "frankincense-essential-oil-body-balm-diy",
+      "name": "Frankincense Essential Oil Body Balm DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/frankincense-essential-oil-balm/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Frankincense Essential Oil Body Balm DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Avocado Oil",
+          "pct": 63.4
+        },
+        {
+          "name": "Kokum Butter",
+          "pct": 21.1
+        },
+        {
+          "name": "Cera Bellina Wax",
+          "pct": 14.1
+        },
+        {
+          "name": "Frankincense Essential Oil",
+          "pct": 1.4
+        }
+      ],
+      "notes": "",
+      "process": "Chop any large chunks of kokum butter into small pieces using a sharp knife. This helps the butter melt faster.\nAdd the avocado oil, kokum butter and cera bellina wax to a heat safe container. Place in the microwave and heat using 30-60 second bursts. If pieces of the butter remain, stir the mixture for about a minute so the hot oil melts the butter. Place back in the microwave if necessary. Be careful when removing the container from the microwave, as it may be hot.\nThe mixture will most likely be very hot (160 ° F and above). The flashpoint of frankincense essential oil is 117 ° F. Some crafters believe the hot temperatures can \"burn off\" the scent. To be extra careful, you can wait until the mixture is below 117 ° F and add the frankincense essential oil. I recommend using a dropper so none of the oil is wasted.\nStir completely, and pour the mixture into the bail jars. Allow it to cool and harden completely. To use, soften the balm with your fingertips and apply to the skin.",
+      "category": "body"
+    },
+    {
+      "id": "diy-turmeric-clay-face-mask",
+      "name": "DIY Turmeric Clay Face Mask",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-tumeric-clay-face-mask/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY DIY Turmeric Clay Face Mask from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 66
+        },
+        {
+          "name": "Meadowfoam Oil",
+          "pct": 3.1
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 4
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 3.1
+        },
+        {
+          "name": "BTMS-50 Conditioning Emsulifier",
+          "pct": 2.5
+        },
+        {
+          "name": "Kaolin Clay",
+          "pct": 18.5
+        },
+        {
+          "name": "Turmeric Powder",
+          "pct": 0.6
+        },
+        {
+          "name": "Carrot Extract",
+          "pct": 1.5
+        },
+        {
+          "name": "Optiphen",
+          "pct": 0.6
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "diy-sea-clay-face-mask",
+      "name": "DIY Sea Clay Face Mask",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/tea-tree-sea-clay-face-mask/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY DIY Sea Clay Face Mask from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 62.6
+        },
+        {
+          "name": "Hazelnut Oil",
+          "pct": 2.9
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 3.8
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 2.9
+        },
+        {
+          "name": "BTMS-50 Conditioning Emulsifier",
+          "pct": 2.3
+        },
+        {
+          "name": "Kaolin Clay",
+          "pct": 11.7
+        },
+        {
+          "name": "Sea Clay",
+          "pct": 11.7
+        },
+        {
+          "name": "Ginseng Extract",
+          "pct": 1.5
+        },
+        {
+          "name": "Optiphen",
+          "pct": 0.6
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "diy-lavender-clay-face-mask",
+      "name": "DIY Lavender Clay Face Mask",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-lavender-clay-face-mask/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stand/hand mixer",
+        "Stove"
+      ],
+      "description": "DIY DIY Lavender Clay Face Mask from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 69.7
+        },
+        {
+          "name": "Argan Oil",
+          "pct": 3.3
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 4.2
+        },
+        {
+          "name": "Polawax Emulsifying Wax",
+          "pct": 3.3
+        },
+        {
+          "name": "BTMS-50 Conditioning Wax",
+          "pct": 2.6
+        },
+        {
+          "name": "Kaolin Clay",
+          "pct": 11.4
+        },
+        {
+          "name": "Purple Brazilian Clay",
+          "pct": 3.3
+        },
+        {
+          "name": "Evening Primrose Extract",
+          "pct": 1.6
+        },
+        {
+          "name": "Optiphen",
+          "pct": 0.7
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "chamomile-coconut-oil-body-balm-diy",
+      "name": "Chamomile & Coconut Oil Body Balm DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/infused-chamomile-coconut-balm/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Chamomile & Coconut Oil Body Balm DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Coconut Oil 10 Oz. Infused Coconut Oil",
+          "pct": 77.4
+        },
+        {
+          "name": "Chamomile Herb",
+          "pct": 3.2
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 12.9
+        },
+        {
+          "name": "Yellow Beeswax",
+          "pct": 6.5
+        }
+      ],
+      "notes": "",
+      "process": "Stir all the ingredients together, and pour into the candle tins. Allow them to fully cool and harden. This will take several hours. To use, rub your fingers on the balm to warm and slightly melt, and apply balm where needed.",
+      "category": "body"
+    },
+    {
+      "id": "rose-quartz-cold-process-soap-tutorial",
+      "name": "Rose Quartz Cold Process Soap Tutorial",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cold-process-soap/rose-quartz-cold-process-soap-tutorial/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "DIY Rose Quartz Cold Process Soap Tutorial from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Palm Oil",
+          "pct": 27
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 35
+        },
+        {
+          "name": "Green Tea Seed Oil",
+          "pct": 10
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 3
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "diy-crystal-bath-bombs",
+      "name": "DIY Crystal Bath Bombs",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-crystal-bath-bombs/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY DIY Crystal Bath Bombs from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Sodium Bicarbonate Baking Soda",
+          "pct": 52.7
+        },
+        {
+          "name": "Citric Acid",
+          "pct": 26.4
+        },
+        {
+          "name": "Jade Fragrance Oil",
+          "pct": 1.4
+        },
+        {
+          "name": "Deodorized Cocoa Butter",
+          "pct": 6.1
+        },
+        {
+          "name": "Polysorbate 80",
+          "pct": 1.2
+        },
+        {
+          "name": "Fine Grained Dead Sea Salt",
+          "pct": 12.2
+        }
+      ],
+      "notes": "",
+      "process": "Melt the cocoa butter in a small heat-safe container in the microwave using 30-60 second bursts. Because cocoa butter has a high melting point, be very careful when removing the container from the microwave – it will be very hot.\nAdd the polysorbate 80 and Jade Fragrance Oil to the melted cocoa butter. Stir to mix all the ingredients together.\nIn a separate large container, mix together the baking soda and citric acid. To get rid of clumps in the mixture, you can push the powder through a sifter or break them up with your fingers. Citric acid has a tendency to take off nail polish, so wear gloves to protect your manicure. Thoroughly stir the ingredients together.\nAdd the oil mixture to the baking soda and citric acid. Use gloved hands to thoroughly mix all the ingredients together. Set aside.\nIn a separate bowl, add the fine grained Dead Sea salt, 1/2 tsp. Fine Silver Rainbow EcoGlitter, and 1/4 tsp. Shamrock Green Mica. Use a spoon to mix all the ingredients together.\nPlace some green salt into one half of the bath bomb mold. It should fill the mold about 1/3 of the way. Keep in mind that once the bath bomb is umolded, the salt will be dusted off the bath bomb to give the crystal shape. Don’t be afraid to use a deep layer of salt.\nContinue filling up each bath bomb with the salt mixture and bath bomb mixture. Once the molds are all filled, allow the bath bombs to dry and harden in the molds. For the best results, we recommend leaving the bath bombs in the mold overnight. The longer they dry, the more durable they will be.\nRemove the bath bombs from the mold by pulling on both eyelets. Once unmolded, use your finger to gently brush away the extra salt. You’ll be left with a bath bomb with an indent.\nStarting with the Shamrock Green Mica, use a fine detail paint brush to apply the mica mixture to the deepest areas of the bath bombs. This gives them depth. Use the Shamrock Green Mica to also line the salt area of the bath bomb.\nUse another paint brush to apply the whi",
+      "category": "body"
+    },
+    {
+      "id": "rose-clay-charcoal-soap-tutorial",
+      "name": "Rose Clay & Charcoal Soap Tutorial",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/rose-clay-charcoal-soap-tutorial/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "DIY Rose Clay & Charcoal Soap Tutorial from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Lots Of Lather Quick Mix",
+          "pct": 65.5
+        },
+        {
+          "name": "Distilled Water",
+          "pct": 21.5
+        },
+        {
+          "name": "Sodium Hydroxide Lye",
+          "pct": 9.5
+        },
+        {
+          "name": "Rosehip Jasmine Fragrance Oil",
+          "pct": 3.6
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "how-to-make-charcoal-facial-soap",
+      "name": "How to Make Charcoal Facial Soap",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/charcoal-facial-soap-tutorial/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "DIY How to Make Charcoal Facial Soap from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Castor Oil",
+          "pct": 5
+        },
+        {
+          "name": "Coconut Oil",
+          "pct": 25
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 40
+        },
+        {
+          "name": "Palm Oil",
+          "pct": 25
+        },
+        {
+          "name": "Tamanu Oil",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "cleansing-charcoal-facial-scrub-diy",
+      "name": "Cleansing Charcoal Facial Scrub DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cleansing-charcoal-facial-scrub-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Stand/hand mixer"
+      ],
+      "description": "DIY Cleansing Charcoal Facial Scrub DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Natural Castile Liquid Soap Base",
+          "pct": 31.3
+        },
+        {
+          "name": "Hazelnut Oil",
+          "pct": 18.8
+        },
+        {
+          "name": "Tamanu Oil",
+          "pct": 1.6
+        },
+        {
+          "name": "Kaolin Clay",
+          "pct": 34.5
+        },
+        {
+          "name": "White Jojoba Beads – Medium",
+          "pct": 12.5
+        },
+        {
+          "name": "Activated Charcoal",
+          "pct": 0.9
+        },
+        {
+          "name": "Optiphen",
+          "pct": 0.3
+        }
+      ],
+      "notes": "",
+      "process": "In a large mixing bowl, add the Natural Castile Liquid Soap Base, hazelnut and tamanu oil. Stir until completely combined. The mixture will take on a milky appearance.\nAdd the tea tree essential oil and Optiphen. Stir in completely.\nIn a separate container, whisk together the kaolin clay, activated charcoal and jojoba beads until completely combined.\nAdd the clay mixture into the liquid mixture in about 3-4 batches. Use a whisk to completely mix in. Adding the dry ingredients in batches helps prevent the dry ingredients from \"poofing\" up. Continue mixing until completely combined with no clumps. Pour the scrub into jars and seal with the lid.\nWhen you’re ready to use, apply a small amount of the scrub to wet skin. Use gentle circular motions to scrub and wash the face. Avoid the immediate eye area. Rinse off. Follow with moisturizer, or other skin care. Enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "clover-aloe-spin-swirl-cold-process-on-soap-queen-tv",
+      "name": "Clover & Aloe Spin Swirl Cold Process on Soap Queen TV",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/clover-aloe-spin-swirl-cold-process-soap/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender"
+      ],
+      "description": "DIY Clover & Aloe Spin Swirl Cold Process on Soap Queen TV from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Canola Oil",
+          "pct": 40
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 2
+        },
+        {
+          "name": "Coconut Oil",
+          "pct": 20
+        },
+        {
+          "name": "Palm Oil",
+          "pct": 20
+        },
+        {
+          "name": "Rice Bran Oil",
+          "pct": 10
+        },
+        {
+          "name": "Sweet Almond Oil",
+          "pct": 8
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "pumpkin-spice-latte-sugar-scrub-on-soap-queen-tv",
+      "name": "Pumpkin Spice Latte Sugar Scrub on Soap Queen TV",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pumpkin-spice-sugar-scrub-on-soap-queen-tv/",
+      "heatRequired": false,
+      "equipment": [
+        "Stand/hand mixer"
+      ],
+      "description": "DIY Pumpkin Spice Latte Sugar Scrub on Soap Queen TV from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Foaming Bath Butter",
+          "pct": 71.4
+        },
+        {
+          "name": "Coffee Butter",
+          "pct": 8.9
+        },
+        {
+          "name": "Sugar",
+          "pct": 17.9
+        },
+        {
+          "name": "Walnut Shells",
+          "pct": 1.8
+        }
+      ],
+      "notes": "",
+      "process": "In a large mixing bowl, add 16 ounces of Foaming Bath Butter and 2 ounces of coffee butter. Use a hand mixer to beat together.\nOnce thoroughly combined, add 4 ounces of granulated sugar and 0.4 ounces of walnut shells. Turn on the mixer and blend until the exfoliants are thoroughly incorporated.\nAdd 6 mL of Pumpkin Spice Fragrance Oil and 2 mL of Turkish Mocha Fragrance Oil. Turn the beater on low and mix until combined.\nSpoon the mixture into the glass bail jar, and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "how-to-make-whipped-body-butter-on-soap-queen-tv",
+      "name": "How to Make Whipped Body Butter on Soap Queen TV",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/how-to-make-whipped-body-butter-on-soap-queen-tv/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove",
+        "Immersion blender",
+        "Stand/hand mixer"
+      ],
+      "description": "DIY How to Make Whipped Body Butter on Soap Queen TV from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Avocado Butter",
+          "pct": 70
+        },
+        {
+          "name": "Meadowfoam Oil",
+          "pct": 25
+        },
+        {
+          "name": "Green Tea Extract",
+          "pct": 5
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "lavender-lotion-bar-tutorial",
+      "name": "Lavender Lotion Bar Tutorial",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/lavender-lotion-bars/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Lavender Lotion Bar Tutorial from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Argan Oil",
+          "pct": 40.7
+        },
+        {
+          "name": "Avocado Butter",
+          "pct": 34.9
+        },
+        {
+          "name": "White Beeswax",
+          "pct": 23.3
+        },
+        {
+          "name": "Lavender 40/42 Essential Oil",
+          "pct": 1.2
+        }
+      ],
+      "notes": "",
+      "process": "Add the lavender 40/42 essential oil and stir to fully incorporate.",
+      "category": "body"
+    },
+    {
+      "id": "cocoa-butter-cashmere-body-mousse-diy",
+      "name": "Cocoa Butter Cashmere Body Mousse DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cocoa-butter-cashmere-mousse/",
+      "heatRequired": true,
+      "equipment": [
+        "Stand/hand mixer",
+        "Stove"
+      ],
+      "description": "DIY Cocoa Butter Cashmere Body Mousse DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Avocado Butter",
+          "pct": 61.5
+        },
+        {
+          "name": "Organic Cocoa Butter Chunks",
+          "pct": 23.1
+        },
+        {
+          "name": "Jojoba Oil",
+          "pct": 15.4
+        }
+      ],
+      "notes": "",
+      "process": "Add the jojoba oil and cocoa butter into a small, heat-safe container. Melt in the microwave using 30-60 second bursts. Cocoa butter has a high melting point, so be careful when removing the container from the microwave. It will be very hot.\nOnce the mixture is melted, add the Cocoa Butter Cashmere Fragrance Oil and mix in completely. Set aside to cool.\nIn a separate large container, add the avocado butter. Use a hand mixer (or stand mixer) to whip the butter until it's completely smooth.\nSlowly add small amounts of the melted cocoa butter and jojoba oil to the avocado butter, and whip after each addition.\nContinue adding the melted mixture and whipping together. I recommend to add the butter in no less than four parts. If too much of the butter is added at once, it will completely melt the avocado butter. As you whip the mixture it will begin to thin and become more smooth.\nContinue whipping for several minutes. Use a spatula to clean the sides of the bowl if necessary.\nAs the mixture cools, it will thicken and become more “fluffy.” The mixture shown below has returned to room temperature (about 70° F). As you can see, it’s a much thicker consistency than the butter shown in step six, which was about 90° F.\nPlace the butter into bail jars or other containers and enjoy! Store this product in a cool place, or it may melt and lose some of the fluffy consistency.",
+      "category": "body"
+    },
+    {
+      "id": "beeswax-honey-lotion-bars-diy",
+      "name": "Beeswax & Honey Lotion Bars DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/beeswax-lotion-bars-diy/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Beeswax & Honey Lotion Bars DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Olive Oil",
+          "pct": 36.8
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 36.8
+        },
+        {
+          "name": "Yellow Beeswax",
+          "pct": 26.3
+        }
+      ],
+      "notes": "",
+      "process": "Add the shea butter and stir. The heat from the mixture will begin to melt the shea butter. If necessary, place the container back into the microwave and heat using 15-20 second bursts until the mixture is clear.\nAdd the Pure Honey Fragrance Oil and stir to completely mix in.\nCarefully pour the mixture into each mold cavity. Allow to fully cool and harden. This will take several hours or up to overnight. Remove from the mold. Store these bars in a cool place, because they can melt slightly in extremely high temperatures!",
+      "category": "body"
+    },
+    {
+      "id": "green-smoothie-whipped-body-butter-diy",
+      "name": "Green Smoothie Whipped Body Butter DIY",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/green-smoothie-whipped-body-butter/",
+      "heatRequired": false,
+      "equipment": [
+        "Immersion blender",
+        "Stand/hand mixer"
+      ],
+      "description": "DIY Green Smoothie Whipped Body Butter DIY from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Avocado Butter",
+          "pct": 78.1
+        },
+        {
+          "name": "Grapeseed Oil",
+          "pct": 21.9
+        }
+      ],
+      "notes": "",
+      "process": "In a large bowl, measure out 15 oz. of avocado butter. Using a hand blender or stand mixer, whip the butter on medium speed until it’s fluffy and smooth. This will take about 1-2 minutes. Periodically scrape the sides of the bowl with a spatula.\nAdd 4.2 oz. of grapeseed oil, 5 mL of green tea extract and 5 mL of Green Smoothie Fragrance Oil. Turn the hand blender on low so the oil doesn’t splatter out of the bowl, then gradually increase the speed to medium. Whip for another minute, scraping the sides of the bowl with a spatula periodically, until the liquids are fully incorporated.\nAdd 5 tsp. of arrowroot powder. Using a spatula, hand stir the powder until it’s mostly mixed in. Then, mix with the hand blender on low speed and gradually increase to medium. Blend for another 1-2 minutes to fully incorporate all the ingredients. Spoon the butter evenly into jars and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "sunshine-lotion-tutorial",
+      "name": "Sunshine Lotion Tutorial",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/sunshine-lotion-tutorial/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Sunshine Lotion Tutorial from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 74.4
+        },
+        {
+          "name": "Argan Oil",
+          "pct": 2.9
+        },
+        {
+          "name": "Sweet Almond Oil",
+          "pct": 9.9
+        },
+        {
+          "name": "Emulsifying Wax",
+          "pct": 5.8
+        },
+        {
+          "name": "Glycerin",
+          "pct": 2.1
+        },
+        {
+          "name": "Stearic Acid",
+          "pct": 2.1
+        },
+        {
+          "name": "Oat Extract",
+          "pct": 2.1
+        },
+        {
+          "name": "Optiphen Preservative",
+          "pct": 0.8
+        }
+      ],
+      "notes": "",
+      "process": "In a heat safe container, combine the sweet almond oil, argan oil, emulsifying wax and stearic acid. Heat the container in the microwave using 30-60 second bursts until the waxes have fully melted and the mixture is about 160° F. Set aside.\nIn a separate container, add the distilled water and glycerin. Heat to 160° F.\nAdd the diluted Canary LabColor and stick blend it in thoroughly. Be sure to dilute your LabColor before use! Learn how to dilute LabColors here.\nAdd the Sunflower Fragrance Oil and Southern Peach Fragrance Oils. Stick blend to combine.\nOnce the lotion is below 120°F, add the oat extract and Optiphen. Using the stick blender, mix for an additional 60-90 seconds until the mixture is fully incorporated.\nCarefully pour it into bottles. Let the bottles sit overnight without a cap (otherwise condensation can form inside the bottle). Once completely cooled, place the caps on the bottles and enjoy!",
+      "category": "body"
+    },
+    {
+      "id": "gingerbread-man-lotion-bars",
+      "name": "Gingerbread Man Lotion Bars",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/gingerbread-man-lotion-bars/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Gingerbread Man Lotion Bars from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "White Beeswax",
+          "pct": 28.9
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 13.3
+        },
+        {
+          "name": "Jojoba Oil",
+          "pct": 22.9
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 34.9
+        }
+      ],
+      "notes": "",
+      "process": "In a small heat safe container, add the white beeswax, coffee butter, cocoa butter, jojoba oil and avocado oil. Place in the microwave and melt using 1 minute bursts until all the oils, butter and wax is completely melted. Be very careful when removing the container, it may be very hot.\nMeasure out the Cinnamon Sugar Fragrance Oil, and add to the melted mixture. Use a spoon to thoroughly mix in the fragrance oil.\nIf the mixture is extremely hot (over 140° F), stir the mixture until it cools. If you pour the mixture into the mold while it’s extremely hot, it may warp the mold. Once it has cooled to below 140° F, carefully pour the mixture into the molds and allow to thoroughly cool and harden. This can take several hours, so be patient =)\nOnce the bars have completely cooled, remove them from the mold by pulling on the sides of the mold to release the airlock. Then, firmly press the back of each cavity with your thumb or the palm of your hand until the bars pop out. Next, mix 1/2 tsp. Copper Sparkle Mica into 1/2 Tbs. rubbing alcohol. Stir to get rid of any clumps.\nUse a small paintbrush to paint the details of the gingerbread man mold with the mica mixture. Allow the mica details to completely dry.\nOnce you’ve painted all the details, the bars are ready to use! For the first couple uses, the mica will leave a soft shimmer on the skin. Store these bars in a cool place, because they can melt in higher temperatures!",
+      "category": "body"
+    },
+    {
+      "id": "whipped-amber-bronzing-body-butter",
+      "name": "Whipped Amber Bronzing Body Butter",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/whipped-amber-bronzing-butter/",
+      "heatRequired": true,
+      "equipment": [
+        "Stand/hand mixer",
+        "Stove"
+      ],
+      "description": "DIY Whipped Amber Bronzing Body Butter from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Avocado Butter",
+          "pct": 37.5
+        },
+        {
+          "name": "Coffee Butter",
+          "pct": 37.5
+        },
+        {
+          "name": "Cocoa Butter",
+          "pct": 25
+        }
+      ],
+      "notes": "",
+      "process": "In a heat safe container, add the cocoa butter and melt in the microwave using 1 minute bursts until the butter is liquid. Make sure your container can withstand high heat, as cocoa butter melts around 100 degrees F. Once melted, set aside to cool. If you are working with large chunks of cocoa butter, cut it into small pieces for easier melting.\nIn a large mixing bowl, add the avocado and coffee butters. Use a hand mixer (or stand mixer) to whip the butters together until completely smooth. Scrap the edges of the bowl to ensure the entire mixture is incorporated. Continue to whip the mixture on medium to ensure a smooth texture.\nCheck the temperature of your cocoa butter. You want it to be around 120 degrees or below. Very slowly, add about 1/4 of the melted cocoa butter, and whip until fully incorporated.\nContinue adding small amounts of the cocoa butter to the mixture, whipping between each addition until all the cocoa butter has been added. Continue to whip the mixture for several minutes to ensure the butters are fully mixed and completely smooth.\nAdd the Amber and Ancient Sedona Fragrance Oils. Whip for several seconds to fully mix in the fragrances.\nAdd the tapioca powder, and use a spatula to incorporate. Once it has been mixed in, whip with the hand mixer to further blend in the powder.\nAdd the Copper Sparkle Mica, and use the hand mixer to blend in until completely incorporated. Test the color on your skin. If you prefer a deeper color, add more Copper Sparkle Mica into the mixture 1 teaspoon at a time until you are happy with the color. Transfer the body butter into jars, and seal.",
+      "category": "body"
+    },
+    {
+      "id": "rose-aloe-in",
+      "name": "Rose & Aloe In",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/rose-aloe-shower-lotion/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stand/hand mixer",
+        "Stove"
+      ],
+      "description": "DIY Rose & Aloe In from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Aloe Vera Liquid",
+          "pct": 58.5
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 9.6
+        },
+        {
+          "name": "BTMS-50 Conditioning Emulsifier",
+          "pct": 3.5
+        },
+        {
+          "name": "Bottles White Disk Cap (3 Bottles)",
+          "pct": 28.4
+        }
+      ],
+      "notes": "",
+      "process": "In a heat safe container, combine the avocado oil, green tea seed oil, BTMS-50, emulsifying wax, sodium lactate, glycerin and vitamin E oil. Heat the container in the microwave using 1 minute bursts until the waxes have fully melted. Set aside.\nIn a separate container, add the aloe vera liquid and heat to 150°F. Add the DL-panthenol to the liquid and stir to dissolve.\nOnce the lotion is below 120°F, add the aloe extract and optiphen. Using the stick blender, mix for an additional 60-90 seconds until the mixture is fully incorporated.\nAdd the Fuchsia Labcolor and stick blend to thoroughly combine.\nAdd the Crisp Apple Rose Fragrance Oil and stick blend to combine.\nWhen the lotion drops below 110°F, pour it into bottles. Let the bottles sit overnight without a cap (otherwise condensation can form inside the bottle).",
+      "category": "body"
+    },
+    {
+      "id": "argan-oil-shampoo-recipe",
+      "name": "Argan Oil Shampoo Recipe",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/sizzling-summer-hair-argan-oil-shampoo/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Argan Oil Shampoo Recipe from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Distilled Water",
+          "pct": 69.6
+        },
+        {
+          "name": "Potassium Cocoate",
+          "pct": 30.4
+        }
+      ],
+      "notes": "",
+      "process": "EQUIPMENT PREP: Disinfect your utensils by dipping them in a 5% bleach water solution and allowing to dry. This includes mixing containers, your stick blender, and any spoons or spatulas that may come in contact with your lotion. Your products must be absolutely 100% free of germs, bacteria, microbes or anything so be safe and bleach water all your utensils.\nMeasure the distilled water into a disinfected heatsafe container. Heat the water in the microwave on 1 minute bursts until it reaches 150 degrees F.\nIn a second disinfected container, combine and heat the Potassium Cocoate, Argan Oil, and Liquid Crothix. Heat until the mixture reaches 150 degrees F.\nAdd the water to the oils. Stir or stick blend for 15 – 20 seconds to combine.\nOnce the temperature drops below 140 degrees F, add the Coconut Lemongrass Fragrance Oil, Optiphen ND and Carrot and Nettle Extracts. You can use a scale and measure in ounces, or use droppers to measure in milliliters (we found using droppers and measuring in milliliters was easier since the amounts are so small). Stir to combine.\nPour into bottles and leave uncovered overnight. Your shampoo is ready to use!",
+      "category": "body"
+    },
+    {
+      "id": "moisturizing-heel-butter-diy-free-label",
+      "name": "Moisturizing Heel Butter DIY + Free Label",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/happy-feet-moisturizing-heel-balm/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Moisturizing Heel Butter DIY + Free Label from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Fractionated Coconut Oil",
+          "pct": 15.6
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 10.4
+        },
+        {
+          "name": "Deodorized Cocoa Butter",
+          "pct": 7.4
+        },
+        {
+          "name": "Castor Oil",
+          "pct": 7.4
+        },
+        {
+          "name": "Tall Plastic Bail Jar",
+          "pct": 59.3
+        }
+      ],
+      "notes": "",
+      "process": "In a large container, combine the Fractionated Coconut Oil, Avocado Oil and Castor Oil.\nIn a separate heat safe container, melt the Shea Butter, Cera Bellina Wax and Deodorized Cocoa Butter. Be sure to use an appropriate size container because if there is too much head space, you risk exploding the container in the microwave. Place in the microwave and heat on 30 second bursts until the mixture is liquid.\nAdd wax mixture to Fractionated Coconut Oil mixture and stir.\nNote: If the wax mixture solidifies as shown below, microwave the container on 30 second bursts until the mixture is fully melted and combined.\nPour heel butter into 8 oz. Bail Jar and allow to fully cool for 3 – 4 hours before using.\nYour balm is ready to use once it is solid! Store in a dry cool place to prevent it from melting.",
+      "category": "body"
+    },
+    {
+      "id": "argan-shea-lotion",
+      "name": "Argan & Shea Lotion",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/argan-shea-lotion/",
+      "heatRequired": true,
+      "equipment": [
+        "Immersion blender",
+        "Stove"
+      ],
+      "description": "DIY Argan & Shea Lotion from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Aloe Vera Liquid",
+          "pct": 36.4
+        },
+        {
+          "name": "Sweet Almond Oil",
+          "pct": 5.2
+        },
+        {
+          "name": "Argan Oil",
+          "pct": 2.9
+        },
+        {
+          "name": "Shea Butter",
+          "pct": 2.9
+        },
+        {
+          "name": "BTMS 50 Conditioning Emulsifier",
+          "pct": 2.9
+        },
+        {
+          "name": "Stearic Acid",
+          "pct": 1.7
+        },
+        {
+          "name": "Liquid Glycerin",
+          "pct": 0.6
+        },
+        {
+          "name": "Sodium Lactate",
+          "pct": 1.2
+        },
+        {
+          "name": "Bottle With Pump Top",
+          "pct": 46.2
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "whipped-coffee-body-butter-tutorial",
+      "name": "Whipped Coffee Body Butter Tutorial",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/whipped-coffee-butter-tutorial/",
+      "heatRequired": true,
+      "equipment": [
+        "Stand/hand mixer",
+        "Blender",
+        "Stove"
+      ],
+      "description": "DIY Whipped Coffee Body Butter Tutorial from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Coffee Butter",
+          "pct": 91.4
+        },
+        {
+          "name": "Rice Bran Oil",
+          "pct": 5.7
+        },
+        {
+          "name": "Tamanu Oil",
+          "pct": 2.9
+        }
+      ],
+      "notes": "",
+      "process": "Whip the Coffee Butter on a low speed using a hand-held or stand mixer for 30 seconds to 1 minute to lighten up the texture a bit.\nAdd the Rice Bran Oil, Tamanu Oil, Vanilla Select Fragrance Oil, and Almond Cybilla Fragrance Oil. Continue to whip the mixture on low until all of the oils are fully incorporated. Increase the speed of the mixer and whip until the butter has taken on a light and fluffy texture.\nUsing a spoon or spatula, scoop the whipped butter into the bail jars (tap the jars on your work surface to pack the butter in there) and secure the lids. You’re done!",
+      "category": "body"
+    },
+    {
+      "id": "how-to-make-perfume-video",
+      "name": "How to Make Perfume Video",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/how-to-make-perfume-video/",
+      "heatRequired": false,
+      "equipment": [],
+      "description": "DIY How to Make Perfume Video from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Coconut Oil",
+          "pct": 32
+        },
+        {
+          "name": "White Beeswax",
+          "pct": 24
+        },
+        {
+          "name": "Meadowfoam Oil",
+          "pct": 14
+        },
+        {
+          "name": "Avocado Oil",
+          "pct": 10
+        },
+        {
+          "name": "Essential Oil Blend",
+          "pct": 20
+        }
+      ],
+      "notes": "",
+      "process": "",
+      "category": "body"
+    },
+    {
+      "id": "winter-body-balm-recipe-free-printable",
+      "name": "Winter Body Balm Recipe + Free Printable",
+      "source": "soapqueen.com",
+      "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/winter-body-balm-recipe/",
+      "heatRequired": true,
+      "equipment": [
+        "Stove"
+      ],
+      "description": "DIY Winter Body Balm Recipe + Free Printable from Soap Queen.",
+      "ingredients": [
+        {
+          "name": "Candellila Wax",
+          "pct": 17.6
+        },
+        {
+          "name": "Meadowfoam",
+          "pct": 23.5
+        },
+        {
+          "name": "Olive Oil",
+          "pct": 23.5
+        },
+        {
+          "name": "Avocado Butter",
+          "pct": 29.4
+        },
+        {
+          "name": "Dulse Extract",
+          "pct": 5.9
+        }
+      ],
+      "notes": "",
+      "process": "Combine the Candellila Wax, Meadowfoam and Olive Oil in a heat safe container. Put it in the microwave for 1 minute and 30 seconds then take it out and stir with a spoon. Repeat 2 more times until the wax is fully melted.\nStir in the avocado butter until fully incorporated. Some butters can get grainy if heated to high temperatures so I’ve just gotten used to always stirring in the butters. If it starts to cool down too quickly, pop it back into the microwave for 20 seconds until it’s back to a translucent liquid.\nMix in the fragrance oil and Dulse Extract. Give it a good stir and it’s ready to pour into the bail jars.\nA little divot can form in the center as the balm cools. To achieve a nice smooth top, gently heat the surface with a heat gun so some of the melted balm fills in any cracks.",
+      "category": "body"
     }
   ]
 }
