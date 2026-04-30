@@ -95,6 +95,7 @@ async function getRecipeUrls(categoryUrl) {
 
 function parseIngredients(html) {
   const ingredients = [];
+  const weightItems = [];
 
   // Try WPRM plugin structure first
   const wprmMatch = html.match(/class="wprm-recipe-ingredients[^"]*"[^>]*>([\s\S]{0,10000}?)<\/ul>/);
@@ -109,17 +110,32 @@ function parseIngredients(html) {
     // Or percentage at end: Ingredient Name X%
     const pctEndMatch = !pctMatch && text.match(/^.+\s+(\d+(?:\.\d+)?)%\s*$/);
     const pct = pctMatch ? parseFloat(pctMatch[1]) : pctEndMatch ? parseFloat(pctEndMatch[1]) : 0;
-    if (pct <= 0 || pct > 100) continue;
 
-    // Strip weight prefix (e.g. "11.9 oz. " or "30 g ")
+    // Strip weight prefix to get name
     let name = text
       .replace(/^\d+(?:\.\d+)?\s*(?:oz\.|oz|g|ml|mL)\s*/i, '')
-      .replace(/\(\d+(?:\.\d+)?%\s*\)\s*$/, '')   // trailing (X%)
-      .replace(/\s+\d+(?:\.\d+)?%\s*$/, '')         // trailing X%
+      .replace(/\(\d+(?:\.\d+)?%\s*\)\s*$/, '')
+      .replace(/\s+\d+(?:\.\d+)?%\s*$/, '')
       .trim();
-
     if (name.length < 2) continue;
-    ingredients.push({ name: capitalizeFirst(name), pct });
+
+    if (pct > 0 && pct <= 100) {
+      ingredients.push({ name: capitalizeFirst(name), pct });
+    } else {
+      // Try weight-only fallback: extract oz or g value
+      const wtMatch = text.match(/^(\d+(?:\.\d+)?)\s*(?:oz\.|oz|g)\b/i);
+      if (wtMatch) weightItems.push({ name: capitalizeFirst(name), wt: parseFloat(wtMatch[1]) });
+    }
+  }
+
+  // Compute percentages from weights if no % format found
+  if (ingredients.length < 2 && weightItems.length >= 2) {
+    const total = weightItems.reduce((s, i) => s + i.wt, 0);
+    if (total > 0) {
+      for (const { name, wt } of weightItems) {
+        ingredients.push({ name, pct: Math.round(wt / total * 1000) / 10 });
+      }
+    }
   }
 
   return ingredients;

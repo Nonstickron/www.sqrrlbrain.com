@@ -123,6 +123,8 @@ async function getRecipeUrls(indexUrl, paginated = false) {
 const ING_LINE = /(\d+(?:\.\d+)?)\s*g\s*\|\s*(\d+(?:\.\d+)?)%\s+([^(|\n<]+)/i;
 // Matches plain: "5% shea butter"
 const PCT_ONLY = /^(\d+(?:\.\d+)?)%\s+([^(|\n<]{3,})/;
+// Matches weight-only: "6g beeswax" or "10g shea butter"
+const WT_ONLY = /^(\d+(?:\.\d+)?)\s*g\s+([^(|\n<]{2,})/i;
 
 function capitalizeFirst(s) {
   return s.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
@@ -130,6 +132,8 @@ function capitalizeFirst(s) {
 
 function parseIngredients(paragraphs) {
   const ingredients = [];
+  const weightItems = []; // fallback: weight-only lines
+
   for (const para of paragraphs) {
     const lines = para.split('\n').map(l => l.trim()).filter(Boolean);
     for (const line of lines) {
@@ -149,9 +153,30 @@ function parseIngredients(paragraphs) {
         if (name.length > 2 && pct > 0 && pct <= 100) {
           ingredients.push({ name: capitalizeFirst(name), pct });
         }
+        continue;
+      }
+      m = line.match(WT_ONLY);
+      if (m) {
+        const name = m[2].replace(/\(.*?\)/g, '').trim().replace(/\s+/g, ' ');
+        const wt = parseFloat(m[1]);
+        if (name.length > 2 && wt > 0) {
+          weightItems.push({ name: capitalizeFirst(name), wt });
+        }
       }
     }
   }
+
+  // If no percentage-format ingredients found, compute from weights
+  if (ingredients.length < 2 && weightItems.length >= 2) {
+    const total = weightItems.reduce((s, i) => s + i.wt, 0);
+    if (total > 0) {
+      for (const { name, wt } of weightItems) {
+        const pct = Math.round(wt / total * 1000) / 10; // 1 decimal
+        ingredients.push({ name, pct });
+      }
+    }
+  }
+
   return ingredients;
 }
 
