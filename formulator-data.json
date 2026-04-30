@@ -12115,7 +12115,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Today we&#8217;re making a simple salve starring calendula, with a supporting cast of sea buckthorn and lavender. It&#8217;s easy to make, and the end result is a lovely warm yellow salve with a gentle, calming scent. If your nose is sore from too mu…",
+      "description": "A simple, anhydrous salve featuring calendula-infused oil and sea buckthorn fruit oil. Formulated with lavender essential oil for a calming effect and beeswax for a protective barrier.",
       "ingredients": [
         {
           "name": "Dried Calendula Petals",
@@ -12144,7 +12144,8 @@
       ],
       "notes": "I also included a bit of isopropyl myristate to reduce the greasiness of the end product. Isopropyl myristate is a pretty cool ingredient—it makes anything you put it in lighter and faster absorbing. I&#8217;ve provided substitution recommendations at the end of the recipe if you don&#8217;t have it, but it is a super cool ingredient!",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nOnce the heated phase has melted, remove it from the heat. Stir in the cool down ingredients and quickly transfer it to a 60mL/2oz tin or jar. Leave to set up. That's it!\nTo use, massage a small amount into any skin that could use some extra love."
+      "process": "1. Prepare a simmering water bath in a small saucepan.\n2. Measure the heated phase ingredients into a heat-safe beaker and place it in the water bath until melted.\n3. Remove from heat and incorporate the cooling phase ingredients.\n4. Transfer the liquid salve into a storage tin or jar and allow it to solidify.",
+      "processRewritten": true
     },
     {
       "id": "soothing-cedarwood-ointment",
@@ -12155,7 +12156,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Our oil blend is mainly two lightweight, fast-absorbing oils: safflower oil and mango butter. I&#8217;ve included some cornstarch to further reduce the oily feel. The blend is thickened with a combination of silky cetyl alcohol and creamy beeswax for…",
+      "description": "A lightweight, fast-absorbing ointment formulated with safflower oil and mango butter. Includes cornstarch to reduce oiliness and a soothing essential oil blend for skin irritation.",
       "ingredients": [
         {
           "name": "Safflower Oil",
@@ -12184,7 +12185,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "0.125g | 3 drops | 0.5% bisabolol (USA / Canada)\n0.075g | 1 drop | 0.3% frankincense essential oil\n0.125g | 1 drop | 0.5% helichrysum essential oil\n0.05g | 2 drops | 0.2% tea tree essential oil\n0.15g | 6 drops | 0.6% lavender essential oil\n0.075g | 3 drops | 0.3% cedarwood essential oil\nPrepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase is melting, weigh the cool down phase ingredients into a small beaker or dish. I chose a lightweight beaker so I could use a scale precise to 0.01g—heavier containers are too much for my precise scale to handle.\nPrepare an ice bath in a bowl that will accommodate your heated measuring cup—you'll want a handful of ice cubes and some cold water.\nOnce the heated phase ingredients have melted remove the measuring cup from the hot water bath and place it in the ice bath. Stir constantly with a flexible silicone spatula, being sure to scrape down the sides frequently. After a minute, stir in the cool down phase ingredients.\nAt that point pour the mixture into a jar. I used one of these cute 25mL/0.85 fl oz jars.  Leave it to set up for at least an hour before using—it should appear solid. The set-up time will vary depending on ambient temperature (if you're somewhere quite hot, popping it in the fridge would be a good idea)."
+      "process": "1. Prepare a simmering water bath and an ice bath in separate containers.\n2. Melt the heated phase ingredients in a heat-safe beaker within the water bath.\n3. Remove from heat and place the beaker in the ice bath.\n4. Stir constantly with a spatula until the mixture begins to thicken.\n5. Incorporate the cooling phase ingredients and stir well.\n6. Transfer to a small jar and allow to set.",
+      "processRewritten": true
     },
     {
       "id": "manuka-kawakawa-salve",
@@ -12195,7 +12197,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Also, before we dive in—this is the 1000th post on Humblebee &amp; Me! WHOA!",
+      "description": "A protective salve featuring manuka essential oil and safflower oil. Formulated with beeswax to provide a durable barrier for compromised skin.",
       "ingredients": [
         {
           "name": "Beeswax",
@@ -12224,7 +12226,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the beeswax and safflower oil into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nAdd the manuka essential oil and vitamin E oil, and stir to combine. Pour the melted mixture into a 30mL/1 ounce tin or jar (I used this one from YellowBee) to set up. Once it has solidified, you're ready to go!"
+      "process": "1. Heat the beeswax and carrier oil in a water bath until completely melted.\n2. Remove from heat and incorporate the manuka essential oil and vitamin E.\n3. Stir until uniform and pour into a storage tin or jar.\n4. Allow the salve to solidify before use.",
+      "processRewritten": true
     },
     {
       "id": "easy-diy-hyaluronic-acid-lotion",
@@ -12236,7 +12239,7 @@
         "Immersion blender",
         "Stove"
       ],
-      "description": "The heated water phaseThe heated oil phaseThe cool down phaseMake it your ownNatural-nessRelevant links &amp; further readingEasy DIY Hyaluronic Acid LotionSubstitutionsSimilar Formulations The heated water phase Our star ingredient is hyaluronic aci…",
+      "description": "A foundational facial lotion featuring hyaluronic acid for humectant-based hydration. Designed for ease of emulsification and compatibility with pump-top dispensers.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12273,7 +12276,8 @@
       ],
       "notes": "The heated water phaseThe heated oil phaseThe cool down phaseMake it your ownNatural-nessRelevant links &amp; further readingEasy DIY Hyaluronic Acid LotionSubstitutionsSimilar Formulations The heated water phase Our star ingredient is hyaluronic acid, of course!",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer on a stove top over low to medium-low heat in a wide, flat-bottomed sauté pan.\nAlternatively, you can use a lab hot plate on low. If you use beakers, you can set them directly on the hot plate without a water bath—just take care not to let your oil phase burn!\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup/beaker + ingredients) and write that weight down for later.\nWeigh the heated oil phase into a second heat-resistant glass measuring cup.\nPlace both measuring cups in your prepared hot water bath.\nWhen the emulsion has noticeably thickened and the outside of the glass measuring cup is just warm to the touch (40°C or cooler, if you have a thermometer) we're ready to proceed.\nThe lotion will thin noticeably when the cool down phase is added because of the phenoxyethanol in the preservative; this is ok! It will thicken up again over the next few days.\nOnce the pH is in a good place, all that's left to do is package it up! I designed this lotion to work well in a pump top bottle; you can use a regular pump or a treatment pump cap. I used three rectangular 100mL (3.3fl oz) green pump top bottles from YellowBee (gifted) in the video.\nBecause this lotion is thin enough to pump, I’d say it is too thin to do well in a jar. That can work if it’s all you have, but remember it can spill.\nUse like you'd use any lotion—this formulation is suitable for hand, body, and facial use. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Combine the phases and use an immersion blender to form a stable emulsion.\n3. Allow the lotion to cool until the container is barely warm to the touch (approx. 40°C).\n4. Incorporate the cooling phase ingredients, noting that the viscosity may temporarily decrease.\n5. Verify the final pH level and package in a pump bottle.",
+      "processRewritten": true
     },
     {
       "id": "light-tallow-hand-lotion",
@@ -12399,7 +12403,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "In this post I&#8217;m going to share a formulation for a simple (7 ingredient!), non-greasy, pump-able hand (or wherever) lotion, and I&#8217;m also going to explain the why behind the formulation so you can understand why some lotions are richer th…",
+      "description": "A simple, seven-ingredient hand lotion formulated for rapid absorption. Designed for use in pump bottles with a non-greasy, velvety finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12432,7 +12436,8 @@
       ],
       "notes": "This formulation uses a 1:7 emulsifier to oils ratio. From my experiences, you could probably reduce the emulsifier if you wanted to, but this will result in a noticeable viscosity drop.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I designed this lotion to be pump-bottle friendly, but you could also use a squeeze bottle fitted with a disc or flip-top cap. It's much too thin for a jar or tub.\nAs written, this 360g batch will fill three 120mL (4 fl oz) bottles. I used these bottles from Voyageur Soap and Candle Co. and these bottles from YellowBee for different versions and photos.\nUse as you'd use any hand lotion! This can also be used as a body lotion or face lotion. Enjoy &#x2764;&#xfe0f;\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the formulation, you will get a different final product than I did.\nAs I've provided this formulation in percentages as well as grams you can easily calculate it to any size using a simple spreadsheet as I've explained in this post. As written in grams, this formulation will make 360g.\nYou can swap the Emulsifying Wax NF with many other emulsifying waxes, including Ritamulse SCG (Emulsimulse, ECOMulse), Olivem 1000, Polawax, Glyceryl Stearate (and) PEG-100 Stearate, PolyAquol&#x2122;-2W, BTMS-25, BTMS-50, Emulsifying Wax Soft & Silky (Cetearyl Alcohol [and] Ceteareth-20), and Montanov 68.\nYou could try a different fatty thickener instead of cetearyl alcohol, but this will change the consistency of the finished product. Options include Stearic Acid, Cetyl Alcohol, and C10-18 Triglycerides (Butter Pearls).\nIf you're like to use a different preservative"
+      "process": "1. Heat the water phase and oil phase ingredients in separate containers until melted.\n2. Combine the phases and blend thoroughly using an immersion blender.\n3. Allow the emulsion to cool to room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a pump or squeeze bottle.",
+      "processRewritten": true
     },
     {
       "id": "strawberry-body-yogurt",
@@ -12444,7 +12449,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "So, in this blog post we&#8217;re whipping up a cheery pink Strawberry Body Yogurt. This is a light Bee Better-ing of 2021&#8217;s Strawberry Kiwi Body Yogurt; I didn&#8217;t set out to re-vamp it, only intending to make a better video for the origin…",
+      "description": "A high-viscosity body moisturizer featuring a gel-cream texture. Formulated for quick absorption and a refreshing skin feel with a clinical pink finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12497,7 +12502,8 @@
       ],
       "notes": "You’ve almost certainly heard of the rather dairy-product-sounding &#8220;body butter&#8221;; but what about the equally dairy-ish body yogurt? Think of body yogurt as body butter’s ultra-light cousin: a fast-absorbing and super-slippy body moisturizer that is low on rich oils and high in hydrating humectants. It is perfect for the hot summer months if you want all of the hydration of richer moist",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the mixture is smooth, scrape out the head of the blender with your spatula and switch to hand stirring. Because the body yogurt will already be very thick you don't have to worry about stirring it too much. Once the outside of the glass measuring cup is just warm to the touch (40°C or cooler, if you have a thermometer) we're ready to proceed.\nOnce the cool down phase has been incorporated, all that's left to do is package it up!\nI've used a wide-mouthed jar for this formulation; I chose a clear one so the colour could really shine through. I think this product is too thick for a pump-top bottle, but I think it could work well in a soft squeeze tube.\nUse as you'd use any body lotion. Enjoy!"
+      "process": "1. Prepare a simmering water bath and heat the water and oil phases in separate beakers.\n2. Combine the phases and blend until a thick, uniform emulsion is formed.\n3. Transition to manual stirring as the mixture cools to maintain a smooth texture.\n4. Once the temperature reaches 40°C or lower, incorporate the cooling phase ingredients.\n5. Transfer the finished product to a wide-mouthed jar.",
+      "processRewritten": true
     },
     {
       "id": "lavender-oat-dream-cream",
@@ -12509,7 +12515,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Today we are diving deep into the archives to Bee Better a project I published almost exactly nine (!!) years ago. This formulation began life as a Lush dupe(ish), and while the 2014 version wasn&#8217;t bad, I&#8217;ve learned a lot since then. Toda…",
+      "description": "A rich, emulsified body cream featuring colloidal oatmeal and lavender essential oil. Designed for intensive skin hydration and a soothing, Lush-inspired finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12550,7 +12556,8 @@
       ],
       "notes": "The Lush originalMy original formulationWhat I changedThe oil phaseThe emulsifierThe scentThe preservativeThe processA big part of my improvementRelevant links &amp; further readingLavender Oat Dream CreamSubstitutionsSimilar Formulations The Lush original The product that inspired this formulation is Lush&#8217;s &#8220;Dream Cream&#8220;. It&#8217;s marketed as a cream for irritated, reactive sk",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I used a 100mL (3.3fl oz) black plastic jar that looks just like the ones from Lush; it's from YellowBee. This emulsion is thick enough that I don't recommend a pump-top bottle, but I think it could work in a squeeze tube.\nUse as you'd use any hand or body lotion. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate containers within a water bath.\n2. Combine the phases and use an immersion blender to create a stable emulsion.\n3. Allow the mixture to cool to room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a wide-mouthed jar.",
+      "processRewritten": true
     },
     {
       "id": "rich-herbal-body-cream",
@@ -12562,7 +12569,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Today we&#8217;re blending up a rich, botanically blessed body cream that is perfect for cold, dry winter days. I developed this formulation with the help of my readers; t&#8217;s creamy, scoopable, skin-soothing, and positively decadent. Enjoy!",
+      "description": "A dense, botanically infused body cream designed for intensive winter skin care. Formulated for high emolliency and a scoopable consistency.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12635,7 +12642,8 @@
       ],
       "notes": "Formulation mad libsRichThickBodyHerbalHow is this different from an emulsified body butter?Relevant links &amp; further readingRich Herbal Body CreamSubstitutionsSimilar Formulations Formulation mad libs At the end of November I posted four different this-or-that polls on four different social networks. I didn&#8217;t explain what the polls were for, I just asked you to choose &#x1f604;",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I recommend a wide-mouthed jar or tub for this formulation. It'll still be pourable when you fill your containers, but it thickens up a lot when left.\nUse as you'd use any body lotion. You can also use it as a hand or face lotion, but you might find it a bit rich. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers until the oils are fully melted.\n2. Combine the phases and blend with an immersion blender to form a stable emulsion.\n3. Allow the mixture to cool undisturbed until it begins to thicken.\n4. Incorporate the cooling phase ingredients and transfer to a wide-mouthed jar.",
+      "processRewritten": true
     },
     {
       "id": "how-to-make-your-lotions-thicker",
@@ -12647,7 +12655,7 @@
         "Stove",
         "Blender"
       ],
-      "description": "This formulation is preserved with Euxyl&#x2122; k 903. I find this preservative thins the emulsion a wee bit; if you use a different preservative you may notice your finished formulation is thicker than mine.",
+      "description": "A technical guide and base formulation demonstrating the use of fatty alcohols and waxes to adjust emulsion viscosity.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12704,7 +12712,8 @@
       ],
       "notes": "If you want to make thicker lotions and creams, you&#8217;ve come to the right place! In this post I&#8217;ll be teaching you three different (easy!) strategies for thickening and adding body to your natural lotions. You can use these strategies alone or combine them–it&#8217;s up to you. They each have their pros and cons, so it&#8217;s worth experimenting with each method so you know what you li",
       "category": "body",
-      "process": "For full instructions, please read this post."
+      "process": "1. Follow standard emulsification procedures by heating phases to 70°C.\n2. Combine and blend until stable.\n3. Note the impact of varying thickener percentages on the final product consistency.",
+      "processRewritten": true
     },
     {
       "id": "raspberry-mint-body-custard",
@@ -12716,7 +12725,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "I&#8217;ve included a wee bit—just 0.01%—of a potent water-soluble dye to make this Raspberry Mint Body Custard pink. This is the only not-natural ingredient in this formulation, so the formula is 99.99% natural. If you don&#8217;t want to use it, si…",
+      "description": "A lightweight, gel-cream body moisturizer featuring raspberry seed oil and a cooling mint sensation. Formulated for rapid absorption and long-lasting hydration.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12765,7 +12774,8 @@
       ],
       "notes": "I&#8217;ve included a wee bit—just 0.01%—of a potent water-soluble dye to make this Raspberry Mint Body Custard pink. This is the only not-natural ingredient in this formulation, so the formula is 99.99% natural. If you don&#8217;t want to use it, simply replace it with more distilled water and you&#8217;ll have a 100% natural product.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1″ of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that’s left to do is package it up! I recommend a squeeze bottle or a pump-top bottle.\nUse this body custard as you’d use any lotion, taking care not to over-apply. A little goes a long way, so start with less than you think you need. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Combine the phases and blend thoroughly with an immersion blender.\n3. Allow the emulsion to cool to room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a pump or squeeze bottle.",
+      "processRewritten": true
     },
     {
       "id": "soft-oat-hand-lotion",
@@ -12777,7 +12787,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "This pillowy, silky hand lotion has earned a much-coveted spot on my bedside table. I positively adore how it makes my skin feel; it is richly moisturizing without being greasy, and has a luxurious, powdery finish. I thought a wonderful hand lotion f…",
+      "description": "A pillowy, silky hand lotion formulated with colloidal oatmeal for a powdery finish. Designed for intensive hydration without a greasy residue.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12838,7 +12848,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I used a 100g (3.5oz) frosted soft squeeze tube from Yellow Bee (gifted), filling it with a syringe. Watch the video to see how I did it &#x1f642;\nUse as you'd use any hand lotion. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate containers within a water bath.\n2. Combine the phases and use an immersion blender to create a stable emulsion.\n3. Allow the mixture to cool to room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a soft squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "raspberry-lavender-soothing-body-milk",
@@ -12850,7 +12861,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "This Raspberry Lavender Soothing Body Milk is a lightweight, drizzle-able, all-natural body milk made with a new-to-me palm-free emulsifier. It&#8217;s a gorgeous way to moisturize and soothe summer skin without feeling weighed down or greasy. Let&#8…",
+      "description": "A low-viscosity body milk featuring a palm-free emulsifier and raspberry seed oil. Designed for quick, drizzle-able application and skin-soothing benefits.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12899,7 +12910,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I recommend something that takes advantage of the low viscosity. I put one batch in an airless pump bottle and another in a now-discontinued 100mL (3.3fl oz) plastic bottle with a disc top. I think something like this would work well, too.\nUse this body milk as you'd use any lotion. Enjoy!"
+      "process": "1. Heat the water and oil phases in separate beakers using a water bath.\n2. Combine the phases and blend with an immersion blender to form a stable, thin emulsion.\n3. Allow the mixture to cool to room temperature.\n4. Incorporate the cooling phase ingredients and package in a pump bottle or disc-top container.",
+      "processRewritten": true
     },
     {
       "id": "candlelight-body-cream",
@@ -12911,7 +12923,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "A theme centred around rich, indulgent, glowy goodness definitely needs a rich body cream, and this one fits the bill beautifully. Not only does it moisturize, hydrate, and soothe, but it also contains an all-natural active to help even out skin tone…",
+      "description": "A rich, indulgent body cream featuring an all-natural active to support even skin tone. Formulated for high emolliency and intensive hydration.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -12968,7 +12980,8 @@
       ],
       "notes": "I kept the water phase relatively simple; distilled water, hydrating humectant-y glycerin, and skin-soothing + moisturizing panthenol (Vitamin B5). If you wanted to amp up the luxury factor of this lotion you could easily swap 20% of the distilled water for a 1% hyaluronic acid solution; learn more about that here!",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! You'll want to use some sort of wide-mouthed tub or jar for this formulation as it's quite thick. Use as you'd use any body lotion (it's also great for hands!). Enjoy!"
+      "process": "1. Heat the water and oil phases in separate beakers until solid components are melted.\n2. Combine the phases and blend until a stable emulsion is formed.\n3. Allow the mixture to cool and thicken naturally.\n4. Incorporate the cooling phase ingredients and transfer to a wide-mouthed jar.",
+      "processRewritten": true
     },
     {
       "id": "super-simple-all-natural-lotion-follow-up-qa",
@@ -13021,7 +13034,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "To switch up your formulation you can swap out some of the water for something like a beautifully scented hydrosol, soothing aloe vera juice (not gel!), or astringent witch hazel. I don&#8217;t recommend swapping all of the distilled water for a fanc…",
+      "description": "A foundational seven-ingredient natural lotion formulated for ease of preparation. Suitable for face, hand, or body application with a lightweight finish.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13050,7 +13063,8 @@
       ],
       "notes": "To switch up your formulation you can swap out some of the water for something like a beautifully scented hydrosol, soothing aloe vera juice (not gel!), or astringent witch hazel. I don&#8217;t recommend swapping all of the distilled water for a fancier water alternative; 20–30% is fine.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nAll that's left at this point is to bottle up the lotion! This lotion is thin enough to package in a pump-top bottle or a soft squeeze tube. A 120mL (4 fl oz) package is a good choice. I used this 100mL (3.3fl oz) one from YellowBee (gifted). Use as you would any lotion. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Combine the phases and blend thoroughly using an immersion blender.\n3. Allow the emulsion to cool to room temperature.\n4. Transfer the finished lotion to a pump bottle or squeeze tube.",
+      "processRewritten": true
     },
     {
       "id": "rich-mocha-hand-body-lotion",
@@ -13062,7 +13076,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Save 10% on cocoa butter and everything else at Baraka Shea Butter with coupon code HUMBLEBEE &nbsp;",
+      "description": "A chocolate and coffee-scented emulsified lotion featuring unrefined cocoa butter. Designed for high emolliency and rapid absorption.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13107,7 +13121,8 @@
       ],
       "notes": "Other developments/upgrades included fully percentage-ifying the formulation and adding some pure powdered caffeine to the cool down phase. Caffeine helps reduce puffing and water retention, so you&#8217;ll usually find it in facial products, though it definitely makes appearances in firming body products as well. I mostly included it because it seemed very fitting in a product that smells like co",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce the cool down phase has been incorporated, all that's left to do is package it up! I recommend a pump-top bottle or soft squeeze tube for this lotion. Use as you'd use any lotion. Enjoy!"
+      "process": "1. Heat the water and oil phases in separate beakers until the cocoa butter is fully melted.\n2. Combine the phases and blend with an immersion blender to form a stable emulsion.\n3. Allow the mixture to cool to room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a storage bottle.",
+      "processRewritten": true
     },
     {
       "id": "summer-solstice-body-milk",
@@ -13119,7 +13134,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "Prepare a water bath by bringing about 3cm/1&#8243; of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.",
+      "description": "A lightweight, drizzle-able body milk formulated for rapid skin hydration. Features a thin consistency suitable for pump or spray application.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13160,7 +13175,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nUse as you'd use any lotion or cream. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate containers within a water bath.\n2. Combine the phases and use an immersion blender to create a stable, thin emulsion.\n3. Allow the mixture to cool to room temperature.\n4. Transfer to a storage bottle equipped with a suitable dispenser.",
+      "processRewritten": true
     },
     {
       "id": "almond-oat-natural-body-lotion",
@@ -13172,7 +13188,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "The water phase is crazy simple; just distilled water and moisturizing glycerin. Even though it&#8217;s water-soluble, I included the colloidal oatmeal in the oil phase. I find it cooks up into a sort of uncooperative gloppy porridge if heated in the…",
+      "description": "A gentle body lotion formulated with colloidal oatmeal and sweet almond oil. Features a lightweight consistency and skin-compatible pH.",
       "ingredients": [
         {
           "name": "Distilled Water",
@@ -13213,7 +13229,8 @@
       ],
       "notes": "Today&#8217;s formulation is for a lightweight, silky, slippy, all-natural Almond Oat Natural Body Lotion! It smells softly of almonds and oats, is hydrating and moisturizing but not at all greasy, and if you make it as written you don&#8217;t need to adjust the pH (hooray!). The ingredient list is pretty short with just nine ingredients, and you can easily make it nut-free if you want to. Let&#82",
       "category": "body",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the heated water phase into a small heat-resistant glass measuring cup or glass beaker. Weigh the entire lot (measuring cup + ingredients) and note that weight for use later. Weigh the heated oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nOnce we've confirmed the pH is good, all that's left to do is package it up! I packaged one batch in an airless pump bottle and another batch in an amber rectangular pump-top bottle, both from YellowBee. This lotion is fairly thin, so I wouldn't recommend a jar—you can try it, of course, but it could spill.\nUse as you'd use any lotion. Enjoy!"
+      "process": "1. Heat the water phase and oil phase (containing colloidal oatmeal) in separate containers.\n2. Combine the phases and blend thoroughly with an immersion blender.\n3. Allow the emulsion to cool to room temperature.\n4. Verify the final pH level and transfer to a pump-top bottle.",
+      "processRewritten": true
     },
     {
       "id": "radiant-berry-hand-body-cream",
