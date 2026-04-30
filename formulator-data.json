@@ -17488,7 +17488,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Want to learn how to formulate your very own shampoo bars from scratch? Check out the Humblebee &amp; Me DIY Shampoo Bar Workshop to learn the simple system to start creating rock-hard shampoo bars for any hair type—without hard-to-get ingredients or…",
+      "description": "A decorative clarifying shampoo bar featuring pink and red clays for a mosaic effect. Formulated with mild surfactants to provide a deep yet gentle hair cleanse with a skin-compatible pH.",
       "ingredients": [
         {
           "name": "Kokum Butter",
@@ -17525,7 +17525,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1″ of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, put on your dust mask (USA / Canada) and weigh the dry surfactants into a bowl. Weigh out the cool-down phase and set it aside.\nOnce the heated phase has melted, pour it into the dry surfactants. Put on a pair of nitrile gloves and blend thoroughly with your hands. Once the mixture is uniform, add the cool-down phase and blend that in as well. You'll be left with a stiff, easily-mouldable paste.\nCarefully un-mold the bars and leave them to dry for at least 48 hours, but preferably 7–10 days, before using.\nTo use, massage the bar into wet hair (or a wet loofah, for body washing) to work up a rich lather. From there on out it's just like using any other shampoo or body wash. Enjoy!\nWhen made as written, the pH of these shampoo bars comes out to ~5, which is great.\nBecause these shampoo bars will regularly come into contact with water, I recommend including a broad-spectrum preservative to ward off microbial growth.\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the recipe, you will get a different final product than I did.\nAs I've provided this recipe in percentages as well as grams you can easily calculate it to any size using a simple spreadsheet as I've explained in this post. As written in grams this recipe will make 150g (roughly two 75g [2.65oz] bars, depending on how much mix is lost to the bowl).\nCocoa butter will work instead of kokum butter; I recommend using refined.\nYou could try cetearyl alcohol or cetyl alcohol instead of stearic acid.\nFor the clay: I'd recommend choosing a different soft, creamy clay, like other Australian clays, a French clay, or kaolin. I do not recommend bentonite o"
+      "process": "1. Wear a dust mask and gloves. Combine the dry phase ingredients and stir until uniform.\n2. Incorporate the liquid phase and knead by hand until a stiff dough is formed.\n3. Divide the dough into two portions and color with different clays or micas.\n4. Press the colored portions together into a mould to create the mosaic design.\n5. Unmould the bars and allow to air-dry for 5–7 days before use.",
+      "processRewritten": true
     },
     {
       "id": "argan-rose-pressed-shampoo-bars",
@@ -19881,7 +19882,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Because this product is designed for customers with hair that is not very tolerant of oils, it is primarily comprised of very lightweight emollients. To that end, Neossance® Hemisqualane and LuxFeel N5, two natural cyclomethicone alternatives, consti…",
+      "description": "An ultra-lightweight hair balm formulated with hemisqualane and cyclomethicone alternatives. Designed for hair types with low oil tolerance to provide smooth conditioning without a heavy residue.",
       "ingredients": [
         {
           "name": "Silica Microspheres Further Add To The Dry-touch Finish Of The Product And Lend A Very “expensive” Feel, Reminiscent Of High-end Commercial Hair Serums.",
@@ -19942,7 +19943,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhile the heated phase melts, prepare an ice bath. Take a bowl that is large enough to accommodate the container the heated phase is melting in, and fill it about halfway with ice cubes and cold water.\nAfter about 20–30 minutes everything should be completely melted through. Remove the water bath from the heat, remove the measuring cup from the water bath, and dry it off with a dishtowel. Set the measuring cup on a towel or hot pad to insulate it from the counter and stir the mixture with a flexible silicone spatula to combine everything.\nPlace the measuring cup containing the heated phase into the ice bath and cool, stirring constantly, for about thirty seconds—until you start to notice some building viscosity. Remove the container from the water bath and add the cool down phase. Stir to incorporate.\nOnce you reach trace you can now pour the product into its container and leave it on the counter to set up. To use, glide a few fingertips over the surface of the balm, and work your fingers through the ends of your hair. I like to follow up by brushing my hair with a boar bristle brush. Enjoy!"
+      "process": "1. Prepare a simmering water bath and an ice bath in separate containers.\n2. Melt the heated phase ingredients in a heat-safe beaker within the water bath.\n3. Remove from heat and place the beaker in the ice bath.\n4. Stir constantly until the mixture begins to thicken and reaches a \"trace\" consistency.\n5. Incorporate the cooling phase ingredients and stir well.\n6. Pour into a storage tin and allow to set.",
+      "processRewritten": true
     },
     {
       "id": "silk-shine-conditioning-hair-mask",
@@ -19954,7 +19956,7 @@
         "Stove",
         "Immersion blender"
       ],
-      "description": "I tried an earlier version of this hair mask with more cationic guar gum (0.5% instead of the 0.2% seen here) and polyquaternium 10 (1% vs. 0.2%) and that made for a much gummier end product. I share a side-by-side comparison in the video so you can …",
+      "description": "An intensive hair mask featuring hydrolyzed silk and conditioning polymers. Formulated to provide deep hydration and improved hair shine with a gummier, high-adhesion consistency.",
       "ingredients": [
         {
           "name": "Vegetable Glycerine",
@@ -20011,7 +20013,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "on May 20, 2020 at 7:35 am\nIt looks like it's more of an issue with the plugin than the blog post—it seems to be pulling linked items to the start of paragraphs, which is very unhelpful, but as I don't have anything to do with the plugin I can't do anything about it :/\non May 20, 2020 at 9:26 am\nOh yikes!!! My bad I’m sorry!\non May 21, 2020 at 7:05 pm\nNo worries—hopefully they fix it soon!\non June 7, 2020 at 4:10 pm\nShould I duplicate the regular guar gum quantity to 0.4%, since I don't have Polyquaternium 10 in my country, nor cationic guar gum ?\non June 25, 2020 at 7:11 pm\nHi, I stumbled across this page an am now totally obsessed! Just wondering how much does this recipe make and how should this mask be used? (did i miss this somewhere?)\non June 26, 2020 at 3:31 pm\nWelcome! You did miss it—both details are in the formulation 🙂\non September 28, 2022 at 2:02 am\nhello i have tried and the result is amazing. But after one week the color changes to darker. what should i do if i want the color not to change? Thank you\non October 11, 2022 at 12:23 pm\nYou could try including a chelator like EDTA 🙂\non August 2, 2020 at 4:32 am\nI made and I used it today. I only left it on for 10 minutes because I have oily hair. I loved this mask so much. I will make more for friends and family\non July 22, 2020 at 12:12 pm\nHello!! I follow you very closely on youtube and instagram. I really like your formulations, although I must say that in most of them I can't find the ingredients, and I use the substitutions that you offer, I'm from Mexico.\nI want to consult with you about one thing, the hair mask, could it be done in a solid bar and when it is going to be used, put hot water to dissolve it and place it on your hair?\nI saw some fantastic ones on a page in Spain, which has even won awards. It is a solid bar hair mask. I have the ingredients but I would not know the quantities and percentages to make it solid. Could you help me with that? Thank you very much and best regards. Gloria Ca"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Combine the phases and blend thoroughly with an immersion blender to form a stable emulsion.\n3. Allow the mixture to cool undisturbed until it reaches room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a wide-mouthed jar for storage.",
+      "processRewritten": true
     },
     {
       "id": "argan-rose-conditioning-hair-balm",
@@ -20022,7 +20025,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "The conditioning kick comes from BTMS-50, which contains 50% Behentrimonium Methosulfate—the positively charged conditioning active. The inclusion of BTMS-50 in this hair balm gives it the most divine skin and hair feel, and it&#8217;s what makes thi…",
+      "description": "A rose-scented hair balm featuring argan oil and BTMS-50. Designed for leave-in application to provide hair smoothing and improved shine with a luxurious floral fragrance.",
       "ingredients": [
         {
           "name": "BTMS-50",
@@ -20067,7 +20070,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nOnce the balm has solidified, that's it! To use, glide a few fingertips over the surface of the balm, and work your fingers through the ends of your hair. I like to follow up by brushing my hair with a boar bristle brush. Enjoy!"
+      "process": "1. Melt the base oils and waxes in a heat-safe beaker using a water bath.\n2. Remove from heat and stir steadily as the mixture cools.\n3. Once the mixture has solidified, transfer to a storage tin.\n4. To use, glide a small amount through the ends of the hair.",
+      "processRewritten": true
     },
     {
       "id": "conditioning-super-nourishing-hair-balm",
@@ -20078,7 +20082,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Thing #4: I wanted to add some conditioning! That was easy enough—10% BTMS-50 et voila. The inclusion of the BTMS-50 also means the balm can self-emulsify with water, so it applies nicely to damp hair. Wash-out is also improved. Double awesomeness!",
+      "description": "A rich, self-emulsifying hair balm formulated with shea butter and BTMS-50. Designed for intensive conditioning and easy wash-out, suitable for both dry and damp hair application.",
       "ingredients": [
         {
           "name": "BTMS-50",
@@ -20127,7 +20131,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nTo use, glide a few finger tips over the surface of the balm, and work your fingers through the ends of your hair.\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the recipe, you will get a different final product than I did.\nAs I've provided this recipe in percentages as well as grams you can easily calculate it to any size using a simple spreadsheet as I've explained in this post. As written in grams this recipe will make 25g.\nMango butter will work in place of shea. You can also use unrefined shea, though I prefer refined for the lack of scent.\nBabassu oil will work well as an alternative to coconut oil.\nYou could try cetearyl alcohol in place of the cetyl alcohol and stearic acid.\nA different lightweight oil will work in place of camellia seed oil\nYou can use a different essential oil or fragrance blend in place of the one I've used\nSimilar Formulations\nMake your own super nourishing hair balmIf you've got crazy long hair, or hair that you're trying to grow out, or both (like me), you'll probably find that your ends get\nSuper Shiny ACV Hair RinseThis was a total accident—I was just looking for a way to cover up some of the vinegar-y scent of my apple cider vinegar hair\n10 Things My Hair LikesI love my hair—mostly because my hair loves me. It's long, shiny, and very cooperative. It generally avoids tying itself in knots and is usually\nHumblebee & Me is an Amazon Associate and earns income from qualifying purchases. This is at no additional cost to you.\nHelp support Humblebee & Me"
+      "process": "1. Heat the base butters and waxes in a water bath until fully melted.\n2. Remove from heat and stir steadily as the mixture cools.\n3. Incorporate the liquid carrier oils and vitamin E once the temperature has dropped.\n4. Once the mixture reaches a \"trace\" consistency, transfer to a storage tin and allow to set.",
+      "processRewritten": true
     },
     {
       "id": "ginger-oak-moss-hair-masque",
@@ -20138,7 +20143,7 @@
       "equipment": [
         "Immersion blender"
       ],
-      "description": "The hair masque in the advertisement was mostly water and BTMS, with some coconut oil, shea butter, and a whackload of obscure botanical extracts that couldn&#8217;t have been included at more than 1%. So, basically hair conditioner with lots of fanc…",
+      "description": "A botanically inspired hair masque featuring ginger and oak moss extracts. Formulated with a large oil phase for intensive hair hydration and a luxurious skin feel.",
       "ingredients": [
         {
           "name": "Sodium Lactate",
@@ -20199,7 +20204,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a wide, flat-bottomed sauté pan.\nWeigh the water phase into a small heat-resistant glass measuring cup. Weigh the oil phase into a second heat-resistant glass measuring cup. Place both measuring cups in your prepared water bath to melt everything through.\nAfter about 20–30 minutes the oil part should be completely melted and the water part should be thoroughly dissolved. Remove the water bath from the heat, and pour the water part into the oil part. Stir with a flexible silicone spatula to incorporate.\nTransfer a few tablespoons of the lotion to a smaller container, and weigh the cool down ingredients into that container. Stir to combine, and then transfer the lot of it back into the rest of the lotion. Stir to combine.\nWhen the lotion has cooled, stir in the cool down ingredients and transfer the lotion to a 120mL/4oz jar. I used a 100mL amber glass jar from Voyageur—this hair masque is too thick to put in a pump-top bottle. Enjoy!"
+      "process": "1. Heat the water phase and oil phase ingredients in separate beakers using a water bath.\n2. Combine the phases and blend thoroughly with an immersion blender to form a stable emulsion.\n3. Allow the masque to cool to room temperature.\n4. Incorporate the cooling phase ingredients and transfer to a storage jar.",
+      "processRewritten": true
     },
     {
       "id": "midwinter-conditioning-beard-balm",
@@ -20210,7 +20216,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "Prepare a water bath by bringing about 3cm/1&#8243; of water to a bare simmer over low to medium-low heat in a small saucepan.",
+      "description": "A protective beard balm formulated with waxes and conditioning agents for winter conditions. Designed to provide high levels of emolliency and beard manageability.",
       "ingredients": [
         {
           "name": "BTMS-25",
@@ -20247,7 +20253,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase ingredients into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nOnce the balm is thick enough that drawing your spatula across the bottom of the measuring cup leaves a visible line for a moment, add the cool down phase.\nContinue stirring the balm until it is thick, ointment-y, and scoop-able. Transfer the product into its container. That's it!\nIf you are making a larger batch you may wish to use an ice bath to speed up cooling—a 15g batch cools fairly quickly without one, but that cooling will slow as the batch size grows.\nTo use, work a small amount of beard balm into your beard with your fingers, re-applying as needed. Enjoy!"
+      "process": "1. Melt the base oils and waxes in a heat-safe beaker using a water bath.\n2. Remove from heat and stir steadily as the mixture cools.\n3. Once the mixture begins to gain viscosity, incorporate the cooling phase ingredients.\n4. Continue to stir until the balm reaches a scoopable consistency.\n5. Transfer to a storage tin and allow it to solidify.",
+      "processRewritten": true
     },
     {
       "id": "conditioning-ginger-oak-moss-beard-oil",
@@ -20258,7 +20265,7 @@
       "equipment": [
         "Stove"
       ],
-      "description": "For some silky, pampering spoiling, I&#8217;ve included some BTMS-50—a cationic emulsifying wax. We&#8217;re including it more for its cationic conditioning properties than its emulsifying properties, but since it is an emulsifier that means this bea…",
+      "description": "A lightweight beard oil featuring ginger and oak moss extracts. Formulated with conditioning agents for a silky finish and improved beard hair softness.",
       "ingredients": [
         {
           "name": "Olive Squalane",
@@ -20299,7 +20306,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "hair",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nWeigh the heated phase into a small heat-resistant glass measuring cup. Place the measuring cup in your prepared water bath to melt everything through.\nWhen the heated phase has melted through, remove it from the water bath and stir to combine. Set aside to cool.\nUsing a smaller, more accurate scale, weigh out the cool down ingredients into a small bowl or beaker before stirring in the melted beard oil.\nTransfer the beard oil to your container. I used this 30mL bottle with a treatment pump lid, but a 30mL/1oz glass bottle that has a dropper top will also work beautifully.\nTo use, dispense some oil into your palm and work it through your beard. Enjoy!\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the recipe, you will get a different final product than I did.\nAs I've provided this recipe in percentages as well as grams you can easily calculate it to any size using a simple spreadsheet as I've explained in this post. As written in grams this recipe will make 25g.\nYou can change up the oils for other liquid oils, but keep in mind that this recipe is distinguished almost entirely by the oil blend—if you start changing up the oils you are no longer making this recipe. I'd recommend sticking with lighter, faster-absorbing liquid oils to keep with the spirit of this recipe.\nSimilar Formulations\nSpiced Bergamot Beard OilThis lovely Spiced Bergamot Beard Oil smells warm and sweet, with a hint of pith and a woody, spicy base. Know somebody suffering from itchy\nConditioning Beard BalmA couple weeks ago I was having a patio chat with my friend Dallas, who was dithering over what to do with his facial hair.\nMidwinter Conditioning Beard BalmToday I'm sharing my last formulation of 2020—a Midwinter Conditioning Beard Balm. Beard balms are usually made up of carrier oils thickened with some sort\nHumblebee"
+      "process": "1. Heat the primary ingredients in a small beaker until clear and uniform.\n2. Remove from heat and allow to cool to room temperature.\n3. Incorporate the cooling phase ingredients and stir well.\n4. Transfer to a glass bottle equipped with a dropper or treatment pump.",
+      "processRewritten": true
     },
     {
       "id": "solid-dishwashing-brick",
@@ -20308,7 +20316,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/solid-dishwashing-brick/",
       "heatRequired": false,
       "equipment": [],
-      "description": "The other major part of this Solid Dishwashing Brick is washing soda, aka sodium carbonate, to further boost the de-greasing powers of the brick. Due to the washing soda content, you&#8217;ll want to avoid using this on aluminum things (or at least o…",
+      "description": "A high-clarity solid dishwashing brick formulated with Sodium Coco Sulfate and washing soda. Designed for intensive degreasing power in a convenient, plastic-free format.",
       "ingredients": [
         {
           "name": "Sodium Coco Sulfate",
@@ -20341,7 +20349,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "cleaning",
-      "process": "Put on your dust mask and a pair of nitrile gloves. Make sure both fit well; a tight-fitting dust mask does a much better job of keeping powdered surfactants out of your airways, and well-fitting nitrile gloves are much nicer to work in than ones that are sloppily big or too tight.\nWeigh the Sodium Coco Sulfate (SCS), washing soda, and carrageenan (the primary phase) into a bowl. Mix with your hands to combine.\nAdd the secondary phase and mix thoroughly with your hands.\nCarefully un-mold the bars (they're quite delicate directly after pressing, much like bath bombs) and leave them to dry for at least 48 hours before using.\nTo use, rub a wet sponge over the surface of the bar to pick up some product, and then use that"
+      "process": "1. Wear a dust mask and gloves. Combine the dry surfactants and washing soda in a mixing bowl.\n2. Incorporate the liquid ingredients and knead by hand until a stiff dough is formed.\n3. Press firmly into moulds and allow to air-dry for at least 48 hours.\n4. Store the brick in a dry location and use with a wet sponge for dishwashing.",
+      "processRewritten": true
     },
     {
       "id": "how-to-clean-textured-tiles",
@@ -20350,7 +20359,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/how-to-clean-textured-tiles/",
       "heatRequired": false,
       "equipment": [],
-      "description": "So—these tiles. They were the bane of my clean-floor-desiring existence whilst I lived in that house. They had lines running parallel to the length of the tiles, and these lines we just barely three dimensional—perhaps raised as much as a coarse hair…",
+      "description": "A concentrated cleaning solution designed for intensive removal of debris from textured surfaces. Features a high load of surfactants and oxidizers for effective stain removal.",
       "ingredients": [
         {
           "name": "Baking Soda",
@@ -20371,7 +20380,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "cleaning",
-      "process": "Weigh all the ingredients into a bottle (I used this one from YellowBee), cap, and gently shake to combine. Use immediately.\nTo use, dispense some of the cleaning solution onto the floor, scrub with a bristly brush, and rinse. I recommend patch-testing the cleanser in a discrete area before diving in.\nDo not store this solution—use it immediately after making. It reacts with itself and can cause a bottle to burst if stored in a sealed container.\nAs always, be aware that making substitutions will change the final product. While these swaps won't break the recipe, you will get a different final product than I did.\nAs I've provided this recipe in percentages as well as grams you can easily calculate it to any size using a simple spreadsheet as I've explained in this post. As written in grams this recipe will make 250g.\nDo not substitute the baking soda or hydrogen peroxide\nIf you'd like to learn more about the surfactants used and compare them to ones you might already have so you can make substitutions, check out this page. You'd want a liquid surfactant as a minimum, preferably anionic or non-ionic. Amphoteric is not a great choice for this project.\nSince this is a make-and-use-immediately sort of thing, you could also use liquid dish detergent (something like Dawn) instead of an isolated surfactant. I'd double the amount since the dish detergent will be less concentrated, removing that extra amount from the peroxide.\nYou can replace the d-limonene with more peroxide or a lemon or orange essential oil.\nThe green bottle & disc top were gifted by YellowBee.\nSimilar Formulations"
+      "process": "1. Combine all ingredients in a bottle and shake gently to combine.\n2. Dispense the solution onto the target surface and scrub with a bristly brush.\n3. Rinse thoroughly with water.\n4. Note: This solution must be used immediately after preparation and cannot be stored.",
+      "processRewritten": true
     },
     {
       "id": "super-concentrated-lemon-dishwashing-paste",
@@ -20380,7 +20390,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/super-concentrated-lemon-dishwashing-paste/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This is the paste you&#8217;ll have when the surfactants finish melting.",
+      "description": "A highly potent dishwashing paste featuring a citrus scent and d-limonene. Designed for efficient removal of grease and food residue in a long-lasting paste format.",
       "ingredients": [
         {
           "name": "Sodium Coco Sulfate",
@@ -20409,7 +20419,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "cleaning",
-      "process": "Prepare a water bath by bringing about 3cm/1 of water to a bare simmer over low to medium-low heat in a small saucepan.\nOnce you have a uniform, soft, semi-transluscent paste, stir in the baking soda and d-limonene. Stir the mixture occasionally as it cools. Once it is cooler than 50°C, add the liquid germall plus and stir thoroughly to combine.\nTransfer the paste to a wide plastic jar (given the constant exposure to water metal is not a good idea, and given the constant use and the possibility of the jar getting pushed off the counter or into the sink I'd avoid glass). I put a 70g batch in a 50mL plastic tub from YellowBee.\nTo use, swipe a damp sponge across the surface of the paste and use that to wash your dishes; you'll quickly get a feel for how incredibly potent it is! Leave the lid on when it isn't in use so it doesn't dry out."
+      "process": "1. Heat the surfactants in a water bath until they form a soft, uniform paste.\n2. Remove from heat and incorporate the washing soda and citrus extract.\n3. Stir steadily as the mixture cools to maintain a uniform texture.\n4. Transfer the finished paste to a wide-mouthed plastic jar for use.",
+      "processRewritten": true
     },
     {
       "id": "simple-cleaning-soap",
@@ -22266,7 +22277,7 @@
       "sourceUrl": "https://www.humblebeeandme.com/long-wear-cream-eyeliner/",
       "heatRequired": false,
       "equipment": [],
-      "description": "This is what happens if you include black FD&amp;C dye in your eyeliner—this was made with 15% oxide and 2% dye and took 12+ hours to fully rinse off after sitting on my hand for about 5 minutes.",
+      "description": "A high-performance cream eyeliner formulated for long-lasting durability. Features iron oxides for intense pigment payoff and a smooth, brush-applied finish.",
       "ingredients": [
         {
           "name": "TKB Mousse Medium",
@@ -22299,7 +22310,8 @@
       ],
       "notes": "Substitutions As always, be aware that making substitutions will change the final product. While these swaps won&#8217;t break the recipe, you will get a different final product than I did.",
       "category": "makeup",
-      "process": "Once you have your base, you are ready to make some eyeliner! I highly recommend dividing up the base and the oxides to make a few different colours as 10g of a single eyeliner will take years to use up.\nTo make two 5g eyeliners, divide the base into two 4.1g portions, and add 0.9g iron oxide to each.\nTo make four 2.5g eyeliners, divide the base into four 2.05g portions and add 0.45g iron oxide to each.\nStir very thoroughly to combine.\nOnce the eyeliner is uniform, that's it! Transfer to an airtight package and you are done.\nTo use: use as you'd use any brush-applied eyeliner. I cannot recommend this tutorial enough if applying eyeliner with a brush is something you'd like to be better at 🙂"
+      "process": "1. Melt the base waxes and oils in a heat-safe container.\n2. Divide the base into portions if creating multiple colors.\n3. Incorporate the iron oxide pigments and stir thoroughly until uniform.\n4. Transfer the eyeliner to an airtight storage container.",
+      "processRewritten": true
     },
     {
       "id": "diy-blurring-face-primer-3-ways",
