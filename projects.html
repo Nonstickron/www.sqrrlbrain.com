@@ -288,11 +288,25 @@
     }
     footer a:hover { color: var(--ink); }
 
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--brown-mid); transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid rgba(58,26,0,.1); z-index: 200; padding: 1rem 1.5rem 1.5rem; flex-direction: column; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-section { font-family: var(--mono); font-size: .56rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown-light); padding: .8rem 0 .3rem; border-top: 1px solid rgba(58,26,0,.06); margin-top: .4rem; }
+    .mobile-nav-section:first-child { border-top: none; margin-top: 0; }
+    .mobile-nav a { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; padding: .55rem 0; display: block; border-bottom: 1px solid rgba(58,26,0,.05); }
+    .mobile-nav a:last-child { border-bottom: none; }
+
     @media (max-width: 900px) {
       .projects-grid, .tools-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 760px) {
-      header    { padding: 1.2rem 1.5rem; }
+      header    { padding: 1.2rem 1.5rem; position: relative; }
+      nav       { display: none; }
+      .hamburger { display: flex; }
       .page-hero { padding: 3rem 1.5rem 2rem; }
       .grid-wrap { padding: 2.5rem 1.5rem 4rem; }
       footer    { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
@@ -321,6 +335,19 @@
       </div>
       <a href="/projects.html" style="color:var(--ink);">Projects</a>
     </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-nav" id="mobile-nav">
+      <span class="mobile-nav-section">Navigate</span>
+      <a href="/">Home</a>
+      <a href="/projects.html">All Projects</a>
+      <span class="mobile-nav-section">Tools</span>
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/crucible.html">Crucible</a>
+      <a href="/sqrrlnest.html">SqrrlNest</a>
+      <a href="/sqrrlbrain-billing.html">Billing App</a>
+    </div>
   </header>
 
   <div class="page-hero">
@@ -445,7 +472,7 @@
     function closeModal() { document.getElementById('modal').classList.remove('open'); }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-    // Dropdown touch support
+    // Desktop dropdowns
     document.querySelectorAll('.dropdown > .nav-link').forEach(el => {
       el.addEventListener('click', () => el.closest('.dropdown').classList.toggle('open'));
     });
@@ -453,6 +480,14 @@
       if (!e.target.closest('.dropdown')) {
         document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
       }
+    });
+
+    // Mobile hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
     });
   </script>
 
