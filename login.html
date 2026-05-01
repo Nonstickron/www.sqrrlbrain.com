@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In — Sqrrlbrain Studio</title>
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:         #3a1a00;
+      --brown-mid:   #7a4520;
+      --brown-light: #b88c5a;
+      --paper:       #faf6f0;
+      --warm:        #f2ebe0;
+      --mono:        'DM Mono', monospace;
+      --serif:       'Playfair Display', serif;
+      --sans:        'DM Sans', sans-serif;
+    }
+    html, body { height: 100%; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      border-bottom: 1px solid rgba(58,26,0,.1);
+    }
+    .logo-wrap img { height: 46px; width: auto; display: block; }
+    nav a {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      text-decoration: none;
+    }
+
+    .login-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+    }
+
+    .login-card {
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: .66rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: 2.4rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      margin-bottom: 1rem;
+    }
+
+    .sub {
+      font-size: .9rem;
+      line-height: 1.7;
+      color: var(--brown-mid);
+      margin-bottom: 2.5rem;
+    }
+
+    #sign-in-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .8rem;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: .9rem 2rem;
+      border: none;
+      cursor: pointer;
+      transition: background .2s;
+      width: 100%;
+      justify-content: center;
+    }
+    #sign-in-btn:hover { background: var(--brown-mid); }
+    #sign-in-btn svg { flex-shrink: 0; }
+
+    .status {
+      margin-top: 1.6rem;
+      font-family: var(--mono);
+      font-size: .66rem;
+      letter-spacing: .1em;
+      color: var(--brown-light);
+      text-transform: uppercase;
+      min-height: 1.4em;
+    }
+    .status.error { color: #b05a3a; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(58,26,0,.1);
+      margin: 3rem 0 1.5rem;
+    }
+
+    .request-note {
+      font-size: .8rem;
+      line-height: 1.7;
+      color: var(--brown-light);
+    }
+    .request-note a { color: var(--brown-mid); }
+
+    footer {
+      padding: 1.4rem 3rem;
+      border-top: 1px solid rgba(58,26,0,.1);
+      display: flex;
+      justify-content: center;
+    }
+    footer p {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .1em;
+      color: var(--brown-light);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 760px) {
+      header { padding: 1.2rem 1.5rem; }
+      footer  { padding: 1.2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-wrap">
+      <a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
+    </div>
+    <nav><a href="/">Home</a></nav>
+  </header>
+
+  <div class="login-wrap">
+    <div class="login-card">
+      <p class="eyebrow">Access Required</p>
+      <h1>Sign In</h1>
+      <p class="sub" id="sub-text">This area is restricted to approved users.<br>Sign in with your Google account to continue.</p>
+
+      <button id="sign-in-btn">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/>
+          <path d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z" fill="#34A853"/>
+          <path d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"/>
+          <path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z" fill="#EA4335"/>
+        </svg>
+        Continue with Google
+      </button>
+
+      <p class="status" id="status"></p>
+
+      <hr class="divider" />
+      <p class="request-note">Don't have access? <a href="mailto:hello@sqrrlbrain.com">Request it.</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Sqrrlbrain Studio LLC</p>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script>
+    const SQRRL_CONFIG = {
+      apiKey: "AIzaSyCDf7dzCXackD7j21DQ-BxNVwiMmn5o2ng",
+      authDomain: "sqrrlbrain-billing.firebaseapp.com",
+      projectId: "sqrrlbrain-billing",
+      storageBucket: "sqrrlbrain-billing.firebasestorage.app",
+      messagingSenderId: "673586334045",
+      appId: "1:673586334045:web:910fcdf3fe60afc88540b4"
+    };
+
+    firebase.initializeApp(SQRRL_CONFIG);
+    const auth = firebase.auth();
+    const db   = firebase.firestore();
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+    const params    = new URLSearchParams(window.location.search);
+    const returnUrl = params.get('return') || '/projects.html';
+    const denied    = params.get('denied');
+    const status    = document.getElementById('status');
+    const subText   = document.getElementById('sub-text');
+
+    if (denied) {
+      status.textContent = 'Access not granted for this account.';
+      status.classList.add('error');
+      subText.textContent = 'Your account is not on the approved list. Request access below.';
+    }
+
+    async function isApproved(email) {
+      try {
+        const doc = await db.collection('approved_users').doc(email).get();
+        return doc.exists;
+      } catch (_) { return false; }
+    }
+
+    auth.onAuthStateChanged(async user => {
+      if (!user) return;
+      status.textContent = 'Checking access…';
+      const ok = await isApproved(user.email);
+      if (ok) {
+        window.location.href = returnUrl;
+      } else {
+        await auth.signOut();
+        status.textContent = 'Access not granted for ' + user.email + '.';
+        status.classList.add('error');
+      }
+    });
+
+    document.getElementById('sign-in-btn').addEventListener('click', async () => {
+      status.textContent = 'Signing in…';
+      status.classList.remove('error');
+      try {
+        await auth.signInWithPopup(provider);
+      } catch (e) {
+        status.textContent = 'Sign-in failed. Try again.';
+        status.classList.add('error');
+      }
+    });
+  </script>
+</body>
+</html>

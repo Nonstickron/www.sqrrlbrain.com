@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5 Daughters — Formulary</title>
+  <title>Crucible — Formulary</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -1134,5 +1134,14 @@
   renderCatPills(); renderPantry(); renderSwaps(); renderRecipes(); updateFlagPill(); updateInvBadge();
 })();
 </script>
+
+<div id="sqrrl-gate" style="position:fixed;inset:0;background:#131209;display:flex;align-items:center;justify-content:center;z-index:99999;">
+  <p style="font-family:monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#7a7060;">Verifying access&hellip;</p>
+</div>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+<script src="auth.js"></script>
+<script>SqrrlAuth.check();</script>
 </body>
 </html>

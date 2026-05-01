@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crucible — Loading</title>
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  <style>
+    body { margin: 0; background: #131209; display: flex; align-items: center; justify-content: center; height: 100vh; }
+    p { font-family: monospace; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: #7a7060; }
+  </style>
+</head>
+<body>
+  <p>Loading Crucible&hellip;</p>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script>
+    const SQRRL_CONFIG = {
+      apiKey: "AIzaSyCDf7dzCXackD7j21DQ-BxNVwiMmn5o2ng",
+      authDomain: "sqrrlbrain-billing.firebaseapp.com",
+      projectId: "sqrrlbrain-billing",
+      storageBucket: "sqrrlbrain-billing.firebasestorage.app",
+      messagingSenderId: "673586334045",
+      appId: "1:673586334045:web:910fcdf3fe60afc88540b4"
+    };
+    firebase.initializeApp(SQRRL_CONFIG);
+    const auth = firebase.auth();
+    const db   = firebase.firestore();
+
+    auth.onAuthStateChanged(async user => {
+      if (!user) {
+        window.location.href = '/login.html?return=/crucible.html';
+        return;
+      }
+      const doc = await db.collection('approved_users').doc(user.email).get().catch(() => ({ exists: false }));
+      if (doc.exists) {
+        window.location.href = '/formulator.html';
+      } else {
+        window.location.href = '/login.html?denied=1';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -55,7 +55,7 @@
     .logo-wrap img { height: 46px; width: auto; display: block; }
 
     nav { display: flex; gap: 2.5rem; align-items: center; }
-    nav a {
+    nav > a, .dropdown > .nav-link {
       font-family: var(--mono);
       font-size: .7rem;
       letter-spacing: .13em;
@@ -63,8 +63,42 @@
       color: var(--brown-mid);
       text-decoration: none;
       transition: color .2s;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: .35rem;
     }
-    nav a:hover { color: var(--ink); }
+    nav > a:hover, .dropdown > .nav-link:hover { color: var(--ink); }
+    .dropdown { position: relative; }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 1.2rem);
+      left: 0;
+      background: var(--paper);
+      border: 1px solid rgba(58,26,0,.12);
+      min-width: 180px;
+      z-index: 100;
+      padding: .5rem 0;
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu a {
+      display: block;
+      padding: .65rem 1.2rem;
+      font-family: var(--mono);
+      font-size: .66rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      text-decoration: none;
+      transition: background .15s, color .15s;
+    }
+    .dropdown-menu a:hover { background: var(--warm); color: var(--ink); }
+    .caret { font-size: .5rem; opacity: .6; }
 
     /* HERO */
     .hero {
@@ -393,7 +427,24 @@
     </div>
     <nav>
       <a href="#services">Services</a>
-      <a href="#apps">Apps</a>
+      <div class="dropdown">
+        <span class="nav-link">Tools <span class="caret">&#9660;</span></span>
+        <div class="dropdown-menu">
+          <a href="/crucible.html">Crucible</a>
+          <a href="/sqrrlnest.html">SqrrlNest</a>
+          <a href="/sqrrlbrain-billing.html">Billing App</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <span class="nav-link">Projects <span class="caret">&#9660;</span></span>
+        <div class="dropdown-menu">
+          <a href="/projects.html">All Projects</a>
+          <a href="/projects.html#inkwell">Inkwell</a>
+          <a href="/projects.html#sqrrlaway">SqrrledAway</a>
+          <a href="/projects.html#tract">TRACT</a>
+          <a href="/projects.html#cypress">Cypress</a>
+        </div>
+      </div>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -469,6 +520,7 @@
         <h2>Inkwell — AI Story Engine</h2>
         <p>Inkwell is an AI-powered interactive fiction app that puts you inside a living story. Every choice shapes the narrative — characters remember, worlds evolve, and no two playthroughs are alike. Built for readers who want to do more than read.</p>
         <span class="app-badge">Coming to iOS &amp; Android</span>
+        <a href="/projects.html" style="display:inline-block;margin-top:1.2rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--brown-mid);text-decoration:none;">See all projects &rarr;</a>
       </div>
       <div class="app-visual">
         <img src="images/icon.svg" alt="Inkwell" />
@@ -500,5 +552,15 @@
     <p><a href="/privacy.html" style="font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;color:var(--brown-light);text-transform:uppercase;text-decoration:none;">Privacy Policy</a></p>
   </footer>
 
+  <script>
+    document.querySelectorAll('.dropdown > .nav-link').forEach(el => {
+      el.addEventListener('click', () => el.closest('.dropdown').classList.toggle('open'));
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+      }
+    });
+  </script>
 </body>
 </html>
