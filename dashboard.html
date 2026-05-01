@@ -157,8 +157,58 @@
     footer a { color: var(--text-dim); text-decoration: none; font-size: .56rem; letter-spacing: .1em; text-transform: uppercase; }
     footer a:hover { color: var(--gold-dim); }
 
+    /* SUMMARY VIEW */
+    .summary-view { display: grid; grid-template-columns: 260px 1fr; border-bottom: 1px solid var(--border); background: var(--surface); }
+    .summary-donut-panel { padding: 1.8rem 2.4rem; border-right: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+    .donut-wrap { position: relative; width: 128px; height: 128px; flex-shrink: 0; }
+    .donut-ring { width: 100%; height: 100%; border-radius: 50%; }
+    .donut-hole { position: absolute; inset: 20px; background: var(--surface); border-radius: 50%; }
+    .donut-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; }
+    .donut-total { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--text); line-height: 1; }
+    .donut-label { font-size: .44rem; letter-spacing: .2em; text-transform: uppercase; color: var(--text-dim); margin-top: .2rem; }
+    .donut-legend { display: flex; flex-direction: column; gap: .35rem; width: 100%; }
+    .legend-row { display: flex; align-items: center; gap: .5rem; font-size: .6rem; color: var(--text-mid); }
+    .legend-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .legend-val { margin-left: auto; color: var(--text-dim); font-size: .58rem; }
+
+    .summary-right { padding: 1.8rem 2.4rem; display: flex; flex-direction: column; gap: 1.2rem; min-width: 0; }
+    .summary-top-row { display: flex; align-items: flex-start; gap: 3rem; }
+    .health-block { flex-shrink: 0; }
+    .health-score { font-family: var(--serif); font-size: 2.8rem; font-weight: 600; line-height: 1; letter-spacing: -.03em; }
+    .health-score.hi  { color: var(--active); }
+    .health-score.mid { color: var(--gold); }
+    .health-score.lo  { color: var(--blocked); }
+    .health-label { font-size: .5rem; letter-spacing: .2em; text-transform: uppercase; color: var(--text-dim); margin-top: .3rem; }
+    .health-sub { font-size: .6rem; color: var(--text-dim); margin-top: .2rem; }
+
+    .activity-section { flex: 1; min-width: 0; }
+    .activity-label { font-size: .5rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dim); margin-bottom: .6rem; }
+    .activity-bars { display: flex; flex-direction: column; gap: .45rem; }
+    .activity-row { display: grid; grid-template-columns: 90px 1fr 32px; gap: .6rem; align-items: center; }
+    .activity-name { font-size: .6rem; color: var(--text-mid); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .activity-bar-track { height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .activity-bar-fill { height: 100%; border-radius: 2px; }
+    .activity-days { font-size: .5rem; color: var(--text-dim); text-align: right; white-space: nowrap; }
+
+    /* NOTES */
+    .notes-section { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+    .notes-textarea { width: 100%; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-family: var(--mono); font-size: .68rem; line-height: 1.65; padding: .6rem .8rem; resize: none; min-height: 68px; outline: none; transition: border-color .15s; display: block; }
+    .notes-textarea:focus { border-color: var(--border-hi); }
+    .notes-textarea::placeholder { color: var(--text-dim); opacity: .6; }
+    .notes-footer { display: flex; justify-content: space-between; align-items: center; margin-top: .4rem; }
+    .notes-status { font-size: .52rem; letter-spacing: .08em; color: var(--text-dim); }
+    .process-btn { font-family: var(--mono); font-size: .55rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); background: none; border: 1px solid var(--gold-dim); padding: .28rem .75rem; cursor: pointer; transition: all .15s; opacity: 0; pointer-events: none; }
+    .process-btn.visible { opacity: 1; pointer-events: auto; }
+    .process-btn:hover { background: rgba(196,153,58,.1); }
+    .notes-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); opacity: 0; transition: opacity .2s; flex-shrink: 0; }
+    .notes-dot.has-notes { opacity: .65; }
+
+    /* EXPAND max-height bump for notes */
+    .card.open .card-details { max-height: 2400px; }
+
     @media (max-width: 1000px) { .projects-grid { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 640px)  { .projects-grid, .subprojects-grid { grid-template-columns: 1fr; } header { padding: 1rem 1.2rem; } main { padding: 1.2rem 1.2rem 3rem; } .stats-bar { padding: 0 1.2rem; } .tools-quick { display: none; } }
+    @media (max-width: 800px)  { .summary-view { grid-template-columns: 1fr; } .summary-donut-panel { border-right: none; border-bottom: 1px solid var(--border); flex-direction: row; align-items: flex-start; } .summary-top-row { flex-direction: column; gap: 1.2rem; } }
+    @media (max-width: 640px)  { .projects-grid, .subprojects-grid { grid-template-columns: 1fr; } header { padding: 1rem 1.2rem; } main { padding: 1.2rem 1.2rem 3rem; } .stats-bar { padding: 0 1.2rem; } .tools-quick { display: none; } .summary-view { grid-template-columns: 1fr; } .summary-donut-panel { flex-direction: column; align-items: center; } }
   </style>
 </head>
 <body>
@@ -183,6 +233,7 @@
   </header>
 
   <div class="stats-bar" id="stats-bar"></div>
+  <div class="summary-view" id="summary-view"></div>
   <main><div class="projects-grid" id="projects-grid"></div></main>
 
   <footer>
@@ -195,13 +246,6 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
   <script src="auth.js"></script>
   <script>
-  // ─── SAFE TEXT HELPER ─────────────────────────────────────────────────────
-  function t(str) {
-    const el = document.createElement('span');
-    el.textContent = str;
-    return el.textContent; // returns escaped text — used only in textContent assignments
-  }
-
   // ─── DOM BUILDERS ─────────────────────────────────────────────────────────
   function el(tag, cls, text) {
     const e = document.createElement(tag);
@@ -403,8 +447,13 @@
     // Footer row
     const footer = el('div', 'card-footer');
     const updated = el('span', 'card-updated', 'Updated ' + p.updated);
+    const footerRight = el('div', '');
+    footerRight.style.cssText = 'display:flex;align-items:center;gap:.7rem';
+    const notesDot = el('span', 'notes-dot');
+    if ((localStorage.getItem('notes_' + p.id) || '').trim()) notesDot.classList.add('has-notes');
     const expandIcon = el('span', 'card-expand', '▼');
-    ap(footer, updated, expandIcon);
+    ap(footerRight, notesDot, expandIcon);
+    ap(footer, updated, footerRight);
 
     // Expanded area
     const details = el('div', 'card-details');
@@ -432,16 +481,143 @@
       ap(inner, subLbl, subGrid);
     }
 
+    // Notes
+    const notesSec = el('div', 'notes-section');
+    const notesLbl = el('div', 'details-section-label', 'Notes');
+    const textarea = document.createElement('textarea');
+    textarea.className = 'notes-textarea';
+    textarea.placeholder = 'Rough notes, blockers, next thoughts…';
+    textarea.value = localStorage.getItem('notes_' + p.id) || '';
+    const nFooter = el('div', 'notes-footer');
+    const nStatus = el('span', 'notes-status', textarea.value.trim() ? textarea.value.length + ' chars' : '');
+    const processBtn = el('button', 'process-btn', 'Process');
+    if (textarea.value.trim()) processBtn.classList.add('visible');
+
+    let debounce;
+    textarea.addEventListener('input', () => {
+      clearTimeout(debounce);
+      const val = textarea.value;
+      notesDot.classList.toggle('has-notes', val.trim().length > 0);
+      processBtn.classList.toggle('visible', val.trim().length > 0);
+      nStatus.textContent = val.length ? val.length + ' chars' : '';
+      debounce = setTimeout(() => {
+        localStorage.setItem('notes_' + p.id, val);
+        nStatus.textContent = (val.length ? val.length + ' chars · ' : '') + 'saved';
+      }, 800);
+    });
+
+    processBtn.addEventListener('click', () => {
+      const lines = PROJECTS.map(proj => {
+        const n = (localStorage.getItem('notes_' + proj.id) || '').trim();
+        return n ? '[' + proj.name + ']\n' + n : null;
+      }).filter(Boolean);
+      if (!lines.length) return;
+      const text = lines.join('\n\n');
+      navigator.clipboard.writeText(text).then(() => {
+        processBtn.textContent = 'Copied ✓';
+        setTimeout(() => { processBtn.textContent = 'Process'; }, 2200);
+      }).catch(() => { prompt('Copy to send to Tink:', text); });
+    });
+
+    ap(nFooter, nStatus, processBtn);
+    ap(notesSec, notesLbl, textarea, nFooter);
+    inner.appendChild(notesSec);
+
     details.appendChild(inner);
     ap(card, top, name, summary, footer, details);
 
-    card.addEventListener('click', () => {
+    card.addEventListener('click', e => {
+      if (e.target.closest('.notes-section')) return;
       const isOpen = card.classList.contains('open');
       document.querySelectorAll('.card.open').forEach(c => c.classList.remove('open'));
       if (!isOpen) card.classList.add('open');
     });
 
     return card;
+  }
+
+  // ─── RENDER SUMMARY VIEW ──────────────────────────────────────────────────
+  function renderSummary() {
+    const container = document.getElementById('summary-view');
+    const total = PROJECTS.length;
+    const counts = {};
+    STATUS_ORDER.forEach(s => counts[s] = 0);
+    PROJECTS.forEach(p => { counts[p.status] = (counts[p.status] || 0) + 1; });
+
+    // ── Donut panel
+    const donutPanel = el('div', 'summary-donut-panel');
+    const donutWrap  = el('div', 'donut-wrap');
+    const donutRing  = el('div', 'donut-ring');
+    const donutHole  = el('div', 'donut-hole');
+    const donutCtr   = el('div', 'donut-center');
+    ap(donutCtr, el('div', 'donut-total', String(total)), el('div', 'donut-label', 'Projects'));
+
+    const segments = [];
+    let angle = 0;
+    STATUS_ORDER.forEach(s => {
+      const c = counts[s] || 0;
+      if (!c) return;
+      const deg = (c / total) * 360;
+      segments.push(STATUS_COLORS[s] + ' ' + angle.toFixed(1) + 'deg ' + (angle + deg).toFixed(1) + 'deg');
+      angle += deg;
+    });
+    donutRing.style.background = 'conic-gradient(' + segments.join(',') + ')';
+    ap(donutWrap, donutRing, donutHole, donutCtr);
+
+    const legend = el('div', 'donut-legend');
+    const LABELS = { urgent:'Urgent', blocked:'Blocked', active:'Active', indev:'In Dev', concept:'Concept', todo:'Todo', shelved:'Shelved' };
+    STATUS_ORDER.forEach(s => {
+      const c = counts[s] || 0;
+      if (!c) return;
+      const row = el('div', 'legend-row');
+      const dot = el('span', 'legend-dot');
+      dot.style.background = STATUS_COLORS[s];
+      ap(row, dot, el('span', '', LABELS[s]), el('span', 'legend-val', String(c)));
+      legend.appendChild(row);
+    });
+    ap(donutPanel, donutWrap, legend);
+
+    // ── Right panel
+    const rightPanel = el('div', 'summary-right');
+
+    // Health / momentum score
+    const moving = (counts.active || 0) + (counts.indev || 0);
+    const stuck  = (counts.urgent || 0) + (counts.blocked || 0);
+    const health = (moving + stuck) > 0 ? Math.round(moving / (moving + stuck) * 100) : 100;
+    const hClass = health >= 67 ? 'health-score hi' : health >= 40 ? 'health-score mid' : 'health-score lo';
+
+    const topRow = el('div', 'summary-top-row');
+    const hBlock = el('div', 'health-block');
+    ap(hBlock,
+      el('div', hClass, health + '%'),
+      el('div', 'health-label', 'Momentum'),
+      el('div', 'health-sub', moving + ' moving · ' + stuck + ' stuck · ' + (total - moving - stuck) + ' pending')
+    );
+    topRow.appendChild(hBlock);
+
+    // Activity bars
+    const actSection = el('div', 'activity-section');
+    actSection.appendChild(el('div', 'activity-label', 'Last Touched'));
+    const barsWrap = el('div', 'activity-bars');
+    const today = new Date();
+    const sorted = [...PROJECTS].sort((a,b) => STATUS_ORDER.indexOf(a.status) - STATUS_ORDER.indexOf(b.status));
+    sorted.forEach(p => {
+      const days = Math.floor((today - new Date(p.updated)) / 86400000);
+      const pct  = Math.max(6, Math.min(100, 100 - (days / 14) * 100));
+      const color = STATUS_COLORS[p.status] || '#4a4038';
+      const row   = el('div', 'activity-row');
+      const track = el('div', 'activity-bar-track');
+      const fill  = el('div', 'activity-bar-fill');
+      fill.style.cssText = 'width:' + pct.toFixed(0) + '%;background:' + color + ';opacity:' + (days === 0 ? '1' : '.55');
+      track.appendChild(fill);
+      ap(row, el('div', 'activity-name', p.name), track, el('div', 'activity-days', days === 0 ? 'today' : days + 'd'));
+      barsWrap.appendChild(row);
+    });
+    actSection.appendChild(barsWrap);
+    topRow.appendChild(actSection);
+    rightPanel.appendChild(topRow);
+
+    ap(container, donutPanel, rightPanel);
   }
 
   // ─── RENDER STATS BAR ─────────────────────────────────────────────────────
@@ -490,6 +666,7 @@
   setInterval(updateClock, 1000);
 
   // ─── BOOT ─────────────────────────────────────────────────────────────────
+  renderSummary();
   renderStats();
   renderGrid();
   SqrrlAuth.check();
