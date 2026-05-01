@@ -208,7 +208,39 @@
 
     @media (max-width: 1000px) { .projects-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 800px)  { .summary-view { grid-template-columns: 1fr; } .summary-donut-panel { border-right: none; border-bottom: 1px solid var(--border); flex-direction: row; align-items: flex-start; } .summary-top-row { flex-direction: column; gap: 1.2rem; } }
-    @media (max-width: 640px)  { .projects-grid, .subprojects-grid { grid-template-columns: 1fr; } header { padding: 1rem 1.2rem; } main { padding: 1.2rem 1.2rem 3rem; } .stats-bar { padding: 0 1.2rem; } .tools-quick { display: none; } .summary-view { grid-template-columns: 1fr; } .summary-donut-panel { flex-direction: column; align-items: center; } }
+    @media (max-width: 640px) {
+      .projects-grid, .subprojects-grid { grid-template-columns: 1fr; }
+      header { padding: 1rem 1.2rem; }
+      main { padding: 1.2rem 1.2rem 3rem; }
+      .stats-bar { padding: 0 1.2rem; }
+      .tools-quick { display: none; }
+      .summary-view { grid-template-columns: 1fr; }
+      .summary-donut-panel { flex-direction: column; align-items: center; }
+
+      /* Legibility bump — sub-rem sizes and dim tokens are unreadable on mobile */
+      .stat-label  { font-size: .72rem; color: var(--text-mid); }
+      .stat-count  { font-size: 1rem; }
+      .donut-total { font-size: 2rem; }
+      .donut-label { font-size: .6rem; color: var(--text-mid); }
+      .legend-row  { font-size: .75rem; color: var(--text); }
+      .legend-val  { font-size: .72rem; color: var(--text-mid); }
+      .health-score { font-size: 3rem; }
+      .health-label { font-size: .68rem; color: var(--text-mid); }
+      .health-sub   { font-size: .72rem; color: var(--text-mid); }
+      .activity-label { font-size: .68rem; color: var(--text-mid); }
+      .activity-name  { font-size: .75rem; color: var(--text); }
+      .activity-days  { font-size: .68rem; color: var(--text-mid); }
+      .activity-bar-track { height: 4px; }
+      .card-category { font-size: .68rem; color: var(--text-mid); }
+      .card-summary  { font-size: .82rem; }
+      .card-updated  { font-size: .66rem; color: var(--text-mid); }
+      .details-section-label { font-size: .66rem; }
+      .steps-list li { font-size: .8rem; }
+      .blockers-list li { font-size: .78rem; }
+      .notes-textarea { font-size: .78rem; }
+      .notes-status   { font-size: .64rem; }
+      .process-btn    { font-size: .66rem; }
+    }
   </style>
 </head>
 <body>
