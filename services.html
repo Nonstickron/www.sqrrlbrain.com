@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Sqrrlbrain Studio</title>
+  <meta name="description" content="Packaging design, brand identity, art direction, and print production services from Sqrrlbrain Studio — 25 years of commercial craft." />
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:         #3a1a00;
+      --brown-mid:   #7a4520;
+      --brown-light: #b88c5a;
+      --paper:       #faf6f0;
+      --warm:        #f2ebe0;
+      --mono:        'DM Mono', monospace;
+      --serif:       'Playfair Display', serif;
+      --sans:        'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      max-width: 1440px;
+      margin: 0 auto;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      border-bottom: 1px solid rgba(58,26,0,.1);
+      position: relative;
+      animation: fadeDown .6s ease both;
+    }
+    .logo-wrap img { height: 46px; width: auto; display: block; }
+    nav { display: flex; gap: 2.5rem; align-items: center; }
+    nav > a, .dropdown > .nav-link {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      text-decoration: none;
+      transition: color .2s;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+    }
+    nav > a:hover, .dropdown > .nav-link:hover { color: var(--ink); }
+    nav > a.active { color: var(--ink); }
+    .dropdown { position: relative; }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 1.2rem);
+      left: 0;
+      background: var(--paper);
+      border: 1px solid rgba(58,26,0,.12);
+      min-width: 180px;
+      z-index: 100;
+      padding: .5rem 0;
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu a {
+      display: block;
+      padding: .65rem 1.2rem;
+      font-family: var(--mono);
+      font-size: .66rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      text-decoration: none;
+      transition: background .15s, color .15s;
+    }
+    .dropdown-menu a:hover { background: var(--warm); color: var(--ink); }
+    .caret { font-size: .5rem; opacity: .6; }
+
+    /* PAGE HERO */
+    .page-hero {
+      padding: 5.5rem 3rem 4.5rem;
+      border-bottom: 1px solid rgba(58,26,0,.08);
+      animation: fadeUp .7s .1s ease both;
+    }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1.4rem;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.04;
+      letter-spacing: -.03em;
+      margin-bottom: 1.4rem;
+    }
+    h1 em { font-style: italic; color: var(--brown-mid); }
+    .page-desc {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--brown-mid);
+      max-width: 52ch;
+    }
+
+    /* SERVICES LIST */
+    .services-section {
+      padding: 0;
+    }
+
+    .service-panel {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      border-bottom: 1px solid rgba(58,26,0,.08);
+      animation: fadeUp .5s ease both;
+    }
+    .service-panel:nth-child(1) { animation-delay: .05s; }
+    .service-panel:nth-child(2) { animation-delay: .1s; }
+    .service-panel:nth-child(3) { animation-delay: .15s; }
+    .service-panel:nth-child(4) { animation-delay: .2s; }
+
+    .service-left {
+      padding: 4rem 3rem;
+      border-right: 1px solid rgba(58,26,0,.08);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .service-num {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .15em;
+      color: var(--brown-light);
+    }
+    .service-name {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -.025em;
+      color: var(--ink);
+    }
+
+    .service-right {
+      padding: 4rem 4rem 4rem 3.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .service-desc-block {}
+    .service-desc-block h3 {
+      font-family: var(--mono);
+      font-size: .6rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1rem;
+    }
+    .service-desc-block p {
+      font-size: .93rem;
+      line-height: 1.82;
+      color: var(--brown-mid);
+    }
+
+    .service-includes {}
+    .service-includes h3 {
+      font-family: var(--mono);
+      font-size: .6rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1rem;
+    }
+    .includes-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .includes-list li {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--brown-mid);
+      display: flex;
+      align-items: baseline;
+      gap: .5rem;
+    }
+    .includes-list li::before {
+      content: '—';
+      color: var(--brown-light);
+      font-size: .6rem;
+      flex-shrink: 0;
+    }
+
+    /* NOTE STRIP — dark */
+    .note-strip {
+      background: var(--ink);
+      padding: 3.5rem 3rem;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+    .note-label {
+      font-family: var(--mono);
+      font-size: .6rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      flex-shrink: 0;
+    }
+    .note-text {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: rgba(250,246,240,.75);
+      line-height: 1.4;
+      font-style: italic;
+      flex: 1;
+    }
+
+    /* CONTACT CTA */
+    .contact-cta {
+      background: var(--warm);
+      padding: 5.5rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .contact-cta h2 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -.03em;
+    }
+    .contact-cta h2 em { font-style: italic; color: var(--brown-mid); }
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-row .label {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: .3rem;
+    }
+    .contact-row a, .contact-row span {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .contact-row a:hover { color: var(--brown-mid); }
+
+    /* FOOTER */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 3rem;
+      border-top: 1px solid rgba(58,26,0,.1);
+    }
+    footer p, footer a {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .1em;
+      color: var(--brown-light);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--ink); }
+
+    /* MOBILE NAV */
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--brown-mid); transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid rgba(58,26,0,.1); z-index: 200; padding: 1rem 1.5rem 1.5rem; flex-direction: column; gap: 0; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-section { font-family: var(--mono); font-size: .56rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown-light); padding: .8rem 0 .3rem; border-top: 1px solid rgba(58,26,0,.06); margin-top: .4rem; }
+    .mobile-nav-section:first-child { border-top: none; margin-top: 0; }
+    .mobile-nav a { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; padding: .55rem 0; display: block; border-bottom: 1px solid rgba(58,26,0,.05); }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--ink); }
+
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp   { from { opacity: 0; transform: translateY(22px); } to  { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 960px) {
+      .service-panel { grid-template-columns: 1fr; }
+      .service-left { border-right: none; border-bottom: 1px solid rgba(58,26,0,.06); padding: 3rem 2rem 2rem; }
+      .service-right { padding: 2rem 2rem 3rem; }
+      .note-strip { flex-direction: column; gap: 1.2rem; }
+    }
+    @media (max-width: 760px) {
+      header { padding: 1.2rem 1.5rem; }
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .page-hero { padding: 3.5rem 1.5rem 3rem; }
+      .service-right { grid-template-columns: 1fr; gap: 2rem; padding: 1.5rem 1.5rem 2.5rem; }
+      .service-left { padding: 2.5rem 1.5rem 1.5rem; }
+      .note-strip { padding: 2.5rem 1.5rem; }
+      .contact-cta { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
+      footer { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-wrap">
+      <a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
+    </div>
+    <nav>
+      <a href="/work.html">Work</a>
+      <a href="/services.html" class="active">Services</a>
+      <div class="dropdown">
+        <span class="nav-link">Tools <span class="caret">&#9660;</span></span>
+        <div class="dropdown-menu">
+          <a href="/dashboard.html">Dashboard</a>
+          <a href="/crucible.html">Crucible</a>
+          <a href="/crucible-audit.html">Crucible Audit</a>
+          <a href="/sqrrlnest.html">SqrrlNest</a>
+          <a href="/sqrrlbrain-billing.html">Billing App</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <span class="nav-link">Projects <span class="caret">&#9660;</span></span>
+        <div class="dropdown-menu">
+          <a href="/projects.html">All Projects</a>
+          <a href="/projects.html#inkwell">Inkwell</a>
+          <a href="/projects.html#sqrrlaway">SqrrledAway</a>
+          <a href="/projects.html#tract">TRACT</a>
+          <a href="/projects.html#cypress">Cypress</a>
+        </div>
+      </div>
+      <a href="/about.html">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-nav" id="mobile-nav">
+      <span class="mobile-nav-section">Navigate</span>
+      <a href="/work.html">Work</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/#contact">Contact</a>
+      <span class="mobile-nav-section">Tools</span>
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/crucible.html">Crucible</a>
+      <a href="/sqrrlnest.html">SqrrlNest</a>
+      <a href="/sqrrlbrain-billing.html">Billing App</a>
+      <span class="mobile-nav-section">Projects</span>
+      <a href="/projects.html">All Projects</a>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <p class="eyebrow">What We Do &middot; Sqrrlbrain Studio</p>
+    <h1>Design that<br><em>ships.</em></h1>
+    <p class="page-desc">Four core disciplines, one production-minded perspective. Work built to survive contact with the printer, the retailer, and the real world.</p>
+  </div>
+
+  <section class="services-section">
+
+    <!-- 01 Packaging Design -->
+    <div class="service-panel">
+      <div class="service-left">
+        <p class="service-num">01</p>
+        <h2 class="service-name">Packaging<br>Design</h2>
+      </div>
+      <div class="service-right">
+        <div class="service-desc-block">
+          <h3>Overview</h3>
+          <p>Retail packaging built from the dieline outward. Whether you need a folding carton, corrugated shipper, POP display, or specialty die-cut structure, the design process starts with the physical constraints — dimensions, material, fold sequence, print method — and works forward from there. The result: packaging that actually functions at production scale.</p>
+        </div>
+        <div class="service-includes">
+          <h3>What's Included</h3>
+          <ul class="includes-list">
+            <li>Structural dieline development</li>
+            <li>Front, side, and base panel graphics</li>
+            <li>Material and print method consultation</li>
+            <li>Bleed, fold, and live-area accuracy</li>
+            <li>Press-ready files (PDF, AI, EPS)</li>
+            <li>Die template coordination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Brand Identity -->
+    <div class="service-panel">
+      <div class="service-left">
+        <p class="service-num">02</p>
+        <h2 class="service-name">Brand<br>Identity</h2>
+      </div>
+      <div class="service-right">
+        <div class="service-desc-block">
+          <h3>Overview</h3>
+          <p>Logo systems and brand guidelines built to hold up across every application. A brand identity should work on a business card, a van, and a 12-foot banner without losing resolution, legibility, or character. Every mark is designed with reproduction in mind — spot color, full color, single-color, and reverse — before the presentation deck is even opened.</p>
+        </div>
+        <div class="service-includes">
+          <h3>What's Included</h3>
+          <ul class="includes-list">
+            <li>Primary logo mark + wordmark</li>
+            <li>Color system (full, spot, 1-color, reverse)</li>
+            <li>Typography selection and pairing</li>
+            <li>Brand guidelines document</li>
+            <li>File package (vector + raster formats)</li>
+            <li>Application mockups</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Art Direction -->
+    <div class="service-panel">
+      <div class="service-left">
+        <p class="service-num">03</p>
+        <h2 class="service-name">Art<br>Direction</h2>
+      </div>
+      <div class="service-right">
+        <div class="service-desc-block">
+          <h3>Overview</h3>
+          <p>Campaign concepting and creative direction for print, product marketing, and point-of-sale. Art direction means making decisions — what goes where, what gets cut, what the visual hierarchy actually communicates to a person with four seconds at a retail fixture. If your project needs a strong creative lead who can also finish the execution, that's the work.</p>
+        </div>
+        <div class="service-includes">
+          <h3>What's Included</h3>
+          <ul class="includes-list">
+            <li>Campaign concept development</li>
+            <li>Layout and visual hierarchy design</li>
+            <li>Print and digital collateral</li>
+            <li>POS and retail fixture design</li>
+            <li>Asset direction and curation</li>
+            <li>Production-ready deliverables</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Print Production -->
+    <div class="service-panel">
+      <div class="service-left">
+        <p class="service-num">04</p>
+        <h2 class="service-name">Print<br>Production</h2>
+      </div>
+      <div class="service-right">
+        <div class="service-desc-block">
+          <h3>Overview</h3>
+          <p>Prepress review, file preparation, and production management built on 25 years inside a commercial print environment. This is the work most designers don't know how to do — or don't know they're doing wrong. Bringing an experienced prepress eye to your existing files catches errors before they become press mistakes, costly reprints, or missed ship dates.</p>
+        </div>
+        <div class="service-includes">
+          <h3>What's Included</h3>
+          <ul class="includes-list">
+            <li>Prepress file review and correction</li>
+            <li>Color profile and ink setup</li>
+            <li>Bleed, trim, and safe zone audit</li>
+            <li>Font and image resolution check</li>
+            <li>Wide-format file preparation</li>
+            <li>Print vendor coordination (as needed)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="note-strip">
+    <p class="note-label">A note on scope</p>
+    <p class="note-text">"Every project is handled directly by the designer — no junior staff, no offshore production, no account layer between us. You get 25 years of production knowledge applied directly to your work."</p>
+  </div>
+
+  <section class="contact-cta">
+    <h2>Tell me what<br>you're<br><em>building.</em></h2>
+    <div class="contact-info">
+      <div class="contact-row">
+        <p class="label">Email</p>
+        <a href="mailto:hello@sqrrlbrain.com">hello@sqrrlbrain.com</a>
+      </div>
+      <div class="contact-row">
+        <p class="label">Location</p>
+        <span>Edgewater, Florida</span>
+      </div>
+      <div class="contact-row">
+        <p class="label">Business</p>
+        <span>Sqrrlbrain Studio LLC</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    <img src="images/logo-website.svg" alt="Sqrrlbrain.com" style="height:28px;width:auto;opacity:.4;" />
+    <a href="/privacy.html">Privacy Policy</a>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > .nav-link').forEach(el => {
+      el.addEventListener('click', () => el.closest('.dropdown').classList.toggle('open'));
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+      }
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Sqrrlbrain Studio</title>
+  <meta name="description" content="Sqrrlbrain Studio LLC — an independent creative studio specializing in packaging design, brand identity, and print production. Based in Edgewater, Florida." />
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:         #3a1a00;
+      --brown-mid:   #7a4520;
+      --brown-light: #b88c5a;
+      --paper:       #faf6f0;
+      --warm:        #f2ebe0;
+      --mono:        'DM Mono', monospace;
+      --serif:       'Playfair Display', serif;
+      --sans:        'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      max-width: 1440px;
+      margin: 0 auto;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      border-bottom: 1px solid rgba(58,26,0,.1);
+      position: relative;
+      animation: fadeDown .6s ease both;
+    }
+    .logo-wrap img { height: 46px; width: auto; display: block; }
+    nav { display: flex; gap: 2.5rem; align-items: center; }
+    nav > a, .dropdown > .nav-link {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      text-decoration: none;
+      transition: color .2s;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+    }
+    nav > a:hover, .dropdown > .nav-link:hover { color: var(--ink); }
+    nav > a.active { color: var(--ink); }
+    .dropdown { position: relative; }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 1.2rem);
+      left: 0;
+      background: var(--paper);
+      border: 1px solid rgba(58,26,0,.12);
+      min-width: 180px;
+      z-index: 100;
+      padding: .5rem 0;
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown.open .dropdown-menu { display: block; }
+    .dropdown-menu a {
+      display: block;
+      padding: .65rem 1.2rem;
+      font-family: var(--mono);
+      font-size: .66rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      text-decoration: none;
+      transition: background .15s, color .15s;
+    }
+    .dropdown-menu a:hover { background: var(--warm); color: var(--ink); }
+    .caret { font-size: .5rem; opacity: .6; }
+
+    /* PAGE HERO */
+    .page-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      padding: 5.5rem 3rem 5rem;
+      border-bottom: 1px solid rgba(58,26,0,.08);
+      animation: fadeUp .7s .1s ease both;
+    }
+    .hero-left {}
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1.4rem;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 5vw, 4.8rem);
+      font-weight: 900;
+      line-height: 1.03;
+      letter-spacing: -.03em;
+    }
+    h1 em { font-style: italic; color: var(--brown-mid); }
+    .hero-right {
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: .5rem;
+    }
+    .hero-intro {
+      font-size: 1.05rem;
+      line-height: 1.82;
+      color: var(--brown-mid);
+      max-width: 44ch;
+    }
+
+    /* STATS STRIP */
+    .stats-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid rgba(58,26,0,.08);
+    }
+    .stat-block {
+      padding: 2.6rem 3rem;
+      border-right: 1px solid rgba(58,26,0,.08);
+    }
+    .stat-block:last-child { border-right: none; }
+    .stat-val {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--brown-mid);
+      letter-spacing: -.04em;
+      line-height: 1;
+      margin-bottom: .5rem;
+    }
+    .stat-key {
+      font-family: var(--mono);
+      font-size: .6rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+    }
+
+    /* MAIN CONTENT */
+    .about-body {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 6rem;
+      padding: 6rem 3rem 7rem;
+      border-bottom: 1px solid rgba(58,26,0,.08);
+    }
+
+    .sidebar {}
+    .sidebar-section {
+      margin-bottom: 3rem;
+    }
+    .sidebar-label {
+      font-family: var(--mono);
+      font-size: .6rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1rem;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid rgba(58,26,0,.08);
+    }
+    .sidebar-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .sidebar-list li {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--brown-mid);
+      display: flex;
+      align-items: baseline;
+      gap: .5rem;
+    }
+    .sidebar-list li::before {
+      content: '—';
+      color: var(--brown-light);
+      font-size: .6rem;
+      flex-shrink: 0;
+    }
+
+    .main-content {}
+    .main-content h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+      font-weight: 700;
+      line-height: 1.16;
+      letter-spacing: -.025em;
+      margin-bottom: 1.8rem;
+    }
+    .main-content h2 em { font-style: italic; color: var(--brown-mid); }
+    .main-content p {
+      font-size: .97rem;
+      line-height: 1.85;
+      color: var(--brown-mid);
+      max-width: 58ch;
+      margin-bottom: 1.4rem;
+    }
+    .main-content p:last-child { margin-bottom: 0; }
+
+    /* APPROACH SECTION */
+    .approach {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 6rem 3rem;
+    }
+    .section-label {
+      font-family: var(--mono);
+      font-size: .66rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 3.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(250,246,240,.12);
+    }
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+    .approach-item {
+      padding: 2.5rem 2.5rem 2.5rem 0;
+      border-top: 1px solid rgba(250,246,240,.1);
+    }
+    .approach-item + .approach-item {
+      border-left: 1px solid rgba(250,246,240,.07);
+      padding-left: 2.5rem;
+    }
+    .approach-num {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .15em;
+      color: var(--brown-light);
+      margin-bottom: 1.2rem;
+    }
+    .approach-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--paper);
+      margin-bottom: .8rem;
+    }
+    .approach-desc {
+      font-size: .86rem;
+      line-height: 1.74;
+      color: rgba(250,246,240,.5);
+    }
+
+    /* CONTACT CTA */
+    .contact-cta {
+      background: var(--warm);
+      padding: 5.5rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .contact-cta h2 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.06;
+      letter-spacing: -.03em;
+    }
+    .contact-cta h2 em { font-style: italic; color: var(--brown-mid); }
+    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-row .label {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: .3rem;
+    }
+    .contact-row a, .contact-row span {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .contact-row a:hover { color: var(--brown-mid); }
+
+    /* FOOTER */
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 3rem;
+      border-top: 1px solid rgba(58,26,0,.1);
+    }
+    footer p, footer a {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .1em;
+      color: var(--brown-light);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--ink); }
+
+    /* MOBILE NAV */
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--brown-mid); transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid rgba(58,26,0,.1); z-index: 200; padding: 1rem 1.5rem 1.5rem; flex-direction: column; gap: 0; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-section { font-family: var(--mono); font-size: .56rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown-light); padding: .8rem 0 .3rem; border-top: 1px solid rgba(58,26,0,.06); margin-top: .4rem; }
+    .mobile-nav-section:first-child { border-top: none; margin-top: 0; }
+    .mobile-nav a { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; padding: .55rem 0; display: block; border-bottom: 1px solid rgba(58,26,0,.05); }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--ink); }
+
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp   { from { opacity: 0; transform: translateY(22px); } to  { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 960px) {
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .stat-block:nth-child(2) { border-right: none; }
+      .stat-block:nth-child(3) { border-top: 1px solid rgba(58,26,0,.08); }
+      .stat-block:nth-child(4) { border-top: 1px solid rgba(58,26,0,.08); border-right: none; }
+      .approach-grid { grid-template-columns: 1fr 1fr; }
+      .approach-item:nth-child(3) { border-left: none; padding-left: 0; border-top: 1px solid rgba(250,246,240,.1); margin-top: 0; }
+    }
+    @media (max-width: 760px) {
+      header { padding: 1.2rem 1.5rem; }
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .page-hero { grid-template-columns: 1fr; gap: 2rem; padding: 3.5rem 1.5rem 3rem; }
+      .stats-strip { grid-template-columns: 1fr 1fr; }
+      .about-body { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem 5rem; }
+      .approach { padding: 4rem 1.5rem; }
+      .approach-grid { grid-template-columns: 1fr; }
+      .approach-item + .approach-item { border-left: none; padding-left: 0; border-top: 1px solid rgba(250,246,240,.1); }
+      .contact-cta { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
+      footer { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
+    }
+    @media (max-width: 500px) {
+      .stats-strip { grid-template-columns: 1fr; }
+      .stat-block { border-right: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-wrap">
+      <a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
+    </div>
+    <nav>
+      <a href="/work.html">Work</a>
+      <a href="/services.html">Services</a>
+      <div class="dropdown">
+        <span class="nav-link">Tools <span class="caret">&#9660;</span></span>
+        <div class="dropdown-menu">
+          <a href="/dashboard.html">Dashboard</a>
+          <a href="/crucible.html">Crucible</a>
+          <a href="/crucible-audit.html">Crucible Audit</a>
+          <a href="/sqrrlnest.html">SqrrlNest</a>
+          <a href="/sqrrlbrain-billing.html">Billing App</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <span class="nav-link">Projects <span class="caret">&#9660;</span></span>
+        <div class="dropdown-menu">
+          <a href="/projects.html">All Projects</a>
+          <a href="/projects.html#inkwell">Inkwell</a>
+          <a href="/projects.html#sqrrlaway">SqrrledAway</a>
+          <a href="/projects.html#tract">TRACT</a>
+          <a href="/projects.html#cypress">Cypress</a>
+        </div>
+      </div>
+      <a href="/about.html" class="active">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-nav" id="mobile-nav">
+      <span class="mobile-nav-section">Navigate</span>
+      <a href="/work.html">Work</a>
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/#contact">Contact</a>
+      <span class="mobile-nav-section">Tools</span>
+      <a href="/dashboard.html">Dashboard</a>
+      <a href="/crucible.html">Crucible</a>
+      <a href="/sqrrlnest.html">SqrrlNest</a>
+      <a href="/sqrrlbrain-billing.html">Billing App</a>
+      <span class="mobile-nav-section">Projects</span>
+      <a href="/projects.html">All Projects</a>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="hero-left">
+      <p class="eyebrow">About the Studio</p>
+      <h1>Built from<br>the<br><em>dieline up.</em></h1>
+    </div>
+    <div class="hero-right">
+      <p class="hero-intro">Sqrrlbrain Studio is an independent creative practice built on 25 years of commercial production experience. No junior designers, no offshore handoffs — just one person who knows exactly how the press works and designs accordingly.</p>
+    </div>
+  </div>
+
+  <div class="stats-strip">
+    <div class="stat-block">
+      <div class="stat-val">25+</div>
+      <div class="stat-key">Years in Production</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-val">LLC</div>
+      <div class="stat-key">Registered Business &middot; Florida</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-val">Solo</div>
+      <div class="stat-key">Independent Studio</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-val">FL</div>
+      <div class="stat-key">Edgewater, Florida</div>
+    </div>
+  </div>
+
+  <div class="about-body">
+    <div class="sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-label">Disciplines</p>
+        <ul class="sidebar-list">
+          <li>Packaging Design</li>
+          <li>Brand Identity</li>
+          <li>Print Production</li>
+          <li>Structural Dielines</li>
+          <li>Wide-Format Layout</li>
+          <li>Art Direction</li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Production Knowledge</p>
+        <ul class="sidebar-list">
+          <li>Folding carton</li>
+          <li>Corrugated packaging</li>
+          <li>Die-cut and specialty shapes</li>
+          <li>Vehicle wrap &amp; wide-format</li>
+          <li>Letterpress &amp; spot color</li>
+          <li>Prepress &amp; file prep</li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Studio</p>
+        <ul class="sidebar-list">
+          <li>Sqrrlbrain Studio LLC</li>
+          <li>Edgewater, Florida</li>
+          <li>Est. 2026</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <h2>Twenty-five years of learning<br>how things <em>actually</em> get made.</h2>
+      <p>Ronald Goodrich has spent his entire professional life inside commercial print production — not adjacent to it. Starting in prepress and working up through packaging design and structural engineering, his expertise is the kind that doesn't come from design school: it comes from knowing why a folding carton fails on press, how a die-cut tolerance will ruin a retail shelf, and what "print-ready" actually means to the person running the job.</p>
+      <p>Sqrrlbrain Studio LLC was founded as an independent practice to bring that depth of knowledge to clients who need more than surface-level design. Every project comes with the structural thinking baked in — not bolted on at the end.</p>
+      <p>The studio also builds digital products: Inkwell (an AI-powered story engine), SqrrledAway (household meal planning), and TRACT (print-on-demand apparel). Software development is handled through the same self-taught, production-minded lens as the design work — if it ships, it works.</p>
+      <p>Based in Edgewater, Florida. Available for packaging design, brand identity, print production, and wide-format projects. Remote-first.</p>
+    </div>
+  </div>
+
+  <section class="approach">
+    <p class="section-label">How We Work</p>
+    <div class="approach-grid">
+      <div class="approach-item">
+        <p class="approach-num">01</p>
+        <h3 class="approach-title">Structure Before Graphics</h3>
+        <p class="approach-desc">Every packaging project starts with the dieline — dimensions, material, fold sequence, print constraints. Graphics that don't account for structure fail on press. We build the chassis first.</p>
+      </div>
+      <div class="approach-item">
+        <p class="approach-num">02</p>
+        <p class="approach-title">Production-Ready by Default</p>
+        <p class="approach-desc">Files leave this studio press-ready. That means correct bleeds, appropriate resolution, proper spot color setup, and a working knowledge of what your printer actually needs — not what looks good on screen.</p>
+      </div>
+      <div class="approach-item">
+        <p class="approach-num">03</p>
+        <p class="approach-title">No Junior Handoffs</p>
+        <p class="approach-desc">You work directly with the designer who will execute your project. There are no account managers between us, no junior designers finishing the file, and no offshore production. What you see is what you get.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-cta">
+    <h2>Got a project<br>that needs<br><em>real craft?</em></h2>
+    <div class="contact-info">
+      <div class="contact-row">
+        <p class="label">Email</p>
+        <a href="mailto:hello@sqrrlbrain.com">hello@sqrrlbrain.com</a>
+      </div>
+      <div class="contact-row">
+        <p class="label">Location</p>
+        <span>Edgewater, Florida</span>
+      </div>
+      <div class="contact-row">
+        <p class="label">Business</p>
+        <span>Sqrrlbrain Studio LLC</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    <img src="images/logo-website.svg" alt="Sqrrlbrain.com" style="height:28px;width:auto;opacity:.4;" />
+    <a href="/privacy.html">Privacy Policy</a>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.dropdown > .nav-link').forEach(el => {
+      el.addEventListener('click', () => el.closest('.dropdown').classList.toggle('open'));
+    });
+    document.addEventListener('click', e => {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
+      }
+    });
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
