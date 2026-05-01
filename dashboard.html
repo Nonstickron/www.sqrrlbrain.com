@@ -217,7 +217,8 @@
       .summary-view { grid-template-columns: 1fr; }
       .summary-donut-panel { flex-direction: column; align-items: center; }
 
-      /* Legibility bump — sub-rem sizes and dim tokens are unreadable on mobile */
+      /* Legibility — heavier weight, larger sizes, lighter tokens */
+      body { font-weight: 400; }
       .stat-label  { font-size: .72rem; color: var(--text-mid); }
       .stat-count  { font-size: 1rem; }
       .donut-total { font-size: 2rem; }
