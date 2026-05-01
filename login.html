@@ -219,7 +219,7 @@
 
     async function isApproved(email) {
       try {
-        const doc = await db.collection('approved_users').doc(email).get();
+        const doc = await db.collection('site_approved_users').doc(email).get();
         return doc.exists;
       } catch (_) { return false; }
     }

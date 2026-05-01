@@ -19,7 +19,7 @@ const SqrrlAuth = (() => {
 
   async function _isApproved(email) {
     try {
-      const doc = await _db.collection('approved_users').doc(email).get();
+      const doc = await _db.collection('site_approved_users').doc(email).get();
       return doc.exists;
     } catch (_) {
       return false;

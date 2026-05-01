@@ -34,7 +34,7 @@
         window.location.href = '/login.html?return=/crucible.html';
         return;
       }
-      const doc = await db.collection('approved_users').doc(user.email).get().catch(() => ({ exists: false }));
+      const doc = await db.collection('site_approved_users').doc(user.email).get().catch(() => ({ exists: false }));
       if (doc.exists) {
         window.location.href = '/formulator.html';
       } else {
