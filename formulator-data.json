@@ -1184,7 +1184,7 @@
     },
     {
       "id": "shimmery-body-oil-spray",
-      "name": "Fractionated Coconut & Sweet Almond Body Oil",
+      "name": "Coconut & Sweet Almond Body Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/shimmery-body-oil-spray/",
       "heatRequired": true,
@@ -1314,7 +1314,7 @@
     },
     {
       "id": "witch-hazel-toner",
-      "name": "Aloe Vera & Polysorbate-20 Facial Mist",
+      "name": "Aloe Vera Facial Mist",
       "source": "custom",
       "heatRequired": false,
       "equipment": [],
@@ -1747,7 +1747,7 @@
     },
     {
       "id": "tropical-shimmer-body-butter",
-      "name": "Mango & Coconut Body Butter",
+      "name": "Mango & Cocoa Body Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/tropical-shimmer-body-butter-shimmer-optional/",
       "heatRequired": true,
@@ -1813,7 +1813,7 @@
     },
     {
       "id": "argan-oil-facial-serum",
-      "name": "Argan & Essential Facial Serum",
+      "name": "Argan Facial Serum",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/my-favourite-argan-oil-serum/",
       "heatRequired": false,
@@ -1834,7 +1834,7 @@
     },
     {
       "id": "argan-serum-mature-skin",
-      "name": "Argan & Essential Facial Serum",
+      "name": "Argan Facial Serum",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/argan-serum-for-mature-skin/",
       "heatRequired": false,
@@ -1877,7 +1877,7 @@
     },
     {
       "id": "shea-lip-balm",
-      "name": "Shea & Beeswax Facial Butter",
+      "name": "Shea & Avocado Facial Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/intensely-moisturizing-shea-butter-lip-balm/",
       "heatRequired": true,
@@ -1963,7 +1963,7 @@
     },
     {
       "id": "coconut-body-butter-beeswax",
-      "name": "Coconut & Beeswax Body Butter",
+      "name": "Coconut & Jojoba Body Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/coconut-body-butter/",
       "heatRequired": true,
@@ -2076,7 +2076,7 @@
     },
     {
       "id": "anti-frizz-hair-mist",
-      "name": "Polysorbate-20 & Apricot Kernel Hair Mist",
+      "name": "Apricot Kernel Hair Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/anti-frizz-hair-mist/",
       "heatRequired": false,
@@ -2150,7 +2150,7 @@
     },
     {
       "id": "vegan-hemp-body-butter-wax",
-      "name": "Hemp & Candelilla Body Butter",
+      "name": "Hemp Body Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/vegan-hemp-butter/",
       "heatRequired": true,
@@ -2267,7 +2267,7 @@
     },
     {
       "id": "diy-lotion-basic",
-      "name": "Apricot Kernel & Beeswax Body Lotion",
+      "name": "Apricot Kernel & Jojoba Body Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/diy-lotion/",
       "heatRequired": true,
@@ -2320,7 +2320,7 @@
     },
     {
       "id": "gentle-low-lather-face-cleanser",
-      "name": "Cetearyl Alcohol & Sodium Cocoyl Isethionate Facial Solution",
+      "name": "Niacinamide Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/gentle-low-lather-face-cleanser/",
       "heatRequired": false,
@@ -2437,7 +2437,7 @@
     },
     {
       "id": "extra-creamy-green-clay-cleansing-balm",
-      "name": "Fractionated Coconut & Castor Facial Cream",
+      "name": "Coconut & Castor Facial Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/extra-creamy-green-clay-cleansing-balm/",
       "heatRequired": true,
@@ -2487,7 +2487,7 @@
     },
     {
       "id": "creamy-clay-balm-to-milk-cleanser",
-      "name": "Fractionated Coconut & White Kaolin Clay Facial Cream",
+      "name": "Coconut & White Kaolin Clay Facial Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/creamy-clay-balm-to-milk-cleanser/",
       "heatRequired": true,
@@ -2638,7 +2638,7 @@
     },
     {
       "id": "natural-turmeric-foaming-face-wash",
-      "name": "Cocamidopropyl Betaine & Decyl Glucoside Facial Wash",
+      "name": "Coco Glucoside & L-arginine Facial Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/natural-turmeric-foaming-face-wash/",
       "heatRequired": true,
@@ -2725,7 +2725,7 @@
     },
     {
       "id": "super-simple-oil-to-milk-cleanser",
-      "name": "Fractionated Coconut & Fractionated Coconut Facial Oil",
+      "name": "Coconut & Coconut Facial Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/super-simple-oil-to-milk-cleanser/",
       "heatRequired": false,
@@ -2815,7 +2815,7 @@
     },
     {
       "id": "sweet-magnolia-natural-cleansing-oil",
-      "name": "Fractionated Coconut & Coco-caprylate Facial Oil",
+      "name": "Coconut & Coco-caprylate Facial Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sweet-magnolia-natural-cleansing-oil/",
       "heatRequired": false,
@@ -2944,7 +2944,7 @@
     },
     {
       "id": "rich-plum-face-wash",
-      "name": "Plum Kernel & Cocamidopropyl Betaine Facial Wash",
+      "name": "Plum Kernel & Vitamin E Facial Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rich-plum-face-wash/",
       "heatRequired": true,
@@ -3002,7 +3002,7 @@
     },
     {
       "id": "apricot-powder-to-foam-facial-cleanser",
-      "name": "White Kaolin Clay & Sodium Cocoyl Isethionate Facial Solution",
+      "name": "White Kaolin Clay & French Red Clay Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/apricot-powder-to-foam-facial-cleanser/",
       "heatRequired": false,
@@ -3100,7 +3100,7 @@
     },
     {
       "id": "gentle-clay-facial-cleansing-bar",
-      "name": "Finely Powdered Sodium Cocoyl Isethionate & Finely Powdered Sodium Cocoyl Isethionate Facial Solution",
+      "name": "White Kaolin Clay & White Kaolin Clay Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/gentle-clay-facial-cleansing-bar/",
       "heatRequired": false,
@@ -3172,7 +3172,7 @@
     },
     {
       "id": "rose-and-clay-cleansing-balm",
-      "name": "Fractionated Coconut & White Kaolin Clay Facial Balm",
+      "name": "Coconut & White Kaolin Clay Facial Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rose-clay-cleansing-balm/",
       "heatRequired": true,
@@ -3214,7 +3214,7 @@
     },
     {
       "id": "whipped-cream-calendula-facial-cleanser",
-      "name": "Fractionated Coconut & Chamomile Facial Cream",
+      "name": "Coconut & Chamomile Facial Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/whipped-cream-calendula-facial-cleanser/",
       "heatRequired": true,
@@ -3281,7 +3281,7 @@
     },
     {
       "id": "creamy-jelly-facial-cleanser",
-      "name": "Fractionated Coconut & Cocamidopropyl Betaine Facial Cream",
+      "name": "Coconut Facial Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/creamy-jelly-facial-cleanser/",
       "heatRequired": false,
@@ -3328,7 +3328,7 @@
     },
     {
       "id": "cream-silk-cleansing-balm",
-      "name": "C12-15 Alkyl Benzoate & Fractionated Coconut Facial Cream",
+      "name": "C12-15 Alkyl Benzoate & Coconut Facial Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cream-silk-cleansing-balm/",
       "heatRequired": true,
@@ -3424,7 +3424,7 @@
     },
     {
       "id": "soothing-creamy-facial-cleanser",
-      "name": "Finely Powdered Sodium Cocoyl Isethionate & Caprylyl/capryl Glucoside Facial Cream",
+      "name": "Aloe Vera & Optiphen&#x2122; Plus Facial Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/soothing-creamy-facial-cleanser/",
       "heatRequired": true,
@@ -3502,7 +3502,7 @@
     },
     {
       "id": "lavender-aloe-cream-facial-cleanser",
-      "name": "Lavender & Cocamidopropyl Betaine Facial Cream",
+      "name": "Lavender & Aloe Vera Facial Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-aloe-cream-facial-cleanser/",
       "heatRequired": true,
@@ -3560,7 +3560,7 @@
     },
     {
       "id": "soft-velvet-cleansing-oil",
-      "name": "Safflower & Fractionated Coconut Facial Oil",
+      "name": "Safflower & Coconut Facial Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/soft-velvet-cleansing-oil/",
       "heatRequired": true,
@@ -3598,7 +3598,7 @@
     },
     {
       "id": "white-chocolate-peppermint-cleansing-balm",
-      "name": "Fractionated Coconut & Cocoa Facial Balm",
+      "name": "Coconut & Cocoa Facial Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/white-chocolate-peppermint-cleansing-balm/",
       "heatRequired": true,
@@ -3652,7 +3652,7 @@
     },
     {
       "id": "calendula-rose-foaming-cleansing-powder",
-      "name": "White Kaolin Clay & Sodium Cocoyl Isethionate Facial Solution",
+      "name": "White Kaolin Clay & Colloidal Oatmeal Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/calendula-rose-foaming-cleansing-powder/",
       "heatRequired": false,
@@ -3691,7 +3691,7 @@
     },
     {
       "id": "lavender-facial-cleansing-bar",
-      "name": "Sodium Cocoyl Isethionate & Cocamidopropyl Betaine Facial Solution",
+      "name": "Salt & Optiphen&#x2122; Plus Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-facial-cleansing-bar/",
       "heatRequired": true,
@@ -3748,7 +3748,7 @@
     },
     {
       "id": "pemberley-foaming-facial-cleanser",
-      "name": "Rose & Caprylyl/capryl Glucoside Facial Solution",
+      "name": "Rose & Hydrolyzed Silk Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/pemberley-foaming-facial-cleanser/",
       "heatRequired": false,
@@ -3887,7 +3887,7 @@
     },
     {
       "id": "mango-mango-cleansing-oil",
-      "name": "Fractionated Coconut & C12–15 Alkyl Benzoate Facial Oil",
+      "name": "Coconut & C12–15 Alkyl Benzoate Facial Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/mango-mango-cleansing-oil/",
       "heatRequired": false,
@@ -3931,7 +3931,7 @@
     },
     {
       "id": "gel-micellar-water",
-      "name": "Aristoflex Avc & Peg-6 Caprylic/capric Triglycerides Facial Gel",
+      "name": "Peg-6 Caprylic/capric Triglycerides Facial Gel",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/gel-micellar-water/",
       "heatRequired": false,
@@ -3966,7 +3966,7 @@
     },
     {
       "id": "micellar-water-for-waterproof-makeup",
-      "name": "Olive Squalane & Peg-6 Caprylic/capric Triglycerides Facial Solution",
+      "name": "Aloe Vera & Olive Squalane Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/micellar-water-for-waterproof-makeup/",
       "heatRequired": false,
@@ -4070,7 +4070,7 @@
     },
     {
       "id": "soothing-micellar-water",
-      "name": "Chamomile & Cucumber Facial Solution",
+      "name": "Aloe Vera & Chamomile Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/soothing-micellar-water/",
       "heatRequired": false,
@@ -4331,7 +4331,7 @@
     },
     {
       "id": "oil-cleansing-gel",
-      "name": "Sweet Almond & Sucragel Facial Oil",
+      "name": "Sweet Almond & Apricot Kernel Facial Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/oil-cleansing-gel/",
       "heatRequired": false,
@@ -4387,7 +4387,7 @@
     },
     {
       "id": "eucalyptus-mint-soft-cleansing-balm",
-      "name": "Fractionated Coconut & Castor Facial Balm",
+      "name": "Coconut & Castor Facial Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/eucalyptus-mint-soft-cleansing-balm/",
       "heatRequired": true,
@@ -4437,7 +4437,7 @@
     },
     {
       "id": "lemon-rose-facial-cleansing-drops",
-      "name": "Cocamidopropyl Betaine & Foaming Silk Facial Solution",
+      "name": "Hydrolyzed Silk Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lemon-rose-facial-cleansing-drops/",
       "heatRequired": false,
@@ -4496,7 +4496,7 @@
     },
     {
       "id": "lavender-gel-facial-cleanser",
-      "name": "Lavender & Carrageenan Facial Gel",
+      "name": "Lavender Facial Gel",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-gel-facial-cleanser/",
       "heatRequired": false,
@@ -4664,7 +4664,7 @@
     },
     {
       "id": "ginger-oak-moss-solid-facial-cleanser",
-      "name": "2:3 Sci:cocamidopropyl Betaine Pre-made Paste & Cocamidopropyl Betaine Facial Solution",
+      "name": "Mango & Hydrolyzed Silk Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/ginger-oak-moss-solid-facial-cleanser/",
       "heatRequired": true,
@@ -5339,7 +5339,7 @@
     },
     {
       "id": "easy-diy-vitamin-c-suspension-just-3-ingredients",
-      "name": "Silicone Gel & Finely Powdered L-ascorbic Acid Facial Solution",
+      "name": "Silicone Gel & Isoamyl Cocoate Facial Gel",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/3-ingredient-vitamin-c/",
       "heatRequired": false,
@@ -5616,7 +5616,7 @@
     },
     {
       "id": "rosehip-oat-solid-oil-serum",
-      "name": "Cetearyl Alcohol & Rosehip Facial Serum",
+      "name": "Rosehip & Oat Facial Serum",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rosehip-oat-solid-oil-serum/",
       "heatRequired": true,
@@ -5829,7 +5829,7 @@
     },
     {
       "id": "silky-soothing-facial-gel",
-      "name": "1% Hyaluronic Acid & Polyacrylate Crosspolymer-6 Facial Gel",
+      "name": "1% Hyaluronic Acid Facial Gel",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/silky-soothing-facial-gel/",
       "heatRequired": false,
@@ -5912,7 +5912,7 @@
     },
     {
       "id": "hyaluronic-acid-b5-facial-serum",
-      "name": "1% Hyaluronic Acid & Peg-8 Dimethicone Facial Serum",
+      "name": "1% Hyaluronic Acid Facial Serum",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/hyaluronic-acid-b5-facial-serum/",
       "heatRequired": false,
@@ -6003,7 +6003,7 @@
     },
     {
       "id": "passionfruit-coconut-matte-velvet-moisturizer",
-      "name": "Passionfruit & Fractionated Coconut Facial Solution",
+      "name": "Passionfruit & Coconut Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/passionfruit-coconut-matte-velvet-moisturizer/",
       "heatRequired": true,
@@ -6286,7 +6286,7 @@
     },
     {
       "id": "soothing-hyaluronic-acid-facial-serum",
-      "name": "1% Hyaluronic Acid & Chamomile Facial Serum",
+      "name": "Aloe Vera & 1% Hyaluronic Acid Facial Serum",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/soothing-hyaluronic-acid-facial-serum/",
       "heatRequired": false,
@@ -6419,7 +6419,7 @@
     },
     {
       "id": "raspberry-marula-facial-serum",
-      "name": "Olive Squalane & Red Raspberry Facial Serum",
+      "name": "Olive Squalane & Marula Facial Serum",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/raspberry-marula-facial-serum/",
       "heatRequired": false,
@@ -6451,7 +6451,7 @@
     },
     {
       "id": "de-puffing-peppermint-aloe-facial-roller",
-      "name": "1% Hyaluronic Acid & Peppermint Facial Solution",
+      "name": "Aloe Vera & 1% Hyaluronic Acid Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/de-puffing-peppermint-aloe-facial-roller/",
       "heatRequired": false,
@@ -6498,7 +6498,7 @@
     },
     {
       "id": "soothing-makeup-finishing-spray",
-      "name": "Sweetgrass & Caffeine Facial Solution",
+      "name": "Aloe Vera & Sweetgrass Facial Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/soothing-makeup-finishing-spray/",
       "heatRequired": false,
@@ -6553,7 +6553,7 @@
     },
     {
       "id": "lavender-aloe-hydrating-facial-toner",
-      "name": "Lavender & 1% Hyaluronic Acid Facial Mist",
+      "name": "Lavender & Aloe Vera Facial Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-aloe-hydrating-facial-toner/",
       "heatRequired": false,
@@ -6763,7 +6763,7 @@
     },
     {
       "id": "hydrating-aloe-facial-mist",
-      "name": "Chamomile Facial Mist",
+      "name": "Aloe Vera & Chamomile Facial Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/hydrating-aloe-facial-mist/",
       "heatRequired": false,
@@ -7447,7 +7447,7 @@
     },
     {
       "id": "soothing-facial-lotion",
-      "name": "1% Hyaluronic Acid & Chamomile Facial Lotion",
+      "name": "Aloe Vera & 1% Hyaluronic Acid Facial Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/soothing-facial-lotion/",
       "heatRequired": true,
@@ -7609,7 +7609,7 @@
     },
     {
       "id": "frankincense-facial-lotion",
-      "name": "1% Hyaluronic Acid & Macadamia Nut Facial Lotion",
+      "name": "1% Hyaluronic Acid & Aloe Vera Facial Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/frankincense-facial-lotion/",
       "heatRequired": true,
@@ -7766,7 +7766,7 @@
     },
     {
       "id": "creamy-overnight-lip-mask",
-      "name": "Pomegranate Sterols & Cera Bellina Facial Cream",
+      "name": "Pomegranate Sterols & Cranberry Facial Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/creamy-overnight-lip-mask/",
       "heatRequired": true,
@@ -7853,7 +7853,7 @@
     },
     {
       "id": "candy-cane-peppermint-lip-balm",
-      "name": "Beeswax, & Beeswax, Facial Balm",
+      "name": "Sweet Almond & Sweet Almond Facial Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/candy-cane-peppermint-lip-balm/",
       "heatRequired": true,
@@ -7908,7 +7908,7 @@
     },
     {
       "id": "hot-chocolate-lip-butter",
-      "name": "Cocoa & Beeswax Facial Butter",
+      "name": "Cocoa & Hpa Facial Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/hot-chocolate-lip-butter/",
       "heatRequired": true,
@@ -8036,7 +8036,7 @@
     },
     {
       "id": "peppermint-beeswax-lip-balm",
-      "name": "Beeswax & Traditional  Coconut Facial Balm",
+      "name": "Traditional  Coconut & Sunflower Facial Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/peppermint-beeswax-lip-balm/",
       "heatRequired": true,
@@ -8170,7 +8170,7 @@
     },
     {
       "id": "summer-stone-fruit-lip-balm",
-      "name": "Plum Kernel & Beeswax Facial Balm",
+      "name": "Plum Kernel & Cherry Kernel Facial Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/summer-stone-fruit-lip-balm/",
       "heatRequired": true,
@@ -8254,7 +8254,7 @@
     },
     {
       "id": "cocoa-coconut-sticky-lip-balm",
-      "name": "Beeswax & Traditional  Coconut Facial Balm",
+      "name": "Traditional  Coconut & Cocoa Facial Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cocoa-coconut-sticky-lip-balm/",
       "heatRequired": true,
@@ -8330,7 +8330,7 @@
     },
     {
       "id": "nourishing-lip-mask",
-      "name": "Lanolin & Soy Lecithin Facial Mask",
+      "name": "Lanolin & Castor Facial Mask",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/nourishing-lip-mask/",
       "heatRequired": true,
@@ -8456,7 +8456,7 @@
     },
     {
       "id": "cranberry-orange-tinted-lip-balm",
-      "name": "Cranberry & Beeswax Facial Balm",
+      "name": "Cranberry & Babassu Facial Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cranberry-orange-tinted-lip-balm/",
       "heatRequired": true,
@@ -8618,7 +8618,7 @@
     },
     {
       "id": "sugar-plum-lip-balm",
-      "name": "Beeswax & Babassu Facial Balm",
+      "name": "Babassu & Plum Facial Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sugar-plum-lip-balm/",
       "heatRequired": true,
@@ -8672,7 +8672,7 @@
     },
     {
       "id": "creamy-lip-balm",
-      "name": "Castor & Cetearyl Alcohol Facial Cream",
+      "name": "Castor & Coconut Facial Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/creamy-lip-balm/",
       "heatRequired": true,
@@ -8784,7 +8784,7 @@
     },
     {
       "id": "lemon-rose-tinted-lip-balm",
-      "name": "Sweet Almond & Cera Bellina Facial Balm",
+      "name": "Sweet Almond & Vitamin E Facial Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lemon-rose-tinted-lip-balm/",
       "heatRequired": true,
@@ -9727,7 +9727,7 @@
     },
     {
       "id": "oat-cardamom-chai-emulsified-body-butter",
-      "name": "Sweet Almond & Cetearyl Alcohol Body Butter",
+      "name": "Sweet Almond & Shea Body Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/oat-cardamom-chai-emulsified-body-butter/",
       "heatRequired": true,
@@ -9790,7 +9790,7 @@
     },
     {
       "id": "macadamia-vanilla-emulsified-body-butter",
-      "name": "Macadamia Nut & Cetearyl Alcohol Body Butter",
+      "name": "Macadamia Nut & Vitamin E Body Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/macadamia-vanilla-emulsified-body-butter/",
       "heatRequired": true,
@@ -9869,7 +9869,7 @@
     },
     {
       "id": "shealoe-emulsified-body-butter",
-      "name": "Shea & Lavender Body Butter",
+      "name": "Shea & Aloe Vera Body Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/shealoe-emulsified-body-butter/",
       "heatRequired": true,
@@ -10199,7 +10199,7 @@
     },
     {
       "id": "watermelon-mint-cuticle-lip-butter",
-      "name": "Watermelon & Lanolin Body Butter",
+      "name": "Lanolin & Vitamin E Body Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/watermelon-mint-cuticle-lip-butter/",
       "heatRequired": true,
@@ -10466,7 +10466,7 @@
     },
     {
       "id": "soothing-hand-butter",
-      "name": "Lanolin & Shea Body Butter",
+      "name": "Shea & Lanolin Body Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/soothing-hand-butter/",
       "heatRequired": true,
@@ -10604,7 +10604,7 @@
     },
     {
       "id": "sugar-plum-conditioning-body-butter",
-      "name": "Mango & Plum Body Butter",
+      "name": "Mango & Sweet Almond Body Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sugar-plum-conditioning-body-butter/",
       "heatRequired": true,
@@ -10896,7 +10896,7 @@
     },
     {
       "id": "calendula-chamomile-powdered-body-wash",
-      "name": "Ultra Fine Rice Flour & Sodium Cocoyl Isethionate Body Wash",
+      "name": "Ultra Fine Rice Flour & Natrasorb Bath Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/calendula-chamomile-powdered-body-wash/",
       "heatRequired": false,
@@ -10983,7 +10983,7 @@
     },
     {
       "id": "rich-foaming-hand-wash",
-      "name": "Sodium C14-16 Alpha Olefin Sulfonate & Cocamidopropyl Betaine Body Wash",
+      "name": "Sodium C14-16 Alpha Olefin Sulfonate Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rich-foaming-hand-wash/",
       "heatRequired": false,
@@ -11034,7 +11034,7 @@
     },
     {
       "id": "candlelight-creamy-hand-wash",
-      "name": "Cocamidopropyl Betaine & Sodium Cocoyl Isethionate Body Cream",
+      "name": "Glycol Distearate & Coco Glucoside Body Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/candlelight-creamy-hand-wash/",
       "heatRequired": true,
@@ -11095,7 +11095,7 @@
     },
     {
       "id": "aloe-mint-hand-wash",
-      "name": "Cocamidopropyl Betaine & Disodium Laureth Sulfosuccinate Body Wash",
+      "name": "Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/aloe-mint-hand-wash/",
       "heatRequired": false,
@@ -11142,7 +11142,7 @@
     },
     {
       "id": "super-simple-natural-foaming-hand-wash",
-      "name": "Coco Glucoside & Cocamidopropyl Betaine Body Wash",
+      "name": "Coco Glucoside Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/super-simple-natural-foaming-hand-wash/",
       "heatRequired": false,
@@ -11177,7 +11177,7 @@
     },
     {
       "id": "conditioning-valentines-hand-wash",
-      "name": "Decyl Glucoside & Cocamidopropyl Betaine Body Wash",
+      "name": "Glycol Distearate & Polyquaternium 7 Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/conditioning-valentines-hand-wash/",
       "heatRequired": true,
@@ -11238,7 +11238,7 @@
     },
     {
       "id": "ice-palace-body-wash",
-      "name": "Sodium C14-16 Alpha Olefin Sulfonate & Decyl Glucoside Body Wash",
+      "name": "Sodium C14-16 Alpha Olefin Sulfonate & Glycol Distearate Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/ice-palace-body-wash/",
       "heatRequired": true,
@@ -11299,7 +11299,7 @@
     },
     {
       "id": "watermelon-mint-foaming-hand-wash",
-      "name": "Peppermint & Stepan-mild Bsb  Surfactant Blend Body Wash",
+      "name": "Peppermint Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/watermelon-mint-foaming-hand-wash/",
       "heatRequired": false,
@@ -11393,7 +11393,7 @@
     },
     {
       "id": "satsuma-shower-gel",
-      "name": "Sodium Laureth Sulfate & Cocamidopropyl Betaine Body Gel",
+      "name": "Sodium Laureth Sulfate & Iota Carageenan Body Gel",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/satsuma-shower-gel/",
       "heatRequired": false,
@@ -11440,7 +11440,7 @@
     },
     {
       "id": "hand-wash-for-lots-of-handwashing",
-      "name": "Sodium Laureth Sulfate & Caprylyl/capryl Glucoside Body Wash",
+      "name": "Sodium Laureth Sulfate Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/hand-wash-for-lots-of-handwashing/",
       "heatRequired": false,
@@ -11491,7 +11491,7 @@
     },
     {
       "id": "lavender-aloe-foaming-hand-wash",
-      "name": "Lavender & Iselux Ultra Mild Surfactant Blend Body Wash",
+      "name": "Aloe Vera & Lavender Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-aloe-foaming-hand-wash/",
       "heatRequired": true,
@@ -11540,7 +11540,7 @@
     },
     {
       "id": "peppermint-foaming-hand-wash",
-      "name": "Sodium C14-16 Alpha Olefin Sulfonate & Cocamidopropyl Betaine Body Wash",
+      "name": "Sodium C14-16 Alpha Olefin Sulfonate Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/peppermint-foaming-hand-wash/",
       "heatRequired": false,
@@ -11636,7 +11636,7 @@
     },
     {
       "id": "mango-mango-foaming-hand-wash",
-      "name": "Sodium Laureth Sulfate & Cocamidopropyl Betaine Body Wash",
+      "name": "Sodium Laureth Sulfate Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/mango-mango-foaming-hand-wash/",
       "heatRequired": false,
@@ -11679,7 +11679,7 @@
     },
     {
       "id": "soothing-foaming-hand-wash",
-      "name": "Cocamidopropyl Betaine & Cucumber Body Wash",
+      "name": "Aloe Vera & Cucumber Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/soothing-foaming-hand-wash/",
       "heatRequired": false,
@@ -11726,7 +11726,7 @@
     },
     {
       "id": "christmas-tree-body-wash",
-      "name": "Caprylyl/capryl Glucoside & Cocamidopropyl Betaine Body Wash",
+      "name": "Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/christmas-tree-body-wash/",
       "heatRequired": true,
@@ -11775,7 +11775,7 @@
     },
     {
       "id": "christmas-tree-foaming-hand-wash",
-      "name": "Spruce  &amp; 156g & Cocamidopropyl Betaine Body Wash",
+      "name": "Spruce  &amp; 156g & Hydrolyzed Rice Protein Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/christmas-tree-foaming-hand-wash/",
       "heatRequired": false,
@@ -11822,7 +11822,7 @@
     },
     {
       "id": "citrus-burst-hand-wash",
-      "name": "Caprylyl/capryl Glucoside & Cocamidopropyl Betaine Body Wash",
+      "name": "Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/citrus-burst-hand-wash/",
       "heatRequired": false,
@@ -11861,7 +11861,7 @@
     },
     {
       "id": "foaming-shaving-cream",
-      "name": "Cocamidopropyl Betaine & Caprylyl/capryl Glucoside Body Cream",
+      "name": "Polyquaternium 7 Body Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/foaming-shaving-cream/",
       "heatRequired": true,
@@ -11922,7 +11922,7 @@
     },
     {
       "id": "lemon-rose-foaming-hand-wash",
-      "name": "Rose & Cocamidopropyl Betaine Body Wash",
+      "name": "Rose & Hydrolyzed Silk Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lemon-rose-foaming-hand-wash/",
       "heatRequired": false,
@@ -11969,7 +11969,7 @@
     },
     {
       "id": "lavender-spruce-shower-gel",
-      "name": "Cocamidopropyl Betaine & Sodium Coco Sulfate Body Gel",
+      "name": "Body Gel",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-spruce-shower-gel/",
       "heatRequired": false,
@@ -12020,7 +12020,7 @@
     },
     {
       "id": "aloe-rosemary-spruce-foaming-hand-wash",
-      "name": "Cocamidopropyl Betaine & Caprylyl/capryl Glucoside Body Wash",
+      "name": "Aloe Vera Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/aloe-rosemary-spruce-foaming-hand-wash/",
       "heatRequired": false,
@@ -12071,7 +12071,7 @@
     },
     {
       "id": "lavender-spruce-creamy-hand-wash",
-      "name": "Cocamidopropyl Betaine & Sodium Cocoyl Isethionate Body Cream",
+      "name": "Glycol Distearate & Coco Glucoside Body Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-spruce-creamy-hand-wash/",
       "heatRequired": false,
@@ -12136,7 +12136,7 @@
     },
     {
       "id": "eucalyptus-mint-hand-wash",
-      "name": "Stepan Mild Lsb Surfactant & Cocamidopropyl Betaine Body Wash",
+      "name": "Stepan Mild Lsb Surfactant & Olivem300 Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/eucalyptus-mint-hand-wash/",
       "heatRequired": false,
@@ -12232,7 +12232,7 @@
     },
     {
       "id": "calendula-sunshine-salve",
-      "name": "Dried Calendula Petals & Beeswax Body Salve",
+      "name": "Dried Calendula Petals & Sea Buckthorn Body Salve",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/calendula-sunshine-salve/",
       "heatRequired": true,
@@ -12407,7 +12407,7 @@
     },
     {
       "id": "light-tallow-hand-lotion",
-      "name": "Sunflower & Beef Tallow Body Lotion",
+      "name": "Sunflower & Ritamulse Scg Body Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/light-tallow-hand-lotion/",
       "heatRequired": true,
@@ -12458,7 +12458,7 @@
     },
     {
       "id": "winter-wonderland-hand-body-lotion",
-      "name": "Medium Chain Triglycerides & Glyceryl Stearate Body Lotion",
+      "name": "Medium Chain Triglycerides & Shea Body Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/winter-wonderland-hand-body-lotion/",
       "heatRequired": true,
@@ -12525,7 +12525,7 @@
     },
     {
       "id": "easy-non-greasy-hand-lotion",
-      "name": "Medium Chain Triglycerides & Cetearyl Alcohol Body Lotion",
+      "name": "Medium Chain Triglycerides Body Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/easy-non-greasy-hand-lotion/",
       "heatRequired": true,
@@ -12692,7 +12692,7 @@
     },
     {
       "id": "rich-herbal-body-cream",
-      "name": "Isoamyl Cocoate & Ritamulse Scg Body Cream",
+      "name": "Aloe Vera & C10-18 Triglycerides [ Pearls Body Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rich-herbal-body-cream/",
       "heatRequired": true,
@@ -12779,7 +12779,7 @@
     },
     {
       "id": "how-to-make-your-lotions-thicker",
-      "name": "Shea & Fractionated Coconut Body Lotion",
+      "name": "Shea & Coconut Body Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/how-to-make-your-lotions-thicker/",
       "heatRequired": true,
@@ -12850,7 +12850,7 @@
     },
     {
       "id": "raspberry-mint-body-custard",
-      "name": "Raspberry & Hydroxyethylcellulose Body Solution",
+      "name": "Raspberry & Isoamyl Laurate Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/raspberry-mint-body-custard/",
       "heatRequired": true,
@@ -13440,7 +13440,7 @@
     },
     {
       "id": "sourdough-body-cream",
-      "name": "Joke &#x1f604; & Fool&#8217;s Body Cream",
+      "name": "Joke &#x1f604 & Fool&#8217;s Body Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sourdough-body-cream/",
       "heatRequired": false,
@@ -13794,7 +13794,7 @@
     },
     {
       "id": "moisturizing-repair-lotion",
-      "name": "Cetearyl Alcohol & Shea Body Lotion",
+      "name": "Shea & Niacinamide Body Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/moisturizing-repair-lotion/",
       "heatRequired": true,
@@ -13860,7 +13860,7 @@
     },
     {
       "id": "super-simple-moisturizing-lotion-with-glyceryl-stearate-and-",
-      "name": "Fractionated Coconut & Cetearyl Alcohol Body Lotion",
+      "name": "Coconut Body Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/super-simple-moisturizing-lotion-with-glyceryl-stearate-and-peg-100-stearate/",
       "heatRequired": true,
@@ -13898,7 +13898,7 @@
     },
     {
       "id": "ice-palace-body-glow-lotion",
-      "name": "Apricot Kernel & Glyceryl Stearate Body Lotion",
+      "name": "Apricot Kernel Body Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/ice-palace-body-glow-lotion/",
       "heatRequired": true,
@@ -14162,7 +14162,7 @@
     },
     {
       "id": "argan-plum-body-oil",
-      "name": "Plum Kernel & Argan Body Oil",
+      "name": "Plum Kernel & Coconut Body Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/argan-plum-body-oil/",
       "heatRequired": false,
@@ -14202,7 +14202,7 @@
     },
     {
       "id": "passionfruit-velvet-dry-oil-mist",
-      "name": "Fractionated Coconut & Passionfruit Body Oil",
+      "name": "Coconut & Jojoba Body Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/passionfruit-velvet-dry-oil-mist/",
       "heatRequired": false,
@@ -14246,7 +14246,7 @@
     },
     {
       "id": "watermelon-mint-summer-body-oil",
-      "name": "Watermelon & C12-15 Alkyl Benzoate Body Oil",
+      "name": "C12-15 Alkyl Benzoate & Sunflower Body Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/watermelon-mint-summer-body-oil/",
       "heatRequired": false,
@@ -14412,7 +14412,7 @@
     },
     {
       "id": "mango-mango-massage-butter",
-      "name": "Babassu & Fractionated Coconut Body Butter",
+      "name": "Babassu & Coconut Body Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/mango-mango-massage-butter/",
       "heatRequired": true,
@@ -14547,7 +14547,7 @@
     },
     {
       "id": "christmas-spice-soft-foaming-sugar-scrub",
-      "name": "White Sugar & Distiled Water Body Scrub",
+      "name": "White Sugar & Apricot Kernel Body Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/christmas-foaming-sugar-scrub/",
       "heatRequired": true,
@@ -14608,7 +14608,7 @@
     },
     {
       "id": "sea-glass-salt-scrub",
-      "name": "Fractionated Coconut & Medium Pink Himalayan Salt Body Scrub",
+      "name": "Coconut & Medium Pink Himalayan Salt Body Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sea-glass-salt-scrub/",
       "heatRequired": false,
@@ -14651,7 +14651,7 @@
     },
     {
       "id": "cinnamon-sugar-dry-foaming-body-scrub",
-      "name": "White Sugar & Finely Powdered Sodium Cocoyl Isethionate Body Scrub",
+      "name": "White Sugar & Rhassoul Clay Body Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cinnamon-sugar-dry-foaming-body-scrub/",
       "heatRequired": false,
@@ -14694,7 +14694,7 @@
     },
     {
       "id": "calendula-clay-soft-foaming-body-scrub",
-      "name": "White Kaolin Clay & Sodium Cocoyl Isethionate Body Scrub",
+      "name": "White Kaolin Clay & Oatmeal Body Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/calendula-clay-soft-foaming-body-scrub/",
       "heatRequired": false,
@@ -14787,7 +14787,7 @@
     },
     {
       "id": "watermelon-mint-whipped-sugar-scrub",
-      "name": "White Sugar & Fractionated Coconut Body Scrub",
+      "name": "White Sugar & Coconut Body Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/watermelon-mint-whipped-sugar-scrub/",
       "heatRequired": true,
@@ -14845,7 +14845,7 @@
     },
     {
       "id": "cranberry-orange-whipped-sugar-scrub",
-      "name": "White Sugar & Fractionated Coconut Body Scrub",
+      "name": "White Sugar & Coconut Body Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cranberry-orange-whipped-sugar-scrub/",
       "heatRequired": true,
@@ -14899,7 +14899,7 @@
     },
     {
       "id": "pemberley-whipped-sugar-scrub",
-      "name": "White Sugar & Fractionated Coconut Body Scrub",
+      "name": "White Sugar & Coconut Body Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/pemberley-whipped-sugar-scrub/",
       "heatRequired": true,
@@ -14956,7 +14956,7 @@
     },
     {
       "id": "mango-mango-whipped-sugar-scrub",
-      "name": "White Sugar & Fractionated Coconut Body Scrub",
+      "name": "White Sugar & Coconut Body Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/mango-mango-whipped-sugar-scrub/",
       "heatRequired": true,
@@ -15005,7 +15005,7 @@
     },
     {
       "id": "christmas-tree-foaming-whipped-body-scrub",
-      "name": "Cocamidopropyl Betaine & Safflower Body Scrub",
+      "name": "Safflower & Shea Body Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/christmas-tree-foaming-whipped-body-scrub/",
       "heatRequired": true,
@@ -15075,7 +15075,7 @@
     },
     {
       "id": "whipped-minty-foot-scrub",
-      "name": "Cocamidopropyl Betaine & Rice Bran Body Scrub",
+      "name": "Rice Bran & Shea Body Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/whipped-minty-foot-scrub/",
       "heatRequired": true,
@@ -15137,7 +15137,7 @@
     },
     {
       "id": "lumps-of-coal-christmas-bath-bombs",
-      "name": "Apricot Kernel & Polysorbate 80 Body Effervescent",
+      "name": "Apricot Kernel Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lumps-of-coal-christmas-bath-bombs/",
       "heatRequired": false,
@@ -15188,7 +15188,7 @@
     },
     {
       "id": "black-currant-roses-natural-body-wash",
-      "name": "Plantapon Sf Na & Black Currant Body Wash",
+      "name": "Plantapon Sf Na & Coco Glucoside Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/black-currant-roses-natural-body-wash/",
       "heatRequired": false,
@@ -15235,7 +15235,7 @@
     },
     {
       "id": "frosted-cranberry-bath-bombs",
-      "name": "Cranberry & Polysorbate 80 Body Effervescent",
+      "name": "Cranberry Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/frosted-cranberry-bath-bombs/",
       "heatRequired": false,
@@ -15286,7 +15286,7 @@
     },
     {
       "id": "wedding-cake-bath-bombs",
-      "name": "Olive & Olive Body Effervescent",
+      "name": "Olive & Olive Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/wedding-cake-bath-bombs/",
       "heatRequired": false,
@@ -15370,7 +15370,7 @@
     },
     {
       "id": "gentle-oatmeal-almond-body-wash-bar",
-      "name": "Sodium Cocoyl Isethionate & Colloidal Oatmeal Body Wash",
+      "name": "Colloidal Oatmeal & Sweet Almond Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/gentle-oatmeal-almond-body-wash-bar/",
       "heatRequired": false,
@@ -15413,7 +15413,7 @@
     },
     {
       "id": "french-spa-bath-salts",
-      "name": "Polysorbate 80 Body Solution",
+      "name": "Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/french-spa-bath-salts/",
       "heatRequired": false,
@@ -15452,7 +15452,7 @@
     },
     {
       "id": "birthday-suit-solid-body-wash",
-      "name": "Sodium Coco Sulfate & Sodium Stearate Body Wash",
+      "name": "Sodium Stearate Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/birthday-suit-solid-body-wash/",
       "heatRequired": true,
@@ -15497,7 +15497,7 @@
     },
     {
       "id": "rich-lavender-shower-cleansing-cream",
-      "name": "Fractionated Coconut & Sodium Coco Sulfate Body Cream",
+      "name": "Coconut Body Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rich-lavender-shower-cleansing-cream/",
       "heatRequired": true,
@@ -15563,7 +15563,7 @@
     },
     {
       "id": "ice-palace-fizzing-shimmering-bath-dust",
-      "name": "Small Grain Himalayan Pink Salt & Polysorbate 80 Body Solution",
+      "name": "Small Grain Himalayan Pink Salt & Silver-white Biodegradeable Glitter Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/ice-palace-fizzing-shimmering-bath-dust/",
       "heatRequired": false,
@@ -15614,7 +15614,7 @@
     },
     {
       "id": "ice-palace-bath-bombs",
-      "name": "Isopropyl Alcohol & Fractionated Coconut Body Effervescent",
+      "name": "Isopropyl Alcohol & Coconut Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/ice-palace-bath-bombs/",
       "heatRequired": false,
@@ -15677,7 +15677,7 @@
     },
     {
       "id": "popping-cocoa-coconut-bath-salts",
-      "name": "Powdered Coconut Milk & Cocoa  Popping Crystals Body Solution",
+      "name": "Cocoa  Popping Crystals Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/popping-cocoa-coconut-bath-salts/",
       "heatRequired": false,
@@ -15720,7 +15720,7 @@
     },
     {
       "id": "silk-aloe-body-wash",
-      "name": "Foaming Silk & Decyl Glucoside Body Wash",
+      "name": "Aloe Vera & Hydrolyzed Silk Body Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/silk-aloe-body-wash/",
       "heatRequired": false,
@@ -15840,7 +15840,7 @@
     },
     {
       "id": "lavender-oat-foaming-bath-salts",
-      "name": "Sodium Lauryl Sulfoacetate & Natrasorb Body Solution",
+      "name": "Natrasorb & Colloidal Oatmeal Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-oat-foaming-bath-salts/",
       "heatRequired": false,
@@ -15887,7 +15887,7 @@
     },
     {
       "id": "chocolate-ganache-fizzing-bath-biscuits",
-      "name": "Sodium Lauryl Sulfoacetate & Cocoa Body Solution",
+      "name": "Cocoa Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/chocolate-ganache-fizzing-bath-biscuits/",
       "heatRequired": true,
@@ -15937,7 +15937,7 @@
     },
     {
       "id": "foaming-aromatherapy-bath-concentrate",
-      "name": "Caprylyl/capryl Glucoside & Essential Body Solution",
+      "name": "Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/foaming-aromatherapy-bath-concentrate/",
       "heatRequired": false,
@@ -15964,7 +15964,7 @@
     },
     {
       "id": "argan-rose-in-shower-body-conditioner",
-      "name": "Rose Water & Sweet Almond Body Solution",
+      "name": "Sweet Almond & Shea Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/argan-rose-in-shower-body-conditioner/",
       "heatRequired": true,
@@ -16043,7 +16043,7 @@
     },
     {
       "id": "argan-rose-valentine-bath-bombs",
-      "name": "Argan & Polysorbate 80 Body Effervescent",
+      "name": "Argan Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/argan-rose-valentine-bath-bombs/",
       "heatRequired": false,
@@ -16098,7 +16098,7 @@
     },
     {
       "id": "winter-solstice-bath-bombs",
-      "name": "Isopropyl Alcohol Or Isododecane, As Needed & Apricot Kernel Body Effervescent",
+      "name": "Isopropyl Alcohol Or Isododecane, As Needed & Apricot Kernel Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/winter-solstice-bath-bombs/",
       "heatRequired": false,
@@ -16153,7 +16153,7 @@
     },
     {
       "id": "mango-mango-bath-bombs",
-      "name": "Isopropyl Alcohol In A Mister, As Needed & Mango Body Effervescent",
+      "name": "Isopropyl Alcohol In A Mister, As Needed & Mango Body Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/mango-mango-bath-bombs/",
       "heatRequired": true,
@@ -16206,7 +16206,7 @@
     },
     {
       "id": "christmas-tree-bath-bombs",
-      "name": "Isopropyl Alcohol In A Mister, As Needed & Tucuma Body Effervescent",
+      "name": "Isopropyl Alcohol In A Mister, As Needed & Tucuma Body Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/christmas-tree-bath-bombs/",
       "heatRequired": true,
@@ -16255,7 +16255,7 @@
     },
     {
       "id": "candy-corn-bath-bombs",
-      "name": "Isopropyl Alcohol In A Mister, As Needed & Cocoa Body Effervescent",
+      "name": "Isopropyl Alcohol In A Mister, As Needed & Cocoa Body Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/candy-corn-bath-bombs/",
       "heatRequired": true,
@@ -16312,7 +16312,7 @@
     },
     {
       "id": "foaming-coconut-bath-milk",
-      "name": "Powdered Coconut Milk & Sodium Lauryl Sulfoacetate Body Solution",
+      "name": "Colloidal Oatmeal Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/foaming-coconut-bath-milk/",
       "heatRequired": false,
@@ -16405,7 +16405,7 @@
     },
     {
       "id": "five-alive-citrus-bath-parfait",
-      "name": "Sodium Lauryl Sulfoacetate Body Solution",
+      "name": "Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/five-alive-citrus-bath-parfait/",
       "heatRequired": false,
@@ -16440,7 +16440,7 @@
     },
     {
       "id": "fizzy-unicorn-bath-parfait",
-      "name": "Sodium Lauryl Sulfoacetate Body Solution",
+      "name": "Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/fizzy-unicorn-bath-parfait/",
       "heatRequired": false,
@@ -16471,7 +16471,7 @@
     },
     {
       "id": "vinolia-lemon-rose-bath-bombs",
-      "name": "Isopropyl Alcohol, As Needed & Isopropyl Alcohol In A Mister, As Needed Body Effervescent",
+      "name": "Isopropyl Alcohol, As Needed & Isopropyl Alcohol In A Mister, As Needed Body Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/vinolia-lemon-rose-bath-bombs/",
       "heatRequired": true,
@@ -16540,7 +16540,7 @@
     },
     {
       "id": "lavender-spruce-bath-bombs",
-      "name": "Isopropyl Alcohol In A Mister, As Needed & Tucuma Body Effervescent",
+      "name": "Isopropyl Alcohol In A Mister, As Needed & Tucuma Body Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-spruce-bath-bombs/",
       "heatRequired": true,
@@ -16601,7 +16601,7 @@
     },
     {
       "id": "milky-tea-bath-bombs",
-      "name": "Isopropyl Alcohol In A Mister, As Needed & Whole Milk Body Effervescent",
+      "name": "Isopropyl Alcohol In A Mister, As Needed & Mango Body Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/milky-tea-bath-bombs/",
       "heatRequired": true,
@@ -16654,7 +16654,7 @@
     },
     {
       "id": "sweetgrass-after-sun-body-mist",
-      "name": "Sweetgrass Body Mist",
+      "name": "Sweetgrass & Aloe Vera Body Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sweetgrass-after-sun-body-mist/",
       "heatRequired": false,
@@ -16693,7 +16693,7 @@
     },
     {
       "id": "eucalyptus-mint-body-mist",
-      "name": "Peppermint & Water Soluble Shea  Or Olivem 300 Body Mist",
+      "name": "Peppermint & Hydrolyzed Silk Body Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/eucalyptus-mint-body-mist/",
       "heatRequired": false,
@@ -16732,7 +16732,7 @@
     },
     {
       "id": "white-chocolate-peppermint-foot-cream",
-      "name": "Peppermint & Cocoa Body Cream",
+      "name": "Peppermint & Aloe Vera Body Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/white-chocolate-peppermint-foot-cream/",
       "heatRequired": true,
@@ -16857,7 +16857,7 @@
     },
     {
       "id": "june-solstice-perfume",
-      "name": "Michelia Alba Leaf Essential & Benzoin Essential Body Solution",
+      "name": "Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/june-solstice-perfume/",
       "heatRequired": false,
@@ -16886,7 +16886,7 @@
     },
     {
       "id": "secret-garden-a-perfume",
-      "name": "Benzoin Essential & Michelia Alba Essential Body Solution",
+      "name": "Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/secret-garden-perfume/",
       "heatRequired": false,
@@ -16915,7 +16915,7 @@
     },
     {
       "id": "crickets-fireflies-perfume",
-      "name": "Perfumery Alcohol & Lavender Essential Body Solution",
+      "name": "Perfumery Alcohol Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/crickets-fireflies-perfume/",
       "heatRequired": false,
@@ -16948,7 +16948,7 @@
     },
     {
       "id": "beguiling-embrace-a-perfume",
-      "name": "Labdanum Essential & Benzoin Essential Body Solution",
+      "name": "Rose Absolute Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/beguiling-embrace-a-perfume/",
       "heatRequired": false,
@@ -16977,7 +16977,7 @@
     },
     {
       "id": "charcoal-bentonite-clarifying-shampoo-bar",
-      "name": "Sodium Lauryl Sulfoacetate & Sodium Cocoyl Isethionate Hair Solution",
+      "name": "Jojoba & Bentonite Clay Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/charcoal-bentonite-clarifying-shampoo-bar/",
       "heatRequired": false,
@@ -17036,7 +17036,7 @@
     },
     {
       "id": "creamy-french-shampoo-bar",
-      "name": "Sodium Cocoyl Isethionate & Sodium Lauryl Sulfoacetate Hair Cream",
+      "name": "French Green Clay & Jojoba Hair Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/creamy-french-shampoo-bar/",
       "heatRequired": false,
@@ -17095,7 +17095,7 @@
     },
     {
       "id": "castor-rice-sulfate-free-shampoo-bar",
-      "name": "Sodium Cocoyl Isethionate & Sodium Lauryl Sulfoacetate Hair Solution",
+      "name": "Ultra Fine Rice Flour & Fision Hydratress Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/castor-rice-sulfate-free-shampoo-bar/",
       "heatRequired": false,
@@ -17150,7 +17150,7 @@
     },
     {
       "id": "simple-sulfate-free-shampoo-bar",
-      "name": "Sodium Lauryl Sulfoacetate & Rice Flour Hair Solution",
+      "name": "Rice Flour & Coconut Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/simple-sulfate-free-shampoo-bar/",
       "heatRequired": false,
@@ -17193,7 +17193,7 @@
     },
     {
       "id": "champagne-shampoo-bars",
-      "name": "Sodium Cocoyl Isethionate & Sodium Coco Sulfate Hair Solution",
+      "name": "White Kaolin Clay & Abyssinian Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/champagne-shampoo-bars/",
       "heatRequired": false,
@@ -17244,7 +17244,7 @@
     },
     {
       "id": "all-natural-perky-peppermint-shampoo",
-      "name": "Caprylyl/capryl Glucoside & Cocamidopropyl Betaine Hair Solution",
+      "name": "Coco Glucoside & Natra Pep Pea Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/all-natural-perky-peppermint-shampoo/",
       "heatRequired": false,
@@ -17299,7 +17299,7 @@
     },
     {
       "id": "sulfate-free-shampoo-bar-with-rice-starch",
-      "name": "Sodium Cocoyl Isethionate & Sodium Lauryl Sulfoacetate Hair Solution",
+      "name": "Rice Flour & Camellia Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sulfate-free-shampoo-bar-with-rice-starch/",
       "heatRequired": false,
@@ -17354,7 +17354,7 @@
     },
     {
       "id": "more-mango-sulfate-free-shampoo-bar",
-      "name": "Sodium Cocoyl Isethionate & Sodium C14-16 Olefin Sulfonate Hair Solution",
+      "name": "Sodium C14-16 Olefin Sulfonate & Mango Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/more-mango-sulfate-free-shampoo-bar/",
       "heatRequired": true,
@@ -17466,7 +17466,7 @@
     },
     {
       "id": "ice-palace-sulfate-free-shampoo-bar",
-      "name": "Sodium Cocoyl Isethionate & Sodium Lauryl Sulfoacetate Hair Solution",
+      "name": "White Kaolin Clay & Moringa Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/ice-palace-sulfate-free-shampoo-bar/",
       "heatRequired": false,
@@ -17521,7 +17521,7 @@
     },
     {
       "id": "french-green-clay-sulphate-free-shampoo-bar",
-      "name": "Sodium Cocoyl Isethionate & Sodium Lauryl Sulfoacetate Hair Solution",
+      "name": "French Green Clay & Abyssinian Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/french-green-clay-sulphate-free-shampoo-bar/",
       "heatRequired": false,
@@ -17576,7 +17576,7 @@
     },
     {
       "id": "silk-shine-shampoo",
-      "name": "Sodium Laureth Sulfate & Caprylyl/capryl Glucoside Hair Solution",
+      "name": "Sodium Laureth Sulfate & Hydrolyzed Silk Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/silk-shine-shampoo/",
       "heatRequired": false,
@@ -17639,7 +17639,7 @@
     },
     {
       "id": "pink-clay-mosaic-shampoo-bars",
-      "name": "Roughly Powdered Sodium Cocoyl Isethionate & Sodium Lauryl Sulfoacetate Hair Solution",
+      "name": "Australian Pink Clay & Kokum Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/pink-clay-mosaic-shampoo-bars/",
       "heatRequired": true,
@@ -17688,7 +17688,7 @@
     },
     {
       "id": "argan-rose-pressed-shampoo-bars",
-      "name": "Sodium Cocoyl Isethionate & Sodium Coco Sulfate Hair Solution",
+      "name": "Argan & Red #40 Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/argan-rose-pressed-shampoo-bars/",
       "heatRequired": false,
@@ -17747,7 +17747,7 @@
     },
     {
       "id": "white-chocolate-peppermint-shampoo-bars",
-      "name": "Powdered Sodium Cocoyl Isethionate & Sodium Lauryl Sulfoacetate Hair Solution",
+      "name": "Cocoa & Hydrolyzed Quinoa Protein Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/white-chocolate-peppermint-shampoo-bars/",
       "heatRequired": false,
@@ -17790,7 +17790,7 @@
     },
     {
       "id": "chocolate-rhassoul-shampoo-bars",
-      "name": "Sodium Cocoyl Isethionate & Sodium Coco Sulfate Hair Solution",
+      "name": "Rhassoul Clay & Cocoa Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/chocolate-rhassoul-shampoo-bars/",
       "heatRequired": true,
@@ -17847,7 +17847,7 @@
     },
     {
       "id": "mango-mango-shampoo-bar",
-      "name": "Sodium Cocoyl Isethionate & Sodium C14-16 Olefin Sulfonate Hair Solution",
+      "name": "Sodium C14-16 Olefin Sulfonate & Tucuma Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/mango-mango-shampoo-bar/",
       "heatRequired": true,
@@ -17908,7 +17908,7 @@
     },
     {
       "id": "silky-volumizing-conditioning-shampoo",
-      "name": "Sodium Cocoyl Isethionate & Cocamidopropyl Betaine Hair Solution",
+      "name": "Broccoli & Glycol Distearate Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/silky-volumizing-conditioning-shampoo/",
       "heatRequired": false,
@@ -18072,7 +18072,7 @@
     },
     {
       "id": "cinnamon-swirl-soap-shampoo",
-      "name": "Coconut & Lard Hair Bar",
+      "name": "Coconut & Lard Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cinnamon-swirl-soap-shampoo/",
       "heatRequired": false,
@@ -18228,7 +18228,7 @@
     },
     {
       "id": "dry-argan-oil-hair-mist",
-      "name": "Cyclomethicone & Argan Hair Oil",
+      "name": "Argan & C12-15 Alkyl Benzoate Hair Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/dry-argan-oil-hair-mist/",
       "heatRequired": false,
@@ -18263,7 +18263,7 @@
     },
     {
       "id": "how-to-make-your-own-co-wash-3-ways",
-      "name": "Apricot Kernel & Cocamidopropyl Betaine Hair Wash",
+      "name": "Apricot Kernel Hair Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/how-to-make-your-own-co-wash-3-ways/",
       "heatRequired": true,
@@ -18685,7 +18685,7 @@
     },
     {
       "id": "silk-camellia-seed-leave-in-hair-conditioner",
-      "name": "Camellia & Cetearyl Alcohol Hair Solution",
+      "name": "Camellia & Hydrolyzed Silk Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/silk-camellia-seed-leave-in-hair-conditioner/",
       "heatRequired": true,
@@ -18798,7 +18798,7 @@
     },
     {
       "id": "passionfruit-coconut-conditioner-bar",
-      "name": "Cetearyl Alcohol & Passionfruit Hair Solution",
+      "name": "Passionfruit & Coconut Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/passionfruit-coconut-conditioner-bar/",
       "heatRequired": true,
@@ -18926,7 +18926,7 @@
     },
     {
       "id": "featherweight-leave-in-hair-conditioner",
-      "name": "Behentrimonium Chloride & Cetearyl Alcohol Hair Solution",
+      "name": "Hydrolyzed Rice Protein & Behentrimonium Chloride Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/featherweight-leave-in-hair-conditioner/",
       "heatRequired": true,
@@ -18972,7 +18972,7 @@
     },
     {
       "id": "cranberry-orange-conditioner-bar",
-      "name": "Cetearyl Alcohol & Mango Hair Solution",
+      "name": "Mango & Cranberry Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cranberry-orange-conditioner-bar/",
       "heatRequired": true,
@@ -19030,7 +19030,7 @@
     },
     {
       "id": "shine-detangle-conditioning-hair-rinse",
-      "name": "Hydrolyzed Quinoa Protein & Peg-8 Dimethicone Hair Solution",
+      "name": "Hydrolyzed Quinoa Protein & Cetrimonium Chloride Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/shine-detangle-conditioning-hair-rinse/",
       "heatRequired": false,
@@ -19081,7 +19081,7 @@
     },
     {
       "id": "ros-conditioning-hair-foam",
-      "name": "Rose & Polysorbate 20 Hair Solution",
+      "name": "Rose & Hydrolyzed Rice Protein Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rose-conditioning-hair-foam/",
       "heatRequired": false,
@@ -19277,7 +19277,7 @@
     },
     {
       "id": "mango-mango-cleansing-conditioner",
-      "name": "Varisoft Eq 65 & Cocamidopropyl Betaine Hair Solution",
+      "name": "Luxglide N350 & Hydrolyzed Quinoa Protein Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/mango-mango-cleansing-conditioner/",
       "heatRequired": true,
@@ -19351,7 +19351,7 @@
     },
     {
       "id": "sugar-plum-cleansing-conditioner",
-      "name": "Cocamidopropyl Betaine & Plum Hair Solution",
+      "name": "Plum & Hydrolyzed Rice Protein Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sugar-plum-cleansing-conditioner/",
       "heatRequired": true,
@@ -19425,7 +19425,7 @@
     },
     {
       "id": "rose-cardamom-cleansing-conditioner",
-      "name": "Rose & Cocamidopropyl Betaine Hair Solution",
+      "name": "Rose & Coconut Hair Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rose-cardamom-cleansing-conditioner/",
       "heatRequired": true,
@@ -19500,7 +19500,7 @@
     },
     {
       "id": "cream-of-earl-grey-cleansing-conditioner",
-      "name": "Coconut & Argan Hair Cream",
+      "name": "Coconut & Plant-derived Keratin Hair Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cream-of-earl-grey-cleansing-conditioner/",
       "heatRequired": false,
@@ -19739,7 +19739,7 @@
     },
     {
       "id": "featherweight-hair-oil",
-      "name": "Cyclomethicone & Isododecane Hair Oil",
+      "name": "Isododecane & Camellia Hair Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/featherweight-hair-oil/",
       "heatRequired": false,
@@ -20402,7 +20402,7 @@
     },
     {
       "id": "midwinter-conditioning-beard-balm",
-      "name": "Jojoba & Coconut Hair Balm",
+      "name": "Jojoba & Argan Hair Balm",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/midwinter-conditioning-beard-balm/",
       "heatRequired": true,
@@ -20452,7 +20452,7 @@
     },
     {
       "id": "conditioning-ginger-oak-moss-beard-oil",
-      "name": "Olive Squalane & Camellia Hair Oil",
+      "name": "Olive Squalane & Argan Hair Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/conditioning-ginger-oak-moss-beard-oil/",
       "heatRequired": true,
@@ -20506,7 +20506,7 @@
     },
     {
       "id": "solid-dishwashing-brick",
-      "name": "Sodium Coco Sulfate & Washing Soda Utility Wash",
+      "name": "Washing Soda Utility Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/solid-dishwashing-brick/",
       "heatRequired": false,
@@ -20580,7 +20580,7 @@
     },
     {
       "id": "super-concentrated-lemon-dishwashing-paste",
-      "name": "Sodium Coco Sulfate & Sodium C14-16 Alpha Olefin Sulfonate Utility Wash",
+      "name": "Sodium C14-16 Alpha Olefin Sulfonate & D-limonene Utility Wash",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/super-concentrated-lemon-dishwashing-paste/",
       "heatRequired": false,
@@ -20619,7 +20619,7 @@
     },
     {
       "id": "simple-cleaning-soap",
-      "name": "Coconut & Superfat Utility Bar",
+      "name": "Coconut & Superfat Utility Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/simple-cleaning-soap/",
       "heatRequired": false,
@@ -20644,7 +20644,7 @@
     },
     {
       "id": "rustic-clay-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rustic-clay-soap/",
       "heatRequired": false,
@@ -20670,7 +20670,7 @@
     },
     {
       "id": "candlelight-christmas-soap",
-      "name": "Coconut & Beef Tallow Cleansing Bar",
+      "name": "Coconut & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/candlelight-christmas-soap/",
       "heatRequired": false,
@@ -20700,7 +20700,7 @@
     },
     {
       "id": "frosted-cranberry-christmas-soap",
-      "name": "Coconut & Palm Cleansing Bar",
+      "name": "Coconut & Palm Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/frosted-cranberry-christmas-soap/",
       "heatRequired": false,
@@ -20736,7 +20736,7 @@
     },
     {
       "id": "almond-oat-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/almond-oat-soap/",
       "heatRequired": true,
@@ -20765,7 +20765,7 @@
     },
     {
       "id": "ice-palace-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/ice-palace-soap/",
       "heatRequired": false,
@@ -20791,7 +20791,7 @@
     },
     {
       "id": "argan-rose-soap",
-      "name": "Olive & Coconut Cleansing Bar",
+      "name": "Olive & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/argan-rose-soap/",
       "heatRequired": false,
@@ -20821,7 +20821,7 @@
     },
     {
       "id": "lavender-aloe-soap",
-      "name": "Olive & Shea Cleansing Bar",
+      "name": "Olive & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-aloe-soap/",
       "heatRequired": false,
@@ -20851,7 +20851,7 @@
     },
     {
       "id": "white-chocolate-peppermint-christmas-soap",
-      "name": "Coconut & Beef Tallow Cleansing Bar",
+      "name": "Coconut & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/white-chocolate-peppermint-christmas-soap/",
       "heatRequired": false,
@@ -20881,7 +20881,7 @@
     },
     {
       "id": "cranberry-orange-christmas-soap",
-      "name": "Coconut & Beef Tallow Cleansing Bar",
+      "name": "Coconut & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cranberry-orange-christmas-soap/",
       "heatRequired": false,
@@ -20911,7 +20911,7 @@
     },
     {
       "id": "ros-soap",
-      "name": "Beef Tallow & Olive Cleansing Bar",
+      "name": "Beef Tallow & Olive Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rose-soap/",
       "heatRequired": false,
@@ -20941,7 +20941,7 @@
     },
     {
       "id": "sweetgrass-gradient-swirl-soap",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sweetgrass-gradient-swirl-soap/",
       "heatRequired": false,
@@ -20967,7 +20967,7 @@
     },
     {
       "id": "strawberry-rose-soap",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/strawberry-rose-soap/",
       "heatRequired": false,
@@ -20993,7 +20993,7 @@
     },
     {
       "id": "pemberley-soap",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/pemberley-soap/",
       "heatRequired": false,
@@ -21019,7 +21019,7 @@
     },
     {
       "id": "mango-mango-soap",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/mango-mango-soap/",
       "heatRequired": false,
@@ -21045,7 +21045,7 @@
     },
     {
       "id": "lemongrass-gradient-soap",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lemongrass-gradient-soap/",
       "heatRequired": false,
@@ -21071,7 +21071,7 @@
     },
     {
       "id": "blue-marble-soap",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/blue-marble-soap/",
       "heatRequired": false,
@@ -21097,7 +21097,7 @@
     },
     {
       "id": "red-red-rose-soap",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/red-red-rose-soap/",
       "heatRequired": false,
@@ -21123,7 +21123,7 @@
     },
     {
       "id": "christmas-tree-soap",
-      "name": "Canola & Beef Tallow Cleansing Bar",
+      "name": "Canola & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/christmas-tree-soap/",
       "heatRequired": false,
@@ -21153,7 +21153,7 @@
     },
     {
       "id": "sugar-plum-christmas-soap",
-      "name": "Canola & Beef Tallow Cleansing Bar",
+      "name": "Canola & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sugar-plum-christmas-soap/",
       "heatRequired": false,
@@ -21183,7 +21183,7 @@
     },
     {
       "id": "citrus-poppy-seed-swirl-soap",
-      "name": "Canola & Beef Tallow Cleansing Bar",
+      "name": "Canola & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/citrus-poppy-seed-swirl-soap/",
       "heatRequired": false,
@@ -21237,7 +21237,7 @@
     },
     {
       "id": "lavender-spruce-soap",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-spruce-soap/",
       "heatRequired": false,
@@ -21263,7 +21263,7 @@
     },
     {
       "id": "winter-custard-soap",
-      "name": "Coconut & Beef Tallow Cleansing Bar",
+      "name": "Coconut & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/winter-custard-soap/",
       "heatRequired": false,
@@ -21293,7 +21293,7 @@
     },
     {
       "id": "aurora-borealis-soap",
-      "name": "Coconut & Beef Tallow Cleansing Bar",
+      "name": "Coconut & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/aurora-borealis-soap/",
       "heatRequired": false,
@@ -21319,7 +21319,7 @@
     },
     {
       "id": "snowflake-christmas-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/snowflake-christmas-soap/",
       "heatRequired": false,
@@ -21345,7 +21345,7 @@
     },
     {
       "id": "vanilla-spice-christmas-soap",
-      "name": "Coconut & Beef Tallow Cleansing Bar",
+      "name": "Coconut & Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/vanilla-spice-christmas-soap/",
       "heatRequired": false,
@@ -21375,7 +21375,7 @@
     },
     {
       "id": "minty-forest-soap",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/minty-forest-soap/",
       "heatRequired": false,
@@ -21405,7 +21405,7 @@
     },
     {
       "id": "lemon-basil-soap-with-fresh-click-grow-basil",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lemon-basil-soap-fresh-click-grow-basil/",
       "heatRequired": false,
@@ -21435,7 +21435,7 @@
     },
     {
       "id": "morning-frost-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/morning-frost-soap/",
       "heatRequired": false,
@@ -21465,7 +21465,7 @@
     },
     {
       "id": "chocolate-and-roses-valentine-soap",
-      "name": "Cocoa & Coconut Cleansing Bar",
+      "name": "Cocoa & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/chocolate-and-roses-valentine-soap/",
       "heatRequired": false,
@@ -21493,7 +21493,7 @@
     },
     {
       "id": "gentle-hemp-and-shea-soap",
-      "name": "Beef Tallow Or Lard & Coconut Cleansing Bar",
+      "name": "Beef Tallow Or Lard & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/gentle-hemp-and-shea-soap/",
       "heatRequired": true,
@@ -21530,7 +21530,7 @@
     },
     {
       "id": "winter-wonderland-christmas-soap",
-      "name": "Beef Tallow & Olive Cleansing Bar",
+      "name": "Beef Tallow & Olive Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/winter-wonderland-christmas-soap/",
       "heatRequired": false,
@@ -21562,7 +21562,7 @@
     },
     {
       "id": "lumps-of-coal-christmas-soap",
-      "name": "Beef Tallow Or Lard & Coconut Cleansing Bar",
+      "name": "Beef Tallow Or Lard & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lumps-coal-christmas-soap/",
       "heatRequired": true,
@@ -21640,7 +21640,7 @@
     },
     {
       "id": "citrus-summer-punch-swirl-soap",
-      "name": "Beef Tallow Or Lard & Coconut Cleansing Bar",
+      "name": "Beef Tallow Or Lard & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/citrus-summer-punch-swirl-soap/",
       "heatRequired": true,
@@ -21677,7 +21677,7 @@
     },
     {
       "id": "maple-syrup-soap",
-      "name": "Coconut & Shea Cleansing Bar",
+      "name": "Coconut & Safflower Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/maple-syrup-soap/",
       "heatRequired": true,
@@ -21714,7 +21714,7 @@
     },
     {
       "id": "fairy-bread-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/fairy-bread-soap/",
       "heatRequired": true,
@@ -21755,7 +21755,7 @@
     },
     {
       "id": "lots-lots-of-clay-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lots-lots-clay-soap/",
       "heatRequired": true,
@@ -21788,7 +21788,7 @@
     },
     {
       "id": "love-lines-valentine-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/love-lines-valentine-soap/",
       "heatRequired": true,
@@ -21821,7 +21821,7 @@
     },
     {
       "id": "fruitcake-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/fruitcake-soap/",
       "heatRequired": false,
@@ -21853,7 +21853,7 @@
     },
     {
       "id": "chocolate-orange-christmas-soap",
-      "name": "Cocoa & Coconut Cleansing Bar",
+      "name": "Cocoa & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/chocolate-orange-christmas-soap/",
       "heatRequired": false,
@@ -21881,7 +21881,7 @@
     },
     {
       "id": "sparkly-snowball-soap-balls",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sparkly-snowball-soap-balls/",
       "heatRequired": false,
@@ -21911,7 +21911,7 @@
     },
     {
       "id": "second-summer-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/second-summer-soap/",
       "heatRequired": false,
@@ -21943,7 +21943,7 @@
     },
     {
       "id": "lemon-meringue-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lemon-meringue-soap/",
       "heatRequired": false,
@@ -21975,7 +21975,7 @@
     },
     {
       "id": "rose-lavender-princess-silk-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rose-lavender-princess-silk-soap/",
       "heatRequired": false,
@@ -22007,7 +22007,7 @@
     },
     {
       "id": "mojito-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/mojito-soap/",
       "heatRequired": false,
@@ -22039,7 +22039,7 @@
     },
     {
       "id": "pink-lemonade-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/pink-lemonade-soap/",
       "heatRequired": false,
@@ -22071,7 +22071,7 @@
     },
     {
       "id": "lavender-vanilla-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-vanilla-soap/",
       "heatRequired": true,
@@ -22104,7 +22104,7 @@
     },
     {
       "id": "ber-anti-acne-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/uber-anti-acne-soap/",
       "heatRequired": false,
@@ -22136,7 +22136,7 @@
     },
     {
       "id": "winter-solstice-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/winter-solstice-soap/",
       "heatRequired": false,
@@ -22168,7 +22168,7 @@
     },
     {
       "id": "cranberry-sauce-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cranberry-sauce-soap/",
       "heatRequired": true,
@@ -22200,7 +22200,7 @@
     },
     {
       "id": "blizzard-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/blizzard-soap/",
       "heatRequired": false,
@@ -22232,7 +22232,7 @@
     },
     {
       "id": "pumpkin-pie-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/pumpkin-pie-soap/",
       "heatRequired": true,
@@ -22265,7 +22265,7 @@
     },
     {
       "id": "aloe-vera-citrus-soap",
-      "name": "Beef Tallow & Coconut Cleansing Bar",
+      "name": "Beef Tallow & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/aloe-vera-citrus-soap/",
       "heatRequired": false,
@@ -22327,7 +22327,7 @@
     },
     {
       "id": "low-tide-soap",
-      "name": "Beef Tallow Or Lard & Coconut Cleansing Bar",
+      "name": "Beef Tallow Or Lard & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/low-tide-soap/",
       "heatRequired": false,
@@ -22359,7 +22359,7 @@
     },
     {
       "id": "chai-latt-soap",
-      "name": "Coconut & Lard Cleansing Bar",
+      "name": "Coconut & Lard Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/chai-latte-soap/",
       "heatRequired": false,
@@ -22389,7 +22389,7 @@
     },
     {
       "id": "my-all-in-one-soap-recipe",
-      "name": "Coconut & Shea Cleansing Bar",
+      "name": "Coconut & Lard Or Beef Tallow Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/my-all-in-one-soap-recipe/",
       "heatRequired": true,
@@ -22425,7 +22425,7 @@
     },
     {
       "id": "self-cleaning-you-homemade-soap",
-      "name": "Olive & Beef Tallow Cleansing Bar",
+      "name": "Olive & Coconut Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/self-cleaning-you-homemade-soap/",
       "heatRequired": false,
@@ -22462,7 +22462,7 @@
     },
     {
       "id": "how-to-make-liquid-soap-the-easy-way",
-      "name": "Coconut & Shea Cleansing Bar",
+      "name": "Coconut & Shea Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/how-to-make-liquid-soap-easy-way/",
       "heatRequired": true,
@@ -22495,7 +22495,7 @@
     },
     {
       "id": "diy-whipped-soap-base",
-      "name": "Coconut & Shea Cleansing Bar",
+      "name": "Coconut & Shea Cleansing Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/diy-whipped-soap-base/",
       "heatRequired": true,
@@ -22571,7 +22571,7 @@
     },
     {
       "id": "diy-blurring-face-primer-3-ways",
-      "name": "Silicone Gel & Silicone Gel Cosmetic Solution",
+      "name": "Silicone Gel & Silicone Gel Cosmetic Gel",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/diy-blur-primer/",
       "heatRequired": false,
@@ -22676,7 +22676,7 @@
     },
     {
       "id": "frosted-cranberry-matte-lip-cheek-colour",
-      "name": "Cream-to- Matte Base & Cream-to- Matte Base Cosmetic Solution",
+      "name": "Tkb Mousse Medium & Tkb Film Fix Cosmetic Cream",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/frosted-cranberry-matte-lip-cheek-colour/",
       "heatRequired": false,
@@ -22759,7 +22759,7 @@
     },
     {
       "id": "liquid-blurring-skin-tint",
-      "name": "Argan & Fractionated Coconut Cosmetic Solution",
+      "name": "Argan & Coconut Cosmetic Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/liquid-blurring-skin-tint/",
       "heatRequired": false,
@@ -22985,7 +22985,7 @@
     },
     {
       "id": "sheer-satin-cheek-lip-tint",
-      "name": "Fractionated Coconut & Tkb Thickening Clay Cosmetic Solution",
+      "name": "Coconut & Vitamin E Cosmetic Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sheer-satin-cheek-lip-tint/",
       "heatRequired": false,
@@ -23164,7 +23164,7 @@
     },
     {
       "id": "clear-lip-gloss-base-without-versagel",
-      "name": "Traditional  Coconut & Poppy Cosmetic Gel",
+      "name": "Traditional  Coconut & Passionfruit Cosmetic Gel",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/clear-lip-gloss-base-without-versagel/",
       "heatRequired": true,
@@ -23340,7 +23340,7 @@
     },
     {
       "id": "glossy-lip-stain",
-      "name": "Versagel 750 & Tkb  Fusion Cosmetic Solution",
+      "name": "Versagel 750 & Tkb  Fusion Cosmetic Gel",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/glossy-lip-stain/",
       "heatRequired": false,
@@ -23406,7 +23406,7 @@
     },
     {
       "id": "basic-moldable-lipstick-base",
-      "name": "Castor & Cetearyl Alcohol Cosmetic Solution",
+      "name": "Castor & Coconut Cosmetic Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/basic-moldable-lipstick-base/",
       "heatRequired": true,
@@ -23491,7 +23491,7 @@
     },
     {
       "id": "super-simple-moisturizing-lotion",
-      "name": "Fractionated Coconut Lotion",
+      "name": "Coconut Lotion",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/super-simple-moisturizing-lotion/",
       "heatRequired": true,
@@ -23529,7 +23529,7 @@
     },
     {
       "id": "rose-witch-hazel-facial-toner",
-      "name": "Rose Mist",
+      "name": "Aloe Vera & Rose Mist",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rose-witch-hazel-facial-toner/",
       "heatRequired": false,
@@ -23572,7 +23572,7 @@
     },
     {
       "id": "rose-pink-grapefruit-valentines-soap",
-      "name": "Coconut & Rice Bran Bar",
+      "name": "Coconut & Rice Bran Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/rose-pink-grapefruit-valentines-soap/",
       "heatRequired": false,
@@ -23612,7 +23612,7 @@
     },
     {
       "id": "citrussy-beer-soap",
-      "name": "Coconut & Shea Bar",
+      "name": "Coconut & Lard Or Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/citrussy-beer-soap/",
       "heatRequired": false,
@@ -23644,7 +23644,7 @@
     },
     {
       "id": "jasmine-rosewood-and-ylang-ylang-soap",
-      "name": "Coconut & Lard Bar",
+      "name": "Coconut & Lard Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/jasmine-rosewood-and-ylang-ylang-soap/",
       "heatRequired": false,
@@ -23676,7 +23676,7 @@
     },
     {
       "id": "dirt-soap",
-      "name": "Patchouli & Coconut Bar",
+      "name": "Patchouli & Coconut Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/dirt-soap/",
       "heatRequired": false,
@@ -23722,7 +23722,7 @@
     },
     {
       "id": "lemongrass-ginger-coconut-milk-and-oolong-soap",
-      "name": "Beef Tallow & Coconut Bar",
+      "name": "Beef Tallow & Coconut Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lemongrass-ginger-coconut-milk-and-oolong-soap/",
       "heatRequired": false,
@@ -23756,7 +23756,7 @@
     },
     {
       "id": "vegan-cocoa-coconut-nanaimo-bar-soap",
-      "name": "Coconut & Cocoa Bar",
+      "name": "Coconut & Cocoa Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/vegan-cocoa-coconut-nanaimo-bar-soap/",
       "heatRequired": false,
@@ -23782,7 +23782,7 @@
     },
     {
       "id": "watermelon-mint-lip-scrub",
-      "name": "White Sugar & Watermelon Scrub",
+      "name": "White Sugar & Poppy Seeds Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/watermelon-mint-lip-scrub/",
       "heatRequired": true,
@@ -23827,7 +23827,7 @@
     },
     {
       "id": "white-chocolate-peppermint-lip-scrub",
-      "name": "White Sugar & Fractionated Coconut Scrub",
+      "name": "White Sugar & Coconut Scrub",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/white-chocolate-peppermint-lip-scrub/",
       "heatRequired": true,
@@ -23920,7 +23920,7 @@
     },
     {
       "id": "green-tea-silk-soap",
-      "name": "Beef Tallow & Coconut Bar",
+      "name": "Beef Tallow & Coconut Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/green-tea-and-silk-soap/",
       "heatRequired": true,
@@ -23953,7 +23953,7 @@
     },
     {
       "id": "lavender-bergamot-soap",
-      "name": "Of The Total Weight 10% Of The Total Weight 20% Of The Total Weight & Beef Tallow Bar",
+      "name": "Of The Total Weight 10% Of The Total Weight 20% Of The Total Weight & Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-bergamot-soap/",
       "heatRequired": false,
@@ -23989,7 +23989,7 @@
     },
     {
       "id": "dead-sea-soap",
-      "name": "Beef Tallow & Coconut Bar",
+      "name": "Beef Tallow & Coconut Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/dead-sea-soap/",
       "heatRequired": false,
@@ -24022,7 +24022,7 @@
     },
     {
       "id": "campfire-soap",
-      "name": "Coconut & Soy Bean Bar",
+      "name": "Coconut & Soy Bean Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/campfire-soap/",
       "heatRequired": false,
@@ -24066,7 +24066,7 @@
     },
     {
       "id": "gentle-coconut-milk-soap",
-      "name": "Coconut & Soy Bean Bar",
+      "name": "Coconut & Soy Bean Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/gentle-coconut-milk-soap/",
       "heatRequired": false,
@@ -24106,7 +24106,7 @@
     },
     {
       "id": "peppermint-eucalyptus-soap",
-      "name": "Coconut & Soy Bean Bar",
+      "name": "Coconut & Soy Bean Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/peppermint-eucalyptus-soap/",
       "heatRequired": false,
@@ -24150,7 +24150,7 @@
     },
     {
       "id": "lavender-lemon-soap",
-      "name": "Coconut & Lard Bar",
+      "name": "Coconut & Lard Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-lemon-soap/",
       "heatRequired": false,
@@ -24182,7 +24182,7 @@
     },
     {
       "id": "candy-cane-christmas-soap",
-      "name": "Coconut & Lard Or Beef Tallow Bar",
+      "name": "Coconut & Lard Or Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/candy-cane-christmas-soap/",
       "heatRequired": false,
@@ -24214,7 +24214,7 @@
     },
     {
       "id": "hot-chocolate-soap",
-      "name": "Coconut & Lard Or Beef Tallow Bar",
+      "name": "Coconut & Lard Or Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/hot-chocolate-soap/",
       "heatRequired": false,
@@ -24244,7 +24244,7 @@
     },
     {
       "id": "tigger-soap-halloween-soap",
-      "name": "Coconut & Lard Or Beef Tallow Bar",
+      "name": "Coconut & Lard Or Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/tigger-soap-halloween-soap/",
       "heatRequired": false,
@@ -24274,7 +24274,7 @@
     },
     {
       "id": "cinnamon-patchouli-soap",
-      "name": "Coconut & Lard Or Beef Tallow Bar",
+      "name": "Coconut & Shea Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cinnamon-patchouli-soap/",
       "heatRequired": false,
@@ -24304,7 +24304,7 @@
     },
     {
       "id": "lavender-patchouli-soap",
-      "name": "Coconut & Lard Bar",
+      "name": "Coconut & Lard Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-patchouli-soap/",
       "heatRequired": true,
@@ -24336,7 +24336,7 @@
     },
     {
       "id": "gin-tonic-soap",
-      "name": "Coconut & Lard Bar",
+      "name": "Coconut & Lard Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/gin-tonic-soap/",
       "heatRequired": false,
@@ -24369,7 +24369,7 @@
     },
     {
       "id": "cinnamon-oatmeal-soap",
-      "name": "Coconut & Lard Or Beef Tallow Bar",
+      "name": "Coconut & Lard Or Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/cinnamon-oatmeal-soap/",
       "heatRequired": true,
@@ -24406,7 +24406,7 @@
     },
     {
       "id": "jasmine-lavender-and-sandalwood-soap",
-      "name": "Coconut & Lard Bar",
+      "name": "Coconut & Lard Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/jasmine-lavender-and-sandalwood-soap/",
       "heatRequired": false,
@@ -24442,7 +24442,7 @@
     },
     {
       "id": "patchouli-mint-swirl-soap",
-      "name": "Coconut & Lard Bar",
+      "name": "Coconut & Lard Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/patchouli-mint-swirl-soap/",
       "heatRequired": false,
@@ -24478,7 +24478,7 @@
     },
     {
       "id": "grapefruit-calendula-soap",
-      "name": "Coconut & Lard Or Beef Tallow Bar",
+      "name": "Coconut & Lard Or Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/grapefruit-calendula-soap/",
       "heatRequired": false,
@@ -24508,7 +24508,7 @@
     },
     {
       "id": "vinolia-soap-re-creation-the-soap-on-the-rms-titanic",
-      "name": "Coconut & Lard Bar",
+      "name": "Coconut & Lard Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/vinolia-soap-re-creation-the-soap-on-the-rms-titanic/",
       "heatRequired": false,
@@ -24538,7 +24538,7 @@
     },
     {
       "id": "snowdrift-soap",
-      "name": "Coconut & Lard Bar",
+      "name": "Coconut & Lard Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/snowdrift-soap/",
       "heatRequired": false,
@@ -24568,7 +24568,7 @@
     },
     {
       "id": "christmas-stripe-soap",
-      "name": "Coconut & Beef Tallow Bar",
+      "name": "Coconut & Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/christmas-stripe-soap/",
       "heatRequired": false,
@@ -24598,7 +24598,7 @@
     },
     {
       "id": "autumn-shea-soap",
-      "name": "Coconut & Beef Tallow Bar",
+      "name": "Coconut & Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/autumn-shea-soap/",
       "heatRequired": false,
@@ -24628,7 +24628,7 @@
     },
     {
       "id": "lavender-rosemary-soap",
-      "name": "Coconut & Beef Tallow Bar",
+      "name": "Coconut & Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lavender-rosemary-soap/",
       "heatRequired": false,
@@ -24662,7 +24662,7 @@
     },
     {
       "id": "coconut-lime-soap",
-      "name": "Beef Tallow & Coconut Bar",
+      "name": "Beef Tallow & Coconut Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/coconut-lime-soap/",
       "heatRequired": false,
@@ -24696,7 +24696,7 @@
     },
     {
       "id": "5-alive-soap",
-      "name": "Olive & Beef Tallow Bar",
+      "name": "Olive & Coconut Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/5-alive-soap/",
       "heatRequired": false,
@@ -24730,7 +24730,7 @@
     },
     {
       "id": "shave-it-up-homemade-shaving-soap",
-      "name": "Coconut & Beef Tallow Bar",
+      "name": "Coconut & Beef Tallow Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/shave-it-up/",
       "heatRequired": false,
@@ -24756,7 +24756,7 @@
     },
     {
       "id": "heart-lotion-bars",
-      "name": "Sweet Almond & White Beeswax Body Lotion",
+      "name": "Sweet Almond & Cocoa  Wafers Body Lotion",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/heart-lotion-bars/",
       "heatRequired": true,
@@ -24786,7 +24786,7 @@
     },
     {
       "id": "hydrating-body-butter-sticks",
-      "name": "Avocado & White Beeswax Body Butter",
+      "name": "Avocado & Sweet Almond Body Butter",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/hydrating-body-butter-sticks/",
       "heatRequired": true,
@@ -24907,7 +24907,7 @@
     },
     {
       "id": "oat-cashmere-lotion",
-      "name": "Oat & Oat Body Lotion",
+      "name": "Oat & Colloidal Oatmeal Body Lotion",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/oat-cashmere-lotion/",
       "heatRequired": true,
@@ -24962,7 +24962,7 @@
     },
     {
       "id": "whipped-pearl-body-butter-diy",
-      "name": "Avocado & Seaweed Body Butter",
+      "name": "Avocado Body Butter",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pearl-body-butter-diy/",
       "heatRequired": true,
@@ -25051,7 +25051,7 @@
     },
     {
       "id": "carrot-hair-conditioner-tutorial",
-      "name": "Carrot & Cetearyl Alcohol Body Solution",
+      "name": "Carrot & Optiphen Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/carrot-hair-conditioner-diy/",
       "heatRequired": true,
@@ -25105,7 +25105,7 @@
     },
     {
       "id": "orchid-lotion-diy",
-      "name": "Jojoba & Orchid Body Lotion",
+      "name": "Jojoba & Optiphen Body Lotion",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/orchid-lotion-diy/",
       "heatRequired": true,
@@ -25151,7 +25151,7 @@
     },
     {
       "id": "whipped-lavender-body-butter-diy",
-      "name": "Lavender & Orchid Body Butter",
+      "name": "Lavender Body Butter",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/whipped-lavender-body-butter/",
       "heatRequired": false,
@@ -25372,7 +25372,7 @@
     },
     {
       "id": "diy-ginger-moringa-oil-hair-conditioner",
-      "name": "Moringa & Cetearyl Alcohol Body Oil",
+      "name": "Moringa & Optiphen Body Oil",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/moringa-ginger-hair-conditioner/",
       "heatRequired": true,
@@ -25468,7 +25468,7 @@
     },
     {
       "id": "sultry-jasmine-lotion-tutorial",
-      "name": "Jasmine Essential Water & Rosehip Body Lotion",
+      "name": "Rosehip & Optiphen Body Lotion",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/jasmine-lotion-tutorial/",
       "heatRequired": true,
@@ -25740,7 +25740,7 @@
     },
     {
       "id": "rose-quartz-cold-process-soap-tutorial",
-      "name": "Olive & Palm Body Bar",
+      "name": "Olive & Palm Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cold-process-soap/rose-quartz-cold-process-soap-tutorial/",
       "heatRequired": true,
@@ -25778,7 +25778,7 @@
     },
     {
       "id": "diy-crystal-bath-bombs",
-      "name": "Deodorized Cocoa & Polysorbate 80 Body Effervescent",
+      "name": "Deodorized Cocoa Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-crystal-bath-bombs/",
       "heatRequired": true,
@@ -25819,7 +25819,7 @@
     },
     {
       "id": "rose-clay-charcoal-soap-tutorial",
-      "name": "Lots Of Lather Quick Mix Body Bar",
+      "name": "Lots Of Lather Quick Mix Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/rose-clay-charcoal-soap-tutorial/",
       "heatRequired": true,
@@ -25852,7 +25852,7 @@
     },
     {
       "id": "how-to-make-charcoal-facial-soap",
-      "name": "Olive & Coconut Body Bar",
+      "name": "Olive & Palm Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/charcoal-facial-soap-tutorial/",
       "heatRequired": true,
@@ -25890,7 +25890,7 @@
     },
     {
       "id": "cleansing-charcoal-facial-scrub-diy",
-      "name": "Kaolin Clay & Castile  Soap Base Body Scrub",
+      "name": "Kaolin Clay & Hazelnut Body Scrub",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cleansing-charcoal-facial-scrub-diy/",
       "heatRequired": true,
@@ -25937,7 +25937,7 @@
     },
     {
       "id": "clover-aloe-spin-swirl-cold-process-on-soap-queen-tv",
-      "name": "Canola & Coconut Body Bar",
+      "name": "Canola & Palm Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/clover-aloe-spin-swirl-cold-process-soap/",
       "heatRequired": true,
@@ -26217,7 +26217,7 @@
     },
     {
       "id": "gingerbread-man-lotion-bars",
-      "name": "Avocado & White Beeswax Body Lotion",
+      "name": "Avocado & Jojoba Body Lotion",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/gingerbread-man-lotion-bars/",
       "heatRequired": true,
@@ -26282,7 +26282,7 @@
     },
     {
       "id": "rose-aloe-in",
-      "name": "Aloe Vera & Bottles White Disk Cap Body Solution",
+      "name": "Bottles White Disk Cap & Avocado Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/rose-aloe-shower-lotion/",
       "heatRequired": true,
@@ -26317,7 +26317,7 @@
     },
     {
       "id": "argan-oil-shampoo-recipe",
-      "name": "Potassium Cocoate Body Oil",
+      "name": "Body Oil",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/sizzling-summer-hair-argan-oil-shampoo/",
       "heatRequired": true,
@@ -26343,7 +26343,7 @@
     },
     {
       "id": "moisturizing-heel-butter-diy-free-label",
-      "name": "Tall Plastic Bail Jar & Fractionated Coconut Body Butter",
+      "name": "Tall Plastic Bail Jar & Coconut Body Butter",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/happy-feet-moisturizing-heel-balm/",
       "heatRequired": true,
@@ -26381,7 +26381,7 @@
     },
     {
       "id": "argan-shea-lotion",
-      "name": "Bottle With Pump Top & Aloe Vera Body Lotion",
+      "name": "Bottle With Pump Top & Sweet Almond Body Lotion",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/argan-shea-lotion/",
       "heatRequired": true,
@@ -26467,7 +26467,7 @@
     },
     {
       "id": "how-to-make-perfume-video",
-      "name": "Coconut & White Beeswax Body Solution",
+      "name": "Coconut & Meadowfoam Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lotion/how-to-make-perfume-video/",
       "heatRequired": false,
@@ -26621,7 +26621,7 @@
     },
     {
       "id": "volcanic-sand-charcoal-face-scrub",
-      "name": "Kaolin Clay & Castile  Soap Base Body Scrub",
+      "name": "Kaolin Clay & Icelandic Black Sand Body Scrub",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/volcanic-sand-charcoal-face-scrub/",
       "heatRequired": true,
@@ -26662,7 +26662,7 @@
     },
     {
       "id": "pumice-sea-salt-scrub-diy",
-      "name": "Pumice Sand & Seaweed Body Scrub",
+      "name": "Pumice Sand Body Scrub",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pumice-sea-salt-scrub-diy/",
       "heatRequired": false,
@@ -26919,7 +26919,7 @@
     },
     {
       "id": "diy-sugar-scrub-cubes",
-      "name": "White Granulated Sugar & Clear Melt & Pour Soap Base Body Scrub",
+      "name": "White Granulated Sugar & Sweet Almond Body Scrub",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soaks-and-scrubs/diy-sugar-scrub-cubes/",
       "heatRequired": true,
@@ -26948,7 +26948,7 @@
     },
     {
       "id": "how-to-make-rosehip-seed-bath-salts",
-      "name": "Rosehip & Evening Primrose Body Solution",
+      "name": "Rosehip & Rose Petals Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/rosehip-seed-bath-salts-diy/",
       "heatRequired": true,
@@ -27053,7 +27053,7 @@
     },
     {
       "id": "diy-violet-sugar-scrub-cubes",
-      "name": "Granulated Sugar & Clear Melt And Pour Soap Base Body Scrub",
+      "name": "Granulated Sugar & Sweet Almond Body Scrub",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/violet-solid-sugar-scrub-cubes/",
       "heatRequired": true,
@@ -27090,7 +27090,7 @@
     },
     {
       "id": "kauai-red-sea-salt-scrub-diy",
-      "name": "Fractionated Coconut & Potassium Cocoate Body Scrub",
+      "name": "Coconut & Jojoba Body Scrub",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/kauai-red-sea-salt-scrub-diy/",
       "heatRequired": false,
@@ -27130,7 +27130,7 @@
     },
     {
       "id": "apple-sage-salt-scrub-diy",
-      "name": "Stephenson   Castile Soap & Avocado Body Scrub",
+      "name": "Avocado Body Scrub",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/apple-sage-salt-scrub-diy/",
       "heatRequired": true,
@@ -27227,7 +27227,7 @@
     },
     {
       "id": "lovespell-solid-bubble-bath-diy",
-      "name": "Slsa Sodium Lauryl Sulfoacetate & Castor Body Solution",
+      "name": "Castor Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lovespell-solid-bubble-bath-diy/",
       "heatRequired": false,
@@ -27274,7 +27274,7 @@
     },
     {
       "id": "cleansing-orange-spice-salt-scrub",
-      "name": "Stephenson  Soap Concentrate Base & Olive Body Scrub",
+      "name": "Body Scrub",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cleansing-orange-spice-salt-scrub/",
       "heatRequired": false,
@@ -27450,7 +27450,7 @@
     },
     {
       "id": "silky-coconut-milk-face-mask",
-      "name": "Coconut Milk & Kaolin Clay Body Mask",
+      "name": "Kaolin Clay Body Mask",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soaks-and-scrubs/silky-coconut-milk-face-mask/",
       "heatRequired": false,
@@ -27503,7 +27503,7 @@
     },
     {
       "id": "rainbow-jojoba-bead-sugar-scrub",
-      "name": "Sugar & Potassium Cocoate Body Scrub",
+      "name": "Sugar & Mango Body Scrub",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soaks-and-scrubs/rainbow-jojoba-bead-sugar-scrub/",
       "heatRequired": false,
@@ -27627,7 +27627,7 @@
     },
     {
       "id": "olive-oil-dead-sea-salt-scrub-tutorial",
-      "name": "Olive Body Oil",
+      "name": "Body Oil",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soaks-and-scrubs/roman-holiday-promotion-olive-oil-scrub-tutorial/",
       "heatRequired": false,
@@ -27775,7 +27775,7 @@
     },
     {
       "id": "cleansing-clay-masks-on-soap-queen-tv",
-      "name": "Bentonite Clay & Kaolin Clay Body Bar",
+      "name": "Bentonite Clay & Kaolin Clay Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/soaks-and-scrubs/cleansing-clay-masks-on-soap-queen-tv/",
       "heatRequired": false,
@@ -27810,7 +27810,7 @@
     },
     {
       "id": "relaxing-lavender-bath-bombs",
-      "name": "Borage & Polysorbate 80 Body Effervescent",
+      "name": "Borage Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/relaxing-lavender-bath-bombs/",
       "heatRequired": false,
@@ -27849,7 +27849,7 @@
     },
     {
       "id": "lingonberry-bath-bombs",
-      "name": "Lingonberry & Polysorbate 80 Body Effervescent",
+      "name": "Lingonberry Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lingonberry-bath-bombs/",
       "heatRequired": false,
@@ -27880,7 +27880,7 @@
     },
     {
       "id": "pumpkin-bubbling-bath-truffles",
-      "name": "Slsa & Shea Body Solution",
+      "name": "Shea & Cocoa Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pumpkin-spice-bubbling-bath-truffles/",
       "heatRequired": true,
@@ -27943,7 +27943,7 @@
     },
     {
       "id": "jagua-blue-extract-bath-bomb-diy",
-      "name": "Body Effervescent",
+      "name": "Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/jagua-blue-bath-bomb-diy/",
       "heatRequired": false,
@@ -27970,7 +27970,7 @@
     },
     {
       "id": "pearl-bath-bomb-diy-kit",
-      "name": "Seaweed Body Effervescent",
+      "name": "Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pearl-bath-bomb-kit/",
       "heatRequired": false,
@@ -28024,7 +28024,7 @@
     },
     {
       "id": "raspberry-jam-bubbling-bath-truffle",
-      "name": "Slsa & Cocoa Body Solution",
+      "name": "Cocoa & Shea Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/raspberry-jam-bubbling-bath-truffle/",
       "heatRequired": true,
@@ -28082,7 +28082,7 @@
     },
     {
       "id": "cherry-blossom-bath-bomb-diy",
-      "name": "Lotus Flower & Polysorbate 80 Body Effervescent",
+      "name": "Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cherry-blossom-bath-bomb-diy/",
       "heatRequired": false,
@@ -28117,7 +28117,7 @@
     },
     {
       "id": "painted-rose-bath-bomb-diy",
-      "name": "Lotus Flower & Polysorbate 80 Body Effervescent",
+      "name": "Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/painted-rose-bath-bomb-diy/",
       "heatRequired": false,
@@ -28152,7 +28152,7 @@
     },
     {
       "id": "diy-babys-breath-bath-bombs",
-      "name": "Lotus Flower & Polysorbate 80 Body Effervescent",
+      "name": "Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-babys-breath-bath-bombs/",
       "heatRequired": true,
@@ -28189,7 +28189,7 @@
     },
     {
       "id": "diy-cocoa-butter-bath-bombs",
-      "name": "Cocoa  Mixture + Topping & Polysorbate 80 Body Butter",
+      "name": "Cocoa  Mixture + Topping Body Butter",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/bath-fizzies/cocoa-butter-bath-bombs/",
       "heatRequired": true,
@@ -28226,7 +28226,7 @@
     },
     {
       "id": "diy-salted-caramel-bath-truffles",
-      "name": "Slsa & Shea Body Solution",
+      "name": "Shea & Cocoa  Pastilles Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/salted-caramel-bath-truffles/",
       "heatRequired": true,
@@ -28281,7 +28281,7 @@
     },
     {
       "id": "bath-bomb-cupcake-kit",
-      "name": "Sodium Bicarbonate & Sodium Lauryl Sulfoacetate/slsa Body Effervescent",
+      "name": "Sodium Bicarbonate & Avocado Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/bath-bomb-cupcake-kit/",
       "heatRequired": false,
@@ -28328,7 +28328,7 @@
     },
     {
       "id": "black-salt-bath-bomb-diy",
-      "name": "Sweet Almond & Polysorbate 80 Body Effervescent",
+      "name": "Sweet Almond Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/black-salt-bath-bomb-diy/",
       "heatRequired": false,
@@ -28355,7 +28355,7 @@
     },
     {
       "id": "karma-bath-bomb-tutorial",
-      "name": "Sweet Almond & Polysorbate 80 Body Effervescent",
+      "name": "Sweet Almond Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/karma-bath-bomb-tutorial/",
       "heatRequired": false,
@@ -28378,7 +28378,7 @@
     },
     {
       "id": "diy-oatmeal-bath-bombs",
-      "name": "Cocoa & Colloidal Oatmeal Body Effervescent",
+      "name": "Cocoa & Colloidal Oatmeal Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/mondo-oatmeal-bath-bomb-diy/",
       "heatRequired": true,
@@ -28415,7 +28415,7 @@
     },
     {
       "id": "iridescent-pearl-bath-bomb-diy",
-      "name": "Shea & Polysorbate 80 Body Effervescent",
+      "name": "Shea Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pearl-bath-bomb-diy/",
       "heatRequired": true,
@@ -28486,7 +28486,7 @@
     },
     {
       "id": "crescent-moon-bath-bomb-diy",
-      "name": "Coconut & About 9 Ml Polysorbate 80 Body Effervescent",
+      "name": "Coconut Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/crescent-moon-bath-bomb-diy/",
       "heatRequired": true,
@@ -28511,7 +28511,7 @@
     },
     {
       "id": "sand-dollar-bath-bomb-diy",
-      "name": "Coconut Body Effervescent",
+      "name": "Coconut Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/sand-dollar-bath-bombs/",
       "heatRequired": true,
@@ -28540,7 +28540,7 @@
     },
     {
       "id": "diy-mermaid-bubbling-bath-truffles",
-      "name": "Slsa & Shea Body Solution",
+      "name": "Shea & Cocoa  Cubes Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-mermaid-bubbling-bath-truffles/",
       "heatRequired": true,
@@ -28595,7 +28595,7 @@
     },
     {
       "id": "rose-gold-bath-bomb-tutorial",
-      "name": "Coconut & Polysorbate 80 Body Effervescent",
+      "name": "Coconut Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/rose-gold-bath-bombs/",
       "heatRequired": true,
@@ -28624,7 +28624,7 @@
     },
     {
       "id": "diy-rainbow-bubbling-bath-truffles",
-      "name": "Slsa & Shea Body Solution",
+      "name": "Shea & Cocoa  Cubes Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-rainbow-bubbling-bath-truffle/",
       "heatRequired": true,
@@ -28705,7 +28705,7 @@
     },
     {
       "id": "midas-touch-bath-bombs",
-      "name": "Meadowfoam & Cocoa Body Effervescent",
+      "name": "Meadowfoam & Cocoa Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/midas-touch-bath-bombs/",
       "heatRequired": true,
@@ -28792,7 +28792,7 @@
     },
     {
       "id": "how-to-make-solid-bubble-bath",
-      "name": "Slsa & Castor Body Solution",
+      "name": "Castor Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/bath-fizzies/how-to-make-solid-bubble-bath-on-soap-queen-tv/",
       "heatRequired": false,
@@ -28838,7 +28838,7 @@
     },
     {
       "id": "making-bath-truffles-on-soap-queen-tv",
-      "name": "Melted Cocoa & Melted Cocoa Body Bar",
+      "name": "Melted Cocoa & Melted Cocoa Body Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/bath-fizzies/making-bath-truffles-on-soap-queen-tv/",
       "heatRequired": true,
@@ -28956,7 +28956,7 @@
     },
     {
       "id": "summer-sunburst-lip-tint-diy",
-      "name": "Coconut & White Beeswax Facial Solution",
+      "name": "Coconut & Cocoa  Cubes Facial Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/orange-sunburst-lip-tint-diy/",
       "heatRequired": true,
@@ -28986,7 +28986,7 @@
     },
     {
       "id": "rose-gold-cosmetic-collection-eyeshadow-lip-shimmer-nail-pol",
-      "name": "Suspending Nail Polish Base & Nourish Lip Balm Base Facial Solution",
+      "name": "Suspending Nail Polish Base & Nourish Lip Balm Base Facial Balm",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/rose-gold-cosmetic-collection-eyeshadow-lip-shimmer-nail-polish/",
       "heatRequired": false,
@@ -29041,7 +29041,7 @@
     },
     {
       "id": "labeling-your-products-lip-balm",
-      "name": "Sweet Almond & White Beeswax Facial Balm",
+      "name": "Sweet Almond Facial Balm",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lip-products/labeling-your-products-lip-balm/",
       "heatRequired": false,
@@ -29063,7 +29063,7 @@
     },
     {
       "id": "classic-heart-melt-pour-soap",
-      "name": "Goat Milk Melt & Pour Soap Base & Clear Melt & Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/classic-heart-melt-pour-soap/",
       "heatRequired": true,
@@ -29092,7 +29092,7 @@
     },
     {
       "id": "uplifting-orange-soap",
-      "name": "Clear Melt And Pour Soap Base & Goat Milk Melt And Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/uplifting-orange-melt-pour-soap/",
       "heatRequired": true,
@@ -29121,7 +29121,7 @@
     },
     {
       "id": "cinnamon-cocoa-melt-pour-soap",
-      "name": "White Melt And Pour Soap Base & Honey Melt And Pour Soap Base Cleansing Bar",
+      "name": "Vanilla Color Stabilizer Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cinnamon-cocoa-melt-pour-soap/",
       "heatRequired": true,
@@ -29154,7 +29154,7 @@
     },
     {
       "id": "alpine-frost-crystal-soap",
-      "name": "Stephenson Ultra Clear Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/alpine-frost-crystal-soap/",
       "heatRequired": true,
@@ -29179,7 +29179,7 @@
     },
     {
       "id": "creamy-coffee-melt-pour-soap",
-      "name": "Goat Milk Melt And Pour Soap Base & Vanilla Color Stabilizer Cleansing Cream",
+      "name": "Vanilla Color Stabilizer Cleansing Cream",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/creamy-coffee-melt-pour-soap-diy/",
       "heatRequired": true,
@@ -29208,7 +29208,7 @@
     },
     {
       "id": "seascape-melt-pour-soap-tutorial",
-      "name": "Clear Melt & Pour Soap Base & White Melt & Pour Soap Base Cleansing Bar",
+      "name": "Vanilla Color Stabilizer Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/seascape-melt-pour-soap-tutorial/",
       "heatRequired": true,
@@ -29241,7 +29241,7 @@
     },
     {
       "id": "sea-sponge-melt-pour-soap-diy",
-      "name": "Clear Melt & Pour Soap Base & Vanilla Color Stabilizer Cleansing Bar",
+      "name": "Vanilla Color Stabilizer Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/sea-sponge-melt-pour-diy/",
       "heatRequired": true,
@@ -29270,7 +29270,7 @@
     },
     {
       "id": "garden-loofah-soap-diy",
-      "name": "Clear Melt & Pour Soap Base & White Melt & Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/garden-loofah-melt-pour-soap-diy/",
       "heatRequired": false,
@@ -29297,7 +29297,7 @@
     },
     {
       "id": "bee-pollen-melt-pour-soap-diy",
-      "name": "Honey Melt And Pour Soap Base & White Melt And Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/bee-pollen-melt-pour-soap-diy/",
       "heatRequired": true,
@@ -29326,7 +29326,7 @@
     },
     {
       "id": "goat-milk-alfalfa-soap-diy",
-      "name": "Goat Milk Melt & Pour Soap Base & Spearmint Essential Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/goat-milk-alfalfa-soap-diy/",
       "heatRequired": true,
@@ -29351,7 +29351,7 @@
     },
     {
       "id": "mini-lemon-poppy-seed-soap-diy",
-      "name": "White Melt & Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lemon-poppy-seed-mini-soap-diy/",
       "heatRequired": true,
@@ -29376,7 +29376,7 @@
     },
     {
       "id": "diy-rosehip-melt-pour-soap",
-      "name": "White Melt & Pour Soap Base & Spray Bottle Cleansing Bar",
+      "name": "Spray Bottle Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-rosehip-melt-pour-soap/",
       "heatRequired": true,
@@ -29409,7 +29409,7 @@
     },
     {
       "id": "candy-corn-soap-tutorial",
-      "name": "Clear Melt & Pour Soap Base & White Melt & Pour Soap Base Cleansing Bar",
+      "name": "Vanilla Color Stabilizer Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/candy-corn-soap-tutorial/",
       "heatRequired": true,
@@ -29442,7 +29442,7 @@
     },
     {
       "id": "caramel-apple-soap-diy",
-      "name": "Clear Melt & Pour Soap Base & White Melt & Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/caramel-apple-soap-diy/",
       "heatRequired": true,
@@ -29470,7 +29470,7 @@
     },
     {
       "id": "gardener-melt-pour-soap-kit",
-      "name": "Goat Milk Melt And Pour Soap Base & Clear Melt & Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/gardeners-melt-pour-soap-kit/",
       "heatRequired": true,
@@ -29495,7 +29495,7 @@
     },
     {
       "id": "sparkling-fig-melt-pour-soap-tutorial",
-      "name": "Honey Melt And Pour Soap Base & Goat Milk Melt And Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/sparkling-fig-melt-pour-soap-tutorial/",
       "heatRequired": true,
@@ -29524,7 +29524,7 @@
     },
     {
       "id": "rose-quartz-melt-pour-soap-tutorial",
-      "name": "Clear Melt & Pour Soap Base & White Melt & Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/rose-quartz-melt-pour-soap-tutorial/",
       "heatRequired": true,
@@ -29549,7 +29549,7 @@
     },
     {
       "id": "diy-turmeric-melt-pour-soap",
-      "name": "Goat Milk Melt And Pour Soap Base & Orange 10x Essential Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-turmeric-melt-pour-soap/",
       "heatRequired": true,
@@ -29574,7 +29574,7 @@
     },
     {
       "id": "lily-rain-melt-and-pour-soap-tutorial",
-      "name": "Clear Melt And Pour Soap Base & White Melt And Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/lily-rain-melt-and-pour-tutorial/",
       "heatRequired": true,
@@ -29603,7 +29603,7 @@
     },
     {
       "id": "diy-rose-clay-milk-soap-bars",
-      "name": "Goat Milk Melt And Pour Soap Base & Clear Melt And Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/diy-rose-clay-milk-soap-bars/",
       "heatRequired": true,
@@ -29632,7 +29632,7 @@
     },
     {
       "id": "animal-melt-pour-soap-tutorial",
-      "name": "White Melt & Pour Soap Base & Clear Melt And Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/animal-melt-pour-soap-tutorial/",
       "heatRequired": true,
@@ -29657,7 +29657,7 @@
     },
     {
       "id": "pure-charcoal-melt-pour-soap-diy",
-      "name": "Aloe Vera Melt And Pour & White Melt And Pour Soap Base Cleansing Bar",
+      "name": "Aloe Vera Melt And Pour Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/pure-charcoal-melt-pour-soap-diy-silicone-mold-sale-starts-today/",
       "heatRequired": true,
@@ -29687,7 +29687,7 @@
     },
     {
       "id": "blueberry-tart-melt-pour-soap-diy",
-      "name": "White Melt And Pour Soap Base & Clear Melt And Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/blueberry-tart-melt-pour-soap-diy/",
       "heatRequired": true,
@@ -29716,7 +29716,7 @@
     },
     {
       "id": "midnight-plum-melt-pour-soap-diy",
-      "name": "Stephenson Ultra Clear Soap Base & Vanilla Color Stabilizer Cleansing Bar",
+      "name": "Vanilla Color Stabilizer Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/midnight-plum-melt-pour-soap-diy/",
       "heatRequired": true,
@@ -29745,7 +29745,7 @@
     },
     {
       "id": "christmas-star-melt-pour-soap-tutorial",
-      "name": "Clear Melt And Pour Soap Base & Vanilla Color Stabilizer Cleansing Bar",
+      "name": "Vanilla Color Stabilizer Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/christmas-star-melt-pour-soap-tutorial/",
       "heatRequired": true,
@@ -29774,7 +29774,7 @@
     },
     {
       "id": "cosmic-cotton-candy-soap-tutorial",
-      "name": "Clear Melt And Pour Soap Base & White Melt And Pour Soap Base Cleansing Bar",
+      "name": "Vanilla Color Stabilizer Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/cosmic-cotton-candy-soap-tutorial/",
       "heatRequired": true,
@@ -29807,7 +29807,7 @@
     },
     {
       "id": "red-berry-melt-pour-soap-tart-tutorial",
-      "name": "Clear Melt & Pour Soap Base & Goat Milk Melt And Pour Base Cleansing Bar",
+      "name": "Goat Milk Melt And Pour Base Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/red-berry-melt-pour-soap-tarts/",
       "heatRequired": true,
@@ -29886,7 +29886,7 @@
     },
     {
       "id": "vermont-maple-melt-pour-soap-diy",
-      "name": "Clear Melt And Pour Soap Base & Vanilla Color Stabilizer Cleansing Bar",
+      "name": "Vanilla Color Stabilizer Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/vermont-maple-melt-pour-soaps/",
       "heatRequired": true,
@@ -29990,7 +29990,7 @@
     },
     {
       "id": "shark-attack-melt-pour-soap-diy",
-      "name": "Stephenson Ultra Clear Soap Base & White Melt And Pour Base Cleansing Bar",
+      "name": "White Melt And Pour Base Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/shark-attack-melt-pour/",
       "heatRequired": true,
@@ -30015,7 +30015,7 @@
     },
     {
       "id": "chamomile-oat-melt-pour-bars-diy",
-      "name": "Stephenson Oatmeal And Shea Melt And Pour & Stephenson Ultra Clear Soap Base Cleansing Solution",
+      "name": "Stephenson Oatmeal And Shea Melt And Pour Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/chamomile-oat-melt-pour-bars/",
       "heatRequired": true,
@@ -30069,7 +30069,7 @@
     },
     {
       "id": "neon-geometric-melt-pour-soap-tutorial",
-      "name": "White Melt And Pour & Clear Melt And Pour Cleansing Bar",
+      "name": "White Melt And Pour & Clear Melt And Pour Cleansing Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/neon-geometric-melt-pour-soap-tutorial/",
       "heatRequired": true,
@@ -30098,7 +30098,7 @@
     },
     {
       "id": "celtic-melt-and-pour-soap-tutorial",
-      "name": "White Melt And Pour & Clear Melt And Pour Cleansing Bar",
+      "name": "White Melt And Pour & Clear Melt And Pour Cleansing Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/celtic-melt-and-pour-soap-tutorial/",
       "heatRequired": true,
@@ -30123,7 +30123,7 @@
     },
     {
       "id": "melt-pour-soap-truffles-tutorial",
-      "name": "Shea Melt And Pour Base & Clear Melt And Pour Base Cleansing Bar",
+      "name": "Shea Melt And Pour Base & Clear Melt And Pour Base Cleansing Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/melt-pour-soap-truffles-tutorial/",
       "heatRequired": true,
@@ -30173,7 +30173,7 @@
     },
     {
       "id": "rose-gold-charcoal-heart-melt-and-pour-soap-tutorial",
-      "name": "Clear Melt And Pour Base & Shea Melt And Pour Base Cleansing Bar",
+      "name": "Clear Melt And Pour Base & Shea Melt And Pour Base Cleansing Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/rose-gold-charcoal-heart-melt-and-pour-soap-tutorial/",
       "heatRequired": true,
@@ -30226,7 +30226,7 @@
     },
     {
       "id": "pumpkin-pie-melt-and-pour-soap",
-      "name": "Goat Milk Melt And Pour Base & Clear Melt And Pour Soap Base Cleansing Bar",
+      "name": "Goat Milk Melt And Pour Base Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/pumpkin-pie-melt-and-pour-soap/",
       "heatRequired": true,
@@ -30392,7 +30392,7 @@
     },
     {
       "id": "mermaid-shell-melt-pour-soap-tutorial",
-      "name": "Clear Melt And Pour & White Melt And Pour Cleansing Bar",
+      "name": "Clear Melt And Pour & White Melt And Pour Cleansing Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/mermaid-shell-melt-pour/",
       "heatRequired": true,
@@ -30442,7 +30442,7 @@
     },
     {
       "id": "sparkling-strawberry-melt-and-pour-bars",
-      "name": "White Melt And Pour Soap Base & Clear Melt And Pour Soap Base Cleansing Solution",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/sparkling-strawberry-melt-pour-bars/",
       "heatRequired": true,
@@ -30546,7 +30546,7 @@
     },
     {
       "id": "domino-soap-video-tutorial",
-      "name": "Honey Melt & Pour Soap* & Goat Milk Melt & Pour Soap Cleansing Bar",
+      "name": "Honey Melt & Pour Soap & Goat Milk Melt & Pour Soap Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/domino-soap-video-tutorial/",
       "heatRequired": false,
@@ -30572,7 +30572,7 @@
     },
     {
       "id": "fall-leaves-melt-pour-soap-tutorial",
-      "name": "Clear Melt And Pour Base & White Melt And Pour Base Cleansing Bar",
+      "name": "Clear Melt And Pour Base & White Melt And Pour Base Cleansing Solution",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/fall-colors-melt-pour-project/",
       "heatRequired": true,
@@ -30601,7 +30601,7 @@
     },
     {
       "id": "bicycle-melt-pour-project",
-      "name": "Clear Melt & Pour Soap Base & White Melt & Pour Soap Base Cleansing Solution",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/bicycle-melt-pour-project/",
       "heatRequired": true,
@@ -30626,7 +30626,7 @@
     },
     {
       "id": "intergalactic-planetary-melt-and-pour-soap-tutorial",
-      "name": "Clear Melt And Pour Soap Base & White Melt And Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/intergalactic-planetary-melt-and-pour-soap-tutorial/",
       "heatRequired": true,
@@ -30659,7 +30659,7 @@
     },
     {
       "id": "how-to-make-petit-four-soap-video",
-      "name": "White M&p Soap Base & Clear M&p Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/how-to-make-petit-four-soap-video/",
       "heatRequired": false,
@@ -30681,7 +30681,7 @@
     },
     {
       "id": "rubber-ducky-soap-tutorial",
-      "name": "Clear Soap Base & White Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/easter-ducky-soap/",
       "heatRequired": true,
@@ -30706,7 +30706,7 @@
     },
     {
       "id": "victorian-swirl-3d-melt-pour-soap-tutorial",
-      "name": "Clear Melt & Pour Soap Base & White Melt & Pour Soap Base Cleansing Bar",
+      "name": "Cleansing Bar",
       "source": "soapqueen.com",
       "sourceUrl": "https://soapqueen.com/bath-and-body-tutorials/melt-and-pour-soap/3d-goggles-not-required-tutorial/",
       "heatRequired": true,
@@ -30760,7 +30760,7 @@
     },
     {
       "id": "sleepy-time-pillow-spray",
-      "name": "Lavender Essential & Chamomile Essential Body Solution",
+      "name": "Body Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/sleepy-time-pillow-spray/",
       "heatRequired": false,
@@ -30785,7 +30785,7 @@
     },
     {
       "id": "healing-herb-infused-massage-oil",
-      "name": "Tamanu Body Oil",
+      "name": "Tamanu & Vitamin E Body Oil",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/healing-herb-infused-massage-oil/",
       "heatRequired": false,
@@ -30875,7 +30875,7 @@
     },
     {
       "id": "diy-eyebrow-fillerfixative",
-      "name": "Jojoba & Beeswax Cosmetic Solution",
+      "name": "Jojoba Cosmetic Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/diy-eyebrow-filler-fixative/",
       "heatRequired": true,
@@ -30898,7 +30898,7 @@
     },
     {
       "id": "diy-benefit-eye-bright",
-      "name": "Jojoba & Beeswax Cosmetic Solution",
+      "name": "Jojoba Cosmetic Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/diy-benefit-eye-bright/",
       "heatRequired": true,
@@ -30921,7 +30921,7 @@
     },
     {
       "id": "simple-eyelash-serum",
-      "name": "Beeswax Cosmetic Serum",
+      "name": "Vitamin E Cosmetic Serum",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/simple-eyelash-serum/",
       "heatRequired": true,
@@ -31040,7 +31040,7 @@
     },
     {
       "id": "lemony-cuticle-butter",
-      "name": "Shea & Avocado Butter",
+      "name": "Shea & Rice Bran Butter",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/lemony-cuticle-butter/",
       "heatRequired": false,
@@ -31128,7 +31128,7 @@
     },
     {
       "id": "diy-hair-serum",
-      "name": "Camellia & Castor Serum",
+      "name": "Aloe Vera & Camellia Serum",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/diy-hair-serum/",
       "heatRequired": false,
@@ -31236,7 +31236,7 @@
     },
     {
       "id": "intense-facial-moisturizer",
-      "name": "Cupuacu & Avocado Solution",
+      "name": "Vitamin E & Cupuacu Solution",
       "source": "humblebeeandme.com",
       "sourceUrl": "https://www.humblebeeandme.com/intense-facial-moisturizer/",
       "heatRequired": true,
