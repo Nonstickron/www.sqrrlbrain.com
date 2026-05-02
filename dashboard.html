@@ -252,11 +252,43 @@
     .section-title { font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--ink); line-height: 1; letter-spacing: -.015em; }
     .section-title .em { font-style: italic; color: var(--accent); }
 
+    .section-header-right { display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; }
+    .add-btn { font-family: var(--mono); font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--paper); background: var(--accent); border: 1px solid var(--accent); padding: .55rem 1rem; cursor: pointer; transition: all .15s; }
+    .add-btn:hover { background: var(--ink); border-color: var(--ink); }
+
     .sort-toggle { display: flex; gap: 0; border: 1px solid var(--line-hi); }
     .sort-btn { font-family: var(--mono); font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--brown-mid); background: var(--paper); border: none; padding: .5rem .9rem; cursor: pointer; transition: all .15s; }
     .sort-btn + .sort-btn { border-left: 1px solid var(--line-hi); }
     .sort-btn:hover { color: var(--accent); }
     .sort-btn.active { background: var(--accent); color: var(--paper); }
+
+    /* MODAL */
+    .modal { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 1rem; }
+    .modal[hidden] { display: none; }
+    .modal-bg { position: absolute; inset: 0; background: rgba(58,26,0,.45); backdrop-filter: blur(2px); }
+    .modal-card { position: relative; background: var(--paper); border: 1px solid var(--line-hi); padding: 2rem; max-width: 560px; width: 100%; max-height: 88vh; overflow-y: auto; box-shadow: 0 24px 70px rgba(58,26,0,.18); }
+    .modal-title { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: var(--ink); margin-bottom: 1.4rem; letter-spacing: -.01em; }
+    .modal-title .em { font-style: italic; color: var(--accent); }
+    .modal-row { display: flex; flex-direction: column; gap: .35rem; margin-bottom: 1rem; }
+    .modal-label { font-family: var(--mono); font-size: .58rem; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); }
+    .modal-row input[type="text"], .modal-row select, .modal-row textarea {
+      background: var(--warm); border: 1px solid var(--line-hi); color: var(--ink); font-family: var(--sans); font-size: .85rem; padding: .55rem .7rem; outline: none; transition: border-color .15s, box-shadow .15s; width: 100%;
+    }
+    .modal-row textarea { font-family: var(--mono); font-size: .78rem; line-height: 1.6; resize: vertical; min-height: 70px; }
+    .modal-row input:focus, .modal-row select:focus, .modal-row textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .modal-actions { display: flex; gap: .8rem; justify-content: flex-end; margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+    .modal-actions button { font-family: var(--mono); font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; padding: .55rem 1.1rem; cursor: pointer; transition: all .15s; }
+    .modal-cancel { color: var(--brown-mid); background: var(--paper); border: 1px solid var(--line-hi); }
+    .modal-cancel:hover { color: var(--ink); border-color: var(--ink); }
+    .modal-save { color: var(--paper); background: var(--accent); border: 1px solid var(--accent); }
+    .modal-save:hover { background: var(--ink); border-color: var(--ink); }
+
+    /* CARD ACTIONS (Edit / Delete on user-added cards) */
+    .card-actions { display: flex; gap: .6rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+    .card-action-btn { font-family: var(--mono); font-size: .56rem; letter-spacing: .14em; text-transform: uppercase; color: var(--brown-mid); background: var(--paper); border: 1px solid var(--line-hi); padding: .35rem .8rem; cursor: pointer; transition: all .15s; }
+    .card-action-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .card-action-btn.delete:hover { color: var(--paper); background: var(--urgent); border-color: var(--urgent); }
+    .user-badge { font-family: var(--mono); font-size: .5rem; letter-spacing: .14em; text-transform: uppercase; color: var(--brown-light); background: var(--warm); padding: .15rem .4rem; margin-left: .5rem; }
 
     .household-body { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 0; align-items: start; padding: 0 2.4rem 4rem; }
     .household-main { padding: 0; min-width: 0; }
@@ -384,9 +416,12 @@
         <span class="section-eyebrow">Personal</span>
         <h2 class="section-title">Household &amp; <span class="em">Hobbies</span></h2>
       </div>
-      <div class="sort-toggle" id="household-sort">
-        <button class="sort-btn active" data-sort="category">Category</button>
-        <button class="sort-btn" data-sort="recent">Recent</button>
+      <div class="section-header-right">
+        <button class="add-btn" id="household-add-btn">+ Add Project</button>
+        <div class="sort-toggle" id="household-sort">
+          <button class="sort-btn active" data-sort="category">Category</button>
+          <button class="sort-btn" data-sort="recent">Recent</button>
+        </div>
       </div>
     </div>
     <div class="stats-bar" id="household-stats" style="background:var(--paper);"></div>
@@ -402,6 +437,51 @@
     <p>&copy; 2026 Sqrrlbrain Studio LLC</p>
     <a href="/projects.html">Projects</a>
   </footer>
+
+  <div class="modal" id="project-modal" hidden>
+    <div class="modal-bg" id="modal-bg"></div>
+    <div class="modal-card">
+      <div class="modal-title" id="modal-title">Add <span class="em">Project</span></div>
+      <div class="modal-row">
+        <label class="modal-label" for="m-name">Name</label>
+        <input id="m-name" type="text" placeholder="e.g. Refinish dining table" />
+      </div>
+      <div class="modal-row">
+        <label class="modal-label" for="m-subcat">Category</label>
+        <select id="m-subcat">
+          <option value="Woodworking">Woodworking</option>
+          <option value="Crucible">Crucible</option>
+          <option value="Repair">Repair</option>
+          <option value="Maintenance">Maintenance</option>
+          <option value="Home">Home</option>
+        </select>
+      </div>
+      <div class="modal-row">
+        <label class="modal-label" for="m-status">Status</label>
+        <select id="m-status">
+          <option value="todo">Todo</option>
+          <option value="active">Active</option>
+          <option value="indev">In Dev</option>
+          <option value="blocked">Blocked</option>
+          <option value="urgent">Urgent</option>
+          <option value="concept">Concept</option>
+          <option value="shelved">Shelved</option>
+        </select>
+      </div>
+      <div class="modal-row">
+        <label class="modal-label" for="m-summary">Summary</label>
+        <textarea id="m-summary" placeholder="One or two sentences"></textarea>
+      </div>
+      <div class="modal-row">
+        <label class="modal-label" for="m-steps">Steps (optional, one per line)</label>
+        <textarea id="m-steps" placeholder="Sand top&#10;Apply oil finish&#10;Reattach legs"></textarea>
+      </div>
+      <div class="modal-actions">
+        <button class="modal-cancel" id="m-cancel">Cancel</button>
+        <button class="modal-save" id="m-save">Save</button>
+      </div>
+    </div>
+  </div>
 
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
@@ -602,15 +682,30 @@
       blockers: [], updated: '2026-05-03' }
   ];
 
-  // Apply localStorage chore overrides (Done button persists across reloads)
-  const HOUSEHOLD = HOUSEHOLD_RAW.map(p => {
-    const overrideRaw = localStorage.getItem('chore_state_' + p.id);
-    if (!overrideRaw) return p;
-    try {
-      const o = JSON.parse(overrideRaw);
-      return { ...p, status: o.status || p.status, statusLabel: o.statusLabel || p.statusLabel, updated: o.updated || p.updated };
-    } catch { return p; }
-  });
+  // ─── HOUSEHOLD: user-added (CRUD) ─────────────────────────────────────────
+  const CUSTOM_KEY = 'sqrrl-dashboard-household-custom';
+  function loadCustom() { try { return JSON.parse(localStorage.getItem(CUSTOM_KEY) || '[]'); } catch { return []; } }
+  function saveCustom() { localStorage.setItem(CUSTOM_KEY, JSON.stringify(HOUSEHOLD_CUSTOM)); }
+  let HOUSEHOLD_CUSTOM = loadCustom();
+
+  // Compute the effective household list: seeded + custom, with chore overrides applied
+  function computeHousehold() {
+    const all = [...HOUSEHOLD_RAW, ...HOUSEHOLD_CUSTOM];
+    return all.map(p => {
+      const overrideRaw = localStorage.getItem('chore_state_' + p.id);
+      if (!overrideRaw) return p;
+      try {
+        const o = JSON.parse(overrideRaw);
+        return { ...p, status: o.status || p.status, statusLabel: o.statusLabel || p.statusLabel, updated: o.updated || p.updated };
+      } catch { return p; }
+    });
+  }
+  let HOUSEHOLD = computeHousehold();
+
+  function refreshHousehold() {
+    HOUSEHOLD = computeHousehold();
+    renderHouseholdSection();
+  }
 
   const SUBCATEGORY_ORDER = ['Woodworking','Crucible','Repair','Maintenance','Home'];
 
@@ -699,7 +794,9 @@
     card.style.cssText = '--status-color:' + color + ';animation-delay:' + (index * 0.05) + 's';
 
     const top = el('div', 'card-top');
-    ap(top, el('span', 'card-category', p.category), buildBadge(p.status, p.statusLabel, false));
+    const catWrap = el('span', 'card-category', p.category);
+    if (p.userAdded) catWrap.appendChild(el('span', 'user-badge', 'YOURS'));
+    ap(top, catWrap, buildBadge(p.status, p.statusLabel, false));
 
     const name = el('div', 'card-name', p.name);
     const summary = el('div', 'card-summary', p.summary);
@@ -781,6 +878,16 @@
     ap(nFooter, nStatus, processBtn);
     ap(notesSec, notesLbl, textarea, nFooter);
     inner.appendChild(notesSec);
+
+    if (p.userAdded) {
+      const actionsRow = el('div', 'card-actions');
+      const editBtn = el('button', 'card-action-btn', 'Edit');
+      const delBtn  = el('button', 'card-action-btn delete', 'Delete');
+      editBtn.addEventListener('click', e => { e.stopPropagation(); openProjectModal('edit', p); });
+      delBtn.addEventListener('click', e => { e.stopPropagation(); deleteProject(p.id); });
+      ap(actionsRow, editBtn, delBtn);
+      inner.appendChild(actionsRow);
+    }
 
     details.appendChild(inner);
     ap(card, top, name, summary, footer, details);
@@ -1037,6 +1144,86 @@
     });
   }
 
+  // ─── PROJECT MODAL (Add / Edit / Delete on user-added cards) ─────────────
+  function openProjectModal(mode, project) {
+    const modal = document.getElementById('project-modal');
+    const title = document.getElementById('modal-title');
+    clear(title);
+    title.appendChild(document.createTextNode(mode === 'create' ? 'Add ' : 'Edit '));
+    const em = el('span', 'em', 'Project');
+    title.appendChild(em);
+    document.getElementById('m-name').value    = project ? project.name : '';
+    document.getElementById('m-subcat').value  = project ? project.subCategory : 'Woodworking';
+    document.getElementById('m-status').value  = project ? project.status : 'todo';
+    document.getElementById('m-summary').value = project ? (project.summary || '') : '';
+    document.getElementById('m-steps').value   = project && project.steps ? project.steps.join('\n') : '';
+    modal.dataset.mode   = mode;
+    modal.dataset.editId = project ? project.id : '';
+    modal.hidden = false;
+    setTimeout(() => document.getElementById('m-name').focus(), 50);
+  }
+  function closeProjectModal() {
+    document.getElementById('project-modal').hidden = true;
+  }
+  function saveProjectModal() {
+    const modal = document.getElementById('project-modal');
+    const mode    = modal.dataset.mode;
+    const editId  = modal.dataset.editId;
+    const name    = document.getElementById('m-name').value.trim();
+    if (!name) { document.getElementById('m-name').focus(); return; }
+    const subCategory = document.getElementById('m-subcat').value;
+    const status      = document.getElementById('m-status').value;
+    const statusLabel = (STATUS_LABELS[status] || status).toUpperCase();
+    const summary     = document.getElementById('m-summary').value.trim();
+    const stepsText   = document.getElementById('m-steps').value;
+    const steps       = stepsText.split('\n').map(s => s.trim()).filter(Boolean);
+    const today       = new Date().toISOString().slice(0, 10);
+
+    if (mode === 'create') {
+      const id = 'h-custom-' + Date.now();
+      HOUSEHOLD_CUSTOM.push({
+        id, name, category: subCategory, subCategory,
+        status, statusLabel, summary, steps, blockers: [],
+        updated: today, userAdded: true
+      });
+    } else {
+      const idx = HOUSEHOLD_CUSTOM.findIndex(p => p.id === editId);
+      if (idx >= 0) {
+        HOUSEHOLD_CUSTOM[idx] = {
+          ...HOUSEHOLD_CUSTOM[idx],
+          name, category: subCategory, subCategory,
+          status, statusLabel, summary, steps, updated: today
+        };
+      }
+    }
+    saveCustom();
+    closeProjectModal();
+    refreshHousehold();
+  }
+  function deleteProject(id) {
+    const target = HOUSEHOLD_CUSTOM.find(p => p.id === id);
+    if (!target) return;
+    if (!confirm('Delete "' + target.name + '"? This cannot be undone.')) return;
+    HOUSEHOLD_CUSTOM = HOUSEHOLD_CUSTOM.filter(p => p.id !== id);
+    saveCustom();
+    // Also clear any notes the user wrote on this project
+    localStorage.removeItem('notes_' + id);
+    refreshHousehold();
+  }
+  function wireProjectModal() {
+    const addBtn = document.getElementById('household-add-btn');
+    if (addBtn) addBtn.addEventListener('click', () => openProjectModal('create', null));
+    document.getElementById('m-cancel').addEventListener('click', closeProjectModal);
+    document.getElementById('modal-bg').addEventListener('click', closeProjectModal);
+    document.getElementById('m-save').addEventListener('click', saveProjectModal);
+    document.addEventListener('keydown', e => {
+      const modal = document.getElementById('project-modal');
+      if (modal.hidden) return;
+      if (e.key === 'Escape') closeProjectModal();
+      if (e.key === 'Enter' && (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT')) saveProjectModal();
+    });
+  }
+
   // ─── LIVE CLOCK ───────────────────────────────────────────────────────────
   function updateClock() {
     const now = new Date();
@@ -1055,6 +1242,7 @@
   renderHouseholdSection();
   renderShopping('shopping-list');
   wireSortToggle();
+  wireProjectModal();
   SqrrlAuth.check();
   </script>
 </body>
