@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Sqrrlbrain Studio</title>
+  <meta name="description" content="Get in touch with Sqrrlbrain Studio LLC. Send a message about studio inquiries, app support, or partnership questions." />
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:         #3a1a00;
+      --brown-mid:   #7a4520;
+      --brown-light: #b88c5a;
+      --paper:       #faf6f0;
+      --warm:        #f2ebe0;
+      --rule:        rgba(58,26,0,.1);
+      --rule-soft:   rgba(58,26,0,.05);
+      --error:       #8b2a18;
+      --success:     #386038;
+      --mono:        'DM Mono', monospace;
+      --serif:       'Playfair Display', serif;
+      --sans:        'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .logo-wrap img { height: 46px; width: auto; display: block; }
+    nav { display: flex; gap: 1.6rem; }
+    nav a {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      text-decoration: none;
+    }
+    nav a:hover { color: var(--ink); }
+
+    .page-wrap {
+      max-width: 64ch;
+      margin: 0 auto;
+      padding: 5rem 2rem 7rem;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1.2rem;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      margin-bottom: .6rem;
+    }
+    .lede {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--brown-mid);
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      margin-bottom: 3rem;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    label {
+      font-family: var(--mono);
+      font-size: .66rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      padding: .85rem 1rem;
+      border-radius: 0;
+      transition: border-color .15s;
+      width: 100%;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--brown-mid);
+    }
+    textarea { resize: vertical; min-height: 9em; line-height: 1.6; }
+
+    /* Honeypot — visually hidden but accessible to bots */
+    .hp-field {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    button[type="submit"] {
+      align-self: flex-start;
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--paper);
+      background: var(--ink);
+      border: none;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    button[type="submit"]:hover { background: var(--brown-mid); }
+    button[type="submit"]:disabled {
+      background: var(--brown-light);
+      cursor: not-allowed;
+    }
+
+    .status {
+      font-family: var(--mono);
+      font-size: .76rem;
+      letter-spacing: .04em;
+      line-height: 1.5;
+      margin-top: .6rem;
+      min-height: 1.2em;
+    }
+    .status.error   { color: var(--error); }
+    .status.success { color: var(--success); }
+
+    .fallback {
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule-soft);
+      font-size: .92rem;
+      line-height: 1.7;
+      color: var(--brown-mid);
+    }
+    .fallback a {
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: .9rem;
+      letter-spacing: .03em;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 3rem;
+      border-top: 1px solid var(--rule);
+    }
+    footer p, footer a {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .1em;
+      color: var(--brown-light);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--ink); }
+
+    @media (max-width: 760px) {
+      header { padding: 1.2rem 1.5rem; }
+      .page-wrap { padding: 3rem 1.5rem 4rem; }
+      footer { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-wrap">
+      <a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/support.html">Support</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <div class="page-wrap">
+    <p class="eyebrow">Contact</p>
+    <h1>Send a message.</h1>
+    <p class="lede">Sqrrlbrain Studio is a small independent practice. Your message goes directly to Ronald Goodrich. We aim to respond within two business days.</p>
+
+    <form id="contact-form" novalidate>
+      <div class="field">
+        <label for="cf-name">Your name</label>
+        <input id="cf-name" name="name" type="text" required maxlength="100" autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label for="cf-email">Email</label>
+        <input id="cf-email" name="email" type="email" required maxlength="200" autocomplete="email" />
+      </div>
+
+      <div class="field">
+        <label for="cf-subject">Subject (optional)</label>
+        <input id="cf-subject" name="subject" type="text" maxlength="200" />
+      </div>
+
+      <div class="field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" required maxlength="5000" rows="8"></textarea>
+      </div>
+
+      <div class="hp-field" aria-hidden="true">
+        <label for="cf-website">Website</label>
+        <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <button type="submit" id="cf-submit">Send message</button>
+      <p class="status" id="cf-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="fallback">
+      <p>Prefer email? Reach us at <a href="mailto:hello@sqrrlbrain.com">hello@sqrrlbrain.com</a>.</p>
+      <p style="margin-top:.6rem;font-size:.85rem;">Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    <img src="images/logo-website.svg" alt="Sqrrlbrain.com" style="height:28px;width:auto;opacity:.45;" />
+    <span><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/support.html">Support</a></span>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script>
+    const SQRRL_CONFIG = {
+      apiKey: "AIzaSyCDf7dzCXackD7j21DQ-BxNVwiMmn5o2ng",
+      authDomain: "sqrrlbrain-billing.firebaseapp.com",
+      projectId: "sqrrlbrain-billing",
+      storageBucket: "sqrrlbrain-billing.firebasestorage.app",
+      messagingSenderId: "673586334045",
+      appId: "1:673586334045:web:910fcdf3fe60afc88540b4"
+    };
+    if (!firebase.apps.length) firebase.initializeApp(SQRRL_CONFIG);
+    const db = firebase.firestore();
+
+    const form     = document.getElementById('contact-form');
+    const submit   = document.getElementById('cf-submit');
+    const status   = document.getElementById('cf-status');
+    const RATE_KEY = 'sqrrl_contact_last';
+    const RATE_MS  = 60_000;
+
+    function setStatus(msg, kind) {
+      status.textContent = msg;
+      status.className = 'status' + (kind ? ' ' + kind : '');
+    }
+
+    function isValidEmail(v) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      setStatus('', '');
+
+      const name    = document.getElementById('cf-name').value.trim();
+      const email   = document.getElementById('cf-email').value.trim();
+      const subject = document.getElementById('cf-subject').value.trim();
+      const message = document.getElementById('cf-message').value.trim();
+      const honey   = document.getElementById('cf-website').value;
+
+      if (honey) {
+        setStatus('Message received. We will respond within two business days.', 'success');
+        form.reset();
+        return;
+      }
+
+      if (!name || name.length > 100) {
+        setStatus('Please enter your name.', 'error');
+        return;
+      }
+      if (!email || !isValidEmail(email) || email.length > 200) {
+        setStatus('Please enter a valid email address.', 'error');
+        return;
+      }
+      if (!message || message.length > 5000) {
+        setStatus('Please enter a message (up to 5000 characters).', 'error');
+        return;
+      }
+      if (subject.length > 200) {
+        setStatus('Subject is too long.', 'error');
+        return;
+      }
+
+      const last = parseInt(localStorage.getItem(RATE_KEY) || '0', 10);
+      if (Date.now() - last < RATE_MS) {
+        setStatus('Please wait a moment before sending another message.', 'error');
+        return;
+      }
+
+      submit.disabled = true;
+      setStatus('Sending...', '');
+
+      try {
+        await db.collection('contact_messages').add({
+          name,
+          email,
+          subject: subject || null,
+          message,
+          created_at: firebase.firestore.FieldValue.serverTimestamp(),
+          user_agent: navigator.userAgent.slice(0, 500),
+          page_referrer: (document.referrer || '').slice(0, 500)
+        });
+        localStorage.setItem(RATE_KEY, String(Date.now()));
+        form.reset();
+        setStatus('Message received. We will respond within two business days at the email address you provided.', 'success');
+      } catch (err) {
+        console.error(err);
+        setStatus('Sorry, something went wrong sending your message. Please email hello@sqrrlbrain.com directly.', 'error');
+      } finally {
+        submit.disabled = false;
+      }
+    });
+  </script>
+
+</body>
+</html>

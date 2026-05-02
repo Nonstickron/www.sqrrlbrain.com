@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Sqrrlbrain Studio</title>
+  <meta name="description" content="Support and contact information for Sqrrlbrain Studio LLC and our apps including Inkwell." />
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:         #3a1a00;
+      --brown-mid:   #7a4520;
+      --brown-light: #b88c5a;
+      --paper:       #faf6f0;
+      --warm:        #f2ebe0;
+      --mono:        'DM Mono', monospace;
+      --serif:       'Playfair Display', serif;
+      --sans:        'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      border-bottom: 1px solid rgba(58,26,0,.1);
+    }
+
+    .logo-wrap img { height: 46px; width: auto; display: block; }
+
+    nav { display: flex; gap: 1.6rem; }
+    nav a {
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      text-decoration: none;
+    }
+    nav a:hover { color: var(--ink); }
+
+    .page-wrap {
+      max-width: 72ch;
+      margin: 0 auto;
+      padding: 5rem 2rem 7rem;
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      margin-bottom: .6rem;
+    }
+
+    .lede {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--brown-mid);
+      margin-bottom: 3.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(58,26,0,.08);
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2.8rem;
+      margin-bottom: .8rem;
+      color: var(--ink);
+    }
+
+    p, li {
+      font-size: .97rem;
+      line-height: 1.82;
+      color: var(--brown-mid);
+      margin-bottom: .8rem;
+    }
+
+    ul {
+      padding-left: 1.4rem;
+      margin-bottom: .8rem;
+    }
+
+    a { color: var(--brown-mid); }
+    a:hover { color: var(--ink); }
+
+    .contact-block {
+      background: var(--warm);
+      padding: 1.4rem 1.6rem;
+      margin: 1.2rem 0 1.6rem;
+      border-left: 3px solid var(--brown-mid);
+    }
+    .contact-block a {
+      font-family: var(--mono);
+      font-size: .85rem;
+      letter-spacing: .04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 3rem;
+      border-top: 1px solid rgba(58,26,0,.1);
+    }
+    footer p, footer a {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .1em;
+      color: var(--brown-light);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--ink); }
+    .footer-links { display: flex; gap: 1.2rem; }
+
+    @media (max-width: 760px) {
+      header { padding: 1.2rem 1.5rem; }
+      footer { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-wrap">
+      <a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </header>
+
+  <div class="page-wrap">
+    <p class="eyebrow">Support</p>
+    <h1>Support &amp; Contact</h1>
+    <p class="lede">Sqrrlbrain Studio is a small independent practice. Support requests are read and answered by Ronald Goodrich directly. We aim to respond to every inquiry within two business days.</p>
+
+    <h2>General contact</h2>
+    <p>For studio inquiries, partnership questions, press, or anything that isn't tied to a specific app:</p>
+    <div class="contact-block">
+      <a href="mailto:hello@sqrrlbrain.com">hello@sqrrlbrain.com</a>
+    </div>
+    <p>Prefer a form? Use the <a href="/contact.html">contact page</a>.</p>
+    <p>Mailing address &mdash; Sqrrlbrain Studio LLC, Edgewater, Florida.</p>
+
+    <h2>App support</h2>
+
+    <h2>Inkwell</h2>
+    <p>For help with Inkwell &mdash; bug reports, account questions, story content concerns, or feature feedback &mdash; reach us at the same address:</p>
+    <div class="contact-block">
+      <a href="mailto:hello@sqrrlbrain.com?subject=Inkwell%20Support">hello@sqrrlbrain.com</a>
+    </div>
+    <p>To help us resolve issues quickly, please include:</p>
+    <ul>
+      <li>The version of Inkwell you're using (Settings &rarr; About)</li>
+      <li>Your device and OS version (e.g. iPhone 14, iOS 18.2)</li>
+      <li>A short description of what happened and what you expected to happen</li>
+      <li>Steps to reproduce, if you can</li>
+    </ul>
+
+    <p><strong>Other apps.</strong> Support contacts for additional Sqrrlbrain Studio apps will be added to this page as they ship.</p>
+
+    <h2>Response time</h2>
+    <p>We aim to acknowledge every support email within two business days. Complex issues (especially anything involving account recovery or content investigation) may take longer to fully resolve, but we will keep you updated.</p>
+
+    <h2>Privacy questions</h2>
+    <p>For questions specifically about how we handle your data, see our <a href="/privacy.html">Privacy Policy</a> or email the address above.</p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    <img src="images/logo-website.svg" alt="Sqrrlbrain.com" style="height:28px;width:auto;opacity:.45;" />
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/support.html">Support</a>
+    </div>
+  </footer>
+
+</body>
+</html>
