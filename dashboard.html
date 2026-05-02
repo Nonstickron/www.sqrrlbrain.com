@@ -1235,6 +1235,125 @@
   updateClock();
   setInterval(updateClock, 1000);
 
+  // ─── FIRESTORE SYNC (cross-device) ────────────────────────────────────────
+  // Pull-on-load + push-on-change. Single doc per user at dashboard_state/<email>.
+  // Sets up after auth confirms; re-pulls when the tab regains focus.
+  const SYNC_DEBOUNCE_MS = 1500;
+  const SYNC_LS_PREFIX_RE = /^(notes_|chore_state_)/;
+  const SYNC_LS_KEYS = new Set([CUSTOM_KEY, SHOPPING_KEY]);
+  function isSyncedKey(k) { return SYNC_LS_PREFIX_RE.test(k) || SYNC_LS_KEYS.has(k); }
+
+  // Capture originals before monkey-patching so internal sync writes don't recurse
+  const _origSet    = localStorage.setItem.bind(localStorage);
+  const _origRemove = localStorage.removeItem.bind(localStorage);
+  let _syncDoc = null;
+  let _syncDebounce = null;
+  let _syncReady = false;       // true after first successful pull; gates push
+  let _syncSuppress = false;    // true while applyRemoteState is writing
+
+  function gatherLocalState() {
+    const notes = {};
+    const chores = {};
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k.startsWith('notes_')) notes[k.slice(6)] = localStorage.getItem(k);
+      else if (k.startsWith('chore_state_')) {
+        try { chores[k.slice(12)] = JSON.parse(localStorage.getItem(k)); } catch {}
+      }
+    }
+    let household_custom = [];
+    try { household_custom = JSON.parse(localStorage.getItem(CUSTOM_KEY) || '[]'); } catch {}
+    let shopping = [];
+    try { shopping = JSON.parse(localStorage.getItem(SHOPPING_KEY) || '[]'); } catch {}
+    return { notes, chores, household_custom, shopping };
+  }
+
+  function applyRemoteState(data) {
+    if (!data) return;
+    _syncSuppress = true;
+    try {
+      // Clear existing synced keys so removed items propagate
+      const toRemove = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (isSyncedKey(k)) toRemove.push(k);
+      }
+      toRemove.forEach(k => _origRemove(k));
+
+      if (data.notes) Object.entries(data.notes).forEach(([id, val]) => _origSet('notes_' + id, val));
+      if (data.chores) Object.entries(data.chores).forEach(([id, val]) => _origSet('chore_state_' + id, JSON.stringify(val)));
+      if (data.household_custom) _origSet(CUSTOM_KEY, JSON.stringify(data.household_custom));
+      if (data.shopping) _origSet(SHOPPING_KEY, JSON.stringify(data.shopping));
+    } finally {
+      _syncSuppress = false;
+    }
+  }
+
+  async function pullState() {
+    if (!_syncDoc) return;
+    try {
+      const snap = await _syncDoc.get();
+      if (snap.exists) applyRemoteState(snap.data());
+      _syncReady = true;
+      // Refresh derived in-memory state and re-render
+      HOUSEHOLD_CUSTOM = loadCustom();
+      refreshHousehold();
+      renderShopping('shopping-list');
+      renderGrid('projects-grid', PROJECTS, {});
+    } catch (e) {
+      console.warn('Dashboard sync pull failed:', e && e.message);
+    }
+  }
+
+  function pushState() {
+    if (!_syncDoc || !_syncReady || _syncSuppress) return;
+    clearTimeout(_syncDebounce);
+    _syncDebounce = setTimeout(async () => {
+      try {
+        const data = gatherLocalState();
+        data.updatedAt = firebase.firestore.FieldValue.serverTimestamp();
+        await _syncDoc.set(data);
+      } catch (e) {
+        console.warn('Dashboard sync push failed:', e && e.message);
+      }
+    }, SYNC_DEBOUNCE_MS);
+  }
+
+  // Monkey-patch localStorage write paths so any code that touches a synced key
+  // automatically queues a Firestore push. Non-synced keys are unaffected.
+  localStorage.setItem = (k, v) => {
+    _origSet(k, v);
+    if (isSyncedKey(k)) pushState();
+  };
+  localStorage.removeItem = (k) => {
+    _origRemove(k);
+    if (isSyncedKey(k)) pushState();
+  };
+
+  function initSync() {
+    if (typeof firebase === 'undefined' || !firebase.firestore) return;
+    if (!firebase.apps || !firebase.apps.length) {
+      // Auth path didn't initialize Firebase — bail rather than throw
+      console.warn('Dashboard sync: Firebase app not initialized; skipping');
+      return;
+    }
+    firebase.auth().onAuthStateChanged(async user => {
+      if (!user || !user.email) {
+        _syncDoc = null;
+        _syncReady = false;
+        return;
+      }
+      const ref = firebase.firestore().collection('dashboard_state').doc(user.email);
+      if (_syncDoc && _syncDoc.path === ref.path) return;
+      _syncDoc = ref;
+      _syncReady = false;
+      await pullState();
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && _syncDoc) pullState();
+    });
+  }
+
   // ─── BOOT ─────────────────────────────────────────────────────────────────
   renderStats('stats-bar', PROJECTS, { tools: true });
   renderSummary();
@@ -1244,6 +1363,7 @@
   wireSortToggle();
   wireProjectModal();
   SqrrlAuth.check();
+  initSync();
   </script>
 </body>
 </html>
