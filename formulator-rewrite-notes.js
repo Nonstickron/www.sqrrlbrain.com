@@ -1,109 +1,110 @@
-// formulator-rewrite-notes.js — rewrite scraped/personal recipe notes via Gemini CLI
-// Rewrites notes to be clinical: substitutions, technique tips, storage, cautions.
-// Usage: node formulator-rewrite-notes.js
-// Skips recipes already marked notesRewritten:true unless --force flag is passed.
-
 import fs from 'fs';
 import path from 'path';
-import { execFileSync } from 'child_process';
+import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_FILE  = path.join(__dirname, 'formulator-data.json');
-const DELAY_MS   = 800;
-const BATCH_SIZE = 50;
-const FORCE      = process.argv.includes('--force');
+const DATA_FILE = path.join(__dirname, 'formulator-data.json');
+const API_KEY = process.env.GOOGLE_API_KEY;
 
-const PROMPT_PREFIX = `You are cleaning up recipe notes for a professional cosmetic formulation database.
+if (!API_KEY) {
+  console.error('GOOGLE_API_KEY not set');
+  process.exit(1);
+}
 
-Rewrite the following notes to be brief and clinical. Keep only:
-- Substitution suggestions (ingredient swaps and why)
-- Technique tips (mixing order, temperatures, timing)
-- Storage or preservation notes
-- Skin type or sensitivity cautions
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
+const PROMPT_PREFIX = `Rewrite the following DIY skincare recipe notes to be brief and clinical.
 Rules:
-- Use neutral, third-person, factual language
-- No first person (I, we), no enthusiasm (love, great, amazing, beautiful)
-- No references to the source blog, author, or website
-- Strip HTML entities and tags if present
-- If there is no useful technical information, output only the word: none
-- Output ONLY the rewritten notes, nothing else. 2-4 sentences maximum.
+- Keep ONLY: substitution suggestions, technique tips (mixing order, temperatures, timing), storage/preservation notes, skin type cautions.
+- Strip ALL: personality, first person ("I"), enthusiasm (love/amazing/great/beautiful), blog filler, and source-site references.
+- Use 2–4 sentences max.
+- If there is no useful technical/safety content, respond with "EMPTY".
+- Do not use any markdown formatting or introductory text, just the clinical notes.
 
-Notes to rewrite:
+Original notes:
 `;
 
-function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+async function rewriteNotes(text) {
+  const body = {
+    contents: [{ parts: [{ text: PROMPT_PREFIX + text }] }],
+    generationConfig: { temperature: 0.1, maxOutputTokens: 256 },
+  };
+
+  const res = await fetch(GEMINI_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`Gemini API ${res.status}: ${err.slice(0, 200)}`);
+  }
+
+  const json = await res.json();
+  let output = json.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+  if (!output) throw new Error('Empty response from Gemini');
+  
+  if (output === 'EMPTY') return '';
+  return output;
+}
 
 function needsRewrite(notes) {
-  if (!notes || notes.trim().length < 10) return false;
-  if (/&[a-z#0-9]+;|<[a-z]/i.test(notes)) return true;
-  if (/\b(I |we |love|amazing|beautiful|perfect|enjoy|feel free|hope you|try it|so good|delicious|wonderful|favorite|favourite|inspired|excited|obsessed|great way|really easy|super easy|quite easy)\b/i.test(notes)) return true;
-  if (/\b(in this post|click here|shop now|read more|visit|follow me|subscribe|formulation overview|the inspiration|relevant links|further reading|similar formulations)\b/i.test(notes)) return true;
+  if (!notes) return false;
+  const lower = notes.toLowerCase();
+  
+  // Blog phrases / personality
+  if (/\b(i|i've|i'm|me|my)\b/.test(lower)) return true;
+  if (/\b(love|amazing|beautiful|great|wonderful|fantastic|gorgeous)\b/.test(lower)) return true;
+  if (lower.includes('in this post') || lower.includes('click here') || lower.includes('the inspiration')) return true;
+  if (lower.includes('post on') || lower.includes('blog post')) return true;
+  
+  // HTML entities
+  if (/&[a-z0-9#]+;/i.test(notes)) return true;
+  
   return false;
-}
-
-function callGemini(notes) {
-  const prompt = PROMPT_PREFIX + notes;
-  const result = execFileSync('gemini', ['-p', prompt], {
-    encoding: 'utf8',
-    timeout: 60000,
-    cwd: __dirname,
-  });
-  return result.trim();
-}
-
-function gitCommit(count, total) {
-  try {
-    execFileSync('git', ['add', 'formulator-data.json'], { cwd: __dirname, stdio: 'pipe' });
-    execFileSync('git', ['commit', '-m', `Rewrite notes: ${count}/${total} recipes`], { cwd: __dirname, stdio: 'pipe' });
-    execFileSync('git', ['push', 'origin', 'main'], { cwd: __dirname, stdio: 'pipe' });
-    console.log('  ✓ Committed & pushed');
-  } catch (e) { console.log('  ⚠ Git:', e.message?.slice(0, 80)); }
 }
 
 async function main() {
   const data = JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
-
-  const toProcess = data.recipes.filter(r =>
-    (FORCE || !r.notesRewritten) && needsRewrite(r.notes)
-  );
-  const alreadyDone = data.recipes.filter(r => r.notesRewritten).length;
-
-  console.log(`Notes to rewrite: ${toProcess.length}  (${alreadyDone} already done)`);
-  if (toProcess.length === 0) { console.log('Nothing to do.'); return; }
-
-  let updated = 0, batch = 0, errors = 0;
-
-  for (const recipe of toProcess) {
-    process.stdout.write(`  ${recipe.name.slice(0, 55).padEnd(55)} … `);
-    await sleep(DELAY_MS);
-
+  const targets = data.recipes.filter(r => needsRewrite(r.notes) && !r.notesRewritten);
+  
+  console.log(`Found ${targets.length} recipes needing clinical notes rewrite.`);
+  
+  let count = 0;
+  for (const recipe of targets) {
+    console.log(`[${++count}/${targets.length}] Rewriting notes for: ${recipe.name || recipe.id}`);
     try {
-      const rewritten = callGemini(recipe.notes);
-      recipe.notes = (rewritten.toLowerCase() === 'none' || rewritten === '') ? '' : rewritten;
+      const clinicalNotes = await rewriteNotes(recipe.notes);
+      recipe.notes = clinicalNotes;
       recipe.notesRewritten = true;
-      updated++;
-      batch++;
-      console.log('✓');
+      
+      // Save every 20 recipes to prevent data loss
+      if (count % 20 === 0) {
+        fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+        console.log(`  (Auto-saved progress)`);
+      }
+      
+      // Rate limiting: small pause
+      await new Promise(r => setTimeout(r, 500));
     } catch (e) {
-      errors++;
-      console.log(`skip (${e.message?.slice(0, 60)})`);
-    }
-
-    if (batch >= BATCH_SIZE) {
-      fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
-      gitCommit(updated, toProcess.length);
-      batch = 0;
+      console.error(`  Error rewriting notes for ${recipe.id}: ${e.message}`);
     }
   }
 
-  if (batch > 0) {
-    fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
-    gitCommit(updated, toProcess.length);
-  }
+  fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+  console.log(`\nRewrite complete. ${count} recipes updated.`);
 
-  console.log(`\nDone. Rewritten: ${updated} / ${toProcess.length}. Errors: ${errors}`);
+  try {
+    console.log('Committing and pushing changes...');
+    execSync('git add formulator-data.json', { cwd: __dirname });
+    execSync('git commit -m "feat(crucible): Phase 8 clinical notes rewrite"', { cwd: __dirname });
+    execSync('git push origin main', { cwd: __dirname });
+    console.log('✓ Committed & pushed.');
+  } catch (e) {
+    console.error(`Git error: ${e.message}`);
+  }
 }
 
-main().catch(err => { console.error('Fatal:', err); process.exit(1); });
+main().catch(console.error);
