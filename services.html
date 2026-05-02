@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -19,8 +19,9 @@
       --brown-light: #b88c5a;
       --paper:       #faf6f0;
       --warm:        #f2ebe0;
+      --accent:      #c8421a;
       --mono:        'DM Mono', monospace;
-      --serif:       'Playfair Display', serif;
+      --serif:       'Lora', serif;
       --sans:        'DM Sans', sans-serif;
     }
 
@@ -124,7 +125,7 @@
       letter-spacing: -.03em;
       margin-bottom: 1.4rem;
     }
-    h1 em { font-style: italic; color: var(--brown-mid); }
+    h1 em { font-style: italic; color: var(--accent); }
     .page-desc {
       font-size: 1rem;
       line-height: 1.8;
@@ -264,7 +265,7 @@
       line-height: 1.06;
       letter-spacing: -.03em;
     }
-    .contact-cta h2 em { font-style: italic; color: var(--brown-mid); }
+    .contact-cta h2 em { font-style: italic; color: var(--accent); }
     .contact-info { display: flex; flex-direction: column; gap: 2rem; }
     .contact-row .label {
       font-family: var(--mono);
