@@ -1,0 +1,91 @@
+# Firestore Rules — Canonical (deploy this)
+
+**This is the single source of truth for the `sqrrlbrain-billing` Firebase project's Firestore rules.** It supersedes `DASHBOARD-SYNC-SETUP.md` and `INKWELL-WAITLIST-SETUP.md` (those files describe individual rule additions; this one shows the merged whole). When adding a new rule, update this file.
+
+## Deploy
+
+Firebase Console → Firestore Database → Rules → paste the block below → Publish.
+
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Approved-users gate (used by login.html, dashboard.html, crucible.html)
+    match /site_approved_users/{email} {
+      allow read: if request.auth != null && request.auth.token.email == email;
+    }
+
+    // Public contact form — create-only, validated, no read
+    match /contact_messages/{docId} {
+      allow create: if request.resource.data.keys().hasOnly([
+                      'name','email','subject','message',
+                      'created_at','user_agent','page_referrer'
+                    ])
+                    && request.resource.data.name is string
+                    && request.resource.data.name.size() > 0
+                    && request.resource.data.name.size() <= 100
+                    && request.resource.data.email is string
+                    && request.resource.data.email.size() > 0
+                    && request.resource.data.email.size() <= 200
+                    && request.resource.data.message is string
+                    && request.resource.data.message.size() > 0
+                    && request.resource.data.message.size() <= 5000
+                    && (request.resource.data.subject == null
+                        || (request.resource.data.subject is string
+                            && request.resource.data.subject.size() <= 200));
+      allow read, update, delete: if false;
+    }
+
+    // Per-user dashboard state — read/write only by the owner, gated by approval list
+    match /dashboard_state/{email} {
+      allow read, write: if request.auth != null
+                         && request.auth.token.email == email
+                         && exists(/databases/$(database)/documents/site_approved_users/$(email));
+    }
+
+    // Inkwell launch waitlist — public create only, validated, no read
+    match /inkwell_waitlist/{docId} {
+      allow create: if request.resource.data.keys().hasOnly([
+                      'email','source','created_at','user_agent','page_referrer'
+                    ])
+                    && request.resource.data.email is string
+                    && request.resource.data.email.size() > 0
+                    && request.resource.data.email.size() <= 200
+                    && request.resource.data.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
+                    && request.resource.data.source is string
+                    && request.resource.data.source.size() <= 64;
+      allow read, update, delete: if false;
+    }
+
+    // Per-user app data — read/write only by the user themselves.
+    // Used by sqrrlbrain-billing.html (settings, clients, jobs, expenses)
+    // and any future per-user-scoped app.
+    match /users/{userId}/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Default deny — anything not matched above is forbidden
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+```
+
+## What broke and why this is needed
+
+The `sqrrlbrain-billing.html` app stores all its data under `users/<currentUser.uid>/...`:
+
+- `users/<uid>/meta/settings` — your business profile, rates, terms, next invoice number
+- `users/<uid>/meta/clients` — client list
+- `users/<uid>/jobs/<jobId>` — invoices/jobs
+- `users/<uid>/expenses/<expenseId>` — expense log
+
+When the dashboard sync (`DASHBOARD-SYNC-SETUP.md`) and Inkwell waitlist (`INKWELL-WAITLIST-SETUP.md`) rules were deployed, the catch-all `match /{document=**} { allow read, write: if false; }` started rejecting every billing read because no rule explicitly allowed `/users/{uid}/...`. The billing app's `loadAll()` await silently failed, leaving the page stuck on the "initializing" spinner.
+
+The new `/users/{userId}/{document=**}` block gates per-user data behind a uid match — only the signed-in user can read/write their own subtree. Combined with the billing app's existing `AUTHORIZED_EMAIL` check at the JS layer, the data stays scoped to a single user.
+
+## Future rules
+
+If a new app needs Firestore access, add its rule block to the file above (above the catch-all), update this MD with the full new ruleset, and have Ron paste-publish.
