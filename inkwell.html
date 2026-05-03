@@ -96,7 +96,7 @@
 
     /* HERO */
     .page-hero {
-      padding: 6rem 3rem 3.5rem;
+      padding: 4rem 3rem 2.5rem;
       max-width: 78ch;
     }
     .eyebrow {
@@ -150,7 +150,7 @@
 
     /* SHOT (hero screenshot block) */
     .shot-hero {
-      padding: 0 3rem 5rem;
+      padding: 0 3rem 3.5rem;
     }
     .shot-frame {
       position: relative;
@@ -182,7 +182,7 @@
 
     /* SECTIONS */
     .section {
-      padding: 5rem 3rem;
+      padding: 4rem 3rem;
       border-top: 1px solid var(--rule-soft);
     }
     .section-label {
@@ -191,7 +191,7 @@
       letter-spacing: .2em;
       text-transform: uppercase;
       color: var(--brown-light);
-      margin-bottom: 2rem;
+      margin-bottom: 1.6rem;
       display: flex;
       align-items: center;
       gap: 1.2rem;
@@ -204,11 +204,11 @@
     }
     .section h2 {
       font-family: var(--serif);
-      font-size: clamp(2rem, 3.6vw, 2.8rem);
+      font-size: clamp(1.9rem, 3.4vw, 2.6rem);
       font-weight: 800;
       line-height: 1.12;
       letter-spacing: -.025em;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.1rem;
       max-width: 22ch;
     }
     .section h2 em {
@@ -229,7 +229,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
     .feature {
       padding: 2rem 0;
@@ -261,7 +261,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1.2rem;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
     .theme-card {
       display: flex;
@@ -399,14 +399,24 @@
       .themes-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 760px) {
-      header    { padding: 1.2rem 1.5rem; }
+      header    { padding: 1rem 1.4rem; }
       nav       { display: none; }
       .hamburger { display: flex; }
-      .page-hero { padding: 3.5rem 1.5rem 2rem; }
-      .shot-hero { padding: 0 1.5rem 3.5rem; }
-      .section   { padding: 3.5rem 1.5rem; }
-      .waitlist-form { flex-direction: column; }
-      footer    { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
+      .page-hero { padding: 2.4rem 1.4rem 1.4rem; }
+      h1        { font-size: clamp(2.4rem, 9vw, 3.2rem); margin-bottom: 1.1rem; }
+      .lede     { font-size: 1.02rem; line-height: 1.65; }
+      .status-pill { margin-top: 1.2rem; }
+      .shot-hero { padding: 0 1.4rem 2.5rem; }
+      .section   { padding: 2.5rem 1.4rem; }
+      .section h2 { font-size: clamp(1.7rem, 7vw, 2.1rem); margin-bottom: 1rem; }
+      .section p.body { font-size: .94rem; line-height: 1.72; }
+      .features-grid { margin-top: 1.6rem; }
+      .feature   { padding: 1.4rem 0; }
+      .feature h3 { font-size: 1.2rem; margin-bottom: .55rem; }
+      .feature p { font-size: .9rem; line-height: 1.65; }
+      .themes-grid { margin-top: 1.6rem; }
+      .waitlist-form { flex-direction: column; gap: .6rem; }
+      footer    { padding: 1.2rem 1.4rem; flex-direction: column; gap: .6rem; text-align: center; }
     }
     @media (max-width: 520px) {
       .themes-grid { grid-template-columns: 1fr; }

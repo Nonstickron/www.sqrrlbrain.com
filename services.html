@@ -105,7 +105,7 @@
 
     /* PAGE HERO */
     .page-hero {
-      padding: 5.5rem 3rem 4.5rem;
+      padding: 4rem 3rem 3.5rem;
       border-bottom: 1px solid rgba(58,26,0,.08);
       animation: fadeUp .7s .1s ease both;
     }
@@ -150,7 +150,7 @@
     .service-panel:nth-child(4) { animation-delay: .2s; }
 
     .service-left {
-      padding: 4rem 3rem;
+      padding: 2.8rem 3rem;
       border-right: 1px solid rgba(58,26,0,.08);
       display: flex;
       flex-direction: column;
@@ -172,10 +172,10 @@
     }
 
     .service-right {
-      padding: 4rem 4rem 4rem 3.5rem;
+      padding: 2.8rem 3rem 2.8rem 2.5rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      gap: 2.4rem;
     }
 
     .service-desc-block {}
@@ -226,7 +226,7 @@
     /* NOTE STRIP — dark */
     .note-strip {
       background: var(--ink);
-      padding: 3.5rem 3rem;
+      padding: 2.5rem 3rem;
       display: flex;
       align-items: center;
       gap: 4rem;
@@ -252,7 +252,7 @@
     /* CONTACT CTA */
     .contact-cta {
       background: var(--warm);
-      padding: 5.5rem 3rem;
+      padding: 4rem 3rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
@@ -266,7 +266,7 @@
       letter-spacing: -.03em;
     }
     .contact-cta h2 em { font-style: italic; color: var(--accent); }
-    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-info { display: flex; flex-direction: column; gap: 1.4rem; }
     .contact-row .label {
       font-family: var(--mono);
       font-size: .62rem;
@@ -326,15 +326,23 @@
       .note-strip { flex-direction: column; gap: 1.2rem; }
     }
     @media (max-width: 760px) {
-      header { padding: 1.2rem 1.5rem; }
+      header { padding: 1rem 1.4rem; }
       nav { display: none; }
       .hamburger { display: flex; }
-      .page-hero { padding: 3.5rem 1.5rem 3rem; }
-      .service-right { grid-template-columns: 1fr; gap: 2rem; padding: 1.5rem 1.5rem 2.5rem; }
-      .service-left { padding: 2.5rem 1.5rem 1.5rem; }
-      .note-strip { padding: 2.5rem 1.5rem; }
-      .contact-cta { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
-      footer { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
+      .page-hero { padding: 2.4rem 1.4rem 2rem; }
+      h1 { font-size: clamp(2.4rem, 9vw, 3rem); margin-bottom: 1.1rem; }
+      .page-desc { line-height: 1.7; }
+      .service-right { grid-template-columns: 1fr; gap: 1.4rem; padding: 1.2rem 1.4rem 1.8rem; }
+      .service-left { padding: 1.8rem 1.4rem 1rem; }
+      .service-name { font-size: 1.5rem; }
+      .service-desc-block p { font-size: .9rem; line-height: 1.7; }
+      .note-strip { padding: 1.8rem 1.4rem; gap: 1rem; }
+      .note-text { font-size: 1.05rem; }
+      .contact-cta { grid-template-columns: 1fr; padding: 2.5rem 1.4rem; gap: 1.6rem; }
+      .contact-cta h2 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+      .contact-info { gap: 1.2rem; }
+      .contact-row a, .contact-row span { font-size: 1.05rem; }
+      footer { padding: 1.2rem 1.4rem; flex-direction: column; gap: .6rem; text-align: center; }
     }
   </style>
 </head>

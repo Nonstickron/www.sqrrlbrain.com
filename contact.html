@@ -60,7 +60,7 @@
     .page-wrap {
       max-width: 64ch;
       margin: 0 auto;
-      padding: 5rem 2rem 7rem;
+      padding: 4rem 2rem 5rem;
     }
 
     .eyebrow {
@@ -83,8 +83,8 @@
       font-size: 1.05rem;
       line-height: 1.75;
       color: var(--brown-mid);
-      margin-bottom: 3rem;
-      padding-bottom: 2rem;
+      margin-bottom: 2.2rem;
+      padding-bottom: 1.4rem;
       border-bottom: 1px solid var(--rule-soft);
     }
 
@@ -200,9 +200,12 @@
     footer a:hover { color: var(--ink); }
 
     @media (max-width: 760px) {
-      header { padding: 1.2rem 1.5rem; }
-      .page-wrap { padding: 3rem 1.5rem 4rem; }
-      footer { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
+      header { padding: 1rem 1.4rem; }
+      .page-wrap { padding: 2.4rem 1.4rem 3rem; }
+      h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+      .lede { font-size: 1rem; line-height: 1.7; margin-bottom: 1.6rem; padding-bottom: 1rem; }
+      form { gap: 1.2rem; margin-bottom: 2rem; }
+      footer { padding: 1.2rem 1.4rem; flex-direction: column; gap: .6rem; text-align: center; }
     }
   </style>
 </head>

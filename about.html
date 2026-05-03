@@ -108,7 +108,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
-      padding: 5.5rem 3rem 5rem;
+      padding: 4rem 3rem 3.5rem;
       border-bottom: 1px solid rgba(58,26,0,.08);
       animation: fadeUp .7s .1s ease both;
     }
@@ -148,7 +148,7 @@
       border-bottom: 1px solid rgba(58,26,0,.08);
     }
     .stat-block {
-      padding: 2.6rem 3rem;
+      padding: 1.8rem 2.2rem;
       border-right: 1px solid rgba(58,26,0,.08);
     }
     .stat-block:last-child { border-right: none; }
@@ -173,8 +173,8 @@
     .about-body {
       display: grid;
       grid-template-columns: 280px 1fr;
-      gap: 6rem;
-      padding: 6rem 3rem 7rem;
+      gap: 5rem;
+      padding: 4.5rem 3rem 5rem;
       border-bottom: 1px solid rgba(58,26,0,.08);
     }
 
@@ -236,7 +236,7 @@
     .approach {
       background: var(--ink);
       color: var(--paper);
-      padding: 6rem 3rem;
+      padding: 4.5rem 3rem;
     }
     .section-label {
       font-family: var(--mono);
@@ -244,7 +244,7 @@
       letter-spacing: .2em;
       text-transform: uppercase;
       color: var(--brown-light);
-      margin-bottom: 3.5rem;
+      margin-bottom: 2.4rem;
       display: flex;
       align-items: center;
       gap: 1.2rem;
@@ -261,12 +261,12 @@
       gap: 0;
     }
     .approach-item {
-      padding: 2.5rem 2.5rem 2.5rem 0;
+      padding: 1.8rem 1.8rem 1.8rem 0;
       border-top: 1px solid rgba(250,246,240,.1);
     }
     .approach-item + .approach-item {
       border-left: 1px solid rgba(250,246,240,.07);
-      padding-left: 2.5rem;
+      padding-left: 1.8rem;
     }
     .approach-num {
       font-family: var(--mono);
@@ -291,7 +291,7 @@
     /* CONTACT CTA */
     .contact-cta {
       background: var(--warm);
-      padding: 5.5rem 3rem;
+      padding: 4rem 3rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
@@ -305,7 +305,7 @@
       letter-spacing: -.03em;
     }
     .contact-cta h2 em { font-style: italic; color: var(--accent); }
-    .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+    .contact-info { display: flex; flex-direction: column; gap: 1.4rem; }
     .contact-row .label {
       font-family: var(--mono);
       font-size: .62rem;
@@ -370,13 +370,25 @@
       header { padding: 1.2rem 1.5rem; }
       nav { display: none; }
       .hamburger { display: flex; }
-      .page-hero { grid-template-columns: 1fr; gap: 2rem; padding: 3.5rem 1.5rem 3rem; }
+      .page-hero { grid-template-columns: 1fr; gap: 1.4rem; padding: 2.4rem 1.4rem 2rem; }
+      h1 { font-size: clamp(2.4rem, 9vw, 3.1rem); }
       .stats-strip { grid-template-columns: 1fr 1fr; }
-      .about-body { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem 5rem; }
-      .approach { padding: 4rem 1.5rem; }
+      .stat-block { padding: 1.4rem 1.4rem; }
+      .stat-val { font-size: 2.2rem; }
+      .about-body { grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 1.4rem 3rem; }
+      .main-content h2 { font-size: clamp(1.6rem, 7vw, 2rem); margin-bottom: 1.2rem; }
+      .main-content p { font-size: .94rem; line-height: 1.72; margin-bottom: 1rem; }
+      .approach { padding: 2.5rem 1.4rem; }
       .approach-grid { grid-template-columns: 1fr; }
+      .approach-item { padding: 1.4rem 0; }
       .approach-item + .approach-item { border-left: none; padding-left: 0; border-top: 1px solid rgba(250,246,240,.1); }
-      .contact-cta { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
+      .approach-num { margin-bottom: .6rem; }
+      .approach-title { font-size: 1.2rem; margin-bottom: .55rem; }
+      .approach-desc { font-size: .88rem; line-height: 1.65; }
+      .contact-cta { grid-template-columns: 1fr; padding: 2.5rem 1.4rem; gap: 1.6rem; }
+      .contact-cta h2 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+      .contact-info { gap: 1.2rem; }
+      .contact-row a, .contact-row span { font-size: 1.05rem; }
       footer { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
     }
     @media (max-width: 500px) {

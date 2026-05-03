@@ -59,7 +59,7 @@
     .page-wrap {
       max-width: 72ch;
       margin: 0 auto;
-      padding: 5rem 2rem 7rem;
+      padding: 4rem 2rem 5rem;
     }
 
     .eyebrow {
@@ -84,8 +84,8 @@
       font-size: 1.05rem;
       line-height: 1.75;
       color: var(--brown-mid);
-      margin-bottom: 3.5rem;
-      padding-bottom: 2rem;
+      margin-bottom: 2.4rem;
+      padding-bottom: 1.4rem;
       border-bottom: 1px solid rgba(58,26,0,.08);
     }
 
@@ -93,8 +93,8 @@
       font-family: var(--serif);
       font-size: 1.35rem;
       font-weight: 700;
-      margin-top: 2.8rem;
-      margin-bottom: .8rem;
+      margin-top: 2.2rem;
+      margin-bottom: .7rem;
       color: var(--ink);
     }
 
@@ -146,8 +146,14 @@
     .footer-links { display: flex; gap: 1.2rem; }
 
     @media (max-width: 760px) {
-      header { padding: 1.2rem 1.5rem; }
-      footer { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
+      header { padding: 1rem 1.4rem; }
+      .page-wrap { padding: 2.4rem 1.4rem 3rem; }
+      h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+      .lede { font-size: 1rem; line-height: 1.7; margin-bottom: 1.6rem; padding-bottom: 1rem; }
+      h2 { font-size: 1.2rem; margin-top: 1.6rem; }
+      p, li { font-size: .94rem; line-height: 1.72; }
+      .contact-block { padding: 1.1rem 1.2rem; margin: 1rem 0 1.3rem; }
+      footer { padding: 1.2rem 1.4rem; flex-direction: column; gap: .6rem; text-align: center; }
     }
   </style>
 </head>
