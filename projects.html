@@ -211,6 +211,28 @@
     .details-btn:hover { background: var(--warm); border-color: var(--brown-mid); color: var(--ink); }
     .details-btn .lock { opacity: .5; font-size: .55rem; }
 
+    /* FEATURED CARD — Inkwell stands out */
+    .card.featured {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--paper);
+    }
+    .card.featured:hover { border-color: var(--accent); }
+    .card.featured .card-tag    { color: rgba(250,246,240,.75); }
+    .card.featured h3           { color: var(--paper); }
+    .card.featured p            { color: rgba(250,246,240,.92); }
+    .card.featured .card-status { color: rgba(250,246,240,.75); border-top-color: rgba(250,246,240,.25); }
+    .card.featured .details-btn {
+      background: var(--paper);
+      color: var(--accent);
+      border-color: var(--paper);
+    }
+    .card.featured .details-btn:hover {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
     /* MODAL */
     .modal-overlay {
       display: none;
@@ -364,7 +386,7 @@
     <p class="section-label">Apps &amp; Products</p>
     <div class="projects-grid">
 
-      <div class="card">
+      <div class="card featured">
         <p class="card-tag">Interactive Fiction</p>
         <h3>Inkwell</h3>
         <p>An AI-powered story engine where every choice shapes the narrative. Characters remember. Worlds evolve.</p>
