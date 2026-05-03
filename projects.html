@@ -200,16 +200,17 @@
       font-size: .6rem;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: var(--brown-mid);
+      color: var(--accent);
       background: none;
-      border: 1px solid rgba(122,69,32,.3);
+      border: 1px solid var(--accent);
       padding: .35rem .8rem;
       cursor: pointer;
       transition: all .2s;
       text-decoration: none;
     }
-    .details-btn:hover { background: var(--warm); border-color: var(--brown-mid); color: var(--ink); }
-    .details-btn .lock { opacity: .5; font-size: .55rem; }
+    .details-btn:hover { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+    .details-btn .lock { opacity: .65; font-size: .55rem; }
+    .details-btn:hover .lock { opacity: .85; }
 
     /* FEATURED CARD — Inkwell stands out */
     .card.featured {
