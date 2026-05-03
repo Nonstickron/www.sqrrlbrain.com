@@ -354,8 +354,10 @@
     .app-visual img { width: 100%; height: auto; opacity: .75; }
 
     @media (max-width: 760px) {
-      .apps { padding: 4rem 1.5rem; }
-      .app-card { grid-template-columns: 1fr; gap: 2rem; }
+      .apps { padding: 3rem 1.4rem; }
+      .app-card { grid-template-columns: 1fr; gap: 1.4rem; max-width: none; }
+      .app-card-text h2 { font-size: 1.6rem; margin-bottom: .7rem; }
+      .app-card-text p { font-size: .92rem; line-height: 1.7; margin-bottom: 1rem; }
       .app-visual { display: none; }
     }
 
@@ -474,21 +476,45 @@
       .service-item:nth-child(3) { border-left: none; padding-left: 0; }
     }
     @media (max-width: 760px) {
-      header       { padding: 1.2rem 1.5rem; position: relative; z-index: 1000; }
+      header       { padding: 1rem 1.4rem; position: relative; z-index: 1000; }
       nav          { display: none; }
       .hamburger   { display: flex; }
-      .hero        { grid-template-columns: 1fr; padding: 3rem 1.5rem; min-height: auto; }
+
+      .hero        { grid-template-columns: 1fr; padding: 1.8rem 1.4rem 2.4rem; min-height: auto; gap: 0; }
+      .hero-text   { padding: 0; }
+      .eyebrow     { margin-bottom: .9rem; }
+      h1           { font-size: clamp(2.4rem, 9vw, 3.1rem); margin-bottom: 1.1rem; }
+      .hero-desc   { margin-bottom: 1.6rem; line-height: 1.7; }
+      .cta         { padding: .85rem 1.6rem; font-size: .68rem; }
       .hero-image  { display: none; }
-      .services    { padding: 4rem 1.5rem; }
-      .about       { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 1.5rem; }
+
+      .services    { padding: 3rem 1.4rem; }
+      .section-label { margin-bottom: 1.6rem; }
+      .service-item { padding: 1.4rem 0; }
+      .service-item + .service-item { border-left: none; padding-left: 0; }
+      .service-num { margin-bottom: .6rem; }
+      .service-title { font-size: 1.2rem; margin-bottom: .55rem; }
+      .service-desc { font-size: .88rem; line-height: 1.65; }
+
+      .about       { grid-template-columns: 1fr; padding: 3rem 1.4rem; gap: 1.2rem; }
       .about-label { display: none; }
-      .contact     { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
-      footer       { padding: 1.4rem 1.5rem; flex-direction: column; gap: .6rem; text-align: center; }
+      .about-body h2 { font-size: clamp(1.7rem, 7vw, 2rem); margin-bottom: 1.1rem; line-height: 1.18; }
+      .about-body p { font-size: .94rem; line-height: 1.72; margin-bottom: .9rem; }
+      .about-meta  { gap: 2rem; margin-top: 1.8rem; padding-top: 1.4rem; flex-wrap: wrap; }
+      .meta-val    { font-size: 2rem; }
+      .meta-key    { margin-top: .25rem; }
+
+      .contact     { grid-template-columns: 1fr; padding: 3rem 1.4rem; gap: 2rem; }
+      .contact h2  { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+      .contact-info { gap: 1.4rem; }
+      .contact-row a, .contact-row span { font-size: 1.1rem; }
+
+      footer       { padding: 1.2rem 1.4rem; flex-direction: column; gap: .6rem; text-align: center; }
     }
     @media (max-width: 500px) {
       .services-grid { grid-template-columns: 1fr; }
       .service-item + .service-item { border-left: none; padding-left: 0; }
-      .about-meta { gap: 2rem; flex-wrap: wrap; }
+      .about-meta { gap: 1.5rem; flex-wrap: wrap; }
     }
   </style>
 </head>
