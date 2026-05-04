@@ -527,45 +527,44 @@
   const PROJECTS = [
     {
       id: 'sqrrlaway', name: 'SqrrledAway', category: 'Meal Planner App',
-      status: 'urgent', statusLabel: 'URGENT',
-      summary: 'Household meal planning around real ingredients, real budgets, and the way families actually cook. Supabase backend ready to build.',
+      status: 'active', statusLabel: 'ACTIVE',
+      summary: 'Household meal planning around real ingredients, real budgets, and the way families actually cook. Repo seeded — Designer prototype + dark/light theme split shipped (commits cb042b0 + 000998b).',
       steps: [
-        'Read schema analysis — Projects/MealPlanner/docs/2026-04-27-supabase-schema-analysis.md',
-        'Review Designer export before May 3 reset (ImportedFromClaudeDesign/project/)',
-        'Update Phase 1 plan',
-        'Start Supabase backend build on Opus 4.7'
+        'Designer: produce 2–3 mocks (flat / Plan-as-outlier / softer) before re-implementing bucket-bar',
+        'Sprint C: household taste rollup, pantry days-since-purchased, three-mode meal suggestions, safety flags, budget mode',
+        'Supabase backend build (per docs/2026-04-27-supabase-schema-analysis.md)',
+        'Housekeeping: git rm screen-plan.bubbles-backup.jsx after refactor lands; decide uploads/ vs references/'
       ],
-      blockers: ['DESIGNER EXPORT RESETS MAY 3 — act before then or prototype state is lost'],
-      blockerUrgent: true,
-      updated: '2026-04-30', subprojects: []
+      blockers: ['Designer paused at 87% weekly token cap mid bucket-bar refactor — needs mocks before next implementation pass'],
+      updated: '2026-05-04', subprojects: []
     },
     {
-      id: 'inkwell', name: 'Inkwell', category: 'iOS / Android App',
-      status: 'blocked', statusLabel: 'BLOCKED',
-      summary: 'AI-powered choose-your-own-adventure story engine. Capacitor set up (commit 788f38d). EIN + D-U-N-S in hand.',
+      id: 'inkwell', name: 'Inkwell', category: 'Live Web App · iOS / Android Eventual',
+      status: 'active', statusLabel: 'LIVE',
+      summary: 'Live at inkwell-story-engine.vercel.app (BYOK Gemini key). Phase-prompt refactor verified on prod. Bug-fix loop in progress while Ron tests on phone. iOS via TestFlight is the eventual target.',
       steps: [
-        '✅ Complete sqrrlbrain.com portfolio pages (work.html, about.html, services.html live)',
-        'Resubmit Apple Developer enrollment (Organization tier)',
-        'Reply to Cierra with new enrollment ID (ref: CD9U867PQV)',
-        'Migrate theme save/delete to localStorage (mobile bug)',
-        'TestFlight beta after enrollment approved'
+        'Phase A: bug-fix sprint (campaign-picker integer blowouts, Build-Your-Own autosave gap, in-game header iOS notch)',
+        'Phase B: image generation (separate Imagen key, prompt-conditional [SCENE_IMAGE: marker)',
+        'Phase C: bundle code-split (currently 25MB single chunk) for TestFlight readiness',
+        'Apple Developer Program enrollment (Organization tier) — Ron\'s call when to push'
       ],
-      blockers: ['Apple Developer enrollment not yet resubmitted'],
-      updated: '2026-04-30', subprojects: []
+      blockers: [],
+      updated: '2026-05-04', subprojects: []
     },
     {
       id: 'sqrrlbrain-site', name: 'sqrrlbrain.com', category: 'Studio Website / Portfolio',
       status: 'active', statusLabel: 'ACTIVE',
-      summary: 'Portfolio pages live (work.html, about.html, services.html). 5 CSS case study mockups on work.html. Ready to resubmit Apple Developer enrollment.',
+      summary: 'Brand-consistent across all pages (paper/brown/vermilion + Lora + DM Sans). Inkwell teaser page + waitlist live. Tightening pass shipped on 7 pages. Founding date corrected to 2025. Apple resubmit ready.',
       steps: [
-        '✅ Build /work.html — 5 CSS portfolio case studies live',
-        '✅ Build /about.html — full About page live',
-        '✅ Build /services.html — Services page live',
-        'Resubmit Apple enrollment + email Cierra (ref: CD9U867PQV)',
-        'Optional: build real artwork for briefs and swap in — pages are wired for <img> drop-in'
+        '✅ Inkwell teaser + waitlist live at /inkwell.html (Firestore inkwell_waitlist collection)',
+        '✅ Vermilion CTAs unified across whole public site; Inkwell card featured on projects page',
+        '✅ Whole-site tightening pass (about / services / projects / privacy / support / contact / inkwell)',
+        '✅ Founding year fixed: Sqrrlbrain Studio LLC = 2025',
+        'Resubmit Apple Developer enrollment — site is review-ready',
+        'Capture real Inkwell screenshots once app is stable enough for full chapter playthrough'
       ],
       blockers: [],
-      updated: '2026-05-01',
+      updated: '2026-05-04',
       subprojects: [
         { id: 'pf-01', name: 'Briar & Salt', category: 'Portfolio 01', status: 'indev', statusLabel: 'CSS LIVE',
           summary: 'Folding carton for artisan spice gift set. CSS mockup live on work.html. Real artwork optional.',
@@ -594,18 +593,18 @@
         'Set up POD storefront',
         'Price and publish Heritage 01'
       ],
-      blockers: [], updated: '2026-04-30', subprojects: []
+      blockers: [], updated: '2026-05-04', subprojects: []
     },
     {
       id: 'crucible', name: 'Crucible', category: 'Formulation Tool · 5 Daughters',
-      status: 'active', statusLabel: 'ACTIVE',
-      summary: '706-recipe DIY skincare library. Phases 4–6 complete via Gemini (rewrite, rename, ratio variation).',
+      status: 'active', statusLabel: 'PHASE 9+10 SHIPPED',
+      summary: '706-recipe DIY skincare library. Phases 4–10 complete. Tool is feature-complete pending new direction.',
       steps: [
-        'Phase 7 — proofread and final data cleanup',
-        'Explore fromnaturewithlove.com as additional recipe source',
-        'Develop 5 Daughters brand identity'
+        'Explore fromnaturewithlove.com as additional recipe source (optional)',
+        'Develop 5 Daughters brand identity (downstream)',
+        'Await Ron\'s next direction'
       ],
-      blockers: [], updated: '2026-04-30', subprojects: []
+      blockers: [], updated: '2026-05-04', subprojects: []
     },
     {
       id: 'cypress', name: 'Cypress', category: 'Worldbuilding · Graphic Novel',
@@ -617,30 +616,30 @@
         'Determine Merchant/Industrial 2nd seat',
         'Full clan roster per sector — 6–10 each'
       ],
-      blockers: [], updated: '2026-04-30', subprojects: []
+      blockers: [], updated: '2026-05-04', subprojects: []
     },
     {
       id: 'sqrrlnest', name: 'SqrrlNest', category: 'Print Production Tool',
       status: 'indev', statusLabel: 'IN DEV',
-      summary: 'Polygon-nesting imposition engine. Engine verified (6-up on 12×10×2.5, 0 cut-line crossings).',
+      summary: 'Polygon-nesting imposition engine (wf-impose). Engine verified (6-up on 12×10×2.5, 0 cut-line crossings). Awaiting real-job PDF test.',
       steps: [
-        'Run end-to-end PDF test with real job file at DME',
+        'Run end-to-end PDF test with real duplex print PDF at DME',
         'Build web UI over wf-impose-2 engine',
         'Deploy to sqrrlbrain.com/sqrrlnest'
       ],
       blockers: ['On hold — busy at work, needs a real job to test against'],
-      updated: '2026-04-30', subprojects: []
+      updated: '2026-05-04', subprojects: []
     },
     {
       id: 'five-daughters', name: '5 Daughters', category: 'Beauty Brand',
       status: 'concept', statusLabel: 'CONCEPT',
-      summary: 'Handcrafted soap and skincare consumer brand. Crucible is the internal tool; 5 Daughters is the label.',
+      summary: 'Handcrafted soap and skincare consumer brand. Crucible is the internal tool; 5 Daughters is the label. Crucible Phases 4–10 complete — formulation library is ready.',
       steps: [
-        'Complete Crucible Phase 7 first',
         'Define brand identity and voice',
-        'Plan initial product line from Crucible recipes'
+        'Plan initial product line from Crucible recipes',
+        'Source packaging — folding cartons, labels, jar/bottle stock'
       ],
-      blockers: [], updated: '2026-04-30', subprojects: []
+      blockers: [], updated: '2026-05-04', subprojects: []
     }
   ];
 
