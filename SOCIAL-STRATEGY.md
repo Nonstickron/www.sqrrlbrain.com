@@ -121,35 +121,33 @@ One 60-90 minute editing session per week (Sunday evening?) produces 4 videos. S
 
 ## 5 — Equipment
 
-### Buy now (under ~$250 total)
+### Buy now (~$103 total — current US prices May 2026)
 
-1. **Vertical-capable phone tripod with ball head**
-   *Why:* Your current tripod only holds phone horizontally. You need 9:16 capture from day one.
-   *Pick:* **SmallRig Mobile Vlog Tripod Kit** (~$50-70 on Amazon) — phone clamp that locks vertical or horizontal, mini tripod that extends to ~50cm, cold-shoe mount for adding a mic later. Or **Manfrotto PIXI Smart** if you want quality over price.
-   *Skip:* Cheap Amazon-no-name tripods — phone clamps wobble, ball heads fail.
+1. **SmallRig VK-30 Advanced Vlog Tripod Kit — $43.90 on Amazon**
+   *Why:* Phone clamp locks vertical OR horizontal (9:16 from day one). Mini tripod extends 7-12". **Includes a bi-color LED light + softbox in the box** — which means the "buy lights in 1-2 months" item below is already covered for free.
+   *Caveat:* It's a tabletop/bench-height tripod. Fine for desk, kitchen counter, garage workbench. If you eventually want a floor-height tripod for full-body or wider woodworking shots, that's a separate $50-80 add later (Manfrotto Compact Action or similar).
+   *Link:* https://www.amazon.com/SMALLRIG-Vlogging-Content-Recording-Equipment/dp/B0CTK7NL47
 
-2. **Wireless lavalier mic**
-   *Why:* Phone audio is the #1 thing that makes amateur video look amateur. Music covers a lot of sins; spoken audio covers nothing. The moment you do a voiceover, mic quality is the entire experience.
-   *Pick:* **DJI Mic Mini** (~$170 for the 2-mic kit + receiver + charging case). Plugs into iPhone via USB-C, two transmitters means you can interview-style record or just have a backup. Excellent battery, tiny, magnetic clip-on.
-   *Alternative:* **RØDE Wireless ME** (~$150) if you prefer RØDE's ecosystem.
-   *Skip:* Wired lavaliers (tether you to the phone), shotgun mics on phone (poor for indoor close-up speech), USB desktop mics (won't help in the garage or kitchen).
+2. **DJI Mic Mini (original) 2 TX + 1 RX + Charging Case — $58.99 on Amazon (sale, regular $79)**
+   *Why:* Phone audio is the #1 thing that makes amateur video look amateur. Two transmitters means you can record interview-style or just have a backup. Plugs into iPhone via USB-C, magnetic clip-on, ~48hr battery in the case.
+   *⚠️ Critical heads-up:* The newer **DJI Mic Mini 2** (€33 colorful faceplates, getting all the buzz) is **NOT available in the US** — no FCC certification yet as of May 2026. Don't try to import it. The original Mic Mini above is what to buy and at $59 it's a better deal than the Mini 2 anyway.
+   *Alternative if Mic Mini sells out:* **RØDE Wireless ME** ~$149 (single transmitter only — not as good a deal).
+   *Skip:* Wired lavaliers, shotgun mics on phone, USB desktop mics.
+   *Link:* https://www.amazon.com/DJI-Microphone-Ultralight-Detail-Rich-Cancelling/dp/B0DDL8WGH5
 
-### Buy in 1-2 months if you stick with it
+### Already covered by the tripod kit (was originally month 1-2)
 
-3. **Single LED panel light**
-   *Why:* Garage at night, kitchen with bad overheads — most of your environments will have lighting you can't control. One soft daylight-balanced panel = night-and-day difference.
-   *Pick:* **Aputure Amaran 60d** (~$170) or budget pick **Neewer 660 Pro** (~$80) — both bi-color, daylight-balanced, soft when used with a small softbox.
-   *Skip:* Ring lights (dated look, gives obvious "ring catch-light" in eyes/objects), dim panels under 30W (won't compete with overhead lights).
+~~Single LED panel light~~ — included in the SmallRig VK-30 box (bi-color Vibe P96 + softbox). If/when you outgrow it, the upgrade pick is still **Aputure Amaran 60d** (~$170) for studio shots.
 
 ### Defer 6+ months (or maybe forever)
 
-4. **Better camera (Sony ZV-E10 II / Sony FX30 / iPhone Pro upgrade)**
+3. **Better camera (Sony ZV-E10 II / Sony FX30 / iPhone Pro upgrade)**
    *Why defer:* Modern phones (iPhone 13+, Pixel 6+) shoot 4K 60fps with computational stabilization that crushes consumer mirrorless cameras for short-form. The gap closes only at long-form, low-light, or shallow-DOF shots. You don't need any of that yet.
    *When to revisit:* If you commit to long-form YouTube and start hitting the ceiling of what your phone can do. Not before.
 
 ### Total commitment for now
 
-Tripod + mic = **~$220**. That's it. Don't buy a camera. Don't buy lights yet. Don't buy a teleprompter, a fancy editing keyboard, a green screen, or a "creator desk." All of that is procrastination dressed as preparation.
+Tripod + mic = **~$103**. That's it. Don't buy a camera. Don't buy a teleprompter, a fancy editing keyboard, a green screen, or a "creator desk." All of that is procrastination dressed as preparation.
 
 ### Storage — yes, you'll need more
 
@@ -167,11 +165,13 @@ So a **3-month rolling buffer of raw + projects = ~1 TB**. You can live thinner 
 
 **Tiered storage that handles this without overspending:**
 
-1. **Working drive (fast, internal):** 2 TB NVMe SSD on the editing machine. **Samsung 990 Pro 2TB** (~$140) or **WD Black SN850X 2TB** (~$130). This holds the current month plus the previous month — anything actively being edited or might be re-cut.
-2. **Archive drive (cheap, large, slow OK):** External 8 TB USB HDD for finished masters + the raw footage you want to keep long-term. **WD Elements / WD My Book 8TB** (~$140) or **Seagate One Touch 8TB** (~$140). Plug in once a month, copy completed projects over, unplug.
+1. **Working drive (fast, internal):** 2 TB NVMe SSD on the editing machine. **WD Black SN850X 2TB — ~$156 on Amazon** (current best value as of May 2026). PCIe 4.0, plenty fast for vertical short-form editing. Holds the current month plus the previous month.
+   *⚠️ NAND price spike heads-up:* As of May 2026, AI datacenter demand has driven NVMe prices up 5x since August 2025. Samsung 990 Pro 2TB is currently ~$580 (was ~$140 in late 2025) — avoid it for now. WD Black SN850X is the value play. Check **Tom's Hardware SSD price tracker** before buying — prices may keep moving.
+2. **Archive drive (cheap, large, slow OK):** External 8 TB USB HDD. **WD Elements 8TB — ~$171 on Amazon** (was $225). Plug in once a month, copy completed projects over, unplug. Hard drives haven't been hit by the NAND spike.
+   *Link:* https://www.amazon.com/Western-Digital-Elements-External-external/dp/B07D5V2ZXD
 3. **Cloud backup (optional but smart):** **Backblaze Personal** ($9/month, unlimited backup of one machine including external drives) is the cheapest insurance. Set it and forget it. Worth it once you have ~50+ videos you'd hate to lose.
 
-Total Year 1 cost: **~$280 one-time + $108/year for Backblaze**.
+Total Year 1 cost: **~$327 one-time + $108/year for Backblaze**. (Was estimated ~$280 — bumped by SSD price spike. Could come back down if NAND prices ease later in 2026.)
 
 **Before you buy anything:**
 - Uninstall games you're not actively playing — Steam library can be 200-500 GB easy. Steam → Library → right-click → Uninstall. Saves can sync to cloud.
@@ -337,11 +337,11 @@ Solo operators get pulled in many directions. Here's the do-not list:
 
 Concrete next steps in priority order. Hit these in the next 7 days and you've launched.
 
-- [ ] Order SmallRig Mobile Vlog Tripod Kit (or equivalent) — Amazon, ~$60
-- [ ] Order DJI Mic Mini 2-pack — Amazon or B&H, ~$170
-- [ ] Free up ~200 GB on the editing machine: uninstall unplayed Steam games, run Storage Sense, clear Downloads
-- [ ] Order 2 TB NVMe SSD for the editing machine if current drive is under 1 TB free post-cleanup — Samsung 990 Pro 2TB (~$140)
-- [ ] Order external 8 TB HDD for archive — WD Elements 8TB (~$140) — defer if budget tight, can wait until month 2
+- [ ] Order **SmallRig VK-30 Advanced Vlog Tripod Kit** — Amazon, **$43.90** (https://www.amazon.com/SMALLRIG-Vlogging-Content-Recording-Equipment/dp/B0CTK7NL47)
+- [ ] Order **DJI Mic Mini (original) 2 TX kit** — Amazon, **$58.99** sale (https://www.amazon.com/DJI-Microphone-Ultralight-Detail-Rich-Cancelling/dp/B0DDL8WGH5) — DO NOT buy DJI Mic Mini 2; not US-FCC-certified
+- [ ] Free up ~200 GB on the editing machine: uninstall unplayed Steam games, run Storage Sense, clear Downloads — may obviate need for new SSD entirely
+- [ ] Order **WD Black SN850X 2TB** for the editing machine **only if** current drive can't accommodate post-cleanup — ~**$156** Amazon (NOT Samsung 990 Pro right now — NAND prices spiked, 990 Pro is currently ~$580)
+- [ ] Order external **WD Elements 8TB** for archive — Amazon, **$171** (https://www.amazon.com/Western-Digital-Elements-External-external/dp/B07D5V2ZXD) — defer if budget tight, can wait until month 2
 - [ ] Install CapCut on phone + desktop
 - [ ] Create TikTok account: @sqrrlbrain (match Instagram handle)
 - [ ] Create YouTube channel: Sqrrlbrain Studio (use Custard logo)
