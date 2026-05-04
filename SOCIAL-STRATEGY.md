@@ -121,12 +121,12 @@ One 60-90 minute editing session per week (Sunday evening?) produces 4 videos. S
 
 ## 5 — Equipment
 
-### Buy now (~$103 total — current US prices May 2026)
+### Buy now (~$100 total — current US prices May 2026)
 
-1. **SmallRig VK-30 Advanced Vlog Tripod Kit — $43.90 on Amazon**
-   *Why:* Phone clamp locks vertical OR horizontal (9:16 from day one). Mini tripod extends 7-12". **Includes a bi-color LED light + softbox in the box** — which means the "buy lights in 1-2 months" item below is already covered for free.
-   *Caveat:* It's a tabletop/bench-height tripod. Fine for desk, kitchen counter, garage workbench. If you eventually want a floor-height tripod for full-body or wider woodworking shots, that's a separate $50-80 add later (Manfrotto Compact Action or similar).
-   *Link:* https://www.amazon.com/SMALLRIG-Vlogging-Content-Recording-Equipment/dp/B0CTK7NL47
+1. **NEEWER Basics 72" Travel Tripod-Monopod — ~$40 on Amazon**
+   *Why:* Real photography-grade tripod, not a vlog kit. Aluminum, 22.8"-72" range so it covers desk-level to eye-level shots, **360° ball head with Arca-Swiss quick-release plate** (industry standard — works with any future camera you ever buy), 13.2 lb load capacity, converts to monopod for follow-action shots. NEEWER has been making affordable photo gear for ~15 years; warranty + replacement parts actually exist. This is a buy-once-buy-right tripod that'll outlast multiple phones.
+   *What's missing:* No built-in light (added separately below if/when you want one). No built-in mic (we're using DJI for that anyway).
+   *Link:* https://www.amazon.com/NEEWER-Lightweight-Recording-Compatible-TP14B/dp/B0FRMPKR76
 
 2. **DJI Mic Mini (original) 2 TX + 1 RX + Charging Case — $58.99 on Amazon (sale, regular $79)**
    *Why:* Phone audio is the #1 thing that makes amateur video look amateur. Two transmitters means you can record interview-style or just have a backup. Plugs into iPhone via USB-C, magnetic clip-on, ~48hr battery in the case.
@@ -135,19 +135,19 @@ One 60-90 minute editing session per week (Sunday evening?) produces 4 videos. S
    *Skip:* Wired lavaliers, shotgun mics on phone, USB desktop mics.
    *Link:* https://www.amazon.com/DJI-Microphone-Ultralight-Detail-Rich-Cancelling/dp/B0DDL8WGH5
 
-### Already covered by the tripod kit (was originally month 1-2)
+### Add when you actually need it (not before)
 
-~~Single LED panel light~~ — included in the SmallRig VK-30 box (bi-color Vibe P96 + softbox). If/when you outgrow it, the upgrade pick is still **Aputure Amaran 60d** (~$170) for studio shots.
+3. **LED panel light** — when garage night work or kitchen overheads start showing in footage. Pick: **Aputure Amaran 60d** (~$170) bi-color, daylight-balanced, soft when used with a small softbox. Skip ring lights (dated look, obvious catch-light), dim panels under 30W.
 
 ### Defer 6+ months (or maybe forever)
 
-3. **Better camera (Sony ZV-E10 II / Sony FX30 / iPhone Pro upgrade)**
-   *Why defer:* Modern phones (iPhone 13+, Pixel 6+) shoot 4K 60fps with computational stabilization that crushes consumer mirrorless cameras for short-form. The gap closes only at long-form, low-light, or shallow-DOF shots. You don't need any of that yet.
+4. **Better camera (Sony ZV-E10 II / Sony FX30 / iPhone Pro upgrade)**
+   *Why defer:* Modern phones (iPhone 13+, Pixel 6+) shoot 4K 60fps with computational stabilization that crushes consumer mirrorless cameras for short-form. The gap closes only at long-form, low-light, or shallow-DOF shots. You don't need any of that yet. **When you do upgrade, the NEEWER tripod's Arca-Swiss head accepts any camera plate — no tripod replacement needed.**
    *When to revisit:* If you commit to long-form YouTube and start hitting the ceiling of what your phone can do. Not before.
 
 ### Total commitment for now
 
-Tripod + mic = **~$103**. That's it. Don't buy a camera. Don't buy a teleprompter, a fancy editing keyboard, a green screen, or a "creator desk." All of that is procrastination dressed as preparation.
+Tripod + mic = **~$100**. Buy once, buy right. Nothing to "upgrade later" — the NEEWER will outlast the phone you bought it for, and the DJI Mic Mini is studio-quality at this price. Don't buy a camera, a teleprompter, a fancy editing keyboard, a green screen, or a "creator desk." All of that is procrastination dressed as preparation.
 
 ### Storage — yes, you'll need more
 
@@ -337,7 +337,7 @@ Solo operators get pulled in many directions. Here's the do-not list:
 
 Concrete next steps in priority order. Hit these in the next 7 days and you've launched.
 
-- [ ] Order **SmallRig VK-30 Advanced Vlog Tripod Kit** — Amazon, **$43.90** (https://www.amazon.com/SMALLRIG-Vlogging-Content-Recording-Equipment/dp/B0CTK7NL47)
+- [ ] Order **NEEWER Basics 72" Travel Tripod-Monopod** — Amazon, ~**$40** (https://www.amazon.com/NEEWER-Lightweight-Recording-Compatible-TP14B/dp/B0FRMPKR76) — Arca-Swiss ball head, future-proofs the tripod for an eventual camera upgrade
 - [ ] Order **DJI Mic Mini (original) 2 TX kit** — Amazon, **$58.99** sale (https://www.amazon.com/DJI-Microphone-Ultralight-Detail-Rich-Cancelling/dp/B0DDL8WGH5) — DO NOT buy DJI Mic Mini 2; not US-FCC-certified
 - [ ] Free up ~200 GB on the editing machine: uninstall unplayed Steam games, run Storage Sense, clear Downloads — may obviate need for new SSD entirely
 - [ ] Order **WD Black SN850X 2TB** for the editing machine **only if** current drive can't accommodate post-cleanup — ~**$156** Amazon (NOT Samsung 990 Pro right now — NAND prices spiked, 990 Pro is currently ~$580)
