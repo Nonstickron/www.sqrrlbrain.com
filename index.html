@@ -131,17 +131,16 @@
     .caret { font-size: .5rem; opacity: .6; }
 
     /* HERO */
-    .hero {
+    .hero-stage {
       display: grid;
       grid-template-columns: 1fr 1fr;
       min-height: 70vh;
       padding: 0 3rem;
       gap: 3rem;
       align-items: center;
-      border-bottom: 1px solid rgba(58,26,0,.08);
     }
 
-    .hero-text { padding: 2.5rem 0; animation: fadeUp .7s .1s ease both; }
+    .hero-pitch { padding: 2.5rem 0; animation: fadeUp .7s .1s ease both; }
 
     .eyebrow {
       font-family: var(--mono);
@@ -154,13 +153,22 @@
 
     h1 {
       font-family: var(--serif);
-      font-size: clamp(3rem, 5vw, 5rem);
+      font-size: clamp(2.6rem, 4.6vw, 4.4rem);
       font-weight: 900;
       line-height: 1.04;
       letter-spacing: -.03em;
       margin-bottom: 1.6rem;
     }
     h1 em { font-style: italic; color: var(--accent); }
+    h1 .highlighted-h1 {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--warm-yellow);
+      font-style: italic;
+      font-weight: 700;
+      padding: .04em .25em;
+      letter-spacing: -.01em;
+    }
 
     .hero-desc {
       font-size: 1rem;
@@ -184,16 +192,151 @@
     }
     .cta:hover { background: var(--ink); }
 
-    .hero-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    /* CAROUSEL */
+    .hero-carousel {
+      position: relative;
+      width: 100%;
+      max-width: 540px;
+      justify-self: end;
       animation: fadeUp .7s .22s ease both;
     }
-    .hero-image img {
-      width: min(440px, 100%);
-      height: auto;
+    .carousel-track {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--ink);
+      overflow: hidden;
+    }
+    .carousel-slide {
+      position: absolute; inset: 0;
+      opacity: 0;
+      transition: opacity .8s ease;
       display: block;
+      background: var(--ink);
+      color: var(--paper);
+      text-decoration: none;
+      pointer-events: none;
+    }
+    .carousel-slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .carousel-slide img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: .85;
+      display: block;
+    }
+    .carousel-slide.no-image {
+      background: linear-gradient(135deg, var(--ink) 0%, #5a2a10 60%, var(--accent) 130%);
+    }
+    .carousel-caption {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 1.4rem 1.6rem 1.5rem;
+      background: linear-gradient(180deg, transparent 0%, rgba(58,26,0,.85) 65%, rgba(58,26,0,.95) 100%);
+    }
+    .carousel-slide.no-image .carousel-caption {
+      background: none;
+      bottom: auto; top: 50%;
+      transform: translateY(-50%);
+      text-align: left;
+    }
+    .slide-eyebrow {
+      font-family: var(--mono);
+      font-size: .58rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--warm-yellow);
+      margin-bottom: .5rem;
+    }
+    .slide-title {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--paper);
+      margin-bottom: .35rem;
+    }
+    .slide-sub {
+      font-size: .82rem;
+      line-height: 1.5;
+      color: rgba(250,246,240,.78);
+      max-width: 38ch;
+    }
+    .carousel-dots {
+      display: flex;
+      gap: .55rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    .carousel-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--brown-light);
+      border: none;
+      cursor: pointer;
+      opacity: .4;
+      padding: 0;
+      transition: opacity .2s, background .2s, transform .2s;
+    }
+    .carousel-dot:hover { opacity: .8; transform: scale(1.2); }
+    .carousel-dot.active { opacity: 1; background: var(--accent); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .carousel-slide { transition: none; }
+    }
+
+    /* EMBELLISHMENTS — ported from palette-test.html sandbox */
+    .ornament-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--accent);
+      margin: 0 3rem;
+      padding: 2rem 0;
+    }
+    .ornament-divider::before,
+    .ornament-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--accent);
+      opacity: .35;
+    }
+    .ornament-divider .glyph {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+
+    .pull-quote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.45rem;
+      line-height: 1.35;
+      color: var(--brown-mid);
+      border-left: 3px solid var(--accent);
+      padding: .8rem 0 .8rem 1.4rem;
+      max-width: 32ch;
+      margin: 1.2rem 0;
+    }
+    .pull-quote::before {
+      content: '\201C';
+      color: var(--accent);
+      font-size: 2.2rem;
+      line-height: 0;
+      vertical-align: -.3em;
+      margin-right: .15em;
+    }
+    .pull-quote::after {
+      content: '\201D';
+      color: var(--accent);
+      font-size: 2.2rem;
+      line-height: 0;
+      vertical-align: -.3em;
+      margin-left: .15em;
     }
 
     /* SERVICES */
@@ -236,10 +379,13 @@
     }
 
     .service-num {
-      font-family: var(--mono);
-      font-size: .62rem;
-      letter-spacing: .15em;
-      color: var(--brown-light);
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 1;
+      letter-spacing: -.02em;
+      color: var(--accent);
       margin-bottom: 1.1rem;
     }
     .service-title {
@@ -278,6 +424,22 @@
       color: var(--brown-mid);
       max-width: 58ch;
       margin-bottom: 1.1rem;
+    }
+    @media (min-width: 901px) {
+      .about-body {
+        display: grid;
+        grid-template-columns: 1fr minmax(260px, 32ch);
+        column-gap: 3rem;
+      }
+      .about-body > h2,
+      .about-body > p,
+      .about-body > .about-meta { grid-column: 1; }
+      .about-body > .pull-quote {
+        grid-column: 2;
+        grid-row: 2 / span 2;
+        align-self: center;
+        margin: 0;
+      }
     }
 
     .about-meta {
@@ -488,13 +650,17 @@
     @media (max-width: 900px) {
       header       { padding: 1rem 1.4rem; position: relative; z-index: 1000; }
 
-      .hero        { grid-template-columns: 1fr; padding: 1.8rem 1.4rem 2.4rem; min-height: auto; gap: 0; }
-      .hero-text   { padding: 0; }
+      .hero-stage  { grid-template-columns: 1fr; padding: 1.8rem 1.4rem 2.4rem; min-height: auto; gap: 1.6rem; }
+      .hero-pitch  { padding: 0; }
       .eyebrow     { margin-bottom: .9rem; }
-      h1           { font-size: clamp(2.4rem, 9vw, 3.1rem); margin-bottom: 1.1rem; }
+      h1           { font-size: clamp(2.1rem, 8vw, 2.8rem); margin-bottom: 1.1rem; line-height: 1.08; }
       .hero-desc   { margin-bottom: 1.6rem; line-height: 1.7; }
       .cta         { padding: .85rem 1.6rem; font-size: .68rem; }
-      .hero-image  { display: none; }
+      .hero-carousel { max-width: 100%; justify-self: stretch; }
+      .slide-title { font-size: 1.15rem; }
+      .slide-sub   { font-size: .78rem; }
+      .ornament-divider { margin: 0 1.4rem; padding: 1.4rem 0; }
+      .ornament-divider .glyph { font-size: 1.25rem; }
 
       .services    { padding: 3rem 1.4rem; }
       .section-label { margin-bottom: 1.6rem; }
@@ -547,17 +713,66 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-text">
-      <p class="eyebrow">Independent Creative Studio &middot; Edgewater, FL</p>
-      <h1>Design that<br><em>thinks</em><br>differently.</h1>
-      <p class="hero-desc">Sqrrlbrain Studio LLC is a boutique creative studio specializing in packaging design, brand identity, and visual storytelling — built on 25 years of craft.</p>
-      <a class="cta" href="/contact.html">Get in touch</a>
+  <section class="hero-stage">
+    <div class="hero-pitch">
+      <p class="eyebrow">Sqrrlbrain Studio &middot; Edgewater, FL</p>
+      <h1>Apps. Brands.<br><span class="highlighted-h1">Structural design.</span><br>Creative IP.</h1>
+      <p class="hero-desc">One operator, AI-augmented, solo by design. 25 years of commercial craft now extending across software, packaging, brand systems, and original work.</p>
+      <a class="cta" href="/projects.html">See what&rsquo;s shipping &rarr;</a>
     </div>
-    <div class="hero-image">
-      <img src="images/icon.svg" alt="Sqrrlbrain Studio" />
+    <div class="hero-carousel" aria-roledescription="carousel" aria-label="Featured projects">
+      <div class="carousel-track">
+        <a class="carousel-slide no-image active" href="/inkwell.html">
+          <div class="carousel-caption">
+            <p class="slide-eyebrow">Software &middot; Live</p>
+            <h3 class="slide-title">Inkwell &mdash; AI Story Engine</h3>
+            <p class="slide-sub">Live web app. iOS via TestFlight pending Apple review.</p>
+          </div>
+        </a>
+        <a class="carousel-slide no-image" href="/projects.html#sqrrledaway">
+          <div class="carousel-caption">
+            <p class="slide-eyebrow">Software &middot; In Development</p>
+            <h3 class="slide-title">SqrrledAway</h3>
+            <p class="slide-sub">Family meal planning. Multi-user household coordination + AI suggestions.</p>
+          </div>
+        </a>
+        <a class="carousel-slide no-image" href="/projects.html#crucible">
+          <div class="carousel-caption">
+            <p class="slide-eyebrow">Software &middot; In Development</p>
+            <h3 class="slide-title">Crucible</h3>
+            <p class="slide-sub">Indie skincare formulation. Inventory + recipe library + branded bundles.</p>
+          </div>
+        </a>
+        <a class="carousel-slide" href="/work.html">
+          <img src="images/work/georgetown-hoyas-render-open.jpg" alt="" />
+          <div class="carousel-caption">
+            <p class="slide-eyebrow">Selected Work &middot; Packaging</p>
+            <h3 class="slide-title">Georgetown Hoyas Booster Package</h3>
+            <p class="slide-sub">Structural design + die-cut engineering.</p>
+          </div>
+        </a>
+        <a class="carousel-slide" href="/work.html">
+          <img src="images/work/charger-station-prototype.jpg" alt="" />
+          <div class="carousel-caption">
+            <p class="slide-eyebrow">Selected Work &middot; Industrial</p>
+            <h3 class="slide-title">Multi-Device Charger Station</h3>
+            <p class="slide-sub">Industrial design + product engineering.</p>
+          </div>
+        </a>
+      </div>
+      <div class="carousel-dots" role="tablist" aria-label="Slide selector">
+        <button class="carousel-dot active" data-slide="0" aria-label="Slide 1: Inkwell"></button>
+        <button class="carousel-dot" data-slide="1" aria-label="Slide 2: SqrrledAway"></button>
+        <button class="carousel-dot" data-slide="2" aria-label="Slide 3: Crucible"></button>
+        <button class="carousel-dot" data-slide="3" aria-label="Slide 4: Georgetown Hoyas"></button>
+        <button class="carousel-dot" data-slide="4" aria-label="Slide 5: Charger Station"></button>
+      </div>
     </div>
   </section>
+
+  <div class="ornament-divider" aria-hidden="true">
+    <span class="glyph">&sect;</span>
+  </div>
 
   <section class="services" id="services">
     <p class="section-label">Services</p>
@@ -585,6 +800,10 @@
     </div>
   </section>
 
+  <div class="ornament-divider" aria-hidden="true">
+    <span class="glyph">&#9670;</span>
+  </div>
+
   <section class="about" id="about">
     <div class="about-label">
       <p class="section-label">About</p>
@@ -592,7 +811,8 @@
     <div class="about-body">
       <h2>A studio built on craft, precision, and the discipline of production.</h2>
       <p>Sqrrlbrain Studio is the multi-disciplinary practice of Ronny Goodrich — a designer and developer with 25+ years inside commercial print production, now extending that craft into software. Based in Edgewater, Florida.</p>
-      <p>From structural packaging and brand systems to interactive apps, every project is approached the same way: work that holds up under scrutiny, ships ready, and means something to the people who made it.</p>
+      <p>From structural packaging and brand systems to interactive apps, every project is approached the same way.</p>
+      <p class="pull-quote">Work that holds up under scrutiny, ships ready, and means something to the people who made it.</p>
       <div class="about-meta">
         <div>
           <div class="meta-val">25+</div>
@@ -609,6 +829,10 @@
       </div>
     </div>
   </section>
+
+  <div class="ornament-divider" aria-hidden="true">
+    <span class="glyph">&#9728;</span>
+  </div>
 
   <section class="apps" id="apps">
     <p class="section-label">Apps</p>
@@ -627,6 +851,10 @@
       </div>
     </div>
   </section>
+
+  <div class="ornament-divider" aria-hidden="true">
+    <span class="glyph">&#9670;</span>
+  </div>
 
   <section class="contact" id="contact">
     <h2>Let's make<br>something<br><em>worth keeping.</em></h2>
@@ -675,6 +903,85 @@
       hamburger.classList.remove('open');
       mobileNav.classList.remove('open');
     }
+
+    // Carousel
+    (function() {
+      const carousel = document.querySelector('.hero-carousel');
+      if (!carousel) return;
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      const dots = carousel.querySelectorAll('.carousel-dot');
+      const stage = document.querySelector('.hero-stage');
+      if (!slides.length) return;
+
+      let current = 0;
+      let timer = null;
+      let userInteracted = false;
+      const ROTATE_MS = 7000;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function go(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+      function next() { go(current + 1); }
+      function prev() { go(current - 1); }
+
+      function startTimer() {
+        if (userInteracted || reduceMotion) return;
+        stopTimer();
+        timer = setInterval(next, ROTATE_MS);
+      }
+      function stopTimer() {
+        if (timer) { clearInterval(timer); timer = null; }
+      }
+      function permanentStop() {
+        userInteracted = true;
+        stopTimer();
+      }
+
+      // Auto-rotate (skipped if reduced motion)
+      startTimer();
+
+      // Hover pause covers the whole hero so the pitch is also pausable
+      if (stage) {
+        stage.addEventListener('mouseenter', stopTimer);
+        stage.addEventListener('mouseleave', startTimer);
+      }
+
+      // Dot clicks
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', (e) => {
+          e.preventDefault();
+          permanentStop();
+          go(i);
+        });
+      });
+
+      // Keyboard navigation when carousel area has focus
+      carousel.setAttribute('tabindex', '0');
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { e.preventDefault(); permanentStop(); next(); }
+        else if (e.key === 'ArrowLeft') { e.preventDefault(); permanentStop(); prev(); }
+      });
+
+      // Swipe on touch devices
+      let touchStartX = null;
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      carousel.addEventListener('touchend', (e) => {
+        if (touchStartX === null) return;
+        const delta = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(delta) > 40) {
+          permanentStop();
+          if (delta < 0) next(); else prev();
+        }
+        touchStartX = null;
+      });
+    })();
   </script>
 </body>
 </html>
