@@ -554,17 +554,25 @@
     {
       id: 'sqrrlbrain-site', name: 'sqrrlbrain.com', category: 'Studio Website / Portfolio',
       status: 'active', statusLabel: 'ACTIVE',
-      summary: 'Brand-consistent across all pages (paper/brown/vermilion + Lora + DM Sans). Inkwell teaser page + waitlist live. Tightening pass shipped on 7 pages. Founding date corrected to 2025. Apple resubmit ready.',
+      summary: 'Apple-resubmit-ready. Universal hamburger nav, /work portfolio with 5 real entries, /notes blog (index + per-post pages with tag filtering), Studio Notes first published entry (flute direction). Apple-only admin tool URLs hidden from public site.',
       steps: [
-        '✅ Inkwell teaser + waitlist live at /inkwell.html (Firestore inkwell_waitlist collection)',
-        '✅ Vermilion CTAs unified across whole public site; Inkwell card featured on projects page',
+        '✅ Inkwell teaser + waitlist live at /inkwell.html',
+        '✅ Vermilion CTAs unified site-wide; Inkwell card featured on projects page',
         '✅ Whole-site tightening pass (about / services / projects / privacy / support / contact / inkwell)',
         '✅ Founding year fixed: Sqrrlbrain Studio LLC = 2025',
+        '✅ Universal hamburger nav (right-anchored dropdown, all viewports)',
+        '✅ /work portfolio with real DME structural engineering pieces (Georgetown / ECU / DME booths / charger station)',
+        '✅ /notes blog architecture (index + per-post pages, tag filter, OG metadata)',
+        '✅ First published Studio Notes entry: flute-direction (2026-05-05)',
+        '✅ Tools (Admin Only) section removed from public hamburger; admin URLs no longer exposed',
+        'Carousel hero on /index.html — rotating through work-page images, each frame links to its project detail page (planned, see plan doc)',
+        'Per-project detail pages under /work/<slug>.html — Georgetown / ECU / DME booths / charger station, each with image gallery + expanded copy (planned)',
         'Resubmit Apple Developer enrollment — site is review-ready',
-        'Capture real Inkwell screenshots once app is stable enough for full chapter playthrough'
+        'Capture real Inkwell screenshots once app is stable enough for full chapter playthrough',
+        'Atomic-age palette refactor (vermillion + turquoise + steel-blue + warm-yellow + dark-navy) — sandbox at /palette-test.html, deferred until post-Apple-approval'
       ],
       blockers: [],
-      updated: '2026-05-04',
+      updated: '2026-05-05',
       subprojects: [
         { id: 'pf-01', name: 'Briar & Salt', category: 'Portfolio 01', status: 'indev', statusLabel: 'CSS LIVE',
           summary: 'Folding carton for artisan spice gift set. CSS mockup live on work.html. Real artwork optional.',
@@ -582,6 +590,17 @@
           summary: 'Counter-top corrugated POP display for children\'s toy brand. CSS mockup live on work.html. Real artwork optional.',
           steps: ['✅ CSS mockup live on work.html', 'Design structural dieline (optional)', 'Design 4-color graphics', 'Swap <img> into work.html'] }
       ]
+    },
+    {
+      id: 'billing-app', name: 'Sqrrlbrain Billing App', category: 'Internal Tool · Job Log + Invoicing',
+      status: 'indev', statusLabel: 'IN DEV',
+      summary: 'Internal client and invoice management for Sqrrlbrain Studio. Auth-gated; admin URL no longer advertised on public site (removed from public nav + projects.html for security).',
+      steps: [
+        'Add free-text note field on each invoice / job-log item — for client reference numbers, feedback, reminders',
+        'Add "Last edited" timestamp on the note field so I can see when I added each note',
+        'Plan needs to be scoped before implementation — needs review of current data model'
+      ],
+      blockers: [], updated: '2026-05-05', subprojects: []
     },
     {
       id: 'tract', name: 'TRACT', category: 'Print-on-Demand Apparel',
@@ -621,14 +640,16 @@
     {
       id: 'sqrrlnest', name: 'SqrrlNest', category: 'Print Production Tool',
       status: 'indev', statusLabel: 'IN DEV',
-      summary: 'Polygon-nesting imposition engine (wf-impose). Engine verified (6-up on 12×10×2.5, 0 cut-line crossings). Awaiting real-job PDF test.',
+      summary: 'Polygon-nesting imposition engine (wf-impose). Engine verified (6-up on 12×10×2.5, 0 cut-line crossings). Awaiting real-job PDF test. Reclassified as a Project (Apps & Products) on the public site, not a personal admin tool.',
       steps: [
         'Run end-to-end PDF test with real duplex print PDF at DME',
         'Build web UI over wf-impose-2 engine',
-        'Deploy to sqrrlbrain.com/sqrrlnest'
+        'Deploy to sqrrlbrain.com/sqrrlnest',
+        '✅ Moved from "Tools" to "Apps & Products" on /projects.html — it\'s a product in dev, not a personal tool',
+        '✅ Removed from dashboard tool launcher'
       ],
       blockers: ['On hold — busy at work, needs a real job to test against'],
-      updated: '2026-05-04', subprojects: []
+      updated: '2026-05-05', subprojects: []
     },
     {
       id: 'five-daughters', name: '5 Daughters', category: 'Beauty Brand',
@@ -1018,7 +1039,7 @@
 
     if (opts.tools !== false) {
       const tools = el('div', 'tools-quick');
-      [['Crucible','/crucible.html'],['SqrrlNest','/sqrrlnest.html'],['Billing','/sqrrlbrain-billing.html']].forEach(([name, href]) => {
+      [['Crucible','/crucible.html'],['Billing','/sqrrlbrain-billing.html']].forEach(([name, href]) => {
         const a = el('a', 'tool-link', name);
         a.href = href;
         tools.appendChild(a);
