@@ -306,35 +306,6 @@
       .carousel-slide { transition: none; }
     }
 
-    /* EMBELLISHMENTS — ported from palette-test.html sandbox */
-    .pull-quote {
-      font-family: var(--serif);
-      font-style: italic;
-      font-weight: 600;
-      font-size: 1.45rem;
-      line-height: 1.35;
-      color: var(--brown-mid);
-      border-left: 3px solid var(--accent);
-      padding: .8rem 0 .8rem 1.4rem;
-      max-width: 32ch;
-      margin: 1.2rem 0;
-    }
-    .pull-quote::before {
-      content: '\201C';
-      color: var(--accent);
-      font-size: 2.2rem;
-      line-height: 0;
-      vertical-align: -.3em;
-      margin-right: .15em;
-    }
-    .pull-quote::after {
-      content: '\201D';
-      color: var(--accent);
-      font-size: 2.2rem;
-      line-height: 0;
-      vertical-align: -.3em;
-      margin-left: .15em;
-    }
 
     /* SERVICES */
     .services {
@@ -398,70 +369,164 @@
       color: rgba(250,246,240,.5);
     }
 
-    /* ABOUT */
-    .about {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 5rem;
+    /* ROADMAP */
+    .roadmap {
       padding: 4.5rem 3rem;
       border-bottom: 1px solid rgba(58,26,0,.08);
     }
-
-    .about-body h2 {
+    .roadmap h2 {
       font-family: var(--serif);
       font-size: clamp(2rem, 3.2vw, 2.8rem);
       font-weight: 700;
       line-height: 1.18;
       letter-spacing: -.025em;
-      margin-bottom: 1.6rem;
+      margin-bottom: 1.2rem;
+      max-width: 32ch;
     }
-    .about-body p {
+    .roadmap h2 em { font-style: italic; color: var(--accent); }
+    .roadmap-intro {
       font-size: .97rem;
       line-height: 1.82;
       color: var(--brown-mid);
-      max-width: 58ch;
-      margin-bottom: 1.1rem;
-    }
-    @media (min-width: 901px) {
-      .about-body {
-        display: grid;
-        grid-template-columns: 1fr minmax(260px, 32ch);
-        column-gap: 3rem;
-      }
-      .about-body > h2,
-      .about-body > p,
-      .about-body > .about-meta { grid-column: 1; }
-      .about-body > .pull-quote {
-        grid-column: 2;
-        grid-row: 2 / span 2;
-        align-self: center;
-        margin: 0;
-      }
+      max-width: 60ch;
+      margin-bottom: 3rem;
     }
 
-    .about-meta {
+    .timeline {
+      list-style: none;
+      position: relative;
+      padding: 0;
+      margin: 0 0 2.4rem;
+    }
+    .timeline > .stage {
+      position: relative;
+      padding: 0 0 2.6rem 3.2rem;
+      border-left: 2px solid var(--accent);
+      margin-left: 14px;
+    }
+    .timeline > .stage:last-child {
+      padding-bottom: 0;
+    }
+    .timeline > .stage.horizon {
+      border-left: 2px dashed rgba(200,66,26,.4);
+    }
+    .timeline > .stage::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: -2px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--paper);
+      border: 2px solid var(--accent);
+    }
+    .timeline > .stage.current::before {
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(200,66,26,.18);
+    }
+
+    .stage-head {
       display: flex;
-      gap: 2.4rem;
-      margin-top: 1.8rem;
-      padding-top: 1.4rem;
-      border-top: 1px solid rgba(58,26,0,.08);
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
     }
-    .meta-val {
-      font-family: var(--serif);
-      font-size: 2.6rem;
-      font-weight: 900;
-      color: var(--brown-mid);
-      letter-spacing: -.04em;
-      line-height: 1;
-    }
-    .meta-key {
+    .stage-quarter {
       font-family: var(--mono);
-      font-size: .62rem;
-      letter-spacing: .12em;
+      font-size: .68rem;
+      letter-spacing: .18em;
       text-transform: uppercase;
       color: var(--brown-light);
-      margin-top: .4rem;
     }
+    .stage-label {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 700;
+      font-size: 1.7rem;
+      color: var(--ink);
+      letter-spacing: -.02em;
+    }
+    .stage.current .stage-label { color: var(--accent); }
+
+    .stage-items {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .stage-items > li {
+      display: grid;
+      grid-template-columns: 110px 130px 1fr;
+      gap: 1.4rem;
+      align-items: baseline;
+      padding: .75rem 0;
+      border-bottom: 1px solid rgba(58,26,0,.06);
+    }
+    .stage-items > li:last-child { border-bottom: none; }
+
+    .item-status {
+      font-family: var(--mono);
+      font-size: .56rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: .3rem .55rem;
+      border: 1px solid;
+      text-align: center;
+      white-space: nowrap;
+      justify-self: start;
+    }
+    .item-status.doing {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: rgba(200,66,26,.06);
+    }
+    .item-status.shipped {
+      background: var(--accent);
+      color: var(--warm-yellow);
+      border-color: var(--accent);
+      font-style: italic;
+    }
+    .item-status.planned {
+      color: var(--brown-mid);
+      border-color: rgba(58,26,0,.18);
+    }
+    .item-status.open {
+      color: var(--brown-light);
+      border-color: rgba(184,140,90,.4);
+      font-style: italic;
+    }
+    .item-status.horizon {
+      color: var(--brown-light);
+      border-color: rgba(184,140,90,.3);
+    }
+
+    .item-project {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--ink);
+    }
+    .item-detail {
+      font-size: .92rem;
+      line-height: 1.55;
+      color: var(--brown-mid);
+    }
+
+    .roadmap-footer {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .08em;
+      color: var(--brown-light);
+      text-transform: uppercase;
+      margin-top: 1.4rem;
+    }
+    .roadmap-footer a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px dotted currentColor;
+    }
+    .roadmap-footer a:hover { color: var(--ink); }
 
     /* CONTACT */
     .contact {
@@ -605,13 +670,20 @@
       .service-title { font-size: 1.2rem; margin-bottom: .55rem; }
       .service-desc { font-size: .88rem; line-height: 1.65; }
 
-      .about       { grid-template-columns: 1fr; padding: 3rem 1.4rem; gap: 1.2rem; }
-      .about-label { display: none; }
-      .about-body h2 { font-size: clamp(1.7rem, 7vw, 2rem); margin-bottom: 1.1rem; line-height: 1.18; }
-      .about-body p { font-size: .94rem; line-height: 1.72; margin-bottom: .9rem; }
-      .about-meta  { gap: 2rem; margin-top: 1.8rem; padding-top: 1.4rem; flex-wrap: wrap; }
-      .meta-val    { font-size: 2rem; }
-      .meta-key    { margin-top: .25rem; }
+      .roadmap     { padding: 3rem 1.4rem; }
+      .roadmap h2  { font-size: clamp(1.7rem, 7vw, 2rem); margin-bottom: 1rem; line-height: 1.18; }
+      .roadmap-intro { font-size: .94rem; line-height: 1.72; margin-bottom: 2rem; }
+      .timeline > .stage { padding-left: 2rem; padding-bottom: 2rem; }
+      .stage-head  { gap: .7rem; margin-bottom: .8rem; flex-wrap: wrap; }
+      .stage-label { font-size: 1.4rem; }
+      .stage-items > li {
+        grid-template-columns: 1fr;
+        gap: .25rem;
+        padding: .9rem 0;
+      }
+      .item-status { margin-bottom: .25rem; }
+      .item-project { font-size: 1.05rem; }
+      .item-detail { font-size: .9rem; }
 
       .contact     { grid-template-columns: 1fr; padding: 3rem 1.4rem; gap: 2rem; }
       .contact h2  { font-size: clamp(1.9rem, 8vw, 2.6rem); }
@@ -623,7 +695,6 @@
     @media (max-width: 500px) {
       .services-grid { grid-template-columns: 1fr; }
       .service-item + .service-item { border-left: none; padding-left: 0; }
-      .about-meta { gap: 1.5rem; flex-wrap: wrap; }
     }
   </style>
 </head>
@@ -731,30 +802,130 @@
     </div>
   </section>
 
-  <section class="about" id="about">
-    <div class="about-label">
-      <p class="section-label">About</p>
-    </div>
-    <div class="about-body">
-      <h2>A studio built on craft, precision, and the discipline of production.</h2>
-      <p>Sqrrlbrain Studio is the multi-disciplinary practice of Ronny Goodrich — a designer and developer with 25+ years inside commercial print production, now extending that craft into software. Based in Edgewater, Florida.</p>
-      <p>From structural packaging and brand systems to interactive apps, every project is approached the same way.</p>
-      <p class="pull-quote">Work that holds up under scrutiny, ships ready, and means something to the people who made it.</p>
-      <div class="about-meta">
-        <div>
-          <div class="meta-val">25+</div>
-          <div class="meta-key">Years Experience</div>
+  <section class="roadmap" id="roadmap">
+    <p class="section-label">Roadmap</p>
+    <h2>What&rsquo;s <em>shipping</em>, and what&rsquo;s next.</h2>
+    <p class="roadmap-intro">A working map of what Sqrrlbrain Studio is moving on this year. Milestones, not implementations &mdash; quarter-granular dates that flex when reality says so.</p>
+
+    <ol class="timeline">
+      <li class="stage current">
+        <div class="stage-head">
+          <span class="stage-quarter">Q2 2026</span>
+          <span class="stage-label">Now</span>
         </div>
-        <div>
-          <div class="meta-val">FL</div>
-          <div class="meta-key">Edgewater, Florida</div>
+        <ul class="stage-items">
+          <li>
+            <span class="item-status doing">In progress</span>
+            <span class="item-project">Inkwell</span>
+            <span class="item-detail">Bug-fix sprint, Apple Developer resubmission</span>
+          </li>
+          <li>
+            <span class="item-status doing">In progress</span>
+            <span class="item-project">Crucible</span>
+            <span class="item-detail">Invitee demo phase, affiliate-link layer</span>
+          </li>
+          <li>
+            <span class="item-status doing">In progress</span>
+            <span class="item-project">SqrrledAway</span>
+            <span class="item-detail">Sprint A/B shipped, Phase 1 prep</span>
+          </li>
+          <li>
+            <span class="item-status doing">In progress</span>
+            <span class="item-project">Studio</span>
+            <span class="item-detail">Sqrrlbrain.com homepage refresh, per-project work pages</span>
+          </li>
+        </ul>
+      </li>
+
+      <li class="stage">
+        <div class="stage-head">
+          <span class="stage-quarter">Q3 2026</span>
+          <span class="stage-label">Next</span>
         </div>
-        <div>
-          <div class="meta-val">LLC</div>
-          <div class="meta-key">Registered Business</div>
+        <ul class="stage-items">
+          <li>
+            <span class="item-status planned">Planned</span>
+            <span class="item-project">Inkwell</span>
+            <span class="item-detail">iOS launch &mdash; TestFlight then App Store</span>
+          </li>
+          <li>
+            <span class="item-status planned">Planned</span>
+            <span class="item-project">SqrrledAway</span>
+            <span class="item-detail">Phase 1 ship &mdash; auth, household, recipes</span>
+          </li>
+          <li>
+            <span class="item-status planned">Planned</span>
+            <span class="item-project">Crucible</span>
+            <span class="item-detail">Pro tier launch</span>
+          </li>
+          <li>
+            <span class="item-status planned">Planned</span>
+            <span class="item-project">Studio</span>
+            <span class="item-detail">Studio Notes cadence established</span>
+          </li>
+        </ul>
+      </li>
+
+      <li class="stage">
+        <div class="stage-head">
+          <span class="stage-quarter">Q4 2026</span>
+          <span class="stage-label">Later</span>
         </div>
-      </div>
-    </div>
+        <ul class="stage-items">
+          <li>
+            <span class="item-status planned">Planned</span>
+            <span class="item-project">SqrrledAway</span>
+            <span class="item-detail">Premium AI features ship</span>
+          </li>
+          <li>
+            <span class="item-status planned">Planned</span>
+            <span class="item-project">Crucible</span>
+            <span class="item-detail">Partner bundle marketplace</span>
+          </li>
+          <li>
+            <span class="item-status planned">Planned</span>
+            <span class="item-project">Inkwell</span>
+            <span class="item-detail">Image generation phase</span>
+          </li>
+          <li>
+            <span class="item-status open">Open</span>
+            <span class="item-project">Studio</span>
+            <span class="item-detail">New project slot</span>
+          </li>
+        </ul>
+      </li>
+
+      <li class="stage horizon">
+        <div class="stage-head">
+          <span class="stage-quarter">2027+</span>
+          <span class="stage-label">Horizon</span>
+        </div>
+        <ul class="stage-items">
+          <li>
+            <span class="item-status horizon">Horizon</span>
+            <span class="item-project">SqrrledAway</span>
+            <span class="item-detail">Spoonacular integration, scale</span>
+          </li>
+          <li>
+            <span class="item-status horizon">Horizon</span>
+            <span class="item-project">Crucible</span>
+            <span class="item-detail">Bundle catalog expansion</span>
+          </li>
+          <li>
+            <span class="item-status horizon">Horizon</span>
+            <span class="item-project">Inkwell</span>
+            <span class="item-detail">Continued iteration</span>
+          </li>
+          <li>
+            <span class="item-status open">TBD</span>
+            <span class="item-project">Studio</span>
+            <span class="item-detail">Open slot &mdash; ideas welcome</span>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <p class="roadmap-footer">Slips happen. Reality wins. <a href="/notes.html">Studio Notes</a> covers what actually shipped, when, and why.</p>
   </section>
 
   <section class="contact" id="contact">
