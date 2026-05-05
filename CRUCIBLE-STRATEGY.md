@@ -284,7 +284,105 @@ When Pro tier is live + demo signal validates the bundle hypothesis (probably ~Q
 
 ---
 
-## 9 — Living document
+## 9 — Competitive defenses — preventing partners from copying
+
+**The risk:** pitch a supplier (Bramble Berry, FNWL, etc.), they say no, then build their own copycat tool with their recipes and shut Crucible out.
+
+**Structural moats Crucible already has:**
+
+1. **Aggregation, not single-source.** A supplier-built tool only contains *their* recipes/ingredients. Most indie makers use ingredients from 3-4 suppliers in a single recipe. Crucible's value is the cross-supplier library; a single-supplier app fails at the actual job. They can't include their competitors without partnerships their lawyers won't approve.
+2. **Cleanup labor.** ~700+ hours of recipe normalization, ingredient-name canonicalization, percentage validation, supplier mapping. A supplier starting from scratch has to redo all that or hire someone — 6-12 months of dev work for a "marketing experiment" budget that won't justify it.
+3. **Speed asymmetry.** Suppliers are slow (committee approvals, brand teams, vendor procurement). Crucible is solo and fast. Head-start gap matters.
+4. **Conflict of interest.** Supplier-built tools push their products; users discount the recommendations once they catch on. Crucible's supplier-neutrality is the trust users will pay for.
+5. **Switching cost.** Once user data (inventory + custom recipes + notes + saves) is in Crucible, leaving for a single-brand alternative loses all of it.
+
+**Pitch tactics that defend against the copy outcome:**
+
+- **Lead with smaller suppliers first.** FNWL, Lotion Crafter — they don't have the in-house tech to build. They say yes because they don't have the option. By the time the bigger names are pitched, the smaller players are signed; the choice for big names becomes "join the consortium that has my competitors" or "build a competitor against them" — different decision.
+- **Pitch to marketing / partnerships, not engineering.** Marketing thinks "this is a distribution channel" → signs. Engineering thinks "we could build this" → builds. Frame the deal as a marketing channel for *their brand* with handled ops, not a tech licensing arrangement.
+- **Show, don't tell.** Demo the working tool with their recipes already cleaned + structured + browseable. Implicit alternative is *"or I leave them as an unlicensed library and you get nothing."* Not threatening — just real.
+- **Low-friction first ask.** First ask is *"let me launch a free 'Sample Pack' with 3 of your recipes, attributed, just to test interest."* Tests their dev-build instinct against a tiny no-risk yes.
+- **The 50/50 split itself is a defense.** Their internal cost of building/maintaining/supporting >> $1.50 per bundle sale at low scale. Math doesn't pencil out for them to build solo.
+
+**Things to NOT do in pitches:**
+
+- Don't lead with technical architecture (that's the part they could copy).
+- Don't oversell projections ("this could be $1M/yr") — triggers "we should capture that" reflex.
+- Don't approach engineering teams or CTOs first — wrong incentives.
+- Don't share the strategy doc. Pitch deck stays focused on their lift / your handling / split / brand exposure. Internal strategic framing stays internal.
+- Don't talk about other partners in the pitch. Each partner thinks they're the only smart one.
+
+**Worst-case scenario:** a supplier rejects + builds their own. Even then, Crucible still has the multi-supplier library + the other signed partners. The supplier's solo tool is a marketing piece, not a competing platform. Long-term: like Spotify owning music aggregation despite labels having their own apps, Crucible owns the indie-formulator aggregation niche.
+
+---
+
+## 10 — Team & operations — when sales help becomes the right move
+
+**The skill gap is real.** B2B partnerships sales (cold outreach, partner-side political reading, term sheets, persistent follow-up) is a specific muscle. Different from solo founder/builder skills.
+
+**Don't take a co-founder.** Ron's solo by design. Co-founder takes equity + decision-making rights — the trust/dilution cost isn't worth it at this stage.
+
+**Sales-help options ranked by founder-friendliness:**
+
+| Option | Cash up front | Equity given | When to use |
+|--------|---------------|--------------|-------------|
+| Tink does prep, Ron makes the calls | $0 | 0% | Phase 2 — first 2 partner attempts. Skill develops through reps. |
+| Pure commission contractor (20-25% of partnership revenue, 18-24 mo from each close) | $0 | 0% | Phase 3 — once Phase 2 demonstrates capacity-blocked growth |
+| Commission + small equity (10-15% commission + 1-2% vesting equity) | $0 | 1-2% | Phase 4 — only if commission-only person produces and you want long-term alignment |
+| Deferred cash | $0 (paid later) | 0% | If person is trusted but wants assured cash; tracks as IOU |
+| Co-founder | varies | 20-50% | Don't do this |
+
+**Trust-validated lead identified (2026-05-05):** Ron has a sales lead at DME he's "fairly confident" he can trust. Not in skincare industry but skills transfer. Compensation constraint: no cash to pay him. Trial-friendly approach:
+
+1. **Casual conversation first.** *"Working on something that's going to need partnership sales eventually. Different industry from DME, but you'd be good at it. Just sounding you out — would you be interested in early conversations when the time's right?"* No commitment.
+2. **Show him Crucible** when Path A is built. Get his read on product, pitch, partner list. Free advice; no risk to either side.
+3. **Mock pitch** — let him role-play the FNWL pitch on you. 15 min. Tells you fast if his chops translate.
+4. **If chemistry's good after #1-3** — propose 90-day pure-commission trial. After 90 days with closed deals, restructure to commission + small equity for long-term alignment. **Don't lock in equity on a guess about whether you'll work well together.**
+
+---
+
+## 11 — Capital — investor pathway
+
+Ron knows an angel investor type — "plenty of money and he's known to like to invest in new businesses." Worth pitching when demo phase produces signal, NOT before (premature pitching costs credibility).
+
+**Founder-friendly investor structures, ranked by Ron's "stay solo" constraint:**
+
+1. **Revenue-share loan** — he loans cash; repaid as % of monthly gross revenue (e.g., 5-10%) until repayment cap (e.g., 1.3-1.5x). No equity given up. No board seat. Hardest to find a willing investor for; most prefer equity upside.
+2. **SAFE note** with high valuation cap ($1M+) — defers valuation, simplest paperwork, low legal cost. Equity converts at future priced round at the cap. Minimal current dilution if cap is high.
+3. **Convertible note** — slightly worse than SAFE (interest accrual) but mainstream.
+4. **Direct priced equity** — last resort, requires valuation now (hard pre-revenue).
+
+**The killer combination:** **investor capital + commission-only salesperson** = best of both worlds. Investor money funds Ron's reduced-DME-hours runway (so he can spend more time on Crucible without burning out). Salesperson works on commission (self-funded from deal closes, no cash drain). Equity dilution stays minimal (a few % to investor at most; 0% to salesperson initially).
+
+**Investor pitch framing (when ready):** *"I'm building Crucible. Demo phase data: [N active users, [X] saved recipes, [Y]% return rate]. I have a sales lead lined up on commission. I need [$25-100k] of runway to focus more time on this and ship the Pro tier + partner deals. Would you be interested in seeing the deck?"* Don't ask for money yet — just gauge interest. Closing happens later when materials are ready.
+
+**What you'd need before pitching:**
+- Demo phase signal data (active users, return rate, willingness-to-pay survey results)
+- Tight 10-slide deck (problem, solution, traction, model, team, ask)
+- Financial projections (12-24 mo, revenue + cost) — even rough is fine for an angel
+- Use-of-funds breakdown (what the money buys, when revenue ramps)
+- Term sheet draft (revenue-share loan or SAFE — whichever you'd accept)
+
+**Tink can draft all of this** when the time is right. The bottleneck is signal data, not preparation.
+
+---
+
+## 12 — Recommended sequencing (revised 2026-05-05)
+
+| Phase | Timeline | Sales help | Capital |
+|-------|----------|------------|---------|
+| Phase 1 — Path A demo build + affiliate layer | This week (~2-3 hr) | Tink-only | Self-funded |
+| Phase 2 — Demo phase data collection | 4-8 weeks | None — Ron observes | Self-funded |
+| Phase 3 — Path B + Pro tier (only if signal validates) | 1-2 wk build, when ready | Casual conversation w/ sales lead — gauge interest | Investor casual conversation — gauge interest |
+| Phase 4 — Partner outreach begins | Q3 2026 | Sales lead trial: 90 days pure commission | Pitch investor (revenue-share loan or SAFE) |
+| Phase 5 — Bundle marketplace launches | Q4 2026 | Full sales engagement | Capital deployed if raised |
+| Phase 6 — Scale | 2027+ | Hire/contract additional sales as needed | Series A or bootstrap from revenue |
+
+**Critical:** don't rush sales/capital decisions before demo phase produces signal. Premature operational structure. Premature investor pitches kill future credibility.
+
+---
+
+## 13 — Living document
 
 This is v1, written 2026-05-05 from the Discord conversation that sealed the strategic direction. Revisit at:
 
