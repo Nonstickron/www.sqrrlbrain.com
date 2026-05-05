@@ -345,25 +345,109 @@ When Pro tier is live + demo signal validates the bundle hypothesis (probably ~Q
 
 Ron knows an angel investor type — "plenty of money and he's known to like to invest in new businesses." Worth pitching when demo phase produces signal, NOT before (premature pitching costs credibility).
 
-**Founder-friendly investor structures, ranked by Ron's "stay solo" constraint:**
+### Primary use of capital — AI infrastructure for free trials (clarified 2026-05-05)
 
-1. **Revenue-share loan** — he loans cash; repaid as % of monthly gross revenue (e.g., 5-10%) until repayment cap (e.g., 1.3-1.5x). No equity given up. No board seat. Hardest to find a willing investor for; most prefer equity upside.
+Ron's main interest in the investor isn't broad runway. It's specifically **funding AI infrastructure for free trials across all three Sqrrlbrain Studio products**. Without trial AI capacity, conversion to paid is zero — users won't subscribe to something they can't try. Ron's personal Google AI account ($20/mo spend cap) cannot underwrite trials at any meaningful scale.
+
+This reframes the investor pitch from vague "runway" to a concrete, measurable ask:
+
+**Per-trial-user AI cost estimates (rough, refine with usage data):**
+- **Inkwell:** Gemini API ~$0.01-0.05 per chapter generation. 5-chapter free trial = $0.05-0.25 per user.
+- **SqrrledAway:** Gemini ~$0.01-0.02 per generation action; free tier already capped at 5/month per user → ~$0.05-0.10 per trial user/month.
+- **Crucible:** AI substitution suggestions, batch scaling, recipe-from-constraints; ~$0.001-0.01 per request → $0.05-0.25 per trial user/month.
+
+**Aggregate at scale:** at 1000 trial users across products = $200-1000/month in AI infra. Annualized: $2,400-12,000. A $25-50K angel check covers 2-4 years of trial AI cost at modest scale, with margin for usage spikes.
+
+**Investor pitch framing (when ready):**
+
+> *"I'm building three products under Sqrrlbrain Studio. Crucible — formulation tool with a locked three-layer revenue model — is my near-term thesis. Inkwell is live, AI-driven storytelling. SqrrledAway is a meal-planning app with multi-user household coordination nobody else has.*
+>
+> *All three need AI infrastructure for free trials to convert users. Without trials, conversion is zero. With trials, we can validate revenue across the studio. I'm raising $X specifically to underwrite trial AI infra plus a small operational runway. Capital pays back as products convert trial → paid subscriptions, with Crucible's bundle marketplace as the lead revenue line.*
+>
+> *I've got a sales lead on commission for B2B partner outreach (no cash needed there). I'm not asking for runway to quit my day job. I'm asking for the AI cost stack to be funded so I can offer trials at all."*
+
+That's a sharper pitch than runway-broad. Investor knows exactly what their money buys; revenue ramp is concrete.
+
+### Founder-friendly investor structures, ranked by Ron's "stay solo" constraint
+
+1. **Revenue-share loan** — he loans cash; repaid as % of monthly gross revenue (e.g., 5-10%) until repayment cap (e.g., 1.3-1.5x). No equity given up. No board seat. Hardest to find a willing investor for; most prefer equity upside. **Best fit for the AI-infra-for-trials pitch** — investor sees direct mapping between dollars in and revenue ramp out.
 2. **SAFE note** with high valuation cap ($1M+) — defers valuation, simplest paperwork, low legal cost. Equity converts at future priced round at the cap. Minimal current dilution if cap is high.
 3. **Convertible note** — slightly worse than SAFE (interest accrual) but mainstream.
 4. **Direct priced equity** — last resort, requires valuation now (hard pre-revenue).
 
-**The killer combination:** **investor capital + commission-only salesperson** = best of both worlds. Investor money funds Ron's reduced-DME-hours runway (so he can spend more time on Crucible without burning out). Salesperson works on commission (self-funded from deal closes, no cash drain). Equity dilution stays minimal (a few % to investor at most; 0% to salesperson initially).
+### The killer combination
 
-**Investor pitch framing (when ready):** *"I'm building Crucible. Demo phase data: [N active users, [X] saved recipes, [Y]% return rate]. I have a sales lead lined up on commission. I need [$25-100k] of runway to focus more time on this and ship the Pro tier + partner deals. Would you be interested in seeing the deck?"* Don't ask for money yet — just gauge interest. Closing happens later when materials are ready.
+**Investor capital (covers trial AI infra) + commission-only salesperson (covers B2B partnerships) + Ron's solo execution (covers everything else)** = three-product studio operating without burning Ron's personal capital, without diluting equity to a salesperson, with concrete unit economics on trial → paid conversion.
 
-**What you'd need before pitching:**
+### What you need before pitching
+
 - Demo phase signal data (active users, return rate, willingness-to-pay survey results)
 - Tight 10-slide deck (problem, solution, traction, model, team, ask)
-- Financial projections (12-24 mo, revenue + cost) — even rough is fine for an angel
-- Use-of-funds breakdown (what the money buys, when revenue ramps)
-- Term sheet draft (revenue-share loan or SAFE — whichever you'd accept)
+- Financial projections (12-24 mo, revenue + cost; trial AI cost as the largest variable line)
+- Use-of-funds breakdown — **specifically: $X for trial AI infra, $Y for operational runway, $Z for legal/Stripe setup**
+- Term sheet draft (revenue-share loan preferred)
 
 **Tink can draft all of this** when the time is right. The bottleneck is signal data, not preparation.
+
+### Pitch the synthesis, not a single product
+
+(See §12.5 below — Studio-as-umbrella with Crucible-as-lead-horse.)
+
+---
+
+## 11.5 — Two-library model (decided 2026-05-05)
+
+Original plan was: clean up the existing 706 scraped recipes + use them as the public Crucible library. Ron pivoted to a much cleaner model:
+
+### Private library
+- The existing 706 cleaned/scraped recipes stay as **Ron's personal lab notebook + family/friends recipe library**
+- Used by Ron + select invitees (the demo whitelist)
+- **Never published, never sold, never re-licensed**
+- Acceptable use under most fair-use interpretations — personal collection of factual data, not commercial redistribution
+
+### Public library
+- Built from scratch with **proper attribution from day one**
+- Smaller initially (start with 50 recipes, grow over time)
+- Sources tagged: `sqrrlbrain-original` (Ron's own formulations), `partner-licensed` (signed partner recipes), `public-domain` (older non-copyrighted), `creative-commons` (with proper credit + license link)
+- Multi-tenant; this is the recipe set that demo invitees and eventually paying users see
+
+### Why this is dramatically better
+
+- **Eliminates the legal/attribution gap.** Public library is clean from day one. No retroactive cleanup needed across 706 recipes.
+- **The bundle pitch becomes cleaner.** Public library is intentionally small. Bundles don't compete with a free 706-recipe alternative — they expand a deliberately curated foundation. *"Crucible's free library has 50 vetted recipes. Add the Soap Queen Holiday Pack for 12 more, branded and licensed. That's the model."*
+- **Ron's personal collection retains its full value to him.** No deletion, no awkward retroactive attribution.
+- **Clean separation of concerns:** private = lab notebook, public = product surface.
+
+### Implementation impact on Phase 1
+
+Phase 1 (Path A demo build) ships with:
+- Multi-user auth (already covered)
+- localStorage namespacing per user (already covered)
+- **Two recipe sources visible in the app:**
+  - "My Library" — user's own custom recipes, scoped by uid
+  - "Sqrrlbrain Library" — the (initially small) clean public library
+- Ron's account, in addition, has access to "Personal Collection" — the 706-recipe private library, only visible to him + whitelisted family/friends. Implemented as a special collection only-loaded for whitelisted private-library users.
+
+### Implementation impact on data schema
+
+`formulator-data.json` becomes two-collections-aware:
+
+```json
+{
+  "publicLibrary": [
+    { "id": "sb-001", "title": "...", "source": "sqrrlbrain-original", "attribution": "Sqrrlbrain Studio", ... }
+  ],
+  "personalLibrary": [
+    { "id": "p-001", "title": "...", "source": "scraped", "originalUrl": "...", "originalSource": "soap-queen", ... }
+  ]
+}
+```
+
+### Migration plan
+
+1. **Now:** rename existing data to `personalLibrary` collection. Build minimal `publicLibrary` (start with maybe 5 of Ron's original formulations or public-domain recipes).
+2. **Demo phase:** demo users see only `publicLibrary` + their own custom recipes. Ron sees everything.
+3. **Bundle launch:** partner-licensed recipes flow into a third collection, `bundleLibrary`, gated by purchased-bundle ownership in user account.
 
 ---
 
@@ -379,6 +463,40 @@ Ron knows an angel investor type — "plenty of money and he's known to like to 
 | Phase 6 — Scale | 2027+ | Hire/contract additional sales as needed | Series A or bootstrap from revenue |
 
 **Critical:** don't rush sales/capital decisions before demo phase produces signal. Premature operational structure. Premature investor pitches kill future credibility.
+
+---
+
+## 12.5 — The synthesis investor pitch (decided 2026-05-05)
+
+Ron's wrestling with: pitch a single product to investor, or pitch the studio? My honest read after walking through each option:
+
+### The recommendation: Studio-as-umbrella with Crucible-as-lead-horse
+
+> *"I'm Ron Goodrich. I run Sqrrlbrain Studio — a one-operator multi-disciplinary studio with three things in flight: Inkwell (live, AI storytelling), SqrrledAway (in development, family-coordination meal planner), and Crucible (formulation tool entering demo). I'm raising $X to underwrite trial AI infrastructure across all three plus operational runway. Crucible is my near-term revenue thesis — locked three-layer model (affiliate + Pro subscription + branded bundles) with a niche-but-defensible market position. Inkwell and SqrrledAway have monetization paths defined and capital lets me actually offer the trials that convert. Capital allocation: 60-70% trial AI infra, 30-40% Ron's reduced-DME-hours runway."*
+
+**Why this beats single-product pitches:**
+
+- **You're an operator with shipping muscle** — Inkwell live = proof of capability. Single-product pitch loses this proof.
+- **You have focus** (Crucible is THE near-term thesis, not vague "studio")
+- **Optionality reduces investor's downside** (if Crucible underperforms, Inkwell or SqrrledAway is the backup path)
+- **The capital ask is concrete** (specific dollars to AI infra; investor knows what they're buying)
+
+**Why this beats studio-only pitches:**
+
+- Studio-only feels unfocused; angels reject it
+- Lead-horse framing gives them a single thesis to bet on while keeping optionality
+
+**Self-test for which product is actually the lead horse**
+
+Ron answers honestly:
+
+1. *If I had 12 hours/day instead of 3, which product would I pour them into?*
+2. *Which product, when I think about it shipping at scale, gives me the most energy?*
+3. *Which product has the most decisive market signal I trust?*
+
+If all three answers are Crucible → synthesis pitch as written.
+
+If any answer is NOT Crucible → reconsider. Lead horse should be the one you're actually motivated to grind. Capital won't fix the lack of motivation.
 
 ---
 
