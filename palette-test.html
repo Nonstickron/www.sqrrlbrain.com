@@ -18,9 +18,10 @@
     :root {
       --vermillion:  #d4452a;
       --turquoise:   #67d9e5;
-      --teal:        #136a78;
+      --steel:       #37769f;
       --warm-yellow: #f4bc43;
       --navy:        #1a2942;
+      --teal:        var(--steel); /* alias for legacy class refs in this test page */
 
       /* base set when cream mode (default) */
       --bg:        #faf6f0;
@@ -216,8 +217,8 @@
       <div class="swatch light" style="background:var(--turquoise);">
         <div class="nm">Turquoise</div><div class="hex">#67d9e5</div>
       </div>
-      <div class="swatch dark" style="background:var(--teal);">
-        <div class="nm">Teal</div><div class="hex">#136a78</div>
+      <div class="swatch dark" style="background:var(--steel);">
+        <div class="nm">Steel Blue</div><div class="hex">#37769f</div>
       </div>
       <div class="swatch light" style="background:var(--warm-yellow);">
         <div class="nm">Warm Yellow</div><div class="hex">#f4bc43</div>
@@ -229,7 +230,7 @@
     <div class="color-strip" style="margin-top:1.4rem;">
       <div class="v">Vermillion</div>
       <div class="t">Turquoise</div>
-      <div class="te">Teal</div>
+      <div class="te">Steel</div>
       <div class="y">Warm Yellow</div>
       <div class="b">Black</div>
     </div>
