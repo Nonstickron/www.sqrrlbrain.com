@@ -228,19 +228,39 @@
       display: block;
     }
     .carousel-slide.no-image {
-      background: linear-gradient(135deg, var(--ink) 0%, #5a2a10 60%, var(--accent) 130%);
+      background: var(--paper);
+      border: 1px solid rgba(58,26,0,.12);
+    }
+    .carousel-slide.no-image::before {
+      content: attr(data-mark);
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 62%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 700;
+      font-size: 9rem;
+      line-height: 1;
+      color: var(--accent);
+      opacity: .14;
+      pointer-events: none;
+      letter-spacing: -.04em;
     }
     .carousel-caption {
       position: absolute; left: 0; right: 0; bottom: 0;
       padding: 1.4rem 1.6rem 1.5rem;
-      background: linear-gradient(180deg, transparent 0%, rgba(58,26,0,.85) 65%, rgba(58,26,0,.95) 100%);
+      background: rgba(58,26,0,.78);
     }
     .carousel-slide.no-image .carousel-caption {
-      background: none;
-      bottom: auto; top: 50%;
-      transform: translateY(-50%);
-      text-align: left;
+      background: var(--warm);
+      border-top: 1px solid rgba(58,26,0,.1);
     }
+    .carousel-slide.no-image .slide-eyebrow { color: var(--brown-mid); }
+    .carousel-slide.no-image .slide-title { color: var(--ink); }
+    .carousel-slide.no-image .slide-sub { color: var(--brown-mid); }
     .slide-eyebrow {
       font-family: var(--mono);
       font-size: .58rem;
@@ -287,29 +307,6 @@
     }
 
     /* EMBELLISHMENTS — ported from palette-test.html sandbox */
-    .ornament-divider {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      color: var(--accent);
-      margin: 0 3rem;
-      padding: 2rem 0;
-    }
-    .ornament-divider::before,
-    .ornament-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--accent);
-      opacity: .35;
-    }
-    .ornament-divider .glyph {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 1.5rem;
-      line-height: 1;
-    }
-
     .pull-quote {
       font-family: var(--serif);
       font-style: italic;
@@ -466,66 +463,6 @@
       margin-top: .4rem;
     }
 
-    /* APPS */
-    .apps {
-      padding: 4.5rem 3rem;
-      border-bottom: 1px solid rgba(58,26,0,.08);
-    }
-
-    .app-card {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      max-width: 960px;
-    }
-
-    .app-card-text h2 {
-      font-family: var(--serif);
-      font-size: clamp(1.8rem, 2.8vw, 2.4rem);
-      font-weight: 700;
-      line-height: 1.14;
-      letter-spacing: -.025em;
-      margin-bottom: 1rem;
-    }
-    .app-card-text p {
-      font-size: .97rem;
-      line-height: 1.82;
-      color: var(--brown-mid);
-      margin-bottom: 1.6rem;
-      max-width: 44ch;
-    }
-
-    .app-badge {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: .62rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--brown-light);
-      border: 1px solid rgba(184,140,90,.4);
-      padding: .35rem .8rem;
-    }
-
-    .app-visual {
-      background: var(--ink);
-      aspect-ratio: 1;
-      max-width: 240px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2.5rem;
-    }
-    .app-visual img { width: 100%; height: auto; opacity: .75; }
-
-    @media (max-width: 760px) {
-      .apps { padding: 3rem 1.4rem; }
-      .app-card { grid-template-columns: 1fr; gap: 1.4rem; max-width: none; }
-      .app-card-text h2 { font-size: 1.6rem; margin-bottom: .7rem; }
-      .app-card-text p { font-size: .92rem; line-height: 1.7; margin-bottom: 1rem; }
-      .app-visual { display: none; }
-    }
-
     /* CONTACT */
     .contact {
       background: var(--warm);
@@ -659,8 +596,6 @@
       .hero-carousel { max-width: 100%; justify-self: stretch; }
       .slide-title { font-size: 1.15rem; }
       .slide-sub   { font-size: .78rem; }
-      .ornament-divider { margin: 0 1.4rem; padding: 1.4rem 0; }
-      .ornament-divider .glyph { font-size: 1.25rem; }
 
       .services    { padding: 3rem 1.4rem; }
       .section-label { margin-bottom: 1.6rem; }
@@ -722,21 +657,21 @@
     </div>
     <div class="hero-carousel" aria-roledescription="carousel" aria-label="Featured projects">
       <div class="carousel-track">
-        <a class="carousel-slide no-image active" href="/inkwell.html">
+        <a class="carousel-slide no-image active" href="/inkwell.html" data-mark="I">
           <div class="carousel-caption">
             <p class="slide-eyebrow">Software &middot; Live</p>
             <h3 class="slide-title">Inkwell &mdash; AI Story Engine</h3>
             <p class="slide-sub">Live web app. iOS via TestFlight pending Apple review.</p>
           </div>
         </a>
-        <a class="carousel-slide no-image" href="/projects.html#sqrrledaway">
+        <a class="carousel-slide no-image" href="/projects.html#sqrrledaway" data-mark="S">
           <div class="carousel-caption">
             <p class="slide-eyebrow">Software &middot; In Development</p>
             <h3 class="slide-title">SqrrledAway</h3>
             <p class="slide-sub">Family meal planning. Multi-user household coordination + AI suggestions.</p>
           </div>
         </a>
-        <a class="carousel-slide no-image" href="/projects.html#crucible">
+        <a class="carousel-slide no-image" href="/projects.html#crucible" data-mark="C">
           <div class="carousel-caption">
             <p class="slide-eyebrow">Software &middot; In Development</p>
             <h3 class="slide-title">Crucible</h3>
@@ -770,10 +705,6 @@
     </div>
   </section>
 
-  <div class="ornament-divider" aria-hidden="true">
-    <span class="glyph">&sect;</span>
-  </div>
-
   <section class="services" id="services">
     <p class="section-label">Services</p>
     <div class="services-grid">
@@ -800,10 +731,6 @@
     </div>
   </section>
 
-  <div class="ornament-divider" aria-hidden="true">
-    <span class="glyph">&#9670;</span>
-  </div>
-
   <section class="about" id="about">
     <div class="about-label">
       <p class="section-label">About</p>
@@ -829,32 +756,6 @@
       </div>
     </div>
   </section>
-
-  <div class="ornament-divider" aria-hidden="true">
-    <span class="glyph">&#9728;</span>
-  </div>
-
-  <section class="apps" id="apps">
-    <p class="section-label">Apps</p>
-    <div class="app-card">
-      <div class="app-card-text">
-        <h2>Inkwell — AI Story Engine</h2>
-        <p>Inkwell is an AI-powered interactive fiction app that puts you inside a living story. Every choice shapes the narrative — characters remember, worlds evolve, and no two playthroughs are alike. Built for readers who want to do more than read.</p>
-        <span class="app-badge">Coming to iOS &amp; Android</span>
-        <div style="margin-top:1.4rem;display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap;">
-          <a href="/inkwell.html" style="display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);background:var(--accent);padding:.85rem 1.6rem;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='var(--ink)'" onmouseout="this.style.background='var(--accent)'">Learn more &rarr;</a>
-          <a href="/projects.html" style="display:inline-block;font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--brown-mid);text-decoration:none;">All projects &rarr;</a>
-        </div>
-      </div>
-      <div class="app-visual">
-        <img src="images/icon.svg" alt="Inkwell" />
-      </div>
-    </div>
-  </section>
-
-  <div class="ornament-divider" aria-hidden="true">
-    <span class="glyph">&#9670;</span>
-  </div>
 
   <section class="contact" id="contact">
     <h2>Let's make<br>something<br><em>worth keeping.</em></h2>
@@ -910,14 +811,12 @@
       if (!carousel) return;
       const slides = carousel.querySelectorAll('.carousel-slide');
       const dots = carousel.querySelectorAll('.carousel-dot');
-      const stage = document.querySelector('.hero-stage');
       if (!slides.length) return;
 
       let current = 0;
       let timer = null;
       let userInteracted = false;
       const ROTATE_MS = 7000;
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       function go(index) {
         slides[current].classList.remove('active');
@@ -930,7 +829,7 @@
       function prev() { go(current - 1); }
 
       function startTimer() {
-        if (userInteracted || reduceMotion) return;
+        if (userInteracted) return;
         stopTimer();
         timer = setInterval(next, ROTATE_MS);
       }
@@ -942,14 +841,13 @@
         stopTimer();
       }
 
-      // Auto-rotate (skipped if reduced motion)
+      // Auto-rotate
       startTimer();
 
-      // Hover pause covers the whole hero so the pitch is also pausable
-      if (stage) {
-        stage.addEventListener('mouseenter', stopTimer);
-        stage.addEventListener('mouseleave', startTimer);
-      }
+      // Hover pause limited to the carousel itself so the pitch
+      // is readable without locking rotation
+      carousel.addEventListener('mouseenter', stopTimer);
+      carousel.addEventListener('mouseleave', startTimer);
 
       // Dot clicks
       dots.forEach((dot, i) => {
