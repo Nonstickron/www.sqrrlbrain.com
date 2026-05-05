@@ -60,7 +60,8 @@
     .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
     .dropdown-menu a { display: block; padding: .65rem 1.2rem; font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s, background .2s; }
     .dropdown-menu a:hover { color: var(--ink); background: var(--warm); }
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0; flex-direction: column; gap: 5px; }
+    nav { display: none; } /* hamburger-only nav, all viewports */
+    .hamburger { display: flex; background: none; border: none; cursor: pointer; padding: 0; flex-direction: column; gap: 5px; }
     .hamburger span { display: block; width: 26px; height: 2px; background: var(--ink); transition: transform .3s; }
     .mobile-nav { display: none; }
 
@@ -113,18 +114,24 @@
     footer a { color: var(--brown-light); text-decoration: none; transition: color .2s; }
     footer a:hover { color: var(--ink); }
 
+    /* MOBILE NAV PANEL — shown when hamburger is clicked, all viewports */
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid rgba(58,26,0,.1); padding: 1rem 1.4rem 1.5rem; flex-direction: column; gap: 0; z-index: 999; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; padding: .55rem 0; display: block; border-bottom: 1px solid rgba(58,26,0,.05); }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--ink); }
+    .mobile-nav-section { font-family: var(--mono); font-size: .56rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown-light); padding: .8rem 0 .3rem; border-top: 1px solid rgba(58,26,0,.06); margin-top: .4rem; }
+    .mobile-nav-section:first-child { border-top: none; margin-top: 0; }
+    .mobile-nav-section.locked { color: var(--brown-light); opacity: .6; }
+    .mobile-nav a.locked-link { opacity: .55; font-style: italic; }
+    .mobile-nav a.locked-link:hover { opacity: .85; }
+    header { position: relative; }
+
     @media (max-width: 900px) {
       header { padding: 1rem 1.4rem; }
-      nav { display: none; }
-      .hamburger { display: flex; }
-      .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      .hamburger.open span:nth-child(2) { opacity: 0; }
-      .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-      .mobile-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid rgba(58,26,0,.1); padding: 1rem 1.4rem; flex-direction: column; gap: .8rem; z-index: 999; }
-      .mobile-nav.open { display: flex; }
-      .mobile-nav a { font-family: var(--mono); font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; padding: .4rem 0; }
-      .mobile-nav-section { font-family: var(--mono); font-size: .56rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown-light); padding: .8rem 0 .3rem; border-top: 1px solid rgba(58,26,0,.06); margin-top: .4rem; }
-      .mobile-nav-section:first-child { border-top: none; margin-top: 0; }
       .page-hero { padding: 2.6rem 1.4rem 1.8rem; }
       .qa-list { padding: 1.4rem 1.4rem 3rem; }
       footer { padding: 2rem 1.4rem; flex-direction: column; gap: 1rem; text-align: center; }
@@ -137,48 +144,23 @@
     <div class="logo-wrap">
       <a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
     </div>
-    <nav>
-      <a href="/services.html">Services</a>
-      <div class="dropdown">
-        <span class="nav-link">Tools <span class="caret">&#9660;</span></span>
-        <div class="dropdown-menu">
-          <a href="/dashboard.html">Dashboard</a>
-          <a href="/crucible.html">Crucible</a>
-          <a href="/crucible-audit.html">Crucible Audit</a>
-          <a href="/sqrrlnest.html">SqrrlNest</a>
-          <a href="/sqrrlbrain-billing.html">Billing App</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <span class="nav-link">Projects <span class="caret">&#9660;</span></span>
-        <div class="dropdown-menu">
-          <a href="/projects.html">All Projects</a>
-          <a href="/projects.html#inkwell">Inkwell</a>
-          <a href="/projects.html#sqrrlaway">SqrrledAway</a>
-        </div>
-      </div>
-      <a href="/work.html">Work</a>
-      <a href="/notes.html" class="active">Notes</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <div class="mobile-nav" id="mobile-nav">
       <span class="mobile-nav-section">Navigate</span>
+      <a href="/">Home</a>
       <a href="/services.html">Services</a>
+      <a href="/projects.html">Projects</a>
       <a href="/work.html">Work</a>
       <a href="/notes.html">Notes</a>
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact</a>
-      <span class="mobile-nav-section">Tools</span>
-      <a href="/dashboard.html">Dashboard</a>
-      <a href="/crucible.html">Crucible</a>
-      <a href="/sqrrlnest.html">SqrrlNest</a>
-      <a href="/sqrrlbrain-billing.html">Billing App</a>
-      <span class="mobile-nav-section">Projects</span>
-      <a href="/projects.html">All Projects</a>
+      <span class="mobile-nav-section locked">Tools (Admin Only)</span>
+      <a href="/dashboard.html" class="locked-link">Dashboard</a>
+      <a href="/crucible.html" class="locked-link">Crucible</a>
+      <a href="/sqrrlnest.html" class="locked-link">SqrrlNest</a>
+      <a href="/sqrrlbrain-billing.html" class="locked-link">Billing App</a>
     </div>
   </header>
 
