@@ -152,6 +152,8 @@
     .steps-list li { font-size: .82rem; line-height: 1.6; color: var(--ink); padding: .35rem 0 .35rem 1.4rem; position: relative; border-bottom: 1px solid var(--line); }
     .steps-list li:last-child { border-bottom: none; }
     .steps-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: .8rem; line-height: 1.5; }
+    .steps-list li.shipped::before { content: '✓'; color: var(--warm-yellow); font-weight: 700; }
+    .steps-list li.shipped { color: var(--brown-mid); }
 
     .blockers-list { list-style: none; }
     .blockers-list li { font-size: .8rem; line-height: 1.6; color: var(--blocked); padding: .4rem 0 .4rem 1.5rem; position: relative; border-bottom: 1px solid rgba(196,122,58,.18); }
@@ -856,7 +858,11 @@
       const stepsLbl = el('div', 'details-section-label', 'Next Steps');
       stepsLbl.style.marginTop = '0';
       const stepsList = el('ul', 'steps-list');
-      p.steps.forEach(s => stepsList.appendChild(el('li', '', s)));
+      p.steps.forEach(s => {
+        const shipped = s.startsWith('✅');
+        const text = shipped ? s.replace(/^✅\s*/, '') : s;
+        stepsList.appendChild(el('li', shipped ? 'shipped' : '', text));
+      });
       ap(inner, stepsLbl, stepsList);
     }
 
