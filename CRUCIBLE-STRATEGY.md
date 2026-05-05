@@ -451,6 +451,66 @@ Phase 1 (Path A demo build) ships with:
 
 ---
 
+## 11.6 — Embedded local models: making investor capital optional (thesis, unvalidated 2026-05-05)
+
+**Status:** thesis recorded for tracking. **NOT yet validated.** Ron will download Gemma 4 and test it locally before this changes any strategic decisions. Captured here so the idea isn't lost; nothing in §11 (Capital) or §12 (Sequencing) is rewritten until validation completes.
+
+### The thesis
+
+Gemma 4 (Google's open-weight LLM family, current generation as of 2026) ships in size tiers small enough to embed directly in mobile apps:
+
+| Tier | Params | Q4 size | RAM needed | Mobile feasibility |
+|------|--------|---------|------------|-------------------|
+| Small | ~1B | 600-800 MB | ~1.5 GB | Any modern phone |
+| Mid | ~4B | 2.5-3 GB | ~3-4 GB | Modern phones (iPhone 13+, recent Android) |
+| Large | ~12B | 6-7 GB | ~7-8 GB | Flagship only (iPhone 15 Pro+, 8GB Android) |
+| Flagship | ~27B | 14-16 GB | ~16+ GB | Desktop only |
+
+If a Gemma 4 mid (~4B params, ~2.5-3GB at Q4 quantization) can handle Crucible's AI features at acceptable quality, **the studio's primary investor ask — trial AI infrastructure — drops to near-zero.**
+
+### Crucible-specific viability
+
+| Feature | Local Gemma 4 viable? | Cloud needed? |
+|---------|----------------------|---------------|
+| Ingredient substitution suggestions | Likely yes (mid tier) | No |
+| Batch scaling math | No LLM needed at all | No |
+| Recipe-from-constraints generation | Maybe (large tier, slower) | Possibly Pro-tier only |
+| Recipe organization / search | No LLM needed | No |
+| Notes extraction / cleanup | Likely yes (small tier) | No |
+
+For Crucible specifically, **most of the AI surface is structured tasks at moderate quality bar** — exactly where local models perform well. Cloud fallback is only needed for the heaviest generative tasks, which can stay Pro-tier-only and pay for themselves through subscription revenue.
+
+### Capital implications
+
+- **If Gemma 4 viability confirms across all three products:** the trial-AI-infra ask in §11 ($25-50K of the synthesis investor ask) drops out almost entirely. Studio runs on revenue from day one of public launch, not on investor runway.
+- **The investor question reframes from necessity to optionality.** Stronger negotiating position if Ron does take investment — "we don't need this, but we'd accelerate with it" beats "we need this to survive."
+- **Trade-off: capital is replaced by engineering time.** Budget ~3-6 weeks per platform per app to integrate local inference (WebLLM for web, MLX/Core ML on iOS, ExecuTorch as alternative). That time has to come from Ron's hours or a contractor.
+
+### Validation gate — required before this changes any strategy
+
+1. Download Gemma 4 (small + mid + large variants) via Ollama or LM Studio on dev machine
+2. Test on Crucible's actual prompt patterns: ingredient substitution, swap suggestions, recipe-from-constraints
+3. Compare output quality vs. cloud Gemini Flash
+4. Test inference speed on a representative phone, not just dev laptop
+5. Confirm Q4-quantized model holds quality vs. fp16 baseline
+
+**If validation passes:** rewrite §11 (Capital) and §12 (Sequencing) to reflect local-first architecture. Update synthesis investor pitch in §12.5 to soften from "we need capital for AI infra" to "capital accelerates timeline; revenue covers AI infra at modest scale."
+
+**If validation fails:** leave §11.6 as a recorded-and-rejected thesis. Original investor-funded path stands.
+
+### Why record this even if we may not pursue it
+
+- Ron's "no risk in recording ideas we don't have to follow through on" principle.
+- If the investor pitch happens, having evaluated local models and recorded the trade-off math **strengthens credibility** — investor sees cost-conscious thinking, not money requested by default.
+- If a future generation makes this viable later (Gemma 5, etc.), the analysis is already half-done.
+
+### Sister analyses
+
+- Inkwell viability and per-device-class hybrid model: see `Projects/Inkwell/inkwell-story-engine/docs/STRATEGY.md` ("Embedded Local Models" section).
+- SqrrledAway viability (best fit of the three): see `Projects/SqrrledAway/docs/2026-05-05-investor-framing-and-studio-synthesis.md` ("Embedded Local Models" section).
+
+---
+
 ## 12 — Recommended sequencing (revised 2026-05-05)
 
 | Phase | Timeline | Sales help | Capital |
