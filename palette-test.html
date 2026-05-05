@@ -17,17 +17,17 @@
        ======================================== */
     :root {
       --vermillion:  #d4452a;
-      --turquoise:   #2eb6c8;
+      --turquoise:   #67d9e5;
       --teal:        #136a78;
-      --warm-yellow: #f3e3a8;
-      --black:       #1a1a1a;
+      --warm-yellow: #f4bc43;
+      --navy:        #1a2942;
 
       /* base set when cream mode (default) */
       --bg:        #faf6f0;
       --bg-soft:   #f2ebe0;
-      --ink:       var(--black);
-      --ink-muted: #4a4a4a;
-      --line:      rgba(26,26,26,.12);
+      --ink:       var(--navy);
+      --ink-muted: #4a5468;
+      --line:      rgba(26,41,66,.14);
 
       --mono:  'DM Mono', monospace;
       --serif: 'Lora', serif;
@@ -35,13 +35,13 @@
     }
     body.mode-white {
       --bg: #ffffff;
-      --bg-soft: #f7f4ed;
-      --line: rgba(26,26,26,.10);
+      --bg-soft: #f4f1ea;
+      --line: rgba(26,41,66,.12);
     }
     body.mode-warm-yellow {
-      --bg: #fbf2cf;
-      --bg-soft: #f3e3a8;
-      --line: rgba(26,26,26,.14);
+      --bg: #fef3d4;        /* softer tint — full #f4bc43 is too intense as page bg */
+      --bg-soft: #fae9ad;
+      --line: rgba(26,41,66,.18);
     }
 
     html { scroll-behavior: smooth; background: var(--bg); }
@@ -58,7 +58,7 @@
     /* TEST CONTROL BAR */
     .control-bar {
       position: sticky; top: 0; z-index: 100;
-      background: var(--black); color: var(--bg);
+      background: var(--navy); color: var(--bg);
       padding: 1rem 2rem;
       display: flex; gap: 1rem; align-items: center; justify-content: space-between;
       font-family: var(--mono); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
@@ -93,7 +93,7 @@
     }
     .swatch .hex { font-family: var(--mono); font-size: .8rem; }
     .swatch.dark { color: #fff; }
-    .swatch.light { color: var(--black); }
+    .swatch.light { color: var(--navy); }
 
     /* TYPE SAMPLE */
     h1.demo-h1 {
@@ -179,10 +179,10 @@
     .color-strip { display: grid; grid-template-columns: repeat(5, 1fr); height: 80px; }
     .color-strip > div { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; }
     .color-strip .v { background: var(--vermillion); color: var(--warm-yellow); }
-    .color-strip .t { background: var(--turquoise); color: var(--black); }
+    .color-strip .t { background: var(--turquoise); color: var(--navy); }
     .color-strip .te { background: var(--teal); color: var(--warm-yellow); }
-    .color-strip .y { background: var(--warm-yellow); color: var(--black); }
-    .color-strip .b { background: var(--black); color: var(--warm-yellow); }
+    .color-strip .y { background: var(--warm-yellow); color: var(--navy); }
+    .color-strip .b { background: var(--navy); color: var(--warm-yellow); }
 
     @media (max-width: 760px) {
       section { padding: 2.4rem 1.4rem; }
@@ -214,16 +214,16 @@
         <div class="nm">Vermillion</div><div class="hex">#d4452a</div>
       </div>
       <div class="swatch light" style="background:var(--turquoise);">
-        <div class="nm">Turquoise</div><div class="hex">#2eb6c8</div>
+        <div class="nm">Turquoise</div><div class="hex">#67d9e5</div>
       </div>
       <div class="swatch dark" style="background:var(--teal);">
         <div class="nm">Teal</div><div class="hex">#136a78</div>
       </div>
       <div class="swatch light" style="background:var(--warm-yellow);">
-        <div class="nm">Warm Yellow</div><div class="hex">#f3e3a8</div>
+        <div class="nm">Warm Yellow</div><div class="hex">#f4bc43</div>
       </div>
-      <div class="swatch dark" style="background:var(--black);">
-        <div class="nm">Black</div><div class="hex">#1a1a1a</div>
+      <div class="swatch dark" style="background:var(--navy);">
+        <div class="nm">Dark Navy</div><div class="hex">#1a2942</div>
       </div>
     </div>
     <div class="color-strip" style="margin-top:1.4rem;">
@@ -332,10 +332,10 @@
   </section>
 
   <!-- 6) FOOTER MOCKUP -->
-  <section style="background:var(--black); color:var(--warm-yellow); border-bottom:none;">
+  <section style="background:var(--navy); color:var(--warm-yellow); border-bottom:none;">
     <p class="section-label" style="color:var(--turquoise);">Footer Sample</p>
     <p style="font-family:var(--mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:.8rem;">&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
-    <p style="font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; opacity:.7;"><a href="#" style="color:inherit;">Privacy</a> &middot; <a href="#" style="color:inherit;">Support</a> &middot; <a href="#" style="color:var(--vermillion);">Instagram</a></p>
+    <p style="font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; opacity:.7;"><a href="#" style="color:inherit;">Privacy</a> &middot; <a href="#" style="color:inherit;">Support</a> &middot; <a href="#" style="color:var(--turquoise);">Instagram</a></p>
   </section>
 
   <script>
