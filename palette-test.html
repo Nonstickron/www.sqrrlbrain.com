@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palette Test — Sqrrlbrain Studio</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ========================================
+       NEW PALETTE — Atomic-age inspired
+       Toggle between cream and stark-white via .mode-* class on <body>
+       ======================================== */
+    :root {
+      --vermillion:  #d4452a;
+      --turquoise:   #2eb6c8;
+      --teal:        #136a78;
+      --warm-yellow: #f3e3a8;
+      --black:       #1a1a1a;
+
+      /* base set when cream mode (default) */
+      --bg:        #faf6f0;
+      --bg-soft:   #f2ebe0;
+      --ink:       var(--black);
+      --ink-muted: #4a4a4a;
+      --line:      rgba(26,26,26,.12);
+
+      --mono:  'DM Mono', monospace;
+      --serif: 'Lora', serif;
+      --sans:  'DM Sans', sans-serif;
+    }
+    body.mode-white {
+      --bg: #ffffff;
+      --bg-soft: #f7f4ed;
+      --line: rgba(26,26,26,.10);
+    }
+    body.mode-warm-yellow {
+      --bg: #fbf2cf;
+      --bg-soft: #f3e3a8;
+      --line: rgba(26,26,26,.14);
+    }
+
+    html { scroll-behavior: smooth; background: var(--bg); }
+    body {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 400;
+      transition: background .25s ease, color .25s ease;
+    }
+
+    /* TEST CONTROL BAR */
+    .control-bar {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--black); color: var(--bg);
+      padding: 1rem 2rem;
+      display: flex; gap: 1rem; align-items: center; justify-content: space-between;
+      font-family: var(--mono); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
+    }
+    .control-bar .lbl { opacity: .7; }
+    .control-bar .modes { display: flex; gap: .4rem; }
+    .control-bar button {
+      font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+      background: transparent; color: var(--bg); border: 1px solid rgba(255,255,255,.3);
+      padding: .55rem .9rem; cursor: pointer; transition: all .15s ease;
+    }
+    .control-bar button.active { background: var(--vermillion); border-color: var(--vermillion); color: #fff; }
+    .control-bar button:hover:not(.active) { background: rgba(255,255,255,.1); }
+
+    /* GENERIC SECTION */
+    section { padding: 4rem 3rem; border-bottom: 1px solid var(--line); }
+    section.alt { background: var(--bg-soft); }
+    .section-label {
+      font-family: var(--mono); font-size: .68rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--vermillion); margin-bottom: 1.6rem;
+    }
+
+    /* PALETTE SWATCHES */
+    .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.4rem; }
+    .swatch {
+      aspect-ratio: 1; padding: 1.4rem; display: flex; flex-direction: column; justify-content: flex-end;
+      border: 1px solid var(--line);
+    }
+    .swatch .nm {
+      font-family: var(--mono); font-size: .66rem; letter-spacing: .14em;
+      text-transform: uppercase; margin-bottom: .3rem;
+    }
+    .swatch .hex { font-family: var(--mono); font-size: .8rem; }
+    .swatch.dark { color: #fff; }
+    .swatch.light { color: var(--black); }
+
+    /* TYPE SAMPLE */
+    h1.demo-h1 {
+      font-family: var(--serif); font-style: italic; font-weight: 600;
+      font-size: clamp(2.6rem, 6vw, 4.2rem); line-height: 1.05;
+      color: var(--ink); margin-bottom: 1rem;
+    }
+    h1.demo-h1 em { font-style: italic; color: var(--vermillion); }
+    h1.demo-h1 .turq { color: var(--turquoise); }
+    p.demo-lead { font-size: 1.1rem; line-height: 1.6; max-width: 720px; color: var(--ink-muted); margin-bottom: 1.4rem; }
+    p.demo-body { font-size: 1rem; line-height: 1.7; max-width: 64ch; color: var(--ink); margin-bottom: 1rem; }
+
+    /* WORK CARD MOCKUP */
+    .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .work-item { background: var(--bg-soft); border: 1px solid var(--line); transition: transform .25s; }
+    .work-item:hover { transform: translateY(-2px); }
+    .work-image {
+      aspect-ratio: 4 / 3; background: var(--teal); position: relative;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--warm-yellow); font-family: var(--mono); font-size: .68rem;
+      letter-spacing: .14em; text-transform: uppercase;
+      border-bottom: 1px solid var(--line);
+    }
+    .work-image.alt2 { background: var(--vermillion); color: var(--warm-yellow); }
+    .work-caption { padding: 1.6rem 1.8rem 1.8rem; }
+    .work-caption h3 { font-family: var(--serif); font-weight: 600; font-size: 1.35rem; color: var(--ink); margin-bottom: .4rem; }
+    .work-meta {
+      font-family: var(--mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: .8rem;
+    }
+    .work-caption p { font-size: .95rem; line-height: 1.6; color: var(--ink); }
+
+    /* Q&A BLOCK */
+    .qa-block { padding: 2.4rem 0; border-top: 1px solid var(--line); max-width: 880px; }
+    .qa-meta { font-family: var(--mono); font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: var(--vermillion); margin-bottom: 1rem; }
+    .qa-question { font-family: var(--serif); font-weight: 600; font-size: 1.6rem; line-height: 1.25; margin-bottom: 1.2rem; }
+    .qa-answer { font-size: 1rem; line-height: 1.7; color: var(--ink); max-width: 64ch; }
+
+    /* EMBELLISHMENTS */
+    .embell-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1080px; margin-top: 2rem; }
+    .embell-item { padding: 2rem; background: var(--bg-soft); border: 1px solid var(--line); }
+    .embell-item h4 { font-family: var(--mono); font-size: .68rem; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); margin-bottom: 1.2rem; }
+
+    /* Embellishment 1 — atomic-age divider ornament */
+    .ornament-divider { display: flex; align-items: center; gap: 1rem; color: var(--vermillion); margin: 1.4rem 0; }
+    .ornament-divider::before, .ornament-divider::after { content: ''; flex: 1; height: 1px; background: var(--vermillion); opacity: .4; }
+    .ornament-divider .glyph { font-family: var(--serif); font-style: italic; font-size: 1.4rem; }
+
+    /* Embellishment 2 — vermillion highlight behind text */
+    .highlighted { background: var(--vermillion); color: var(--warm-yellow); padding: .15em .4em; font-style: italic; }
+
+    /* Embellishment 3 — italic pull quote */
+    .pull-quote {
+      font-family: var(--serif); font-style: italic; font-weight: 600;
+      font-size: 1.5rem; line-height: 1.35; color: var(--teal);
+      border-left: 3px solid var(--vermillion);
+      padding: .8rem 0 .8rem 1.4rem;
+      max-width: 32ch;
+    }
+    .pull-quote::before { content: '\201C'; color: var(--vermillion); font-size: 2.2rem; line-height: 0; vertical-align: -.3em; margin-right: .15em; }
+    .pull-quote::after { content: '\201D'; color: var(--vermillion); font-size: 2.2rem; line-height: 0; vertical-align: -.3em; margin-left: .15em; }
+
+    /* Embellishment 4 — display numeral */
+    .num-section { display: grid; grid-template-columns: auto 1fr; gap: 1.4rem; align-items: baseline; }
+    .num-section .num {
+      font-family: var(--serif); font-style: italic; font-weight: 700;
+      font-size: 4.5rem; line-height: 1; color: var(--turquoise);
+    }
+    .num-section h3 { font-family: var(--serif); font-weight: 600; font-size: 1.5rem; color: var(--ink); }
+    .num-section p { font-size: .98rem; line-height: 1.6; color: var(--ink); margin-top: .4rem; }
+
+    /* Embellishment 5 — turquoise underline accent */
+    .accent-underline {
+      display: inline; background-image: linear-gradient(to right, var(--turquoise) 0, var(--turquoise) 100%);
+      background-size: 100% 6px; background-position: 0 88%; background-repeat: no-repeat;
+      padding: 0 .1em;
+    }
+
+    /* Embellishment 6 — atomic shape SVG accent */
+    .atomic-accent { color: var(--vermillion); margin: 0 .3em; vertical-align: middle; }
+
+    /* COLOR USAGE STRIP */
+    .color-strip { display: grid; grid-template-columns: repeat(5, 1fr); height: 80px; }
+    .color-strip > div { display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: .6rem; letter-spacing: .12em; text-transform: uppercase; }
+    .color-strip .v { background: var(--vermillion); color: var(--warm-yellow); }
+    .color-strip .t { background: var(--turquoise); color: var(--black); }
+    .color-strip .te { background: var(--teal); color: var(--warm-yellow); }
+    .color-strip .y { background: var(--warm-yellow); color: var(--black); }
+    .color-strip .b { background: var(--black); color: var(--warm-yellow); }
+
+    @media (max-width: 760px) {
+      section { padding: 2.4rem 1.4rem; }
+      .palette-grid { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+      .work-grid { grid-template-columns: 1fr; gap: 1.4rem; }
+      .embell-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+      .num-section { grid-template-columns: auto 1fr; gap: .8rem; }
+      .num-section .num { font-size: 3rem; }
+      .control-bar { padding: .8rem 1.4rem; flex-direction: column; gap: .6rem; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body class="mode-cream">
+
+  <div class="control-bar">
+    <span class="lbl">Palette test &middot; not for production</span>
+    <div class="modes">
+      <button data-mode="cream" class="active">Cream BG</button>
+      <button data-mode="white">Stark White BG</button>
+      <button data-mode="warm-yellow">Warm Yellow BG</button>
+    </div>
+  </div>
+
+  <!-- 1) PALETTE -->
+  <section>
+    <p class="section-label">Palette</p>
+    <div class="palette-grid">
+      <div class="swatch dark" style="background:var(--vermillion);">
+        <div class="nm">Vermillion</div><div class="hex">#d4452a</div>
+      </div>
+      <div class="swatch light" style="background:var(--turquoise);">
+        <div class="nm">Turquoise</div><div class="hex">#2eb6c8</div>
+      </div>
+      <div class="swatch dark" style="background:var(--teal);">
+        <div class="nm">Teal</div><div class="hex">#136a78</div>
+      </div>
+      <div class="swatch light" style="background:var(--warm-yellow);">
+        <div class="nm">Warm Yellow</div><div class="hex">#f3e3a8</div>
+      </div>
+      <div class="swatch dark" style="background:var(--black);">
+        <div class="nm">Black</div><div class="hex">#1a1a1a</div>
+      </div>
+    </div>
+    <div class="color-strip" style="margin-top:1.4rem;">
+      <div class="v">Vermillion</div>
+      <div class="t">Turquoise</div>
+      <div class="te">Teal</div>
+      <div class="y">Warm Yellow</div>
+      <div class="b">Black</div>
+    </div>
+  </section>
+
+  <!-- 2) TYPE SAMPLE -->
+  <section class="alt">
+    <p class="section-label">Type System</p>
+    <h1 class="demo-h1">Twenty-five years<br>of <em>structures</em> &amp; <span class="turq">stories.</span></h1>
+    <p class="demo-lead">Sqrrlbrain Studio is the multi-disciplinary practice of Ronny Goodrich &mdash; structural design, brand work, custom builds, and software products. Solo by design.</p>
+    <p class="demo-body">Body copy in DM Sans light. Comfortable line-height, generous max-width. The thing readers actually scan. Subtle on a cream background, sharper on stark white.</p>
+    <p class="demo-body">Same paragraph for comparison &mdash; hover the toggles up top to see how this same copy lives on each background. Pay attention to which one feels more like <em>you</em>.</p>
+  </section>
+
+  <!-- 3) SAMPLE WORK CARDS -->
+  <section>
+    <p class="section-label">Work Card Sample</p>
+    <div class="work-grid">
+      <figure class="work-item">
+        <div class="work-image">[Image: Georgetown Hoyas Booster Box]</div>
+        <figcaption class="work-caption">
+          <h3>Georgetown Hoyas Booster Gift Package</h3>
+          <p class="work-meta">Structural design + die-cut engineering</p>
+          <p>Multi-component booster gift for Georgetown Men's Basketball. Shoe-box-inspired form, custom inserts holding a wine bottle at an angle, signed letter, engraved opener.</p>
+        </figcaption>
+      </figure>
+      <figure class="work-item">
+        <div class="work-image alt2">[Image: ECU Pirates Football Season Ticket Box]</div>
+        <figcaption class="work-caption">
+          <h3>ECU Pirates Football Season Ticket Box</h3>
+          <p class="work-meta">Structural design + die-cut engineering &middot; returning client</p>
+          <p>Two-layer season ticket carrier. Six slots &mdash; one per home game &mdash; each holding up to a dozen tickets. Concealed lanyards. Schedule integrated into the inside lid.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4) Q&A BLOCK SAMPLE -->
+  <section class="alt">
+    <p class="section-label">Studio Notes Sample</p>
+    <article class="qa-block">
+      <p class="qa-meta">Packaging &amp; Prepress &middot; 2026-05-04</p>
+      <h2 class="qa-question">What&rsquo;s the most common mistake people make when designing for diecut?</h2>
+      <p class="qa-answer">Sample answer text. Imagine a paragraph of Ronny's actual voice here &mdash; specific, opinionated, real. Not generic. The serif heading sets it up; the sans body delivers it. Vermillion accent on the meta line ties it back to the brand without stealing focus.</p>
+    </article>
+    <article class="qa-block">
+      <p class="qa-meta">Studio Philosophy &middot; 2026-05-04</p>
+      <h2 class="qa-question">Why solo? What&rsquo;s wrong with co-founders?</h2>
+      <p class="qa-answer">Same component, different category, same energy. Q&amp;A as a content format that survives without forcing you to write essays.</p>
+    </article>
+  </section>
+
+  <!-- 5) EMBELLISHMENTS -->
+  <section>
+    <p class="section-label">Embellishments &mdash; the &ldquo;crafted&rdquo; layer</p>
+    <p class="demo-lead">Small details that fight the AI-template look. Pick the ones that feel like you; we kill the rest.</p>
+
+    <div class="embell-grid">
+
+      <div class="embell-item">
+        <h4>1 &middot; Ornament Divider</h4>
+        <p>Section break with a centered glyph between two thin rules &mdash; vermillion. More crafted than a plain hr.</p>
+        <div class="ornament-divider"><span class="glyph">&sect;</span></div>
+        <div class="ornament-divider"><span class="glyph">&#9670;</span></div>
+        <div class="ornament-divider"><span class="glyph">&#9728;</span></div>
+      </div>
+
+      <div class="embell-item">
+        <h4>2 &middot; Vermillion Highlight</h4>
+        <p>A key word or phrase wrapped with a vermillion swatch behind it &mdash; <span class="highlighted">like this</span>. Used sparingly. Editorial-magazine move.</p>
+      </div>
+
+      <div class="embell-item">
+        <h4>3 &middot; Pull Quote</h4>
+        <div class="pull-quote">If it ships, it works. The structural thinking is baked in, not bolted on at the end.</div>
+      </div>
+
+      <div class="embell-item">
+        <h4>4 &middot; Display Numeral</h4>
+        <div class="num-section">
+          <div class="num">01.</div>
+          <div>
+            <h3>Numbered section heading</h3>
+            <p>Big italic numeral in turquoise, serif heading next to it. Adds rhythm to long pages, hints at editorial-pamphlet feel.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="embell-item">
+        <h4>5 &middot; Turquoise Underline Accent</h4>
+        <p>Selected words get a chunky turquoise underline that sits behind the baseline &mdash; <span class="accent-underline">like this phrase right here</span>. Different from the vermillion swatch &mdash; lighter touch, more frequent.</p>
+      </div>
+
+      <div class="embell-item">
+        <h4>6 &middot; Atomic Glyph Accent</h4>
+        <p>Small inline atomic-age glyph as a separator or marker.<br><br>Section A <svg class="atomic-accent" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2" fill="currentColor"/><ellipse cx="12" cy="12" rx="11" ry="4"/><ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(120 12 12)"/></svg> Section B <svg class="atomic-accent" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2" fill="currentColor"/><ellipse cx="12" cy="12" rx="11" ry="4"/><ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(120 12 12)"/></svg> Section C</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6) FOOTER MOCKUP -->
+  <section style="background:var(--black); color:var(--warm-yellow); border-bottom:none;">
+    <p class="section-label" style="color:var(--turquoise);">Footer Sample</p>
+    <p style="font-family:var(--mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; margin-bottom:.8rem;">&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    <p style="font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; opacity:.7;"><a href="#" style="color:inherit;">Privacy</a> &middot; <a href="#" style="color:inherit;">Support</a> &middot; <a href="#" style="color:var(--vermillion);">Instagram</a></p>
+  </section>
+
+  <script>
+    document.querySelectorAll('.control-bar button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.control-bar button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.body.className = 'mode-' + btn.dataset.mode;
+      });
+    });
+  </script>
+</body>
+</html>
