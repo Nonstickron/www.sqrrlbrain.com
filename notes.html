@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Studio Notes — Sqrrlbrain Studio</title>
-  <meta name="description" content="Selected questions on craft, structure, AI tools, and running a one-operator studio. Answered by Ronny Goodrich, founder of Sqrrlbrain Studio." />
+  <meta name="description" content="Selected questions on craft, structural design, AI-augmented building, and running a one-operator studio. Notes from Ronny Goodrich, founder of Sqrrlbrain Studio." />
+  <meta property="og:title" content="Studio Notes — Sqrrlbrain Studio" />
+  <meta property="og:description" content="Selected questions on craft, structural design, AI-augmented building, and running a one-operator studio." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sqrrlbrain.com/notes.html" />
+  <meta property="og:site_name" content="Sqrrlbrain Studio" />
+  <link rel="canonical" href="https://sqrrlbrain.com/notes.html" />
   <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +26,8 @@
       --paper:       #faf6f0;
       --warm:        #f2ebe0;
       --accent:      #c8421a;
+      --rule:        rgba(58,26,0,.1);
+      --rule-soft:   rgba(58,26,0,.05);
       --mono:        'DM Mono', monospace;
       --serif:       'Lora', serif;
       --sans:        'DM Sans', sans-serif;
@@ -44,77 +52,11 @@
     }
 
     /* HEADER */
-    header { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 3rem; border-bottom: 1px solid rgba(58,26,0,.1); position: relative; z-index: 1000; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 3rem; border-bottom: 1px solid var(--rule); position: relative; z-index: 1000; }
     .logo-wrap img { height: 46px; width: auto; display: block; }
-    nav { display: flex; gap: 2.5rem; align-items: center; }
-    nav > a, .dropdown > .nav-link {
-      font-family: var(--mono); font-size: .7rem; letter-spacing: .13em; text-transform: uppercase;
-      color: var(--brown-mid); text-decoration: none; transition: color .2s;
-      background: none; border: none; padding: 0; cursor: pointer;
-      display: flex; align-items: center; gap: .35rem;
-    }
-    nav > a:hover, .dropdown > .nav-link:hover { color: var(--ink); }
-    nav > a.active { color: var(--ink); }
-    .dropdown { position: relative; }
-    .dropdown-menu { display: none; position: absolute; top: calc(100% + 1.2rem); left: 0; background: var(--paper); border: 1px solid rgba(58,26,0,.12); min-width: 180px; z-index: 100; padding: .5rem 0; }
-    .dropdown:hover .dropdown-menu, .dropdown.open .dropdown-menu { display: block; }
-    .dropdown-menu a { display: block; padding: .65rem 1.2rem; font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; transition: color .2s, background .2s; }
-    .dropdown-menu a:hover { color: var(--ink); background: var(--warm); }
-    nav { display: none; } /* hamburger-only nav, all viewports */
+    nav { display: none; }
     .hamburger { display: flex; background: none; border: none; cursor: pointer; padding: 0; flex-direction: column; gap: 5px; }
     .hamburger span { display: block; width: 26px; height: 2px; background: var(--ink); transition: transform .3s; }
-    .mobile-nav { display: none; }
-
-    /* PAGE HERO */
-    .page-hero { padding: 4rem 3rem 2.4rem; }
-    .page-hero .eyebrow { font-family: var(--mono); font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.4rem; }
-    .page-hero h1 { font-family: var(--serif); font-style: italic; font-weight: 600; font-size: clamp(2.6rem, 6vw, 4.2rem); line-height: 1.05; color: var(--ink); margin-bottom: 1.6rem; }
-    .page-hero h1 em { font-style: italic; color: var(--accent); }
-    .page-hero .hero-intro { font-size: 1.05rem; line-height: 1.6; max-width: 720px; color: var(--brown-mid); }
-
-    /* QA LIST */
-    .qa-list { padding: 2rem 3rem 5rem; max-width: 880px; margin: 0 auto; }
-    .qa-block {
-      padding: 2.4rem 0 2.4rem;
-      border-top: 1px solid rgba(58,26,0,.12);
-    }
-    .qa-block:first-of-type { border-top: 1px solid rgba(58,26,0,.18); }
-    .qa-block:last-of-type { border-bottom: 1px solid rgba(58,26,0,.12); }
-    .qa-meta {
-      font-family: var(--mono);
-      font-size: .62rem;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--brown-light);
-      margin-bottom: 1rem;
-    }
-    .qa-question {
-      font-family: var(--serif);
-      font-weight: 600;
-      font-size: clamp(1.4rem, 2.4vw, 1.75rem);
-      line-height: 1.25;
-      color: var(--ink);
-      margin-bottom: 1.4rem;
-    }
-    .qa-answer p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: var(--ink);
-      margin-bottom: 1rem;
-      max-width: 64ch;
-    }
-    .qa-answer p:last-child { margin-bottom: 0; }
-    .qa-answer.pending p {
-      color: var(--brown-light);
-      font-style: italic;
-    }
-
-    /* FOOTER */
-    footer { padding: 3rem; border-top: 1px solid rgba(58,26,0,.1); display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brown-light); flex-wrap: wrap; }
-    footer a { color: var(--brown-light); text-decoration: none; transition: color .2s; }
-    footer a:hover { color: var(--ink); }
-
-    /* MOBILE NAV PANEL — shown when hamburger is clicked, all viewports */
     .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -128,12 +70,114 @@
     .mobile-nav-section.locked { color: var(--brown-light); opacity: .6; }
     .mobile-nav a.locked-link { opacity: .55; font-style: italic; }
     .mobile-nav a.locked-link:hover { opacity: .85; }
-    header { position: relative; }
+
+    /* PAGE HERO */
+    .page-hero { padding: 4rem 3rem 2.4rem; max-width: 1080px; margin: 0 auto; }
+    .page-hero .eyebrow { font-family: var(--mono); font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.4rem; }
+    .page-hero h1 { font-family: var(--serif); font-style: italic; font-weight: 600; font-size: clamp(2.6rem, 6vw, 4.2rem); line-height: 1.05; color: var(--ink); margin-bottom: 1.6rem; }
+    .page-hero h1 em { font-style: italic; color: var(--accent); }
+    .page-hero .hero-intro { font-size: 1.05rem; line-height: 1.6; max-width: 720px; color: var(--brown-mid); }
+
+    /* TAG FILTER */
+    .tag-filter {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 1rem 3rem 1.6rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem .55rem;
+      align-items: center;
+    }
+    .tag-filter .filter-label {
+      font-family: var(--mono);
+      font-size: .58rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-right: .6rem;
+    }
+    .tag-chip {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      padding: .42rem .85rem;
+      cursor: pointer;
+      transition: color .2s, border-color .2s, background .2s;
+    }
+    .tag-chip:hover { color: var(--ink); border-color: var(--brown-mid); }
+    .tag-chip.active { color: var(--paper); background: var(--accent); border-color: var(--accent); }
+
+    /* POST LIST */
+    .post-list { max-width: 1080px; margin: 0 auto; padding: 1rem 3rem 5rem; display: flex; flex-direction: column; gap: 1.6rem; }
+    .post-card {
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      padding: 1.8rem 2rem 1.6rem;
+      transition: border-color .2s, transform .2s;
+    }
+    .post-card:hover { border-color: var(--brown-mid); transform: translateY(-1px); }
+    .post-card.hidden { display: none; }
+    .card-meta {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: .8rem;
+    }
+    .post-card h2 {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: clamp(1.3rem, 2.4vw, 1.55rem);
+      line-height: 1.25;
+      margin-bottom: .9rem;
+    }
+    .post-card h2 a { color: var(--ink); text-decoration: none; transition: color .2s; }
+    .post-card h2 a:hover { color: var(--accent); }
+    .card-excerpt {
+      font-size: .98rem;
+      line-height: 1.65;
+      color: var(--brown-mid);
+      margin-bottom: 1.1rem;
+      max-width: 64ch;
+    }
+    .card-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.1rem; }
+    .tag-chip-mini {
+      font-family: var(--mono);
+      font-size: .56rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      background: var(--warm);
+      padding: .3rem .6rem;
+      border: 1px solid var(--rule-soft);
+    }
+    .read-link {
+      font-family: var(--mono);
+      font-size: .66rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .read-link:hover { color: var(--ink); }
+
+    /* FOOTER */
+    footer { padding: 3rem; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brown-light); flex-wrap: wrap; }
+    footer a { color: var(--brown-light); text-decoration: none; transition: color .2s; }
+    footer a:hover { color: var(--ink); }
 
     @media (max-width: 900px) {
       header { padding: 1rem 1.4rem; }
-      .page-hero { padding: 2.6rem 1.4rem 1.8rem; }
-      .qa-list { padding: 1.4rem 1.4rem 3rem; }
+      .page-hero { padding: 2.6rem 1.4rem 1.6rem; }
+      .tag-filter { padding: .8rem 1.4rem 1.4rem; }
+      .post-list { padding: .6rem 1.4rem 3rem; }
+      .post-card { padding: 1.4rem 1.4rem 1.2rem; }
       footer { padding: 2rem 1.4rem; flex-direction: column; gap: 1rem; text-align: center; }
     }
   </style>
@@ -170,26 +214,40 @@
     <p class="hero-intro">Selected questions on craft, structural design, AI-augmented building, and running a one-operator studio. Answered as time allows. New entries when I have something worth saying.</p>
   </div>
 
-  <section class="qa-list">
+  <section class="tag-filter" id="tag-filter">
+    <p class="filter-label">Filter</p>
+    <button class="tag-chip active" data-tag="all">All</button>
+    <button class="tag-chip" data-tag="packaging">Packaging</button>
+    <button class="tag-chip" data-tag="corrugated">Corrugated</button>
+    <button class="tag-chip" data-tag="structural-design">Structural Design</button>
+  </section>
 
-    <article class="qa-block">
-      <p class="qa-meta">Packaging &amp; Prepress · 2026-05-05</p>
-      <h2 class="qa-question">How do you decide flute direction on a corrugated structure?</h2>
-      <div class="qa-answer">
-        <p>Several considerations come into play when you&rsquo;re dealing with flute direction.</p>
-        <p>For flat pieces, you want the flutes going in the long way to reinforce the stiffness in that direction. If the piece is very large then its own weight can often cause the piece to crease along a flute, so it&rsquo;s better to have the flutes supporting the direction that is most susceptible to that.</p>
-        <p>In situations like with yard signs, the open flute holes on the edge become a feature. The tines from H-stands insert into the holes, allowing you to stake them into the ground with no other hardware or adhesive.</p>
-        <p>Creasing and folding opens up doors for adding support and structural reinforcement for very large pieces where the flutes don&rsquo;t really do much for you structurally. Something as simple as folding over the edges 180 degrees and using double sided tape to make the edge 2-ply can do amazing things for your rigidity, and give you a cleaner, more finished looking edge.</p>
-        <p>When it comes to packaging it&rsquo;s more a question of creasing and folding. Corrugated material tends to want to &ldquo;give&rdquo; along the flutes. Creases that run along the same direction of the flutes can sometimes not fold like you expect them to because the material prefers to give in the hollow part of the flute even though your crease isn&rsquo;t aligned with it. This issue tends to be worse the thicker the corrugate material is because the flutes get wider. E-flute material is less prone to it than say B or C.</p>
-        <p>You can try to mitigate this issue when engineering pieces by putting more of your creases perpendicular to the fluting, but you often can&rsquo;t always control how the production company will orient your pieces on their sheets. Turning the pieces on the sheet can mean getting half as many up on a sheet at the press, which can drive up material costs significantly, especially on longer runs.</p>
+  <section class="post-list" id="post-list">
+
+    <article class="post-card" data-tags="packaging corrugated structural-design">
+      <p class="card-meta">2026-05-05 &middot; Packaging</p>
+      <h2><a href="/notes/flute-direction.html">How do you decide flute direction on a corrugated structure?</a></h2>
+      <p class="card-excerpt">Several considerations come into play when you&rsquo;re dealing with flute direction. For flat pieces, you want the flutes going in the long way to reinforce the stiffness in that direction&hellip;</p>
+      <div class="card-tags">
+        <span class="tag-chip-mini">Packaging</span>
+        <span class="tag-chip-mini">Corrugated</span>
+        <span class="tag-chip-mini">Structural Design</span>
       </div>
+      <a class="read-link" href="/notes/flute-direction.html">Read &rarr;</a>
     </article>
 
     <!--
       DRAFT QUESTIONS — kept here for reference, NOT rendered to visitors.
       When Ron is ready to answer one, pull a question from this list,
-      drop a new <article class="qa-block"> ABOVE the most recent answered
-      entry (newest at top), with today's date in the qa-meta line.
+      drop a new <article class="post-card"> ABOVE the most recent one
+      (newest first). Create a matching `notes/<slug>.html` post page
+      from the flute-direction.html template.
+
+      If the new post introduces a tag not in .tag-filter, add a new
+      <button class="tag-chip" data-tag="..."> chip.
+
+      Also update the previously-newest post's .post-nav with a Prev
+      link to the new post.
 
       PACKAGING & PREPRESS
       - What's the most common mistake people make when designing for diecut?
@@ -212,6 +270,12 @@
       PERSONAL
       - What did you stop doing this year?
       - What would you tell yourself the day you incorporated Sqrrlbrain?
+
+      CANONICAL TAG SLUGS (kebab-case): packaging, corrugated,
+      structural-design, dieline, folding-carton, prepress,
+      print-production, ai-tools, ai-image-gen, inkwell,
+      software-development, studio-philosophy, solo-operation,
+      editorial-brand, personal, reflection
     -->
 
   </section>
@@ -223,20 +287,50 @@
   </footer>
 
   <script>
-    document.querySelectorAll('.dropdown > .nav-link').forEach(el => {
-      el.addEventListener('click', () => el.closest('.dropdown').classList.toggle('open'));
-    });
-    document.addEventListener('click', e => {
-      if (!e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
-      }
-    });
+    // Hamburger toggle
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobile-nav');
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('open');
       mobileNav.classList.toggle('open');
     });
+
+    // Tag filter
+    const filterEl = document.getElementById('tag-filter');
+    const cards = Array.from(document.querySelectorAll('.post-card'));
+    const chips = Array.from(filterEl.querySelectorAll('.tag-chip'));
+
+    function applyFilter(tag) {
+      chips.forEach(c => c.classList.toggle('active', c.dataset.tag === tag));
+      cards.forEach(card => {
+        const tags = (card.dataset.tags || '').split(/\s+/);
+        const show = (tag === 'all') || tags.includes(tag);
+        card.classList.toggle('hidden', !show);
+      });
+    }
+
+    function readTagFromUrl() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('tag') || 'all';
+    }
+
+    function writeTagToUrl(tag) {
+      const url = new URL(window.location.href);
+      if (tag === 'all') url.searchParams.delete('tag');
+      else url.searchParams.set('tag', tag);
+      history.replaceState(null, '', url.toString());
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        const tag = chip.dataset.tag;
+        applyFilter(tag);
+        writeTagToUrl(tag);
+      });
+    });
+
+    // Initial state from URL
+    applyFilter(readTagFromUrl());
   </script>
 </body>
 </html>
