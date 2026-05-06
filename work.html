@@ -78,7 +78,22 @@
     .section-label { font-family: var(--mono); font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); margin-bottom: .8rem; }
     .section-desc { font-family: var(--serif); font-style: italic; font-size: 1.1rem; color: var(--brown-mid); margin-bottom: 2.4rem; max-width: 640px; }
     .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-    .work-item { background: var(--warm); border: 1px solid rgba(58,26,0,.1); }
+    .work-item { background: var(--warm); border: 1px solid rgba(58,26,0,.1); transition: border-color .2s, transform .25s; }
+    .work-link { display: block; color: inherit; text-decoration: none; height: 100%; }
+    .work-link::after {
+      content: 'READ CASE STUDY \2192';
+      display: block;
+      font-family: var(--mono);
+      font-size: .58rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding: 0 1.8rem 1.6rem;
+      margin-top: -.4rem;
+      transition: letter-spacing .2s;
+    }
+    .work-item:has(.work-link):hover { border-color: var(--accent); }
+    .work-item:has(.work-link):hover .work-link::after { letter-spacing: .26em; }
     .work-image {
       width: 100%;
       aspect-ratio: 4 / 3;
@@ -237,14 +252,16 @@
       </figure>
 
       <figure class="work-item">
-        <div class="work-image">
-          <img src="images/work/illinois-courtside-photo.jpg" alt="Illinois Basketball 2023 Courtside Kit unboxed in studio lifestyle setting — orange branded gift box system with socks, custom Illinois-branded swag pieces, and sticker sheet on orange paper crinkle filler, framed Illinois 'I' logo on wall behind" />
-        </div>
-        <figcaption class="work-caption">
-          <h3>Illinois Basketball Courtside Kit</h3>
-          <p class="work-meta">Structural design + die-cut engineering &middot; 2023</p>
-          <p>Multi-piece corrugated kit for University of Illinois Athletics. Branded gift box system with insert-tray construction. Artwork by client team.</p>
-        </figcaption>
+        <a href="/work/illinois-courtside.html" class="work-link">
+          <div class="work-image">
+            <img src="images/work/illinois-courtside-photo.jpg" alt="Illinois Basketball Courtside Kit unboxed in studio lifestyle setting — orange branded gift box with socks, custom Illinois-branded swag pieces, and sticker sheet on orange paper crinkle filler, framed Illinois 'I' logo on wall behind" />
+          </div>
+          <figcaption class="work-caption">
+            <h3>Illinois Basketball Courtside Kit</h3>
+            <p class="work-meta">Structural design + die-cut engineering &middot; 2025</p>
+            <p>Multi-piece corrugated kit for University of Illinois Athletics. Two-insert friction-fit construction with logo-shaped keyhole, soft-touch litho finish. Artwork by client / DME creative team.</p>
+          </figcaption>
+        </a>
       </figure>
 
       <figure class="work-item">
