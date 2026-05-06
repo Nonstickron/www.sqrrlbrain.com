@@ -104,6 +104,7 @@
       letter-spacing: -.02em;
     }
     .nf-title em { color: var(--accent); font-style: italic; }
+    .acorn-period { display: inline-block; width: .3em; height: .3em; vertical-align: baseline; color: var(--accent); margin-left: .03em; }
     .nf-body {
       font-family: var(--sans);
       font-size: 1.05rem;
@@ -142,6 +143,16 @@
 </head>
 <body>
 
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <symbol id="acorn" viewBox="0 0 24 24">
+      <g transform="rotate(11 12 16)" fill="currentColor">
+        <rect x="11.3" y="2.6" width="1.4" height="2.2" rx=".5"/>
+        <path d="M4 8.6 Q4 4.8 12 4.8 Q20 4.8 20 8.6 L19.3 10.4 Q17.3 11 15.3 10.4 Q13.5 11 12 10.4 Q10.5 11 8.7 10.4 Q6.7 11 4.7 10.4 Z"/>
+        <path d="M5.5 10.3 Q5 16 8 19.5 Q10 22 12 22.5 Q14 22 16 19.5 Q19 16 18.5 10.3 Z"/>
+      </g>
+    </symbol>
+  </svg>
+
   <header>
     <div class="logo-wrap">
       <a href="/"><img src="/images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
@@ -166,7 +177,7 @@
 
     <img class="vitruvian" src="/images/VitruvianSqrrl.svg" alt="A squirrel in the pose of Leonardo da Vinci's Vitruvian Man — four limbs splayed inside a circle and square, drawn in deep brown ink on cream paper" />
 
-    <h1 class="nf-title">Off the <em>dieline.</em></h1>
+    <h1 class="nf-title">Off the <em>dieline<svg class="acorn-period" aria-hidden="true"><use href="#acorn"/></svg></em></h1>
     <p class="nf-body">The page you went looking for doesn&rsquo;t lead anywhere &mdash; at least not at this URL. The studio works across more disciplines than the file system always keeps up with.</p>
 
     <p class="nf-links">
