@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Off the dieline — Sqrrlbrain Studio</title>
+  <meta name="description" content="404 — that URL doesn't lead anywhere yet. The studio works across more disciplines than the file system always tracks." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/svg+xml" href="/images/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:         #3a1a00;
+      --brown-mid:   #7a4520;
+      --brown-light: #b88c5a;
+      --paper:       #faf6f0;
+      --warm:        #f2ebe0;
+      --accent:      #c8421a;
+      --warm-yellow: #f4bc43;
+      --rule:        rgba(58,26,0,.1);
+      --mono:        'DM Mono', monospace;
+      --serif:       'Lora', serif;
+      --sans:        'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      max-width: 1440px;
+      margin: 0 auto;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* HEADER */
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 3rem; border-bottom: 1px solid var(--rule); position: relative; z-index: 1000; }
+    .logo-wrap img { height: 46px; width: auto; display: block; }
+    .hamburger { display: flex; background: none; border: none; cursor: pointer; padding: 0; flex-direction: column; gap: 5px; }
+    .hamburger span { display: block; width: 26px; height: 2px; background: var(--ink); transition: transform .3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-nav { display: none; position: absolute; top: 100%; right: 1rem; min-width: 260px; max-width: calc(100vw - 2rem); background: var(--paper); border: 1px solid rgba(58,26,0,.12); box-shadow: 0 12px 28px rgba(58,26,0,.10); padding: 1rem 1.5rem 1.5rem; flex-direction: column; gap: 0; z-index: 999; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; padding: .55rem 0; display: block; border-bottom: 1px solid rgba(58,26,0,.05); }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--ink); }
+    .mobile-nav-section { font-family: var(--mono); font-size: .56rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown-light); padding: .8rem 0 .3rem; border-top: 1px solid rgba(58,26,0,.06); margin-top: .4rem; }
+    .mobile-nav-section:first-child { border-top: none; margin-top: 0; }
+
+    /* NOT FOUND */
+    .nf-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem 5rem;
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .nf-eyebrow {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1.4rem;
+    }
+    .nf-eyebrow .accent { color: var(--accent); }
+    .vitruvian {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+      display: block;
+      margin: 0 auto 2.4rem;
+    }
+    .nf-title {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 700;
+      font-size: clamp(2.6rem, 6vw, 4.4rem);
+      line-height: 1.05;
+      color: var(--ink);
+      margin-bottom: 1.4rem;
+      letter-spacing: -.02em;
+    }
+    .nf-title em { color: var(--accent); font-style: italic; }
+    .nf-body {
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--brown-mid);
+      max-width: 50ch;
+      margin: 0 auto 2.4rem;
+    }
+    .nf-links {
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nf-links a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    .nf-links a:hover { color: var(--ink); }
+    .nf-links .sep { color: var(--brown-light); opacity: .5; }
+
+    /* FOOTER */
+    footer { padding: 1.6rem 3rem; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; font-family: var(--mono); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brown-light); flex-wrap: wrap; }
+    footer a { color: var(--brown-light); text-decoration: none; transition: color .2s; }
+    footer a:hover { color: var(--ink); }
+
+    @media (max-width: 900px) {
+      header { padding: 1rem 1.4rem; }
+      .nf-main { padding: 2.4rem 1.4rem 3.5rem; }
+      .vitruvian { max-width: 320px; margin-bottom: 1.8rem; }
+      footer { padding: 1.4rem; flex-direction: column; gap: .8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-wrap">
+      <a href="/"><img src="/images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-nav" id="mobile-nav">
+      <span class="mobile-nav-section">Navigate</span>
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/work.html">Work</a>
+      <a href="/notes.html">Notes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main class="nf-main">
+    <p class="nf-eyebrow"><span class="accent">404</span> &middot; Page not found</p>
+
+    <img class="vitruvian" src="/images/VitruvianSqrrl.svg" alt="A squirrel in the pose of Leonardo da Vinci's Vitruvian Man — four limbs splayed inside a circle and square, drawn in deep brown ink on cream paper" />
+
+    <h1 class="nf-title">Off the <em>dieline.</em></h1>
+    <p class="nf-body">The page you went looking for doesn&rsquo;t lead anywhere &mdash; at least not at this URL. The studio works across more disciplines than the file system always keeps up with.</p>
+
+    <p class="nf-links">
+      <a href="/">Home</a>
+      <span class="sep">&middot;</span>
+      <a href="/work.html">Selected Work</a>
+      <span class="sep">&middot;</span>
+      <a href="/notes.html">Studio Notes</a>
+      <span class="sep">&middot;</span>
+      <a href="/about.html">About</a>
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    <span><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/support.html">Support</a></span>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
