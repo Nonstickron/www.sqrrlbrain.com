@@ -194,9 +194,23 @@
       .post-nav { flex-direction: column; gap: .6rem; }
       footer { padding: 2rem 1.4rem; flex-direction: column; gap: 1rem; text-align: center; }
     }
+
+    /* ACORN GLYPH */
+    .acorn-flourish { display: flex; justify-content: center; color: var(--accent); margin: 0.6rem 0 1rem; }
+    .acorn-end      { display: flex; justify-content: center; color: var(--accent); margin: 2rem 0 1rem; }
   </style>
 </head>
 <body>
+
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <symbol id="acorn" viewBox="0 0 24 24">
+      <g transform="rotate(11 12 16)" fill="currentColor">
+        <rect x="11.3" y="2.6" width="1.4" height="2.2" rx=".5"/>
+        <path d="M4 8.6 Q4 4.8 12 4.8 Q20 4.8 20 8.6 L19.3 10.4 Q17.3 11 15.3 10.4 Q13.5 11 12 10.4 Q10.5 11 8.7 10.4 Q6.7 11 4.7 10.4 Z"/>
+        <path d="M5.5 10.3 Q5 16 8 19.5 Q10 22 12 22.5 Q14 22 16 19.5 Q19 16 18.5 10.3 Z"/>
+      </g>
+    </symbol>
+  </svg>
 
   <header>
     <div class="logo-wrap">
@@ -223,6 +237,9 @@
       <span>&middot;</span>
       <span>2026-05-05</span>
     </p>
+    <div class="acorn-flourish" aria-hidden="true">
+      <svg width="28" height="28"><use href="#acorn"/></svg>
+    </div>
     <h1 class="post-title">How do you decide flute direction on a corrugated structure?</h1>
     <div class="post-tags">
       <a class="tag-chip-mini" href="/notes.html?tag=packaging">Packaging</a>
@@ -237,6 +254,11 @@
       <p>Creasing and folding opens up doors for adding support and structural reinforcement for very large pieces where the flutes don&rsquo;t really do much for you structurally. Something as simple as folding over the edges 180 degrees and using double sided tape to make the edge 2-ply can do amazing things for your rigidity, and give you a cleaner, more finished looking edge.</p>
       <p>When it comes to packaging it&rsquo;s more a question of creasing and folding. Corrugated material tends to want to &ldquo;give&rdquo; along the flutes. Creases that run along the same direction of the flutes can sometimes not fold like you expect them to because the material prefers to give in the hollow part of the flute even though your crease isn&rsquo;t aligned with it. This issue tends to be worse the thicker the corrugate material is because the flutes get wider. E-flute material is less prone to it than say B or C.</p>
       <p>You can try to mitigate this issue when engineering pieces by putting more of your creases perpendicular to the fluting, but you often can&rsquo;t always control how the production company will orient your pieces on their sheets. Turning the pieces on the sheet can mean getting half as many up on a sheet at the press, which can drive up material costs significantly, especially on longer runs.</p>
+      <p>It&rsquo;s also important to not mix orientations with fluted material. The flutes are often visible on the flat surfaces as raised lines and a well made product is consistent with itself.</p>
+    </div>
+
+    <div class="acorn-end" aria-hidden="true">
+      <svg width="28" height="28"><use href="#acorn"/></svg>
     </div>
 
     <nav class="post-nav">

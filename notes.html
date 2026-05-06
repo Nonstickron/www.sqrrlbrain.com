@@ -181,9 +181,22 @@
       .post-card { padding: 1.4rem 1.4rem 1.2rem; }
       footer { padding: 2rem 1.4rem; flex-direction: column; gap: 1rem; text-align: center; }
     }
+
+    /* ACORN GLYPH */
+    .acorn-flourish { display: flex; justify-content: center; color: var(--accent); margin: 0.6rem 0 1rem; }
   </style>
 </head>
 <body>
+
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <symbol id="acorn" viewBox="0 0 24 24">
+      <g transform="rotate(11 12 16)" fill="currentColor">
+        <rect x="11.3" y="2.6" width="1.4" height="2.2" rx=".5"/>
+        <path d="M4 8.6 Q4 4.8 12 4.8 Q20 4.8 20 8.6 L19.3 10.4 Q17.3 11 15.3 10.4 Q13.5 11 12 10.4 Q10.5 11 8.7 10.4 Q6.7 11 4.7 10.4 Z"/>
+        <path d="M5.5 10.3 Q5 16 8 19.5 Q10 22 12 22.5 Q14 22 16 19.5 Q19 16 18.5 10.3 Z"/>
+      </g>
+    </symbol>
+  </svg>
 
   <header>
     <div class="logo-wrap">
@@ -206,6 +219,9 @@
 
   <div class="page-hero">
     <p class="eyebrow">Studio Notes</p>
+    <div class="acorn-flourish" aria-hidden="true">
+      <svg width="28" height="28"><use href="#acorn"/></svg>
+    </div>
     <h1>Questions <em>I&rsquo;ve been asked.</em></h1>
     <p class="hero-intro">Selected questions on craft, structural design, AI-augmented building, and running a one-operator studio. Answered as time allows. New entries when I have something worth saying.</p>
   </div>
