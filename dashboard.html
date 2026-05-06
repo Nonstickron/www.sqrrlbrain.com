@@ -35,11 +35,6 @@
       --todo:       #6a8a4a;
       --shelved:    #b0a48e;
 
-      /* Trans-pride accents */
-      --tp-blue:    #5BCEFA;
-      --tp-pink:    #F5A9B8;
-      --tp-white:   #FFFFFF;
-
       --serif:      'Lora', serif;
       --sans:       'DM Sans', sans-serif;
       --mono:       'DM Mono', monospace;
@@ -75,17 +70,11 @@
     .sign-out-btn { font-family: var(--mono); font-size: .58rem; letter-spacing: .14em; text-transform: uppercase; color: var(--brown-mid); background: none; border: 1px solid var(--line-hi); padding: .42rem .9rem; cursor: pointer; transition: all .15s; }
     .sign-out-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* PRIDE STRIP — trans pride flag (sticky under header) */
+    /* ACCENT RULE — solid vermilion (sticky under header) */
     .pride-strip {
       height: 6px;
       width: 100%;
-      background: linear-gradient(180deg,
-        var(--tp-blue)  0%  20%,
-        var(--tp-pink) 20%  40%,
-        var(--tp-white) 40% 60%,
-        var(--tp-pink) 60%  80%,
-        var(--tp-blue) 80% 100%
-      );
+      background: var(--accent);
       position: sticky;
       top: 65px;
       z-index: 99;
@@ -557,7 +546,7 @@
     {
       id: 'sqrrlbrain-site', name: 'sqrrlbrain.com', category: 'Studio Website / Portfolio',
       status: 'active', statusLabel: 'ACTIVE',
-      summary: 'Apple-resubmit-ready. Universal hamburger nav, /work portfolio with 5 real entries, /notes blog (index + per-post pages with tag filtering), Studio Notes first published entry (flute direction). Apple-only admin tool URLs hidden from public site.',
+      summary: 'Apple-resubmit-ready. Universal hamburger nav, /work portfolio with 5 real entries, /notes blog (index + per-post pages with tag filtering), warm-yellow tertiary accent + acorn brand glyph live. Apple-only admin tool URLs hidden from public site.',
       steps: [
         '✅ Inkwell teaser + waitlist live at /inkwell.html',
         '✅ Vermilion CTAs unified site-wide; Inkwell card featured on projects page',
@@ -566,16 +555,19 @@
         '✅ Universal hamburger nav (right-anchored dropdown, all viewports)',
         '✅ /work portfolio with real DME structural engineering pieces (Georgetown / ECU / DME booths / charger station)',
         '✅ /notes blog architecture (index + per-post pages, tag filter, OG metadata)',
-        '✅ First published Studio Notes entry: flute-direction (2026-05-05)',
+        '✅ First published Studio Notes entry: flute-direction (2026-05-05, body completed 2026-05-06)',
         '✅ Tools (Admin Only) section removed from public hamburger; admin URLs no longer exposed',
-        'Carousel hero on /index.html — rotating through work-page images, each frame links to its project detail page (planned, see plan doc)',
+        '✅ Warm-yellow tertiary accent (#f4bc43) applied site-wide (notes tag chip, work eyebrow, projects featured tag, dashboard shipped marker)',
+        '✅ Acorn glyph LIVE — replaces vermilion period in italic H1 endings on notes.html ("asked.") and about.html ("up."); end-of-post mark on notes posts; spec at docs/superpowers/specs/2026-05-05-acorn-glyph-design.md',
+        '✗ Atomic-age palette refactor — ABANDONED 2026-05-06 (didn\'t fit the brand). Sandbox at /palette-test.html can be removed.',
+        'Carousel hero on /index.html — rotating through work-page images, each frame links to its project detail page (planned)',
         'Per-project detail pages under /work/<slug>.html — Georgetown / ECU / DME booths / charger station, each with image gallery + expanded copy (planned)',
         'Resubmit Apple Developer enrollment — site is review-ready',
         'Capture real Inkwell screenshots once app is stable enough for full chapter playthrough',
-        'Atomic-age palette refactor (vermillion + turquoise + steel-blue + warm-yellow + dark-navy) — sandbox at /palette-test.html, deferred until post-Apple-approval'
+        'Replace dashboard Process button (currently clipboard-copy, broken on iOS Chrome/Safari WebKit) with Discord webhook push-to-Tink — POST bundled notes directly to Discord channel where Tink reads them'
       ],
       blockers: [],
-      updated: '2026-05-05',
+      updated: '2026-05-06',
       subprojects: [
         { id: 'pf-01', name: 'Briar & Salt', category: 'Portfolio 01', status: 'indev', statusLabel: 'CSS LIVE',
           summary: 'Folding carton for artisan spice gift set. CSS mockup live on work.html. Real artwork optional.',
@@ -620,13 +612,14 @@
     {
       id: 'crucible', name: 'Crucible', category: 'Formulation Tool · 5 Daughters',
       status: 'active', statusLabel: 'PHASE 9+10 SHIPPED',
-      summary: '706-recipe DIY skincare library. Phases 4–10 complete. Tool is feature-complete pending new direction.',
+      summary: '706-recipe DIY skincare library. Phases 4–10 complete. Strategy locked 2026-05-05 — three-layer revenue model (affiliate + Pro subscription + branded bundles), build phasing and partner outreach order documented in CRUCIBLE-STRATEGY.md.',
       steps: [
+        '✅ Strategy doc locked: three-layer revenue model + build phasing + partner outreach order (CRUCIBLE-STRATEGY.md)',
+        'Execute against the strategy doc — phasing TBD by Ron',
         'Explore fromnaturewithlove.com as additional recipe source (optional)',
-        'Develop 5 Daughters brand identity (downstream)',
-        'Await Ron\'s next direction'
+        'Develop 5 Daughters brand identity (downstream)'
       ],
-      blockers: [], updated: '2026-05-04', subprojects: []
+      blockers: [], updated: '2026-05-05', subprojects: []
     },
     {
       id: 'cypress', name: 'Cypress', category: 'Worldbuilding · Graphic Novel',
