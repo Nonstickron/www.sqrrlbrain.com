@@ -195,9 +195,22 @@
       .work-cta { padding: 2.6rem 1.4rem; }
       footer { padding: 2rem 1.4rem; flex-direction: column; gap: 1rem; text-align: center; }
     }
+
+    /* ACORN GLYPH */
+    .acorn-period { display: inline-block; width: .3em; height: .3em; vertical-align: baseline; color: var(--accent); margin-left: .03em; }
   </style>
 </head>
 <body>
+
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <symbol id="acorn" viewBox="0 0 24 24">
+      <g transform="rotate(11 12 16)" fill="currentColor">
+        <rect x="11.3" y="2.6" width="1.4" height="2.2" rx=".5"/>
+        <path d="M4 8.6 Q4 4.8 12 4.8 Q20 4.8 20 8.6 L19.3 10.4 Q17.3 11 15.3 10.4 Q13.5 11 12 10.4 Q10.5 11 8.7 10.4 Q6.7 11 4.7 10.4 Z"/>
+        <path d="M5.5 10.3 Q5 16 8 19.5 Q10 22 12 22.5 Q14 22 16 19.5 Q19 16 18.5 10.3 Z"/>
+      </g>
+    </symbol>
+  </svg>
 
   <header>
     <div class="logo-wrap">
@@ -220,7 +233,7 @@
 
   <div class="page-hero">
     <p class="eyebrow">Selected Work</p>
-    <h1>Twenty-five years<br>of <em>structures.</em></h1>
+    <h1>Twenty-five years<br>of <em>structures<svg class="acorn-period" aria-hidden="true"><use href="#acorn"/></svg></em></h1>
     <p class="hero-intro">A portfolio of structural design and template engineering &mdash; folding cartons, custom packaging, tradeshow displays, and dimensional pieces. Produced during my tenure at DME (2001&ndash;present); artwork by client teams unless noted.</p>
   </div>
 
@@ -339,6 +352,27 @@
           <p class="work-meta">Structural design + custom 3D-printed parts + integrated electrical &middot; in production</p>
           <p>Bistro-height charging station for events and lobbies. <strong>4&times; two-plug outlets, 4&times; squid charging cables, 5&times; Qi chargers</strong> integrated under the tabletop skin. Custom-engineered 3D-printed parts hold both the Qi chargers seated under the surface and the backlit illuminated side panels in their frames. Currently nearing prototype completion.</p>
         </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <section class="work-section">
+    <p class="section-label">Studio Identity</p>
+    <p class="section-desc">Self-as-client &mdash; the brand system underneath this site, broken open as both reference and case study.</p>
+    <div class="work-grid">
+
+      <figure class="work-item">
+        <a href="/work/sqrrlbrain-brand-guide.html" class="work-link">
+          <div class="work-image" style="aspect-ratio: 3/2; background: var(--paper); display: flex; align-items: center; justify-content: center; padding: 2rem;">
+            <img src="images/VitruvianSqrrl.svg" alt="Vitruvian Squirrel mark on warm-yellow disk" style="width: 100%; max-width: 280px; height: auto;" />
+          </div>
+          <figcaption class="work-caption">
+            <h3>Sqrrlbrain Studio Brand Guide</h3>
+            <p class="work-meta">Brand identity + design system &middot; 2025&ndash;present</p>
+            <p>The brand wasn't designed in a brand book and then deployed &mdash; the system was built by deploying it. Palette, type stack, glyph language, voice rules, and usage all live in working code on the live site. This guide is both the reference and the case study.</p>
+          </figcaption>
+        </a>
       </figure>
 
     </div>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sqrrlbrain Studio — Brand Guide — Selected Work</title>
+  <meta name="description" content="The brand system for Sqrrlbrain Studio: palette, typography, logo construction, glyph language, and voice rules. Both reference document and case study — built in working code on the live site." />
+  <meta property="og:title" content="Sqrrlbrain Studio — Brand Guide" />
+  <meta property="og:description" content="The brand wasn't designed in a brand book and then deployed. The system was built by deploying it." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://sqrrlbrain.com/work/sqrrlbrain-brand-guide.html" />
+  <meta property="og:site_name" content="Sqrrlbrain Studio" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://sqrrlbrain.com/work/sqrrlbrain-brand-guide.html" />
+  <link rel="icon" type="image/svg+xml" href="../images/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:         #3a1a00;
+      --brown-mid:   #7a4520;
+      --brown-light: #b88c5a;
+      --paper:       #faf6f0;
+      --warm:        #f2ebe0;
+      --accent:      #c8421a;
+      --warm-yellow: #f4bc43;
+      --rule:        rgba(58,26,0,.1);
+      --rule-soft:   rgba(58,26,0,.05);
+      --mono:        'DM Mono', monospace;
+      --serif:       'Lora', serif;
+      --sans:        'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      max-width: 1440px;
+      margin: 0 auto;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* HEADER */
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 3rem; border-bottom: 1px solid var(--rule); position: relative; z-index: 1000; }
+    .logo-wrap img { height: 46px; width: auto; display: block; }
+    .hamburger { display: flex; background: none; border: none; cursor: pointer; padding: 0; flex-direction: column; gap: 5px; }
+    .hamburger span { display: block; width: 26px; height: 2px; background: var(--ink); transition: transform .3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-nav { display: none; position: absolute; top: 100%; right: 1rem; min-width: 260px; max-width: calc(100vw - 2rem); background: var(--paper); border: 1px solid rgba(58,26,0,.12); box-shadow: 0 12px 28px rgba(58,26,0,.10); padding: 1rem 1.5rem 1.5rem; flex-direction: column; gap: 0; z-index: 999; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; padding: .55rem 0; display: block; border-bottom: 1px solid rgba(58,26,0,.05); }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--ink); }
+    .mobile-nav-section { font-family: var(--mono); font-size: .56rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown-light); padding: .8rem 0 .3rem; border-top: 1px solid rgba(58,26,0,.06); margin-top: .4rem; }
+    .mobile-nav-section:first-child { border-top: none; margin-top: 0; }
+
+    /* CASE STUDY (brand guide) */
+    .post-page { max-width: 980px; margin: 0 auto; padding: 4rem 3rem 3rem; }
+    .post-eyebrow {
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: 1.6rem;
+      display: flex;
+      gap: .6rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .post-eyebrow a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    .post-eyebrow a:hover { color: var(--ink); }
+    .post-title {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 700;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 1.4rem;
+      max-width: 24ch;
+      letter-spacing: -.015em;
+    }
+    .post-title em { color: var(--accent); font-style: italic; }
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin-bottom: 2.4rem;
+    }
+    .tag-chip-mini {
+      font-family: var(--mono);
+      font-size: .58rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+      padding: .35rem .65rem;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+    }
+
+    .post-body p {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--ink);
+      margin-bottom: 1.1rem;
+      max-width: 64ch;
+    }
+    .post-body p.lead {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.2rem;
+      line-height: 1.65;
+      color: var(--brown-mid);
+      margin-bottom: 1.6rem;
+    }
+    .post-body p.lead em { color: var(--accent); }
+    .post-body p:last-child { margin-bottom: 0; }
+
+    .post-body h3.case-section-label {
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 3.2rem;
+      margin-bottom: 1.2rem;
+      font-weight: 400;
+      padding-bottom: .6rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .post-body h3.case-section-label:first-child { margin-top: 0; }
+    .post-body h4.case-subhead {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-top: 1.6rem;
+      margin-bottom: .6rem;
+    }
+    .post-body p.case-credits {
+      margin-top: 3rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .04em;
+      line-height: 1.85;
+      color: var(--brown-mid);
+      text-transform: none;
+      max-width: 64ch;
+    }
+    .post-body p.case-credits strong {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--accent);
+      font-weight: 400;
+      margin-right: .25rem;
+    }
+
+    /* HERO */
+    .case-hero { margin: 0 0 2rem; }
+    .case-hero img {
+      display: block;
+      max-width: 480px;
+      width: 100%;
+      height: auto;
+    }
+
+    /* COLOR PALETTE */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin: 1.4rem 0 0;
+    }
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+    .swatch-color {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border: 1px solid var(--rule);
+    }
+    .swatch-token {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .swatch-hex {
+      font-family: var(--mono);
+      font-size: .7rem;
+      color: var(--ink);
+    }
+    .swatch-name {
+      font-family: var(--sans);
+      font-size: .82rem;
+      color: var(--brown-mid);
+      line-height: 1.45;
+    }
+
+    /* TYPE SPECIMENS */
+    .type-specimen {
+      margin: 1.4rem 0;
+      padding: 1.4rem 0;
+      border-top: 1px solid var(--rule-soft);
+    }
+    .type-specimen:first-of-type { border-top: 0; padding-top: 0; }
+    .specimen-label {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-bottom: .6rem;
+    }
+    .specimen-label strong { color: var(--accent); font-weight: 400; }
+    .specimen-sample-serif    { font-family: var(--serif); font-size: 2.2rem; font-weight: 600; line-height: 1.15; color: var(--ink); }
+    .specimen-sample-serif em { color: var(--accent); font-style: italic; }
+    .specimen-sample-sans     { font-family: var(--sans); font-size: 1.05rem; font-weight: 300; line-height: 1.7; color: var(--ink); margin-top: .4rem; max-width: 52ch; }
+    .specimen-sample-mono     { font-family: var(--mono); font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--brown-mid); margin-top: .4rem; }
+
+    /* GLYPH SHOWCASE */
+    .glyph-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin: 1.4rem 0 1.6rem;
+      padding: 1.4rem 1.6rem;
+      background: var(--warm);
+      border: 1px solid var(--rule);
+    }
+    .glyph-display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1 / 1;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+    }
+    .glyph-display svg { display: block; }
+    .glyph-acorn-large { width: 80px; height: 80px; color: var(--accent); }
+    .glyph-vitruvian { width: 100%; max-width: 180px; height: auto; }
+    .glyph-notes p { font-size: .94rem; line-height: 1.6; margin-bottom: .6rem; max-width: none; }
+    .glyph-notes p:last-child { margin-bottom: 0; }
+    .glyph-notes strong { color: var(--accent); font-weight: 400; font-family: var(--mono); font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; display: inline-block; margin-right: .35rem; }
+
+    /* SYSTEM IN PRACTICE — link grid */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.4rem 0;
+    }
+    .practice-link {
+      display: flex;
+      flex-direction: column;
+      gap: .35rem;
+      padding: 1rem 1.2rem;
+      background: var(--warm);
+      border: 1px solid var(--rule);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .15s, background .15s;
+    }
+    .practice-link:hover { border-color: var(--accent); background: var(--paper); }
+    .practice-link .practice-label {
+      font-family: var(--mono);
+      font-size: .58rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .practice-link .practice-name {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .practice-link .practice-desc {
+      font-family: var(--sans);
+      font-size: .82rem;
+      color: var(--brown-mid);
+      line-height: 1.45;
+    }
+
+    /* Pull-quote (used once for the closing) */
+    .case-pullquote {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 600;
+      font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+      line-height: 1.3;
+      color: var(--ink);
+      max-width: 60ch;
+      margin: 2.4rem 0;
+      padding-left: 1.4rem;
+      border-left: 3px solid var(--accent);
+    }
+    .case-pullquote em { color: var(--accent); font-style: italic; }
+
+    .post-nav {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      font-family: var(--mono);
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .post-nav a { color: var(--brown-mid); text-decoration: none; transition: color .2s; }
+    .post-nav a:hover { color: var(--ink); }
+    .post-nav .placeholder { color: var(--brown-light); opacity: .5; }
+
+    footer { padding: 3rem; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brown-light); flex-wrap: wrap; }
+    footer a { color: var(--brown-light); text-decoration: none; transition: color .2s; }
+    footer a:hover { color: var(--ink); }
+
+    .acorn-period { display: inline-block; width: .3em; height: .3em; vertical-align: baseline; color: var(--accent); margin-left: .03em; }
+    .acorn-end { display: flex; justify-content: center; color: var(--accent); margin: 2rem 0 1rem; }
+
+    @media (max-width: 900px) {
+      header { padding: 1rem 1.4rem; }
+      .post-page { padding: 2.6rem 1.4rem 2rem; max-width: 100%; }
+      .post-nav { flex-direction: column; gap: .6rem; }
+      footer { padding: 2rem 1.4rem; flex-direction: column; gap: 1rem; text-align: center; }
+      .glyph-row { grid-template-columns: 1fr; gap: 1.4rem; padding: 1.2rem; }
+      .case-pullquote { padding-left: 1rem; margin: 1.8rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <symbol id="acorn" viewBox="0 0 24 24">
+      <g transform="rotate(11 12 16)" fill="currentColor">
+        <rect x="11.3" y="2.6" width="1.4" height="2.2" rx=".5"/>
+        <path d="M4 8.6 Q4 4.8 12 4.8 Q20 4.8 20 8.6 L19.3 10.4 Q17.3 11 15.3 10.4 Q13.5 11 12 10.4 Q10.5 11 8.7 10.4 Q6.7 11 4.7 10.4 Z"/>
+        <path d="M5.5 10.3 Q5 16 8 19.5 Q10 22 12 22.5 Q14 22 16 19.5 Q19 16 18.5 10.3 Z"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <header>
+    <div class="logo-wrap">
+      <a href="/"><img src="../images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-nav" id="mobile-nav">
+      <span class="mobile-nav-section">Navigate</span>
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/work.html">Work</a>
+      <a href="/notes.html">Notes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </header>
+
+  <article class="post-page">
+    <p class="post-eyebrow">
+      <a href="/work.html">&larr; All Work</a>
+      <span>&middot;</span>
+      <span>2025&ndash;present</span>
+      <span>&middot;</span>
+      <span>Sqrrlbrain Studio (self)</span>
+    </p>
+    <h1 class="post-title">Brand <em>guide<svg class="acorn-period" aria-hidden="true"><use href="#acorn"/></svg></em></h1>
+    <div class="post-tags">
+      <span class="tag-chip-mini">Brand Identity</span>
+      <span class="tag-chip-mini">Design System</span>
+      <span class="tag-chip-mini">Typography</span>
+      <span class="tag-chip-mini">Self-as-Client</span>
+    </div>
+
+    <figure class="case-hero">
+      <img src="../images/logo-horizontal.svg" alt="Sqrrlbrain Studio horizontal logo &mdash; Custard Condensed wordmark with the studio mark inset between the words" />
+    </figure>
+
+    <div class="post-body">
+      <p class="lead">The brand wasn&rsquo;t designed in a brand book and then deployed. The system was built by deploying it &mdash; <em>palette tweaks, type adjustments, and glyph additions all merged through working code, on the live site, while real projects shipped through it.</em></p>
+
+      <p>This page is both the reference and the case study. Visitors who want the swatches and tokens find them; visitors who want the editorial story find that too. Because the website is the brand guide, every page on sqrrlbrain.com is also a working specimen. That feedback loop is part of the practice.</p>
+
+      <h3 class="case-section-label">Color</h3>
+
+      <p>The palette is built around brown ink on cream paper &mdash; the visual language of editorial print, deliberately oriented away from the agency-modern look. Vermilion is the consistent accent; warm-yellow is a recent tertiary added for selected emphasis; the brown family carries body and chrome.</p>
+
+      <div class="palette-grid">
+
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--paper);"></div>
+          <span class="swatch-token">--paper</span>
+          <span class="swatch-hex">#faf6f0</span>
+          <span class="swatch-name">Page background &mdash; warm cream, never bright white.</span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--warm);"></div>
+          <span class="swatch-token">--warm</span>
+          <span class="swatch-hex">#f2ebe0</span>
+          <span class="swatch-name">Card / inset background. One tone deeper than paper for layered surfaces.</span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--accent);"></div>
+          <span class="swatch-token">--accent</span>
+          <span class="swatch-hex">#c8421a</span>
+          <span class="swatch-name">Vermilion. Italic emphasis, CTAs, eyebrows on dark grounds, the acorn glyph.</span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--warm-yellow);"></div>
+          <span class="swatch-token">--warm-yellow</span>
+          <span class="swatch-hex">#f4bc43</span>
+          <span class="swatch-name">Tertiary accent. Reserved for highlight against vermilion or dark grounds. Never as primary text on cream.</span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--ink);"></div>
+          <span class="swatch-token">--ink</span>
+          <span class="swatch-hex">#3a1a00</span>
+          <span class="swatch-name">Headings, body text. Deep brown reading as black at small sizes.</span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--brown-mid);"></div>
+          <span class="swatch-token">--brown-mid</span>
+          <span class="swatch-hex">#7a4520</span>
+          <span class="swatch-name">Secondary text, intro paragraphs, footer chrome.</span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--brown-light);"></div>
+          <span class="swatch-token">--brown-light</span>
+          <span class="swatch-hex">#b88c5a</span>
+          <span class="swatch-name">Eyebrows, metadata, captions. The text that frames content without competing with it.</span>
+        </div>
+
+        <div class="swatch">
+          <div class="swatch-color" style="background: var(--rule); border: 1px solid var(--rule);"></div>
+          <span class="swatch-token">--rule</span>
+          <span class="swatch-hex">rgba(58,26,0,.1)</span>
+          <span class="swatch-name">Hairline dividers, card borders, swatch outlines. Calibrated to disappear at distance.</span>
+        </div>
+
+      </div>
+
+      <h3 class="case-section-label">Typography</h3>
+
+      <p>Three families. Each one earns its place by doing something the others can&rsquo;t. The serif sets the editorial tone; the sans does the reading work; the mono carries the studio&rsquo;s technical voice (eyebrows, metadata, captions, code-adjacent labels).</p>
+
+      <div class="type-specimen">
+        <p class="specimen-label"><strong>Lora</strong> &middot; Serif &middot; Display + italic emphasis</p>
+        <p class="specimen-sample-serif">Selected work, structural <em>thinking.</em></p>
+        <p class="specimen-sample-sans" style="margin-top: .8rem; max-width: 52ch; font-family: var(--serif); font-weight: 400; font-style: italic; color: var(--brown-mid); font-size: .92rem;">Used for H1s, page titles, italic phrases that get the vermilion treatment, and pull-quotes. Italic em with a vermilion fill is the studio&rsquo;s signature emphasis pattern.</p>
+      </div>
+
+      <div class="type-specimen">
+        <p class="specimen-label"><strong>DM Sans</strong> &middot; Sans &middot; Body text</p>
+        <p class="specimen-sample-sans">Body copy reads in DM Sans light. Carries paragraphs without claiming attention. The site is text-heavy on purpose; the sans has to disappear into reading.</p>
+      </div>
+
+      <div class="type-specimen">
+        <p class="specimen-label"><strong>DM Mono</strong> &middot; Mono &middot; Eyebrows + metadata</p>
+        <p class="specimen-sample-mono">2026-05-06 &middot; Brand identity &middot; Self-as-client</p>
+        <p class="specimen-sample-sans" style="margin-top: .6rem;">Letter-spaced uppercase for eyebrows, dates, file paths, hex codes, tag chips, and any moment the site needs to feel built rather than written. Reads as the technical undertone beneath the editorial top layer.</p>
+      </div>
+
+      <div class="type-specimen">
+        <p class="specimen-label"><strong>Custard Condensed</strong> &middot; Display &middot; Logo only</p>
+        <p class="specimen-sample-sans">The wordmark is set in Custard Condensed and not used elsewhere. Reserving the typeface to the logo keeps the lockup recognizable; it doesn&rsquo;t leak into headings or body.</p>
+      </div>
+
+      <h3 class="case-section-label">Brand glyphs</h3>
+
+      <p>Two custom marks. Both are intentionally small in their footprint &mdash; one structural, one rare. Together they let the brand carry personality without pressing on every page.</p>
+
+      <div class="glyph-row">
+        <div class="glyph-display">
+          <svg class="glyph-acorn-large" viewBox="0 0 24 24"><use href="#acorn"/></svg>
+        </div>
+        <div class="glyph-notes">
+          <p><strong>Acorn</strong> The brand glyph. A leaning silhouette with a scalloped cap, drawn at 11&deg; off vertical so it reads as found rather than stamped. Inherits <code>currentColor</code>; default is vermilion.</p>
+          <p><strong>Used as</strong> Inline period in italic phrases (notes index <em>"asked"</em> &middot; about <em>"dieline up"</em> &middot; homepage <em>"worth keeping"</em> &middot; 404 <em>"dieline"</em>). Sized .3em of the surrounding type, baseline-aligned, so the lean of the silhouette harmonizes with the italic em. Also used as a centered end-of-post mark on long-form notes posts.</p>
+          <p><strong>Don&rsquo;t</strong> Don&rsquo;t use it as a list bullet, navigation icon, or wallpaper pattern. Frequency is the whole point &mdash; the mark works because it&rsquo;s rare.</p>
+        </div>
+      </div>
+
+      <div class="glyph-row">
+        <div class="glyph-display">
+          <img class="glyph-vitruvian" src="../images/VitruvianSqrrl.svg" alt="Vitruvian Squirrel" />
+        </div>
+        <div class="glyph-notes">
+          <p><strong>Vitruvian Squirrel</strong> A polymath nod, owned as a punchline. Squirrel rendered in the pose of Leonardo da Vinci&rsquo;s Vitruvian Man, against a warm-yellow disk inscribed in the brown circle and square. The visual carries the joke; copy never names DaVinci.</p>
+          <p><strong>Used as</strong> The 404 page centerpiece &mdash; "you&rsquo;ve wandered into an unmapped corner of the studio." Will surface again only when the studio&rsquo;s cross-domain practice itself is the subject (a future essay header about polymath work; possibly a printed deliverable).</p>
+          <p><strong>Don&rsquo;t</strong> Don&rsquo;t use as a hero image on regular pages, a footer flourish, or a brand watermark. The mark earns its weight from rarity. Once it&rsquo;s on every page it&rsquo;s wallpaper.</p>
+        </div>
+      </div>
+
+      <h3 class="case-section-label">Voice</h3>
+
+      <p>Editorial restraint with playful, optimistic, irreverent flourishes. The studio leans craft-focused and matter-of-fact &mdash; project copy describes what was built and why, without agency-speak or capability-deck language. When personality enters, it does so through visual choices (the acorn period, the squirrel) and small editorial moves (italic vermilion phrases, mono-laid-out metadata) rather than performative copy.</p>
+
+      <h4 class="case-subhead">Do</h4>
+      <p>Use plain, specific language. Name the actual constraint, the actual material, the actual decision. Trust the reader to follow technical detail; don&rsquo;t pre-flatten it. Show breadth by naming domains where they apply (packaging + software + structural design + brand + IP), not by claiming polymathy directly.</p>
+
+      <h4 class="case-subhead">Don&rsquo;t</h4>
+      <p>Don&rsquo;t use AI-template phrases ("we believe," "we&rsquo;re passionate about," "innovative solutions"). Don&rsquo;t fabricate work or invent client brands to fill visual gaps. Don&rsquo;t name DaVinci. Don&rsquo;t pose. The studio&rsquo;s edge is real production craft over 25 years; don&rsquo;t pad with concept fluff.</p>
+
+      <h3 class="case-section-label">System in practice</h3>
+
+      <p>Every page on sqrrlbrain.com applies these rules. Each link below shows the system working in different content shapes &mdash; long-form essay, structural case study, hero block, easter egg.</p>
+
+      <div class="practice-grid">
+        <a class="practice-link" href="/index.html">
+          <span class="practice-label">Hero pattern</span>
+          <span class="practice-name">Home</span>
+          <span class="practice-desc">Carousel hero, project roadmap, italic vermilion sentence with acorn period.</span>
+        </a>
+        <a class="practice-link" href="/about.html">
+          <span class="practice-label">Editorial / grid</span>
+          <span class="practice-name">About</span>
+          <span class="practice-desc">Two-column hero with H1 italic and acorn-period punctuation. Stats strip below.</span>
+        </a>
+        <a class="practice-link" href="/notes.html">
+          <span class="practice-label">Index / filter</span>
+          <span class="practice-name">Studio Notes</span>
+          <span class="practice-desc">Tag chips with warm-yellow active state, Lora italic title, post cards.</span>
+        </a>
+        <a class="practice-link" href="/notes/flute-direction.html">
+          <span class="practice-label">Long-form essay</span>
+          <span class="practice-name">Flute direction</span>
+          <span class="practice-desc">Post body with end-of-post acorn mark.</span>
+        </a>
+        <a class="practice-link" href="/work.html">
+          <span class="practice-label">Portfolio index</span>
+          <span class="practice-name">Selected Work</span>
+          <span class="practice-desc">Figure cards, vermilion eyebrow, warm-yellow eyebrow on featured pieces.</span>
+        </a>
+        <a class="practice-link" href="/work/illinois-courtside.html">
+          <span class="practice-label">Case study (constraints)</span>
+          <span class="practice-name">Illinois Courtside Kit</span>
+          <span class="practice-desc">Brief / constraints / solution / production / reuse structure.</span>
+        </a>
+        <a class="practice-link" href="/work/georgetown-hoyas.html">
+          <span class="practice-label">Case study (insight)</span>
+          <span class="practice-name">Georgetown Hoyas</span>
+          <span class="practice-desc">Pull-quote treatment for the central design insight.</span>
+        </a>
+        <a class="practice-link" href="/404.html">
+          <span class="practice-label">Easter egg</span>
+          <span class="practice-name">404 — Off the dieline</span>
+          <span class="practice-desc">Vitruvian Squirrel medallion. Visual punchline, copy stays earnest.</span>
+        </a>
+      </div>
+
+      <p class="case-pullquote">The brand changes when the work changes &mdash; <em>multi-disciplinary practice means the system has to host work that doesn&rsquo;t fit a single category.</em></p>
+
+      <p>The current system: editorial restraint with playful flourishes, brown ink on cream paper, vermilion as consistent accent, warm-yellow as recent tertiary, an acorn glyph that quietly punctuates italic phrases, and a Vitruvian Squirrel reserved for the rare moment when breadth itself is the subject. Everything in this guide is alive, in working code, on the page you&rsquo;re reading right now.</p>
+
+      <p class="case-credits">
+        <strong>Brand identity, system design, and code:</strong> Ronny Goodrich &middot;
+        <strong>Wordmark typeface:</strong> Custard Condensed (third-party) &middot;
+        <strong>Body type:</strong> Lora + DM Sans + DM Mono (Google Fonts) &middot;
+        <strong>Custom marks:</strong> Acorn glyph and Vitruvian Squirrel illustrated by Ronny Goodrich
+      </p>
+    </div>
+
+    <div class="acorn-end" aria-hidden="true">
+      <svg width="28" height="28"><use href="#acorn"/></svg>
+    </div>
+  </article>
+
+  <nav class="post-nav" style="max-width: 980px; margin: 0 auto; padding: 0 3rem 3rem;">
+    <a href="/work.html">&larr; All Work</a>
+    <a href="/work/georgetown-hoyas.html">Georgetown Hoyas Booster Gift Package &rarr;</a>
+  </nav>
+
+  <footer>
+    <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    <img src="../images/logo-website.svg" alt="Sqrrlbrain.com" style="height:28px;width:auto;opacity:.45;" />
+    <span><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/support.html">Support</a> &middot; <a href="https://instagram.com/sqrrlbrain" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram @sqrrlbrain" style="display:inline-flex;align-items:center;vertical-align:middle;"><img src="../images/insta-icon_vermillion.svg" alt="Instagram" width="18" height="18" style="vertical-align:middle;display:inline-block;" /></a></span>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileNav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
