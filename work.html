@@ -103,6 +103,8 @@
       overflow: hidden;
     }
     .work-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .work-image-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; aspect-ratio: 4/3; background: var(--paper); }
+    .work-image-pair img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .work-image .placeholder {
       font-family: var(--mono);
       font-size: .68rem;
@@ -357,13 +359,14 @@
     <div class="work-grid">
 
       <figure class="work-item">
-        <div class="work-image">
+        <div class="work-image-pair">
+          <img src="images/work/charger-station-cad.webp" alt="SketchUp CAD render of the charger station — bistro-height pedestal table shown in transparent rendering, tabletop with five round Qi-charger wells visible from underneath, illuminated side panel housings on the sides, steel base plate" />
           <img src="images/work/charger-station-prototype.jpg" alt="Bistro-table-height charger station prototype in the shop — square white tabletop on a tall MDF pedestal, side compartments showing power outlet and cable storage, mounted to a black steel base plate" />
         </div>
         <figcaption class="work-caption">
           <h3>Multi-Device Charger Station</h3>
           <p class="work-meta">Structural design + custom 3D-printed parts + integrated electrical &middot; in production</p>
-          <p>Bistro-height charging station for events and lobbies. <strong>4&times; two-plug outlets, 4&times; squid charging cables, 5&times; Qi chargers</strong> integrated under the tabletop skin. Custom-engineered 3D-printed parts hold both the Qi chargers seated under the surface and the backlit illuminated side panels in their frames. Currently nearing prototype completion.</p>
+          <p>Bistro-height charging station for events and lobbies. <strong>4&times; two-plug outlets, 4&times; squid charging cables, 5&times; Qi chargers</strong> integrated under the tabletop skin. Custom-engineered 3D-printed parts hold both the Qi chargers seated under the surface and the backlit illuminated side panels in their frames. SketchUp engineering model on the left; physical prototype on the right.</p>
         </figcaption>
       </figure>
 
