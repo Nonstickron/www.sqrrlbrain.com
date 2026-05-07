@@ -347,9 +347,22 @@
       .contact-row a, .contact-row span { font-size: 1.05rem; }
       footer { padding: 1.2rem 1.4rem; flex-direction: column; gap: .6rem; text-align: center; }
     }
+
+    /* ACORN GLYPH */
+    .acorn-period { display: inline-block; width: .3em; height: .3em; vertical-align: baseline; color: var(--accent); margin-left: .03em; }
   </style>
 </head>
 <body>
+
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <symbol id="acorn" viewBox="0 0 24 24">
+      <g transform="rotate(11 12 16)" fill="currentColor">
+        <rect x="11.3" y="2.6" width="1.4" height="2.2" rx=".5"/>
+        <path d="M4 8.6 Q4 4.8 12 4.8 Q20 4.8 20 8.6 L19.3 10.4 Q17.3 11 15.3 10.4 Q13.5 11 12 10.4 Q10.5 11 8.7 10.4 Q6.7 11 4.7 10.4 Z"/>
+        <path d="M5.5 10.3 Q5 16 8 19.5 Q10 22 12 22.5 Q14 22 16 19.5 Q19 16 18.5 10.3 Z"/>
+      </g>
+    </symbol>
+  </svg>
 
   <header>
     <div class="logo-wrap">
@@ -372,7 +385,7 @@
 
   <div class="page-hero">
     <p class="eyebrow">What We Do &middot; Sqrrlbrain Studio</p>
-    <h1>Design that<br><em>ships.</em></h1>
+    <h1>Design that<br><em>ships<svg class="acorn-period" aria-hidden="true"><use href="#acorn"/></svg></em></h1>
     <p class="page-desc">Four core disciplines, one production-minded perspective. Work built to survive contact with the printer, the retailer, and the real world.</p>
   </div>
 
@@ -486,7 +499,7 @@
   </div>
 
   <section class="contact-cta">
-    <h2>Tell me what<br>you're<br><em>building.</em></h2>
+    <h2>Tell me what<br>you're<br><em>building<svg class="acorn-period" aria-hidden="true"><use href="#acorn"/></svg></em></h2>
     <div class="contact-info">
       <div class="contact-row">
         <p class="label">Email</p>
