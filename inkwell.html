@@ -153,6 +153,15 @@
     .shot-hero {
       padding: 0 3rem 3.5rem;
     }
+    .shot-hero.shot-portrait {
+      display: flex;
+      justify-content: center;
+    }
+    .shot-portrait .shot-frame {
+      width: 320px;
+      max-width: 100%;
+      aspect-ratio: 9 / 16;
+    }
     .shot-frame {
       position: relative;
       width: 100%;
@@ -454,9 +463,9 @@
     <span class="status-pill"><span class="dot"></span>Coming to iOS</span>
   </section>
 
-  <div class="shot-hero">
+  <div class="shot-hero shot-portrait">
     <div class="shot-frame">
-      <img src="images/inkwell/hero.png" alt="Inkwell on the web — the cinematic story engine, in its default Inkwell theme" loading="eager" />
+      <img src="images/inkwell/hero.png" alt="Inkwell on a phone, in its default Inkwell theme" loading="eager" />
     </div>
   </div>
 
