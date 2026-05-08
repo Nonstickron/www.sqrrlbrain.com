@@ -162,6 +162,21 @@
       max-width: 100%;
       aspect-ratio: 9 / 16;
     }
+    .shot-pair {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.4rem;
+      max-width: 720px;
+      margin: 2.5rem auto 0;
+      padding: 0 3rem;
+    }
+    .shot-pair .shot-frame {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+    }
+    @media (max-width: 720px) {
+      .shot-pair { grid-template-columns: 1fr; max-width: 320px; padding: 0 1.5rem; gap: 1.6rem; }
+    }
     .shot-frame {
       position: relative;
       width: 100%;
@@ -494,6 +509,20 @@
         <p class="feature-num">03</p>
         <h3>A look that fits the tale.</h3>
         <p>Switch themes on the fly. Read your story as parchment and quill, neon and circuitry, or whatever vibe you&rsquo;re in.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Pick a world</p>
+    <h2>Generated <em>at every level.</em></h2>
+    <p class="body">Empty save slots pull a fresh trio of campaigns out of the engine &mdash; any genre, any era, any tone. Pick one and Session Zero opens, asking who&rsquo;s with you, who you are, what the story&rsquo;s mood will be. Every option you see was written for the world you just chose. Don&rsquo;t like the trio? Roll three more. Want to start from a blank page? &ldquo;Build Your Own&rdquo; walks you through it.</p>
+    <div class="shot-pair">
+      <div class="shot-frame">
+        <img src="images/inkwell/campaign-picker.png" alt="Inkwell campaign picker showing three procedurally generated story options" loading="lazy" />
+      </div>
+      <div class="shot-frame">
+        <img src="images/inkwell/character-step.png" alt="Inkwell Session Zero — three character options written for the chosen world" loading="lazy" />
       </div>
     </div>
   </section>
