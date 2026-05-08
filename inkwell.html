@@ -96,6 +96,22 @@
     .caret { font-size: .5rem; opacity: .6; }
 
     /* HERO */
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 4rem;
+      align-items: center;
+      padding-right: 3rem;
+    }
+    .hero-wrap .page-hero { padding-right: 0; }
+    .hero-wrap .hero-shot { flex-shrink: 0; }
+    .hero-wrap .hero-shot .shot-frame { width: 320px; aspect-ratio: 9 / 16; position: relative; background: var(--warm); border: 1px solid var(--rule); overflow: hidden; }
+    .hero-wrap .hero-shot .shot-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    @media (max-width: 980px) {
+      .hero-wrap { grid-template-columns: 1fr; gap: 0; padding-right: 0; }
+      .hero-wrap .page-hero { padding-right: 3rem; }
+      .hero-wrap .hero-shot { display: flex; justify-content: center; padding: 0 3rem 2.5rem; }
+    }
     .page-hero {
       padding: 4rem 3rem 2.5rem;
       max-width: 78ch;
@@ -176,6 +192,31 @@
     }
     @media (max-width: 720px) {
       .shot-pair { grid-template-columns: 1fr; max-width: 320px; padding: 0 1.5rem; gap: 1.6rem; }
+    }
+
+    /* SECTION WITH INLINE SHOT (text left, phone shot[s] right) */
+    .section-with-shot {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 4rem;
+      align-items: center;
+    }
+    .section-with-shot .section-text { min-width: 0; }
+    .section-with-shot .section-shot { display: flex; flex-shrink: 0; gap: 1.4rem; }
+    .section-with-shot .section-shot .shot-frame { width: 280px; aspect-ratio: 9 / 16; }
+    .section-with-shot.shot-pair-side .section-shot .shot-frame { width: 240px; }
+    @media (max-width: 1100px) {
+      .section-with-shot.shot-pair-side .section-shot .shot-frame { width: 220px; }
+    }
+    @media (max-width: 980px) {
+      .section-with-shot { grid-template-columns: 1fr; gap: 2rem; }
+      .section-with-shot .section-shot { justify-content: center; }
+      .section-with-shot .section-shot .shot-frame { width: 100%; max-width: 320px; }
+      .section-with-shot.shot-pair-side .section-shot { display: grid; grid-template-columns: 1fr 1fr; max-width: 540px; margin: 0 auto; gap: 1.2rem; }
+      .section-with-shot.shot-pair-side .section-shot .shot-frame { width: 100%; max-width: none; }
+    }
+    @media (max-width: 560px) {
+      .section-with-shot.shot-pair-side .section-shot { grid-template-columns: 1fr; max-width: 320px; gap: 1.4rem; }
     }
     .shot-frame {
       position: relative;
@@ -471,16 +512,17 @@
     </div>
   </header>
 
-  <section class="page-hero">
-    <p class="eyebrow">Sqrrlbrain Studio &middot; Apps</p>
-    <h1>Every choice<br>shapes the <em>story.</em></h1>
-    <p class="lede">Inkwell is an AI-powered interactive fiction app that puts you inside a living narrative. Characters remember what you did three chapters ago. Worlds evolve based on the choices you make. No two playthroughs are the same.</p>
-    <span class="status-pill"><span class="dot"></span>Coming to iOS</span>
-  </section>
-
-  <div class="shot-hero shot-portrait">
-    <div class="shot-frame">
-      <img src="images/inkwell/hero.png" alt="Inkwell on a phone, in its default Inkwell theme" loading="eager" />
+  <div class="hero-wrap">
+    <section class="page-hero">
+      <p class="eyebrow">Sqrrlbrain Studio &middot; Apps</p>
+      <h1>Every choice<br>shapes the <em>story.</em></h1>
+      <p class="lede">Inkwell is an AI-powered interactive fiction app that puts you inside a living narrative. Characters remember what you did three chapters ago. Worlds evolve based on the choices you make. No two playthroughs are the same.</p>
+      <span class="status-pill"><span class="dot"></span>Coming to iOS</span>
+    </section>
+    <div class="hero-shot">
+      <div class="shot-frame">
+        <img src="images/inkwell/hero.png" alt="Inkwell on a phone, in its default Inkwell theme" loading="eager" />
+      </div>
     </div>
   </div>
 
@@ -513,11 +555,13 @@
     </div>
   </section>
 
-  <section class="section">
-    <p class="section-label">Pick a world</p>
-    <h2>Generated <em>at every level.</em></h2>
-    <p class="body">Empty save slots pull a fresh trio of campaigns out of the engine &mdash; any genre, any era, any tone. Pick one and Session Zero opens, asking who&rsquo;s with you, who you are, what the story&rsquo;s mood will be. Every option you see was written for the world you just chose. Don&rsquo;t like the trio? Roll three more. Want to start from a blank page? &ldquo;Build Your Own&rdquo; walks you through it.</p>
-    <div class="shot-pair">
+  <section class="section section-with-shot shot-pair-side">
+    <div class="section-text">
+      <p class="section-label">Pick a world</p>
+      <h2>Generated <em>at every level.</em></h2>
+      <p class="body">Empty save slots pull a fresh trio of campaigns out of the engine &mdash; any genre, any era, any tone. Pick one and Session Zero opens, asking who&rsquo;s with you, who you are, what the story&rsquo;s mood will be. Every option you see was written for the world you just chose. Don&rsquo;t like the trio? Roll three more. Want to start from a blank page? &ldquo;Build Your Own&rdquo; walks you through it.</p>
+    </div>
+    <div class="section-shot">
       <div class="shot-frame">
         <img src="images/inkwell/campaign-picker.png" alt="Inkwell campaign picker showing three procedurally generated story options" loading="lazy" />
       </div>
@@ -527,11 +571,13 @@
     </div>
   </section>
 
-  <section class="section">
-    <p class="section-label">The choice moment</p>
-    <h2>Read. <em>Choose.</em> Continue.</h2>
-    <p class="body">Each scene ends with a handful of choices &mdash; or the chance to write your own. Inkwell weaves your decision into the next passage and keeps moving. The story flows like a novel; it just happens to be one where you&rsquo;re holding the pen too.</p>
-    <div class="shot-hero shot-portrait" style="padding-left:0;padding-right:0;padding-bottom:0;margin-top:2.5rem;">
+  <section class="section section-with-shot">
+    <div class="section-text">
+      <p class="section-label">The choice moment</p>
+      <h2>Read. <em>Choose.</em> Continue.</h2>
+      <p class="body">Each scene ends with a handful of choices &mdash; or the chance to write your own. Inkwell weaves your decision into the next passage and keeps moving. The story flows like a novel; it just happens to be one where you&rsquo;re holding the pen too.</p>
+    </div>
+    <div class="section-shot">
       <div class="shot-frame">
         <img src="images/inkwell/choice-moment.png" alt="A real Inkwell story moment — narrative paragraph followed by lettered choice buttons" loading="lazy" />
       </div>
