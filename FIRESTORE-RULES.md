@@ -58,6 +58,20 @@ service cloud.firestore {
       allow read, update, delete: if false;
     }
 
+    // SqrrledAway launch waitlist — public create only, validated, no read
+    match /sqrrledaway_waitlist/{docId} {
+      allow create: if request.resource.data.keys().hasOnly([
+                      'email','source','created_at','user_agent','page_referrer'
+                    ])
+                    && request.resource.data.email is string
+                    && request.resource.data.email.size() > 0
+                    && request.resource.data.email.size() <= 200
+                    && request.resource.data.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
+                    && request.resource.data.source is string
+                    && request.resource.data.source.size() <= 64;
+      allow read, update, delete: if false;
+    }
+
     // Per-user app data — read/write only by the user themselves.
     // Used by sqrrlbrain-billing.html (settings, clients, jobs, expenses)
     // and any future per-user-scoped app.
