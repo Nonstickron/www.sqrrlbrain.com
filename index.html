@@ -37,6 +37,9 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 1000; padding: 10px 14px; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-radius: 4px; }
+    .skip-link:focus { left: 12px; top: 12px; outline: 2px solid var(--accent); outline-offset: 2px; }
+
     :root {
       --ink:         #3a1a00;
       --brown-mid:   #7a4520;
@@ -713,6 +716,8 @@
     </symbol>
   </svg>
 
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <header>
     <div class="logo-wrap">
       <img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" />
@@ -732,6 +737,8 @@
     </div>
   </header>
 
+  <main id="main">
+
   <section class="hero-stage">
     <div class="hero-pitch">
       <p class="eyebrow">Sqrrlbrain Studio &middot; Edgewater, FL</p>
@@ -742,7 +749,7 @@
     <div class="hero-carousel" aria-roledescription="carousel" aria-label="Featured projects">
       <div class="carousel-track">
         <a class="carousel-slide active" href="/inkwell.html">
-          <img src="images/inkwell/hero-carousel.png" alt="" />
+          <img src="images/inkwell/hero-carousel.png" alt="Phone showing the Inkwell story interface — narrator prose followed by lettered choice buttons in a parchment theme." />
           <div class="carousel-caption">
             <p class="slide-eyebrow">Software &middot; Live</p>
             <h3 class="slide-title">Inkwell &mdash; AI Story Engine</h3>
@@ -750,7 +757,7 @@
           </div>
         </a>
         <a class="carousel-slide" href="/projects.html#sqrrledaway">
-          <img src="images/sqrrledaway/hero-carousel.png" alt="" />
+          <img src="images/sqrrledaway/hero-carousel.png" alt="Phone showing the SqrrledAway weekly meal plan — date strip across the top, macro totals, and morning/midday/evening meal buckets." />
           <div class="carousel-caption">
             <p class="slide-eyebrow">Software &middot; In Development</p>
             <h3 class="slide-title">SqrrledAway</h3>
@@ -765,7 +772,7 @@
           </div>
         </a>
         <a class="carousel-slide" href="/work.html">
-          <img src="images/work/georgetown-hoyas-render-open.jpg" alt="" />
+          <img src="images/work/georgetown-hoyas-render-open.jpg" alt="3D render of the Georgetown Hoyas booster gift package, opened to reveal a wine bottle angled corner-to-corner with branded glassware." />
           <div class="carousel-caption">
             <p class="slide-eyebrow">Selected Work &middot; Packaging</p>
             <h3 class="slide-title">Georgetown Hoyas Booster Package</h3>
@@ -773,7 +780,7 @@
           </div>
         </a>
         <a class="carousel-slide" href="/work.html">
-          <img src="images/work/charger-station-prototype.jpg" alt="" />
+          <img src="images/work/charger-station-prototype.jpg" alt="Prototype photo of a multi-device charger station with cable channels and integrated phone slots." />
           <div class="carousel-caption">
             <p class="slide-eyebrow">Selected Work &middot; Industrial</p>
             <h3 class="slide-title">Multi-Device Charger Station</h3>
@@ -961,6 +968,8 @@
     </div>
     <p style="margin-top:2rem;"><a href="/contact.html" style="font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--paper);background:var(--accent);padding:1rem 2rem;text-decoration:none;display:inline-block;transition:background .2s;" onmouseover="this.style.background='var(--ink)'" onmouseout="this.style.background='var(--accent)'">Send a message &rarr;</a></p>
   </section>
+
+  </main>
 
   <footer>
     <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>

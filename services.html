@@ -13,6 +13,9 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 1000; padding: 10px 14px; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-radius: 4px; }
+    .skip-link:focus { left: 12px; top: 12px; outline: 2px solid var(--accent); outline-offset: 2px; }
+
     :root {
       --ink:         #3a1a00;
       --brown-mid:   #7a4520;
@@ -364,6 +367,8 @@
     </symbol>
   </svg>
 
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <header>
     <div class="logo-wrap">
       <a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
@@ -382,6 +387,8 @@
       <a href="/contact.html">Contact</a>
     </div>
   </header>
+
+  <main id="main">
 
   <div class="page-hero">
     <p class="eyebrow">What We Do &middot; Sqrrlbrain Studio</p>
@@ -516,6 +523,8 @@
     </div>
     <p style="margin-top:2rem;"><a href="/contact.html" style="font-family:'DM Mono',monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#faf6f0;background:#c8421a;padding:1rem 2rem;text-decoration:none;display:inline-block;transition:background .2s;" onmouseover="this.style.background='#3a1a00'" onmouseout="this.style.background='#c8421a'">Send a message &rarr;</a></p>
   </section>
+
+  </main>
 
   <footer>
     <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
