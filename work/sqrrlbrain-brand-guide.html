@@ -20,6 +20,9 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 1000; padding: 10px 14px; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-radius: 4px; }
+    .skip-link:focus { left: 12px; top: 12px; outline: 2px solid var(--accent); outline-offset: 2px; }
+
     :root {
       --ink:         #3a1a00;
       --brown-mid:   #7a4520;
@@ -364,6 +367,8 @@
     </symbol>
   </svg>
 
+  <a class="skip-link" href="#main">Skip to main content</a>
+
   <header>
     <div class="logo-wrap">
       <a href="/"><img src="../images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
@@ -382,6 +387,8 @@
       <a href="/contact.html">Contact</a>
     </div>
   </header>
+
+  <main id="main">
 
   <article class="post-page">
     <p class="post-eyebrow">
@@ -600,6 +607,8 @@
     <a href="/work.html">&larr; All Work</a>
     <a href="/work/georgetown-hoyas.html">Georgetown Hoyas Booster Gift Package &rarr;</a>
   </nav>
+
+  </main>
 
   <footer>
     <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
