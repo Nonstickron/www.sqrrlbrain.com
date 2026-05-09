@@ -95,6 +95,7 @@
       color: var(--accent);
       font-weight: 600;
     }
+    .acorn-period { display: inline-block; width: .3em; height: .3em; vertical-align: baseline; color: var(--accent); margin-left: .03em; }
     .lede {
       font-size: 1.15rem;
       line-height: 1.7;
@@ -411,6 +412,16 @@
 </head>
 <body>
 
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <symbol id="acorn" viewBox="0 0 24 24">
+      <g transform="rotate(11 12 16)" fill="currentColor">
+        <rect x="11.3" y="2.6" width="1.4" height="2.2" rx=".5"/>
+        <path d="M4 8.6 Q4 4.8 12 4.8 Q20 4.8 20 8.6 L19.3 10.4 Q17.3 11 15.3 10.4 Q13.5 11 12 10.4 Q10.5 11 8.7 10.4 Q6.7 11 4.7 10.4 Z"/>
+        <path d="M5.5 10.3 Q5 16 8 19.5 Q10 22 12 22.5 Q14 22 16 19.5 Q19 16 18.5 10.3 Z"/>
+      </g>
+    </symbol>
+  </svg>
+
   <div class="auth-loading">Checking access&hellip;</div>
 
   <header>
@@ -435,7 +446,7 @@
   <div class="hero-wrap">
     <section class="page-hero">
       <p class="eyebrow">Sqrrlbrain Studio &middot; Apps</p>
-      <h1>Cook together,<br>eat <em>together.</em></h1>
+      <h1>Cook together,<br>eat <em>together<svg class="acorn-period"><use href="#acorn"/></svg></em></h1>
       <p class="lede">SqrrledAway is meal planning built around how households actually cook &mdash; multiple cooks, kid plates, presence at the table, real ingredients in the pantry. Manual where you want it. AI when you don&rsquo;t.</p>
       <span class="status-pill"><span class="dot"></span>Web prototype &middot; in development</span>
     </section>
