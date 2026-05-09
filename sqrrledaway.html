@@ -12,6 +12,11 @@
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Hide page until auth check completes — prevents a flash of gated content for unapproved visitors */
+    body { visibility: hidden; }
+    body.auth-ok { visibility: visible; }
+    .auth-loading { visibility: visible; position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #faf6f0; font-family: 'DM Mono', monospace; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: #b88c5a; z-index: 9999; }
+    body.auth-ok .auth-loading { display: none; }
     :root {
       --ink:         #3a1a00;
       --brown-mid:   #7a4520;
@@ -406,6 +411,8 @@
 </head>
 <body>
 
+  <div class="auth-loading">Checking access&hellip;</div>
+
   <header>
     <div class="logo-wrap">
       <a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
@@ -428,7 +435,7 @@
   <div class="hero-wrap">
     <section class="page-hero">
       <p class="eyebrow">Sqrrlbrain Studio &middot; Apps</p>
-      <h1>Cook for the<br>people you <em>live with.</em></h1>
+      <h1>Cook with the<br>people you <em>live with.</em></h1>
       <p class="lede">SqrrledAway is meal planning built around how households actually cook &mdash; multiple cooks, kid plates, presence at the table, real ingredients in the pantry. Manual where you want it. AI when you don&rsquo;t.</p>
       <span class="status-pill"><span class="dot"></span>Web prototype &middot; in development</span>
     </section>
@@ -552,6 +559,7 @@
   </footer>
 
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
   <script>
     const SQRRL_CONFIG = {
@@ -563,7 +571,22 @@
       appId: "1:673586334045:web:910fcdf3fe60afc88540b4"
     };
     if (!firebase.apps.length) firebase.initializeApp(SQRRL_CONFIG);
+    const auth = firebase.auth();
     const db = firebase.firestore();
+
+    // Auth gate — SqrrledAway is in development, page restricted to approved collaborators
+    auth.onAuthStateChanged(async user => {
+      if (!user) {
+        window.location.href = '/login.html?return=/sqrrledaway.html';
+        return;
+      }
+      const doc = await db.collection('site_approved_users').doc(user.email).get().catch(() => ({ exists: false }));
+      if (!doc.exists) {
+        window.location.href = '/login.html?denied=1';
+        return;
+      }
+      document.body.classList.add('auth-ok');
+    });
 
     const form     = document.getElementById('waitlist-form');
     const submit   = document.getElementById('wl-submit');
