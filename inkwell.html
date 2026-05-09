@@ -137,6 +137,7 @@
       color: var(--accent);
       font-weight: 600;
     }
+    .acorn-period { display: inline-block; width: .3em; height: .3em; vertical-align: baseline; color: var(--accent); margin-left: .03em; }
     .lede {
       font-size: 1.15rem;
       line-height: 1.7;
@@ -493,6 +494,16 @@
 </head>
 <body>
 
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <symbol id="acorn" viewBox="0 0 24 24">
+      <g transform="rotate(11 12 16)" fill="currentColor">
+        <rect x="11.3" y="2.6" width="1.4" height="2.2" rx=".5"/>
+        <path d="M4 8.6 Q4 4.8 12 4.8 Q20 4.8 20 8.6 L19.3 10.4 Q17.3 11 15.3 10.4 Q13.5 11 12 10.4 Q10.5 11 8.7 10.4 Q6.7 11 4.7 10.4 Z"/>
+        <path d="M5.5 10.3 Q5 16 8 19.5 Q10 22 12 22.5 Q14 22 16 19.5 Q19 16 18.5 10.3 Z"/>
+      </g>
+    </symbol>
+  </svg>
+
   <header>
     <div class="logo-wrap">
       <a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
@@ -515,7 +526,7 @@
   <div class="hero-wrap">
     <section class="page-hero">
       <p class="eyebrow">Sqrrlbrain Studio &middot; Apps</p>
-      <h1>Every choice<br>shapes the <em>story.</em></h1>
+      <h1>Every choice<br>shapes the <em>story<svg class="acorn-period"><use href="#acorn"/></svg></em></h1>
       <p class="lede">Inkwell is an AI-powered interactive fiction app that puts you inside a living narrative. Characters remember what you did three chapters ago. Worlds evolve based on the choices you make. No two playthroughs are the same.</p>
       <span class="status-pill"><span class="dot"></span>Coming to iOS</span>
     </section>
@@ -558,7 +569,7 @@
   <section class="section section-with-shot shot-pair-side">
     <div class="section-text">
       <p class="section-label">Pick a world</p>
-      <h2>Generated <em>at every level.</em></h2>
+      <h2>Generated <em>at every level<svg class="acorn-period"><use href="#acorn"/></svg></em></h2>
       <p class="body">Empty save slots pull a fresh trio of campaigns out of the engine &mdash; any genre, any era, any tone. Pick one and Session Zero opens, asking who&rsquo;s with you, who you are, what the story&rsquo;s mood will be. Every option you see was written for the world you just chose. Don&rsquo;t like the trio? Roll three more. Want to start from a blank page? &ldquo;Build Your Own&rdquo; walks you through it.</p>
     </div>
     <div class="section-shot">
@@ -586,7 +597,7 @@
 
   <section class="section">
     <p class="section-label">Make it yours</p>
-    <h2>One engine, many <em>moods.</em></h2>
+    <h2>One engine, many <em>moods<svg class="acorn-period"><use href="#acorn"/></svg></em></h2>
     <p class="body">Some stories want candlelight. Others want neon. Inkwell ships with a library of crafted themes &mdash; pick the one that fits the tale, or roll your own.</p>
     <div class="themes-grid">
       <div class="theme-card">
@@ -611,7 +622,7 @@
   <section class="section" id="waitlist">
     <div class="waitlist-wrap">
       <p class="section-label" style="justify-content:center;">Beta waitlist</p>
-      <h2>Be there at <em>launch.</em></h2>
+      <h2>Be there at <em>launch<svg class="acorn-period"><use href="#acorn"/></svg></em></h2>
       <p class="body">Drop your email and we&rsquo;ll let you know the moment Inkwell hits TestFlight. No newsletter, no marketing &mdash; just the launch note when it&rsquo;s ready.</p>
 
       <form id="waitlist-form" class="waitlist-form" novalidate>
