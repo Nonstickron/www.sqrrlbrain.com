@@ -1,10 +1,11 @@
 # Sqrrlbrain Cloud Functions
 
-Firebase Cloud Functions that trigger on waitlist signups in Firestore and fan out to:
-- **Kit (ConvertKit)** — adds subscriber to **one shared newsletter form** (single mailing list). Kit sends the double-opt-in confirmation email automatically.
-- **Discord webhook** — posts a real-time notification of every signup.
+Firebase Cloud Functions that trigger on Firestore signups and fan out to:
+- **Kit (ConvertKit)** — adds waitlist subscribers to **one shared newsletter form** (single mailing list). Kit sends the double-opt-in confirmation email automatically.
+- **Discord webhook** — posts a real-time notification of every signup (waitlists + contact-form messages).
+- **Resend** — for contact-form messages only, forwards to hello@sqrrlbrain.com with `Reply-To: <user's email>` so you can reply directly from your inbox.
 
-Both fan-outs gated by env vars. Function deploys safely if either is unset.
+Each fan-out gated by env vars. Function deploys safely if any of them aren't set.
 
 ## Design — single list, not segmented
 
@@ -14,12 +15,12 @@ All marketing-eligible signups (Inkwell, SqrrledAway, Site notify) push to ONE K
 
 ## Watched collections
 
-| Firestore collection | → Kit newsletter | → Discord ping | Discord label |
+| Firestore collection | → Kit newsletter | → Discord ping | → Email forward |
 |---|---|---|---|
-| `inkwell_waitlist` | ✓ | ✓ | "Inkwell waitlist" |
-| `sqrrledaway_waitlist` | ✓ | ✓ | "SqrrledAway waitlist" |
-| `site_notify_waitlist` | ✓ | ✓ | "Site notify waitlist (login-page denial)" |
-| `contact_messages` | — | ✓ | "Contact form" (includes subject + message preview) |
+| `inkwell_waitlist` | ✓ (double opt-in) | ✓ | — |
+| `sqrrledaway_waitlist` | ✓ (double opt-in) | ✓ | — |
+| `site_notify_waitlist` | ✓ (double opt-in) | ✓ | — |
+| `contact_messages` | — | ✓ | ✓ → `CONTACT_TO_EMAIL` (default `hello@sqrrlbrain.com`) |
 
 ## Double opt-in flow
 
@@ -54,13 +55,22 @@ If the user never clicks confirm, they stay in Kit's "inactive" pool. Discord st
 2. Name it "Sqrrlbrain Waitlist" (or similar), pick the channel you want notifications in
 3. Copy the webhook URL
 
-### 3. Upgrade Firebase project to Blaze plan
+### 3. Sign up for Resend (transactional email for contact form)
+
+1. Sign up at https://resend.com (free, 3K emails/mo on free tier)
+2. **API Keys → Create API Key** — name it "sqrrlbrain-functions", copy the key
+3. (Optional but recommended) **Domains → Add Domain** → enter `sqrrlbrain.com` → add the DNS records Resend gives you (DKIM/SPF) at your domain registrar. Takes a few minutes for verification.
+   - **Without domain verification:** emails come from `onboarding@resend.dev` (works immediately, looks slightly less polished)
+   - **With domain verification:** set `EMAIL_FROM=Sqrrlbrain Contact <hello@sqrrlbrain.com>` in `.env` for emails from your own domain
+4. The `Reply-To` header is automatically set to the contacter's email — when you hit reply, you reply to them directly, not to Resend.
+
+### 4. Upgrade Firebase project to Blaze plan
 
 Required for Cloud Functions deployment. Free under the volumes you'll hit (2M function invocations/mo free).
 
 Firebase Console → bottom-left "Spark plan" → "Upgrade to Blaze" → add billing card.
 
-### 4. Wire env vars (one of two ways)
+### 5. Wire env vars (one of two ways)
 
 **Option A — Firebase secrets (recommended for production):**
 ```bash
@@ -79,7 +89,7 @@ cp .env.example .env
 ```
 Note: `.env` should be in `.gitignore` (it is, via the workspace `.env*` pattern).
 
-### 5. Install + deploy
+### 6. Install + deploy
 
 ```bash
 cd Projects/sqrrlbrain.com
@@ -141,6 +151,7 @@ Function deployment takes ~2 minutes. Existing in-flight signups during deploy a
 | Firebase Cloud Functions | 2M invocations/mo | <500/mo (50-200 signups + retries) |
 | Firebase Cloud Functions | 5GB outbound/mo | <10MB/mo (small JSON payloads) |
 | Kit free tier | 10,000 subscribers | <100 in next year |
+| Resend free tier | 3,000 emails/mo (100/day) | <100/mo |
 | Discord webhooks | unlimited free | n/a |
 
 **Realistic monthly cost: $0.** Per the workspace memory `feedback_frugality_first.md`, you'll hit the Blaze plan free tier comfortably.

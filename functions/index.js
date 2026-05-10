@@ -1,5 +1,5 @@
 /**
- * Firebase Cloud Functions — waitlist autosync (single newsletter list)
+ * Firebase Cloud Functions — waitlist autosync + contact-form forwarder
  *
  * Triggers on Firestore document create for the four collections and fans
  * out to:
@@ -9,20 +9,31 @@
  *     Per-collection `source` recorded as a Kit custom field.
  *   - Discord webhook — real-time signup notification for ALL four
  *     collections (including contact_messages).
+ *   - Resend (transactional email) — for contact_messages ONLY, forwards
+ *     the message to hello@sqrrlbrain.com (or whatever CONTACT_TO_EMAIL is
+ *     set to). Sets Reply-To header to the contacter's email so Ron can
+ *     reply directly from his inbox.
  *
- * Both fan-outs gated by env vars (see functions/.env.example). If a key
+ * Each fan-out gated by env vars (see functions/.env.example). If a key
  * isn't set, that fan-out is a silent no-op.
  *
  * NOTE on contact_messages: contact-form submissions are NOT auto-added
  * to the newsletter (someone messaging support didn't necessarily opt
- * into marketing). Discord-only. Ron can manually add interesting
- * contacts to Kit via the dashboard.
+ * into marketing). Email + Discord only.
  *
  * Env vars (set via .env or `firebase functions:secrets:set`):
  *   KIT_API_KEY            — Kit V4 API key (Account → Settings → Advanced)
  *   KIT_FORM_ID            — Kit form ID for the unified newsletter signup
  *                            (form must be configured for double opt-in)
  *   DISCORD_WEBHOOK_URL    — Discord channel webhook URL
+ *   RESEND_API_KEY         — Resend API key for transactional email
+ *                            (resend.com → API Keys; free tier = 3K/mo)
+ *   EMAIL_FROM             — From address for outbound contact-form forwards
+ *                            (default: 'Sqrrlbrain Contact <onboarding@resend.dev>')
+ *                            Once you verify sqrrlbrain.com in Resend, set
+ *                            this to e.g. 'Sqrrlbrain Contact <hello@sqrrlbrain.com>'
+ *   CONTACT_TO_EMAIL       — destination for contact-form forwards
+ *                            (default: hello@sqrrlbrain.com)
  *
  * Deploy:
  *   firebase deploy --only functions
@@ -89,6 +100,53 @@ async function addToKitNewsletter(email, source) {
   return { subscriberId: json?.subscriber?.id, source };
 }
 
+async function forwardContactEmail({ name, email, subject, message }) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    logger.info("Resend fan-out skipped (RESEND_API_KEY not set)");
+    return { skipped: true };
+  }
+  const from = process.env.EMAIL_FROM || "Sqrrlbrain Contact <onboarding@resend.dev>";
+  const to   = process.env.CONTACT_TO_EMAIL || "hello@sqrrlbrain.com";
+
+  const subj = `[sqrrlbrain.com] ${subject || "Contact form message"}`;
+  // Plain-text body — keeps it deliverable + readable in any client.
+  const body = [
+    `From: ${name || "(no name)"} <${email}>`,
+    subject ? `Subject: ${subject}` : null,
+    "",
+    "----",
+    "",
+    message || "(no message)",
+    "",
+    "----",
+    `Sent via the contact form on https://sqrrlbrain.com`,
+    `Reply directly to this email — it'll go to ${email}`,
+  ].filter((line) => line !== null).join("\n");
+
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      from,
+      to: [to],
+      reply_to: email,
+      subject: subj,
+      text: body,
+    }),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Resend send failed: ${res.status} ${text.slice(0, 300)}`);
+  }
+  const json = await res.json();
+  return { sent: true, id: json?.id };
+}
+
 async function notifyDiscord(collection, email, source, extra) {
   const url = process.env.DISCORD_WEBHOOK_URL;
   if (!url) {
@@ -145,18 +203,29 @@ function makeTrigger(collection) {
         if (msg)     extra = (extra ? extra + "\n" : "") + `message: "${msg}…"`;
       }
 
-      // Run fan-outs in parallel; collect errors but don't crash the function
-      const tasks = [notifyDiscord(collection, email, source, extra)];
+      // Build fan-out tasks. Each is labeled so error logging stays useful.
+      const tasks = [];
+      tasks.push({ name: "Discord", run: () => notifyDiscord(collection, email, source, extra) });
       if (KIT_NEWSLETTER_COLLECTIONS.has(collection)) {
-        tasks.unshift(addToKitNewsletter(email, source || collection));
+        tasks.push({ name: "Kit", run: () => addToKitNewsletter(email, source || collection) });
+      }
+      if (collection === "contact_messages") {
+        tasks.push({
+          name: "Resend",
+          run: () => forwardContactEmail({
+            name: data.name,
+            email,
+            subject: data.subject,
+            message: data.message,
+          }),
+        });
       }
 
-      const results = await Promise.allSettled(tasks);
+      // Run fan-outs in parallel; collect errors but don't crash the function
+      const results = await Promise.allSettled(tasks.map((t) => t.run()));
 
       results.forEach((r, idx) => {
-        const name = idx === 0 && KIT_NEWSLETTER_COLLECTIONS.has(collection)
-          ? "Kit"
-          : "Discord";
+        const name = tasks[idx].name;
         if (r.status === "rejected") {
           logger.error(`${name} fan-out failed for ${collection}`, { email, error: r.reason?.message });
         } else {
