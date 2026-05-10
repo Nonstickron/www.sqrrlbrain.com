@@ -245,3 +245,9 @@ If you do a single editing session across these issues, ranked by impact-per-hou
 6. **Em-dash sweep across all pages**: 5-minute pass per page; demote any dramatic-pause em-dash to a period or comma.
 
 Total ~2-3 hours of focused Dreamweaver editing to clear most of the AI-prose risk on the site.
+
+
+---
+
+**Workspace context:** [[project_sqrrlbrain]] · [[USER]] · [[CHANGELOG]]
+**Tags:** `#proj/sqrrlbrain` `#type/docs`
