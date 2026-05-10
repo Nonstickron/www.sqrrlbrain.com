@@ -1,30 +1,52 @@
 # Sqrrlbrain Cloud Functions
 
 Firebase Cloud Functions that trigger on waitlist signups in Firestore and fan out to:
-- **Kit (ConvertKit)** — adds subscriber to the email list with a collection-specific tag
-- **Discord webhook** — posts a real-time notification of the signup
+- **Kit (ConvertKit)** — adds subscriber to **one shared newsletter form** (single mailing list). Kit sends the double-opt-in confirmation email automatically.
+- **Discord webhook** — posts a real-time notification of every signup.
 
-Each fan-out is independently gated by an env var. If you don't set the Kit key, no Kit calls happen. Same for Discord. Function deploys safely either way.
+Both fan-outs gated by env vars. Function deploys safely if either is unset.
+
+## Design — single list, not segmented
+
+All marketing-eligible signups (Inkwell, SqrrledAway, Site notify) push to ONE Kit form. Per Ron's "we'll tout everything we do to anyone who shows interest in anything we are doing" — no per-product segmentation needed at signup time. The Firestore `source` field IS captured into Kit as a custom field, so future segmentation is possible if/when wanted.
+
+**`contact_messages` is intentionally NOT pushed to Kit** — someone sending a support message didn't necessarily opt into a newsletter. Discord-only. Ron can manually add interesting contacts via the Kit dashboard.
 
 ## Watched collections
 
-| Firestore collection | Kit tag env var | Discord label |
-|---|---|---|
-| `inkwell_waitlist` | `KIT_TAG_INKWELL` | "Inkwell waitlist" |
-| `sqrrledaway_waitlist` | `KIT_TAG_SQRRLEDAWAY` | "SqrrledAway waitlist" |
-| `site_notify_waitlist` | `KIT_TAG_SITE_NOTIFY` | "Site notify waitlist (login-page denial)" |
-| `contact_messages` | `KIT_TAG_CONTACT` | "Contact form" |
+| Firestore collection | → Kit newsletter | → Discord ping | Discord label |
+|---|---|---|---|
+| `inkwell_waitlist` | ✓ | ✓ | "Inkwell waitlist" |
+| `sqrrledaway_waitlist` | ✓ | ✓ | "SqrrledAway waitlist" |
+| `site_notify_waitlist` | ✓ | ✓ | "Site notify waitlist (login-page denial)" |
+| `contact_messages` | — | ✓ | "Contact form" (includes subject + message preview) |
+
+## Double opt-in flow
+
+Configured at the Kit form level (not in this code):
+1. User submits email on sqrrlbrain.com → writes to Firestore
+2. Cloud Function posts to Kit form's subscribers endpoint
+3. Kit sees the form is configured for double opt-in → sends confirmation email automatically with a link
+4. User clicks "Confirm subscription" → Kit moves them to active state
+5. They're now eligible for future broadcasts
+
+If the user never clicks confirm, they stay in Kit's "inactive" pool. Discord still pings on the original signup so Ron sees the lead either way.
 
 ---
 
 ## First-time setup
 
-### 1. Sign up for Kit and grab API + tag IDs
+### 1. Sign up for Kit and configure the newsletter form
 
 1. Sign up at https://kit.com (free, 10K subscribers on free tier)
 2. **Account → Settings → Advanced → API → V4 API Key** — copy this
-3. Create 4 tags (Subscribers → Tags → New Tag): `inkwell-waitlist`, `sqrrledaway-waitlist`, `site-notify`, `contact-form`
-4. For each tag, open it and copy the numeric ID from the URL (e.g., `kit.com/subscribers/tags/12345` → tag ID is `12345`)
+3. **Grow → Landing Pages & Forms → New Form** — create a new form
+   - Name: `Sqrrlbrain Studio newsletter` (or your preference)
+   - Type: pick a basic style — this form is the *delivery mechanism*, end users won't see it (we POST via API). Style doesn't matter much.
+   - **Settings → Incentive Email** — leave the default "Send confirmation email" enabled. This is the double opt-in.
+   - **Customize the confirmation email** in Kit's editor: subject + body. Default works; tweak the language to match Sqrrlbrain's voice.
+4. Open the form, grab the numeric ID from the URL: `kit.com/forms/12345` → form ID is `12345`
+5. (Optional) **Subscribers → Custom Fields → New** — add a field called `source` so the per-collection origin info gets captured per subscriber.
 
 ### 2. Create Discord webhook
 

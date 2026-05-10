@@ -1,41 +1,37 @@
 /**
- * Firebase Cloud Functions — waitlist autosync
+ * Firebase Cloud Functions — waitlist autosync (single newsletter list)
  *
- * Triggers on Firestore document create for the four waitlist collections
- * and fans out to:
- *   - Kit (ConvertKit v4 API) — adds subscriber with collection-specific tag
- *   - Discord webhook — posts a real-time notification of the signup
+ * Triggers on Firestore document create for the four collections and fans
+ * out to:
+ *   - Kit (ConvertKit V4 Forms API) — one shared newsletter form for the
+ *     three waitlist collections. Kit sends the double-opt-in confirmation
+ *     email automatically when the form is configured for double opt-in.
+ *     Per-collection `source` recorded as a Kit custom field.
+ *   - Discord webhook — real-time signup notification for ALL four
+ *     collections (including contact_messages).
  *
- * Both are gated by env vars (see functions/.env.example). If a key isn't
- * set, that fan-out is a silent no-op and the function still succeeds.
+ * Both fan-outs gated by env vars (see functions/.env.example). If a key
+ * isn't set, that fan-out is a silent no-op.
  *
- * Env vars (set via `firebase functions:secrets:set` or .env):
- *   KIT_API_KEY            — your Kit V4 API key (Account → Settings → Advanced)
- *   KIT_TAG_INKWELL        — tag ID for inkwell_waitlist signups
- *   KIT_TAG_SQRRLEDAWAY    — tag ID for sqrrledaway_waitlist signups
- *   KIT_TAG_SITE_NOTIFY    — tag ID for site_notify_waitlist signups
- *   KIT_TAG_CONTACT        — tag ID for contact_messages signups
+ * NOTE on contact_messages: contact-form submissions are NOT auto-added
+ * to the newsletter (someone messaging support didn't necessarily opt
+ * into marketing). Discord-only. Ron can manually add interesting
+ * contacts to Kit via the dashboard.
+ *
+ * Env vars (set via .env or `firebase functions:secrets:set`):
+ *   KIT_API_KEY            — Kit V4 API key (Account → Settings → Advanced)
+ *   KIT_FORM_ID            — Kit form ID for the unified newsletter signup
+ *                            (form must be configured for double opt-in)
  *   DISCORD_WEBHOOK_URL    — Discord channel webhook URL
  *
  * Deploy:
  *   firebase deploy --only functions
- *
- * Local test:
- *   firebase emulators:start --only functions,firestore
  */
 
 const { onDocumentCreated } = require("firebase-functions/v2/firestore");
 const { logger } = require("firebase-functions");
 
 const KIT_API_BASE = "https://api.kit.com/v4";
-
-// Map collection name → env var name for the Kit tag ID
-const COLLECTION_TAG_ENV = {
-  inkwell_waitlist:     "KIT_TAG_INKWELL",
-  sqrrledaway_waitlist: "KIT_TAG_SQRRLEDAWAY",
-  site_notify_waitlist: "KIT_TAG_SITE_NOTIFY",
-  contact_messages:     "KIT_TAG_CONTACT",
-};
 
 // Friendly labels for Discord notifications
 const COLLECTION_LABELS = {
@@ -45,54 +41,52 @@ const COLLECTION_LABELS = {
   contact_messages:     "Contact form",
 };
 
+// Collections that push to the Kit newsletter list.
+// contact_messages is intentionally absent — see header comment.
+const KIT_NEWSLETTER_COLLECTIONS = new Set([
+  "inkwell_waitlist",
+  "sqrrledaway_waitlist",
+  "site_notify_waitlist",
+]);
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
 
-async function addToKit(email, tagEnvName) {
+async function addToKitNewsletter(email, source) {
   const apiKey = process.env.KIT_API_KEY;
-  const tagId  = process.env[tagEnvName];
+  const formId = process.env.KIT_FORM_ID;
   if (!apiKey) {
     logger.info("Kit fan-out skipped (KIT_API_KEY not set)");
     return { skipped: true };
   }
-  if (!tagId) {
-    logger.warn(`Kit fan-out skipped: ${tagEnvName} not set; subscriber created without tag`);
+  if (!formId) {
+    logger.warn("Kit fan-out skipped (KIT_FORM_ID not set)");
+    return { skipped: true };
   }
 
-  // 1. Create-or-update subscriber
-  const subRes = await fetch(`${KIT_API_BASE}/subscribers`, {
+  // POST to the form's subscribers endpoint — Kit sends the double-opt-in
+  // confirmation email automatically when the form is configured for it.
+  const res = await fetch(`${KIT_API_BASE}/forms/${formId}/subscribers`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "X-Kit-Api-Key": apiKey,
     },
-    body: JSON.stringify({ email_address: email, state: "active" }),
+    body: JSON.stringify({
+      email_address: email,
+      // Kit accepts custom fields here if defined on the account — `source`
+      // gives Ron the option to segment later by where they signed up.
+      fields: source ? { source } : undefined,
+    }),
   });
 
-  if (!subRes.ok) {
-    const text = await subRes.text();
-    throw new Error(`Kit subscriber create failed: ${subRes.status} ${text.slice(0, 300)}`);
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Kit form subscribe failed: ${res.status} ${text.slice(0, 300)}`);
   }
-  const subJson = await subRes.json();
-  const subscriberId = subJson?.subscriber?.id;
-  if (!subscriberId) {
-    throw new Error(`Kit subscriber create returned no id: ${JSON.stringify(subJson).slice(0, 300)}`);
-  }
-
-  // 2. Apply tag (if we have one)
-  if (tagId) {
-    const tagRes = await fetch(`${KIT_API_BASE}/tags/${tagId}/subscribers/${subscriberId}`, {
-      method: "POST",
-      headers: { "X-Kit-Api-Key": apiKey },
-    });
-    if (!tagRes.ok) {
-      const text = await tagRes.text();
-      throw new Error(`Kit tag apply failed: ${tagRes.status} ${text.slice(0, 300)}`);
-    }
-  }
-
-  return { subscriberId, tagged: !!tagId };
+  const json = await res.json();
+  return { subscriberId: json?.subscriber?.id, source };
 }
 
 async function notifyDiscord(collection, email, source, extra) {
@@ -151,24 +145,24 @@ function makeTrigger(collection) {
         if (msg)     extra = (extra ? extra + "\n" : "") + `message: "${msg}…"`;
       }
 
-      const tagEnv = COLLECTION_TAG_ENV[collection];
-
-      // Run both fan-outs in parallel; collect errors but don't crash the function
-      const [kitRes, discordRes] = await Promise.allSettled([
-        addToKit(email, tagEnv),
-        notifyDiscord(collection, email, source, extra),
-      ]);
-
-      if (kitRes.status === "rejected") {
-        logger.error(`Kit fan-out failed for ${collection}`, { email, error: kitRes.reason?.message });
-      } else {
-        logger.info(`Kit fan-out OK for ${collection}`, { email, result: kitRes.value });
+      // Run fan-outs in parallel; collect errors but don't crash the function
+      const tasks = [notifyDiscord(collection, email, source, extra)];
+      if (KIT_NEWSLETTER_COLLECTIONS.has(collection)) {
+        tasks.unshift(addToKitNewsletter(email, source || collection));
       }
-      if (discordRes.status === "rejected") {
-        logger.error(`Discord fan-out failed for ${collection}`, { email, error: discordRes.reason?.message });
-      } else {
-        logger.info(`Discord fan-out OK for ${collection}`, { email, result: discordRes.value });
-      }
+
+      const results = await Promise.allSettled(tasks);
+
+      results.forEach((r, idx) => {
+        const name = idx === 0 && KIT_NEWSLETTER_COLLECTIONS.has(collection)
+          ? "Kit"
+          : "Discord";
+        if (r.status === "rejected") {
+          logger.error(`${name} fan-out failed for ${collection}`, { email, error: r.reason?.message });
+        } else {
+          logger.info(`${name} fan-out OK for ${collection}`, { email, result: r.value });
+        }
+      });
     }
   );
 }
