@@ -1,0 +1,21 @@
+{
+  "name": "sqrrlbrain-functions",
+  "description": "Firebase Cloud Functions for sqrrlbrain.com — waitlist autosync to Kit + Discord notifications",
+  "main": "index.js",
+  "engines": {
+    "node": "22"
+  },
+  "scripts": {
+    "lint": "echo \"(no lint configured)\"",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.0.1"
+  },
+  "private": true
+}
