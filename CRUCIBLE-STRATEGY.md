@@ -570,3 +570,9 @@ This is v1, written 2026-05-05 from the Discord conversation that sealed the str
 - **First $1 of revenue:** affiliate, sub, bundle — whichever rings first. That's a milestone worth noting.
 
 When something in this doc proves wrong, fix it here. Don't preserve out-of-date thinking.
+
+
+---
+
+**Workspace context:** [[project_crucible_strategy]] · [[project_sqrrlbrain]] · [[USER]]
+**Tags:** `#proj/crucible` `#proj/sqrrlbrain` `#type/docs`

@@ -108,3 +108,9 @@ Personal/early-stage volume is well under Firestore's free tier (20K writes/day)
 - **`permission-denied` errors in console** → the rule above hasn't been deployed yet. Deploy it.
 - **Form says "Something went wrong"** → open DevTools console; check whether the error is `permission-denied` (rule not deployed or email failed validation) or a network failure.
 - **Want to test without polluting the real list** → submit, then go to Firestore Console → delete the test doc.
+
+
+---
+
+**Workspace context:** [[project_inkwell]] · [[project_sqrrlbrain]] · [[feedback_firestore_rules_audit_first]]
+**Tags:** `#proj/inkwell` `#proj/sqrrlbrain` `#type/docs`

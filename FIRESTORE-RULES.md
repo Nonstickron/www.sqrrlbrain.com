@@ -103,3 +103,9 @@ The new `/users/{userId}/{document=**}` block gates per-user data behind a uid m
 ## Future rules
 
 If a new app needs Firestore access, add its rule block to the file above (above the catch-all), update this MD with the full new ruleset, and have Ron paste-publish.
+
+
+---
+
+**Workspace context:** [[feedback_firestore_rules_audit_first]] · [[project_sqrrlbrain]]
+**Tags:** `#proj/sqrrlbrain` `#sys/git` `#type/docs`

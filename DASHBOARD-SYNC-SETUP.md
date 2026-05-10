@@ -86,3 +86,9 @@ Personal use is well under Firestore's free tier (20K writes/day, 50K reads/day)
 - **Permission-denied errors in console** → the rule above hasn't been deployed yet. Deploy it.
 - **Sync feels stuck** → check Firebase Console → Firestore → `dashboard_state/<your email>` for the latest `updatedAt`. If it's stale, check console for write errors.
 - **Want to wipe and start over** → delete the `dashboard_state/<your email>` doc in Firebase Console, then refresh the dashboard. localStorage on each device still has its own copy; refresh re-pulls (which is now empty), so you'll want to also `localStorage.clear()` in DevTools on each device.
+
+
+---
+
+**Workspace context:** [[project_dashboard_notes_localstorage]] · [[project_sqrrlbrain]] · [[feedback_firestore_rules_audit_first]]
+**Tags:** `#proj/sqrrlbrain` `#type/docs`

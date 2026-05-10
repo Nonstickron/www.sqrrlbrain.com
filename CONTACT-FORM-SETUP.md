@@ -88,3 +88,9 @@ After deploying the rules, test the form yourself:
 4. Check the Firebase Console — your test message should be in `contact_messages`.
 
 If submission fails, the most likely cause is that the rules above weren't published. Check the browser console for the specific error.
+
+
+---
+
+**Workspace context:** [[project_sqrrlbrain]] · [[USER]]
+**Tags:** `#proj/sqrrlbrain` `#type/docs`

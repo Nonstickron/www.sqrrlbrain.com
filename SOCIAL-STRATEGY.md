@@ -363,3 +363,9 @@ Things to revisit at the 8-week mark:
 - Equipment additions
 - Whether to start long-form YouTube
 - Whether to wire Facebook Reels into the cross-post chain (depends on whether the converted account ends up being worth the time)
+
+
+---
+
+**Workspace context:** [[project_sqrrlbrain_social]] · [[project_sqrrlbrain]] · [[feedback_resist_social_hype]] · [[USER]]
+**Tags:** `#proj/sqrrlbrain` `#type/docs`
