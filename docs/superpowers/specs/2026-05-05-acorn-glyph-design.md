@@ -144,3 +144,9 @@ Symbol snippet must be added to each affected page's `<body>`. Three surfaces ×
 ## Rollback
 
 The acorn is purely additive markup + CSS. To remove: delete the `<symbol>` snippet, the per-surface `<div class="acorn-*">` blocks, and the `.acorn-flourish/.acorn-sep/.acorn-end` CSS rules from each affected page. No data, no JS, no dependencies touched.
+
+
+---
+
+**Workspace context:** [[project_sqrrlbrain]] · [[CHANGELOG]]
+**Tags:** `#proj/sqrrlbrain` `#type/docs`
