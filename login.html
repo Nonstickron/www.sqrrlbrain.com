@@ -109,6 +109,60 @@
     #sign-in-btn:hover { background: var(--ink); }
     #sign-in-btn svg { flex-shrink: 0; }
 
+    #notify-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      color: var(--brown-mid);
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: .85rem 2rem;
+      border: 1px solid rgba(58,26,0,.2);
+      cursor: pointer;
+      transition: background .2s, border-color .2s;
+      width: 100%;
+      margin-top: .8rem;
+    }
+    #notify-btn:hover { background: var(--warm); border-color: rgba(58,26,0,.35); }
+
+    .notify-form {
+      margin-top: 1.2rem;
+      display: none;
+    }
+    .notify-form.show { display: block; }
+    .notify-form input {
+      width: 100%;
+      padding: .8rem 1rem;
+      font-family: var(--sans);
+      font-size: .9rem;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid rgba(58,26,0,.2);
+      margin-bottom: .8rem;
+    }
+    .notify-form input:focus { outline: none; border-color: var(--brown-mid); }
+    #notify-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--brown-mid);
+      color: var(--paper);
+      font-family: var(--mono);
+      font-size: .7rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      padding: .85rem 2rem;
+      border: none;
+      cursor: pointer;
+      transition: background .2s;
+      width: 100%;
+    }
+    #notify-submit:hover { background: var(--ink); }
+    #notify-submit:disabled { opacity: .5; cursor: not-allowed; }
+
     .status {
       margin-top: 1.6rem;
       font-family: var(--mono);
@@ -119,11 +173,12 @@
       min-height: 1.4em;
     }
     .status.error { color: #b05a3a; }
+    .status.success { color: #5a8a4a; }
 
     .divider {
       border: none;
       border-top: 1px solid rgba(58,26,0,.1);
-      margin: 3rem 0 1.5rem;
+      margin: 2rem 0 1.5rem;
     }
 
     .request-note {
@@ -164,9 +219,9 @@
 
   <div class="login-wrap">
     <div class="login-card">
-      <p class="eyebrow">Access Required</p>
+      <p class="eyebrow">Early Access</p>
       <h1>Sign In</h1>
-      <p class="sub" id="sub-text">This area is restricted to approved users.<br>Sign in with your Google account to continue.</p>
+      <p class="sub" id="sub-text">This area is invite-only while we're in early access.<br>Sign in with Google to continue, or get on the list for when public access opens.</p>
 
       <button id="sign-in-btn">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -178,10 +233,17 @@
         Continue with Google
       </button>
 
+      <button id="notify-btn">Notify me when available</button>
+
+      <div class="notify-form" id="notify-form">
+        <input type="email" id="notify-email" placeholder="your@email.com" required />
+        <button id="notify-submit">Add me to the list</button>
+      </div>
+
       <p class="status" id="status"></p>
 
       <hr class="divider" />
-      <p class="request-note">Don't have access? <a href="mailto:hello@sqrrlbrain.com">Request it.</a></p>
+      <p class="request-note">Already approved and want to be added directly? <a href="mailto:hello@sqrrlbrain.com">Drop us a line.</a></p>
     </div>
   </div>
 
@@ -213,10 +275,11 @@
     const status    = document.getElementById('status');
     const subText   = document.getElementById('sub-text');
 
+    const DENIED_TEXT  = "Thanks for signing in. This area is invite-only for now — we'd love to let you know when public access opens.";
+    const SUCCESS_TEXT = "✓ Got it. We'll send you a heads-up when public access opens.";
+
     if (denied) {
-      status.textContent = 'Access not granted for this account.';
-      status.classList.add('error');
-      subText.textContent = 'Your account is not on the approved list. Request access below.';
+      subText.textContent = DENIED_TEXT;
     }
 
     async function isApproved(email) {
@@ -226,16 +289,21 @@
       } catch (_) { return false; }
     }
 
+    let lastSignedInEmail = null;
+
     auth.onAuthStateChanged(async user => {
       if (!user) return;
+      lastSignedInEmail = user.email;
       status.textContent = 'Checking access…';
       const ok = await isApproved(user.email);
       if (ok) {
         window.location.href = returnUrl;
       } else {
         await auth.signOut();
-        status.textContent = 'Access not granted for ' + user.email + '.';
-        status.classList.add('error');
+        status.textContent = '';
+        subText.textContent = DENIED_TEXT;
+        // Pre-fill notify email for convenience
+        document.getElementById('notify-email').value = user.email;
       }
     });
 
@@ -247,6 +315,51 @@
       } catch (e) {
         status.textContent = 'Sign-in failed. Try again.';
         status.classList.add('error');
+      }
+    });
+
+    // Notify-me flow
+    const notifyBtn    = document.getElementById('notify-btn');
+    const notifyForm   = document.getElementById('notify-form');
+    const notifyEmail  = document.getElementById('notify-email');
+    const notifySubmit = document.getElementById('notify-submit');
+
+    notifyBtn.addEventListener('click', () => {
+      notifyForm.classList.toggle('show');
+      if (notifyForm.classList.contains('show')) {
+        if (lastSignedInEmail && !notifyEmail.value) notifyEmail.value = lastSignedInEmail;
+        notifyEmail.focus();
+      }
+    });
+
+    notifySubmit.addEventListener('click', async () => {
+      const email = notifyEmail.value.trim();
+      if (!email || !email.match(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)) {
+        status.textContent = 'Please enter a valid email.';
+        status.classList.add('error');
+        status.classList.remove('success');
+        return;
+      }
+      notifySubmit.disabled = true;
+      status.textContent = 'Adding you to the list…';
+      status.classList.remove('error', 'success');
+      try {
+        await db.collection('site_notify_waitlist').add({
+          email,
+          source: 'login_page' + (denied ? '_denied' : ''),
+          created_at: firebase.firestore.FieldValue.serverTimestamp(),
+          user_agent: navigator.userAgent.slice(0, 500),
+          page_referrer: (returnUrl || '').slice(0, 500)
+        });
+        notifyForm.classList.remove('show');
+        notifyBtn.style.display = 'none';
+        document.getElementById('sign-in-btn').style.display = 'none';
+        subText.textContent = SUCCESS_TEXT;
+        status.textContent = '';
+      } catch (e) {
+        status.textContent = 'Something went wrong. Try again or email hello@sqrrlbrain.com.';
+        status.classList.add('error');
+        notifySubmit.disabled = false;
       }
     });
   </script>
