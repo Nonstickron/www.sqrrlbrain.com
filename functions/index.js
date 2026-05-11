@@ -44,9 +44,9 @@ const { logger } = require("firebase-functions");
 
 const KIT_API_BASE = "https://api.kit.com/v4";
 
-// Friendly labels for Discord notifications
+// Friendly labels for Discord notifications.
 const COLLECTION_LABELS = {
-  inkwell_waitlist:     "Inkwell waitlist",
+  wyrdspinner_waitlist: "Wyrdspinner waitlist",
   sqrrledaway_waitlist: "SqrrledAway waitlist",
   site_notify_waitlist: "Site notify waitlist (login-page denial)",
   contact_messages:     "Contact form",
@@ -55,7 +55,7 @@ const COLLECTION_LABELS = {
 // Collections that push to the Kit newsletter list.
 // contact_messages is intentionally absent — see header comment.
 const KIT_NEWSLETTER_COLLECTIONS = new Set([
-  "inkwell_waitlist",
+  "wyrdspinner_waitlist",
   "sqrrledaway_waitlist",
   "site_notify_waitlist",
 ]);
@@ -194,6 +194,13 @@ function makeTrigger(collection) {
         return;
       }
 
+      // Skip fan-out for docs that were copied in from a legacy collection;
+      // the original write already triggered Kit/Discord/Resend back when.
+      if (data.migrated_from) {
+        logger.info(`Skipping ${collection}/${event.params.docId}: migrated from ${data.migrated_from}`, { email });
+        return;
+      }
+
       // For contact_messages, include the message subject in the Discord ping
       let extra = null;
       if (collection === "contact_messages") {
@@ -240,7 +247,8 @@ function makeTrigger(collection) {
 // Exports — one function per collection
 // ---------------------------------------------------------------------------
 
-exports.onInkwellWaitlistCreate     = makeTrigger("inkwell_waitlist");
+exports.onWyrdspinnerWaitlistCreate = makeTrigger("wyrdspinner_waitlist");
 exports.onSqrrledawayWaitlistCreate = makeTrigger("sqrrledaway_waitlist");
 exports.onSiteNotifyWaitlistCreate  = makeTrigger("site_notify_waitlist");
 exports.onContactMessageCreate      = makeTrigger("contact_messages");
+

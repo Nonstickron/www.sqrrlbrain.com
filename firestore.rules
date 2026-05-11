@@ -35,8 +35,10 @@ service cloud.firestore {
                          && exists(/databases/$(database)/documents/site_approved_users/$(email));
     }
 
-    // Inkwell launch waitlist — public create only, validated, no read
-    match /inkwell_waitlist/{docId} {
+    // Wyrdspinner launch waitlist — public create only, validated, no read.
+    // (Formerly inkwell_waitlist; renamed 2026-05-11 to match the rebrand.
+    // Old collection still exists with locked-down rules below for archival.)
+    match /wyrdspinner_waitlist/{docId} {
       allow create: if request.resource.data.keys().hasOnly([
                       'email','source','created_at','user_agent','page_referrer'
                     ])
@@ -47,6 +49,12 @@ service cloud.firestore {
                     && request.resource.data.source is string
                     && request.resource.data.source.size() <= 64;
       allow read, update, delete: if false;
+    }
+
+    // inkwell_waitlist (legacy, pre-rebrand) — fully locked. Data preserved
+    // for archive; no new writes accepted, no reads, no modifications.
+    match /inkwell_waitlist/{docId} {
+      allow read, create, update, delete: if false;
     }
 
     // SqrrledAway launch waitlist — public create only, validated, no read

@@ -711,7 +711,7 @@
       setStatus('Adding you...', '');
 
       try {
-        await db.collection('inkwell_waitlist').add({
+        await db.collection('wyrdspinner_waitlist').add({
           email,
           source: 'wyrdspinner_teaser',
           created_at: firebase.firestore.FieldValue.serverTimestamp(),
