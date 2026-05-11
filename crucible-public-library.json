@@ -5,7 +5,7 @@
     "schemaVersion": "1.1.0",
     "createdAt": "2026-05-11",
     "lastUpdatedAt": "2026-05-11",
-    "recipeCount": 19,
+    "recipeCount": 31,
     "targets": {
       "demoReadiness": 50,
       "scope": "grow over time; not capped"
@@ -164,7 +164,7 @@
         "license": "PD-US-pre1930",
         "licenseUrl": "https://copyright.cornell.edu/publicdomain",
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (auto-extracted; awaiting Ron review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Percentages are approximate conversions from apothecary weights; verify before production. Original published 1907 (Hiscox died 1908), digitized 1914 edition on Project Gutenberg. PD by 95-year publication rule (any work published before 1930 is PD in 2026)."
       }
@@ -199,7 +199,7 @@
         "license": "PD-US-pre1930",
         "licenseUrl": "https://copyright.cornell.edu/publicdomain",
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (auto-extracted; awaiting Ron review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Percentages are direct conversions from parts (1000 = 100%). Glyconine = egg-yolk glycerite, historic emulsifier. Boric acid at 10% is HIGH by modern standards (regulatory limits suggest <5%) — recommend reducing before production. Modern substitution: replace with a small amount of cosmetic-grade emulsifier."
       }
@@ -236,7 +236,7 @@
         "license": "PD-US-pre1930",
         "licenseUrl": "https://copyright.cornell.edu/publicdomain",
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (auto-extracted; awaiting Ron review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "This is the closest historic analog to a modern sparkly lip gloss base — swap alkanet (red plant tint) for mica or cosmetic glitter for shimmer. Camphor + menthol at this concentration is intentionally medicinal; reduce for non-medicinal cosmetic use."
       }
@@ -267,7 +267,7 @@
         "license": "PD-US-pre1930",
         "licenseUrl": "https://copyright.cornell.edu/publicdomain",
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (auto-extracted; awaiting Ron review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "This is a genuine bath-bomb antecedent published in 1907 — Lush's commercial bath bomb (1989) uses an almost identical chemistry (citric acid + bicarb instead of tartaric + bicarb). For shimmer, add cosmetic-grade mica during dry mixing."
       }
@@ -299,7 +299,7 @@
         "license": "PD-US-pre1930",
         "licenseUrl": "https://copyright.cornell.edu/publicdomain",
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (auto-extracted; awaiting Ron review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Anhydrous — no water phase, so no preservative strictly required, but boric acid acts as a mild antimicrobial. Texture will be thick/balm-like, not pourable."
       }
@@ -331,7 +331,7 @@
         "license": "PD-US-pre1930",
         "licenseUrl": "https://copyright.cornell.edu/publicdomain",
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (auto-extracted; awaiting Ron review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Light texture — suitable as a hydrating after-bath gel or layered under heavier creams."
       }
@@ -366,7 +366,7 @@
         "license": "PD-US-pre1930",
         "licenseUrl": "https://copyright.cornell.edu/publicdomain",
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (auto-extracted; awaiting Ron review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Same base as Petrolatum Cold Cream (pd-001) but with vanillin added — that's the only material difference. Recipe explicitly designed for massage friction."
       }
@@ -398,7 +398,7 @@
         "license": "PD-US-pre1930",
         "licenseUrl": "https://copyright.cornell.edu/publicdomain",
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (auto-extracted; awaiting Ron review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Not technically a micellar water (no surfactant), but functions in a similar 'toner / light cleanser' role. The only fresh-ingredient recipe in this initial set."
       }
@@ -435,7 +435,7 @@
         "license": null,
         "licenseUrl": null,
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (drafted; awaiting Ron formulation review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Modernization changes: (1) Boric acid reduced from 10% to 0.5% (well below EU 5% adult-cosmetic limit). (2) Glyconine (egg-yolk + glycerin emulsion) replaced by lecithin (soy or sunflower) — stable, vegetarian, easier to source. (3) Geogard Ultra (gluconolactone + sodium benzoate) added for broad-spectrum preservation of the water phase. (4) Process modernized to use stick blender. Verbatim historic source is preserved in pd-002 attribution; this entry is the 'make today' version."
       }
@@ -473,7 +473,7 @@
         "license": null,
         "licenseUrl": null,
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (drafted; awaiting Ron formulation review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Modernization changes: (1) Reframed from medicated lip salve to cosmetic gloss — camphor and menthol reduced from 0.45% each to 0.5% combined-equivalent. (2) Alkanet root (potential sensitizer; finicky infusion) replaced by cosmetic-grade mica for shimmer + color. (3) Bitter almond oil (benzaldehyde safety) replaced by vanilla. (4) Cassia oil (cinnamic aldehyde sensitizer) removed entirely. (5) Castor oil added for shine — standard modern lip-gloss base ingredient. (6) Candelilla wax added (vegan alternative to beeswax; better gloss than pure paraffin). (7) Vitamin E added as antioxidant. This entry fills Ron's 'sparkly mica lip gloss' request directly."
       }
@@ -511,7 +511,7 @@
         "license": null,
         "licenseUrl": null,
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (drafted; awaiting Ron formulation review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Modernization changes: (1) Converted from anhydrous balm to water-based emulsion (most users today expect 'lotion' to mean pump-bottle texture). (2) Boric acid (2%) removed entirely — modern preservation handled by Geogard Ultra. (3) Shea butter added for skin-feel and to compensate for the dilution from added water. (4) Emulsifying Wax NF + Cetearyl Alcohol create the emulsion structure. (5) Historic glycerin (heavy use in original) preserved at 8% for humectant action."
       }
@@ -545,7 +545,7 @@
         "license": null,
         "licenseUrl": null,
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (drafted; awaiting Ron formulation review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Modernization changes: (1) Geogard Ultra (1%) added as broad-spectrum preservative — original was unsafe past a few days of refrigeration. (2) Rose hydrosol substituted for 'rose water' (modern equivalent; cleaner ingredient). (3) Slight reformulation to fit hydrosol density. Otherwise structurally identical to the 1907 recipe."
       }
@@ -581,7 +581,7 @@
         "license": null,
         "licenseUrl": null,
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (drafted; awaiting Ron formulation review)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Modernization changes: (1) Fresh cucumber juice → cucumber hydrosol (no spoilage risk, no refrigeration needed). (2) Cologne (perfumed alcohol) → witch hazel (provides astringent action + alcohol content). (3) Geogard Ultra (1%) added — required for any water-based product intended for shelf-stable distribution. (4) Citric acid added for pH targeting (Geogard Ultra is most effective at pH 5 or below). (5) Glycerin added at 3% for humectant softening (counteracts witch-hazel drying)."
       }
@@ -615,7 +615,7 @@
         "license": null,
         "licenseUrl": null,
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (drafted from research conversation; awaiting Ron formulation review + batch test)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Standard cosmetic-chemistry humectant-occlusive formulation. Not derived from a specific copyrighted source — uses well-known DIY-cosmetic principles (humectant glycerin + witch hazel astringent + light oil + preservative). Recipe fills the 'setting spray' category for which no PD historic analog exists."
       }
@@ -651,7 +651,7 @@
         "license": null,
         "licenseUrl": null,
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (drafted from research conversation; awaiting Ron formulation review + batch test)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Uses standard cosmetic-chemistry building blocks: PVP K-30 film former (industry-standard hair-spray polymer), humectant glycerin, witch-hazel astringent, panthenol skin-conditioner, multichrome mica pigment. Not a clone of any specific commercial setting spray — built from publicly-known chemistry principles. PVP K-30 sourcing: small-quantity from Lotioncrafter (gold standard, COA provided) or VedaOils; larger volumes from MakingCosmetics. PVP K-30 is hygroscopic — store sealed with desiccant. For visible color shift, recommend application over a gel primer."
       }
@@ -716,7 +716,7 @@
         "license": null,
         "licenseUrl": null,
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (drafted from research conversation; awaiting Ron formulation review + batch test)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Standard cosmetic-chemistry micellar-water formulation using decyl glucoside as the mild surfactant (glucose-derived, gentle on eyes, sulfate-free). 5% decyl glucoside is at the high end of typical use (2-10%); reduce to 3-4% for very sensitive skin. Decyl glucoside has a natural pH of ~11-12, so citric-acid pH adjustment is essential. Decyl glucoside sourcing: Lotioncrafter, MakingCosmetics, WSP. Crucible's true micellar entry — pd-008 and sd-005 are toner-style, not surfactant micellar."
       }
@@ -751,7 +751,7 @@
         "license": null,
         "licenseUrl": null,
         "dateAdded": "2026-05-11",
-        "verifiedBy": "Tink (drafted from research conversation; awaiting Ron formulation review + batch test)",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Solubilized oil-in-water formulation using polysorbate 20 as the solubilizer. Polysorbate 20 has an HLB of 16.7, which is appropriate for 'wetting' light oils into water-based products. The 5:3 polysorbate-to-oil ratio is conservative; if the product looks cloudy or separates, increase polysorbate 20 by 1% increments until clear. Apricot kernel oil is in Ron's existing 706-library inventory (private library), so swap-friendly with hemp seed oil or other light carriers. This sits between sb-004 (gentle, water-only) and a full oil cleanser like pd-001 (heavy, balm-like). For waterproof makeup, this is the right answer."
       }
@@ -787,6 +787,410 @@
         "verifiedBy": "Ron Goodrich (locked as personal go-to formula 2026-05-11; multiple batches produced)",
         "verifiedAt": "2026-05-11",
         "notes": "Ron's locked-in personal body butter recipe, finalized through iteration on 2026-05-11. Started from a generic shea + sunflower + Vitamin E base, evolved through swaps: sunflower → 20% hemp + 80% apricot kernel; Vitamin E dropped to make room for higher fragrance load; fragrance bumped from 0.5% to 2% (max safe for leave-on). The 15% corn starch is the texture differentiator — gives a silky, matte finish instead of the typical greasy shea feel. This is the body butter Ron uses personally and may eventually commercialize as a Sqrrlbrain product."
+      }
+    },
+    {
+      "id": "pd-009",
+      "name": "Castor & Almond Cold Cream",
+      "category": "face",
+      "tags": ["historic-archive", "cold-cream", "oil-cleanser", "ready-to-make", "1907"],
+      "heatRequired": true,
+      "equipment": ["double boiler"],
+      "description": "A light cold cream using castor oil as the main carrier with sweet almond oil and white wax. No spermaceti, no lard — one of the cleanest historic cold cream variants in Henley's. Castor oil gives slight slip and gloss.",
+      "ingredients": [
+        { "name": "Castor Oil", "pct": 66.4 },
+        { "name": "Sweet Almond Oil", "pct": 19.9 },
+        { "name": "White Wax (Beeswax)", "pct": 13.3 },
+        { "name": "Geranium Essential Oil", "pct": 0.13 },
+        { "name": "Lemon Essential Oil", "pct": 0.11 },
+        { "name": "Bergamot Essential Oil", "pct": 0.22 }
+      ],
+      "notes": "Melt the wax in a double boiler at moderate heat. Add the castor oil and almond oil; stir until uniform. Remove from heat and let cool slightly before adding essential oils (preserves volatile top notes). Pour into containers while still pourable. Anhydrous — no preservative required.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b89",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — COSMETICS, 'Almond Cold Creams VI'",
+        "originalRecipe": "VI.— Castor oil 500 parts; White wax 100 parts; Almond oil 150 parts. Melt at moderate heat and scent with Geranium oil 6 parts; Lemon oil 5 parts; Bergamot oil 10 parts.",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Direct percentage conversion from parts. One of the few historic cold creams with no spermaceti, no lard, no animal-derived ingredients — modern-makers can produce as-is."
+      }
+    },
+    {
+      "id": "pd-010",
+      "name": "Honey & Almond Cleansing Cream",
+      "category": "face",
+      "tags": ["historic-archive", "cold-cream", "honey", "ready-to-make", "1907"],
+      "heatRequired": false,
+      "equipment": ["mortar and pestle"],
+      "description": "A rich cleansing cream combining honey's humectant + antimicrobial properties with castile soap and sweet almond oil. Carmine adds a soft rose tint. Closer to a modern hydrating cleansing balm than a typical cold cream.",
+      "ingredients": [
+        { "name": "Sweet Almond Oil", "pct": 81.3 },
+        { "name": "Honey", "pct": 6.3 },
+        { "name": "Castile Soap (white, powdered)", "pct": 3.1 },
+        { "name": "Potassium Hydroxide Solution", "pct": 0.5 },
+        { "name": "Peru Balsam", "pct": 3.1 },
+        { "name": "Bitter Almond Essential Oil", "pct": 1.6 },
+        { "name": "Bergamot Essential Oil", "pct": 0.8 },
+        { "name": "Clove Essential Oil", "pct": 0.4 },
+        { "name": "Carmine Solution (optional)", "pct": 2.9 }
+      ],
+      "notes": "Mix honey and powdered castile soap in a mortar until smooth. Add KOH solution slowly to produce a cream consistency. Combine bitter almond, bergamot, and clove oils with Peru balsam and sweet almond oil; add to the honey-soap cream and stir vigorously until uniform. Optional: add carmine solution for a rose tint. SAFETY: KOH is caustic; wear gloves. Bitter almond oil should be verified benzaldehyde-free.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b8a",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — COSMETICS, 'Almond Cold Creams XI'",
+        "originalRecipe": "XI.— Honey 2 av. ounces; Castile soap, white powder 1 av. ounce; Oil sweet almonds 26 fluidounces; Oil bitter almonds 1 fluidrachm; Oil bergamot 1/2 fluidrachm; Oil cloves 15 drops; Peru balsam 1 fluidrachm; Liquor potassa, Solution carmine, of each sufficient.",
+        "originalUnits": "avoirdupois ounces + fluidounces + fluidrachms + drops",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Saponified honey-soap base — the KOH partially saponifies free fatty acids producing a self-emulsifying cream. Functionally a cleansing balm; rinse off with warm water."
+      }
+    },
+    {
+      "id": "pd-011",
+      "name": "Simple Glycerin Cream",
+      "category": "face",
+      "tags": ["historic-archive", "cream", "minimal-ingredient", "ready-to-make", "1907"],
+      "heatRequired": true,
+      "equipment": ["double boiler"],
+      "description": "A three-ingredient base cream — sweet almond oil, white wax, glycerin. As minimal as a real cream can get. Functions as both an emollient and a base for custom essential oil scenting.",
+      "ingredients": [
+        { "name": "Sweet Almond Oil", "pct": 72.4 },
+        { "name": "Glycerin", "pct": 18.1 },
+        { "name": "White Wax (Beeswax)", "pct": 9.4 },
+        { "name": "Essential Oil (to perfume)", "pct": 0.1 }
+      ],
+      "notes": "Melt the wax and oil together on a water bath. Add glycerin and stir until uniform. Remove from heat; as the mass cools, add essential oil(s) of choice. Pour into containers while still warm. Glycerin is hygroscopic but not free water — no preservative strictly required; add a drop of Vitamin E to delay oxidation.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b8b",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — COSMETICS, 'Glycerine Creams I'",
+        "originalRecipe": "I.— Oil of sweet almonds 100 parts; White wax 13 parts; Glycerine, pure 25 parts. Add a sufficient quantity of any suitable perfume. Melt, on the water bath, the oil, wax, and glycerine together, remove and as the mass cools down add the perfume in sufficient quantity to make a creamy mass.",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Simplest viable cold-cream-style recipe in the chapter. Excellent starting base for modification."
+      }
+    },
+    {
+      "id": "pd-012",
+      "name": "Lanolin & Peach Kernel Cream",
+      "category": "face",
+      "tags": ["historic-archive", "rich-cream", "anhydrous", "ready-to-make", "1907"],
+      "heatRequired": true,
+      "equipment": ["double boiler", "mortar"],
+      "description": "A rich anhydrous-leaning lanolin cream with peach kernel oil (light, skin-similar to apricot kernel). Perfumed with ionone (violet) or synthetic ylang-ylang.",
+      "ingredients": [
+        { "name": "Anhydrous Lanolin", "pct": 64.9 },
+        { "name": "Peach Kernel Oil", "pct": 20.0 },
+        { "name": "Distilled Water", "pct": 15.0 },
+        { "name": "Ionone or Ylang-Ylang Essential Oil", "pct": 0.1 }
+      ],
+      "notes": "Melt lanolin in a double boiler. Add peach kernel oil; stir until uniform. Transfer to a mortar and slowly incorporate water with continuous stirring — lanolin holds water well (~2:1 capacity). When cooled, add perfume (about 15 drops ionone or 20 drops ylang-ylang per 100g batch). SUBSTITUTION: peach kernel ↔ apricot kernel (very similar fatty acid profile).",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b8c",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — COSMETICS, 'Lanolin Creams I'",
+        "originalRecipe": "I.— Anhydrous lanolin 650 parts; Peach-kernel oil 200 parts; Water 150 parts. Perfume with about 15 drops of ionone or 20 drops of synthetic ylang-ylang.",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Lanolin's intrinsic water-holding means the 15% water phase is bound, not free. Add Geogard Ultra at 0.5% for batches >3 months."
+      }
+    },
+    {
+      "id": "pd-013",
+      "name": "Lanolin Face Cream (Light Formula)",
+      "category": "face",
+      "tags": ["historic-archive", "cream", "lanolin-based", "ready-to-make", "1907"],
+      "heatRequired": true,
+      "equipment": ["double boiler"],
+      "description": "A lighter lanolin cream — adds paraffin and orange-flower water (aqua naphae) for floral notes, with boric acid and borax for mild antimicrobial action.",
+      "ingredients": [
+        { "name": "Lanolin", "pct": 38.1 },
+        { "name": "Olive Oil", "pct": 14.3 },
+        { "name": "Distilled Water", "pct": 14.3 },
+        { "name": "Orange Flower Water", "pct": 9.5 },
+        { "name": "Paraffin Wax", "pct": 9.5 },
+        { "name": "Glycerin", "pct": 4.8 },
+        { "name": "Boric Acid", "pct": 3.8 },
+        { "name": "Borax", "pct": 3.8 },
+        { "name": "Geranium Essential Oil", "pct": 0.9 },
+        { "name": "Ylang-Ylang Essential Oil", "pct": 1.0 }
+      ],
+      "notes": "Melt lanolin and paraffin together. Add olive oil. Separately dissolve boric acid and borax in the warm water + orange-flower water + glycerin. Combine slowly with constant stirring. Add essential oils below 40°C. SAFETY: boric acid at 3.8% is near EU adult limit (5%); reduce to 1-2% for sensitive skin. Modern alternative: replace borax/boric with Geogard Ultra at 0.75%.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b8d",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — COSMETICS, 'Lanolin Creams II'",
+        "originalRecipe": "II.— Lanolin 40 parts; Olive oil 15 parts; Paraffine ointment 10 parts; Aqua naphæ 10 parts; Distilled water 15 parts; Glycerine 5 parts; Boric acid 4 parts; Borax 4 parts; Geranium oil, sufficient. Extract, triple, of ylang-ylang, quantity sufficient.",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "More complete than the simpler Lanolin Cream I (pd-012) — adds water phase, humectant, and borax/boric antimicrobial pair. Closer to true emulsion."
+      }
+    },
+    {
+      "id": "pd-014",
+      "name": "Witch Hazel & Quince Seed Cream",
+      "category": "face",
+      "tags": ["historic-archive", "skin-tonic", "witch-hazel", "ready-to-make", "1907"],
+      "heatRequired": false,
+      "equipment": ["maceration jar"],
+      "description": "A water-light cream built on witch-hazel extract with quince-seed mucilage as thickener and glycerin. Quince seed releases a clear mucilage when soaked — historic equivalent of xanthan gum.",
+      "ingredients": [
+        { "name": "Witch Hazel Water (alcohol-free distillate preferred)", "pct": 67.7 },
+        { "name": "Glycerin", "pct": 16.9 },
+        { "name": "Hot Water", "pct": 8.5 },
+        { "name": "Boric Acid", "pct": 3.2 },
+        { "name": "Quince Seed", "pct": 2.1 },
+        { "name": "Rose Extract", "pct": 1.1 },
+        { "name": "Violet Extract", "pct": 0.5 }
+      ],
+      "notes": "Macerate quince seeds in hot water for 2-3 hours until mucilage gels. Strain through cheesecloth. Combine with glycerin and witch hazel; stir until uniform. Dissolve boric acid. Let stand 2 days, stirring occasionally. Strain and add rose and violet extracts. SAFETY: reduce boric acid to 0.5-1% for sensitive skin. Quince seed available from herb suppliers as Cydonia oblonga.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b8e",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — COSMETICS, 'Witch-Hazel Creams II'",
+        "originalRecipe": "II.— Quince seed 4 ounces; Hot water 16 ounces; Glycerine 32 ounces; Witch-hazel water 128 ounces; Boric acid 6 ounces; Rose extract 2 ounces; Violet extract 1 ounce.",
+        "originalUnits": "apothecary ounces (weight) + fluidounces (water)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Quince seed mucilage — a fascinating historic thickener. Cleaner-feeling than xanthan or carbomer."
+      }
+    },
+    {
+      "id": "pd-015",
+      "name": "Grease-Free Quince Seed Face Gel",
+      "category": "face",
+      "tags": ["historic-archive", "skin-tonic", "lightweight", "grease-free", "1907"],
+      "heatRequired": false,
+      "equipment": ["maceration jar"],
+      "description": "A grease-free hydrating face gel — water + quince-seed mucilage + glycerin + alcohol. Historic version of a modern lightweight hydrating gel-serum. Rose-perfumed; sets to a non-greasy film on skin.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 80.0 },
+        { "name": "Glycerin", "pct": 8.0 },
+        { "name": "Alcohol (94%)", "pct": 10.0 },
+        { "name": "Quince Seed", "pct": 0.8 },
+        { "name": "Borax", "pct": 0.4 },
+        { "name": "Boric Acid", "pct": 0.4 },
+        { "name": "Attar of Rose", "pct": 0.4 }
+      ],
+      "notes": "Boil half the water and macerate quince seed for 2.5 hours; strain off mucilage. In remaining hot water, dissolve borax and boric acid; add glycerin and rose (predissolved in alcohol). Slowly add quince mucilage to the alcoholic-aqueous solution under constant stirring for 5 minutes after the last addition. Bottle. Add Geogard Ultra at 0.75% for shelf-stable production.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b8f",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — COSMETICS, 'Face Cream Without Grease'",
+        "originalRecipe": "Quince seed 10 parts; Boiling water 1,000 parts; Borax 5 parts; Boric acid 5 parts; Glycerine 100 parts; Alcohol, 94 per cent 125 parts; Attar of rose, quantity sufficient to perfume.",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Essentially a clear hydrating serum. Quince mucilage gives body without an oil phase."
+      }
+    },
+    {
+      "id": "pd-016",
+      "name": "Glycerin Toilet Milk",
+      "category": "face",
+      "tags": ["historic-archive", "toilet-milk", "milky-cleanser", "ready-to-make", "1907"],
+      "heatRequired": true,
+      "equipment": ["double boiler"],
+      "description": "A toilet milk — pre-water-emulsion hydrating product. Glycerin + starch base creates a milky-white finish; tincture of benzoin adds resinous antimicrobial action and balsamic scent.",
+      "ingredients": [
+        { "name": "Glycerin", "pct": 66.7 },
+        { "name": "Distilled Water", "pct": 23.2 },
+        { "name": "Starch (corn or rice)", "pct": 9.0 },
+        { "name": "Tincture of Benzoin", "pct": 1.1 }
+      ],
+      "notes": "Combine half the starch with glycerin in a steam bath, stirring until it forms a jelly-like mass. Remove from heat; stir in remaining starch. Add water and tincture of benzoin; stir until homogeneous. Add Geogard Ultra at 0.75% for retail-grade shelf stability.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b90",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — COSMETICS, 'Toilet Milks — Glycerine Milk'",
+        "originalRecipe": "Glycerine 1,150 parts; Starch, powdered 160 parts; Distilled water 400 parts; Tincture of benzoin 20 parts.",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Milk aesthetic from starch suspended in glycerin. Modern alternative starches: cornstarch or arrowroot."
+      }
+    },
+    {
+      "id": "pd-017",
+      "name": "Lanolin Toilet Milk",
+      "category": "face",
+      "tags": ["historic-archive", "toilet-milk", "lanolin", "ready-to-make", "1907"],
+      "heatRequired": true,
+      "equipment": ["double boiler"],
+      "description": "A lanolin-based toilet milk emulsified with white castile soap. Softer feel than the all-glycerin pd-016 because of lanolin emollience. Tincture of benzoin adds resinous antimicrobial action.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 78.0 },
+        { "name": "Lanolin", "pct": 12.0 },
+        { "name": "Tincture of Benzoin", "pct": 9.5 },
+        { "name": "Castile Soap (powdered)", "pct": 0.5 }
+      ],
+      "notes": "Dissolve soap in half the warm water. Separately, mix lanolin with the other half of warm water. Combine; stir until uniform. Add tincture of benzoin last. SUBSTITUTION: 90 grains powdered borax can replace tincture of benzoin per the source. Needs Geogard Ultra 0.75% for retail-grade shelf life.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b91",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — COSMETICS, 'Toilet Milks — Lanolin Toilet Milk'",
+        "originalRecipe": "White castile soap, powdered 22 grains; Lanolin 1 ounce; Tincture benzoin 12 drachms; Water, enough.",
+        "originalUnits": "grains + apothecary ounce + drachms",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Lanolin + castile soap creates a self-emulsifying milky cleanser. Functionally a modern milky cleansing lotion."
+      }
+    },
+    {
+      "id": "pd-018",
+      "name": "Boric Acid Gelatin Jelly",
+      "category": "face",
+      "tags": ["historic-archive", "gel", "cooling-mask", "minimal-ingredient", "1907"],
+      "heatRequired": true,
+      "equipment": ["double boiler"],
+      "description": "A simple gelatin-based jelly with glycerin and boric acid — historic substitute for cucumber cream. Sets to a clear hydrating gel; can be used as a mask or layered under heavier creams.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 62.5 },
+        { "name": "Glycerin", "pct": 31.2 },
+        { "name": "Gelatin", "pct": 3.1 },
+        { "name": "Boric Acid", "pct": 3.1 },
+        { "name": "Fragrance (optional)", "pct": 0.1 }
+      ],
+      "notes": "Sprinkle gelatin over half the hot water; bloom 5 minutes. Add rest of hot water; stir to dissolve. Stir in glycerin and boric acid. Strain into containers; refrigerate to set. SUBSTITUTION: agar agar (1-2%) for vegan version. Reduce boric acid to 0.5-1% for sensitive skin.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b92",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — COSMETICS, 'Glycerine Creams IV'",
+        "originalRecipe": "IV.—This is offered as a substitute for cucumber cream for toilet uses. Melt 15 parts, by weight, of gelatin in hot water containing 15 parts, by weight, of boracic acid as well as 150 parts, by weight, of glycerine; the total amount of water used should not exceed 300 parts, by weight.",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Functions like a modern collagen-jelly mask — minimal ingredients, hydrating, cooling."
+      }
+    },
+    {
+      "id": "pd-019",
+      "name": "Hair-Curling & Setting Liquid",
+      "category": "hair",
+      "tags": ["historic-archive", "hair", "setting-spray", "hair-fixative", "ready-to-make", "1907"],
+      "heatRequired": false,
+      "equipment": ["spray bottle"],
+      "description": "Historic ancestor of modern hair setting spray — water + alcohol + tincture of benzoin + perfume. Henley's notes it can't make straight hair curly, but extends and protects existing curls against humidity.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 70.0 },
+        { "name": "Spirit of Wine (Ethanol 95%)", "pct": 27.0 },
+        { "name": "Tincture of Benzoin", "pct": 2.9 },
+        { "name": "Essential Oil (perfume)", "pct": 0.1 }
+      ],
+      "notes": "Combine all ingredients in a spray bottle and shake until uniform. Apply to damp hair before styling, or mist over set curls to lock in. The benzoin adds resin film-former action; if substituting borax (2 parts per 100 — Henley's variant I), you get matte finish without film. High alcohol content is self-preserving.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b93",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — HAIR PREPARATIONS, 'Hair-Curling Liquids II'",
+        "originalRecipe": "II — Water 80; Spirit of wine 20; Tincture of benzoin 3; Perfume ad. lib. (Variant I uses Borax 2 parts in place of the benzoin.)",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Genuine historic hair-setting analog. Source explicitly states it cannot make straight hair curly; it extends and protects existing curls. Effectively a 1907 setting spray for hair."
+      }
+    },
+    {
+      "id": "pd-020",
+      "name": "Rosemary Hair Water",
+      "category": "hair",
+      "tags": ["historic-archive", "hair", "hair-tonic", "rosemary", "scalp-treatment", "ready-to-make", "1907"],
+      "heatRequired": false,
+      "equipment": ["fine filter"],
+      "description": "A clear rosemary-infused hair tonic — magnesia acts as a filter aid to clarify rosemary oil into the water phase. Historic scalp treatment; rosemary is known for circulation-stimulating action.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 98.5 },
+        { "name": "Spirit of Wine (Ethanol 95%)", "pct": 0.69 },
+        { "name": "Magnesia (Magnesium Oxide)", "pct": 0.69 },
+        { "name": "Rosemary Essential Oil", "pct": 0.15 }
+      ],
+      "notes": "Mix rosemary oil with spirit of wine in a mortar. Add magnesia and rub until uniform — magnesia binds the volatile oil into fine suspension. Slowly add distilled water with continuous stirring. Filter through fine cloth or coffee filter — magnesia carries the rosemary oil into the water phase, producing a clear, perfumed tonic. Apply to scalp; massage in. Add Geogard Ultra at 0.75% for batches over 1 week.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b94",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — HAIR PREPARATIONS, 'Rosemary Water IV'",
+        "originalRecipe": "IV.— Rosemary oil 1.5 parts; Rectified spirit of wine 7 parts; Magnesia 7 parts; Distilled water 1,000 parts.",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Magnesia + alcohol pre-trituration is an elegant historic technique for getting essential oils evenly distributed in water — modern alternative is polysorbate 20."
       }
     }
   ]
