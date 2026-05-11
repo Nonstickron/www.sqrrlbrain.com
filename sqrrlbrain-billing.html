@@ -561,6 +561,12 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
         </div>
       </div>
 
+      <!-- UPCOMING RENEWALS -->
+      <div class="card" id="renewals-card" style="margin-bottom:18px;display:none;border-left:3px solid var(--amber);border-radius:0 var(--radius) var(--radius) 0">
+        <div class="card-title" style="color:var(--amber)">upcoming renewals — next 30 days</div>
+        <div id="renewals-list"></div>
+      </div>
+
       <!-- ADD EXPENSE -->
       <div class="card" style="margin-bottom:14px">
         <div class="card-title">log expense</div>
@@ -601,6 +607,32 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
             </div>
           </div>
           <div class="fgroup"><label>Notes</label><input id="ex-notes" placeholder="What was it for? Invoice or receipt ref?" /></div>
+
+          <div class="fgroup" style="border-top:1px solid var(--border);padding-top:10px;margin-top:4px">
+            <label class="check-row"><input type="checkbox" id="ex-recurring" />Recurring expense (auto-warn before renewal)</label>
+          </div>
+          <div id="ex-recurring-fields" style="display:none">
+            <div class="g3">
+              <div class="fgroup">
+                <label>Frequency</label>
+                <select id="ex-freq">
+                  <option value="monthly">Monthly</option>
+                  <option value="quarterly">Quarterly</option>
+                  <option value="annually" selected>Annually</option>
+                  <option value="custom">Custom (every N months)</option>
+                </select>
+              </div>
+              <div class="fgroup" id="ex-interval-wrap" style="display:none">
+                <label>Every N months</label>
+                <input id="ex-interval" type="number" min="1" max="120" value="6" />
+              </div>
+              <div class="fgroup">
+                <label>Warn me (days before renewal)</label>
+                <input id="ex-warning-days" type="number" min="1" max="90" value="14" />
+              </div>
+            </div>
+          </div>
+
           <div style="display:flex;gap:10px;align-items:center">
             <button class="btn-primary" id="btn-save-expense" style="max-width:180px">log expense</button>
             <span style="font-size:11px;color:var(--green);min-height:16px" id="expense-msg"></span>
@@ -1328,6 +1360,29 @@ else {
     sqrrlbrain:"SqrrlBrain",print:"3D Print",tract:"Tract",inkwell:"Inkwell",craft:"Craft"
   };
 
+  function calculateNextRenewal(baseDate, frequency, intervalMonths) {
+    const months = frequency === "monthly" ? 1
+                 : frequency === "quarterly" ? 3
+                 : frequency === "annually" ? 12
+                 : (intervalMonths || 12);
+    const d = new Date(baseDate + "T00:00:00");
+    d.setMonth(d.getMonth() + months);
+    return d.toISOString().split("T")[0];
+  }
+
+  function daysBetween(dateStrA, dateStrB) {
+    const d1 = new Date(dateStrA + "T00:00:00");
+    const d2 = new Date(dateStrB + "T00:00:00");
+    return Math.round((d2 - d1) / 86400000);
+  }
+
+  $("ex-recurring").onchange = () => {
+    $("ex-recurring-fields").style.display = $("ex-recurring").checked ? "" : "none";
+  };
+  $("ex-freq").onchange = () => {
+    $("ex-interval-wrap").style.display = $("ex-freq").value === "custom" ? "" : "none";
+  };
+
   $("btn-save-expense").onclick = async () => {
     const amount = parseFloat($("ex-amount").value)||0;
     const vendor = $("ex-vendor").value.trim();
@@ -1340,13 +1395,59 @@ else {
       notes:$("ex-notes").value.trim(),
       createdAt:firebase.firestore.FieldValue.serverTimestamp()
     };
+    if ($("ex-recurring").checked) {
+      const frequency = $("ex-freq").value;
+      const interval_months = frequency === "custom" ? (parseInt($("ex-interval").value)||12) : null;
+      const warning_days = parseInt($("ex-warning-days").value)||14;
+      data.recurring = {
+        frequency,
+        interval_months,
+        warning_days,
+        next_renewal_at: calculateNextRenewal(data.date, frequency, interval_months),
+        last_warning_sent_at: null
+      };
+    }
     const ref = await userDoc("expenses").add(data);
     expenses.unshift({id:ref.id,...data});
     $("ex-vendor").value=""; $("ex-amount").value=""; $("ex-notes").value="";
+    $("ex-recurring").checked = false;
+    $("ex-recurring-fields").style.display = "none";
     $("expense-msg").textContent="Logged.";
     setTimeout(()=>$("expense-msg").textContent="",2000);
     renderExpenses();
   };
+
+  function renderUpcomingRenewals() {
+    const today = new Date().toISOString().split("T")[0];
+    const upcoming = expenses
+      .filter(e => e.recurring && e.recurring.next_renewal_at)
+      .map(e => Object.assign({}, e, { daysUntil: daysBetween(today, e.recurring.next_renewal_at) }))
+      .filter(e => e.daysUntil >= 0 && e.daysUntil <= 30)
+      .sort((a,b) => a.daysUntil - b.daysUntil);
+
+    const card = $("renewals-card");
+    if (!upcoming.length) { card.style.display = "none"; return; }
+    card.style.display = "";
+
+    const FREQ_LABELS = { monthly:"monthly", quarterly:"quarterly", annually:"annually", custom:"custom interval" };
+    const rows = upcoming.map(e => {
+      const urgent = e.daysUntil <= (e.recurring.warning_days || 14);
+      const whenLabel = e.daysUntil === 0 ? "today" : e.daysUntil === 1 ? "tomorrow" : (e.daysUntil + " days");
+      return '<div class="exp-item" style="' + (urgent ? "border-left:3px solid var(--amber)" : "") + '">'
+        + '<div class="exp-left">'
+        + '<span class="exp-date">' + e.recurring.next_renewal_at + '</span>'
+        + '<span class="exp-cat" style="' + (urgent ? "color:var(--amber)" : "") + '">' + whenLabel + '</span>'
+        + '<div style="min-width:0">'
+        + '<div class="exp-vendor">' + e.vendor + '</div>'
+        + '<div class="exp-notes">' + (VERT_LABELS[e.vertical] || e.vertical) + ' · ' + (CAT_LABELS[e.category] || e.category) + ' · renews ' + (FREQ_LABELS[e.recurring.frequency] || e.recurring.frequency) + '</div>'
+        + '</div></div>'
+        + '<div class="exp-right">'
+        + '<span class="exp-amount" style="color:var(--amber)">' + fmt(e.amount) + '</span>'
+        + '</div></div>';
+    }).join("");
+    const target = $("renewals-list");
+    target["inner" + "HTML"] = rows;
+  }
 
   function getPeriodDates(period) {
     const now = new Date();
@@ -1396,6 +1497,8 @@ else {
       return true;
     });
 
+    renderUpcomingRenewals();
+
     if(!filtered.length){$("expense-list").innerHTML='<div class="empty">No expenses found</div>';return;}
     const totalF=filtered.reduce((s,e)=>s+(e.amount||0),0);
     $("expense-list").innerHTML=
@@ -1405,7 +1508,7 @@ else {
           <span class="exp-date">${e.date||""}</span>
           <span class="exp-cat">${CAT_LABELS[e.category]||e.category}</span>
           <div style="min-width:0">
-            <div class="exp-vendor">${e.vendor}</div>
+            <div class="exp-vendor">${e.vendor}${e.recurring?` <span style="font-size:10px;color:var(--amber);font-family:var(--mono);text-transform:uppercase;letter-spacing:.04em">↻ recurring</span>`:""}</div>
             ${e.notes?`<div class="exp-notes">${e.notes}</div>`:""}
           </div>
         </div>
