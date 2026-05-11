@@ -65,6 +65,22 @@
 
     .filter-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
     .cat-pills { display: flex; gap: 5px; flex-wrap: wrap; }
+    .lib-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; padding: 4px 0; border-bottom: 1px solid var(--border); }
+    .lib-pill {
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      background: transparent;
+      color: var(--text-mid);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .lib-pill:hover { color: var(--text); border-color: var(--text-mid); }
+    .lib-pill.active { background: var(--gold); color: var(--bg); border-color: var(--gold); }
+    .lib-pill .lib-count { font-size: 11px; opacity: 0.7; margin-left: 4px; font-weight: 500; }
     .cat-pill {
       padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 500;
       border: 1px solid var(--border-hi); background: transparent;
@@ -362,6 +378,7 @@
     <span class="search-icon">⌕</span>
     <input class="search-input" id="searchInput" type="text" placeholder="Search recipes…" autocomplete="off">
   </div>
+  <div class="lib-pills" id="libPills"></div>
   <div class="filter-row">
     <div class="cat-pills" id="catPills"></div>
     <div class="filter-sep"></div>
@@ -510,13 +527,21 @@
 
 <script>
 (async () => {
-  const data = await fetch('formulator-data.json').then(r => r.json());
+  // Load both libraries in parallel. Public library may not exist on some forks/branches; degrade gracefully.
+  const [data, publicLib] = await Promise.all([
+    fetch('formulator-data.json').then(r => r.json()),
+    fetch('crucible-public-library.json').then(r => r.ok ? r.json() : { recipes: [] }).catch(() => ({ recipes: [] }))
+  ]);
+
+  // Public library has a `templates` array we never display, plus an `_unavailableIngredient` flag we hide by default.
+  const publicRecipes = (publicLib.recipes || []).filter(r => !r._template && !r._unavailableIngredient);
 
   const INV_KEY    = '5daughters_inventory';
   const FLAG_KEY   = '5daughters_flagged';
   const NOTES_KEY  = '5daughters_notes';
   const SWAPS_KEY  = '5daughters_swaps';
   const CUSTOM_KEY = '5daughters_custom_recipes';
+  const LIB_KEY    = '5daughters_active_library';
   const PAGE_SIZE  = 30;
 
   let owned   = new Set(JSON.parse(localStorage.getItem(INV_KEY)   || 'null') ?? data.userInventory);
@@ -525,6 +550,7 @@
   let swaps   = JSON.parse(localStorage.getItem(SWAPS_KEY) || '{}');
   let customRecipes = JSON.parse(localStorage.getItem(CUSTOM_KEY) || '[]');
   let activeCategory = 'all';
+  let activeLibrary = localStorage.getItem(LIB_KEY) || 'public';
   let shownCount = PAGE_SIZE;
 
   const saveOwned   = () => localStorage.setItem(INV_KEY,   JSON.stringify([...owned]));
@@ -532,8 +558,21 @@
   const saveNotes   = () => localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
   const saveSwaps   = () => localStorage.setItem(SWAPS_KEY, JSON.stringify(swaps));
   const saveCustom  = () => localStorage.setItem(CUSTOM_KEY, JSON.stringify(customRecipes));
+  const saveLibrary = () => localStorage.setItem(LIB_KEY, activeLibrary);
 
-  function allRecipes() { return [...customRecipes, ...data.recipes]; }
+  // Library is a top-level filter on top of category/search/flags. Custom recipes always flow through (they're yours).
+  // - 'public'   = Sqrrlbrain-curated, attribution-clean (sharable, demo-safe)
+  // - 'personal' = Your private 705-recipe lab notebook (never shipped to demo users; admin-only when auth is wired)
+  // - 'custom'   = Recipes you've authored in-app
+  // - 'all'      = Everything you have access to, merged
+  function libRecipes() {
+    if (activeLibrary === 'public')   return [...customRecipes, ...publicRecipes];
+    if (activeLibrary === 'personal') return [...customRecipes, ...data.recipes];
+    if (activeLibrary === 'custom')   return [...customRecipes];
+    return [...customRecipes, ...publicRecipes, ...data.recipes]; // 'all'
+  }
+  // Kept for backwards-compat with any older callers; routes through the library filter.
+  function allRecipes() { return libRecipes(); }
 
   function norm(s) { return s.replace(/[™®]/g, '').trim(); }
   function ownedHas(name) { const n = norm(name); return [...owned].some(o => norm(o) === n); }
@@ -559,6 +598,37 @@
   function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2000); }
   function updateFlagPill() { const p = document.getElementById('flagPill'); p.textContent = flagged.size > 0 ? `★ ${flagged.size}` : ''; }
   function updateInvBadge() { document.getElementById('invBadge').textContent = owned.size; }
+
+  // ── Library pills ──────────────────────────────────────
+  // Top-level filter — which source of recipes the user is browsing.
+  const LIBS = [
+    { id: 'public',   label: 'Public',   count: () => publicRecipes.length,
+      desc: 'Sqrrlbrain-curated, attribution-clean. Safe to share; what other Crucible users see.' },
+    { id: 'personal', label: 'Personal', count: () => data.recipes.length,
+      desc: 'Your private formulation library. Never published.' },
+    { id: 'custom',   label: 'My Custom', count: () => customRecipes.length,
+      desc: 'Recipes you authored in-app.' },
+    { id: 'all',      label: 'All',      count: () => publicRecipes.length + data.recipes.length + customRecipes.length,
+      desc: 'Everything you have access to, merged.' },
+  ];
+  function renderLibPills() {
+    const wrap = document.getElementById('libPills'); wrap.textContent = '';
+    LIBS.forEach(lib => {
+      const b = el('button', 'lib-pill' + (lib.id === activeLibrary ? ' active' : ''));
+      b.title = lib.desc;
+      b.appendChild(el('span', null, lib.label));
+      const cnt = lib.count();
+      if (cnt > 0) b.appendChild(el('span', 'lib-count', '· ' + cnt));
+      b.addEventListener('click', () => {
+        activeLibrary = lib.id;
+        saveLibrary();
+        shownCount = PAGE_SIZE;
+        renderLibPills();
+        renderRecipes();
+      });
+      wrap.appendChild(b);
+    });
+  }
 
   // ── Category pills ─────────────────────────────────────
   const CATS = [
@@ -1133,7 +1203,7 @@
   document.getElementById('noHeatOnly').addEventListener('change', () => { shownCount = PAGE_SIZE; renderRecipes(); });
   document.getElementById('flaggedOnly').addEventListener('change', () => { shownCount = PAGE_SIZE; renderRecipes(); });
 
-  renderCatPills(); renderPantry(); renderSwaps(); renderRecipes(); updateFlagPill(); updateInvBadge();
+  renderLibPills(); renderCatPills(); renderPantry(); renderSwaps(); renderRecipes(); updateFlagPill(); updateInvBadge();
 })();
 </script>
 
