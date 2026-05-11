@@ -5,7 +5,7 @@
     "schemaVersion": "1.1.0",
     "createdAt": "2026-05-11",
     "lastUpdatedAt": "2026-05-11",
-    "recipeCount": 31,
+    "recipeCount": 38,
     "targets": {
       "demoReadiness": 50,
       "scope": "grow over time; not capped"
@@ -1191,6 +1191,244 @@
         "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
         "verifiedAt": "2026-05-11",
         "notes": "Magnesia + alcohol pre-trituration is an elegant historic technique for getting essential oils evenly distributed in water — modern alternative is polysorbate 20."
+      }
+    },
+    {
+      "id": "pd-021",
+      "name": "Bay Rum (Traditional Aftershave)",
+      "category": "face",
+      "tags": ["historic-archive", "aftershave", "toilet-water", "bay", "ready-to-make", "1907"],
+      "heatRequired": false,
+      "equipment": ["coffee filter or magnesia"],
+      "description": "Classic Bay Rum aftershave/toilet water — oil of bay (Pimenta racemosa), alcohol, water. The historic gentleman's aftershave. Filter through magnesia for clarity.",
+      "ingredients": [
+        { "name": "Alcohol (95%)", "pct": 49.7 },
+        { "name": "Distilled Water", "pct": 49.7 },
+        { "name": "Oil of Bay (Pimenta racemosa)", "pct": 0.55 },
+        { "name": "Magnesia (Magnesium Oxide, filter aid)", "pct": 0.05 }
+      ],
+      "notes": "Combine oil of bay, alcohol, and water in a jar. Add a small amount of magnesia (magnesium oxide); shake thoroughly. Filter through coffee filter or paper — the magnesia carries any undissolved oil out, leaving a clear amber liquid. Bottle. Apply after shaving. High alcohol content is self-preserving.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b95",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — BAY RUM I",
+        "originalRecipe": "I.— Oil of bay 1 drachm; Alcohol 18 ounces; Water 18 ounces. Mix and filter through magnesia.",
+        "originalUnits": "drachm + ounces",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Simplest variant. Henley's Variant II adds Jamaica rum (2 parts) + bay-leaf otto + extra alcohol — richer/spicier; substitute dark rum if you want the spirit-warmth note."
+      }
+    },
+    {
+      "id": "pd-022",
+      "name": "Birch-Bud Toilet Water",
+      "category": "face",
+      "tags": ["historic-archive", "toilet-water", "herbal", "birch", "ready-to-make", "1907"],
+      "heatRequired": false,
+      "equipment": ["amber glass bottle", "fine filter"],
+      "description": "An herbal toilet water — birch-bud essential oil + spring flower essence + soft soap + glycerin. Chlorophyll tints it green. A unique woodsy/floral scent profile distinct from typical rose/lavender colognes.",
+      "ingredients": [
+        { "name": "Alcohol (96%)", "pct": 76.1 },
+        { "name": "Distilled Water", "pct": 15.2 },
+        { "name": "Soft Soap (potash soap)", "pct": 4.3 },
+        { "name": "Glycerin", "pct": 3.3 },
+        { "name": "Spring Flower Essence Blend", "pct": 2.2 },
+        { "name": "Birch Bud Essential Oil", "pct": 1.1 },
+        { "name": "Chlorophyll (for color, optional)", "pct": 0.1 }
+      ],
+      "notes": "Mix water with an equal volume of spirit; dissolve the soap in this mixture. Mix the birch bud oil and flower essence with the remaining spirit. Combine the two; add chlorophyll for tint. Agitate well; let stand 8 days; filter. To use, dilute 1:1 with water before applying as a refreshing splash. Long maceration (8 days) develops the scent.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b96",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — TOILET WATERS, 'Birch-Bud Water'",
+        "originalRecipe": "Alcohol (96 per cent), 350 parts; water, 70 parts; soft soap, 20 parts; glycerine, 15 parts; essential oil of birch buds, 5 parts; essence of spring flowers, 10 parts; chlorophyll, quantity sufficient to tint.",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Soap + glycerin presence gives this a slightly emollient finish — sits between a toilet water and a body splash. Unique scent profile."
+      }
+    },
+    {
+      "id": "pd-023",
+      "name": "Carmelite Balm Water",
+      "category": "face",
+      "tags": ["historic-archive", "toilet-water", "carmelite", "spice-blend", "ready-to-make", "1907"],
+      "heatRequired": false,
+      "equipment": ["amber glass bottle"],
+      "description": "Carmelite Balm Water — a classical apothecary toilet water dating back to the 14th-century Carmelite Order. Complex spice + citrus + herb blend in alcohol. Historic remedy for headaches and nervous tension; modern use as toilet water/cologne.",
+      "ingredients": [
+        { "name": "Alcohol (90%)", "pct": 99.0 },
+        { "name": "Melissa (Lemon Balm) Essential Oil", "pct": 0.3 },
+        { "name": "Citron Essential Oil", "pct": 0.3 },
+        { "name": "Clove Essential Oil", "pct": 0.15 },
+        { "name": "Cinnamon Essential Oil", "pct": 0.1 },
+        { "name": "Coriander Essential Oil", "pct": 0.05 },
+        { "name": "Nutmeg Essential Oil", "pct": 0.05 },
+        { "name": "Angelica Essential Oil", "pct": 0.03 },
+        { "name": "Sweet Marjoram Essential Oil", "pct": 0.02 }
+      ],
+      "notes": "Combine all essential oils in the alcohol; shake well; let stand 1-2 weeks to mature before use. Apply as a cologne. SAFETY: cinnamon and clove oils at this concentration are at typical-use rates for skin-contact products, but verify against current IFRA limits if commercializing.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b97",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — TOILET WATERS, 'Carmelite Balm Water'",
+        "originalRecipe": "Melissa oil 30 minims; Sweet marjoram oil 3 minims; Cinnamon oil 10 minims; Angelica oil 3 minims; Citron oil 30 minims; Clove oil 15 minims; Coriander oil 5 minims; Nutmeg oil 5 minims; Alcohol (90 per cent) 10 fluidounces.",
+        "originalUnits": "minims + fluidounces",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Traditional 'Eau de Mélisse des Carmes' formulation. Historic medicinal use — apply to temples for headaches. Modern use: distinctive complex spice-citrus cologne."
+      }
+    },
+    {
+      "id": "pd-024",
+      "name": "Lilac Toilet Water",
+      "category": "face",
+      "tags": ["historic-archive", "toilet-water", "floral", "lilac", "ready-to-make", "1907"],
+      "heatRequired": false,
+      "equipment": ["glass bottle"],
+      "description": "A floral lilac-scented toilet water using terpineol (lilac-like aroma compound), heliotropin (vanilla-cherry note), bergamot, and neroli. Brighter, lighter than the spice-heavy Carmelite Balm Water (pd-023).",
+      "ingredients": [
+        { "name": "Alcohol (95%)", "pct": 74.5 },
+        { "name": "Distilled Water", "pct": 24.9 },
+        { "name": "Terpineol", "pct": 0.4 },
+        { "name": "Bergamot Essential Oil", "pct": 0.2 },
+        { "name": "Heliotropin", "pct": 0.03 },
+        { "name": "Neroli Essential Oil", "pct": 0.02 }
+      ],
+      "notes": "Combine terpineol, bergamot oil, heliotropin, and neroli in the alcohol. Shake until heliotropin dissolves. Slowly add distilled water with stirring — solution may go slightly cloudy initially, will clarify on standing. Let stand 2-3 days; filter if needed. Bottle. SOURCING: terpineol and heliotropin available from cosmetic fragrance suppliers (MakingCosmetics, Lotioncrafter).",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b98",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — TOILET WATERS, 'Lilac Water'",
+        "originalRecipe": "Terpineol 2 drachms; Heliotropin 8 grains; Bergamot oil 1 drachm; Neroli oil 8 minims; Alcohol 12 ounces; Water 4 ounces.",
+        "originalUnits": "drachms + grains + minims + fluidounces",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Terpineol is a naturally-occurring monoterpene also synthesized commercially — gives lilac/lily-of-the-valley character. Heliotropin (piperonal) is the warm cherry-vanilla compound from heliotrope and sassafras."
+      }
+    },
+    {
+      "id": "pd-025",
+      "name": "Orange Flower Toilet Water",
+      "category": "face",
+      "tags": ["historic-archive", "toilet-water", "floral", "orange-flower", "minimal", "ready-to-make", "1907"],
+      "heatRequired": false,
+      "equipment": ["coffee filter"],
+      "description": "A clear orange-flower toilet water using magnesium carbonate as a filter aid to bring the volatile essence into clear water. Refreshing daily splash; classic Mediterranean fragrance.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 94.7 },
+        { "name": "Orange Flower Essence", "pct": 4.7 },
+        { "name": "Magnesium Carbonate", "pct": 0.6 }
+      ],
+      "notes": "Triturate the orange flower essence with the magnesium carbonate in a mortar — the magnesia binds the essential oils into a fine suspension. Slowly add distilled water with continuous stirring. Filter through fine cloth or coffee filter — magnesia carries the orange oil into the water phase, producing a clear scented water. CLARIFYING TIP: if the water remains turbid, shake with washed sand (boiled in hydrochloric acid then rinsed) and filter again. SHELF LIFE: add Geogard Ultra at 0.75% for any batch over 1 week.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b99",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — TOILET WATERS, 'Orange Flower Water'",
+        "originalRecipe": "Orange flower essence 8 ounces; Magnesium carbonate 1 ounce; Water 8 pints. Triturate the essence with the magnesium carbonate, add the water, and filter.",
+        "originalUnits": "ounces + pints",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Same technique as pd-020 (Rosemary Hair Water) — magnesium carbonate as filter aid for essential oils. Reusable approach for any clear scented water you want to make."
+      }
+    },
+    {
+      "id": "pd-026",
+      "name": "Eau de Botot Toilet Water",
+      "category": "face",
+      "tags": ["historic-archive", "toilet-water", "spice", "anise", "ready-to-make", "1907"],
+      "heatRequired": false,
+      "equipment": ["amber glass jar (for digestion)"],
+      "description": "Eau de Botot — historic French toilet water dating to 1755, originally a court fragrance. Anise + clove + cinnamon + cochineal-red tint in a rose-water-and-spirit base. Distinctive spicy-licorice character.",
+      "ingredients": [
+        { "name": "Refined Spirit (Ethanol)", "pct": 65.0 },
+        { "name": "Rose Water", "pct": 16.3 },
+        { "name": "Aniseed", "pct": 6.5 },
+        { "name": "Clove", "pct": 1.6 },
+        { "name": "Cinnamon Cassia", "pct": 1.6 },
+        { "name": "Distilled Water", "pct": 8.6 },
+        { "name": "Cochineal (red dye)", "pct": 0.4 }
+      ],
+      "notes": "Crush the aniseed, clove, and cinnamon. Combine all ingredients in an amber glass jar. Digest (macerate) for 8 days, shaking daily. Strain through fine cloth, then filter. Bottle. SUBSTITUTION: cochineal is insect-derived (carmine source) — for a vegan version, substitute beetroot powder or a CC-licensed plant-derived red colorant. The original 1755 court formulation used cochineal for the signature ruby tint.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b9a",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — TOILET WATERS, 'Eau de Botot'",
+        "originalRecipe": "Aniseed 80 parts; Clover 20 parts; Cinnamon cassia 20 parts; Cochineal 5 parts; Refined spirit 800 parts; Rose water 200 parts. Digest for 8 days...",
+        "originalUnits": "parts (proportional)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Original Eau de Botot was a mouthwash (Edme-François Julien Botot, dentist to Louis XV, 1755). The historic toilet-water version (Henley's recipe) is essentially the same formula at lower dilution. Note Henley's typo 'Clover' (probably 'Clove')."
+      }
+    },
+    {
+      "id": "pd-027",
+      "name": "Shaving Paste (Tragacanth Paraffin Emulsion)",
+      "category": "face",
+      "tags": ["historic-archive", "shaving", "shave-cream", "tragacanth", "1907"],
+      "heatRequired": true,
+      "equipment": ["double boiler", "mortar (for tragacanth)"],
+      "description": "A shaving paste built on a paraffin wax emulsion with tragacanth gum as the emulsifier. Lavender-scented. Forms a thin mechanical layer that fills skin depressions and supports the razor — distinct from lather-based shaving soaps.",
+      "ingredients": [
+        { "name": "Distilled Water", "pct": 61.5 },
+        { "name": "Paraffin Wax (mp 131°F / 55°C)", "pct": 25.0 },
+        { "name": "Alcohol (95%)", "pct": 10.0 },
+        { "name": "Stearic Acid or Lard", "pct": 2.0 },
+        { "name": "Tragacanth Gum", "pct": 1.0 },
+        { "name": "Lavender Essential Oil", "pct": 0.5 }
+      ],
+      "notes": "Make a tragacanth mucilage with a small portion of the warm water; set aside. Melt the paraffin and stearic acid (or lard) in a double boiler. Add the tragacanth mucilage to the melted wax with vigorous stirring; the emulsion forms as you blend. Add the remaining warm water in stages. When cooled, add alcohol and lavender oil. Final consistency: thick white cream. APPLY a small quantity to the area before shaving; as water evaporates, paraffin particles form a mechanical support layer. About 1 oz lasts 6 shaves.",
+      "uuid": "5b1a2c4e-9f3d-4a8b-b1c2-3d4e5f6a7b9b",
+      "source": "public-domain",
+      "attribution": {
+        "displayName": "Henley's Twentieth Century Book of Recipes, Formulas and Processes (1907 / 1914 ed.)",
+        "author": "Gardner D. Hiscox (ed.)",
+        "originalUrl": "https://www.gutenberg.org/files/53143/53143-h/53143-h.htm",
+        "originalSource": "Henley's — SHAVING PASTE",
+        "originalRecipe": "An emulsion of paraffine wax, melting at 131° F., should be used. This is prepared with 25 per cent of wax and 2 per cent of tragacanth, the wax being melted and mixed with the tragacanth previously made into a mucilage with some of the water. The addition of a little stearine or lard renders the emulsification of the wax easier, while about 10 per cent of alcohol makes the preparation more agreeable to use. The fatty odor of the preparation may be covered by the addition of 1/2 to 1 per cent of lavender oil.",
+        "originalUnits": "percentages (already normalized in source)",
+        "license": "PD-US-pre1930",
+        "licenseUrl": "https://copyright.cornell.edu/publicdomain",
+        "dateAdded": "2026-05-11",
+        "verifiedBy": "Ron Goodrich (bulk-approved 2026-05-11)",
+        "verifiedAt": "2026-05-11",
+        "notes": "Unique non-lather shaving cream — most shaving products are saponified (soap-based foam). This is mechanical: paraffin particles fill skin pits to support the razor. Vegan version: use vegetable stearic acid instead of lard."
       }
     }
   ]
