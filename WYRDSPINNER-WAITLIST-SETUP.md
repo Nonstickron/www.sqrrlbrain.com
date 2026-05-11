@@ -1,6 +1,6 @@
-# Inkwell Waitlist — Firestore Setup
+# Wyrdspinner Waitlist — Firestore Setup
 
-The Inkwell teaser page at `/inkwell.html` collects launch-notification signups into Firestore. Each submission becomes one document in the `inkwell_waitlist` collection.
+The Wyrdspinner teaser page at `/wyrdspinner.html` collects launch-notification signups into Firestore. Each submission becomes one document in the `inkwell_waitlist` collection (collection name preserved from the pre-rebrand schema for data continuity — see [[project_wyrdspinner]] for rename history).
 
 ## Required: deploy this Firestore rule
 
@@ -42,7 +42,7 @@ service cloud.firestore {
                          && exists(/databases/$(database)/documents/site_approved_users/$(email));
     }
 
-    // Inkwell launch waitlist — public create only, validated, no read
+    // Wyrdspinner launch waitlist — public create only, validated, no read
     match /inkwell_waitlist/{docId} {
       allow create: if request.resource.data.keys().hasOnly([
                       'email','source','created_at','user_agent','page_referrer'
@@ -66,7 +66,7 @@ service cloud.firestore {
 ## Verifying
 
 1. Deploy the rule (above).
-2. Open `/inkwell.html`. Submit your email through the waitlist form.
+2. Open `/wyrdspinner.html`. Submit your email through the waitlist form.
 3. In Firebase Console → Firestore Data → `inkwell_waitlist` → confirm a new doc appeared with fields `email`, `source: "inkwell_teaser"`, `created_at`, `user_agent`, `page_referrer`.
 4. Open the form again from the same browser. Try submitting a second time within a minute — the client-side rate limit message ("You're already on the list") should appear without a new Firestore write.
 5. Try submitting an obviously invalid email (e.g. `not-an-email`). The form should reject it client-side; if you bypass the client check, the Firestore rule will reject it server-side with `permission-denied`.
@@ -112,5 +112,7 @@ Personal/early-stage volume is well under Firestore's free tier (20K writes/day)
 
 ---
 
-**Workspace context:** [[project_inkwell]] · [[project_sqrrlbrain]] · [[feedback_firestore_rules_audit_first]]
-**Tags:** `#proj/inkwell` `#proj/sqrrlbrain` `#type/docs`
+**Workspace context:** [[project_wyrdspinner]] · [[project_sqrrlbrain]] · [[feedback_firestore_rules_audit_first]]
+**Tags:** `#proj/wyrdspinner` `#proj/sqrrlbrain` `#type/docs`
+
+> Filename note: this doc was previously `INKWELL-WAITLIST-SETUP.md`. Renamed 2026-05-10/11 as part of the Inkwell → Wyrdspinner rebrand.
