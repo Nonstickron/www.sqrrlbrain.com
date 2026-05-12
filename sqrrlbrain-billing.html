@@ -641,6 +641,30 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
         </div>
       </div>
 
+      <!-- BULK IMPORT -->
+      <details class="card" id="bulk-import-card" style="margin-bottom:14px">
+        <summary style="cursor:pointer;color:var(--muted);font-size:13px;list-style:none;display:flex;align-items:center;gap:6px">
+          <span id="bulk-import-arrow" style="font-family:var(--mono);font-size:10px">▸</span>
+          bulk import expenses (paste JSON)
+        </summary>
+        <div style="margin-top:12px">
+          <div style="font-size:11px;color:var(--hint);margin-bottom:8px">
+            Paste a JSON array of expense objects. Required fields: <code>date</code> (YYYY-MM-DD), <code>vendor</code>, <code>amount</code>. Optional: <code>category</code>, <code>vertical</code>, <code>deductible</code>, <code>notes</code>, <code>recurring</code>. Defaults if omitted: category=other, vertical=sqrrlbrain, deductible=true. Source label added automatically as <code>importBatch</code>.
+          </div>
+          <textarea id="bulk-import-input" placeholder='[{"date":"2026-01-15","vendor":"Cloudflare","amount":10.46,"category":"hosting","vertical":"sqrrlbrain","notes":"example.com renewal"}]' style="width:100%;min-height:140px;font-family:var(--mono);font-size:11px;padding:10px;background:var(--bg2);color:var(--text);border:1px solid var(--border);border-radius:var(--radius);resize:vertical"></textarea>
+          <div style="display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap">
+            <button class="btn-sm" id="btn-bulk-preview">parse & preview</button>
+            <button class="btn-primary" id="btn-bulk-import" style="max-width:200px;display:none">import 0 expenses</button>
+            <button class="btn-sm" id="btn-bulk-clear" style="display:none">clear</button>
+            <span style="font-size:11px;min-height:16px" id="bulk-import-msg"></span>
+          </div>
+          <div id="bulk-import-preview" style="margin-top:10px;display:none">
+            <div style="font-size:11px;color:var(--hint);font-family:var(--mono);margin-bottom:6px" id="bulk-import-preview-summary"></div>
+            <div id="bulk-import-preview-rows" style="max-height:220px;overflow-y:auto"></div>
+          </div>
+        </div>
+      </details>
+
       <!-- EXPENSE LOG -->
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:10px">
         <div style="font-size:13px;color:var(--muted)">expense log</div>
@@ -1645,6 +1669,182 @@ else {
   ["ex-filter-cat","ex-filter-vertical","pl-period"].forEach(id=>{
     const el=$(id); if(el) el.addEventListener("change",renderExpenses);
   });
+
+  // ── BULK IMPORT ──
+  const VALID_CATS = ["materials","software","platform","equipment","marketing","shipping","professional","hosting","other"];
+  const VALID_VERTS = ["sqrrlbrain","print","tract","inkwell","craft"];
+  let pendingImport = null;
+
+  function escHtml(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  $("bulk-import-card").addEventListener("toggle", () => {
+    $("bulk-import-arrow").textContent = $("bulk-import-card").open ? "▾" : "▸";
+  });
+
+  function setBulkMsg(text, color) {
+    const el = $("bulk-import-msg");
+    el.textContent = text;
+    el.style.color = color || "var(--hint)";
+  }
+
+  function validateImportEntry(raw) {
+    const errors = [];
+    if (!raw || typeof raw !== "object") { errors.push("not an object"); return {errors}; }
+    const dateStr = (raw.date || "").trim();
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) errors.push("date must be YYYY-MM-DD");
+    const vendor = (raw.vendor || "").trim();
+    if (!vendor) errors.push("vendor required");
+    const amount = parseFloat(raw.amount);
+    if (!(amount > 0)) errors.push("amount must be > 0");
+    if (errors.length) return {errors};
+    const category = raw.category && VALID_CATS.includes(raw.category) ? raw.category : "other";
+    const vertical = raw.vertical && VALID_VERTS.includes(raw.vertical) ? raw.vertical : "sqrrlbrain";
+    const deductible = raw.deductible === undefined ? true : !!raw.deductible;
+    const notes = (raw.notes || "").trim();
+    const entry = {date: dateStr, vendor, amount, category, vertical, deductible, notes};
+    if (raw.recurring && typeof raw.recurring === "object") {
+      const freq = raw.recurring.frequency;
+      if (["monthly","quarterly","annually","custom"].includes(freq)) {
+        const interval_months = freq === "custom" ? (parseInt(raw.recurring.interval_months)||12) : null;
+        entry.recurring = {
+          frequency: freq,
+          interval_months,
+          warning_days: parseInt(raw.recurring.warning_days) || 14,
+          next_renewal_at: calculateNextRenewal(dateStr, freq, interval_months),
+          last_warning_sent_at: null
+        };
+      } else {
+        errors.push("recurring.frequency must be monthly/quarterly/annually/custom");
+        return {errors};
+      }
+    }
+    return {entry, errors: []};
+  }
+
+  function findPossibleDuplicate(entry) {
+    return expenses.find(e =>
+      e.date === entry.date &&
+      Math.abs((e.amount||0) - entry.amount) < 0.01 &&
+      (e.vendor||"").toLowerCase() === entry.vendor.toLowerCase()
+    );
+  }
+
+  $("btn-bulk-preview").onclick = () => {
+    const raw = $("bulk-import-input").value.trim();
+    if (!raw) { setBulkMsg("Paste JSON first.", "var(--amber)"); return; }
+    let parsed;
+    try { parsed = JSON.parse(raw); }
+    catch (e) { setBulkMsg("Invalid JSON: " + e.message, "var(--red)"); return; }
+    if (!Array.isArray(parsed)) { setBulkMsg("Expected a JSON array.", "var(--red)"); return; }
+    if (!parsed.length) { setBulkMsg("Array is empty.", "var(--amber)"); return; }
+
+    const valid = [], invalid = [], dupes = new Set();
+    parsed.forEach((rawEntry, idx) => {
+      const {entry, errors} = validateImportEntry(rawEntry);
+      if (errors && errors.length) {
+        invalid.push({idx, errors});
+      } else {
+        const dup = findPossibleDuplicate(entry);
+        if (dup) dupes.add(entry);
+        valid.push(entry);
+      }
+    });
+
+    pendingImport = valid;
+    $("bulk-import-preview").style.display = "";
+    $("bulk-import-preview-summary").textContent =
+      valid.length + " valid · " + invalid.length + " invalid · " + dupes.size + " possible duplicates";
+
+    const parts = [];
+    valid.forEach(e => {
+      const isDup = dupes.has(e);
+      parts.push(
+        '<div class="exp-item" style="' + (isDup ? "border-left:3px solid var(--amber)" : "") + '">' +
+          '<div class="exp-left">' +
+            '<span class="exp-date">' + escHtml(e.date) + '</span>' +
+            '<span class="exp-cat">' + escHtml(CAT_LABELS[e.category] || e.category) + '</span>' +
+            '<div style="min-width:0">' +
+              '<div class="exp-vendor">' + escHtml(e.vendor) +
+                (e.recurring ? ' <span style="font-size:10px;color:var(--amber);font-family:var(--mono);text-transform:uppercase;letter-spacing:.04em">↻ recurring</span>' : '') +
+                (isDup ? ' <span style="font-size:10px;color:var(--amber);font-family:var(--mono)">↔ possible dupe</span>' : '') +
+              '</div>' +
+              (e.notes ? '<div class="exp-notes">' + escHtml(e.notes) + '</div>' : '') +
+            '</div>' +
+          '</div>' +
+          '<div class="exp-right">' +
+            '<span class="exp-vertical">' + escHtml(VERT_LABELS[e.vertical] || e.vertical) + '</span>' +
+            (e.deductible ? '<span class="exp-deductible">deductible</span>' : '') +
+            '<span class="exp-amount">−' + escHtml(fmt(e.amount)) + '</span>' +
+          '</div>' +
+        '</div>'
+      );
+    });
+    invalid.forEach(({idx, errors}) => {
+      parts.push(
+        '<div class="exp-item" style="border-left:3px solid var(--red)">' +
+          '<div class="exp-left"><span class="exp-date">#' + idx + '</span>' +
+            '<div class="exp-notes" style="color:var(--red)">SKIPPED: ' + escHtml(errors.join(", ")) + '</div>' +
+          '</div>' +
+        '</div>'
+      );
+    });
+    $("bulk-import-preview-rows")["inner" + "HTML"] = parts.join("");
+
+    $("btn-bulk-import").textContent = "import " + valid.length + " expense" + (valid.length === 1 ? "" : "s");
+    $("btn-bulk-import").style.display = valid.length ? "" : "none";
+    $("btn-bulk-clear").style.display = "";
+    setBulkMsg(dupes.size ? dupes.size + " possible duplicate(s) — review before importing." : "", "var(--amber)");
+  };
+
+  $("btn-bulk-clear").onclick = () => {
+    pendingImport = null;
+    $("bulk-import-input").value = "";
+    $("bulk-import-preview").style.display = "none";
+    $("bulk-import-preview-rows")["inner" + "HTML"] = "";
+    $("btn-bulk-import").style.display = "none";
+    $("btn-bulk-clear").style.display = "none";
+    setBulkMsg("");
+  };
+
+  $("btn-bulk-import").onclick = async () => {
+    if (!pendingImport || !pendingImport.length) return;
+    if (!confirm("Import " + pendingImport.length + " expense(s) to Firestore?")) return;
+    $("btn-bulk-import").disabled = true;
+    setBulkMsg("Importing...", "var(--hint)");
+    const importBatch = "import-" + new Date().toISOString().replace(/[:.]/g,"-");
+    let written = 0, failed = 0;
+    for (const entry of pendingImport) {
+      try {
+        const data = {
+          ...entry,
+          importBatch,
+          createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        };
+        const ref = await userDoc("expenses").add(data);
+        expenses.unshift({id: ref.id, ...data});
+        written++;
+      } catch (err) {
+        console.error("import failed", entry, err);
+        failed++;
+      }
+    }
+    expenses.sort((a,b) => (b.date||"").localeCompare(a.date||""));
+    renderExpenses();
+    setBulkMsg("Imported " + written + (failed ? " (" + failed + " failed)" : "") + ". Batch tag: " + importBatch, failed ? "var(--amber)" : "var(--green)");
+    $("btn-bulk-import").disabled = false;
+    pendingImport = null;
+    $("bulk-import-input").value = "";
+    $("bulk-import-preview").style.display = "none";
+    $("btn-bulk-import").style.display = "none";
+    $("btn-bulk-clear").style.display = "none";
+  };
 
   // ── REPORTS ──
   function renderReports() {
