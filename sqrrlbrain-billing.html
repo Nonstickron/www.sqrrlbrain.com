@@ -1736,12 +1736,35 @@ else {
     );
   }
 
+  function sanitizeJsonInput(raw) {
+    let out = "", inString = false, escape = false, stripped = false;
+    for (let i = 0; i < raw.length; i++) {
+      const ch = raw[i], code = raw.charCodeAt(i);
+      if (escape) { out += ch; escape = false; continue; }
+      if (inString && ch === "\\") { out += ch; escape = true; continue; }
+      if (ch === '"') { inString = !inString; out += ch; continue; }
+      if (inString && (code === 9 || code === 10 || code === 13)) {
+        out += " "; stripped = true; continue;
+      }
+      out += ch;
+    }
+    return { sanitized: out, stripped };
+  }
+
   $("btn-bulk-preview").onclick = () => {
     const raw = $("bulk-import-input").value.trim();
     if (!raw) { setBulkMsg("Paste JSON first.", "var(--amber)"); return; }
     let parsed;
     try { parsed = JSON.parse(raw); }
-    catch (e) { setBulkMsg("Invalid JSON: " + e.message, "var(--red)"); return; }
+    catch (e) {
+      const { sanitized, stripped } = sanitizeJsonInput(raw);
+      if (stripped) {
+        try {
+          parsed = JSON.parse(sanitized);
+          $("bulk-import-input").value = sanitized;
+        } catch (e2) { setBulkMsg("Invalid JSON: " + e.message, "var(--red)"); return; }
+      } else { setBulkMsg("Invalid JSON: " + e.message, "var(--red)"); return; }
+    }
     if (!Array.isArray(parsed)) { setBulkMsg("Expected a JSON array.", "var(--red)"); return; }
     if (!parsed.length) { setBulkMsg("Array is empty.", "var(--amber)"); return; }
 
