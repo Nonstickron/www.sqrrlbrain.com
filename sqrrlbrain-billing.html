@@ -635,6 +635,7 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
 
           <div style="display:flex;gap:10px;align-items:center">
             <button class="btn-primary" id="btn-save-expense" style="max-width:180px">log expense</button>
+            <button class="btn-sm" id="btn-cancel-expense-edit" style="display:none">cancel edit</button>
             <span style="font-size:11px;color:var(--green);min-height:16px" id="expense-msg"></span>
           </div>
         </div>
@@ -1346,10 +1347,62 @@ else {
   };
 
   // ── EXPENSES ──
+  let editingExpenseId = null;
+
   async function loadExpenses() {
     const snap = await userDoc("expenses").orderBy("date","desc").get();
     expenses = snap.docs.map(d=>({id:d.id,...d.data()}));
   }
+
+  function resetExpenseForm() {
+    editingExpenseId = null;
+    $("ex-date").value = new Date().toISOString().split("T")[0];
+    $("ex-vendor").value = "";
+    $("ex-amount").value = "";
+    $("ex-category").value = "materials";
+    $("ex-vertical").value = "sqrrlbrain";
+    $("ex-deductible").checked = true;
+    $("ex-notes").value = "";
+    $("ex-recurring").checked = false;
+    $("ex-recurring-fields").style.display = "none";
+    $("ex-freq").value = "annually";
+    $("ex-interval-wrap").style.display = "none";
+    $("ex-interval").value = 6;
+    $("ex-warning-days").value = 14;
+    $("btn-save-expense").textContent = "log expense";
+    $("btn-cancel-expense-edit").style.display = "none";
+  }
+
+  window.editExpense = id => {
+    const e = expenses.find(x => x.id === id);
+    if (!e) return;
+    editingExpenseId = id;
+    $("ex-date").value = e.date || "";
+    $("ex-vendor").value = e.vendor || "";
+    $("ex-amount").value = e.amount || "";
+    $("ex-category").value = e.category || "materials";
+    $("ex-vertical").value = e.vertical || "sqrrlbrain";
+    $("ex-deductible").checked = !!e.deductible;
+    $("ex-notes").value = e.notes || "";
+    if (e.recurring) {
+      $("ex-recurring").checked = true;
+      $("ex-recurring-fields").style.display = "";
+      $("ex-freq").value = e.recurring.frequency || "annually";
+      const isCustom = e.recurring.frequency === "custom";
+      $("ex-interval-wrap").style.display = isCustom ? "" : "none";
+      $("ex-interval").value = e.recurring.interval_months || 6;
+      $("ex-warning-days").value = e.recurring.warning_days || 14;
+    } else {
+      $("ex-recurring").checked = false;
+      $("ex-recurring-fields").style.display = "none";
+    }
+    $("btn-save-expense").textContent = "save changes";
+    $("btn-cancel-expense-edit").style.display = "";
+    $("expense-msg").textContent = "";
+    $("panel-expenses").scrollIntoView({behavior:"smooth", block:"start"});
+  };
+
+  $("btn-cancel-expense-edit").onclick = () => { resetExpenseForm(); };
 
   const CAT_LABELS = {
     materials:"Materials",software:"Software",platform:"Platform fees",
@@ -1392,27 +1445,56 @@ else {
       category:$("ex-category").value,
       vertical:$("ex-vertical").value,
       deductible:$("ex-deductible").checked,
-      notes:$("ex-notes").value.trim(),
-      createdAt:firebase.firestore.FieldValue.serverTimestamp()
+      notes:$("ex-notes").value.trim()
     };
+    let recurringPayload = null;
     if ($("ex-recurring").checked) {
       const frequency = $("ex-freq").value;
       const interval_months = frequency === "custom" ? (parseInt($("ex-interval").value)||12) : null;
       const warning_days = parseInt($("ex-warning-days").value)||14;
-      data.recurring = {
+      const existing = editingExpenseId
+        ? (expenses.find(x=>x.id===editingExpenseId)||{}).recurring
+        : null;
+      const dateChanged = existing && existing.next_renewal_at &&
+        calculateNextRenewal(data.date, frequency, interval_months) !==
+        calculateNextRenewal(data.date, existing.frequency, existing.interval_months);
+      const freqChanged = !existing
+        || existing.frequency !== frequency
+        || (existing.interval_months || null) !== interval_months;
+      recurringPayload = {
         frequency,
         interval_months,
         warning_days,
-        next_renewal_at: calculateNextRenewal(data.date, frequency, interval_months),
-        last_warning_sent_at: null
+        next_renewal_at: (existing && !freqChanged && !dateChanged)
+          ? existing.next_renewal_at
+          : calculateNextRenewal(data.date, frequency, interval_months),
+        last_warning_sent_at: existing ? (existing.last_warning_sent_at || null) : null
       };
+      data.recurring = recurringPayload;
     }
-    const ref = await userDoc("expenses").add(data);
-    expenses.unshift({id:ref.id,...data});
-    $("ex-vendor").value=""; $("ex-amount").value=""; $("ex-notes").value="";
-    $("ex-recurring").checked = false;
-    $("ex-recurring-fields").style.display = "none";
-    $("expense-msg").textContent="Logged.";
+
+    if (editingExpenseId) {
+      const updatePayload = {...data};
+      if (!recurringPayload) {
+        updatePayload.recurring = firebase.firestore.FieldValue.delete();
+      }
+      await userDoc("expenses").doc(editingExpenseId).update(updatePayload);
+      const idx = expenses.findIndex(e => e.id === editingExpenseId);
+      if (idx !== -1) {
+        const merged = {...expenses[idx], ...data};
+        if (!recurringPayload) delete merged.recurring;
+        expenses[idx] = merged;
+        expenses.sort((a,b)=>(b.date||"").localeCompare(a.date||""));
+      }
+      $("expense-msg").textContent = "Saved.";
+    } else {
+      data.createdAt = firebase.firestore.FieldValue.serverTimestamp();
+      const ref = await userDoc("expenses").add(data);
+      expenses.unshift({id:ref.id,...data});
+      $("expense-msg").textContent = "Logged.";
+    }
+
+    resetExpenseForm();
     setTimeout(()=>$("expense-msg").textContent="",2000);
     renderExpenses();
   };
@@ -1516,6 +1598,7 @@ else {
           <span class="exp-vertical">${VERT_LABELS[e.vertical]||e.vertical}</span>
           ${e.deductible?`<span class="exp-deductible">deductible</span>`:""}
           <span class="exp-amount">−${fmt(e.amount)}</span>
+          <button class="btn-sm" onclick="editExpense('${e.id}')">edit</button>
           <button class="btn-sm btn-del" onclick="deleteExpense('${e.id}')">×</button>
         </div>
       </div>`).join("");
@@ -1555,6 +1638,7 @@ else {
     if(!confirm("Delete this expense?")) return;
     await userDoc("expenses").doc(id).delete();
     expenses=expenses.filter(e=>e.id!==id);
+    if (editingExpenseId === id) resetExpenseForm();
     renderExpenses();
   };
 
