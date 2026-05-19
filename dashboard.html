@@ -526,18 +526,20 @@
         '✅ NOTES.md a11y context block added — low-vision family member is the actual driver behind flat-MealCard direction',
         '✅ README reframed as engineering handoff doc (prior README archived to README-original.md)',
         '✅ Public auth-gated teaser at /sqrrledaway.html on sqrrlbrain.com (full feature breakdown + waitlist Firestore form)',
-        'Bar-refactor cross-screen pass — apply BarHeader / SectionDivider across Plan / Pantry / Recipes / Me / Shop, audit a11y row-edge for each. Queued post-TestFlight so Ron can evaluate UX live on iOS.',
+        '✅ Health Tracking (Phase 2) strategy amendment landed 2026-05-19 — docs/2026-04-25-product-strategy.md amended with: co-located meds-with-meals UI, Apple Health as source of truth, fully free tier (no AI on health data, by absolute rule — wellness app vs medical device legal posture), onboarding step added (skippable). Remaining doc work (Supabase schema additions / README Me-tab update / dedicated spec doc / NOTES sprint entry) parked until Wyrdspinner Phase 2 is past hump.',
+        'Bar-refactor cross-screen pass — apply BarHeader / SectionDivider across Plan / Pantry / Recipes / Me / Shop, audit a11y row-edge for each. Queued post-TestFlight so Ronny can evaluate UX live on iOS.',
         'Sprint C: household taste rollup, pantry days-since-purchased, three-mode meal suggestions, safety flags, pregnancy mode, budget mode',
-        'Supabase backend build (per docs/2026-04-27-supabase-schema-analysis.md). Same pattern as Wyrdspinner BILLING-SPEC: anon-first auth + Apple SignIn + iOS-only post-launch + founders allowlist.',
+        'Production build — React + Vite + TypeScript + Supabase (per docs/2026-04-27-supabase-schema-analysis.md). NOT YET STARTED. Same pattern as Wyrdspinner BILLING-SPEC: anon-first auth + Apple SignIn + iOS-only post-launch + founders allowlist. Phase 2 adds health-tracking schema (vitals_readings / medications / medication_logs / health_sync_state) after Phase 1 ships.',
+        'Me-tab sub-tab introduction (deferred Phase 2 design decision) — Trends / Habits / Vitals / Meds / Family / Profile structure once health tracking lands',
         'Housekeeping: git rm screen-plan.bubbles-backup.jsx after refactor lands; decide uploads/ vs references/'
       ],
       blockers: [],
-      updated: '2026-05-09', subprojects: []
+      updated: '2026-05-19', subprojects: []
     },
     {
       id: 'inkwell', name: 'Wyrdspinner', category: 'iOS TestFlight · Live Web · Android Eventual',
-      status: 'active', statusLabel: 'TESTFLIGHT',
-      summary: 'Build 3 on Ron\'s iPhone via TestFlight Internal Testing as of 2026-05-15. Polish branch (polish/iphone-tf-feedback-2026-05-13) grew to 25 commits — iPhone playthrough fixes, header redesign + drawer nav, theme system overhaul with Phosphor icon system + light/dark mode + WCAG contrast badges, content boundaries realigned to App Store compliance, iOS Info.plist hardened (no more export-compliance dialog on upload), card/button text sizing fixes. Awaits master merge after Ron\'s Build 3 iPhone playthrough. Web version continues at inkwell-story-engine.vercel.app for BYOK users (legacy URL 307→wyrdspinner-story-engine.vercel.app).',
+      status: 'active', statusLabel: 'PHASE 2 BILLING',
+      summary: 'Phase 1 billing foundation landed end-to-end 2026-05-19 (master tip 198f504, 6 commits on master since v1.0-pre-billing tag, all green, smoke test passed against live Supabase project). v1.0-pre-billing tag at 25a0af2 (Build 12) is the static rollback anchor. 14 IAPs at Ready to Submit in App Store Connect + Schedule 2+3 accepted + Small Business Program enrolled (15% commission tier). Builds 5/6/8/9/10/11/12 shipped to TestFlight Internal Testing across 2026-05-15→18 from Mac-Tink. Phase 2 (StoreKit + paywall + token chip + gemini-proxy + storekit-webhook) is the next major arc — ~2 weeks per spec. Web version continues at inkwell-story-engine.vercel.app for BYOK users (legacy URL 307→wyrdspinner-story-engine.vercel.app).',
       steps: [
         '✅ Apple Developer Program enrolled 2026-05-10 (Sqrrlbrain Studio LLC, Organization tier)',
         '✅ Inkwell → Wyrdspinner rebrand 2026-05-10/11 — site + in-app + repo content; USPTO-clean; wyrdspinner.com bought; new splash screenshots in 5 themes',
@@ -567,20 +569,33 @@
         '✅ QuickStart-skip-Session-Zero regression fix — CAMPAIGN_SCHEMA was stripping guide+prompt fields; startCampaign fallback explicitly said "Let\'s begin Session Zero." Both fixed; QuickStart now lands users in the Prologue directly',
         '✅ Model picker horizontal scroll fix (SetupScreen) — overflowX:auto + touchAction:pan-x + flex:"0 0 auto". Was dragging the entire page on touch',
         '✅ Vercel git-connection reconnected — Inkwell→Wyrdspinner GitHub repo rename had silently broken the integration since 2026-05-10. Master + polish-branch deploys live again',
-        'Master merge of polish branch (auto-deploys to Vercel) — Ron decides after Build 3 iPhone playthrough',
-        'Reader Controls panel (Kindle-style Aa sheet — font slider, line spacing, margins, alignment, rotation lock) — sized for a dedicated build session, Ron driving',
-        'Remainder of emoji-to-icon swap (Flame, Difficulty, sparkle, lock, warning, send-arrow, refresh, pencil, quill) — Ron picks icon style: Lucide stock vs Phosphor multi-weight vs custom Norns/thread SVGs',
-        'Theme builder: second font picker (uiFont alongside bodyFont) — Ron plays with pairings via builder, no per-theme defaults from Tink',
-        'Animation swap to match Wyrdspinner brand (Inkwell-era ink/quill aesthetic doesn\'t fit Norns/thread vibe — Ron parked, no direction yet)',
-        'External TestFlight Beta Review submission — when Ron\'s ready to invite friends; needs Beta App Description + App Review Notes + public TestFlight link',
-        'App Store Review submission — full path: paste Promo Text/Description/Keywords, capture 1320×2868 screenshots, add Review Notes, submit. Wait until polish phase is done',
+        '✅ Polish branch merged to master + Builds 5/6/8/9/10/11/12 shipped to TestFlight 2026-05-15→18 (Build 7 skipped to align with ASC numbering). Cross-Tink coordination pattern (Windows-Tink pre-positions master commits → Mac-Tink runs Xcode validate/distribute) ran cleanly 7 times.',
+        '✅ Reader Controls panel SHIPPED in Build 8 — Aa sheet (text size / line spacing / margins / alignment) as a right-side slide-in panel',
+        '✅ iOS Safari `position:absolute → fixed` pattern standardized across all side-panels (CheatSheet / LedgerPanel / ReaderControlsSheet / HomeConfirmModal / Settings) — closed Build 9-11 positioning bugs surfaced by Ronny\'s iPhone playthrough',
+        '✅ Themes panel redesigned as full-width side-panel + Story Archive title centering fix (Build 12)',
+        '✅ Wordmark drop + drawer rebrand decision — drop in-game header wordmark, move to drawer header (replaces "MENU"), add Home drawer item, free header-left for billing token chip. Bundles with Phase 2 token-chip work, not standalone.',
+        '✅ v1.0-pre-billing tag created at 25a0af2 (Build 12) — annotated, pushed to origin, visible at github.com/Nonstickron/Wyrdspinner/releases/tag/v1.0-pre-billing. Rollback anchor for billing implementation phase.',
+        '✅ Billing-fork strategy: Option A locked — billing work lands directly on master, v1.0-pre-billing as static rollback anchor (no parallel branch maintenance overhead)',
+        '✅ BILLING-SPEC v2 + BILLING-IMPL roadmap docs (Projects/Wyrdspinner/docs/) — Phase 2 sequenced piece-by-piece',
+        '✅ Phase 1 billing foundation landed end-to-end 2026-05-18→19 (6 commits on master, all green): Supabase project created (ref `lwwumpugbvhfximjccru`, us-west-1 free tier), `supabase/migrations/0001_initial.sql` (users/themes/transactions/usage_log/saves tables + RLS + auto-create-user trigger + 4 free themes seeded), `src/supabase.ts` client + `scripts/smoke-supabase.mjs` (end-to-end smoke test PASSED), main.tsx wired for boot anon-sign-in, `Capacitor.isNativePlatform()` Proxy gating so Vercel web demo unaffected, `@supabase/supabase-js@2.106.0` in deps',
+        '✅ All 14 IAPs configured in App Store Connect at Ready to Submit 2026-05-18→19 — 1 Non-Consumable Starter Bundle + 5 Consumable Token Packs + 8 Auto-Renewable Subscriptions in `wyrdspinner_stories` Subscription Group (Group ID 22098763). Subscription Group Localization filled, Levels ranked correctly (Patron=1 highest, descending), Family Sharing decisions logged for Phase 2 webhook',
+        '✅ Apple Schedule 2 (Paid Apps Agreement) + Schedule 3 (Custom App Distribution) accepted 2026-05-18 after layperson safety-check of both schedules + all 5 Exhibits',
+        '✅ Small Business Program enrolled — 15% commission tier (vs 30%) for indie devs earning <$1M/year; approved within 15 days of fiscal month-end',
+        '✅ App Store Connect setup walkthrough doc shipped — `docs/APP-STORE-CONNECT-SETUP.md` (~350 lines, mid-execution Apple-UI gotchas captured: 55-char IAP description limit, exact iPhone screenshot dimensions, Subscription Level 1=highest, Family Sharing-ON permanence, group-level localization separate from per-sub, etc.)',
+        '🔥 Phase 2 billing — NEXT MAJOR ARC, ~2 weeks per spec: StoreKit wiring (`src/billing/storekit.ts`), paywall sheet (`src/components/PaywallSheet.tsx`), header refactor with token chip bundled (`src/components/TokenChip.tsx` + drop wordmark + drawer rebrand), gemini-proxy Supabase function (`supabase/functions/gemini-proxy/`), storekit-webhook for App Store Server Notifications (`supabase/functions/storekit-webhook/`). Suggested sub-arc order: (a) header refactor + TokenChip stub → (c) Supabase server scaffolding → (b) StoreKit + paywall last.',
+        'Paid Apps Agreement completion (Ronny-owned) — Mercury business bank account approved + funded 2026-05-19, next step is entering routing/account in App Store Connect → Tax & Banking. Then EU DSA trader disclosure (yes-trader) + W-9 with LLC classification confirmed (CPA consult recommended for disregarded-entity-vs-S-Corp fork).',
+        'Region pricing overrides (UK/EU/JP per spec) — 14 IAPs × 4 regions = 56 price entries. Apple auto-conversion works for dev; do before production launch.',
+        'Wyrdspinner polish backlog (deferable around Phase 2): Themes slide-in animation needs state hoisting; Settings panel framer-motion → CSS-transition refactor; theme builder bodyFont/uiFont split; emoji-to-icon HEAT/DIFFS/VERBOSITIES remainder; bundle code-splitting candidates (Reader Controls / Themes / SetupScreen — Vite still warns at ~750kB minified / 207kB gzipped)',
+        'Animation swap to match Wyrdspinner brand (Inkwell-era ink/quill aesthetic doesn\'t fit Norns/thread vibe — Ronny parked, no direction yet)',
+        'External TestFlight Beta Review submission — when Ronny\'s ready to invite friends + has a paywall-enabled build (deferred until Phase 2 ships)',
+        'App Store Review submission — full path: paste Promo Text/Description/Keywords, capture 1320×2868 screenshots, add Review Notes, submit. IAPs become purchasable only when bundled with this submission.',
         'Phase B: image generation (separate Imagen key, prompt-conditional [SCENE_IMAGE: marker)',
         'Phase (a.2): Report-this-response UI hook + Firestore drop point',
         'Phase (b): deliberate red-team session pre-public-launch',
         'Daughter\'s real screen-reader feedback (VoiceOver / NVDA) — natural next a11y step'
       ],
       blockers: [],
-      updated: '2026-05-15', subprojects: []
+      updated: '2026-05-19', subprojects: []
     },
     {
       id: 'sqrrlbrain-site', name: 'sqrrlbrain.com', category: 'Studio Website / Portfolio',
@@ -607,13 +622,14 @@
         'Carousel hero auto-advance — aria-live for screen-reader announcements (a11y deferred from 4cbcc39)',
         'Per-page heading-hierarchy audit — a11y polish, deferred',
         'Per-project detail pages under /work/<slug>.html — Advent Health book box / tree display / finished charger station, each with gallery + expanded copy (waiting on art dept assets)',
-        'Resubmit Apple Developer enrollment — site is review-ready',
-        'Capture real Wyrdspinner screenshots once app is stable enough for full chapter playthrough',
+        '✅ Apple Developer Program enrollment COMPLETED 2026-05-10 (Sqrrlbrain Studio LLC, Organization tier) — site successfully passed review',
+        '✅ Wyrdspinner teaser screenshots captured + live on /wyrdspinner.html (hero / Pick-a-world / choice-moment / themes grid — all from real builds)',
+        'Capture additional Wyrdspinner screenshots from a polished post-Phase-2 build for /work portfolio entry once paywall + billing flows are visible',
         'Replace dashboard Process button (clipboard-copy, broken on iOS Chrome/Safari WebKit) with Discord webhook push-to-Tink — POST bundled notes directly to Discord channel where Tink reads them',
         'Voice pass on /wyrdspinner.html and /sqrrledaway.html teaser pages — Ron\'s task via Dreamweaver Live View'
       ],
       blockers: [],
-      updated: '2026-05-09',
+      updated: '2026-05-19',
       subprojects: []
     },
     {
@@ -623,9 +639,10 @@
       steps: [
         'Add free-text note field on each invoice / job-log item — for client reference numbers, feedback, reminders',
         'Add "Last edited" timestamp on the note field so I can see when I added each note',
+        'Add Capital Movements section — owner contributions, member draws, inter-account transfers, refunds (balance-sheet events, separate from P&L). Surfaced 2026-05-19 when first $100 owner contribution to Mercury had no logging path.',
         'Plan needs to be scoped before implementation — needs review of current data model'
       ],
-      blockers: [], updated: '2026-05-05', subprojects: []
+      blockers: [], updated: '2026-05-19', subprojects: []
     },
     {
       id: 'tract', name: 'TRACT', category: 'Print-on-Demand Apparel',
@@ -645,11 +662,13 @@
       summary: '706-recipe DIY skincare library. Phases 4–10 complete. Strategy locked 2026-05-05 — three-layer revenue model (affiliate + Pro subscription + branded bundles), build phasing and partner outreach order documented in CRUCIBLE-STRATEGY.md.',
       steps: [
         '✅ Strategy doc locked: three-layer revenue model + build phasing + partner outreach order (CRUCIBLE-STRATEGY.md)',
-        'Execute against the strategy doc — phasing TBD by Ron',
+        '✅ Rename to Goblin Almanac DECIDED 2026-05-11 — cute female WoW-style goblin alchemist mascot, Ghibli / vintage-illustration polish. Execution deferred until Wyrdspinner ships to External TestFlight (currently Internal-only).',
+        'Execute against the strategy doc — phasing TBD by Ronny',
+        'Brand-rebrand execution: rename repo + folders + UI from Crucible → Goblin Almanac, sweep brand-semantic assets (animations, splash imagery, icon style, palette, metaphor-bearing microcopy) per the rebrand-asset-reaudit rule. Trigger: Wyrdspinner External TestFlight ship.',
         'Explore fromnaturewithlove.com as additional recipe source (optional)',
         'Develop 5 Daughters brand identity (downstream)'
       ],
-      blockers: [], updated: '2026-05-05', subprojects: []
+      blockers: [], updated: '2026-05-19', subprojects: []
     },
     {
       id: 'cypress', name: 'Cypress', category: 'Worldbuilding · Graphic Novel',
