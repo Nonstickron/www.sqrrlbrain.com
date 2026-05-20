@@ -538,8 +538,8 @@
     },
     {
       id: 'inkwell', name: 'Wyrdspinner', category: 'iOS TestFlight · Live Web · Android Eventual',
-      status: 'active', statusLabel: 'PHASE 2 BILLING',
-      summary: 'Phase 1 billing foundation landed end-to-end 2026-05-19 (master tip 198f504). v1.0-pre-billing tag at 25a0af2 (Build 12) is the static rollback anchor. 14 IAPs at Ready to Submit + Schedule 2+3 accepted + Small Business Program enrolled (15% commission). Builds 5/6/8/9/10/11/12 shipped to TestFlight Internal Testing. **Paid Apps Agreement substantially advanced 2026-05-19 evening: Mercury bank account approved + funded + submitted to ASC (Processing), EU DSA trader disclosure submitted, W-9 correction in flight after errors found and reported to Apple support.** Phase 2 (StoreKit + paywall + token chip + gemini-proxy + storekit-webhook) is the next major arc — ~2 weeks per spec. Web version continues at inkwell-story-engine.vercel.app for BYOK users (legacy URL 307→wyrdspinner-story-engine.vercel.app).',
+      status: 'active', statusLabel: 'PHASE 1 COMPLETE',
+      summary: '**Phase 1 of the billing build verified end-to-end 2026-05-19 night** (master tip ff3a71d). Sub-arc D (Apple Sign In + anon→Apple linking flow) shipped in Build 14 after a Build 13 incident exposed three concurrent bugs (missing .env.local on Mac, SwiftPM version-range conflict, missed Xcode capability). All three fixed; auth/link flow verified on real iPhone (anon→Apple link preserves auth.uid + tokens + saves; session persists across force-quit). v1.0-pre-billing tag at 25a0af2 (Build 12) remains rollback anchor. 14 IAPs at Ready to Submit + Schedule 2+3 accepted + Small Business Program enrolled (15% commission). **Paid Apps Agreement substantially advanced 2026-05-19 evening: Mercury bank account approved + funded + submitted to ASC (Processing), EU DSA trader disclosure submitted, W-9 correction in flight after errors found and reported to Apple support.** Phase 2 sub-arcs A→B→C→E→F→G remain (header refactor + TokenChip stub is Sub-arc A, the next visible win). Web version continues at inkwell-story-engine.vercel.app for BYOK users (legacy URL 307→wyrdspinner-story-engine.vercel.app).',
       steps: [
         '✅ Apple Developer Program enrolled 2026-05-10 (Sqrrlbrain Studio LLC, Organization tier)',
         '✅ Inkwell → Wyrdspinner rebrand 2026-05-10/11 — site + in-app + repo content; USPTO-clean; wyrdspinner.com bought; new splash screenshots in 5 themes',
@@ -582,7 +582,11 @@
         '✅ Apple Schedule 2 (Paid Apps Agreement) + Schedule 3 (Custom App Distribution) accepted 2026-05-18 after layperson safety-check of both schedules + all 5 Exhibits',
         '✅ Small Business Program enrolled — 15% commission tier (vs 30%) for indie devs earning <$1M/year; approved within 15 days of fiscal month-end',
         '✅ App Store Connect setup walkthrough doc shipped — `docs/APP-STORE-CONNECT-SETUP.md` (~350 lines, mid-execution Apple-UI gotchas captured: 55-char IAP description limit, exact iPhone screenshot dimensions, Subscription Level 1=highest, Family Sharing-ON permanence, group-level localization separate from per-sub, etc.)',
-        '🔥 Phase 2 billing — NEXT MAJOR ARC, ~2 weeks per spec: StoreKit wiring (`src/billing/storekit.ts`), paywall sheet (`src/components/PaywallSheet.tsx`), header refactor with token chip bundled (`src/components/TokenChip.tsx` + drop wordmark + drawer rebrand), gemini-proxy Supabase function (`supabase/functions/gemini-proxy/`), storekit-webhook for App Store Server Notifications (`supabase/functions/storekit-webhook/`). Suggested sub-arc order: (a) header refactor + TokenChip stub → (c) Supabase server scaffolding → (b) StoreKit + paywall last.',
+        '✅ **Sub-arc D shipped end-to-end 2026-05-19 night (Builds 13+14)** — Apple Sign In wrapper (`src/auth/appleSignIn.ts`) + anon→Apple linking (`src/auth/linkIdentity.ts`) using Supabase\'s `linkIdentity` id_token overload + Settings Account section UI + Xcode Sign In with Apple capability committed (`0b640b1`). Build 14 verified on iPhone: link succeeds, account row preserved, session persists across force-quit. Phase 1 complete.',
+        '✅ Build 13 incident captured in BILLING-IMPL.md — three concurrent bugs (missing .env.local on Mac → module-init throw black-screened launch; SwiftPM version-range conflict in apple-sign-in plugin; Xcode capability missed in archive). All three fixed for Build 14. Hardening: supabase.ts no longer throws at module init; main.tsx renders visible cream config-error banner instead. Lesson: verify capability attachment via filesystem audit before claiming attached.',
+        '🔥 **Sub-arc A NEXT (per locked Phase 2 sub-arc order D→A→B→C→E→F→G)** — Header refactor + TokenChip stub: drop in-game wordmark, move to drawer header (replacing "MENU"), add Home drawer item, build `TokenChip.tsx` with stub data in freed header-left slot. Visible Build 15 win. Bundles together per spec — don\'t ship the header reshuffle alone.',
+        'Phase 2 remaining sub-arcs after A: B (gemini-proxy Edge Function with JWT-auth + token debit + token-bucket rate limit), C (storekit-webhook Edge Function for App Store Server Notifications + receipt validation + refund handling), E (StoreKit client + all 14 SKUs in Sandbox), F (PaywallSheet UI + 5-disclosure compliance + Flash fallback), G (Settings polish — Token detail, Token history, Sub management, Restore Purchases entry).',
+        'patch-package follow-up — apple-sign-in/Package.swift SPM range was hand-patched on Mac (`"7.0.0"..<"9.0.0"` instead of published `>=7.0.0 <8.0.0`). Without patch-package + committed `patches/` dir, next fresh `npm install` after a package-lock change re-breaks SPM resolution.',
         '✅ Mercury business bank account approved + funded 2026-05-19 (LLC owner contribution $100 from SoFi). 2FA enabled (SMS bridge, passkey upgrade planned).',
         '✅ EU DSA trader disclosure submitted to ASC 2026-05-19 evening (chose "I am a trader" with LLC home address publicly displayed; standard small-indie-dev posture)',
         '⏳ Mercury bank account submitted to ASC → Processing 2026-05-19 evening. Apple micro-deposit + name-match check, usually 1-3 business days.',
@@ -599,7 +603,7 @@
         'Daughter\'s real screen-reader feedback (VoiceOver / NVDA) — natural next a11y step'
       ],
       blockers: [],
-      updated: '2026-05-19', subprojects: []
+      updated: '2026-05-19-night', subprojects: []
     },
     {
       id: 'sqrrlbrain-site', name: 'sqrrlbrain.com', category: 'Studio Website / Portfolio',
