@@ -716,12 +716,12 @@ table.inv-tbl tr.waived td:last-child{text-decoration:line-through}
         <h3>Company / invoicer info</h3>
         <div class="card">
           <div class="g2">
-            <div class="fgroup"><label>Company name</label><input id="s-company" value="SqrrlBrain Studio LLC" /></div>
-            <div class="fgroup"><label>Your name</label><input id="s-name" value="Ron Goodrich" /></div>
+            <div class="fgroup"><label>Company name</label><input id="s-company" value="Sqrrlbrain Studio LLC" /></div>
+            <div class="fgroup"><label>Your name</label><input id="s-name" value="Ronny Goodrich" /></div>
             <div class="fgroup"><label>Address</label><input id="s-address" value="2721 Victory Palm Drive" /></div>
             <div class="fgroup"><label>Phone</label><input id="s-phone" value="386-589-9792" /></div>
-            <div class="fgroup"><label>Billing email</label><input id="s-email" placeholder="hello@sqrrlbrain.com" /></div>
-            <div class="fgroup"><label>Payment instructions</label><input id="s-payment" value="paypal: rgoodrich@gmail.com" /></div>
+            <div class="fgroup"><label>Billing email</label><input id="s-email" value="hello@sqrrlbrain.com" /></div>
+            <div class="fgroup"><label>Payment instructions</label><input id="s-payment" value="Mercury Payment Link (preferred) · ACH to Sqrrlbrain Studio LLC · Check payable to Sqrrlbrain Studio LLC" /></div>
           </div>
         </div>
       </div>
@@ -876,8 +876,8 @@ else {
   async function loadSettings() {
     const doc = await db.collection("users").doc(currentUser.uid).collection("meta").doc("settings").get();
     settings = doc.exists ? doc.data() : {
-      company:"SqrrlBrain Studio LLC",name:"Ron Goodrich",address:"2721 Victory Palm Drive",
-      phone:"386-589-9792",email:"",payment:"paypal: rgoodrich@gmail.com",
+      company:"Sqrrlbrain Studio LLC",name:"Ronny Goodrich",address:"2721 Victory Palm Drive",
+      phone:"386-589-9792",email:"hello@sqrrlbrain.com",payment:"Mercury Payment Link (preferred) · ACH to Sqrrlbrain Studio LLC · Check payable to Sqrrlbrain Studio LLC",
       costKg:25,markup:1.5,machineRate:6,laborRatePrint:25,
       craftMarkup:2,craftRate:30,
       nextInv:5,terms:30
