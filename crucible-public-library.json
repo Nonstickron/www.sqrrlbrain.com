@@ -4,8 +4,8 @@
     "library": "crucible-public",
     "schemaVersion": "1.1.0",
     "createdAt": "2026-05-11",
-    "lastUpdatedAt": "2026-05-11",
-    "recipeCount": 50,
+    "lastUpdatedAt": "2026-05-22",
+    "recipeCount": 51,
     "targets": {
       "demoReadiness": 50,
       "scope": "grow over time; not capped"
@@ -27,7 +27,7 @@
     "bundleStatusValues": ["public", "candidate", "bundle-only"],
     "bundleCandidates": {
       "_doc": "Recipe IDs flagged as candidates for future Sqrrlbrain-owned IAP bundles (Phase 6 in CRUCIBLE-STRATEGY § sequencing). Currently sit in the free public library; can be 'pulled and switched over' to paid bundles when Ron decides. Only sb-* (sqrrlbrain-original) and sd-* (sqrrlbrain-derived) entries are eligible — pd-* (public-domain) entries cannot be bundled as proprietary Sqrrlbrain content because they remain in the public domain regardless of where we publish them.",
-      "ids": ["sb-001", "sb-002", "sb-003", "sb-004", "sb-005", "sb-006", "sd-001", "sd-002", "sd-003", "sd-004", "sd-005"],
+      "ids": ["sb-001", "sb-002", "sb-003", "sb-004", "sb-005", "sb-006", "sb-007", "sd-001", "sd-002", "sd-003", "sd-004", "sd-005"],
       "suggestedGroupings": {
         "sparkle-pack": {
           "ids": ["sb-002", "sd-002"],
@@ -787,6 +787,50 @@
         "verifiedBy": "Ron Goodrich (locked as personal go-to formula 2026-05-11; multiple batches produced)",
         "verifiedAt": "2026-05-11",
         "notes": "Ron's locked-in personal body butter recipe, finalized through iteration on 2026-05-11. Started from a generic shea + sunflower + Vitamin E base, evolved through swaps: sunflower → 20% hemp + 80% apricot kernel; Vitamin E dropped to make room for higher fragrance load; fragrance bumped from 0.5% to 2% (max safe for leave-on). The 15% corn starch is the texture differentiator — gives a silky, matte finish instead of the typical greasy shea feel. This is the body butter Ron uses personally and may eventually commercialize as a Sqrrlbrain product."
+      }
+    },
+    {
+      "id": "sb-007",
+      "name": "Solid Cold-Process Dish Soap Block",
+      "category": "cleaning",
+      "tags": ["modern", "dish-soap", "cold-process", "coconut-soap", "household-cleaner", "lye-required", "no-bicarbonate", "shelf-stability-untested"],
+      "heatRequired": true,
+      "equipment": [
+        "digital kitchen scale (0.1 g resolution)",
+        "immersion blender (stick blender)",
+        "heat-safe glass or heavy-duty plastic pitcher (lye pitcher)",
+        "stainless steel or heavy-duty pot (oil melt)",
+        "silicone mold (loaf or individual cavities)",
+        "safety goggles",
+        "chemical-resistant gloves",
+        "long-sleeve shirt + closed-toe shoes",
+        "well-ventilated workspace (stove vent or outdoors)"
+      ],
+      "description": "A solid dish-soap block formulated for grease-cutting performance — high-cleansing coconut-oil soap base with soy wax for bar hardness, citric acid pre-reacted into sodium citrate as a water-softening chelator that prevents soap scum and glass filming, and optional citrus essential oils for kitchen scent. Cold-process construction at 0% superfat: every fat molecule fully saponifies, so no unreacted oils linger to leave an oily film on dishes. Single-use lather is built by rubbing a wet brush across the block — the bar sits in a soap dish or ramekin between uses.",
+      "ingredients": [
+        { "name": "Coconut Oil", "pct": 47.5 },
+        { "name": "Distilled Water", "pct": 20.9 },
+        { "name": "Soy Wax", "pct": 15.8 },
+        { "name": "Sodium Hydroxide (Lye)", "pct": 12.0 },
+        { "name": "Citric Acid", "pct": 1.9 },
+        { "name": "Essential Oils (lemon, lime, or orange)", "pct": 1.9 }
+      ],
+      "notes": "PROPORTIONS (oil-base internal ratio vs total batch): coconut oil and soy wax are 75% / 25% of the oil portion respectively. Citric acid is 3% of total oil weight. The 0% superfat target is what makes this a DISH soap rather than a body soap — every fat molecule fully saponifies (no unreacted oils to leave an oily film on glassware). Standard body soap leaves 5-8% superfat for skin conditioning; that 'feature' is a defect in dishware soap.\n\nLYE MATH: 86 g lye saponifies the 500 g oil base at 0% superfat. Citric acid neutralizes some lye on contact (~0.6 g lye per 1 g citric acid), so an additional 9 g of lye is added to compensate. Total lye: 95 g. If you change the oil weights, recalculate via a soap calculator (SoapCalc / Bramble Berry) and re-derive the citric-acid offset.\n\nINSTRUCTIONS:\n1. Put on safety gear (goggles + chemical-resistant gloves + long sleeves). Work near a stove vent or outdoors — the lye solution releases fumes.\n2. Lye solution: Weigh distilled water (165 g) into the lye pitcher. Stir 15 g citric acid in until dissolved. Slowly pour 95 g sodium hydroxide INTO the water/citric mix (never the other direction) and stir gently until clear. The solution heats to ~180°F and steams — do not lean over it. Set aside to cool.\n3. Oil melt: Weigh coconut oil (375 g) and soy wax (125 g) into the pot. Heat gently until fully liquid and clear (soy wax has the higher melting point, so wait until everything is transparent). Remove from heat.\n4. Temperature target: Let both the lye solution and the oils cool to between 110°F and 120°F (43°C – 49°C). Soy wax hardens fast — don't let the oils drop below 110°F or you'll get false trace.\n5. Combine: Slowly pour the lye solution into the melted oils. Pulse with immersion blender to emulsify.\n6. Trace: High-coconut + soy formulations reach pudding-consistency trace very quickly (sometimes under 60 seconds). If using essential oils, stir them in JUST as the mixture begins to emulsify — adding after trace risks seizing.\n7. Pour: As soon as the mixture is uniform and slightly thickened, pour into silicone mold and smooth the top.\n8. Unmold: Check at 12-24 hours. High-coconut bars harden fast and become brittle if left too long — cut loaf molds into bars as soon as the loaf is firm enough to slice cleanly.\n9. Cure: Place bars in a well-ventilated area for 3-4 weeks. Technically safe to use within days once saponification is complete, but the cure period allows excess water to evaporate, producing a significantly harder, longer-lasting block.\n\nUSAGE: Place the cured block in a small ramekin, ceramic soap dish, or sink caddy. Wet a stiff-bristled dish brush or scrub sponge, rub it vigorously across the top of the block to build a thick lather, and wash dishes as normal. Rinse the bar after each use and let it dry between sessions so it doesn't turn to mush.\n\nWHY THIS WORKS (chemistry digest):\n• Saponified coconut oil produces sodium cocoate — a fast-lathering, hard-water-tolerant soap that strips oils effortlessly.\n• Saponified soy wax contributes structural hardness so the bar doesn't dissolve into mush when scrubbed wet.\n• Citric acid + sodium hydroxide pre-react to form SODIUM CITRATE, which chelates calcium and magnesium ions in tap water. Result: no soap scum, no glass filming, clean rinse.\n• Soap molecules have a hydrophilic head and a hydrophobic tail. The tails embed in grease, the heads hold water; the resulting micelles wash away with the rinse, taking grease with them.\n• 0% superfat means no unreacted oils linger — critical for dishware (any superfat would leave a film on glasses).\n\nVARIANTS:\n• Unscented: omit essential oils; redistribute the 1.9% to coconut oil OR skip entirely and recompute lye for the smaller oil weight.\n• Harder, slower-dissolving bar: drop coconut to 70% of oils and bump soy wax to 30% — slightly less lather volume but longer-lasting block.\n• Higher-cleansing for heavy grease: replace 10% of the soy wax with castor oil for boosted lather + grease emulsification. Recompute lye.\n• Wood-cutting-board safe / food-contact dishes: use the unscented variant — fragrance oils are not food-grade.\n\nSAFETY (READ BEFORE STARTING):\n• Sodium hydroxide is a strong base; skin contact causes chemical burns. Eye splashes cause permanent damage without immediate flushing. Required PPE: goggles, chemical-resistant gloves, long sleeves, closed-toe shoes, ventilation.\n• Always add LYE TO WATER, never water to lye — reversed addition causes violent splashing.\n• The lye + water + citric reaction heats the solution to ~180°F. Heat-safe pitchers only (HDPE #2 or borosilicate glass).\n• Keep raw soap batter away from children and pets until fully cured — pre-cure batter is still highly alkaline (pH 12+).\n• If lye contacts skin: flush with cool water for 15+ minutes. DO NOT use vinegar — exothermic neutralization makes the burn worse. Water only.\n• UNTESTED formulation — see attribution.notes. Make a 1/4-size test batch (~125 g oils) before scaling up.",
+      "uuid": "2c983934-f33d-43b0-beba-3a07155db7e3",
+      "source": "sqrrlbrain-original",
+      "attribution": {
+        "displayName": "Sqrrlbrain Studio",
+        "author": "Ron Goodrich (curator)",
+        "originalUrl": null,
+        "originalSource": null,
+        "originalRecipe": null,
+        "originalUnits": null,
+        "license": null,
+        "licenseUrl": null,
+        "dateAdded": "2026-05-22",
+        "verifiedBy": "Tink (auto-extracted; Ron Goodrich curated)",
+        "verifiedAt": "2026-05-22",
+        "notes": "Formulation drafted by Gemini from a user-supplied commercial-product ingredient list (specific product not retained) and curated by Ron Goodrich for the Crucible public library. The formulation choices — 75% coconut / 25% soy wax oil split, 0% superfat target, 3% citric acid for sodium-citrate chelation, and the +9 g lye correction for citric-acid neutralization — reflect Gemini's analysis of saponification chemistry for the given ingredient set; not validated against any specific commercial product. Model outputs aren't copyrightable, so this lands as sqrrlbrain-original with full provenance disclosure rather than a separate source type. UNTESTED — no batches produced as of 2026-05-22. Run a 1/4-size test batch (~125 g oils) before committing materials at full scale. Schema-tagged 'shelf-stability-untested' until first batch cures and is verified. See feedback_legal_procedural_safety for the provenance-disclosure rule."
       }
     },
     {
