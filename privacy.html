@@ -189,7 +189,7 @@
   <div class="page-wrap">
     <p class="eyebrow">Legal</p>
     <h1>Privacy Policy</h1>
-    <p class="effective">Effective date: May 3, 2026 &nbsp;&middot;&nbsp; Sqrrlbrain Studio LLC</p>
+    <p class="effective">Effective date: May 26, 2026 &nbsp;&middot;&nbsp; Sqrrlbrain Studio LLC</p>
 
     <p>Sqrrlbrain Studio LLC ("we," "our," or "us") operates the website at <a href="https://sqrrlbrain.com">sqrrlbrain.com</a> and develops software products including <strong>Wyrdspinner</strong> (formerly Inkwell). This Privacy Policy describes how we handle information across the site and our apps.</p>
 
@@ -199,38 +199,100 @@
     <h2>Information collected through our apps</h2>
 
     <h2>Wyrdspinner</h2>
-    <p>When you use Wyrdspinner, we may collect the following:</p>
+    <p>Wyrdspinner offers two paths for AI-powered storytelling. What we collect depends on which path you use.</p>
+
+    <p><strong>IAP path (Sign in with Apple + In-App Purchases).</strong> When you sign in with Apple to use Wyrdspinner's token-based service, we collect:</p>
     <ul>
-      <li><strong>Account information</strong> &mdash; email address and authentication credentials used to create and access your account.</li>
-      <li><strong>Story data</strong> &mdash; your choices, story progress, saved adventures, and any custom themes or settings you create within the app.</li>
-      <li><strong>Usage data</strong> &mdash; general information about how you interact with the app, such as session duration and feature usage, used solely to improve the experience.</li>
+      <li><strong>Apple identifier</strong> &mdash; a stable but opaque user identifier provided by Apple when you sign in. We never receive your real Apple ID password. If you choose Apple's "Hide My Email" option, the relay address is what we see; we never receive your underlying personal email through Sign in with Apple.</li>
+      <li><strong>Email address (optional)</strong> &mdash; only if you choose to share your real email during Sign in with Apple (rather than the private-relay option). Used for account-related transactional communication only, never for marketing.</li>
+      <li><strong>Transaction records</strong> &mdash; when you make an in-app purchase, Apple sends us a signed receipt confirming the purchase. We use this to grant tokens or activate your subscription. We never see your payment card number, billing address, or Apple ID password &mdash; Apple handles all payment processing on their side.</li>
+      <li><strong>Token balance and subscription state</strong> &mdash; your current token count plus your subscription tier (if any).</li>
+      <li><strong>Usage metadata</strong> &mdash; for each AI-generated action, we log the action type (e.g., chapter generation), the model used (e.g., Gemini 2.5 Flash), and the token counts consumed. This powers the in-app Token History UI and lets us monitor per-action cost. We do <strong>not</strong> log the content of your prompts, story text, character data, or saves &mdash; only the metadata about the action itself.</li>
     </ul>
 
-    <p><strong>AI-generated content.</strong> Wyrdspinner uses Google's Gemini API to generate story narrative in response to your choices. Story prompts and context are transmitted to Google's API to produce this content. We do not use your story data to train any AI models. Google's handling of API data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+    <p><strong>BYOK path (Bring Your Own Key).</strong> If you choose to provide your own Google Gemini API key instead of using our token service, we collect <strong>nothing</strong> on our servers. Your API key and all gameplay (prompts, story responses, saves, choices) stay on your device. Your API key never reaches our servers; it is sent directly from your device to Google's API.</p>
+
+    <p><strong>Story data (both paths).</strong> Your choices, story progress, saved adventures, custom themes, and reader settings are stored locally on your device only. We never receive this data on our servers. Deleting the app from your device removes this data; you can also export it at any time as a portable file via the in-app Export feature.</p>
+
+    <p><strong>AI-generated content.</strong> Wyrdspinner uses Google's Gemini API to generate story narrative in response to your choices. Story prompts and context are transmitted to Google's API to produce this content. We do not use your story data to train any AI models, and Google's API terms similarly state that API content is not used to train their models. Google's handling of API data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
 
     <p><strong>Other apps.</strong> Additional Sqrrlbrain Studio apps will be added to this policy as they ship, with their own subsection describing what they collect and how it is used.</p>
 
     <h2>How we use information</h2>
     <ul>
-      <li>To provide, operate, and improve our website and apps</li>
+      <li>To provide, operate, secure, and improve our website and apps</li>
+      <li>To process in-app purchases and grant the corresponding tokens or subscription entitlements</li>
       <li>To save and restore your data within the apps where applicable</li>
       <li>To respond to support requests or questions you send us</li>
+      <li>To comply with legal obligations (tax records, court orders, regulatory requests)</li>
+      <li>To detect, prevent, and respond to fraud, abuse, or security incidents</li>
     </ul>
-    <p>We do not sell, rent, or share your personal information with third parties for marketing purposes.</p>
+    <p>We do not sell, rent, or share your personal information with third parties for marketing purposes or cross-context behavioral advertising.</p>
 
-    <h2>Data storage and security</h2>
-    <p>Account and app data is stored securely. We use industry-standard measures to protect your information, though no method of transmission or storage is 100% secure.</p>
+    <h2>Third-party services we use</h2>
+    <p>We rely on the following third parties to operate Wyrdspinner. They process limited data on our behalf as documented below:</p>
+    <ul>
+      <li><strong>Apple Inc.</strong> &mdash; Sign in with Apple authentication, App Store and TestFlight distribution, In-App Purchase processing, and App Store Server Notifications. Apple's data handling is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
+      <li><strong>Supabase Inc.</strong> &mdash; backend database and authentication infrastructure. Stores your Apple identifier, transaction records, token balance, subscription state, and usage metadata. Server region: <em>us-east-1</em> (United States). Supabase's data handling is governed by <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</li>
+      <li><strong>Google LLC (Gemini API)</strong> &mdash; generates AI story narrative. Receives the prompts and context needed to produce each response. Google's API terms state that API content is not used to train their models. Google's data handling is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+      <li><strong>Vercel Inc.</strong> &mdash; hosts the Wyrdspinner web demo at inkwell-story-engine.vercel.app and our marketing site sqrrlbrain.com. Vercel's data handling is governed by <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel's Privacy Policy</a>.</li>
+    </ul>
+    <p>We may also disclose information when required by law (court orders, subpoenas, regulatory requests), to enforce our Terms of Service, or to investigate suspected fraud or security incidents. We do not share data with data brokers, ad networks, or analytics firms.</p>
+
+    <h2>Data retention</h2>
+    <p>We retain personal data only as long as needed to provide the service or as required by law:</p>
+    <ul>
+      <li><strong>Account data</strong> (Apple identifier, email, token balance, subscription state, usage metadata, transaction records) &mdash; retained while your account exists. When you delete your account via Settings &rarr; Account &rarr; Delete Account, all of this data is removed from our active systems immediately, including transaction records.</li>
+      <li><strong>Story content, prompts, saves, custom themes</strong> &mdash; never stored on our servers, so there is nothing for us to retain. These live on your device only; deleting the app removes them.</li>
+      <li><strong>Database backups</strong> &mdash; automated backups are retained on a rolling 30-day basis. Data removed from active systems is also removed from backups within 30 days.</li>
+    </ul>
+
+    <h2>Data storage, security, and breach notification</h2>
+    <p>We use industry-standard security measures to protect your data: encryption in transit (HTTPS/TLS for all client&ndash;server communication), encryption at rest for sensitive fields stored in our database, signed payloads for App Store Server Notifications (JWS verification against Apple's certificate chain), and access controls limiting who can view what data. No method of transmission or storage is 100% secure, however.</p>
+    <p>If we become aware of a security incident that affects your personal data, we will notify affected users and any relevant supervisory authorities as soon as reasonably practicable, given the small-studio nature of this service. We do not commit to a specific notification time window, but we will act in good faith to inform you promptly. Notifications will be sent via the email address on file (if any), via in-app alert, and posted to this Privacy Policy page.</p>
+
+    <h2>Your rights (EU / UK / Switzerland residents)</h2>
+    <p>If you are located in the European Economic Area, United Kingdom, or Switzerland, the General Data Protection Regulation (GDPR) and equivalent UK and Swiss legislation give you the following rights regarding your personal data. <strong>The fastest way to exercise the most common rights is through the app itself</strong>:</p>
+    <ul>
+      <li><strong>Right to erasure</strong> &mdash; tap Settings &rarr; Account &rarr; <strong>Delete Account</strong> in Wyrdspinner. Your account and all associated server-side data is removed immediately. This is self-serve and does not require contacting us.</li>
+      <li><strong>Right to data portability</strong> &mdash; tap Adventures &rarr; <strong>Export</strong> in Wyrdspinner. You will receive a portable file containing your story data, choices, and saves &mdash; the data we don't store on our servers. This is also self-serve.</li>
+      <li><strong>Right of access, right to rectification, right to restriction, right to object, right to withdraw consent</strong> &mdash; email us at <a href="mailto:hello@sqrrlbrain.com">hello@sqrrlbrain.com</a> describing what you need. As a small independent studio with no dedicated legal or operations staff, we cannot commit to a specific response time, but we will handle reasonable requests on a best-efforts basis. If your underlying need is just to remove your data, the self-serve Delete Account option above is faster than anything we could process manually.</li>
+      <li><strong>Right to lodge a complaint</strong> &mdash; with your local data protection supervisory authority if you believe we have mishandled your data.</li>
+    </ul>
+    <p><strong>Legal bases for processing.</strong> Under GDPR Article 6, we process your personal data under one or more of the following bases: <em>contract performance</em> (to provide the in-app services you have purchased); <em>legitimate interests</em> (to operate, improve, and secure the service); and <em>legal obligation</em> (to comply with tax, audit, and other applicable laws). We do not currently rely on consent as a legal basis because we do not run marketing communications or other consent-requiring data uses.</p>
+
+    <h2>Your rights (California residents)</h2>
+    <p>If you are a California resident, the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) give you certain rights regarding your personal information. We currently do not meet the revenue, consumer-volume, or data-sales thresholds that legally bind us under CCPA, but we honor these rights for all California users on a best-efforts basis. As with EU residents, <strong>the fastest path is in-app self-serve</strong>:</p>
+    <ul>
+      <li><strong>Right to delete</strong> &mdash; tap Settings &rarr; Account &rarr; <strong>Delete Account</strong> in Wyrdspinner. Self-serve, immediate.</li>
+      <li><strong>Right to know, right to correct</strong> &mdash; email us at <a href="mailto:hello@sqrrlbrain.com">hello@sqrrlbrain.com</a>. Best-efforts response, no specific time commitment given small-studio capacity.</li>
+      <li><strong>Right to opt-out of sale or sharing</strong> &mdash; we do not sell or share your personal information for cross-context behavioral advertising, so there is nothing to opt out of. We would update this policy and provide an opt-out mechanism before changing that.</li>
+      <li><strong>Right to limit use of sensitive personal information</strong> &mdash; we do not collect sensitive personal information categories (health data, biometrics, precise location, contents of mail/email, etc.).</li>
+      <li><strong>Right to non-discrimination</strong> &mdash; we will not discriminate against you for exercising these rights.</li>
+    </ul>
+
+    <h2>Cookies and similar technologies</h2>
+    <p>The Sqrrlbrain Studio website (sqrrlbrain.com) does not set marketing or analytics cookies.</p>
+    <p>The Wyrdspinner app uses session tokens and local storage to keep you signed in and remember your settings. These include:</p>
+    <ul>
+      <li><strong>Authentication session tokens</strong> &mdash; issued by Supabase after you sign in with Apple. Used to keep you signed in across app launches. Stored in your device's local storage, not browser cookies.</li>
+      <li><strong>Local preferences</strong> &mdash; your theme choice, reader settings, save slots, age-gate acknowledgement, and other UI state. Stored in your device's local storage.</li>
+    </ul>
+    <p>None of these are used for cross-site tracking or behavioral advertising. The BYOK path uses no session tokens at all &mdash; your API key and all gameplay live entirely on your device.</p>
 
     <h2>Children's privacy</h2>
-    <p>Our apps are not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+    <p>Wyrdspinner is rated 16+ in App Store ratings and includes an in-app age gate confirming users are 18 or older. We do not knowingly collect personal information from children under 13 (the COPPA threshold under US law), and we discourage anyone under 18 from using the app due to content intensity. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+
+    <h2>International data transfers</h2>
+    <p>Our servers are located in the United States. If you use Wyrdspinner from outside the US, your data will be transferred to and processed in the US, which may have different data protection laws than your country of residence. By using our services, you consent to this transfer. For users in the EU/UK/Switzerland, transfers rely on Standard Contractual Clauses or other appropriate safeguards as required by GDPR Chapter V.</p>
 
     <h2>Changes to this policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will notify users of material changes by updating the effective date above. Continued use of our website or apps after changes constitutes acceptance of the updated policy.</p>
+    <p>We may update this Privacy Policy from time to time. We will notify users of material changes by updating the effective date above and, where the changes are significant, by in-app notification or email. Continued use of our website or apps after changes constitutes acceptance of the updated policy.</p>
 
     <h2>Contact</h2>
-    <p>Questions about this policy? Reach us at:<br>
+    <p>Questions about this policy, or want to exercise any of the rights described above? Reach us at:<br>
     <a href="mailto:hello@sqrrlbrain.com">hello@sqrrlbrain.com</a><br>
-    Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    Sqrrlbrain Studio LLC &middot; Edgewater, Florida, USA</p>
   </div>
 
   <footer>
