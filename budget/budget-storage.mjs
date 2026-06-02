@@ -75,6 +75,11 @@ export function firestoreBackend({ docRef, onRemote }) {
     async saveField(monthKey, section, key, value) {
       await docRef.set(mergeField({}, [monthKey, section, key], value), { merge: true });
     },
+    // Whole-doc overwrite for bulk ops (reset-a-month / import-a-backup). NOT a merge — so a month
+    // dropped from `store` is deleted by omission, which a {merge:true} field write can't do.
+    async saveAll(store) {
+      await docRef.set(store);
+    },
     stop() { if (unsub) unsub(); },
   };
 }

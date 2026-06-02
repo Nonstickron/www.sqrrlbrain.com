@@ -204,13 +204,16 @@ import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
          monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num } from './budget-logic.mjs';
 import { makeBackend, localBackend } from './budget-storage.mjs';
 
-// Persistence seam — routed through budget-storage.mjs so the field-scoped, concurrent-safe
-// write path is LIVE + browser-tested now (no-op on localStorage, identical behavior).
-// Activation = pass a Firestore docRef + onRemote to makeBackend (1 line) — see ACTIVATION.md.
-// No per-handler rewrite at deploy = no chance to miss a save() site and regress the clobber guard.
-const backend = makeBackend({});   // localBackend today; { docRef, onRemote } at activation
-function save(){ localBackend.saveAll(store); }                     // whole-store → local cache (bulk ops: reset/import)
-function saveField(monthKey, section, key, value){                  // one leaf → shared backend + local cache
+// Persistence seam — all writes route through `backend`. Defaults to the localStorage cache; after
+// the user authenticates on the deployed site it switches to the shared Firestore household doc
+// (see the auth-gate block at the bottom). The local cache always stays current (both paths write it),
+// so the app works offline and survives a flaky connection.
+let backend = makeBackend({});   // localStorage cache until auth → then the Firestore household doc
+function save(){                                                    // whole-store: reset / import (bulk)
+  backend.saveAll(store);                                           // → shared doc (whole-doc set) when on cloud
+  if (backend !== localBackend) localBackend.saveAll(store);        // → always keep the local cache current
+}
+function saveField(monthKey, section, key, value){                  // one leaf: edits (concurrent-safe merge)
   backend.saveField(monthKey, section, key, value);
   localBackend.saveAll(store);
 }
@@ -521,16 +524,33 @@ document.getElementById("importFile").onchange = (e) => {
   r.readAsText(f);
 };
 
+// Render immediately from the local cache, then gate and — on the deployed site — reconcile from
+// the shared Firestore household doc once the user is authenticated.
 setView("weekly");
 
-// Auth gate. On the deployed site SqrrlAuth.check() verifies login+approval and removes the overlay
-// (or redirects to /login.html). ONLY localhost drops the overlay (dev preview). Prod FAILS CLOSED:
-// if auth.js ever failed to load, check() is unreachable, so the overlay stays up — never an ungated
-// view of cached numbers. Firestore shared sync flips on per ACTIVATION.md.
+// ONLY localhost drops the overlay (dev preview, localStorage only). Prod FAILS CLOSED:
+// if auth.js ever failed to load, check() is unreachable so the overlay stays up — never an ungated view.
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
   document.getElementById("sqrrl-gate")?.remove();
 } else {
-  SqrrlAuth.check();
+  SqrrlAuth.check();   // verify login + approval; removes the overlay, or redirects to /login.html
+  // Switch from the local cache to the shared Firestore household doc once signed in.
+  // (auth.js's check() initialized the Firebase app synchronously, so firebase.* is ready here.)
+  firebase.auth().onAuthStateChanged(async (user) => {
+    if (!user) return;                              // not signed in — check() handles the redirect
+    try {
+      const cloud = makeBackend({
+        docRef: firebase.firestore().doc("households/ronny-dauvy"),
+        onRemote: (remote) => { store = remote; localBackend.saveAll(store); setView(curView); }
+      });
+      const reconciled = await cloud.start(store);  // migration-guarded: cloud wins if it already exists
+      backend = cloud;                              // only switch after a successful start()
+      store = reconciled; localBackend.saveAll(store); setView(curView);
+    } catch (e) {
+      console.warn("Shared cloud sync unavailable — staying on the local cache.", e);
+      // backend stays the localStorage cache; the app keeps working offline.
+    }
+  });
 }
 </script>
 </body>

@@ -94,14 +94,12 @@ service cloud.firestore {
     }
 
     // Household budget — the FIRST shared-by-two-people doc (every rule above is single-owner).
-    // Shared by exactly Ronny + Dauvy; locked to their two UIDs (non-PII, unlike emails).
-    // TODO(activation): replace the two placeholder UIDs after both sign in once (see budget
-    // ACTIVATION.md), then deploy. Until the real UIDs are filled this matches nobody (safe).
+    // Shared by exactly Ronny + Dauvy; locked to their two Firebase UIDs (non-PII, unlike emails).
     match /households/{hid} {
       allow read, write: if request.auth != null
         && request.auth.uid in [
-          "__RONNY_UID__",   // Ronny's account
-          "__DAUVY_UID__"    // Dauvy's account
+          "sAwp2pDqZFQzTtbe8gfhVYTxAko1",   // Ronny's account
+          "Tffjr7O6Y9frCkyi0rwbVYST5g13"    // Dauvy's account
         ];
     }
 
