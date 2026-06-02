@@ -1,10 +1,12 @@
 # Firestore Rules — Canonical (deploy this)
 
-**This is the single source of truth for the `sqrrlbrain-billing` Firebase project's Firestore rules.** It supersedes `DASHBOARD-SYNC-SETUP.md` and `INKWELL-WAITLIST-SETUP.md` (those files describe individual rule additions; this one shows the merged whole). When adding a new rule, update this file.
+**Single source of truth for the `sqrrlbrain-billing` Firebase project's Firestore rules.** The repo's `firestore.rules` file is what actually deploys (`firebase deploy --only firestore:rules`); this doc mirrors it for review + history. Keep the two in sync — when adding a rule, update both.
+
+> **Resynced 2026-06-02:** this doc had drifted behind `firestore.rules` (it still showed `inkwell_waitlist` as a public waitlist, and was missing the `inkwell→wyrdspinner` rename + the locked legacy block + `site_notify_waitlist`). Reconciled to match the deployed file, and the new **`households` budget rule** added (see below).
 
 ## Deploy
 
-Firebase Console → Firestore Database → Rules → paste the block below → Publish.
+`firebase deploy --only firestore:rules` from the repo root (deploys `firestore.rules`). Or paste the block below into Firebase Console → Firestore Database → Rules → Publish. Both must match the file.
 
 ```
 rules_version = '2';
@@ -44,8 +46,10 @@ service cloud.firestore {
                          && exists(/databases/$(database)/documents/site_approved_users/$(email));
     }
 
-    // Inkwell launch waitlist — public create only, validated, no read
-    match /inkwell_waitlist/{docId} {
+    // Wyrdspinner launch waitlist — public create only, validated, no read.
+    // (Formerly inkwell_waitlist; renamed 2026-05-11 to match the rebrand.
+    // Old collection still exists with locked-down rules below for archival.)
+    match /wyrdspinner_waitlist/{docId} {
       allow create: if request.resource.data.keys().hasOnly([
                       'email','source','created_at','user_agent','page_referrer'
                     ])
@@ -56,6 +60,12 @@ service cloud.firestore {
                     && request.resource.data.source is string
                     && request.resource.data.source.size() <= 64;
       allow read, update, delete: if false;
+    }
+
+    // inkwell_waitlist (legacy, pre-rebrand) — fully locked. Data preserved
+    // for archive; no new writes accepted, no reads, no modifications.
+    match /inkwell_waitlist/{docId} {
+      allow read, create, update, delete: if false;
     }
 
     // SqrrledAway launch waitlist — public create only, validated, no read
@@ -94,6 +104,18 @@ service cloud.firestore {
       allow read, write: if request.auth != null && request.auth.uid == userId;
     }
 
+    // Household budget — the FIRST shared-by-two-people doc (every rule above is single-owner).
+    // Shared by exactly Ronny + Dauvy; locked to their two UIDs (non-PII, unlike emails).
+    // TODO(activation): replace the two placeholder UIDs after both sign in once (see budget
+    // ACTIVATION.md), then deploy. Until the real UIDs are filled this matches nobody (safe).
+    match /households/{hid} {
+      allow read, write: if request.auth != null
+        && request.auth.uid in [
+          "__RONNY_UID__",   // Ronny's account
+          "__DAUVY_UID__"    // Dauvy's account
+        ];
+    }
+
     // Default deny — anything not matched above is forbidden
     match /{document=**} {
       allow read, write: if false;
@@ -102,7 +124,13 @@ service cloud.firestore {
 }
 ```
 
-## What broke and why this is needed
+## Household budget rule (added 2026-06-02)
+
+The `households/{hid}` block is the first **shared-by-two-people** doc in the ruleset — every other rule is single-owner (`email==email` or `uid==uid`). It's locked to Ronny's + Dauvy's two Firebase `auth.uid`s (UIDs, not emails — keeps PII out of the repo).
+
+**Activation (per `Projects/budgetting/ACTIVATION.md`):** after both sign in once at the deployed, gated budget page, replace `__RONNY_UID__` / `__DAUVY_UID__` with their real UIDs and redeploy. Until the placeholders are filled it matches nobody, so deploying it early is safe (default-deny applies).
+
+## What broke and why the per-user rule is needed
 
 The `sqrrlbrain-billing.html` app stores all its data under `users/<currentUser.uid>/...`:
 
@@ -111,14 +139,11 @@ The `sqrrlbrain-billing.html` app stores all its data under `users/<currentUser.
 - `users/<uid>/jobs/<jobId>` — invoices/jobs
 - `users/<uid>/expenses/<expenseId>` — expense log
 
-When the dashboard sync (`DASHBOARD-SYNC-SETUP.md`) and Inkwell waitlist (`INKWELL-WAITLIST-SETUP.md`) rules were deployed, the catch-all `match /{document=**} { allow read, write: if false; }` started rejecting every billing read because no rule explicitly allowed `/users/{uid}/...`. The billing app's `loadAll()` await silently failed, leaving the page stuck on the "initializing" spinner.
-
-The new `/users/{userId}/{document=**}` block gates per-user data behind a uid match — only the signed-in user can read/write their own subtree. Combined with the billing app's existing `AUTHORIZED_EMAIL` check at the JS layer, the data stays scoped to a single user.
+When the dashboard sync + waitlist rules were deployed, the catch-all `match /{document=**} { allow read, write: if false; }` started rejecting every billing read because no rule explicitly allowed `/users/{uid}/...`. The billing app's `loadAll()` await silently failed, leaving the page stuck on the "initializing" spinner. The `/users/{userId}/{document=**}` block gates per-user data behind a uid match — only the signed-in user can read/write their own subtree.
 
 ## Future rules
 
-If a new app needs Firestore access, add its rule block to the file above (above the catch-all), update this MD with the full new ruleset, and have Ron paste-publish.
-
+If a new app needs Firestore access, add its rule block to `firestore.rules` (above the catch-all), mirror it here, keep the two in sync, and deploy via `firebase deploy --only firestore:rules`.
 
 ---
 
