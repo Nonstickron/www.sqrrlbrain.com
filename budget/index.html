@@ -80,6 +80,12 @@
   .spend-note{color:var(--muted);font-weight:normal}
   .tgt-in{width:46px;border:none;border-bottom:1px dashed var(--muted);background:transparent;font:inherit;color:inherit;text-align:right;padding:0 1px}
   .tgt-in:focus{outline:none;border-bottom:1px solid var(--teal2)}
+  .trendrange{display:flex;gap:6px;margin-bottom:14px}
+  .tr-btn{flex:1;border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 6px;font-size:13px;font-weight:bold;color:var(--muted);cursor:pointer}
+  .tr-btn.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+  #trendsBody section{margin-bottom:16px}
+  #trendsBody h2{font-size:15px;margin:0 0 8px}
+  .chartbox{position:relative;height:230px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 8px}
   .wbar{height:9px;background:#eef2f3;border-radius:5px;overflow:hidden}
   .wbar > div{height:100%;background:var(--teallt)}
   .wbar.over > div{background:var(--red)}
@@ -187,8 +193,9 @@
 
 <div class="wrap">
   <div class="viewtoggle">
-    <button id="tabWeekly" class="active">Weekly focus</button>
-    <button id="tabSheet">Spreadsheet</button>
+    <button id="tabWeekly" class="active">Weekly</button>
+    <button id="tabSheet">Monthly</button>
+    <button id="tabTrends">Trends</button>
   </div>
 
   <!-- ============ WEEKLY FOCUS VIEW ============ -->
@@ -246,6 +253,16 @@
     </section>
   </div>
 
+  <!-- ============ TRENDS VIEW ============ -->
+  <div id="trendsView" hidden>
+    <div class="trendrange" id="trendRange">
+      <button class="tr-btn active" data-range="month">Monthly</button>
+      <button class="tr-btn" data-range="week">Weekly</button>
+      <button class="tr-btn" data-range="year">Yearly</button>
+    </div>
+    <div id="trendsBody"></div>
+  </div>
+
   <div class="savewrap">
     <div class="note" id="syncNote">Saved in this browser.</div>
     <div class="tools">
@@ -261,9 +278,13 @@
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
 <script src="/auth.js"></script>
+<!-- Chart.js, version-pinned. Only the Trends tab uses it; if it fails to load (offline/CDN), Trends shows a
+     "needs a connection" note and the rest of the app keeps working from the local cache. -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
 <script type="module">
 import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
-         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor } from './budget-logic.mjs';
+         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor,
+         SPEND_CATS, monthlyTrend, weeklySpendTrend, yearSummary, monthSummary } from './budget-logic.mjs';
 import { makeBackend, localBackend } from './budget-storage.mjs';
 
 // Persistence seam — all writes route through `backend`. Defaults to the localStorage cache; after
@@ -334,7 +355,6 @@ let curYear = WEEKS[curWeek].year, curMonth = WEEKS[curWeek].month;
 
 const weekId = w => `${w.year}-${w.month}-${w.day}`;
 function weekSpend(w){ store.weekSpend = store.weekSpend || {}; const id = weekId(w); store.weekSpend[id] = store.weekSpend[id] || {}; return store.weekSpend[id]; }
-function weekTargets(w){ store.weekTargets = store.weekTargets || {}; const id = weekId(w); store.weekTargets[id] = store.weekTargets[id] || {}; return store.weekTargets[id]; }
 
 const esc = s => String(s).replace(/"/g, "&quot;");
 const ordinal = n => { const s = ["th","st","nd","rd"], v = n % 100; return (s[(v - 20) % 10] || s[v] || s[0]); };
@@ -400,7 +420,7 @@ function renderWeekly(){
   const buckets = [
     { key: "groceries", label: "🛒 Groceries", tgt: tgtFor("groceries", grocDefault) },
     { key: "gas", label: "⛽ Gas", tgt: tgtFor("gas", Math.round(c.sp("gas") / weeksInMonth)) },
-    { key: "fun", label: "🎉 Fun / date", tgt: tgtFor("fun", Math.round(c.sp("date") / weeksInMonth)) },
+    { key: "fun", label: "🎉 Fun", tgt: tgtFor("fun", Math.round(c.sp("date") / weeksInMonth)) },
     { key: "other", label: "📦 Other", tgt: tgtFor("other", 25) },
   ];
   const bucketHtml = buckets.map(b => {
@@ -568,7 +588,7 @@ function renderSheet(){
     sb.appendChild(tr);
   });
   const spb = document.getElementById("splitBody"); spb.innerHTML = "";
-  [["groceries","Groceries (you can trim this)"],["gas","Gas for the car"],["date","Date night"],["rainy","Rainy-day savings"]].forEach(p => {
+  [["groceries","Groceries (you can trim this)"],["gas","Gas for the car"],["date","Fun"],["rainy","Other"]].forEach(p => {
     const plan = (s.split[p[0]] !== undefined && s.split[p[0]] !== "") ? s.split[p[0]] : SPLIT_DEF[p[0]];
     const act = s.splitActual[p[0]] !== undefined ? s.splitActual[p[0]] : "";
     const tr = document.createElement("tr");
@@ -756,16 +776,94 @@ function renderBreakdown(c){
 }
 
 /* ---------- view switching ---------- */
+/* ============================ TRENDS VIEW ============================ */
+let trendRange = "month";   // week | month | year
+let trendCharts = [];       // live Chart.js instances — destroyed before each re-render
+function renderTrends(){
+  const body = document.getElementById("trendsBody");
+  // Chart.js loads from a CDN; if it didn't (offline / CDN hiccup), degrade — don't break the app.
+  if (typeof Chart === "undefined"){
+    body.innerHTML = `<div class="note" style="padding:24px 2px">📊 Charts need a connection — the chart library couldn't load. Your budget still works offline; reopen Trends once you're back online.</div>`;
+    return;
+  }
+  trendCharts.forEach(c => { try { c.destroy(); } catch (_) {} });
+  trendCharts = [];
+
+  const cats = SPEND_CATS;
+  let labels, byCatSeries, incomeSeries, spentSeries, savedSeries, debtSeries;
+  if (trendRange === "week"){
+    const wk = weeklySpendTrend(store, curMonth, curYear);
+    labels = wk.map(x => `${MNAMES[curMonth].slice(0, 3)} ${x.day}`);
+    byCatSeries = cats.map(c => wk.map(x => x.byCat[c]));
+    incomeSeries = wk.map(x => x.income); spentSeries = wk.map(x => x.spent);
+    savedSeries = null; debtSeries = null;   // savings/debt are month-grained — omit on the weekly view
+  } else if (trendRange === "year"){
+    const ys = YEARS.map(y => yearSummary(store, y));
+    labels = YEARS.map(String);
+    byCatSeries = cats.map(c => ys.map(x => x.byCat[c]));
+    incomeSeries = ys.map(x => x.income); spentSeries = ys.map(x => x.spent);
+    savedSeries = ys.map(x => x.savedActual); debtSeries = ys.map(x => x.billsPlanned);
+  } else {
+    const mt = monthlyTrend(store, curYear);
+    labels = mt.map(x => MNAMES[x.month].slice(0, 3));
+    byCatSeries = cats.map(c => mt.map(x => x.byCat[c]));
+    incomeSeries = mt.map(x => x.income); spentSeries = mt.map(x => x.spent);
+    savedSeries = mt.map(x => x.savedActual); debtSeries = mt.map(x => x.billsPlanned);
+  }
+  const cur = monthSummary(store, curMonth, curYear);   // current month → budget-vs-actual + donut
+
+  body.innerHTML = `
+    <section><h2>Spending by category — over time</h2><div class="chartbox"><canvas id="cChart"></canvas></div></section>
+    <section><h2>Income vs. spending</h2><div class="chartbox"><canvas id="iChart"></canvas></div></section>
+    ${savedSeries ? `<section><h2>Savings growth</h2><div class="chartbox"><canvas id="sChart"></canvas></div></section>` : ""}
+    ${debtSeries ? `<section><h2>Bill &amp; debt load — over time</h2><div class="chartbox"><canvas id="dChart"></canvas></div></section>` : ""}
+    <section><h2>${MNAMES[curMonth]} — budget vs. actual</h2><div class="chartbox"><canvas id="bChart"></canvas></div></section>
+    <section><h2>${MNAMES[curMonth]} — where it went</h2><div class="chartbox"><canvas id="pChart"></canvas></div></section>`;
+
+  const COL = { groceries: "#1e7d4f", gas: "#c8421a", fun: "#2E6E78", other: "#9a7b4f" };
+  const CL = { groceries: "Groceries", gas: "Gas", fun: "Fun", other: "Other" };
+  const money0 = v => "$" + Math.round(v).toLocaleString();
+  const base = { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { boxWidth: 12, font: { size: 11 } } } } };
+  const mk = (id, cfg) => { const el = document.getElementById(id); if (el) trendCharts.push(new Chart(el, cfg)); };
+
+  mk("cChart", { type: "bar", data: { labels, datasets: cats.map(c => ({ label: CL[c], data: byCatSeries[cats.indexOf(c)], backgroundColor: COL[c] })) },
+    options: { ...base, scales: { x: { stacked: true }, y: { stacked: true, ticks: { callback: money0 } } } } });
+  mk("iChart", { type: "bar", data: { labels, datasets: [
+      { label: "Income", data: incomeSeries, backgroundColor: "#4A8C95" }, { label: "Spending", data: spentSeries, backgroundColor: "#c8421a" } ] },
+    options: { ...base, scales: { y: { ticks: { callback: money0 } } } } });
+  if (savedSeries){ let r = 0; const cum = savedSeries.map(v => (r += v));
+    mk("sChart", { type: "line", data: { labels, datasets: [{ label: "Saved (cumulative)", data: cum, borderColor: "#1e7d4f", backgroundColor: "rgba(30,125,79,.15)", fill: true, tension: .3 }] },
+      options: { ...base, scales: { y: { ticks: { callback: money0 } } } } }); }
+  if (debtSeries){
+    mk("dChart", { type: "line", data: { labels, datasets: [{ label: "Bill / debt load", data: debtSeries, borderColor: "#b00020", backgroundColor: "rgba(176,0,32,.12)", fill: true, tension: .3 }] },
+      options: { ...base, scales: { y: { ticks: { callback: money0 } } } } }); }
+
+  const c2 = calc(store, curMonth, curYear), weeksM = paydays(curMonth, curYear).length, stdT = store.targets || {};
+  const wkDef = { groceries: 200, gas: Math.round(c2.sp("gas") / weeksM), fun: Math.round(c2.sp("date") / weeksM), other: 25 };
+  const monthBudget = c => ((stdT[c] !== undefined && stdT[c] !== "") ? num(stdT[c]) : wkDef[c]) * weeksM;
+  mk("bChart", { type: "bar", data: { labels: cats.map(c => CL[c]), datasets: [
+      { label: "Budget", data: cats.map(monthBudget), backgroundColor: "#cdd8da" }, { label: "Actual", data: cats.map(c => cur.byCat[c]), backgroundColor: cats.map(c => COL[c]) } ] },
+    options: { ...base, scales: { y: { ticks: { callback: money0 } } } } });
+  mk("pChart", { type: "doughnut", data: { labels: cats.map(c => CL[c]), datasets: [{ data: cats.map(c => cur.byCat[c]), backgroundColor: cats.map(c => COL[c]) }] }, options: base });
+
+  document.querySelectorAll('#trendRange .tr-btn').forEach(btn => {
+    btn.classList.toggle("active", btn.dataset.range === trendRange);
+    btn.onclick = () => { trendRange = btn.dataset.range; renderTrends(); };
+  });
+}
 function setView(v){
   curView = v;
   document.getElementById("weeklyView").hidden = v !== "weekly";
   document.getElementById("spreadsheetView").hidden = v !== "sheet";
+  document.getElementById("trendsView").hidden = v !== "trends";
   document.getElementById("tabWeekly").classList.toggle("active", v === "weekly");
   document.getElementById("tabSheet").classList.toggle("active", v === "sheet");
-  if (v === "weekly") renderWeekly(); else renderSheet();
+  document.getElementById("tabTrends").classList.toggle("active", v === "trends");
+  if (v === "weekly") renderWeekly(); else if (v === "sheet") renderSheet(); else renderTrends();
 }
 document.getElementById("tabWeekly").onclick = () => setView("weekly");
 document.getElementById("tabSheet").onclick = () => setView("sheet");
+document.getElementById("tabTrends").onclick = () => setView("trends");
 document.getElementById("addBill").onclick = addBill;
 document.getElementById("wPrev").onclick = () => { if (curWeek > 0){ curWeek--; renderWeekly(); } };
 document.getElementById("wNext").onclick = () => { if (curWeek < WEEKS.length - 1){ curWeek++; renderWeekly(); } };

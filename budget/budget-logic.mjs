@@ -135,3 +135,59 @@ export function calc(store, m, year = YEAR) {
   const flexAct = leftAct - splitActTot - oneOffTot;
   return { s, pds, bills, moneyIn, billPlanTot, billActTot, savPlanTot, savActTot, splitPlanTot, splitActTot, leftPlan, flexPlan, moneyInAct, leftAct, flexAct, oneOffTot, sp };
 }
+
+/* ============================ TRENDS — week/month/year rollups ============================
+   Pure aggregation that powers the Trends tab's charts (kept here, unit-tested, NOT inline in the
+   app). Read-only over the same store the rest of the logic uses — no writes, no side effects. */
+export const SPEND_CATS = ["groceries", "gas", "fun", "other"];
+
+// Total logged in one paycheck-week's category bucket. weekSpend[weekId][cat] is an id-keyed map
+// ({id:{amount,note}}) post-V2; a legacy single number is still summed. weekId = "YYYY-M-D".
+export function weekBucketTotal(store, weekId, cat) {
+  const sp = (store.weekSpend && store.weekSpend[weekId]) || {};
+  const v = sp[cat];
+  if (v && typeof v === "object") return Object.values(v).reduce((a, e) => a + num(e.amount), 0);
+  return num(v);
+}
+
+// Per-category spend for a month = sum across that month's paycheck-week buckets.
+export function monthSpendByCat(store, m, year = YEAR) {
+  const out = {}; SPEND_CATS.forEach(c => out[c] = 0);
+  paydays(m, year).forEach(p => {
+    const wid = mkey(m, year) + "-" + p.day;
+    SPEND_CATS.forEach(c => out[c] += weekBucketTotal(store, wid, c));
+  });
+  return out;
+}
+
+// One month's planner summary: income, bill/debt load, savings, spend-by-category + total.
+export function monthSummary(store, m, year = YEAR) {
+  const c = calc(store, m, year);
+  const byCat = monthSpendByCat(store, m, year);
+  const spent = SPEND_CATS.reduce((a, k) => a + byCat[k], 0);
+  return { year, month: m, income: c.moneyInAct, billsActual: c.billActTot, billsPlanned: c.billPlanTot,
+    savedActual: c.savActTot, byCat, spent, oneOffs: c.oneOffTot };
+}
+
+// Monthly series across a year's covered months (2026 = Jun–Dec, later years full) — month-granularity charts.
+export function monthlyTrend(store, year = YEAR) {
+  return monthsForYear(year).map(m => monthSummary(store, m, year));
+}
+
+// Per-week spending series within a month — week-granularity charts.
+export function weeklySpendTrend(store, m, year = YEAR) {
+  return paydays(m, year).map(p => {
+    const wid = mkey(m, year) + "-" + p.day;
+    const byCat = {}; SPEND_CATS.forEach(c => byCat[c] = weekBucketTotal(store, wid, c));
+    return { day: p.day, who: p.who, income: p.amount, byCat, spent: SPEND_CATS.reduce((a, k) => a + byCat[k], 0) };
+  });
+}
+
+// Whole-year totals (sum the monthly series) — year-granularity.
+export function yearSummary(store, year = YEAR) {
+  const months = monthlyTrend(store, year);
+  const sum = k => months.reduce((a, x) => a + x[k], 0);
+  const byCat = {}; SPEND_CATS.forEach(c => byCat[c] = months.reduce((a, x) => a + x.byCat[c], 0));
+  return { year, income: sum("income"), billsActual: sum("billsActual"), billsPlanned: sum("billsPlanned"),
+    savedActual: sum("savedActual"), byCat, spent: sum("spent"), oneOffs: sum("oneOffs") };
+}
