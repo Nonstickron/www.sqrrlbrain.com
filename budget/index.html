@@ -100,6 +100,13 @@
   input.plan{background:var(--yellow)}
   input.act{background:#fff}
   tr.paid td.name{color:#9aa6ad;text-decoration:line-through}
+  tr.skipped td.name{color:#9aa6ad;text-decoration:line-through;font-style:italic}
+  tr.pushed td{background:#f3f9fb}
+  select.statesel{border:1px solid var(--line);border-radius:6px;padding:4px 6px;font-size:12px;font-family:inherit;background:#fff}
+  .billtag{font-size:10px;text-transform:uppercase;letter-spacing:.03em;color:var(--teal2);font-weight:bold;margin-left:6px}
+  .billact{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 4px;font-family:inherit;white-space:nowrap}
+  .billact:hover{color:var(--teal2);text-decoration:underline}
+  .billact.rm:hover{color:var(--red)}
   tfoot td{font-weight:bold;border-top:2px solid #ccd5d8}
   .note{font-size:12.5px;color:var(--muted);margin:6px 0 0}
   .savewrap{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
@@ -158,12 +165,13 @@
       <div class="note" id="halvesNote"></div>
     </section>
     <section>
-      <h2>Bills <span class="note" style="font-weight:normal">— tick "Paid" and type the true amount in "Actual" as the month happens</span></h2>
+      <h2>Bills <span class="note" style="font-weight:normal">— set each bill's status (paid / pushed / skipped) and type the real amount in "Actual" as the month happens</span></h2>
       <table id="billsTable">
-        <thead><tr><th>Bill</th><th class="r">Due</th><th class="r">Planned</th><th class="r">Actual</th><th class="c">Paid</th></tr></thead>
+        <thead><tr><th>Bill</th><th class="r">Due</th><th class="r">Planned</th><th class="r">Actual</th><th class="c">Status</th><th></th></tr></thead>
         <tbody id="billsBody"></tbody>
-        <tfoot><tr><td>Total</td><td></td><td class="r" id="billPlanTot"></td><td class="r" id="billActTot"></td><td></td></tr></tfoot>
+        <tfoot><tr><td>Total</td><td></td><td class="r" id="billPlanTot"></td><td class="r" id="billActTot"></td><td></td><td></td></tr></tfoot>
       </table>
+      <button class="linkbtn bill-add" id="addBill">+ Add a bill</button>
     </section>
     <section>
       <h2>Savings goals</h2>
@@ -181,6 +189,7 @@
         <tfoot><tr><td>Flex — surprises + free spending</td><td class="r" id="flexPlan"></td><td class="r" id="flexAct"></td></tr></tfoot>
       </table>
       <div class="note">In a normal $6,000 month this leaves roughly $450–650 of free money. It loosens up once Ron's grill is paid off (August 2026), and bonus-paycheck months have far more.</div>
+      <div class="note" id="oneOffNote"></div>
     </section>
   </div>
 
@@ -201,7 +210,7 @@
 <script src="/auth.js"></script>
 <script type="module">
 import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
-         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num } from './budget-logic.mjs';
+         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor } from './budget-logic.mjs';
 import { makeBackend, localBackend } from './budget-storage.mjs';
 
 // Persistence seam — all writes route through `backend`. Defaults to the localStorage cache; after
@@ -215,6 +224,14 @@ function save(){                                                    // whole-sto
 }
 function saveField(monthKey, section, key, value){                  // one leaf: edits (concurrent-safe merge)
   backend.saveField(monthKey, section, key, value);
+  localBackend.saveAll(store);
+}
+function saveLeaf(path, value){                                     // V2: one leaf at any depth (oneOffs/customBills/billMeta)
+  backend.saveLeaf(path, value);                                   // → field-scoped cloud merge (never clobbers siblings)
+  localBackend.saveAll(store);                                     // → whole local cache (single-device, no clobber risk)
+}
+function removeLeaf(path){                                          // V2: delete ONE leaf without a whole-doc rewrite
+  backend.removeLeaf(path);                                        // → FieldValue.delete() at that path on the shared doc
   localBackend.saveAll(store);
 }
 
@@ -268,16 +285,20 @@ function weekTargets(w){ store.weekTargets = store.weekTargets || {}; const id =
 
 const esc = s => String(s).replace(/"/g, "&quot;");
 const ordinal = n => { const s = ["th","st","nd","rd"], v = n % 100; return (s[(v - 20) % 10] || s[v] || s[0]); };
+const newId = () => "o" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);  // unique key for a one-off map entry
 
 /* ============================ WEEKLY VIEW ============================ */
 function renderWeekly(){
   const w = WEEKS[curWeek];
   const c = calc(store, w.month, w.year);
   const windowBills = c.bills.filter(b => b.due >= w.lo && b.due <= w.hi);
-  const billsSum = windowBills.reduce((a, b) => a + b.plan, 0);
+  const billsSum = windowBills.reduce((a, b) => a + (b.state === "skipped" ? 0 : b.plan), 0);  // V2: skipped bills don't count
+  const windowOneOffs = oneOffsFor(store, w.month, w.year)          // V2: surprise expenses (id-keyed map) landing in this window
+    .filter(o => o.day >= w.lo && o.day <= w.hi);
+  const oneOffSum = windowOneOffs.reduce((a, o) => a + o.amount, 0);
   const savThisWeek = w.who === "You" ? (c.savPlanTot / w.herCount) : 0;
-  const net = w.amount - billsSum;                 // Dauvy's "left after bills" metric
-  const safe = w.amount - billsSum - savThisWeek;  // what's free to spend this week
+  const net = w.amount - billsSum;                                       // bills-only — drives the short-check carry-note
+  const safe = w.amount - billsSum - savThisWeek - oneOffSum;            // free to spend this week (after bills, savings, surprises)
   const short = net < 0;
 
   const dObj = new Date(Date.UTC(w.year, w.month - 1, w.day));
@@ -295,9 +316,17 @@ function renderWeekly(){
     carry = `<div class="carry"><b>Heads up — this check is short ${money(net)}.</b> Park about ${money(park)} from your big check the week before to cover it.</div>`;
   }
 
-  let billsHtml = windowBills.map(b =>
-    `<div class="billrow ${b.paid ? "paid" : ""}"><span>${b.name}</span><span class="due">${money(b.plan)} &middot; ${MNAMES[w.month].slice(0,3)} ${b.due}</span></div>`
-  ).join("") || `<div class="note">No bills land in this window.</div>`;
+  let billsHtml = windowBills.map(b => {
+    const struck = b.state === "paid" || b.state === "skipped";
+    const tag = b.state === "skipped" ? " <em style='font-style:normal;color:var(--muted)'>· skipped</em>"
+              : b.state === "pushed" ? " <em style='font-style:normal;color:var(--teal2)'>· pushed here</em>" : "";
+    return `<div class="billrow ${struck ? "paid" : ""}"><span>${b.name}${tag}</span><span class="due">${money(b.plan)} &middot; ${MNAMES[w.month].slice(0,3)} ${b.due}</span></div>`;
+  }).join("") || `<div class="note">No bills land in this window.</div>`;
+
+  // V2: surprise/one-off expenses landing in this window
+  const oneOffsHtml = windowOneOffs.map(o =>
+    `<div class="billrow"><span>🚨 ${o.name}</span><span class="due">${money(o.amount)} &middot; ${MNAMES[w.month].slice(0,3)} ${o.day} <button class="rm-oneoff" data-id="${esc(o.id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:14px;padding:0 0 0 4px">&times;</button></span></div>`
+  ).join("");
 
   const weeksInMonth = WEEKS.filter(x => x.year === w.year && x.month === w.month).length;
   const tgtOverride = weekTargets(w);
@@ -323,7 +352,7 @@ function renderWeekly(){
     <div class="hero ${short ? "short" : ""}">
       <div class="lbl">Safe to spend this week</div>
       <div class="amt">${money(safe)}</div>
-      <div class="sub">after this week's bills${savThisWeek > 0 ? " and your savings set-aside" : ""}</div>
+      <div class="sub">after this week's bills${savThisWeek > 0 ? ", savings set-aside" : ""}${oneOffSum > 0 ? ", surprises" : ""}</div>
     </div>
     <div class="ministats">
       <div class="ministat"><div class="h">Came in</div><div class="v">${money(w.amount)}</div></div>
@@ -332,6 +361,11 @@ function renderWeekly(){
     </div>
     ${carry}
     <section><h2>Bills before your next check</h2>${billsHtml}</section>
+    <section>
+      <h2>Surprise expenses${oneOffSum > 0 ? ` <span class="note" style="font-weight:normal">— ${money(oneOffSum)} this week</span>` : ""}</h2>
+      ${oneOffsHtml || '<div class="note">None this week.</div>'}
+      <button class="linkbtn" id="addOneOff">+ Add a surprise expense</button>
+    </section>
     <section>
       <h2>This week's spending <span class="note" style="font-weight:normal">— ${w.who === "You" ? "big-shop week, money's here" : "lighter week — lean on your big-shop"}</span></h2>
       ${bucketHtml}
@@ -342,6 +376,23 @@ function renderWeekly(){
   document.querySelectorAll('#weeklyBody .amt-in').forEach(inp => {
     inp.oninput = () => { weekSpend(w)[inp.dataset.wk] = inp.value; saveField('weekSpend', weekId(w), inp.dataset.wk, inp.value); };
     inp.onblur = () => renderWeekly();
+  });
+  // V2: add / remove a surprise (one-off) expense — id-keyed MAP + leaf writes, so a routine add/remove
+  // on the shared doc can't clobber the other phone's concurrent edit (a whole-doc save() would).
+  document.getElementById("addOneOff").onclick = () => {
+    const name = (prompt("What was the surprise expense? (e.g. Car repair)") || "").trim(); if (!name) return;
+    const amt = prompt("How much? ($)"); if (amt === null || amt === "") return;
+    const mk = mkey(w.month, w.year), id = newId(), st = ms(store, w.month, w.year);
+    st.oneOffs = st.oneOffs || {};
+    st.oneOffs[id] = { name, amount: num(amt), day: w.day };
+    saveLeaf([mk, "oneOffs", id], st.oneOffs[id]); renderWeekly();
+  };
+  document.querySelectorAll('#weeklyBody .rm-oneoff').forEach(btn => {
+    btn.onclick = () => {
+      const mk = mkey(w.month, w.year), id = btn.dataset.id, st = ms(store, w.month, w.year);
+      if (st.oneOffs) delete st.oneOffs[id];
+      removeLeaf([mk, "oneOffs", id]); renderWeekly();
+    };
   });
   document.getElementById("toMonth").onclick = () => { curYear = w.year; curMonth = w.month; setView("sheet"); };
 }
@@ -374,12 +425,18 @@ function renderSheet(){
   renderMonths();
   const c = calc(store, curMonth, curYear), s = c.s;
   const body = document.getElementById("billsBody"); body.innerHTML = "";
+  const customNames = new Set(Object.keys(store.customBills || {}));   // V2: which bills the user added (map keyed by name)
+  const states = ["unpaid", "paid", "pushed", "skipped"];
   c.bills.forEach(b => {
-    const tr = document.createElement("tr"); if (b.paid) tr.className = "paid";
-    tr.innerHTML = `<td class="name">${b.name}</td><td class="r">${b.due}</td>
+    const tr = document.createElement("tr");
+    tr.className = b.state === "skipped" ? "skipped" : b.state === "pushed" ? "pushed" : b.paid ? "paid" : "";
+    const isCustom = customNames.has(b.name);
+    const opts = states.map(s => `<option value="${s}"${b.state === s ? " selected" : ""}>${s[0].toUpperCase() + s.slice(1)}</option>`).join("");
+    tr.innerHTML = `<td class="name">${b.name}${isCustom ? '<span class="billtag">added</span>' : ""}</td><td class="r">${b.due}</td>
       <td class="r"><input class="amt plan" data-kind="billPlan" data-key="${esc(b.name)}" value="${b.plan}"></td>
       <td class="r"><input class="amt act" data-kind="billActual" data-key="${esc(b.name)}" value="${b.actual}"></td>
-      <td class="c"><input type="checkbox" data-kind="billPaid" data-key="${esc(b.name)}" ${b.paid ? "checked" : ""}></td>`;
+      <td class="c"><select class="statesel" data-key="${esc(b.name)}">${opts}</select></td>
+      <td class="r"><button class="billact ends" data-bill="${esc(b.name)}" data-custom="${isCustom}" title="Set the last month this bill is owed">ends&hellip;</button><button class="billact rm" data-bill="${esc(b.name)}" data-custom="${isCustom}" title="Remove this bill">&times;</button></td>`;
     body.appendChild(tr);
   });
   const sb = document.getElementById("savBody"); sb.innerHTML = "";
@@ -410,13 +467,72 @@ function wireInputs(){
   const mk = mkey(curMonth, curYear);
   document.querySelectorAll("#billsBody input,#savBody input,#splitBody input").forEach(inp => {
     const kind = inp.dataset.kind, key = inp.dataset.key, st = ms(store, curMonth, curYear);
-    if (inp.type === "checkbox"){
-      inp.onchange = () => { st.billPaid[key] = inp.checked; inp.closest("tr").classList.toggle("paid", inp.checked); saveField(mk, "billPaid", key, inp.checked); recompute(); };
-    } else {
-      // `kind` is exactly the section name (billPlan/billActual/savPlan/savActual/split/splitActual)
-      inp.oninput = () => { st[kind][key] = inp.value; saveField(mk, kind, key, inp.value); recompute(); };
-    }
+    // `kind` is exactly the section name (billPlan/billActual/savPlan/savActual/split/splitActual)
+    inp.oninput = () => { st[kind][key] = inp.value; saveField(mk, kind, key, inp.value); recompute(); };
   });
+  // V2: per-bill status (paid / pushed / skipped). Leaf write, but pushed moves the due day + skipped
+  // changes totals/order → full re-render so the table, calendar and breakdown all reflect it.
+  document.querySelectorAll("#billsBody select.statesel").forEach(sel => {
+    sel.onchange = () => {
+      const st = ms(store, curMonth, curYear); st.billState = st.billState || {};
+      st.billState[sel.dataset.key] = sel.value;
+      saveField(mk, "billState", sel.dataset.key, sel.value);
+      renderSheet();
+    };
+  });
+  // V2: edit the bill itself — set an effective end month, or remove it (structural → whole-doc save)
+  document.querySelectorAll("#billsBody .billact.ends").forEach(btn => btn.onclick = () => endBill(btn.dataset.bill, btn.dataset.custom === "true"));
+  document.querySelectorAll("#billsBody .billact.rm").forEach(btn => btn.onclick = () => removeBill(btn.dataset.bill, btn.dataset.custom === "true"));
+}
+// V2 — evolving bills: effective-date end, remove, and add. customBills + billMeta are top-level
+// (a debt clears for good; a new bill recurs every month within its range), so all three use save().
+function endBill(name, isCustom){
+  const cur = isCustom
+    ? ((store.customBills || {})[name] || {}).end || ""
+    : ((store.billMeta || {})[name] || {}).end || "";
+  const val = prompt(`Last month "${name}" is owed? Format YYYY-M (e.g. 2026-9).\nLeave blank to clear it / keep it ongoing.`, cur);
+  if (val === null) return;
+  const v = val.trim();
+  if (v && !/^\d{4}-\d{1,2}$/.test(v)) { alert("Please use the format YYYY-M, like 2026-9."); return; }
+  // `end` gets its own leaf write — a merge of the whole object can ADD end but can't REMOVE a stale one.
+  if (isCustom){
+    const cb = (store.customBills || {})[name]; if (!cb) return;
+    if (v) { cb.end = v; saveLeaf(["customBills", name, "end"], v); }
+    else { delete cb.end; removeLeaf(["customBills", name, "end"]); }
+  } else {
+    store.billMeta = store.billMeta || {};
+    const m = store.billMeta[name] = store.billMeta[name] || {};
+    if (v) { m.end = v; saveLeaf(["billMeta", name, "end"], v); }
+    else {
+      delete m.end;
+      if (!m.start && !m.removed) { delete store.billMeta[name]; removeLeaf(["billMeta", name]); }  // no meta left → drop it whole
+      else removeLeaf(["billMeta", name, "end"]);
+    }
+  }
+  renderSheet();
+}
+function removeBill(name, isCustom){
+  if (isCustom){
+    if (!confirm(`Delete the bill you added — "${name}"? This removes it from every month.`)) return;
+    if (store.customBills) delete store.customBills[name];
+    removeLeaf(["customBills", name]);
+  } else {
+    if (!confirm(`Remove "${name}" from every month?\n\nIf it's just being paid off, use "ends…" instead so it still shows in the months you owed it.`)) return;
+    store.billMeta = store.billMeta || {};
+    store.billMeta[name] = { ...(store.billMeta[name] || {}), removed: true };
+    saveLeaf(["billMeta", name], store.billMeta[name]);
+  }
+  renderSheet();
+}
+function addBill(){
+  const name = (prompt("Name of the new bill? (e.g. Gym membership)") || "").trim(); if (!name) return;
+  const existing = new Set([...FIXED.map(f => f[0]), ...Object.keys(store.customBills || {})]);
+  if (existing.has(name)) { alert("A bill with that name already exists."); return; }
+  const amt = prompt("Monthly amount? ($)"); if (amt === null || amt === "") return;
+  const day = prompt("Day of the month it's due? (1–31)"); if (day === null || day === "") return;
+  store.customBills = store.customBills || {};
+  store.customBills[name] = { plan: num(amt), due: Math.min(31, Math.max(1, num(day))) };
+  saveLeaf(["customBills", name], store.customBills[name]); renderSheet();
 }
 function recompute(){
   const c = calc(store, curMonth, curYear);
@@ -433,6 +549,9 @@ function recompute(){
   document.getElementById("savActTot").textContent = money(c.savActTot);
   document.getElementById("flexPlan").textContent = money(c.flexPlan);
   document.getElementById("flexAct").textContent = money(c.flexAct);
+  document.getElementById("oneOffNote").textContent = c.oneOffTot > 0
+    ? `Flex (actual) already has ${money(c.oneOffTot)} in surprise / one-off expenses taken out this month — add or remove those in the weekly view.`
+    : "";
 }
 function renderCalendar(c){
   const m = curMonth;
@@ -460,7 +579,7 @@ function renderCalendar(c){
       html += `<div class="net ${net < 0 ? 'neg' : 'pos'}">${net < 0 ? 'short ' : 'left '}${money(net)}</div>`;
     }
     (billsByDay[day] || []).forEach(b => {
-      html += `<div class="bchip ${b.paid ? 'paid' : ''}">${b.name.replace(/ \(.*\)/, '')} <span class="amt">${money(b.plan)}</span></div>`;
+      html += `<div class="bchip ${(b.paid || b.state === 'skipped') ? 'paid' : ''}">${b.name.replace(/ \(.*\)/, '')} <span class="amt">${money(b.plan)}</span></div>`;
     });
     cell.innerHTML = html; cal.appendChild(cell);
   }
@@ -502,6 +621,7 @@ function setView(v){
 }
 document.getElementById("tabWeekly").onclick = () => setView("weekly");
 document.getElementById("tabSheet").onclick = () => setView("sheet");
+document.getElementById("addBill").onclick = addBill;
 document.getElementById("wPrev").onclick = () => { if (curWeek > 0){ curWeek--; renderWeekly(); } };
 document.getElementById("wNext").onclick = () => { if (curWeek < WEEKS.length - 1){ curWeek++; renderWeekly(); } };
 
@@ -557,7 +677,8 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
           // it renders on the next blur/interaction (avoids dropping focus mid-type)
           const ae = document.activeElement;
           if (!ae || !(ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt")))) setView(curView);
-        }
+        },
+        deleteSentinel: () => firebase.firestore.FieldValue.delete()   // V2: removeLeaf deletes a single one-off / custom bill leaf
       });
       const reconciled = await cloud.start(store);  // migration-guarded: cloud wins if it already exists
       backend = cloud;                              // only switch after a successful start()

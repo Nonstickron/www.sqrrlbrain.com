@@ -56,17 +56,47 @@ export function paydays(m, year = YEAR) {
   return out;
 }
 
+// V2 effective-date helpers — a bill is "in effect" for (year,m) if it's within its optional
+// start/end range. Ranges are "YYYY-M" strings; compared as year*12+month (so 2026-9 < 2026-10).
+const ymNum = (year, m) => year * 12 + m;
+const parseYM = s => { const [y, mo] = String(s).split("-").map(Number); return y * 12 + mo; };
+export function inEffect(meta, year, m) {
+  if (!meta) return true;
+  const n = ymNum(year, m);
+  if (meta.start && n < parseYM(meta.start)) return false;
+  if (meta.end && n > parseYM(meta.end)) return false;
+  return true;
+}
+
 export function billsFor(store, m, year = YEAR) {
   const s = ms(store, m, year);
-  const her = paydays(m, year).filter(p => p.who === "You").map(p => p.day);
-  let b = FIXED.map(x => ({ name: x[0], plan: x[1], due: x[2] }));
+  const pds = paydays(m, year);
+  const her = pds.filter(p => p.who === "You").map(p => p.day);
+  const billMeta = store.billMeta || {};   // V2: per-FIXED-bill overrides (retire / effective-date)
+  // base recurring bills (FIXED), minus any the user retired or that are out of their effective range
+  let b = FIXED.filter(x => {
+    const meta = billMeta[x[0]];
+    return !(meta && (meta.removed || !inEffect(meta, year, m)));
+  }).map(x => ({ name: x[0], plan: x[1], due: x[2] }));
   b.push({ name: "Freedom Debt Relief (1st)", plan: 217, due: her[0] });
   b.push({ name: "Freedom Debt Relief (2nd)", plan: 217, due: (her[1] !== undefined ? her[1] : her[0]) });
   if (year === 2026 && (m === 6 || m === 7)) b.push({ name: "Ron's grill (ends July)", plan: 171.34, due: 25 });
+  // V2: user-added custom bills — a MAP keyed by (unique) bill name, so add/remove/effective-date
+  // are leaf writes on the shared doc. Each respects its own effective range.
+  Object.entries(store.customBills || {}).forEach(([name, cb]) => {
+    if (inEffect(cb, year, m)) b.push({ name, plan: num(cb.plan), due: num(cb.due) });
+  });
+  const billState = s.billState || {};   // V2: per-bill 'paid' | 'pushed' | 'skipped' (else legacy billPaid bool)
   b.forEach(x => {
     if (s.billPlan[x.name] !== undefined && s.billPlan[x.name] !== "") x.plan = parseFloat(s.billPlan[x.name]);
     x.actual = (s.billActual[x.name] !== undefined ? s.billActual[x.name] : "");
-    x.paid = !!s.billPaid[x.name];
+    x.state = billState[x.name] || (s.billPaid[x.name] ? "paid" : "unpaid");
+    x.paid = x.state === "paid";   // backward-compat with existing render/logic
+    // V2 "pushed" = defer to the next paycheck this month (moves it out of the current window)
+    if (x.state === "pushed") {
+      const nextPay = pds.map(p => p.day).find(d => d > x.due);
+      if (nextPay !== undefined) x.due = nextPay;
+    }
   });
   b.sort((a, c) => a.due - c.due);
   return b;
@@ -76,12 +106,21 @@ export const money = n => (n < 0 ? "−$" : "$") + Math.abs(Math.round(n)).toLoc
 export const money2 = n => { const v = Math.abs(n); return (n < 0 ? "−$" : "$") + v.toLocaleString(undefined, { minimumFractionDigits: (v % 1 ? 2 : 0), maximumFractionDigits: 2 }); };
 export const num = v => { const n = parseFloat(v); return isNaN(n) ? 0 : n; };
 
-export function sumWindow(bills, lo, hi) { let t = 0; bills.forEach(b => { if (b.due >= lo && b.due <= hi) t += b.plan; }); return t; }
+export function sumWindow(bills, lo, hi) { let t = 0; bills.forEach(b => { if (b.due >= lo && b.due <= hi && b.state !== "skipped") t += b.plan; }); return t; }
+
+// V2 — one-off / surprise expenses (emergencies) for a month. Default []. Each: { name, amount, day }.
+// `day` places it in a paycheck window (like a bill's due day) so the weekly view can subtract it.
+export function oneOffsFor(store, m, year = YEAR) {
+  const s = ms(store, m, year);
+  // oneOffs is an id-keyed MAP (not an array) so every add/remove is a clobber-safe leaf write on
+  // the shared doc; the id rides along in the output so the UI can target one entry for removal.
+  return Object.entries(s.oneOffs || {}).map(([id, o]) => ({ id, name: o.name, amount: num(o.amount), day: num(o.day) }));
+}
 
 export function calc(store, m, year = YEAR) {
   const s = ms(store, m, year), pds = paydays(m, year), bills = billsFor(store, m, year);
   const moneyIn = pds.reduce((a, p) => a + p.amount, 0);
-  const billPlanTot = bills.reduce((a, b) => a + b.plan, 0);
+  const billPlanTot = bills.reduce((a, b) => a + (b.state === "skipped" ? 0 : b.plan), 0);
   const billActTot = bills.reduce((a, b) => a + num(b.actual), 0);
   const savPlanTot = SAV_DEF.reduce((a, g) => a + (s.savPlan[g[0]] !== undefined && s.savPlan[g[0]] !== "" ? num(s.savPlan[g[0]]) : g[1]), 0);
   const savActTot = SAV_DEF.reduce((a, g) => a + num(s.savActual[g[0]]), 0);
@@ -92,6 +131,7 @@ export function calc(store, m, year = YEAR) {
   const flexPlan = leftPlan - splitPlanTot;
   const moneyInAct = (s.moneyInActual !== "" && s.moneyInActual !== undefined) ? num(s.moneyInActual) : moneyIn;
   const leftAct = moneyInAct - billActTot - savActTot;
-  const flexAct = leftAct - splitActTot;
-  return { s, pds, bills, moneyIn, billPlanTot, billActTot, savPlanTot, savActTot, splitPlanTot, splitActTot, leftPlan, flexPlan, moneyInAct, leftAct, flexAct, sp };
+  const oneOffTot = Object.values(s.oneOffs || {}).reduce((a, o) => a + num(o.amount), 0);  // V2: surprise/one-off expenses (id-keyed map)
+  const flexAct = leftAct - splitActTot - oneOffTot;
+  return { s, pds, bills, moneyIn, billPlanTot, billActTot, savPlanTot, savActTot, splitPlanTot, splitActTot, leftPlan, flexPlan, moneyInAct, leftAct, flexAct, oneOffTot, sp };
 }
