@@ -507,7 +507,7 @@ document.getElementById("wNext").onclick = () => { if (curWeek < WEEKS.length - 
 
 /* ---------- tools ---------- */
 document.getElementById("resetBtn").onclick = () => {
-  if (confirm("Clear your saved numbers for " + MNAMES[curMonth] + " " + curYear + "?")){
+  if (confirm("Clear " + MNAMES[curMonth] + " " + curYear + " for both of you? This removes that month from the shared budget.")){
     delete store[mkey(curMonth, curYear)]; save(); curView === "weekly" ? renderWeekly() : renderSheet();
   }
 };
@@ -519,6 +519,7 @@ document.getElementById("exportBtn").onclick = () => {
 document.getElementById("importBtn").onclick = () => document.getElementById("importFile").click();
 document.getElementById("importFile").onchange = (e) => {
   const f = e.target.files[0]; if (!f) return;
+  if (!confirm("Import this backup? It REPLACES the entire shared budget for both of you — anything not in this file is removed.")) { e.target.value = ""; return; }
   const r = new FileReader();
   r.onload = () => { try { store = JSON.parse(r.result); save(); setView(curView); alert("Backup imported."); } catch (_) { alert("That file couldn't be read as a budget backup."); } };
   r.readAsText(f);
@@ -533,22 +534,39 @@ setView("weekly");
 if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
   document.getElementById("sqrrl-gate")?.remove();
 } else {
-  SqrrlAuth.check();   // verify login + approval; removes the overlay, or redirects to /login.html
+  SqrrlAuth.check();   // verify login + approval; removes #sqrrl-gate, or redirects to /login.html
   // Switch from the local cache to the shared Firestore household doc once signed in.
   // (auth.js's check() initialized the Firebase app synchronously, so firebase.* is ready here.)
+  let initialized = false;
   firebase.auth().onAuthStateChanged(async (user) => {
-    if (!user) return;                              // not signed in — check() handles the redirect
+    if (!user || initialized) return;   // init exactly once — a re-fired auth event must not stack backends/listeners (#2)
+    initialized = true;
+    // Cover the app while we reconcile so an edit can't be made — and silently lost — during the load
+    // window (#1: check() lifts #sqrrl-gate on auth, before start() resolves; this is our own sync lock).
+    const lock = document.createElement("div");
+    lock.id = "sync-lock";
+    lock.style.cssText = "position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:10001";
+    lock.innerHTML = '<p style="font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)">Syncing your budget&hellip;</p>';
+    document.body.appendChild(lock);
     try {
       const cloud = makeBackend({
         docRef: firebase.firestore().doc("households/ronny-dauvy"),
-        onRemote: (remote) => { store = remote; localBackend.saveAll(store); setView(curView); }
+        onRemote: (remote) => {
+          store = remote; localBackend.saveAll(store);
+          // don't yank the DOM out from under an in-progress edit — the change is already in `store`;
+          // it renders on the next blur/interaction (avoids dropping focus mid-type)
+          const ae = document.activeElement;
+          if (!ae || !(ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt")))) setView(curView);
+        }
       });
       const reconciled = await cloud.start(store);  // migration-guarded: cloud wins if it already exists
       backend = cloud;                              // only switch after a successful start()
       store = reconciled; localBackend.saveAll(store); setView(curView);
     } catch (e) {
       console.warn("Shared cloud sync unavailable — staying on the local cache.", e);
-      // backend stays the localStorage cache; the app keeps working offline.
+      initialized = false;   // allow a retry on a later auth event
+    } finally {
+      lock.remove();         // unlock the app — synced, or fell back to the local cache
     }
   });
 }
