@@ -396,19 +396,22 @@ function renderWeekly(){
     { key: "groceries", label: "🛒 Groceries", tgt: tgtOverride.groceries !== undefined && tgtOverride.groceries !== "" ? num(tgtOverride.groceries) : grocDefault },
     { key: "gas", label: "⛽ Gas", tgt: tgtOverride.gas !== undefined && tgtOverride.gas !== "" ? num(tgtOverride.gas) : Math.round(c.sp("gas") / weeksInMonth) },
     { key: "fun", label: "🎉 Fun / date", tgt: tgtOverride.fun !== undefined && tgtOverride.fun !== "" ? num(tgtOverride.fun) : Math.round(c.sp("date") / weeksInMonth) },
+    { key: "other", label: "📦 Other", tgt: tgtOverride.other !== undefined && tgtOverride.other !== "" ? num(tgtOverride.other) : 0 },   // no preset budget — tracks only
   ];
   const bucketHtml = buckets.map(b => {
     const entries = spendEntries(w, b.key);
     const spent = entries.reduce((a, e) => a + e.amount, 0);
-    const pct = b.tgt > 0 ? Math.min(100, Math.round(spent / b.tgt * 100)) : 0;
-    const over = spent > b.tgt;
+    const hasTgt = b.tgt > 0;                 // "Other" has no preset budget → track only, no bar/over
+    const pct = hasTgt ? Math.min(100, Math.round(spent / b.tgt * 100)) : 0;
+    const over = hasTgt && spent > b.tgt;
     const lines = entries.map(e =>
       `<div class="billrow"><span>${money2(e.amount)}${e.note ? ` <span class="spend-note">— ${escHtml(e.note)}</span>` : ""}</span>` +
       `<span class="due"><button class="rm-spend" data-wk="${b.key}" data-id="${esc(e.id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:15px;padding:0 0 0 6px">&times;</button></span></div>`
     ).join("");
+    const tally = hasTgt ? `${money2(spent)} of ${money(b.tgt)}${over ? " · over" : ""}` : `${money2(spent)} spent`;
     return `<div class="wbucket">
-      <div class="top"><span>${b.label}</span><span class="tgt ${over ? "over" : ""}">${money2(spent)} of ${money(b.tgt)}${over ? " · over" : ""}</span></div>
-      <div class="wbar ${over ? "over" : ""}"><div style="width:${over ? 100 : pct}%"></div></div>
+      <div class="top"><span>${b.label}</span><span class="tgt ${over ? "over" : ""}">${tally}</span></div>
+      ${hasTgt ? `<div class="wbar ${over ? "over" : ""}"><div style="width:${over ? 100 : pct}%"></div></div>` : ""}
       ${lines}
     </div>`;
   }).join("");
