@@ -1,0 +1,14 @@
+{
+  "name": "Our Weekly Budget",
+  "short_name": "Budget",
+  "description": "Weekly-spending budget for Ronny & Dauvy.",
+  "start_url": "/budget/",
+  "scope": "/budget/",
+  "display": "standalone",
+  "background_color": "#f3f6f7",
+  "theme_color": "#1F4E5F",
+  "icons": [
+    { "src": "/budget/app-icon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "any" },
+    { "src": "/budget/app-icon.png", "sizes": "1024x1024", "type": "image/png", "purpose": "maskable" }
+  ]
+}
