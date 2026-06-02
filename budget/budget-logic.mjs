@@ -117,13 +117,28 @@ export function oneOffsFor(store, m, year = YEAR) {
   return Object.entries(s.oneOffs || {}).map(([id, o]) => ({ id, name: o.name, amount: num(o.amount), day: num(o.day) }));
 }
 
+// V2.1 — savings goals. The 3 SAV_DEF defaults PLUS any the user adds. `customSavings` is a top-level
+// map keyed by goal name (like customBills) — { name: { plan, note? } } — so add/remove are clobber-safe
+// leaf writes on the shared doc. A DEFAULT is retired via savMeta[name].removed (can't delete a hardcoded
+// entry); a CUSTOM goal is dropped by removing its customSavings leaf. Per-month plan/actual still live in
+// s.savPlan / s.savActual keyed by the same goal name (orphaned entries for a removed goal are simply ignored).
+export function savingsFor(store) {
+  const savMeta = store.savMeta || {};
+  const g = SAV_DEF.filter(x => !(savMeta[x[0]] && savMeta[x[0]].removed))
+                   .map(x => ({ name: x[0], plan: x[1], note: x[2], custom: false }));
+  Object.entries(store.customSavings || {}).forEach(([name, cs]) =>
+    g.push({ name, plan: num(cs.plan), note: cs.note || "", custom: true }));
+  return g;
+}
+
 export function calc(store, m, year = YEAR) {
   const s = ms(store, m, year), pds = paydays(m, year), bills = billsFor(store, m, year);
   const moneyIn = pds.reduce((a, p) => a + p.amount, 0);
   const billPlanTot = bills.reduce((a, b) => a + (b.state === "skipped" ? 0 : b.plan), 0);
   const billActTot = bills.reduce((a, b) => a + num(b.actual), 0);
-  const savPlanTot = SAV_DEF.reduce((a, g) => a + (s.savPlan[g[0]] !== undefined && s.savPlan[g[0]] !== "" ? num(s.savPlan[g[0]]) : g[1]), 0);
-  const savActTot = SAV_DEF.reduce((a, g) => a + num(s.savActual[g[0]]), 0);
+  const savGoals = savingsFor(store);   // V2.1: SAV_DEF defaults (minus retired) + user-added customSavings
+  const savPlanTot = savGoals.reduce((a, g) => a + (s.savPlan[g.name] !== undefined && s.savPlan[g.name] !== "" ? num(s.savPlan[g.name]) : g.plan), 0);
+  const savActTot = savGoals.reduce((a, g) => a + num(s.savActual[g.name]), 0);
   const sp = k => (s.split[k] !== undefined && s.split[k] !== "" ? num(s.split[k]) : SPLIT_DEF[k]);
   const splitPlanTot = sp("groceries") + sp("gas") + sp("fun") + sp("other");
   const byCatAct = monthSpendByCat(store, m, year);   // B-reconcile: monthly Actual = the weekly purchase log rolled up (replaces hand-typed split actuals → kills double-entry)
