@@ -524,9 +524,10 @@ document.getElementById("importFile").onchange = (e) => {
 setView("weekly");
 
 // Auth gate. On the deployed site SqrrlAuth.check() verifies login+approval and removes the overlay
-// (or redirects to /login.html). On localhost, or if auth.js didn't load, there's nothing to verify —
-// just drop the overlay so the app shows. Firestore shared sync flips on per ACTIVATION.md.
-if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || typeof SqrrlAuth === "undefined") {
+// (or redirects to /login.html). ONLY localhost drops the overlay (dev preview). Prod FAILS CLOSED:
+// if auth.js ever failed to load, check() is unreachable, so the overlay stays up — never an ungated
+// view of cached numbers. Firestore shared sync flips on per ACTIVATION.md.
+if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
   document.getElementById("sqrrl-gate")?.remove();
 } else {
   SqrrlAuth.check();
