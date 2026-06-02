@@ -19,7 +19,7 @@ export const FIXED = [
   ["Spotify", 30, 23], ["My car insurance", 98, 25], ["Home Depot (Ron)", 100, 25],
   ["Affirm (2)", 60, 26], ["Apple Card (Dauvy)", 50, 30], ["Apple Card (Ron)", 50, 30]
 ];
-export const SPLIT_DEF = { groceries: 650, gas: 300, date: 200, rainy: 250 };
+export const SPLIT_DEF = { groceries: 650, gas: 300, fun: 200, other: 250 };   // B-reconcile: date->fun, rainy->other (4 cats shared with the weekly log; values = Dauvy's verified Excel)
 export const SAV_DEF = [
   ["Christmas", 200, "for the holidays"],
   ["New car (down payment)", 175, "about $2,100 a year"],
@@ -125,8 +125,9 @@ export function calc(store, m, year = YEAR) {
   const savPlanTot = SAV_DEF.reduce((a, g) => a + (s.savPlan[g[0]] !== undefined && s.savPlan[g[0]] !== "" ? num(s.savPlan[g[0]]) : g[1]), 0);
   const savActTot = SAV_DEF.reduce((a, g) => a + num(s.savActual[g[0]]), 0);
   const sp = k => (s.split[k] !== undefined && s.split[k] !== "" ? num(s.split[k]) : SPLIT_DEF[k]);
-  const splitPlanTot = sp("groceries") + sp("gas") + sp("date") + sp("rainy");
-  const splitActTot = ["groceries", "gas", "date", "rainy"].reduce((a, k) => a + num(s.splitActual[k]), 0);
+  const splitPlanTot = sp("groceries") + sp("gas") + sp("fun") + sp("other");
+  const byCatAct = monthSpendByCat(store, m, year);   // B-reconcile: monthly Actual = the weekly purchase log rolled up (replaces hand-typed split actuals → kills double-entry)
+  const splitActTot = SPEND_CATS.reduce((a, k) => a + byCatAct[k], 0);
   const leftPlan = moneyIn - billPlanTot - savPlanTot;
   const flexPlan = leftPlan - splitPlanTot;
   const moneyInAct = (s.moneyInActual !== "" && s.moneyInActual !== undefined) ? num(s.moneyInActual) : moneyIn;

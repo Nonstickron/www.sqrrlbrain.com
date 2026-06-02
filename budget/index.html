@@ -78,8 +78,6 @@
   .logrow .note-in{flex:1;min-width:110px;border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px;font-family:inherit}
   .logrow #addSpend{border:1px solid var(--teal2);border-radius:6px;padding:6px 14px;background:var(--teal2);color:#fff;font-weight:bold;font-size:13px;cursor:pointer}
   .spend-note{color:var(--muted);font-weight:normal}
-  .tgt-in{width:46px;border:none;border-bottom:1px dashed var(--muted);background:transparent;font:inherit;color:inherit;text-align:right;padding:0 1px}
-  .tgt-in:focus{outline:none;border-bottom:1px solid var(--teal2)}
   .trendrange{display:flex;gap:6px;margin-bottom:14px}
   .tr-btn{flex:1;border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 6px;font-size:13px;font-weight:bold;color:var(--muted);cursor:pointer}
   .tr-btn.active{background:var(--teal);color:#fff;border-color:var(--teal)}
@@ -284,7 +282,7 @@
 <script type="module">
 import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
          monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor,
-         SPEND_CATS, monthlyTrend, weeklySpendTrend, yearSummary, monthSummary } from './budget-logic.mjs';
+         SPEND_CATS, monthSpendByCat, monthlyTrend, weeklySpendTrend, yearSummary, monthSummary } from './budget-logic.mjs';
 import { makeBackend, localBackend } from './budget-storage.mjs';
 
 // Persistence seam — all writes route through `backend`. Defaults to the localStorage cache; after
@@ -412,29 +410,27 @@ function renderWeekly(){
   ).join("");
 
   const weeksInMonth = WEEKS.filter(x => x.year === w.year && x.month === w.month).length;
-  // Standing per-category weekly budgets (editable; apply to EVERY week) — store.targets[key] overrides
-  // the auto-default. Set via the inline target field; cleared (blank) reverts to the auto-default.
-  const stdTgt = store.targets || {};
-  const grocDefault = w.who === "You" ? 200 : 100; // auto-default (big-shop her weeks / lighter his) when no standing budget set
-  const tgtFor = (key, dflt) => (stdTgt[key] !== undefined && stdTgt[key] !== "") ? num(stdTgt[key]) : dflt;
+  // B-flat: weekly goals DERIVE (read-only) from the monthly Spending Split ÷ weeks in the month — flat
+  // across every week (spending is chaotic week-to-week, so no per-week weighting / fake precision).
+  // Edit the budgets on the Monthly tab's Spending Split; this is just the weekly slice of that.
+  const wkGoal = key => Math.round(c.sp(key) / weeksInMonth);
   const buckets = [
-    { key: "groceries", label: "🛒 Groceries", tgt: tgtFor("groceries", grocDefault) },
-    { key: "gas", label: "⛽ Gas", tgt: tgtFor("gas", Math.round(c.sp("gas") / weeksInMonth)) },
-    { key: "fun", label: "🎉 Fun", tgt: tgtFor("fun", Math.round(c.sp("date") / weeksInMonth)) },
-    { key: "other", label: "📦 Other", tgt: tgtFor("other", 25) },
+    { key: "groceries", label: "🛒 Groceries", tgt: wkGoal("groceries") },
+    { key: "gas", label: "⛽ Gas", tgt: wkGoal("gas") },
+    { key: "fun", label: "🎉 Fun", tgt: wkGoal("fun") },
+    { key: "other", label: "📦 Other", tgt: wkGoal("other") },
   ];
   const bucketHtml = buckets.map(b => {
     const entries = spendEntries(w, b.key);
     const spent = entries.reduce((a, e) => a + e.amount, 0);
-    const hasTgt = b.tgt > 0;                 // "Other" has no preset budget → track only, no bar/over
+    const hasTgt = b.tgt > 0;                 // blank/0 split Plan → that bucket is track-only (no bar/over)
     const pct = hasTgt ? Math.min(100, Math.round(spent / b.tgt * 100)) : 0;
     const over = hasTgt && spent > b.tgt;
     const lines = entries.map(e =>
       `<div class="billrow"><span>${money2(e.amount)}${e.note ? ` <span class="spend-note">— ${escHtml(e.note)}</span>` : ""}</span>` +
       `<span class="due"><button class="rm-spend" data-wk="${b.key}" data-id="${esc(e.id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:15px;padding:0 0 0 6px">&times;</button></span></div>`
     ).join("");
-    const tgtField = `<input class="tgt-in" data-wk="${b.key}" value="${b.tgt || ""}" inputmode="decimal" placeholder="0" aria-label="${b.label} weekly budget" title="Weekly budget — type to set (applies every week); blank reverts to auto">`;
-    const tally = hasTgt ? `${money2(spent)} of $${tgtField}${over ? " · over" : ""}` : `${money2(spent)} spent · budget $${tgtField}`;
+    const tally = hasTgt ? `${money2(spent)} of $${b.tgt}${over ? " · over" : ""}` : `${money2(spent)} spent`;
     return `<div class="wbucket">
       <div class="top"><span>${b.label}</span><span class="tgt ${over ? "over" : ""}">${tally}</span></div>
       ${hasTgt ? `<div class="wbar ${over ? "over" : ""}"><div style="width:${over ? 100 : pct}%"></div></div>` : ""}
@@ -500,17 +496,6 @@ function renderWeekly(){
       const key = btn.dataset.wk, id = btn.dataset.id, mk = weekId(w), spw = weekSpend(w);
       if (spw[key] && typeof spw[key] === "object"){ delete spw[key][id]; removeLeaf(["weekSpend", mk, key, id]); }
       else { spw[key] = {}; saveField("weekSpend", mk, key, {}); }   // clearing the legacy carried-over line
-      renderWeekly();
-    };
-  });
-  // Standing per-category weekly budget edit → store.targets[key] (applies to every week); a clobber-safe
-  // leaf write (first writer to store.targets). Blank reverts to the auto-default via removeLeaf.
-  document.querySelectorAll('#weeklyBody .tgt-in').forEach(inp => {
-    inp.onchange = () => {
-      store.targets = store.targets || {};
-      const v = inp.value.trim();
-      if (v === ""){ delete store.targets[inp.dataset.wk]; removeLeaf(["targets", inp.dataset.wk]); }
-      else { store.targets[inp.dataset.wk] = num(v); saveLeaf(["targets", inp.dataset.wk], num(v)); }
       renderWeekly();
     };
   });
@@ -588,13 +573,15 @@ function renderSheet(){
     sb.appendChild(tr);
   });
   const spb = document.getElementById("splitBody"); spb.innerHTML = "";
-  [["groceries","Groceries (you can trim this)"],["gas","Gas for the car"],["date","Fun"],["rainy","Other"]].forEach(p => {
+  // B-flat: Plan is the master monthly budget (editable, drives the weekly goals). Actual is READ-ONLY —
+  // it rolls up from the per-purchase log on the Weekly tab, so there's no second place to enter spending.
+  const splitAct = monthSpendByCat(store, curMonth, curYear);
+  [["groceries","Groceries"],["gas","Gas for the car"],["fun","Fun"],["other","Other"]].forEach(p => {
     const plan = (s.split[p[0]] !== undefined && s.split[p[0]] !== "") ? s.split[p[0]] : SPLIT_DEF[p[0]];
-    const act = s.splitActual[p[0]] !== undefined ? s.splitActual[p[0]] : "";
     const tr = document.createElement("tr");
     tr.innerHTML = `<td>${p[1]}</td>
       <td class="r"><input class="amt plan" data-kind="split" data-key="${p[0]}" value="${plan}"></td>
-      <td class="r"><input class="amt act" data-kind="splitActual" data-key="${p[0]}" value="${act}"></td>`;
+      <td class="r">${money2(splitAct[p[0]])}</td>`;
     spb.appendChild(tr);
   });
   wireInputs();
@@ -604,7 +591,8 @@ function wireInputs(){
   const mk = mkey(curMonth, curYear);
   document.querySelectorAll("#billsBody input,#savBody input,#splitBody input").forEach(inp => {
     const kind = inp.dataset.kind, key = inp.dataset.key, st = ms(store, curMonth, curYear);
-    // `kind` is exactly the section name (billPlan/billActual/savPlan/savActual/split/splitActual)
+    // `kind` is exactly the section name (billPlan/billActual/savPlan/savActual/split). splitActual is gone —
+    // the Spending Split's Actual is a read-only rollup of the weekly purchase log (B-flat), not an input.
     inp.oninput = () => { st[kind][key] = inp.value; saveField(mk, kind, key, inp.value); recompute(); };
   });
   // V2: per-bill status (paid / pushed / skipped). Leaf write, but pushed moves the due day + skipped
@@ -677,7 +665,7 @@ function recompute(){
     <div class="card"><h3>Money in</h3><div class="big">${money(c.moneyIn)}</div><div class="sub">${c.moneyIn > 6000 ? "bonus paycheck month" : "this month"}</div></div>
     <div class="card"><h3>Bills</h3><div class="big">${money(c.billPlanTot)}</div><div class="sub">actual ${money(c.billActTot)}</div></div>
     <div class="card"><h3>Savings</h3><div class="big">${money(c.savPlanTot)}</div><div class="sub">actual ${money(c.savActTot)}</div></div>
-    <div class="card flex"><h3>Flex left</h3><div class="big ${c.flexPlan < 0 ? 'neg' : ''}">${money(c.flexPlan)}</div><div class="sub">after groceries, gas, date night, rainy-day</div></div>`;
+    <div class="card flex"><h3>Flex left</h3><div class="big ${c.flexPlan < 0 ? 'neg' : ''}">${money(c.flexPlan)}</div><div class="sub">after groceries, gas, fun, other</div></div>`;
   renderCalendar(c);
   renderBreakdown(c);
   document.getElementById("billPlanTot").textContent = money2(c.billPlanTot);
@@ -838,9 +826,8 @@ function renderTrends(){
     mk("dChart", { type: "line", data: { labels, datasets: [{ label: "Bill / debt load", data: debtSeries, borderColor: "#b00020", backgroundColor: "rgba(176,0,32,.12)", fill: true, tension: .3 }] },
       options: { ...base, scales: { y: { ticks: { callback: money0 } } } } }); }
 
-  const c2 = calc(store, curMonth, curYear), weeksM = paydays(curMonth, curYear).length, stdT = store.targets || {};
-  const wkDef = { groceries: 200, gas: Math.round(c2.sp("gas") / weeksM), fun: Math.round(c2.sp("date") / weeksM), other: 25 };
-  const monthBudget = c => ((stdT[c] !== undefined && stdT[c] !== "") ? num(stdT[c]) : wkDef[c]) * weeksM;
+  const c2 = calc(store, curMonth, curYear);
+  const monthBudget = c => c2.sp(c);   // B-flat: the monthly Spending Split IS the budget (weekly goals derive from it ÷ weeks)
   mk("bChart", { type: "bar", data: { labels: cats.map(c => CL[c]), datasets: [
       { label: "Budget", data: cats.map(monthBudget), backgroundColor: "#cdd8da" }, { label: "Actual", data: cats.map(c => cur.byCat[c]), backgroundColor: cats.map(c => COL[c]) } ] },
     options: { ...base, scales: { y: { ticks: { callback: money0 } } } } });
@@ -919,7 +906,7 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
           // don't yank the DOM out from under an in-progress edit — the change is already in `store`;
           // it renders on the next blur/interaction (avoids dropping focus mid-type)
           const ae = document.activeElement;
-          if (!ae || !(ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in") || ae.classList.contains("tgt-in")))) setView(curView);
+          if (!ae || !(ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in")))) setView(curView);
         },
         deleteSentinel: () => firebase.firestore.FieldValue.delete()   // V2: removeLeaf deletes a single one-off / custom bill leaf
       });
