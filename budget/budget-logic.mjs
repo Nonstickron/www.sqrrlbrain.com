@@ -81,9 +81,10 @@ export function billsFor(store, m, year = YEAR) {
   b.push({ name: "Freedom Debt Relief (1st)", plan: 217, due: her[0] });
   b.push({ name: "Freedom Debt Relief (2nd)", plan: 217, due: (her[1] !== undefined ? her[1] : her[0]) });
   if (year === 2026 && (m === 6 || m === 7)) b.push({ name: "Ron's grill (ends July)", plan: 171.34, due: 25 });
-  // V2: user-added custom bills, respecting their own effective range
-  (store.customBills || []).forEach(cb => {
-    if (inEffect(cb, year, m)) b.push({ name: cb.name, plan: num(cb.plan), due: num(cb.due) });
+  // V2: user-added custom bills — a MAP keyed by (unique) bill name, so add/remove/effective-date
+  // are leaf writes on the shared doc. Each respects its own effective range.
+  Object.entries(store.customBills || {}).forEach(([name, cb]) => {
+    if (inEffect(cb, year, m)) b.push({ name, plan: num(cb.plan), due: num(cb.due) });
   });
   const billState = s.billState || {};   // V2: per-bill 'paid' | 'pushed' | 'skipped' (else legacy billPaid bool)
   b.forEach(x => {
@@ -111,7 +112,9 @@ export function sumWindow(bills, lo, hi) { let t = 0; bills.forEach(b => { if (b
 // `day` places it in a paycheck window (like a bill's due day) so the weekly view can subtract it.
 export function oneOffsFor(store, m, year = YEAR) {
   const s = ms(store, m, year);
-  return (s.oneOffs || []).map(o => ({ name: o.name, amount: num(o.amount), day: num(o.day) }));
+  // oneOffs is an id-keyed MAP (not an array) so every add/remove is a clobber-safe leaf write on
+  // the shared doc; the id rides along in the output so the UI can target one entry for removal.
+  return Object.entries(s.oneOffs || {}).map(([id, o]) => ({ id, name: o.name, amount: num(o.amount), day: num(o.day) }));
 }
 
 export function calc(store, m, year = YEAR) {
@@ -128,7 +131,7 @@ export function calc(store, m, year = YEAR) {
   const flexPlan = leftPlan - splitPlanTot;
   const moneyInAct = (s.moneyInActual !== "" && s.moneyInActual !== undefined) ? num(s.moneyInActual) : moneyIn;
   const leftAct = moneyInAct - billActTot - savActTot;
-  const oneOffTot = (s.oneOffs || []).reduce((a, o) => a + num(o.amount), 0);  // V2: surprise/one-off expenses
+  const oneOffTot = Object.values(s.oneOffs || {}).reduce((a, o) => a + num(o.amount), 0);  // V2: surprise/one-off expenses (id-keyed map)
   const flexAct = leftAct - splitActTot - oneOffTot;
   return { s, pds, bills, moneyIn, billPlanTot, billActTot, savPlanTot, savActTot, splitPlanTot, splitActTot, leftPlan, flexPlan, moneyInAct, leftAct, flexAct, oneOffTot, sp };
 }

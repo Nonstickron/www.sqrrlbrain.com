@@ -226,6 +226,14 @@ function saveField(monthKey, section, key, value){                  // one leaf:
   backend.saveField(monthKey, section, key, value);
   localBackend.saveAll(store);
 }
+function saveLeaf(path, value){                                     // V2: one leaf at any depth (oneOffs/customBills/billMeta)
+  backend.saveLeaf(path, value);                                   // → field-scoped cloud merge (never clobbers siblings)
+  localBackend.saveAll(store);                                     // → whole local cache (single-device, no clobber risk)
+}
+function removeLeaf(path){                                          // V2: delete ONE leaf without a whole-doc rewrite
+  backend.removeLeaf(path);                                        // → FieldValue.delete() at that path on the shared doc
+  localBackend.saveAll(store);
+}
 
 let store = localBackend.load();
 let curView = "weekly";
@@ -277,6 +285,7 @@ function weekTargets(w){ store.weekTargets = store.weekTargets || {}; const id =
 
 const esc = s => String(s).replace(/"/g, "&quot;");
 const ordinal = n => { const s = ["th","st","nd","rd"], v = n % 100; return (s[(v - 20) % 10] || s[v] || s[0]); };
+const newId = () => "o" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);  // unique key for a one-off map entry
 
 /* ============================ WEEKLY VIEW ============================ */
 function renderWeekly(){
@@ -284,8 +293,7 @@ function renderWeekly(){
   const c = calc(store, w.month, w.year);
   const windowBills = c.bills.filter(b => b.due >= w.lo && b.due <= w.hi);
   const billsSum = windowBills.reduce((a, b) => a + (b.state === "skipped" ? 0 : b.plan), 0);  // V2: skipped bills don't count
-  const windowOneOffs = (ms(store, w.month, w.year).oneOffs || [])  // V2: surprise expenses landing in this window (indexed for removal)
-    .map((o, i) => ({ name: o.name, amount: num(o.amount), day: num(o.day), i }))
+  const windowOneOffs = oneOffsFor(store, w.month, w.year)          // V2: surprise expenses (id-keyed map) landing in this window
     .filter(o => o.day >= w.lo && o.day <= w.hi);
   const oneOffSum = windowOneOffs.reduce((a, o) => a + o.amount, 0);
   const savThisWeek = w.who === "You" ? (c.savPlanTot / w.herCount) : 0;
@@ -317,7 +325,7 @@ function renderWeekly(){
 
   // V2: surprise/one-off expenses landing in this window
   const oneOffsHtml = windowOneOffs.map(o =>
-    `<div class="billrow"><span>🚨 ${o.name}</span><span class="due">${money(o.amount)} &middot; ${MNAMES[w.month].slice(0,3)} ${o.day} <button class="rm-oneoff" data-i="${o.i}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:14px;padding:0 0 0 4px">&times;</button></span></div>`
+    `<div class="billrow"><span>🚨 ${o.name}</span><span class="due">${money(o.amount)} &middot; ${MNAMES[w.month].slice(0,3)} ${o.day} <button class="rm-oneoff" data-id="${esc(o.id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:14px;padding:0 0 0 4px">&times;</button></span></div>`
   ).join("");
 
   const weeksInMonth = WEEKS.filter(x => x.year === w.year && x.month === w.month).length;
@@ -369,16 +377,22 @@ function renderWeekly(){
     inp.oninput = () => { weekSpend(w)[inp.dataset.wk] = inp.value; saveField('weekSpend', weekId(w), inp.dataset.wk, inp.value); };
     inp.onblur = () => renderWeekly();
   });
-  // V2: add / remove a surprise (one-off) expense — structural, so whole-doc save()
+  // V2: add / remove a surprise (one-off) expense — id-keyed MAP + leaf writes, so a routine add/remove
+  // on the shared doc can't clobber the other phone's concurrent edit (a whole-doc save() would).
   document.getElementById("addOneOff").onclick = () => {
     const name = (prompt("What was the surprise expense? (e.g. Car repair)") || "").trim(); if (!name) return;
     const amt = prompt("How much? ($)"); if (amt === null || amt === "") return;
-    const st = ms(store, w.month, w.year); st.oneOffs = st.oneOffs || [];
-    st.oneOffs.push({ name, amount: num(amt), day: w.day });
-    save(); renderWeekly();
+    const mk = mkey(w.month, w.year), id = newId(), st = ms(store, w.month, w.year);
+    st.oneOffs = st.oneOffs || {};
+    st.oneOffs[id] = { name, amount: num(amt), day: w.day };
+    saveLeaf([mk, "oneOffs", id], st.oneOffs[id]); renderWeekly();
   };
   document.querySelectorAll('#weeklyBody .rm-oneoff').forEach(btn => {
-    btn.onclick = () => { const st = ms(store, w.month, w.year); (st.oneOffs || []).splice(+btn.dataset.i, 1); save(); renderWeekly(); };
+    btn.onclick = () => {
+      const mk = mkey(w.month, w.year), id = btn.dataset.id, st = ms(store, w.month, w.year);
+      if (st.oneOffs) delete st.oneOffs[id];
+      removeLeaf([mk, "oneOffs", id]); renderWeekly();
+    };
   });
   document.getElementById("toMonth").onclick = () => { curYear = w.year; curMonth = w.month; setView("sheet"); };
 }
@@ -411,7 +425,7 @@ function renderSheet(){
   renderMonths();
   const c = calc(store, curMonth, curYear), s = c.s;
   const body = document.getElementById("billsBody"); body.innerHTML = "";
-  const customNames = new Set((store.customBills || []).map(cb => cb.name));   // V2: which bills the user added
+  const customNames = new Set(Object.keys(store.customBills || {}));   // V2: which bills the user added (map keyed by name)
   const states = ["unpaid", "paid", "pushed", "skipped"];
   c.bills.forEach(b => {
     const tr = document.createElement("tr");
@@ -474,43 +488,51 @@ function wireInputs(){
 // (a debt clears for good; a new bill recurs every month within its range), so all three use save().
 function endBill(name, isCustom){
   const cur = isCustom
-    ? ((store.customBills || []).find(c => c.name === name) || {}).end || ""
+    ? ((store.customBills || {})[name] || {}).end || ""
     : ((store.billMeta || {})[name] || {}).end || "";
   const val = prompt(`Last month "${name}" is owed? Format YYYY-M (e.g. 2026-9).\nLeave blank to clear it / keep it ongoing.`, cur);
   if (val === null) return;
   const v = val.trim();
   if (v && !/^\d{4}-\d{1,2}$/.test(v)) { alert("Please use the format YYYY-M, like 2026-9."); return; }
+  // `end` gets its own leaf write — a merge of the whole object can ADD end but can't REMOVE a stale one.
   if (isCustom){
-    const cb = (store.customBills || []).find(c => c.name === name); if (!cb) return;
-    if (v) cb.end = v; else delete cb.end;
+    const cb = (store.customBills || {})[name]; if (!cb) return;
+    if (v) { cb.end = v; saveLeaf(["customBills", name, "end"], v); }
+    else { delete cb.end; removeLeaf(["customBills", name, "end"]); }
   } else {
     store.billMeta = store.billMeta || {};
     const m = store.billMeta[name] = store.billMeta[name] || {};
-    if (v) m.end = v; else delete m.end;
-    if (!m.end && !m.start && !m.removed) delete store.billMeta[name];   // don't leave empty meta behind
+    if (v) { m.end = v; saveLeaf(["billMeta", name, "end"], v); }
+    else {
+      delete m.end;
+      if (!m.start && !m.removed) { delete store.billMeta[name]; removeLeaf(["billMeta", name]); }  // no meta left → drop it whole
+      else removeLeaf(["billMeta", name, "end"]);
+    }
   }
-  save(); renderSheet();
+  renderSheet();
 }
 function removeBill(name, isCustom){
   if (isCustom){
     if (!confirm(`Delete the bill you added — "${name}"? This removes it from every month.`)) return;
-    store.customBills = (store.customBills || []).filter(c => c.name !== name);
+    if (store.customBills) delete store.customBills[name];
+    removeLeaf(["customBills", name]);
   } else {
     if (!confirm(`Remove "${name}" from every month?\n\nIf it's just being paid off, use "ends…" instead so it still shows in the months you owed it.`)) return;
     store.billMeta = store.billMeta || {};
     store.billMeta[name] = { ...(store.billMeta[name] || {}), removed: true };
+    saveLeaf(["billMeta", name], store.billMeta[name]);
   }
-  save(); renderSheet();
+  renderSheet();
 }
 function addBill(){
   const name = (prompt("Name of the new bill? (e.g. Gym membership)") || "").trim(); if (!name) return;
-  const existing = new Set([...FIXED.map(f => f[0]), ...(store.customBills || []).map(c => c.name)]);
+  const existing = new Set([...FIXED.map(f => f[0]), ...Object.keys(store.customBills || {})]);
   if (existing.has(name)) { alert("A bill with that name already exists."); return; }
   const amt = prompt("Monthly amount? ($)"); if (amt === null || amt === "") return;
   const day = prompt("Day of the month it's due? (1–31)"); if (day === null || day === "") return;
-  store.customBills = store.customBills || [];
-  store.customBills.push({ name, plan: num(amt), due: Math.min(31, Math.max(1, num(day))) });
-  save(); renderSheet();
+  store.customBills = store.customBills || {};
+  store.customBills[name] = { plan: num(amt), due: Math.min(31, Math.max(1, num(day))) };
+  saveLeaf(["customBills", name], store.customBills[name]); renderSheet();
 }
 function recompute(){
   const c = calc(store, curMonth, curYear);
@@ -655,7 +677,8 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
           // it renders on the next blur/interaction (avoids dropping focus mid-type)
           const ae = document.activeElement;
           if (!ae || !(ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt")))) setView(curView);
-        }
+        },
+        deleteSentinel: () => firebase.firestore.FieldValue.delete()   // V2: removeLeaf deletes a single one-off / custom bill leaf
       });
       const reconciled = await cloud.start(store);  // migration-guarded: cloud wins if it already exists
       backend = cloud;                              // only switch after a successful start()

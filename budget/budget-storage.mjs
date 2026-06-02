@@ -13,9 +13,12 @@ export const STORE_KEY = "ronny-budget-2026-v1";
 export const localBackend = {
   load() { try { return JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch (_) { return {}; } },
   saveAll(store) { try { localStorage.setItem(STORE_KEY, JSON.stringify(store)); } catch (_) {} },
-  // no-op stubs so callers can treat both backends uniformly
+  // no-op stubs so callers can treat both backends uniformly. Local persistence is the whole-store
+  // saveAll the wrappers call alongside these — localStorage is single-device, so no clobber concern.
   async start(localStore) { return localStore; },
   async saveField() {},
+  async saveLeaf() {},
+  async removeLeaf() {},
   stop() {},
 };
 
@@ -54,8 +57,10 @@ export function shouldReconcile(snapshotMeta) {
    `docRef` is injected — the real firebase compat docRef in the app
    (firebase.firestore().doc(`households/${id}`)), a fake in tests — so all of the
    migration / merge / reconcile logic above is testable without a live Firestore. */
-export function firestoreBackend({ docRef, onRemote }) {
+export function firestoreBackend({ docRef, onRemote, deleteSentinel }) {
   let unsub = null;
+  // one field-scoped merge write, reused by saveField/saveLeaf/removeLeaf — never clobbers siblings
+  const writeLeaf = (path, value) => docRef.set(mergeField({}, path, value), { merge: true });
   return {
     // Load: migrate-or-adopt-cloud, then subscribe for live reconciliation.
     async start(localStore) {
@@ -73,7 +78,17 @@ export function firestoreBackend({ docRef, onRemote }) {
     },
     // Save only the touched leaf — concurrent edits to different fields never clobber.
     async saveField(monthKey, section, key, value) {
-      await docRef.set(mergeField({}, [monthKey, section, key], value), { merge: true });
+      await writeLeaf([monthKey, section, key], value);
+    },
+    // V2: write a leaf at an ARBITRARY path — top-level maps (customBills.<name>, billMeta.<name>)
+    // or a per-month leaf (<mk>.oneOffs.<id>). Same clobber-safe merge as saveField, any depth.
+    async saveLeaf(path, value) {
+      await writeLeaf(path, value);
+    },
+    // V2: remove ONE leaf (delete a single one-off / custom bill) without a whole-doc rewrite —
+    // writes Firestore's delete sentinel at that path under a merge, so only that key is removed.
+    async removeLeaf(path) {
+      await writeLeaf(path, deleteSentinel ? deleteSentinel() : null);
     },
     // Whole-doc overwrite for bulk ops (reset-a-month / import-a-backup). NOT a merge — so a month
     // dropped from `store` is deleted by omission, which a {merge:true} field write can't do.
