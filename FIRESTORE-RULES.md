@@ -105,14 +105,12 @@ service cloud.firestore {
     }
 
     // Household budget — the FIRST shared-by-two-people doc (every rule above is single-owner).
-    // Shared by exactly Ronny + Dauvy; locked to their two UIDs (non-PII, unlike emails).
-    // TODO(activation): replace the two placeholder UIDs after both sign in once (see budget
-    // ACTIVATION.md), then deploy. Until the real UIDs are filled this matches nobody (safe).
+    // Shared by exactly Ronny + Dauvy; locked to their two Firebase UIDs (non-PII, unlike emails).
     match /households/{hid} {
       allow read, write: if request.auth != null
         && request.auth.uid in [
-          "__RONNY_UID__",   // Ronny's account
-          "__DAUVY_UID__"    // Dauvy's account
+          "sAwp2pDqZFQzTtbe8gfhVYTxAko1",   // Ronny's account
+          "Tffjr7O6Y9frCkyi0rwbVYST5g13"    // Dauvy's account
         ];
     }
 
@@ -128,7 +126,7 @@ service cloud.firestore {
 
 The `households/{hid}` block is the first **shared-by-two-people** doc in the ruleset — every other rule is single-owner (`email==email` or `uid==uid`). It's locked to Ronny's + Dauvy's two Firebase `auth.uid`s (UIDs, not emails — keeps PII out of the repo).
 
-**Activation (per `Projects/budgetting/ACTIVATION.md`):** after both sign in once at the deployed, gated budget page, replace `__RONNY_UID__` / `__DAUVY_UID__` with their real UIDs and redeploy. Until the placeholders are filled it matches nobody, so deploying it early is safe (default-deny applies).
+**Activation (completed 2026-06-02):** both signed in once at the gated `/budget` page; their real Firebase UIDs are now filled into the rule above (placeholders gone). Deploy with `firebase deploy --only firestore:rules`.
 
 ## What broke and why the per-user rule is needed
 
