@@ -396,7 +396,7 @@ function renderWeekly(){
     { key: "groceries", label: "🛒 Groceries", tgt: tgtOverride.groceries !== undefined && tgtOverride.groceries !== "" ? num(tgtOverride.groceries) : grocDefault },
     { key: "gas", label: "⛽ Gas", tgt: tgtOverride.gas !== undefined && tgtOverride.gas !== "" ? num(tgtOverride.gas) : Math.round(c.sp("gas") / weeksInMonth) },
     { key: "fun", label: "🎉 Fun / date", tgt: tgtOverride.fun !== undefined && tgtOverride.fun !== "" ? num(tgtOverride.fun) : Math.round(c.sp("date") / weeksInMonth) },
-    { key: "other", label: "📦 Other", tgt: tgtOverride.other !== undefined && tgtOverride.other !== "" ? num(tgtOverride.other) : 0 },   // no preset budget — tracks only
+    { key: "other", label: "📦 Other", tgt: tgtOverride.other !== undefined && tgtOverride.other !== "" ? num(tgtOverride.other) : 25 },   // $25/wk default (overridable via weekTargets.other)
   ];
   const bucketHtml = buckets.map(b => {
     const entries = spendEntries(w, b.key);
