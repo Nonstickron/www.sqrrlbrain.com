@@ -218,6 +218,16 @@
       <div class="cal-detail" id="calDetail" hidden></div>
     </section>
     <section>
+      <h2>Spending split <span class="note" style="font-weight:normal">— what's left after bills + savings, and how you'll use it</span></h2>
+      <table>
+        <thead><tr><th>Bucket</th><th class="r">Plan / mo</th><th class="r">Actual</th></tr></thead>
+        <tbody id="splitBody"></tbody>
+        <tfoot><tr><td>Flex — surprises + free spending</td><td class="r" id="flexPlan"></td><td class="r" id="flexAct"></td></tr></tfoot>
+      </table>
+      <div class="note">In a normal $6,000 month this leaves roughly $450–650 of free money. It loosens up once Ron's grill is paid off (August 2026), and bonus-paycheck months have far more.</div>
+      <div class="note" id="oneOffNote"></div>
+    </section>
+    <section>
       <h2>Payday by payday</h2>
       <div id="breakdown"></div>
       <div class="note" id="halvesNote"></div>
@@ -238,16 +248,7 @@
         <tbody id="savBody"></tbody>
         <tfoot><tr><td>Total</td><td class="r" id="savPlanTot"></td><td class="r" id="savActTot"></td><td></td></tr></tfoot>
       </table>
-    </section>
-    <section>
-      <h2>Spending split <span class="note" style="font-weight:normal">— what's left after bills + savings, and how you'll use it</span></h2>
-      <table>
-        <thead><tr><th>Bucket</th><th class="r">Plan / mo</th><th class="r">Actual</th></tr></thead>
-        <tbody id="splitBody"></tbody>
-        <tfoot><tr><td>Flex — surprises + free spending</td><td class="r" id="flexPlan"></td><td class="r" id="flexAct"></td></tr></tfoot>
-      </table>
-      <div class="note">In a normal $6,000 month this leaves roughly $450–650 of free money. It loosens up once Ron's grill is paid off (August 2026), and bonus-paycheck months have far more.</div>
-      <div class="note" id="oneOffNote"></div>
+      <button class="linkbtn bill-add" id="addSavings">+ Add a savings goal</button>
     </section>
   </div>
 
@@ -281,7 +282,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
 <script type="module">
 import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
-         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor,
+         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor, savingsFor,
          SPEND_CATS, monthSpendByCat, monthlyTrend, weeklySpendTrend, yearSummary, monthSummary } from './budget-logic.mjs';
 import { makeBackend, localBackend } from './budget-storage.mjs';
 
@@ -562,14 +563,17 @@ function renderSheet(){
     body.appendChild(tr);
   });
   const sb = document.getElementById("savBody"); sb.innerHTML = "";
-  SAV_DEF.forEach(g => {
-    const plan = (s.savPlan[g[0]] !== undefined && s.savPlan[g[0]] !== "") ? s.savPlan[g[0]] : g[1];
-    const act = s.savActual[g[0]] !== undefined ? s.savActual[g[0]] : "";
+  // V2.1: goals = the 3 defaults (minus any retired) + user-added customSavings. Plan/Actual stay per-month
+  // editable inputs (keyed by goal name); the last column carries the description / "added" tag + a remove ×.
+  savingsFor(store).forEach(g => {
+    const plan = (s.savPlan[g.name] !== undefined && s.savPlan[g.name] !== "") ? s.savPlan[g.name] : g.plan;
+    const act = s.savActual[g.name] !== undefined ? s.savActual[g.name] : "";
+    const desc = g.custom ? '<span class="billtag">added</span>' : escHtml(g.note);
     const tr = document.createElement("tr");
-    tr.innerHTML = `<td>${g[0]}</td>
-      <td class="r"><input class="amt plan" data-kind="savPlan" data-key="${esc(g[0])}" value="${plan}"></td>
-      <td class="r"><input class="amt act" data-kind="savActual" data-key="${esc(g[0])}" value="${act}"></td>
-      <td>${g[2]}</td>`;
+    tr.innerHTML = `<td>${escHtml(g.name)}</td>
+      <td class="r"><input class="amt plan" data-kind="savPlan" data-key="${esc(g.name)}" value="${plan}"></td>
+      <td class="r"><input class="amt act" data-kind="savActual" data-key="${esc(g.name)}" value="${act}"></td>
+      <td>${desc}<button class="billact rm" data-goal="${esc(g.name)}" data-custom="${g.custom}" title="Remove this goal">&times;</button></td>`;
     sb.appendChild(tr);
   });
   const spb = document.getElementById("splitBody"); spb.innerHTML = "";
@@ -608,6 +612,8 @@ function wireInputs(){
   // V2: edit the bill itself — set an effective end month, or remove it (structural → whole-doc save)
   document.querySelectorAll("#billsBody .billact.ends").forEach(btn => btn.onclick = () => endBill(btn.dataset.bill, btn.dataset.custom === "true"));
   document.querySelectorAll("#billsBody .billact.rm").forEach(btn => btn.onclick = () => removeBill(btn.dataset.bill, btn.dataset.custom === "true"));
+  // V2.1: remove a savings goal (scoped to #savBody so it never collides with the bill remove buttons)
+  document.querySelectorAll("#savBody .billact.rm").forEach(btn => btn.onclick = () => removeSavings(btn.dataset.goal, btn.dataset.custom === "true"));
 }
 // V2 — evolving bills: effective-date end, remove, and add. customBills + billMeta are top-level
 // (a debt clears for good; a new bill recurs every month within its range), so all three use save().
@@ -658,6 +664,32 @@ function addBill(){
   store.customBills = store.customBills || {};
   store.customBills[name] = { plan: num(amt), due: Math.min(31, Math.max(1, num(day))) };
   saveLeaf(["customBills", name], store.customBills[name]); renderSheet();
+}
+// V2.1 — evolving savings goals. customSavings + savMeta are top-level (a goal is an ongoing thing, like a
+// bill), so add/remove are leaf writes. Removing a CUSTOM goal drops its def; "removing" a DEFAULT sets a
+// savMeta.removed flag (you can't delete a built-in). Per-month savPlan/savActual leaves for a gone goal are
+// harmlessly ignored by calc (savingsFor no longer lists it), same as customBills' orphaned bill amounts.
+function addSavings(){
+  const name = (prompt("What are you saving for? (e.g. Vacation)") || "").trim(); if (!name) return;
+  const existing = new Set([...SAV_DEF.map(d => d[0]), ...Object.keys(store.customSavings || {})]);
+  if (existing.has(name)) { alert("A savings goal with that name already exists."); return; }
+  const amt = prompt("How much to set aside each month? ($)"); if (amt === null || amt === "") return;
+  store.customSavings = store.customSavings || {};
+  store.customSavings[name] = { plan: num(amt) };
+  saveLeaf(["customSavings", name], store.customSavings[name]); renderSheet();
+}
+function removeSavings(name, isCustom){
+  if (isCustom){
+    if (!confirm(`Delete the savings goal you added — "${name}"? This removes it from every month.`)) return;
+    if (store.customSavings) delete store.customSavings[name];
+    removeLeaf(["customSavings", name]);
+  } else {
+    if (!confirm(`Remove "${name}" from your savings goals?\n\nIt's one of the starting goals, so this hides it (a built-in can't be deleted) and it stops counting toward your plan.`)) return;
+    store.savMeta = store.savMeta || {};
+    store.savMeta[name] = { ...(store.savMeta[name] || {}), removed: true };
+    saveLeaf(["savMeta", name], store.savMeta[name]);
+  }
+  renderSheet();
 }
 function recompute(){
   const c = calc(store, curMonth, curYear);
@@ -852,6 +884,7 @@ document.getElementById("tabWeekly").onclick = () => setView("weekly");
 document.getElementById("tabSheet").onclick = () => setView("sheet");
 document.getElementById("tabTrends").onclick = () => setView("trends");
 document.getElementById("addBill").onclick = addBill;
+document.getElementById("addSavings").onclick = addSavings;
 document.getElementById("wPrev").onclick = () => { if (curWeek > 0){ curWeek--; renderWeekly(); } };
 document.getElementById("wNext").onclick = () => { if (curWeek < WEEKS.length - 1){ curWeek++; renderWeekly(); } };
 
