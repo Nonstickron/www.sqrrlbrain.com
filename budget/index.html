@@ -78,6 +78,8 @@
   .logrow .note-in{flex:1;min-width:110px;border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-size:13px;font-family:inherit}
   .logrow #addSpend{border:1px solid var(--teal2);border-radius:6px;padding:6px 14px;background:var(--teal2);color:#fff;font-weight:bold;font-size:13px;cursor:pointer}
   .spend-note{color:var(--muted);font-weight:normal}
+  .tgt-in{width:46px;border:none;border-bottom:1px dashed var(--muted);background:transparent;font:inherit;color:inherit;text-align:right;padding:0 1px}
+  .tgt-in:focus{outline:none;border-bottom:1px solid var(--teal2)}
   .wbar{height:9px;background:#eef2f3;border-radius:5px;overflow:hidden}
   .wbar > div{height:100%;background:var(--teallt)}
   .wbar.over > div{background:var(--red)}
@@ -390,13 +392,16 @@ function renderWeekly(){
   ).join("");
 
   const weeksInMonth = WEEKS.filter(x => x.year === w.year && x.month === w.month).length;
-  const tgtOverride = weekTargets(w);
-  const grocDefault = w.who === "You" ? 200 : 100; // big shop on her weeks, light on his (editable)
+  // Standing per-category weekly budgets (editable; apply to EVERY week) — store.targets[key] overrides
+  // the auto-default. Set via the inline target field; cleared (blank) reverts to the auto-default.
+  const stdTgt = store.targets || {};
+  const grocDefault = w.who === "You" ? 200 : 100; // auto-default (big-shop her weeks / lighter his) when no standing budget set
+  const tgtFor = (key, dflt) => (stdTgt[key] !== undefined && stdTgt[key] !== "") ? num(stdTgt[key]) : dflt;
   const buckets = [
-    { key: "groceries", label: "🛒 Groceries", tgt: tgtOverride.groceries !== undefined && tgtOverride.groceries !== "" ? num(tgtOverride.groceries) : grocDefault },
-    { key: "gas", label: "⛽ Gas", tgt: tgtOverride.gas !== undefined && tgtOverride.gas !== "" ? num(tgtOverride.gas) : Math.round(c.sp("gas") / weeksInMonth) },
-    { key: "fun", label: "🎉 Fun / date", tgt: tgtOverride.fun !== undefined && tgtOverride.fun !== "" ? num(tgtOverride.fun) : Math.round(c.sp("date") / weeksInMonth) },
-    { key: "other", label: "📦 Other", tgt: tgtOverride.other !== undefined && tgtOverride.other !== "" ? num(tgtOverride.other) : 25 },   // $25/wk default (overridable via weekTargets.other)
+    { key: "groceries", label: "🛒 Groceries", tgt: tgtFor("groceries", grocDefault) },
+    { key: "gas", label: "⛽ Gas", tgt: tgtFor("gas", Math.round(c.sp("gas") / weeksInMonth)) },
+    { key: "fun", label: "🎉 Fun / date", tgt: tgtFor("fun", Math.round(c.sp("date") / weeksInMonth)) },
+    { key: "other", label: "📦 Other", tgt: tgtFor("other", 25) },
   ];
   const bucketHtml = buckets.map(b => {
     const entries = spendEntries(w, b.key);
@@ -408,7 +413,8 @@ function renderWeekly(){
       `<div class="billrow"><span>${money2(e.amount)}${e.note ? ` <span class="spend-note">— ${escHtml(e.note)}</span>` : ""}</span>` +
       `<span class="due"><button class="rm-spend" data-wk="${b.key}" data-id="${esc(e.id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:15px;padding:0 0 0 6px">&times;</button></span></div>`
     ).join("");
-    const tally = hasTgt ? `${money2(spent)} of ${money(b.tgt)}${over ? " · over" : ""}` : `${money2(spent)} spent`;
+    const tgtField = `<input class="tgt-in" data-wk="${b.key}" value="${b.tgt || ""}" inputmode="decimal" placeholder="0" aria-label="${b.label} weekly budget" title="Weekly budget — type to set (applies every week); blank reverts to auto">`;
+    const tally = hasTgt ? `${money2(spent)} of $${tgtField}${over ? " · over" : ""}` : `${money2(spent)} spent · budget $${tgtField}`;
     return `<div class="wbucket">
       <div class="top"><span>${b.label}</span><span class="tgt ${over ? "over" : ""}">${tally}</span></div>
       ${hasTgt ? `<div class="wbar ${over ? "over" : ""}"><div style="width:${over ? 100 : pct}%"></div></div>` : ""}
@@ -474,6 +480,17 @@ function renderWeekly(){
       const key = btn.dataset.wk, id = btn.dataset.id, mk = weekId(w), spw = weekSpend(w);
       if (spw[key] && typeof spw[key] === "object"){ delete spw[key][id]; removeLeaf(["weekSpend", mk, key, id]); }
       else { spw[key] = {}; saveField("weekSpend", mk, key, {}); }   // clearing the legacy carried-over line
+      renderWeekly();
+    };
+  });
+  // Standing per-category weekly budget edit → store.targets[key] (applies to every week); a clobber-safe
+  // leaf write (first writer to store.targets). Blank reverts to the auto-default via removeLeaf.
+  document.querySelectorAll('#weeklyBody .tgt-in').forEach(inp => {
+    inp.onchange = () => {
+      store.targets = store.targets || {};
+      const v = inp.value.trim();
+      if (v === ""){ delete store.targets[inp.dataset.wk]; removeLeaf(["targets", inp.dataset.wk]); }
+      else { store.targets[inp.dataset.wk] = num(v); saveLeaf(["targets", inp.dataset.wk], num(v)); }
       renderWeekly();
     };
   });
@@ -804,7 +821,7 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
           // don't yank the DOM out from under an in-progress edit — the change is already in `store`;
           // it renders on the next blur/interaction (avoids dropping focus mid-type)
           const ae = document.activeElement;
-          if (!ae || !(ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in")))) setView(curView);
+          if (!ae || !(ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in") || ae.classList.contains("tgt-in")))) setView(curView);
         },
         deleteSentinel: () => firebase.firestore.FieldValue.delete()   // V2: removeLeaf deletes a single one-off / custom bill leaf
       });
