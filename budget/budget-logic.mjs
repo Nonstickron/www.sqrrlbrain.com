@@ -35,10 +35,10 @@ export function mkey(m, year = YEAR) { return year + "-" + m; }
 
 export function ms(store, m, year = YEAR) { // month state with defaults
   const k = mkey(m, year);
-  if (!store[k]) store[k] = { billPlan: {}, billActual: {}, billPaid: {}, split: {}, splitActual: {}, savPlan: {}, savActual: {}, moneyInActual: "" };
+  if (!store[k]) store[k] = { billPlan: {}, billActual: {}, billPaid: {}, split: {}, savPlan: {}, savActual: {}, moneyInActual: "" };
   const s = store[k];
   s.billPlan = s.billPlan || {}; s.billActual = s.billActual || {}; s.billPaid = s.billPaid || {};
-  s.split = s.split || {}; s.splitActual = s.splitActual || {}; s.savPlan = s.savPlan || {}; s.savActual = s.savActual || {};
+  s.split = s.split || {}; s.savPlan = s.savPlan || {}; s.savActual = s.savActual || {};
   if (s.moneyInActual === undefined) s.moneyInActual = "";
   return s;
 }
@@ -88,14 +88,14 @@ export function billsFor(store, m, year = YEAR) {
   });
   const billState = s.billState || {};   // V2: per-bill 'paid' | 'pushed' | 'skipped' (else legacy billPaid bool)
   b.forEach(x => {
-    if (s.billPlan[x.name] !== undefined && s.billPlan[x.name] !== "") x.plan = parseFloat(s.billPlan[x.name]);
+    if (s.billPlan[x.name] !== undefined && s.billPlan[x.name] !== "") { const p = parseFloat(s.billPlan[x.name]); if (!isNaN(p)) x.plan = p; }  // guard NaN — a stray non-numeric Plan keeps the default instead of poisoning every total with $NaN
     x.actual = (s.billActual[x.name] !== undefined ? s.billActual[x.name] : "");
     x.state = billState[x.name] || (s.billPaid[x.name] ? "paid" : "unpaid");
     x.paid = x.state === "paid";   // backward-compat with existing render/logic
     // V2 "pushed" = defer to the next paycheck this month (moves it out of the current window)
     if (x.state === "pushed") {
       const nextPay = pds.map(p => p.day).find(d => d > x.due);
-      if (nextPay !== undefined) x.due = nextPay;
+      if (nextPay !== undefined) x.due = nextPay; else x.pushStuck = true;  // no later check this month → "pushed" can't move it; flag so the UI doesn't claim it moved
     }
   });
   b.sort((a, c) => a.due - c.due);
@@ -139,7 +139,13 @@ export function calc(store, m, year = YEAR) {
   const savGoals = savingsFor(store);   // V2.1: SAV_DEF defaults (minus retired) + user-added customSavings
   const savPlanTot = savGoals.reduce((a, g) => a + (s.savPlan[g.name] !== undefined && s.savPlan[g.name] !== "" ? num(s.savPlan[g.name]) : g.plan), 0);
   const savActTot = savGoals.reduce((a, g) => a + num(s.savActual[g.name]), 0);
-  const sp = k => (s.split[k] !== undefined && s.split[k] !== "" ? num(s.split[k]) : SPLIT_DEF[k]);
+  const SPLIT_OLD_KEY = { fun: "date", other: "rainy" };   // B-flat renamed date->fun, rainy->other
+  const sp = k => {
+    if (s.split[k] !== undefined && s.split[k] !== "") return num(s.split[k]);
+    const old = SPLIT_OLD_KEY[k];                           // read a pre-rename saved override transparently (no migration write needed)
+    if (old && s.split[old] !== undefined && s.split[old] !== "") return num(s.split[old]);
+    return SPLIT_DEF[k];
+  };
   const splitPlanTot = sp("groceries") + sp("gas") + sp("fun") + sp("other");
   const byCatAct = monthSpendByCat(store, m, year);   // B-reconcile: monthly Actual = the weekly purchase log rolled up (replaces hand-typed split actuals → kills double-entry)
   const splitActTot = SPEND_CATS.reduce((a, k) => a + byCatAct[k], 0);
