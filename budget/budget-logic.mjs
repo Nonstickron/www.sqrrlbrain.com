@@ -101,6 +101,43 @@ export function billsFor(store, m, year = YEAR) {
   return b;
 }
 
+// #1/#12 — paycheck-to-paycheck windows across the whole timeline. Each window runs from its check to the day
+// BEFORE the next check, crossing the month line when a check lands near month-end — so the last check of a
+// 5-paycheck month is a full ~7-day window (NOT a 2-day "stub"), and it carries the early-next-month bills it
+// actually pays. The very first window reaches back to the 1st of its month (no check exists before the budget
+// starts). `years` = the list of years the app covers. Returns the windows in chronological order.
+export function paycheckWindows(years) {
+  const pays = [];
+  years.forEach(year => monthsForYear(year).forEach(m =>
+    paydays(m, year).forEach(p => pays.push({ year, month: m, day: p.day, who: p.who, amount: p.amount }))));
+  return pays.map((p, i) => {
+    const start = Date.UTC(p.year, p.month - 1, i === 0 ? 1 : p.day);      // first window reaches back to the 1st
+    const nx = pays[i + 1];
+    const end = nx ? Date.UTC(nx.year, nx.month - 1, nx.day) - 86400000    // day before the next check (may be next month)
+                   : Date.UTC(p.year, p.month - 1, p.day + 6);             // last check ever: a plain 7-day window
+    const inMonth = pays.filter(x => x.year === p.year && x.month === p.month);
+    return { year: p.year, month: p.month, day: p.day, who: p.who, amount: p.amount, idx: i, start, end,
+             herCount: inMonth.filter(x => x.who === "You").length, weeksInMonth: inMonth.length };
+  });
+}
+
+// Bills due within a paycheck window's date span — pulls from the window's start month and (when it crosses the
+// month line) the next month too, so a check that lands near month-end carries the early-next-month bills it
+// pays. Each returned bill keeps its own month/year (for display). `win` is a paycheckWindows() entry.
+export function billsInWindow(store, win) {
+  const months = [], seen = {};
+  const addMonth = ms => { const d = new Date(ms), y = d.getUTCFullYear(), m = d.getUTCMonth() + 1, k = y + "-" + m;
+    if (!seen[k]) { seen[k] = 1; months.push({ year: y, month: m }); } };
+  addMonth(win.start); addMonth(win.end);
+  const out = [];
+  months.forEach(({ year, month }) => billsFor(store, month, year).forEach(b => {
+    const dueMs = Date.UTC(year, month - 1, b.due);
+    if (dueMs >= win.start && dueMs <= win.end) out.push({ ...b, month, year, dueMs });
+  }));
+  out.sort((a, c) => a.dueMs - c.dueMs);
+  return out;
+}
+
 export const money = n => (n < 0 ? "−$" : "$") + Math.abs(Math.round(n)).toLocaleString();
 export const money2 = n => { const v = Math.abs(n); return (n < 0 ? "−$" : "$") + v.toLocaleString(undefined, { minimumFractionDigits: (v % 1 ? 2 : 0), maximumFractionDigits: 2 }); };
 export const num = v => { const n = parseFloat(v); return isNaN(n) ? 0 : n; };
