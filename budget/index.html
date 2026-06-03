@@ -284,7 +284,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
 <script type="module">
 import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
-         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor, savingsFor, checkAmount,
+         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor, savingsFor, checkAmount, paycheckWindows, billsInWindow,
          SPEND_CATS, monthSpendByCat, monthlyTrend, weeklySpendTrend, yearSummary, monthSummary } from './budget-logic.mjs';
 import { makeBackend, localBackend } from './budget-storage.mjs';
 
@@ -319,38 +319,15 @@ const NOW_Y = new Date().getUTCFullYear();
 const YEARS = [];
 for (let y = YEAR; y <= Math.max(YEAR + 1, NOW_Y + 1); y++) YEARS.push(y);
 
-/* ---------- flat paycheck list (the "weeks") across all years/months ---------- */
-function weeks(){
-  const out = [];
-  YEARS.forEach(year => {
-    monthsForYear(year).forEach(m => {
-      const pds = paydays(m, year);
-      pds.forEach((p, i) => {
-        const lo = (i === 0) ? 1 : p.day;   // first window of the month covers from the 1st, so bills due before the first payday aren't orphaned from every weekly card
-        const hi = (i + 1 < pds.length) ? pds[i + 1].day - 1 : 31;
-        out.push({ year, month: m, idx: i, day: p.day, who: p.who, amount: p.amount, lo, hi,
-                   herCount: pds.filter(x => x.who === "You").length });
-      });
-    });
-  });
-  return out;
-}
-const WEEKS = weeks();
+/* ---------- paycheck-to-paycheck windows across the whole timeline (cross-month, no stubs — #1/#12) ---------- */
+const WEEKS = paycheckWindows(YEARS);
 function todayWeekIdx(){
   const now = new Date();
-  const y = now.getUTCFullYear(), mo = now.getUTCMonth() + 1, d = now.getUTCDate();
+  const todayMs = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
   for (let i = 0; i < WEEKS.length; i++){
-    const w = WEEKS[i];
-    if (w.year === y && w.month === mo && d >= w.lo && d <= w.hi) return i;
+    if (todayMs >= WEEKS[i].start && todayMs <= WEEKS[i].end) return i;   // the window holding today (may cross a month line)
   }
-  // otherwise pick the first paycheck window that hasn't ended yet (current/upcoming)
-  const todayMs = Date.UTC(y, mo - 1, d);
-  for (let i = 0; i < WEEKS.length; i++){
-    const w = WEEKS[i];
-    const endDay = w.hi === 31 ? new Date(Date.UTC(w.year, w.month, 0)).getUTCDate() : w.hi;
-    if (todayMs <= Date.UTC(w.year, w.month - 1, endDay)) return i;
-  }
-  return WEEKS.length - 1; // the whole range is in the past
+  return (WEEKS.length && todayMs < WEEKS[0].start) ? 0 : WEEKS.length - 1;   // before the budget starts → first; past the end → last
 }
 let curWeek = todayWeekIdx();
 let curYear = WEEKS[curWeek].year, curMonth = WEEKS[curWeek].month;
@@ -377,22 +354,20 @@ function renderWeekly(){
   const w = WEEKS[curWeek];
   const wid = weekId(w), checkAmt = checkAmount(store, wid, w.amount);   // #4: actual amount this check came in (blank → nominal)
   const c = calc(store, w.month, w.year);
-  const windowBills = c.bills.filter(b => b.due >= w.lo && b.due <= w.hi);
+  const windowBills = billsInWindow(store, w);                      // #1/#12: this check's window (cross-month near month-end)
   const billsSum = windowBills.reduce((a, b) => a + (b.state === "skipped" ? 0 : b.plan), 0);  // V2: skipped bills don't count
-  const windowOneOffs = oneOffsFor(store, w.month, w.year)          // V2: surprise expenses (id-keyed map) landing in this window
-    .filter(o => o.day >= w.lo && o.day <= w.hi);
+  const windowOneOffs = oneOffsFor(store, w.month, w.year).filter(o => o.day === w.day);   // surprises are tagged to their check's payday
   const oneOffSum = windowOneOffs.reduce((a, o) => a + o.amount, 0);
   const savThisWeek = w.who === "You" ? (c.savPlanTot / w.herCount) : 0;
   const net = checkAmt - billsSum;                                       // #4: actual check (or nominal) — drives the short-check carry-note
   const safe = checkAmt - billsSum - savThisWeek - oneOffSum;            // free to spend this week (after bills, savings, surprises)
   const short = net < 0;
 
-  const dObj = new Date(Date.UTC(w.year, w.month - 1, w.day));
-  const endDay = w.hi === 31 ? new Date(Date.UTC(w.year, w.month, 0)).getUTCDate() : w.hi;
+  const dObj = new Date(Date.UTC(w.year, w.month - 1, w.day)), eObj = new Date(w.end);   // payday (for day-of-week) → window end (may be next month)
   const isThis = curWeek === todayWeekIdx();
   document.getElementById("wLabel").innerHTML =
     `<div class="wtag ${w.who === "You" ? "" : "him"}">${isThis ? "This week · " : ""}${w.who === "You" ? "your check" : "his check"}</div>
-     <div class="wdate">${DOW[dObj.getUTCDay()]} ${MNAMES[w.month].slice(0,3)} ${w.day} &rarr; ${MNAMES[w.month].slice(0,3)} ${endDay}, ${w.year}</div>`;
+     <div class="wdate">${DOW[dObj.getUTCDay()]} ${MNAMES[w.month].slice(0,3)} ${w.day} &rarr; ${MNAMES[eObj.getUTCMonth() + 1].slice(0,3)} ${eObj.getUTCDate()}, ${eObj.getUTCFullYear()}</div>`;
   document.getElementById("wPrev").disabled = curWeek === 0;
   document.getElementById("wNext").disabled = curWeek === WEEKS.length - 1;
 
@@ -406,7 +381,7 @@ function renderWeekly(){
     const struck = b.state === "paid" || b.state === "skipped";
     const tag = b.state === "skipped" ? " <em style='font-style:normal;color:var(--muted)'>· skipped</em>"
               : b.state === "pushed" ? (b.pushStuck ? " <em style='font-style:normal;color:var(--muted)'>· can't push (last check)</em>" : " <em style='font-style:normal;color:var(--teal2)'>· pushed here</em>") : "";
-    return `<div class="billrow ${struck ? "paid" : ""}"><span>${escHtml(b.name)}${tag}</span><span class="due">${money(b.plan)} &middot; ${MNAMES[w.month].slice(0,3)} ${b.due}</span></div>`;
+    return `<div class="billrow ${struck ? "paid" : ""}"><span>${escHtml(b.name)}${tag}</span><span class="due">${money(b.plan)} &middot; ${MNAMES[b.month].slice(0,3)} ${b.due}</span></div>`;
   }).join("") || `<div class="note">No bills land in this window.</div>`;
 
   // V2: surprise/one-off expenses landing in this window
@@ -414,7 +389,7 @@ function renderWeekly(){
     `<div class="billrow"><span>🚨 ${escHtml(o.name)}</span><span class="due">${money(o.amount)} &middot; ${MNAMES[w.month].slice(0,3)} ${o.day} <button class="rm-oneoff" data-id="${esc(o.id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:14px;padding:0 0 0 4px">&times;</button></span></div>`
   ).join("");
 
-  const weeksInMonth = WEEKS.filter(x => x.year === w.year && x.month === w.month).length;
+  const weeksInMonth = w.weeksInMonth;   // paychecks in this check's owning month (from the window)
   // B-flat: weekly goals DERIVE (read-only) from the monthly Spending Split ÷ weeks in the month — flat
   // across every week (spending is chaotic week-to-week, so no per-week weighting / fake precision).
   // Edit the budgets on the Monthly tab's Spending Split; this is just the weekly slice of that.
@@ -755,10 +730,12 @@ function renderCalendar(c){
   const first = new Date(Date.UTC(curYear, m - 1, 1)).getUTCDay();
   const dim = new Date(Date.UTC(curYear, m, 0)).getUTCDate();
   const pdByDay = {}, netByDay = {};
-  c.pds.forEach((p, i) => {
+  c.pds.forEach(p => {
     pdByDay[p.day] = p;
-    const lo = (i === 0) ? 1 : p.day, hi = (i + 1 < c.pds.length) ? c.pds[i + 1].day - 1 : 31;   // first payday's window starts at the 1st (match the weekly view)
-    netByDay[p.day] = p.amount - sumWindow(c.bills, lo, hi);
+    const win = WEEKS.find(x => x.year === curYear && x.month === curMonth && x.day === p.day);   // this check's full window (cross-month near month-end)
+    const wb = win ? billsInWindow(store, win) : [];
+    const amt = win ? checkAmount(store, weekId(win), p.amount) : p.amount;   // #4: reflect a recorded actual check too
+    netByDay[p.day] = amt - wb.filter(b => b.state !== "skipped").reduce((a, b) => a + b.plan, 0);
   });
   const billsByDay = {};
   c.bills.forEach(b => { (billsByDay[b.due] = billsByDay[b.due] || []).push(b); });
@@ -811,21 +788,16 @@ function renderCalendar(c){
 }
 function renderBreakdown(c){
   const wrap = document.getElementById("breakdown"); wrap.innerHTML = "";
-  const pds = c.pds, first = pds[0].day;
-  const preAmt = sumWindow(c.bills, 1, first - 1);
-  if (preAmt > 0){
-    const d = document.createElement("div"); d.className = "pd pre";
-    d.innerHTML = `<div class="left"><b>Before the ${first}${ordinal(first)}</b><small>bills from your previous check</small></div><div class="num">${money(preAmt)} due</div>`;
-    wrap.appendChild(d);
-  }
   let crunch = null;
-  pds.forEach((p, i) => {
-    const lo = p.day, hi = (i + 1 < pds.length) ? pds[i + 1].day - 1 : 31;
-    const due = sumWindow(c.bills, lo, hi), net = p.amount - due;
+  c.pds.forEach(p => {
+    const win = WEEKS.find(x => x.year === curYear && x.month === curMonth && x.day === p.day);   // this check's full window (cross-month near month-end) — matches the weekly cards + calendar
+    const wb = win ? billsInWindow(store, win) : [];
+    const amt = win ? checkAmount(store, weekId(win), p.amount) : p.amount;
+    const due = wb.filter(b => b.state !== "skipped").reduce((a, b) => a + b.plan, 0), net = amt - due;
     if (net < 0 && (!crunch || net < crunch.net)) crunch = { day: p.day, net };
     const d = document.createElement("div"); d.className = "pd";
     d.innerHTML = `<div class="left"><b>${DOW[new Date(Date.UTC(curYear, curMonth - 1, p.day)).getUTCDay()]} ${MNAMES[curMonth].slice(0,3)} ${p.day} — ${p.who === "You" ? "your" : "his"} check</b>
-      <small>${money(p.amount)} in &nbsp;•&nbsp; ${money(due)} in bills &nbsp;•&nbsp; ${p.who === "You" ? "big shop week" : "shop light"}</small></div>
+      <small>${money(amt)} in &nbsp;•&nbsp; ${money(due)} in bills &nbsp;•&nbsp; ${p.who === "You" ? "big shop week" : "shop light"}</small></div>
       <div class="num ${net < 0 ? 'neg' : 'pos'}">${net < 0 ? 'short ' : ''}${money(net)}</div>`;
     wrap.appendChild(d);
   });
