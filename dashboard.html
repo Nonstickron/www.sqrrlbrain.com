@@ -716,6 +716,21 @@
       blockers: [], updated: '2026-05-20', subprojects: []
     },
     {
+      id: 'budget-app', name: 'Household Budget App', category: 'Internal Tool · Weekly Budgeting (Ronny + Dauvy)',
+      status: 'active', statusLabel: 'LIVE · feature-complete (2026-06-03)',
+      summary: 'Shared household weekly-budgeting app for Ronny + Dauvy, live at sqrrlbrain.com/budget (auth-gated, Firestore-synced across both phones, golden-tested 2026 math). Two repos: Nonstickron/budgetting (logic+tests, main 87eb7f8) + www.sqrrlbrain.com (deployed, main fa60185). They budget monthly but get paid weekly (alternating Thu: her $2k / his $1k) → the app answers "what can we spend THIS WEEK?". Feature-complete this session — every change Mac-reviewed, golden byte-identical (74 tests green).',
+      steps: [
+        '✅ B-flat reconciliation — monthly Spending Split = master budget; weekly goals derive ÷ weeks (flat); monthly Actual rolls up from the weekly purchase log (double-entry killed)',
+        '✅ Editable savings goals (add/remove via customSavings/savMeta) + Spending split moved under the calendar',
+        '✅ /code-review (max-effort, 4 finder agents) → 12 fixes (weekly pre-payday-bill gap, name escaping, shared-doc clobber-safety, orphan-on-remove/restore-default, NaN guard, defer-remote-mid-edit, …)',
+        '✅ #4 per-paycheck actual income — editable "Came in" drives that week\'s safe-to-spend + the short-check note + the monthly rollup',
+        '✅ Paycheck-window refactor — cross-month check-to-check windows (paycheckWindows + billsInWindow); fixed the short-week overstatement (#1) + the 2-day stub week (#12) as one month-clipping bug (Aug short check −$855→−$154)',
+        'Non-blocking: #13 (clearing a split category reverts to default) is an intentional convention — type 0 for zero',
+        '(On Ronny + Dauvy) 2-phone concurrent-edit acceptance test — confirm a simultaneous add/edit on both phones both stick'
+      ],
+      blockers: [], updated: '2026-06-03', subprojects: []
+    },
+    {
       id: 'tract', name: 'TRACT', category: 'Print-on-Demand Apparel',
       status: 'active', statusLabel: 'ACTIVE',
       summary: 'Heritage 01 collection. America 250th anniversary theme. 73/100 images generated. July 4, 2026 launch.',
