@@ -310,6 +310,7 @@ function removeLeaf(path){                                          // V2: delet
 
 let store = localBackend.load();
 let curView = "weekly";
+let pendingRemote = null;   // a remote snapshot that arrived while the user was mid-edit; applied on focusout (#6)
 
 /* ---------- years the app spans: 2026 (start) → next year, rolling forward forever ---------- */
 const NOW_Y = new Date().getUTCFullYear();
@@ -323,7 +324,7 @@ function weeks(){
     monthsForYear(year).forEach(m => {
       const pds = paydays(m, year);
       pds.forEach((p, i) => {
-        const lo = p.day;
+        const lo = (i === 0) ? 1 : p.day;   // first window of the month covers from the 1st, so bills due before the first payday aren't orphaned from every weekly card
         const hi = (i + 1 < pds.length) ? pds[i + 1].day - 1 : 31;
         out.push({ year, month: m, idx: i, day: p.day, who: p.who, amount: p.amount, lo, hi,
                    herCount: pds.filter(x => x.who === "You").length });
@@ -401,13 +402,13 @@ function renderWeekly(){
   let billsHtml = windowBills.map(b => {
     const struck = b.state === "paid" || b.state === "skipped";
     const tag = b.state === "skipped" ? " <em style='font-style:normal;color:var(--muted)'>· skipped</em>"
-              : b.state === "pushed" ? " <em style='font-style:normal;color:var(--teal2)'>· pushed here</em>" : "";
-    return `<div class="billrow ${struck ? "paid" : ""}"><span>${b.name}${tag}</span><span class="due">${money(b.plan)} &middot; ${MNAMES[w.month].slice(0,3)} ${b.due}</span></div>`;
+              : b.state === "pushed" ? (b.pushStuck ? " <em style='font-style:normal;color:var(--muted)'>· can't push (last check)</em>" : " <em style='font-style:normal;color:var(--teal2)'>· pushed here</em>") : "";
+    return `<div class="billrow ${struck ? "paid" : ""}"><span>${escHtml(b.name)}${tag}</span><span class="due">${money(b.plan)} &middot; ${MNAMES[w.month].slice(0,3)} ${b.due}</span></div>`;
   }).join("") || `<div class="note">No bills land in this window.</div>`;
 
   // V2: surprise/one-off expenses landing in this window
   const oneOffsHtml = windowOneOffs.map(o =>
-    `<div class="billrow"><span>🚨 ${o.name}</span><span class="due">${money(o.amount)} &middot; ${MNAMES[w.month].slice(0,3)} ${o.day} <button class="rm-oneoff" data-id="${esc(o.id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:14px;padding:0 0 0 4px">&times;</button></span></div>`
+    `<div class="billrow"><span>🚨 ${escHtml(o.name)}</span><span class="due">${money(o.amount)} &middot; ${MNAMES[w.month].slice(0,3)} ${o.day} <button class="rm-oneoff" data-id="${esc(o.id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:14px;padding:0 0 0 4px">&times;</button></span></div>`
   ).join("");
 
   const weeksInMonth = WEEKS.filter(x => x.year === w.year && x.month === w.month).length;
@@ -478,10 +479,15 @@ function renderWeekly(){
     const key = catEl.value, note = noteEl.value.trim(), mk = weekId(w), spw = weekSpend(w);
     lastSpendCat = key;   // keep the dropdown on the category just used (rapid logging)
     if (!spw[key] || typeof spw[key] !== "object"){
-      // first list entry here: fold any legacy single-number total into a "carried over" line so it's not lost
-      const map = {}; const legacy = num(spw[key]); if (legacy > 0) map["carried"] = { amount: legacy, note: "carried over" };
-      map[newId()] = { amount: amt, note }; spw[key] = map;
-      saveField("weekSpend", mk, key, map);                  // one write covers migration + new entry (replaces the scalar)
+      // first list entry here: convert the legacy single-number total into a "carried over" LEAF, then add the
+      // new entry as its OWN leaf — two clobber-safe writes, so a concurrent add on the other phone merges in
+      // instead of being overwritten by a whole-category write (#11). The carried-leaf write flips the cloud
+      // scalar into a map; the per-entry leaf then extends it.
+      const legacy = num(spw[key]); const map = {};
+      if (legacy > 0) map["carried"] = { amount: legacy, note: "carried over" };
+      const id = newId(); map[id] = { amount: amt, note }; spw[key] = map;   // local first, then two clobber-safe leaf writes
+      if (map["carried"]) saveLeaf(["weekSpend", mk, key, "carried"], map["carried"]);
+      saveLeaf(["weekSpend", mk, key, id], map[id]);
     } else {
       const id = newId(); spw[key][id] = { amount: amt, note };
       saveLeaf(["weekSpend", mk, key, id], spw[key][id]);    // clobber-safe per-entry leaf
@@ -496,7 +502,7 @@ function renderWeekly(){
     btn.onclick = () => {
       const key = btn.dataset.wk, id = btn.dataset.id, mk = weekId(w), spw = weekSpend(w);
       if (spw[key] && typeof spw[key] === "object"){ delete spw[key][id]; removeLeaf(["weekSpend", mk, key, id]); }
-      else { spw[key] = {}; saveField("weekSpend", mk, key, {}); }   // clearing the legacy carried-over line
+      else { delete spw[key]; removeLeaf(["weekSpend", mk, key]); }   // clearing the legacy scalar — remove the leaf, not a whole-category {} write (#11)
       renderWeekly();
     };
   });
@@ -555,9 +561,9 @@ function renderSheet(){
     tr.className = b.state === "skipped" ? "skipped" : b.state === "pushed" ? "pushed" : b.paid ? "paid" : "";
     const isCustom = customNames.has(b.name);
     const opts = states.map(s => `<option value="${s}"${b.state === s ? " selected" : ""}>${s[0].toUpperCase() + s.slice(1)}</option>`).join("");
-    tr.innerHTML = `<td class="name col-name">${b.name}${isCustom ? '<span class="billtag">added</span>' : ""}</td><td class="r col-due">${b.due}</td>
-      <td class="r col-plan"><input class="amt plan" data-kind="billPlan" data-key="${esc(b.name)}" value="${b.plan}"></td>
-      <td class="r col-act"><input class="amt act" data-kind="billActual" data-key="${esc(b.name)}" value="${b.actual}"></td>
+    tr.innerHTML = `<td class="name col-name">${escHtml(b.name)}${isCustom ? '<span class="billtag">added</span>' : ""}</td><td class="r col-due">${b.due}</td>
+      <td class="r col-plan"><input class="amt plan" data-kind="billPlan" data-key="${esc(b.name)}" value="${esc(b.plan)}"></td>
+      <td class="r col-act"><input class="amt act" data-kind="billActual" data-key="${esc(b.name)}" value="${esc(b.actual)}"></td>
       <td class="c col-status"><select class="statesel" data-key="${esc(b.name)}">${opts}</select></td>
       <td class="r col-actions"><button class="billact ends" data-bill="${esc(b.name)}" data-custom="${isCustom}" title="Set the last month this bill is owed">ends&hellip;</button><button class="billact rm" data-bill="${esc(b.name)}" data-custom="${isCustom}" title="Remove this bill">&times;</button></td>`;
     body.appendChild(tr);
@@ -571,8 +577,8 @@ function renderSheet(){
     const desc = g.custom ? '<span class="billtag">added</span>' : escHtml(g.note);
     const tr = document.createElement("tr");
     tr.innerHTML = `<td>${escHtml(g.name)}</td>
-      <td class="r"><input class="amt plan" data-kind="savPlan" data-key="${esc(g.name)}" value="${plan}"></td>
-      <td class="r"><input class="amt act" data-kind="savActual" data-key="${esc(g.name)}" value="${act}"></td>
+      <td class="r"><input class="amt plan" data-kind="savPlan" data-key="${esc(g.name)}" value="${esc(plan)}"></td>
+      <td class="r"><input class="amt act" data-kind="savActual" data-key="${esc(g.name)}" value="${esc(act)}"></td>
       <td>${desc}<button class="billact rm" data-goal="${esc(g.name)}" data-custom="${g.custom}" title="Remove this goal">&times;</button></td>`;
     sb.appendChild(tr);
   });
@@ -584,7 +590,7 @@ function renderSheet(){
     const plan = (s.split[p[0]] !== undefined && s.split[p[0]] !== "") ? s.split[p[0]] : SPLIT_DEF[p[0]];
     const tr = document.createElement("tr");
     tr.innerHTML = `<td>${p[1]}</td>
-      <td class="r"><input class="amt plan" data-kind="split" data-key="${p[0]}" value="${plan}"></td>
+      <td class="r"><input class="amt plan" data-kind="split" data-key="${p[0]}" value="${esc(plan)}"></td>
       <td class="r">${money2(splitAct[p[0]])}</td>`;
     spb.appendChild(tr);
   });
@@ -642,11 +648,24 @@ function endBill(name, isCustom){
   }
   renderSheet();
 }
+// When a CUSTOM bill/goal is deleted for good, also clear its per-month override leaves so re-adding a
+// same-named item later can't resurrect last run's actuals/state/plan (#8). Built-in defaults are reversible
+// hides (billMeta/savMeta), so we KEEP their history — only custom removals sweep.
+function sweepPerMonthLeaves(name, sections){
+  Object.keys(store).forEach(mk => {
+    if (!/^\d{4}-\d+$/.test(mk)) return;                    // month-state keys only (e.g. "2026-6")
+    const st = store[mk]; if (!st || typeof st !== "object") return;
+    sections.forEach(sec => {
+      if (st[sec] && st[sec][name] !== undefined){ delete st[sec][name]; removeLeaf([mk, sec, name]); }
+    });
+  });
+}
 function removeBill(name, isCustom){
   if (isCustom){
     if (!confirm(`Delete the bill you added — "${name}"? This removes it from every month.`)) return;
     if (store.customBills) delete store.customBills[name];
     removeLeaf(["customBills", name]);
+    sweepPerMonthLeaves(name, ["billPlan", "billActual", "billState", "billPaid"]);  // #8
   } else {
     if (!confirm(`Remove "${name}" from every month?\n\nIf it's just being paid off, use "ends…" instead so it still shows in the months you owed it.`)) return;
     store.billMeta = store.billMeta || {};
@@ -671,6 +690,13 @@ function addBill(){
 // harmlessly ignored by calc (savingsFor no longer lists it), same as customBills' orphaned bill amounts.
 function addSavings(){
   const name = (prompt("What are you saving for? (e.g. Vacation)") || "").trim(); if (!name) return;
+  // re-adding a hidden built-in goal by name un-hides it (otherwise it's blocked as a dup yet stays invisible) (#10)
+  if (SAV_DEF.some(d => d[0] === name) && store.savMeta && store.savMeta[name] && store.savMeta[name].removed){
+    delete store.savMeta[name].removed;
+    if (Object.keys(store.savMeta[name]).length) saveLeaf(["savMeta", name], store.savMeta[name]);
+    else { delete store.savMeta[name]; removeLeaf(["savMeta", name]); }
+    renderSheet(); return;
+  }
   const existing = new Set([...SAV_DEF.map(d => d[0]), ...Object.keys(store.customSavings || {})]);
   if (existing.has(name)) { alert("A savings goal with that name already exists."); return; }
   const amt = prompt("How much to set aside each month? ($)"); if (amt === null || amt === "") return;
@@ -683,6 +709,7 @@ function removeSavings(name, isCustom){
     if (!confirm(`Delete the savings goal you added — "${name}"? This removes it from every month.`)) return;
     if (store.customSavings) delete store.customSavings[name];
     removeLeaf(["customSavings", name]);
+    sweepPerMonthLeaves(name, ["savPlan", "savActual"]);  // #8
   } else {
     if (!confirm(`Remove "${name}" from your savings goals?\n\nIt's one of the starting goals, so this hides it (a built-in can't be deleted) and it stops counting toward your plan.`)) return;
     store.savMeta = store.savMeta || {};
@@ -717,7 +744,7 @@ function renderCalendar(c){
   const pdByDay = {}, netByDay = {};
   c.pds.forEach((p, i) => {
     pdByDay[p.day] = p;
-    const lo = p.day, hi = (i + 1 < c.pds.length) ? c.pds[i + 1].day - 1 : 31;
+    const lo = (i === 0) ? 1 : p.day, hi = (i + 1 < c.pds.length) ? c.pds[i + 1].day - 1 : 31;   // first payday's window starts at the 1st (match the weekly view)
     netByDay[p.day] = p.amount - sumWindow(c.bills, lo, hi);
   });
   const billsByDay = {};
@@ -738,7 +765,7 @@ function renderCalendar(c){
       html += `<div class="net ${net < 0 ? 'neg' : 'pos'}">${net < 0 ? 'short ' : 'left '}${money(net)}</div>`;
     }
     dayBills.forEach(b => {
-      html += `<div class="bchip ${(b.paid || b.state === 'skipped') ? 'paid' : ''}">${b.name.replace(/ \(.*\)/, '')} <span class="amt">${money(b.plan)}</span></div>`;
+      html += `<div class="bchip ${(b.paid || b.state === 'skipped') ? 'paid' : ''}">${escHtml(b.name.replace(/ \(.*\)/, ''))} <span class="amt">${money(b.plan)}</span></div>`;
     });
     // compact indicators — hidden on desktop (full chips show), shown on phones where the chips would clip
     let ind = "";
@@ -759,7 +786,7 @@ function renderCalendar(c){
     if (bills.length){
       h += `<div class="cd-bills">` + bills.map(b => {
         const tag = b.state === "skipped" ? " · skipped" : b.state === "pushed" ? " · pushed" : b.paid ? " · paid" : "";
-        return `<div class="billrow ${(b.paid || b.state === 'skipped') ? 'paid' : ''}"><span>${b.name}${tag}</span><span class="due">${money(b.plan)}</span></div>`;
+        return `<div class="billrow ${(b.paid || b.state === 'skipped') ? 'paid' : ''}"><span>${escHtml(b.name)}${tag}</span><span class="due">${money(b.plan)}</span></div>`;
       }).join("") + `</div>`;
     } else if (!p){
       h += `<div class="note">Nothing scheduled this day.</div>`;
@@ -891,7 +918,7 @@ document.getElementById("wNext").onclick = () => { if (curWeek < WEEKS.length - 
 /* ---------- tools ---------- */
 document.getElementById("resetBtn").onclick = () => {
   if (confirm("Clear " + MNAMES[curMonth] + " " + curYear + " for both of you? This removes that month from the shared budget.")){
-    delete store[mkey(curMonth, curYear)]; save(); curView === "weekly" ? renderWeekly() : renderSheet();
+    const mk = mkey(curMonth, curYear); delete store[mk]; removeLeaf([mk]); setView(curView);  // delete just that month's leaf (clobber-safe) + re-render whatever view is open (incl. Trends)
   }
 };
 document.getElementById("exportBtn").onclick = () => {
@@ -907,6 +934,17 @@ document.getElementById("importFile").onchange = (e) => {
   r.onload = () => { try { store = JSON.parse(r.result); save(); setView(curView); alert("Backup imported."); } catch (_) { alert("That file couldn't be read as a budget backup."); } };
   r.readAsText(f);
 };
+
+// A remote sync that arrived mid-edit (stashed in pendingRemote) is applied once focus leaves all budget
+// inputs — so the just-typed value isn't swapped away under the user (#6). setTimeout lets the next
+// activeElement settle, so tabbing between inputs doesn't apply it mid-edit.
+document.addEventListener("focusout", () => setTimeout(() => {
+  if (!pendingRemote) return;
+  const ae = document.activeElement;
+  if (ae && ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in"))) return;  // moved to another input — still editing
+  const r = pendingRemote; pendingRemote = null;
+  store = r; localBackend.saveAll(store); setView(curView);
+}, 0));
 
 // Render immediately from the local cache, then gate and — on the deployed site — reconcile from
 // the shared Firestore household doc once the user is authenticated.
@@ -935,11 +973,11 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
       const cloud = makeBackend({
         docRef: firebase.firestore().doc("households/ronny-dauvy"),
         onRemote: (remote) => {
-          store = remote; localBackend.saveAll(store);
-          // don't yank the DOM out from under an in-progress edit — the change is already in `store`;
-          // it renders on the next blur/interaction (avoids dropping focus mid-type)
+          // if the user is mid-edit, DON'T swap `store` out from under the in-flight value + the wired input
+          // closures (that dropped the just-typed value, #6) — stash it and apply on focusout once they stop.
           const ae = document.activeElement;
-          if (!ae || !(ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in")))) setView(curView);
+          if (ae && ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in"))) { pendingRemote = remote; return; }
+          store = remote; localBackend.saveAll(store); setView(curView);
         },
         deleteSentinel: () => firebase.firestore.FieldValue.delete()   // V2: removeLeaf deletes a single one-off / custom bill leaf
       });
