@@ -954,7 +954,7 @@ document.getElementById("importFile").onchange = (e) => {
 document.addEventListener("focusout", () => setTimeout(() => {
   if (!pendingRemote) return;
   const ae = document.activeElement;
-  if (ae && ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in"))) return;  // moved to another input — still editing
+  if (ae && ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in") || ae.classList.contains("checkin"))) return;  // moved to another input — still editing
   const r = pendingRemote; pendingRemote = null;
   store = r; localBackend.saveAll(store); setView(curView);
 }, 0));
@@ -989,7 +989,7 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
           // if the user is mid-edit, DON'T swap `store` out from under the in-flight value + the wired input
           // closures (that dropped the just-typed value, #6) — stash it and apply on focusout once they stop.
           const ae = document.activeElement;
-          if (ae && ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in"))) { pendingRemote = remote; return; }
+          if (ae && ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in") || ae.classList.contains("checkin"))) { pendingRemote = remote; return; }
           store = remote; localBackend.saveAll(store); setView(curView);
         },
         deleteSentinel: () => firebase.firestore.FieldValue.delete()   // V2: removeLeaf deletes a single one-off / custom bill leaf
