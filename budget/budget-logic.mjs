@@ -35,11 +35,10 @@ export function mkey(m, year = YEAR) { return year + "-" + m; }
 
 export function ms(store, m, year = YEAR) { // month state with defaults
   const k = mkey(m, year);
-  if (!store[k]) store[k] = { billPlan: {}, billActual: {}, billPaid: {}, split: {}, savPlan: {}, savActual: {}, moneyInActual: "" };
+  if (!store[k]) store[k] = { billPlan: {}, billActual: {}, billPaid: {}, split: {}, savPlan: {}, savActual: {} };
   const s = store[k];
   s.billPlan = s.billPlan || {}; s.billActual = s.billActual || {}; s.billPaid = s.billPaid || {};
   s.split = s.split || {}; s.savPlan = s.savPlan || {}; s.savActual = s.savActual || {};
-  if (s.moneyInActual === undefined) s.moneyInActual = "";
   return s;
 }
 
@@ -131,6 +130,14 @@ export function savingsFor(store) {
   return g;
 }
 
+// #4 — per-paycheck actual income. store.payActual[weekId] (top-level map, weekId="YYYY-M-D") overrides the
+// nominal check amount; blank/absent = use the nominal. Lets a short/bonus check reflect in that week's
+// "safe to spend" AND roll up into the month's actual income — same weekly-entry -> monthly-rollup model as spend.
+export function checkAmount(store, weekId, nominal){
+  const pa = store.payActual && store.payActual[weekId];
+  return (pa !== undefined && pa !== "") ? num(pa) : num(nominal);
+}
+
 export function calc(store, m, year = YEAR) {
   const s = ms(store, m, year), pds = paydays(m, year), bills = billsFor(store, m, year);
   const moneyIn = pds.reduce((a, p) => a + p.amount, 0);
@@ -151,7 +158,7 @@ export function calc(store, m, year = YEAR) {
   const splitActTot = SPEND_CATS.reduce((a, k) => a + byCatAct[k], 0);
   const leftPlan = moneyIn - billPlanTot - savPlanTot;
   const flexPlan = leftPlan - splitPlanTot;
-  const moneyInAct = (s.moneyInActual !== "" && s.moneyInActual !== undefined) ? num(s.moneyInActual) : moneyIn;
+  const moneyInAct = pds.reduce((a, p) => a + checkAmount(store, mkey(m, year) + "-" + p.day, p.amount), 0);  // #4: roll up per-paycheck actuals (each defaults to its nominal check)
   const leftAct = moneyInAct - billActTot - savActTot;
   const oneOffTot = Object.values(s.oneOffs || {}).reduce((a, o) => a + num(o.amount), 0);  // V2: surprise/one-off expenses (id-keyed map)
   const flexAct = leftAct - splitActTot - oneOffTot;

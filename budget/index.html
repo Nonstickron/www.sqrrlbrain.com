@@ -63,6 +63,8 @@
   .ministat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
   .ministat .h{font-size:10px;text-transform:uppercase;color:var(--muted)}
   .ministat .v{font-size:17px;font-weight:bold}
+  .ministat .checkin{font:inherit;font-size:17px;font-weight:bold;width:100%;border:none;border-bottom:1px dashed var(--line);background:transparent;text-align:center;color:inherit;padding:0}
+  .ministat .checkin:focus{outline:none;border-bottom-color:var(--teal2)}
   .carry{background:var(--yellow);border:1px solid #e9dca6;border-radius:10px;padding:10px 12px;font-size:13px;margin-bottom:14px}
   .billrow{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eef2f3;font-size:13px}
   .billrow:last-child{border-bottom:none}
@@ -282,7 +284,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
 <script type="module">
 import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
-         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor, savingsFor,
+         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor, savingsFor, checkAmount,
          SPEND_CATS, monthSpendByCat, monthlyTrend, weeklySpendTrend, yearSummary, monthSummary } from './budget-logic.mjs';
 import { makeBackend, localBackend } from './budget-storage.mjs';
 
@@ -373,6 +375,7 @@ function spendEntries(w, key){
 /* ============================ WEEKLY VIEW ============================ */
 function renderWeekly(){
   const w = WEEKS[curWeek];
+  const wid = weekId(w), checkAmt = checkAmount(store, wid, w.amount);   // #4: actual amount this check came in (blank → nominal)
   const c = calc(store, w.month, w.year);
   const windowBills = c.bills.filter(b => b.due >= w.lo && b.due <= w.hi);
   const billsSum = windowBills.reduce((a, b) => a + (b.state === "skipped" ? 0 : b.plan), 0);  // V2: skipped bills don't count
@@ -380,8 +383,8 @@ function renderWeekly(){
     .filter(o => o.day >= w.lo && o.day <= w.hi);
   const oneOffSum = windowOneOffs.reduce((a, o) => a + o.amount, 0);
   const savThisWeek = w.who === "You" ? (c.savPlanTot / w.herCount) : 0;
-  const net = w.amount - billsSum;                                       // bills-only — drives the short-check carry-note
-  const safe = w.amount - billsSum - savThisWeek - oneOffSum;            // free to spend this week (after bills, savings, surprises)
+  const net = checkAmt - billsSum;                                       // #4: actual check (or nominal) — drives the short-check carry-note
+  const safe = checkAmt - billsSum - savThisWeek - oneOffSum;            // free to spend this week (after bills, savings, surprises)
   const short = net < 0;
 
   const dObj = new Date(Date.UTC(w.year, w.month - 1, w.day));
@@ -448,7 +451,7 @@ function renderWeekly(){
       <div class="sub">after this week's bills${savThisWeek > 0 ? ", savings set-aside" : ""}${oneOffSum > 0 ? ", surprises" : ""}</div>
     </div>
     <div class="ministats">
-      <div class="ministat"><div class="h">Came in</div><div class="v">${money(w.amount)}</div></div>
+      <div class="ministat"><div class="h">Came in</div><div class="v"><input class="checkin" inputmode="decimal" value="${esc((store.payActual && store.payActual[wid] !== undefined) ? store.payActual[wid] : "")}" placeholder="${money(w.amount)}" data-wid="${esc(wid)}" aria-label="What this check actually came in at — blank uses ${money(w.amount)}"></div></div>
       <div class="ministat"><div class="h">Bills this wk</div><div class="v">${money(billsSum)}</div></div>
       <div class="ministat"><div class="h">Savings</div><div class="v">${money(savThisWeek)}</div></div>
     </div>
@@ -503,6 +506,16 @@ function renderWeekly(){
       const key = btn.dataset.wk, id = btn.dataset.id, mk = weekId(w), spw = weekSpend(w);
       if (spw[key] && typeof spw[key] === "object"){ delete spw[key][id]; removeLeaf(["weekSpend", mk, key, id]); }
       else { delete spw[key]; removeLeaf(["weekSpend", mk, key]); }   // clearing the legacy scalar — remove the leaf, not a whole-category {} write (#11)
+      renderWeekly();
+    };
+  });
+  // #4: record what this paycheck actually came in at → store.payActual[weekId] (top-level leaf, clobber-safe); blank reverts to the nominal
+  document.querySelectorAll('#weeklyBody .checkin').forEach(inp => {
+    inp.onchange = () => {
+      const id = inp.dataset.wid, v = inp.value.trim();
+      store.payActual = store.payActual || {};
+      if (v === ""){ delete store.payActual[id]; removeLeaf(["payActual", id]); }
+      else { store.payActual[id] = v; saveLeaf(["payActual", id], v); }
       renderWeekly();
     };
   });
@@ -721,7 +734,7 @@ function removeSavings(name, isCustom){
 function recompute(){
   const c = calc(store, curMonth, curYear);
   document.getElementById("cards").innerHTML = `
-    <div class="card"><h3>Money in</h3><div class="big">${money(c.moneyIn)}</div><div class="sub">${c.moneyIn > 6000 ? "bonus paycheck month" : "this month"}</div></div>
+    <div class="card"><h3>Money in</h3><div class="big">${money(c.moneyIn)}</div><div class="sub">${c.moneyInAct !== c.moneyIn ? `actual ${money(c.moneyInAct)}` : (c.moneyIn > 6000 ? "bonus paycheck month" : "this month")}</div></div>
     <div class="card"><h3>Bills</h3><div class="big">${money(c.billPlanTot)}</div><div class="sub">actual ${money(c.billActTot)}</div></div>
     <div class="card"><h3>Savings</h3><div class="big">${money(c.savPlanTot)}</div><div class="sub">actual ${money(c.savActTot)}</div></div>
     <div class="card flex"><h3>Flex left</h3><div class="big ${c.flexPlan < 0 ? 'neg' : ''}">${money(c.flexPlan)}</div><div class="sub">after groceries, gas, fun, other</div></div>`;
