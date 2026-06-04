@@ -19,7 +19,7 @@ export const FIXED = [
   ["Spotify", 30, 23], ["My car insurance", 98, 25], ["Home Depot (Ron)", 100, 25],
   ["Affirm (2)", 60, 26], ["Apple Card (Dauvy)", 50, 30], ["Apple Card (Ron)", 50, 30]
 ];
-export const SPLIT_DEF = { groceries: 650, gas: 300, fun: 200, other: 250 };   // B-reconcile: date->fun, rainy->other (4 cats shared with the weekly log; values = Dauvy's verified Excel)
+export const SPLIT_DEF = { groceries: 650, gas: 300, fun: 200, other: 250, savings: 525 };   // B-reconcile: date->fun, rainy->other (4 spend cats shared with the weekly log; values = Dauvy's verified Excel). savings = the 5th split line = the monthly savings POOL the hoards divvy up (525 = the 3 default hoards 200+175+150, so nothing shifts until edited).
 export const SAV_DEF = [
   ["Christmas", 200, "for the holidays"],
   ["New car (down payment)", 175, "about $2,100 a year"],
@@ -247,9 +247,18 @@ export function monthSaved(store, m, year = YEAR) {
   }, 0);
 }
 
-// The savings-split total = Σ goal plans (per-month savPlan override aware) — the weekly her-check target
-// (÷ herCount) and the panel footer. Mirrors calc's savPlanTot so the two never drift.
+// The savings POOL = the 5th Spending-Split line (s.split.savings, default 525). This is the monthly total set
+// aside for savings — the single flex subtraction (calc.savPlanTot) AND the weekly her-check target (÷ herCount).
+// The hoards DIVVY this pool (see savingsAllocated); a hoard is a slice, not an add-on, so adding/retiring one
+// never moves the pool. Editable in the split, exactly like groceries/gas/fun/other.
 export function savingsSplitTotal(store, m, year = YEAR) {
+  const s = ms(store, m, year);
+  return (s.split.savings !== undefined && s.split.savings !== "") ? num(s.split.savings) : SPLIT_DEF.savings;
+}
+
+// How much of the pool the hoards have claimed = Σ hoard plans (per-month savPlan override aware). The UI shows
+// pool − allocated = "unallocated" (and flags allocated > pool). Distinct from savingsSplitTotal (the pool itself).
+export function savingsAllocated(store, m, year = YEAR) {
   const s = ms(store, m, year), goals = savingsFor(store);
   return goals.reduce((a, g) => a + (s.savPlan[g.name] !== undefined && s.savPlan[g.name] !== "" ? num(s.savPlan[g.name]) : g.plan), 0);
 }

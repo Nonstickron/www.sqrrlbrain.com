@@ -220,7 +220,7 @@
       <div class="cal-detail" id="calDetail" hidden></div>
     </section>
     <section>
-      <h2>Spending split <span class="note" style="font-weight:normal">— what's left after bills + savings, and how you'll use it</span></h2>
+      <h2>Spending split <span class="note" style="font-weight:normal">— how each month's money splits across spending + savings, and what's left (flex)</span></h2>
       <table>
         <thead><tr><th>Bucket</th><th class="r">Plan / mo</th><th class="r">Actual</th></tr></thead>
         <tbody id="splitBody"></tbody>
@@ -230,13 +230,14 @@
       <div class="note" id="oneOffNote"></div>
     </section>
     <section>
-      <h2>Savings split <span class="note" style="font-weight:normal">— your hoards: a monthly target, the running balance, and emergency pulls / moves between them</span></h2>
+      <h2>Savings split <span class="note" style="font-weight:normal">— divvy your savings pool (the Savings line above) into hoards</span></h2>
       <table>
-        <thead><tr><th>Hoard</th><th class="r">Plan / mo</th><th class="r">Saved</th><th></th></tr></thead>
+        <thead><tr><th>Hoard</th><th class="r">Allocation</th><th class="r">Saved</th><th></th></tr></thead>
         <tbody id="savBody"></tbody>
-        <tfoot><tr><td>Total</td><td class="r" id="savPlanTot"></td><td class="r" id="savSavedTot"></td><td></td></tr></tfoot>
+        <tfoot><tr><td>Allocated</td><td class="r" id="savAllocTot"></td><td class="r" id="savSavedTot"></td><td></td></tr></tfoot>
       </table>
-      <div class="note">Deposits happen on the <b>Weekly</b> tab (&ldquo;This week's savings&rdquo;). Here you set each hoard's monthly target, withdraw for an emergency, or move money between hoards.</div>
+      <div class="note" id="savPoolNote"></div>
+      <div class="note">Deposits happen on the <b>Weekly</b> tab (&ldquo;This week's savings&rdquo;). The pool is the Savings line in the Spending Split above; here you divvy it into hoards, withdraw for an emergency, or move money between hoards.</div>
       <button class="linkbtn bill-add" id="addSavings">+ Add a savings goal</button>
     </section>
     <section>
@@ -287,7 +288,7 @@
 import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
          monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor, savingsFor, checkAmount, paycheckWindows, billsInWindow,
          SPEND_CATS, monthSpendByCat, monthlyTrend, weeklySpendTrend, yearSummary, monthSummary,
-         savingsBalances, savedInWeek, monthSaved, savingsSplitTotal, parkAmount } from './budget-logic.mjs';
+         savingsBalances, savedInWeek, monthSaved, savingsSplitTotal, savingsAllocated, parkAmount } from './budget-logic.mjs';
 import { makeBackend, localBackend } from './budget-storage.mjs';
 
 // Persistence seam — all writes route through `backend`. Defaults to the localStorage cache; after
@@ -700,6 +701,16 @@ function renderSheet(){
       <td class="r">${money2(splitAct[p[0]])}</td>`;
     spb.appendChild(tr);
   });
+  // #2 (Ronny): Savings is the 5th split line = the monthly POOL the hoards divvy. Plan editable (drives savPlanTot,
+  // the single flex subtraction + the weekly target); Actual = the rolled-up ledger deposits this month (monthSaved).
+  {
+    const plan = (s.split.savings !== undefined && s.split.savings !== "") ? s.split.savings : SPLIT_DEF.savings;
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>Savings <span class="note" style="font-weight:normal">— pool, divvied below</span></td>
+      <td class="r"><input class="amt plan" data-kind="split" data-key="savings" value="${esc(plan)}"></td>
+      <td class="r">${money2(monthSaved(store, curMonth, curYear))}</td>`;
+    spb.appendChild(tr);
+  }
   wireInputs();
   recompute();
 }
@@ -881,13 +892,20 @@ function recompute(){
     <div class="card"><h3>Money in</h3><div class="big">${money(c.moneyIn)}</div><div class="sub">${c.moneyInAct !== c.moneyIn ? `actual ${money(c.moneyInAct)}` : (c.moneyIn > 6000 ? "bonus paycheck month" : "this month")}</div></div>
     <div class="card"><h3>Bills</h3><div class="big">${money(c.billPlanTot)}</div><div class="sub">actual ${money(c.billActTot)}</div></div>
     <div class="card"><h3>Savings</h3><div class="big">${money(c.savPlanTot)}</div><div class="sub">saved this mo ${money(c.savActTot)}</div></div>
-    <div class="card flex"><h3>Flex left</h3><div class="big ${c.flexPlan < 0 ? 'neg' : ''}">${money(c.flexPlan)}</div><div class="sub">after groceries, gas, fun, other</div></div>`;
+    <div class="card flex"><h3>Flex left</h3><div class="big ${c.flexPlan < 0 ? 'neg' : ''}">${money(c.flexPlan)}</div><div class="sub">after savings + groceries, gas, fun, other</div></div>`;
   renderCalendar(c);
   renderBreakdown(c);
   document.getElementById("billPlanTot").textContent = money2(c.billPlanTot);
   document.getElementById("billActTot").textContent = money2(c.billActTot);
-  document.getElementById("savPlanTot").textContent = money(c.savPlanTot);
+  // #2: reconcile the pool (the Savings split line = c.savPlanTot) against what the hoards have claimed
+  const savPool = c.savPlanTot, savAlloc = savingsAllocated(store, curMonth, curYear), savUnalloc = savPool - savAlloc;
+  document.getElementById("savAllocTot").textContent = money(savAlloc);
   document.getElementById("savSavedTot").textContent = money(Object.values(savingsBalances(store)).reduce((a, v) => a + v, 0));
+  document.getElementById("savPoolNote").innerHTML = Math.abs(savUnalloc) < 0.005
+    ? `Pool fully divvied — <b>${money(savPool)}</b> split across your hoards.`
+    : savUnalloc > 0
+      ? `<b>${money(savUnalloc)}</b> of the ${money(savPool)} pool isn't divvied yet — assign it to a hoard (or it just rides along as general savings).`
+      : `&#9888; <b>Over-allocated by ${money(-savUnalloc)}</b> — your hoards claim ${money(savAlloc)} but the pool is ${money(savPool)}. Trim a hoard, or raise the Savings line in the Spending Split.`;
   document.getElementById("flexPlan").textContent = money(c.flexPlan);
   document.getElementById("flexAct").textContent = money(c.flexAct);
   document.getElementById("oneOffNote").textContent = c.oneOffTot > 0
