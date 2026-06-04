@@ -315,6 +315,13 @@ function removeLeaf(path){                                          // V2: delet
 let store = localBackend.load();
 let curView = "weekly";
 let pendingRemote = null;   // a remote snapshot that arrived while the user was mid-edit; applied on focusout (#6)
+// True while the user is mid-entry in a budget field — a remote sync is deferred so it can't wipe the
+// half-typed value (#6 / F4). Covers the amount/note inputs AND anything in a logging row (.logrow = the
+// deposit + spend amount, the category / hoard <select>, the Add button). ONE definition so the stash side
+// (onRemote) and the apply side (focusout) can never drift out of sync again (F4b).
+function midEdit(ae){
+  return !!(ae && ((ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in") || ae.classList.contains("checkin"))) || (ae.closest && ae.closest(".logrow"))));
+}
 
 /* ---------- years the app spans: 2026 (start) → next year, rolling forward forever ---------- */
 const NOW_Y = new Date().getUTCFullYear();
@@ -1118,8 +1125,7 @@ document.getElementById("importFile").onchange = (e) => {
 // activeElement settle, so tabbing between inputs doesn't apply it mid-edit.
 document.addEventListener("focusout", () => setTimeout(() => {
   if (!pendingRemote) return;
-  const ae = document.activeElement;
-  if (ae && ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in") || ae.classList.contains("checkin"))) return;  // moved to another input — still editing
+  if (midEdit(document.activeElement)) return;  // moved to another budget field (incl. a logrow select/button) — still editing
   const r = pendingRemote; pendingRemote = null;
   store = r; localBackend.saveAll(store); setView(curView);
 }, 0));
@@ -1153,10 +1159,7 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
         onRemote: (remote) => {
           // if the user is mid-edit, DON'T swap `store` out from under the in-flight value + the wired input
           // closures (that dropped the just-typed value, #6) — stash it and apply on focusout once they stop.
-          const ae = document.activeElement;
-          // F4: also guard anything focused inside a logging row (.logrow covers the spend + savings deposit
-          // amount, the category / hoard <select>, and the Add button) — a re-render mid-deposit dropped it.
-          if (ae && ((ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in") || ae.classList.contains("checkin"))) || (ae.closest && ae.closest(".logrow")))) { pendingRemote = remote; return; }
+          if (midEdit(document.activeElement)) { pendingRemote = remote; return; }   // F4: stash a mid-edit remote (incl. logrow select/button) — applied on focusout
           store = remote; localBackend.saveAll(store); setView(curView);
         },
         deleteSentinel: () => firebase.firestore.FieldValue.delete()   // V2: removeLeaf deletes a single one-off / custom bill leaf
