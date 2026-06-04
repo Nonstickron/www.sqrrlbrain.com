@@ -364,8 +364,10 @@ function renderWeekly(){
   const net = checkAmt - billsSum;                                       // #4: actual check (or nominal) — drives the short-check note
   const short = net < 0;
   // #2 — if the NEXT check is bill-short, earmark (shortfall + cushion) out of THIS big check now, so the
-  // shortage leaves the flex the week before instead of being just a note. (A check that's itself short can't fund the next.)
-  let earmark = 0, earmarkFor = null;
+  // shortage leaves the flex the week before instead of being just a note. F3 — and when THIS week is the short
+  // one, the prior big check already set that cover aside, so credit it back (the pair conserves: −earmark on the
+  // big week, +cover here). Both gates mirror: the funding week must exist AND not be short itself.
+  let earmark = 0, earmarkFor = null, cover = 0;
   if (!short){
     const nextW = WEEKS[curWeek + 1];
     if (nextW){
@@ -373,8 +375,13 @@ function renderWeekly(){
       const nextNet = checkAmount(store, weekId(nextW), nextW.amount) - nb;
       if (nextNet < 0){ earmark = parkAmount(nextNet); earmarkFor = { w: nextW, net: nextNet }; }
     }
+  } else if (curWeek > 0){
+    const prevW = WEEKS[curWeek - 1];
+    const pb = billsInWindow(store, prevW).reduce((a, b) => a + (b.state === "skipped" ? 0 : b.plan), 0);
+    const prevNet = checkAmount(store, weekId(prevW), prevW.amount) - pb;
+    if (prevNet >= 0) cover = parkAmount(net);   // prior big check wasn't short → it parked this week's cover
   }
-  const safe = checkAmt - billsSum - savThisWeek - oneOffSum - earmark;  // free to spend after bills, savings, surprises + next week's set-aside
+  const safe = checkAmt - billsSum - savThisWeek - oneOffSum - earmark + cover;
 
   const dObj = new Date(Date.UTC(w.year, w.month - 1, w.day)), eObj = new Date(w.end);   // payday (for day-of-week) → window end (may be next month)
   const isThis = curWeek === todayWeekIdx();
@@ -385,8 +392,10 @@ function renderWeekly(){
   document.getElementById("wNext").disabled = curWeek === WEEKS.length - 1;
 
   let carry = "";
-  if (short){
-    carry = `<div class="carry"><b>This check is short ${money(net)}.</b> It's covered by the ${money(parkAmount(net))} set aside from last week's big check.</div>`;
+  if (short && cover > 0){
+    carry = `<div class="carry"><b>This check is short ${money(net)}.</b> Covered by the ${money(cover)} set aside from last week's big check.</div>`;
+  } else if (short){
+    carry = `<div class="carry"><b>This check is short ${money(net)}.</b> Cover it from your big check.</div>`;
   } else if (earmark > 0){
     carry = `<div class="carry"><b>Set aside ${money(earmark)}</b> for ${earmarkFor.w.who === "You" ? "your" : "his"} short check on ${MNAMES[earmarkFor.w.month].slice(0,3)} ${earmarkFor.w.day} (short ${money(earmarkFor.net)}). It's taken out of this week's safe-to-spend.</div>`;
   }
@@ -459,10 +468,10 @@ function renderWeekly(){
     </section>`;
 
   document.getElementById("weeklyBody").innerHTML = `
-    <div class="hero ${short ? "short" : ""}">
+    <div class="hero ${safe < 0 ? "short" : ""}">
       <div class="lbl">Safe to spend this week</div>
       <div class="amt">${money(safe)}</div>
-      <div class="sub">after this week's bills${savThisWeek > 0 ? ", savings" : ""}${oneOffSum > 0 ? ", surprises" : ""}${earmark > 0 ? ", next week's set-aside" : ""}</div>
+      <div class="sub">after this week's bills${savThisWeek > 0 ? ", savings" : ""}${oneOffSum > 0 ? ", surprises" : ""}${earmark > 0 ? ", next week's set-aside" : ""}${cover > 0 ? ", incl. last week's cover" : ""}</div>
     </div>
     <div class="ministats">
       <div class="ministat"><div class="h">Came in</div><div class="v"><input class="checkin" inputmode="decimal" value="${esc((store.payActual && store.payActual[wid] !== undefined) ? store.payActual[wid] : "")}" placeholder="${money(w.amount)}" data-wid="${esc(wid)}" aria-label="What this check actually came in at — blank uses ${money(w.amount)}"></div></div>
@@ -592,18 +601,18 @@ function renderMonths(){
 }
 // #4 — offer the upcoming checks (this month + next, on/after the bill's natural due) to push a bill to.
 // Returns the chosen payday as "YYYY-M-D", or null if cancelled / nothing later to push to.
-function choosePushTarget(name){
-  const bill = calc(store, curMonth, curYear).bills.find(b => b.name === name);
+function choosePushTarget(name, month = curMonth, year = curYear){
+  const bill = calc(store, month, year).bills.find(b => b.name === name);
   const dueDay = bill ? (bill.origDue != null ? bill.origDue : bill.due) : 1;
   const opts = [];
   const addMonth = (mo, yr) => paydays(mo, yr).forEach(p => {
     const t = Date.UTC(yr, mo - 1, p.day);
     opts.push({ ms: t, value: `${yr}-${mo}-${p.day}`, label: `${DOW[new Date(t).getUTCDay()]} ${MNAMES[mo].slice(0, 3)} ${p.day} (${p.who === "You" ? "your $2k" : "his $1k"})` });
   });
-  addMonth(curMonth, curYear);
-  const nm = curMonth === 12 ? 1 : curMonth + 1, ny = curMonth === 12 ? curYear + 1 : curYear;
+  addMonth(month, year);
+  const nm = month === 12 ? 1 : month + 1, ny = month === 12 ? year + 1 : year;
   if (monthsForYear(ny).includes(nm)) addMonth(nm, ny);
-  const dueMs = Date.UTC(curYear, curMonth - 1, dueDay);
+  const dueMs = Date.UTC(year, month - 1, dueDay);
   const choices = opts.filter(o => o.ms > dueMs);
   if (!choices.length){ alert("There's no later check this month or next to push to."); return null; }
   const pick = prompt(`Push "${name}" to which check?\n\n${choices.map((o, i) => `${i + 1}. ${o.label}`).join("\n")}\n\nType the number:`);
@@ -620,27 +629,38 @@ function renderSheet(){
   const customNames = new Set(Object.keys(store.customBills || {}));   // V2: which bills the user added (map keyed by name)
   const states = ["unpaid", "paid", "pushed", "skipped"];
   const fmtDay = ym => { const p = String(ym).split("-").map(Number); return `${MNAMES[p[1]].slice(0, 3)} ${p[2]}`; };
+  const stOpts = state => states.map(st => `<option value="${st}"${state === st ? " selected" : ""}>${st[0].toUpperCase() + st.slice(1)}</option>`).join("");
   c.bills.forEach(b => {
     const tr = document.createElement("tr");
-    // #4: a bill pushed IN from another month — read-only breadcrumb (it's managed from its source month)
+    // F1(b): a bill pushed IN from another month is EDITABLE here (it lives where it gets paid). Its inputs/status
+    // route to the SOURCE month's keys (data-mk) — see wireInputs — so July edits update the right month-state.
     if (b.pushedIn){
-      tr.className = "pushed";
+      const srcMk = `${b.pushedIn.srcYear}-${b.pushedIn.srcMonth}`;
+      tr.className = b.state === "skipped" ? "skipped" : "pushed";
       tr.innerHTML = `<td class="name col-name">${escHtml(b.name)} <span class="billtag">pushed from ${fmtDay(b.pushedIn.from)}</span></td><td class="r col-due">${b.due}</td>
+        <td class="r col-plan"><input class="amt plan" data-kind="billPlan" data-key="${esc(b.name)}" data-mk="${srcMk}" value="${esc(b.plan)}"></td>
+        <td class="r col-act"><input class="amt act" data-kind="billActual" data-key="${esc(b.name)}" data-mk="${srcMk}" value="${esc(b.actual)}"></td>
+        <td class="c col-status"><select class="statesel" data-key="${esc(b.name)}" data-mk="${srcMk}">${stOpts(b.state)}</select></td>
+        <td class="r col-actions"></td>`;
+      body.appendChild(tr); return;
+    }
+    // F1(b): the SOURCE-month row of a cross-month push is a read-only breadcrumb (you manage it in its new month)
+    if (b.pushedAway){
+      tr.className = "pushed";
+      tr.innerHTML = `<td class="name col-name">${escHtml(b.name)} <span class="billtag">pushed: ${b.origDue}${ordinal(b.origDue)} &rarr; ${fmtDay(b.pushedAway)}</span></td><td class="r col-due">${b.origDue}</td>
         <td class="r col-plan">${money2(b.plan)}</td><td class="r col-act"></td>
-        <td class="c col-status"><em style="color:var(--muted);font-size:12px">deferred</em></td><td class="r col-actions"></td>`;
+        <td class="c col-status"><em style="color:var(--muted);font-size:12px">in ${fmtDay(b.pushedAway).split(" ")[0]}</em></td><td class="r col-actions"></td>`;
       body.appendChild(tr); return;
     }
     tr.className = b.state === "skipped" ? "skipped" : b.state === "pushed" ? "pushed" : b.paid ? "paid" : "";
     const isCustom = customNames.has(b.name);
-    const opts = states.map(st => `<option value="${st}"${b.state === st ? " selected" : ""}>${st[0].toUpperCase() + st.slice(1)}</option>`).join("");
-    // #4: where it got pushed to (same-month moves the due day; cross-month leaves this breadcrumb + is paid next month)
+    // #4: same-month push moves the due day in place; show where from
     const pushNote = b.pushedTo ? ` <span class="billtag">pushed: ${b.origDue}${ordinal(b.origDue)} &rarr; ${fmtDay(b.pushedTo)}</span>`
-      : b.pushedAway ? ` <span class="billtag">pushed: ${b.origDue}${ordinal(b.origDue)} &rarr; ${fmtDay(b.pushedAway)}</span>`
       : b.pushStuck ? ` <span class="billtag">can't push</span>` : "";
     tr.innerHTML = `<td class="name col-name">${escHtml(b.name)}${isCustom ? '<span class="billtag">added</span>' : ""}${pushNote}</td><td class="r col-due">${b.due}</td>
       <td class="r col-plan"><input class="amt plan" data-kind="billPlan" data-key="${esc(b.name)}" value="${esc(b.plan)}"></td>
       <td class="r col-act"><input class="amt act" data-kind="billActual" data-key="${esc(b.name)}" value="${esc(b.actual)}"></td>
-      <td class="c col-status"><select class="statesel" data-key="${esc(b.name)}">${opts}</select></td>
+      <td class="c col-status"><select class="statesel" data-key="${esc(b.name)}">${stOpts(b.state)}</select></td>
       <td class="r col-actions"><button class="billact ends" data-bill="${esc(b.name)}" data-custom="${isCustom}" title="Set the last month this bill is owed">ends&hellip;</button><button class="billact rm" data-bill="${esc(b.name)}" data-custom="${isCustom}" title="Remove this bill">&times;</button></td>`;
     body.appendChild(tr);
   });
@@ -678,30 +698,31 @@ function renderSheet(){
 }
 function wireInputs(){
   const mk = mkey(curMonth, curYear);
+  // F1(b): an input may target ANOTHER month (a pulled-in pushed-bill row carries data-mk = its source month);
+  // route the leaf write there. No data-mk → the current month, as before.
+  const tgtFor = el => { const t = el.dataset.mk || mk; const p = t.split("-").map(Number); return { tmk: t, st: ms(store, p[1], p[0]) }; };
   document.querySelectorAll("#billsBody input,#savBody input,#splitBody input").forEach(inp => {
-    const kind = inp.dataset.kind, key = inp.dataset.key, st = ms(store, curMonth, curYear);
-    // `kind` is exactly the section name (billPlan/billActual/savPlan/savActual/split). splitActual is gone —
-    // the Spending Split's Actual is a read-only rollup of the weekly purchase log (B-flat), not an input.
-    inp.oninput = () => { st[kind][key] = inp.value; saveField(mk, kind, key, inp.value); recompute(); };
+    const kind = inp.dataset.kind, key = inp.dataset.key, { tmk, st } = tgtFor(inp);
+    inp.oninput = () => { st[kind][key] = inp.value; saveField(tmk, kind, key, inp.value); recompute(); };
   });
-  // V2: per-bill status (paid / pushed / skipped). Leaf write, but pushed moves the due day + skipped
-  // changes totals/order → full re-render so the table, calendar and breakdown all reflect it.
+  // V2/#4/F1: per-bill status. "Pushed" asks WHICH check (in the row's own month). billPushTo persists through
+  // paid/skipped (so marking a deferred bill paid doesn't snap it back) — cleared only when going to UNPAID.
   document.querySelectorAll("#billsBody select.statesel").forEach(sel => {
     sel.onchange = () => {
-      const st = ms(store, curMonth, curYear); st.billState = st.billState || {};
+      const { tmk, st } = tgtFor(sel); st.billState = st.billState || {};
+      const [ty, tmo] = tmk.split("-").map(Number);
       const name = sel.dataset.key, prev = st.billState[name] || "unpaid";
-      // #4: picking "Pushed" asks WHICH upcoming check to push to (this month or next) → store billPushTo.
       if (sel.value === "pushed"){
-        const target = choosePushTarget(name);
+        const target = choosePushTarget(name, tmo, ty);
         if (target === null){ sel.value = prev; return; }   // cancelled → revert the dropdown, no change
         st.billPushTo = st.billPushTo || {};
         st.billPushTo[name] = target;
-        saveField(mk, "billPushTo", name, target);
-      } else if (st.billPushTo && st.billPushTo[name] !== undefined){
-        delete st.billPushTo[name]; removeLeaf([mk, "billPushTo", name]);   // leaving pushed → clear the chosen target
+        saveField(tmk, "billPushTo", name, target);
+      } else if (sel.value === "unpaid" && st.billPushTo && st.billPushTo[name] !== undefined){
+        delete st.billPushTo[name]; removeLeaf([tmk, "billPushTo", name]);   // F1: only UNPAID un-defers; paid/skipped keep the target
       }
       st.billState[name] = sel.value;
-      saveField(mk, "billState", name, sel.value);
+      saveField(tmk, "billState", name, sel.value);
       renderSheet();
     };
   });
@@ -797,6 +818,9 @@ function addSavings(){
   saveLeaf(["customSavings", name], store.customSavings[name]); renderSheet();
 }
 function removeSavings(name, isCustom){
+  // F6: a hoard with money in it can't just vanish — steer to moving/withdrawing it first (no orphaned balance)
+  const bal = savingsBalances(store)[name] || 0;
+  if (Math.abs(bal) > 0.005){ alert(`"${name}" still has ${money(bal)} in it. Move that to another hoard, or withdraw it, before removing the goal.`); return; }
   if (isCustom){
     if (!confirm(`Delete the savings goal you added — "${name}"? This removes it from every month.`)) return;
     if (store.customSavings) delete store.customSavings[name];
@@ -821,9 +845,11 @@ function ledgerAdd(entry){
 }
 function withdrawSavings(goal){
   const bal = savingsBalances(store)[goal] || 0;
+  if (bal <= 0){ alert(`"${goal}" has ${money(bal)} in it — nothing to withdraw.`); return; }
   const v = prompt(`Withdraw from "${goal}" for an emergency.\nBalance: ${money(bal)}\n\nHow much? ($)`);
   if (v === null || v.trim() === "") return;
   const amt = num(v); if (amt <= 0) return;
+  if (amt > bal){ alert(`That's more than the ${money(bal)} in "${goal}". Enter ${money(bal)} or less.`); return; }   // F6: no overdraw past the balance
   ledgerAdd({ kind: "out", goal, amount: amt, ym: mkey(curMonth, curYear), ts: Date.now() });
   renderSheet();
 }
@@ -835,9 +861,10 @@ function moveSavings(from){
   if (pick === null) return;
   const idx = parseInt(pick, 10) - 1;
   if (isNaN(idx) || idx < 0 || idx >= others.length) { alert("Please type one of the numbers from the list."); return; }
-  const v = prompt(`Move how much from "${from}" to "${others[idx]}"? ($)`);
+  const v = prompt(`Move how much from "${from}" to "${others[idx]}"? (up to ${money(bal)})`);
   if (v === null || v.trim() === "") return;
   const amt = num(v); if (amt <= 0) return;
+  if (amt > bal){ alert(`That's more than the ${money(bal)} in "${from}". Enter ${money(bal)} or less.`); return; }   // F6: no overdraw on a move either
   ledgerAdd({ kind: "move", goal: from, to: others[idx], amount: amt, ym: mkey(curMonth, curYear), ts: Date.now() });
   renderSheet();
 }
@@ -951,7 +978,7 @@ function renderBreakdown(c){
     wrap.appendChild(d);
   });
   let msg = "";
-  if (crunch){ msg = `Your tight spot is the check on the ${crunch.day}${ordinal(crunch.day)} (${money(crunch.net)}). Park about ${money(Math.ceil(-crunch.net / 50) * 50 + (-crunch.net < 200 ? 100 : 50))} from your big check the week before to cover it.`; }
+  if (crunch){ msg = `Your tight spot is the check on the ${crunch.day}${ordinal(crunch.day)} (${money(crunch.net)}). Park about ${money(parkAmount(crunch.net))} from your big check the week before to cover it.`; }   // F5: shared parkAmount, not an inlined copy
   else { msg = "Every check covers its own bills this month — nice."; }
   document.getElementById("halvesNote").textContent = msg;
 }
@@ -1041,7 +1068,7 @@ function renderTrends(){
   // #3: "where it went" now includes Bills + Savings + Surprises, not just the 4 spend categories
   mk("pChart", { type: "doughnut", data: {
       labels: [...cats.map(c => CL[c]), "Bills", "Savings", "Surprises"],
-      datasets: [{ data: [...cats.map(c => cur.byCat[c]), cur.billsSpent, cur.savedActual, cur.oneOffs], backgroundColor: [...cats.map(c => COL[c]), BILLS_COL, SAV_COL, ONE_COL] }] }, options: base });
+      datasets: [{ data: [...cats.map(c => cur.byCat[c]), cur.billsSpent, Math.max(0, cur.savedActual), cur.oneOffs], backgroundColor: [...cats.map(c => COL[c]), BILLS_COL, SAV_COL, ONE_COL] }] }, options: base });   // F6: clamp the Savings slice ≥0 (a withdrawal-heavy month is honestly negative on the bars, but a donut can't show negative)
 
   document.querySelectorAll('#trendRange .tr-btn').forEach(btn => {
     btn.classList.toggle("active", btn.dataset.range === trendRange);
@@ -1127,7 +1154,9 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
           // if the user is mid-edit, DON'T swap `store` out from under the in-flight value + the wired input
           // closures (that dropped the just-typed value, #6) — stash it and apply on focusout once they stop.
           const ae = document.activeElement;
-          if (ae && ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in") || ae.classList.contains("checkin"))) { pendingRemote = remote; return; }
+          // F4: also guard anything focused inside a logging row (.logrow covers the spend + savings deposit
+          // amount, the category / hoard <select>, and the Add button) — a re-render mid-deposit dropped it.
+          if (ae && ((ae.classList && (ae.classList.contains("amt-in") || ae.classList.contains("amt") || ae.classList.contains("note-in") || ae.classList.contains("checkin"))) || (ae.closest && ae.closest(".logrow")))) { pendingRemote = remote; return; }
           store = remote; localBackend.saveAll(store); setView(curView);
         },
         deleteSentinel: () => firebase.firestore.FieldValue.delete()   // V2: removeLeaf deletes a single one-off / custom bill leaf

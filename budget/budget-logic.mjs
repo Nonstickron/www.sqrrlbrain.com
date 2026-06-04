@@ -95,14 +95,17 @@ export function billsFor(store, m, year = YEAR, opts = {}) {
     // V2/#4 "pushed" = defer the bill. With an explicit target (billPushTo) the user picks WHICH check: same
     // month moves the due day; a later month leaves a breadcrumb here (pushedAway) and is pulled into the
     // target month below. Without a target, fall back to the legacy "next payday this month".
-    if (x.state === "pushed") {
+    // F1: a chosen push target stays authoritative once the bill is paid/skipped (so marking a deferred bill
+    // paid doesn't snap it back + rewrite past months). Relocation applies for pushed | paid | skipped when a
+    // target is set; the legacy auto-next-payday only fires for a bare "pushed" with no target.
+    if (x.state === "pushed" || (billPushTo[x.name] && (x.state === "paid" || x.state === "skipped"))) {
       const tgt = billPushTo[x.name];
       const t = tgt ? String(tgt).split("-").map(Number) : null;
       if (t && t.length === 3 && !t.some(isNaN)) {
         x.origDue = x.due;
         if (t[0] === year && t[1] === m) { x.due = t[2]; x.pushedTo = tgt; }   // same-month: just move the due day
-        else x.pushedAway = tgt;                                                // cross-month: paid in the target month, not here
-      } else {
+        else x.pushedAway = tgt;                                                // cross-month: handled in the target month, not here
+      } else if (x.state === "pushed") {
         const nextPay = pds.map(p => p.day).find(d => d > x.due);
         if (nextPay !== undefined) { x.origDue = x.due; x.due = nextPay; } else x.pushStuck = true;  // no later check this month → can't move; flag so the UI doesn't claim it did
       }
@@ -118,9 +121,9 @@ export function billsFor(store, m, year = YEAR, opts = {}) {
       Object.entries(pushMap).forEach(([name, tgt]) => {
         const t = String(tgt).split("-").map(Number);
         if (t.length !== 3 || t[0] !== year || t[1] !== m) return;                // not pushed into this month
-        if (!(st.billState && st.billState[name] === "pushed")) return;           // only honor an active push
+        if (!(st.billState && ["pushed", "paid", "skipped"].includes(st.billState[name]))) return;   // F1: honor it while pushed/paid/skipped (a paid deferral still lands here)
         const src = billsFor(store, sM, sy, { noPull: true }).find(x => x.name === name && x.pushedAway);
-        if (src) b.push({ ...src, due: t[2], pushedAway: undefined, pushedIn: { from: `${sy}-${sM}-${src.origDue}` } });
+        if (src) b.push({ ...src, due: t[2], pushedAway: undefined, pushedIn: { from: `${sy}-${sM}-${src.origDue}`, srcYear: sy, srcMonth: sM } });
       });
     });
   }
@@ -264,8 +267,7 @@ export function calc(store, m, year = YEAR) {
   const moneyIn = pds.reduce((a, p) => a + p.amount, 0);
   const billPlanTot = bills.reduce((a, b) => a + (b.state === "skipped" || b.pushedAway ? 0 : b.plan), 0);  // #4: a bill pushed to a later month is counted there, not here
   const billActTot = bills.reduce((a, b) => a + (b.pushedAway ? 0 : num(b.actual)), 0);
-  const savGoals = savingsFor(store);   // V2.1: SAV_DEF defaults (minus retired) + user-added customSavings
-  const savPlanTot = savGoals.reduce((a, g) => a + (s.savPlan[g.name] !== undefined && s.savPlan[g.name] !== "" ? num(s.savPlan[g.name]) : g.plan), 0);
+  const savPlanTot = savingsSplitTotal(store, m, year);   // F6: single source = the savings-split total helper (lockstep test pins these equal)
   const savActTot = monthSaved(store, m, year);   // #1: actual saved now rolls up from the savings ledger (net deposits − withdrawals this month), not the retired hand-typed savActual. Empty store → 0 → golden-safe.
   const SPLIT_OLD_KEY = { fun: "date", other: "rainy" };   // B-flat renamed date->fun, rainy->other
   const sp = k => {
