@@ -467,10 +467,10 @@ function renderWeekly(){
     .join("");
   const savPanel = `
     <section>
-      <h2>This week's savings <span class="note" style="font-weight:normal">— ${savTgt > 0 ? "move money into your hoards" : "savings comes from your $2k weeks"}</span></h2>
+      <h2>This week's savings <span class="note" style="font-weight:normal">— ${savTgt > 0 ? "move money into your hoards" : "usually saved from your $2k weeks — but anything you stash here counts"}</span></h2>
       ${savTgt > 0
         ? `<div class="wbucket"><div class="top"><span>&#128063; Into savings</span><span class="tgt ${savOver ? "over" : ""}">${money2(savedThis)} of $${savTgt}${savOver ? " · over" : ""}</span></div><div class="wbar ${savOver ? "over" : ""}"><div style="width:${savOver ? 100 : savPct}%"></div></div></div>`
-        : `<div class="note">This is a smaller check — set savings aside from your big weeks. You can still log a deposit if you moved money this week.</div>`}
+        : `<div class="note">Smaller check, so no savings target this week — but anything you move to a hoard still comes out of your safe-to-spend.</div>`}
       <div class="logrow">
         <input id="savAmt" class="amt-in" inputmode="decimal" placeholder="$ amount">
         <select id="savGoalSel" aria-label="Hoard">${savOpts}</select>
