@@ -311,17 +311,23 @@ export function weekBucketTotal(store, weekId, cat) {
   return num(v);
 }
 
+// Total spent in one paycheck week across the four flex buckets (groceries/gas/fun/other). One tested
+// source of truth — used by both the Safe-to-Spend math below AND the weekly view's subtitle tag, so the
+// hero number and the "…, spending" label can never read off two diverging sum-paths.
+export function weekSpendTotal(store, weekId) {
+  return SPEND_CATS.reduce((a, c) => a + weekBucketTotal(store, weekId, c), 0);
+}
+
 // Safe-to-spend for one paycheck week = the check minus everything already committed against it:
 // bills + this week's savings set-aside + surprise expenses + a next-week short-check earmark (−),
-// plus any cover the prior big check parked (+), and finally minus what's already been SPENT in the
-// four category buckets this week. That last term is the fix for the "we overspent and nothing moved"
-// bug — it lived inline+untested in the weekly view and was simply absent, so the hero never dropped as
-// purchases were logged. Returns the raw number (the view formats it); goes negative on purpose when a
-// budget is blown (the UI styles a negative result as "short"). The window-graph parts (earmark/cover)
-// are injected; spending is read from the store here so no caller can forget to subtract it.
+// plus any cover the prior big check parked (+), and finally minus what's already been SPENT this week
+// (weekSpendTotal). That last term is the fix for the "we overspent and nothing moved" bug — it lived
+// inline+untested in the weekly view and was simply absent, so the hero never dropped as purchases were
+// logged. Returns the raw number (the view formats it); goes negative on purpose when a budget is blown
+// (the UI styles a negative result as "short"). The window-graph parts (earmark/cover) are injected;
+// spending is read from the store here so no caller can forget to subtract it.
 export function weekSafeToSpend(store, weekId, { checkAmt, billsSum, savThisWeek = 0, oneOffSum = 0, earmark = 0, cover = 0 }) {
-  const spent = SPEND_CATS.reduce((a, c) => a + weekBucketTotal(store, weekId, c), 0);
-  return checkAmt - billsSum - savThisWeek - oneOffSum - earmark + cover - spent;
+  return checkAmt - billsSum - savThisWeek - oneOffSum - earmark + cover - weekSpendTotal(store, weekId);
 }
 
 // Per-category spend for a month = sum across that month's paycheck-week buckets.

@@ -288,7 +288,7 @@
 import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
          monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor, savingsFor, checkAmount, paycheckWindows, billsInWindow,
          SPEND_CATS, monthSpendByCat, monthlyTrend, weeklySpendTrend, yearSummary, monthSummary,
-         savingsBalances, savedInWeek, monthSaved, savingsSplitTotal, savingsAllocated, parkAmount, weekSafeToSpend } from './budget-logic.mjs';
+         savingsBalances, savedInWeek, monthSaved, savingsSplitTotal, savingsAllocated, parkAmount, weekSafeToSpend, weekSpendTotal } from './budget-logic.mjs';
 import { makeBackend, localBackend } from './budget-storage.mjs';
 
 // Persistence seam — all writes route through `backend`. Defaults to the localStorage cache; after
@@ -434,7 +434,7 @@ function renderWeekly(){
     { key: "fun", label: "🎉 Fun", tgt: wkGoal("fun") },
     { key: "other", label: "📦 Other", tgt: wkGoal("other") },
   ];
-  const weekSpent = buckets.reduce((a, b) => a + spendEntries(w, b.key).reduce((s, e) => s + e.amount, 0), 0);  // drives the hero subtitle's "spending" tag (the hero number itself subtracts this inside weekSafeToSpend)
+  const weekSpent = weekSpendTotal(store, wid);  // same tested sum-path the hero subtracts inside weekSafeToSpend — subtitle's "spending" tag can't drift from the number
   const bucketHtml = buckets.map(b => {
     const entries = spendEntries(w, b.key);
     const spent = entries.reduce((a, e) => a + e.amount, 0);
