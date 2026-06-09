@@ -311,6 +311,28 @@ export function weekBucketTotal(store, weekId, cat) {
   return num(v);
 }
 
+// Total spent in one paycheck week across the four flex buckets (groceries/gas/fun/other). One tested
+// source of truth — used by both the Safe-to-Spend math below AND the weekly view's subtitle tag, so the
+// hero number and the "…, spending" label can never read off two diverging sum-paths.
+export function weekSpendTotal(store, weekId) {
+  return SPEND_CATS.reduce((a, c) => a + weekBucketTotal(store, weekId, c), 0);
+}
+
+// Safe-to-spend for one paycheck week = the check minus everything already committed against it:
+// bills + what you ACTUALLY moved into savings this week (savedInWeek — per Ronny, savings follows real
+// deposits not a fixed target, so a can't-save week leaves the money spendable and removing a deposit frees
+// it back) + surprise expenses + a next-week short-check earmark (−), plus any cover the prior big check
+// parked (+), and minus what's already been SPENT this week (weekSpendTotal). Savings + spending are both
+// read straight from the store here so the hero can't drift from what you logged, and the savings SOURCE is
+// under test (which value feeds the deduction was the untested seam that bit us). Returns the raw number (the
+// view formats it); goes negative on purpose when a budget is blown (the UI styles a negative result as
+// "short"). The window-graph parts (earmark/cover) are injected; the planned savings target stays in the
+// view's goal bar only — it no longer pre-reserves the hero number.
+export function weekSafeToSpend(store, weekId, { checkAmt, billsSum, oneOffSum = 0, earmark = 0, cover = 0 }) {
+  const saved = savedInWeek(store, weekId);   // actual hoard deposits this week (not the planned target)
+  return checkAmt - billsSum - saved - oneOffSum - earmark + cover - weekSpendTotal(store, weekId);
+}
+
 // Per-category spend for a month = sum across that month's paycheck-week buckets.
 export function monthSpendByCat(store, m, year = YEAR) {
   const out = {}; SPEND_CATS.forEach(c => out[c] = 0);
