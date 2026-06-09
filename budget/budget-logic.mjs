@@ -319,15 +319,18 @@ export function weekSpendTotal(store, weekId) {
 }
 
 // Safe-to-spend for one paycheck week = the check minus everything already committed against it:
-// bills + this week's savings set-aside + surprise expenses + a next-week short-check earmark (−),
-// plus any cover the prior big check parked (+), and finally minus what's already been SPENT this week
-// (weekSpendTotal). That last term is the fix for the "we overspent and nothing moved" bug — it lived
-// inline+untested in the weekly view and was simply absent, so the hero never dropped as purchases were
-// logged. Returns the raw number (the view formats it); goes negative on purpose when a budget is blown
-// (the UI styles a negative result as "short"). The window-graph parts (earmark/cover) are injected;
-// spending is read from the store here so no caller can forget to subtract it.
-export function weekSafeToSpend(store, weekId, { checkAmt, billsSum, savThisWeek = 0, oneOffSum = 0, earmark = 0, cover = 0 }) {
-  return checkAmt - billsSum - savThisWeek - oneOffSum - earmark + cover - weekSpendTotal(store, weekId);
+// bills + what you ACTUALLY moved into savings this week (savedInWeek — per Ronny, savings follows real
+// deposits not a fixed target, so a can't-save week leaves the money spendable and removing a deposit frees
+// it back) + surprise expenses + a next-week short-check earmark (−), plus any cover the prior big check
+// parked (+), and minus what's already been SPENT this week (weekSpendTotal). Savings + spending are both
+// read straight from the store here so the hero can't drift from what you logged, and the savings SOURCE is
+// under test (which value feeds the deduction was the untested seam that bit us). Returns the raw number (the
+// view formats it); goes negative on purpose when a budget is blown (the UI styles a negative result as
+// "short"). The window-graph parts (earmark/cover) are injected; the planned savings target stays in the
+// view's goal bar only — it no longer pre-reserves the hero number.
+export function weekSafeToSpend(store, weekId, { checkAmt, billsSum, oneOffSum = 0, earmark = 0, cover = 0 }) {
+  const saved = savedInWeek(store, weekId);   // actual hoard deposits this week (not the planned target)
+  return checkAmt - billsSum - saved - oneOffSum - earmark + cover - weekSpendTotal(store, weekId);
 }
 
 // Per-category spend for a month = sum across that month's paycheck-week buckets.

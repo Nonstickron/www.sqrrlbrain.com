@@ -389,10 +389,10 @@ function renderWeekly(){
     const prevNet = checkAmount(store, weekId(prevW), prevW.amount) - pb;
     if (prevNet >= 0) cover = parkAmount(net);   // prior big check wasn't short → it parked this week's cover
   }
-  // Safe-to-spend now also subtracts what's already been SPENT in the week's buckets — the deduction
-  // that was missing, so the hero never dropped as purchases were logged. Single tested source of truth
-  // (budget-logic.mjs); can go honestly negative when a budget is blown.
-  const safe = weekSafeToSpend(store, wid, { checkAmt, billsSum, savThisWeek, oneOffSum, earmark, cover });
+  // Safe-to-spend subtracts what's actually been SPENT and SAVED this week — both read from the store inside
+  // weekSafeToSpend (the tested source of truth), NOT the planned savings target. So skipping savings (or
+  // removing a deposit) leaves the money spendable. Can go honestly negative when a budget is blown.
+  const safe = weekSafeToSpend(store, wid, { checkAmt, billsSum, oneOffSum, earmark, cover });
 
   const dObj = new Date(Date.UTC(w.year, w.month - 1, w.day)), eObj = new Date(w.end);   // payday (for day-of-week) → window end (may be next month)
   const isThis = curWeek === todayWeekIdx();
@@ -483,12 +483,12 @@ function renderWeekly(){
     <div class="hero ${safe < 0 ? "short" : ""}">
       <div class="lbl">Safe to spend this week</div>
       <div class="amt">${money(safe)}</div>
-      <div class="sub">after this week's bills${weekSpent > 0 ? ", spending" : ""}${savThisWeek > 0 ? ", savings" : ""}${oneOffSum > 0 ? ", surprises" : ""}${earmark > 0 ? ", next week's set-aside" : ""}${cover > 0 ? ", incl. last week's cover" : ""}</div>
+      <div class="sub">after this week's bills${weekSpent > 0 ? ", spending" : ""}${savedThis > 0 ? ", savings" : ""}${oneOffSum > 0 ? ", surprises" : ""}${earmark > 0 ? ", next week's set-aside" : ""}${cover > 0 ? ", incl. last week's cover" : ""}</div>
     </div>
     <div class="ministats">
       <div class="ministat"><div class="h">Came in</div><div class="v"><input class="checkin" inputmode="decimal" value="${esc((store.payActual && store.payActual[wid] !== undefined) ? store.payActual[wid] : "")}" placeholder="${money(w.amount)}" data-wid="${esc(wid)}" aria-label="What this check actually came in at — blank uses ${money(w.amount)}"></div></div>
       <div class="ministat"><div class="h">Bills this wk</div><div class="v">${money(billsSum)}</div></div>
-      <div class="ministat"><div class="h">Savings</div><div class="v">${money(savThisWeek)}</div></div>
+      <div class="ministat"><div class="h">Savings</div><div class="v">${money(savedThis)}</div></div>
     </div>
     ${carry}
     <section><h2>Bills before your next check</h2>${billsHtml}</section>
