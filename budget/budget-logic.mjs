@@ -318,19 +318,79 @@ export function weekSpendTotal(store, weekId) {
   return SPEND_CATS.reduce((a, c) => a + weekBucketTotal(store, weekId, c), 0);
 }
 
-// Safe-to-spend for one paycheck week = the check minus everything already committed against it:
-// bills + what you ACTUALLY moved into savings this week (savedInWeek — per Ronny, savings follows real
-// deposits not a fixed target, so a can't-save week leaves the money spendable and removing a deposit frees
-// it back) + surprise expenses + a next-week short-check earmark (−), plus any cover the prior big check
-// parked (+), and minus what's already been SPENT this week (weekSpendTotal). Savings + spending are both
-// read straight from the store here so the hero can't drift from what you logged, and the savings SOURCE is
-// under test (which value feeds the deduction was the untested seam that bit us). Returns the raw number (the
-// view formats it); goes negative on purpose when a budget is blown (the UI styles a negative result as
-// "short"). The window-graph parts (earmark/cover) are injected; the planned savings target stays in the
-// view's goal bar only — it no longer pre-reserves the hero number.
-export function weekSafeToSpend(store, weekId, { checkAmt, billsSum, oneOffSum = 0, earmark = 0, cover = 0 }) {
+/* ============================ CARRYOVER REDESIGN (2026-06-11) ============================
+   One REAL running balance replaces the assumed earmark/cover pair (spec: Budget/CARRYOVER-REDESIGN-HANDOFF.md v2,
+   Mac-Tink + Ronny's 3 decisions). The old short-check "cover" was a parkAmount-padded assumption — it credited
+   money back without ever checking the prior surplus survived, so the hero could show dollars that weren't in the
+   account. Now every window's spendable draws on what ACTUALLY carried over; a committed earmark is a HOLD on one
+   week's display (the money never leaves the balance), and a reconcile ledger trues the whole thing to the bank. */
+
+// Balance-reconcile adjustments (decision 1) — store.balAdjust is a top-level id-keyed map
+// { id: { weekId, amount (signed), note?, ts? } }, clobber-safe leaf writes like oneOffs/savLedger.
+// The "opening balance" is simply the first entry; "bank says $1.27 more" is just another one.
+export function adjustInWeek(store, weekId) {
+  return Object.values(store.balAdjust || {})
+    .reduce((a, e) => a + (e.weekId === weekId ? num(e.amount) : 0), 0);
+}
+
+// The set-aside actively COMMITTED for next week's short check (decision 3) — store.earmarks[weekId] =
+// { amount, ts? }. Subtracts from its own week's safe-to-spend only; carryoverInto never subtracts it
+// (hold, not transfer — the money arrives in next week's balance, displayed "of which $X earmarked").
+export function earmarkCommitted(store, weekId) {
+  const e = store.earmarks && store.earmarks[weekId];
+  return e ? num(e.amount) : 0;
+}
+
+// Hoard withdrawals tagged to a week — money that came BACK to checking, so the running balance must add
+// it (deposits fence money out via savedInWeek; an emergency pull un-fences it). Legacy "out" entries
+// carry only ym (no weekId) → not attributable to a window; the reconcile adjustment absorbs that drift.
+export function savedOutInWeek(store, weekId) {
+  return Object.values(store.savLedger || {})
+    .reduce((a, e) => a + (e.kind === "out" && e.weekId === weekId ? num(e.amount) : 0), 0);
+}
+
+// One window's bill money under the bills-mode setting (decision 2).
+// "due" (default, = today's behavior) = plan of every non-skipped bill in the window.
+// "paid" = only bills actually MARKED paid, at their actual where entered (else plan) — real money out.
+export function windowBillsTotal(store, win, mode = "due") {
+  return billsInWindow(store, win).reduce((a, b) => {
+    if (b.state === "skipped") return a;
+    if (mode === "paid") return a + (b.state === "paid" ? (b.actual !== undefined && b.actual !== "" ? num(b.actual) : b.plan) : 0);
+    return a + b.plan;
+  }, 0);
+}
+
+// THE running balance entering window idx = Σ over every prior window of
+// (actual check + adjustments + hoard withdrawals − bills(mode) − hoard deposits − one-offs − logged spending).
+// weeks = paycheckWindows(years); the bills mode comes from store.billsMode ("due" unless explicitly "paid").
+// Committed earmarks deliberately ABSENT here — see earmarkCommitted. Goes honestly negative when the
+// household is in the red; the weekly view renders that truth instead of conjuring a cover.
+export function carryoverInto(store, weeks, idx) {
+  const mode = store.billsMode === "paid" ? "paid" : "due";
+  let bal = 0;
+  for (let j = 0; j < idx; j++) {
+    const w = weeks[j], wid = `${w.year}-${w.month}-${w.day}`;
+    const oneOffs = oneOffsFor(store, w.month, w.year).reduce((a, o) => a + (o.day === w.day ? o.amount : 0), 0);
+    bal += checkAmount(store, wid, w.amount) + adjustInWeek(store, wid) + savedOutInWeek(store, wid)
+         - windowBillsTotal(store, w, mode) - savedInWeek(store, wid) - oneOffs - weekSpendTotal(store, wid);
+  }
+  return bal;
+}
+
+// Safe-to-spend for one paycheck week = the REAL balance carried in + the check, minus everything committed
+// against it: bills + what you ACTUALLY moved into savings this week (savedInWeek — savings follows real
+// deposits not a fixed target) + surprise expenses + the set-aside you actively COMMITTED for next week's
+// short check (earmarkCommitted — decision 3: a hold on this week's number; the money stays in the running
+// balance and arrives in next week's carryoverIn), minus what's already been SPENT (weekSpendTotal), plus any
+// bank-reconcile adjustments logged to this week (adjustInWeek, signed). Everything the household LOGS reads
+// straight from the store so the hero can't drift from the ledgers; carryoverIn is injected (the view computes
+// it from the window graph via carryoverInto). The old earmark/cover params are GONE — the cover was a
+// parkAmount-padded assumption that could show money not actually in the account. Returns the raw number;
+// goes honestly negative when the real balance can't cover the week (the UI styles it "short").
+export function weekSafeToSpend(store, weekId, { checkAmt, billsSum, oneOffSum = 0, carryoverIn = 0 }) {
   const saved = savedInWeek(store, weekId);   // actual hoard deposits this week (not the planned target)
-  return checkAmt - billsSum - saved - oneOffSum - earmark + cover - weekSpendTotal(store, weekId);
+  return carryoverIn + checkAmt + adjustInWeek(store, weekId) - billsSum - saved - oneOffSum
+       - earmarkCommitted(store, weekId) - weekSpendTotal(store, weekId);
 }
 
 // Per-category spend for a month = sum across that month's paycheck-week buckets.
