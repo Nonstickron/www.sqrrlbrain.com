@@ -87,8 +87,8 @@
   .carry .linkbtn{white-space:nowrap}
   .billrow{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eef2f3;font-size:13px}
   .billrow:last-child{border-bottom:none}
-  .billrow.paid{color:#9aa6ad}
-  .billrow.paid > span:first-child::before{content:"✓ ";color:var(--green);font-weight:bold}
+  .billrow.paid{color:#9aa6ad;text-decoration:line-through}  /* struck-and-muted restored (Dauvy) + the ✓ kept (Ronny) — inline-block on the ::before keeps the line-through off the checkmark. Skipped rows stay un-struck, their tag explains them. */
+  .billrow.paid > span:first-child::before{content:"✓ ";color:var(--green);font-weight:bold;display:inline-block}
   .billrow.skipped{color:#9aa6ad}
   .billrow.ghost{color:#9aa6ad;font-style:italic}  /* pushed-away breadcrumb: muted, NO ✓ — the bill left, it wasn't paid here */
   .billrow .due{color:var(--muted)}
@@ -100,9 +100,10 @@
   .baltag{font-size:12px;color:var(--muted);margin-top:2px}
   .linkbtn.adjbtn{white-space:nowrap;flex-shrink:0;border:1px solid var(--teal2);border-radius:999px;padding:5px 11px;font-size:12px}  /* compound selector: .linkbtn's border:none is declared later and would win at equal specificity */
   .billrow.adjrow{font-size:12px;color:var(--muted);border-bottom:none;padding:3px 0}
-  .setrow{display:flex;gap:8px;align-items:flex-start;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);cursor:pointer}
-  .setrow input{flex-shrink:0;margin:1px 0 0}
-  .setrow b{color:var(--ink)}
+  .setrow{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+  .setrow label{display:flex;gap:4px;align-items:center;cursor:pointer}
+  .setrow input{margin:0}
+  .setopts{display:flex;gap:12px;flex-shrink:0;white-space:nowrap}  /* the option pair is ATOMIC (Ronny's layout rule: the two choices never split) — only sanctioned wrap is heading line 1, both options together on line 2 */
   .wbucket{margin-bottom:14px}
   .wbucket:last-child{margin-bottom:0}
   .wbucket .top{display:flex;justify-content:space-between;align-items:center;font-size:13px;margin-bottom:5px}
@@ -139,8 +140,8 @@
   .net.pos{color:var(--green)} .net.neg{color:var(--red)}
   .bchip{font-size:10.5px;color:#3a4750;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .bchip .amt{color:var(--muted)}
-  .bchip.paid{color:#9aa6ad}
-  .bchip.paid::before{content:"✓ ";color:var(--green)}
+  .bchip.paid{text-decoration:line-through;color:#9aa6ad}
+  .bchip.paid::before{content:"✓ ";color:var(--green);display:inline-block}
   .bchip.skipped{color:#9aa6ad;font-style:italic}
   .cell.tappable{cursor:pointer}
   .cell.tappable:hover{border-color:var(--teal2)}
@@ -166,8 +167,8 @@
   input.amt{width:90px;text-align:right;border:1px solid var(--line);border-radius:6px;padding:5px 6px;font-size:13px;font-family:inherit}
   input.plan{background:var(--yellow)}
   input.act{background:#fff}
-  tr.paid td.name{color:#9aa6ad}
-  tr.paid td.name::before{content:"✓ ";color:var(--green);font-weight:bold}
+  tr.paid td.name{color:#9aa6ad;text-decoration:line-through}
+  tr.paid td.name::before{content:"✓ ";color:var(--green);font-weight:bold;display:inline-block}
   tr.skipped td.name{color:#9aa6ad;text-decoration:line-through;font-style:italic}
   tr.pushed td{background:#f3f9fb}
   select.statesel{border:1px solid var(--line);border-radius:6px;padding:4px 6px;font-size:12px;font-family:inherit;background:#fff}
@@ -473,7 +474,12 @@ function renderWeekly(){
         <button class="linkbtn adjbtn" id="adjBal">adjust to bank</button>
       </div>
       ${adjLines}
-      <label class="setrow"><input type="checkbox" id="billsModeCb"${store.billsMode === "paid" ? " checked" : ""}><span>Count bills in the carried balance when marked <b>paid</b> (off = when due)</span></label>
+      <div class="setrow"><span class="setlbl">Bills leave the balance when:</span>
+        <span class="setopts">
+          <label><input type="radio" name="billsMode" value="due"${store.billsMode === "paid" ? "" : " checked"}> due</label>
+          <label><input type="radio" name="billsMode" value="paid"${store.billsMode === "paid" ? " checked" : ""}> marked paid</label>
+        </span>
+      </div>
     </section>`;
 
   let billsHtml = windowBills.map(b => {
@@ -685,13 +691,16 @@ function renderWeekly(){
   document.querySelectorAll('#weeklyBody .rm-adj').forEach(btn => {
     btn.onclick = () => { const id = btn.dataset.id; if (store.balAdjust) delete store.balAdjust[id]; removeLeaf(["balAdjust", id]); renderWeekly(); };
   });
-  // CARRYOVER: bills due/paid mode (decision 2) — one synced top-level flag; default (unchecked) = due
-  const bm = document.getElementById("billsModeCb");
-  if (bm) bm.onchange = () => {
-    store.billsMode = bm.checked ? "paid" : "due";
-    saveLeaf(["billsMode"], store.billsMode);
-    renderWeekly();
-  };
+  // CARRYOVER: bills due/paid mode (decision 2) — one synced top-level flag; default = due.
+  // Radio pair (replaced the checkbox 06-11 — a checkbox forced "off means the opposite" decoding);
+  // same billsMode leaf underneath, one change listener across both.
+  document.querySelectorAll('#weeklyBody input[name="billsMode"]').forEach(r => {
+    r.onchange = () => {
+      store.billsMode = r.value === "paid" ? "paid" : "due";
+      saveLeaf(["billsMode"], store.billsMode);
+      renderWeekly();
+    };
+  });
   document.getElementById("toMonth").onclick = () => { curYear = w.year; curMonth = w.month; setView("sheet"); };
 }
 
