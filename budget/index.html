@@ -288,7 +288,8 @@
 import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
          monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor, savingsFor, checkAmount, paycheckWindows, billsInWindow,
          SPEND_CATS, monthSpendByCat, monthlyTrend, weeklySpendTrend, yearSummary, monthSummary,
-         savingsBalances, savedInWeek, monthSaved, savingsSplitTotal, savingsAllocated, parkAmount, weekSafeToSpend, weekSpendTotal } from './budget-logic.mjs';
+         savingsBalances, savedInWeek, monthSaved, savingsSplitTotal, savingsAllocated, parkAmount, weekSafeToSpend, weekSpendTotal,
+         adjustInWeek, earmarkCommitted, savedOutInWeek, windowBillsTotal, carryoverInto } from './budget-logic.mjs';
 import { makeBackend, localBackend } from './budget-storage.mjs';
 
 // Persistence seam — all writes route through `backend`. Defaults to the localStorage cache; after
@@ -371,28 +372,27 @@ function renderWeekly(){
   const savThisWeek = w.who === "You" ? (savingsSplitTotal(store, w.month, w.year) / w.herCount) : 0;   // #1: savings set-aside comes from the big checks
   const net = checkAmt - billsSum;                                       // #4: actual check (or nominal) — drives the short-check note
   const short = net < 0;
-  // #2 — if the NEXT check is bill-short, earmark (shortfall + cushion) out of THIS big check now, so the
-  // shortage leaves the flex the week before instead of being just a note. F3 — and when THIS week is the short
-  // one, the prior big check already set that cover aside, so credit it back (the pair conserves: −earmark on the
-  // big week, +cover here). Both gates mirror: the funding week must exist AND not be short itself.
-  let earmark = 0, earmarkFor = null, cover = 0;
-  if (!short){
+  // CARRYOVER REDESIGN — the assumed earmark/cover pair is GONE. The hero now draws on the REAL balance that
+  // carried in from every prior window (actual checks + reconcile adjustments + hoard withdrawals − bills −
+  // hoard deposits − surprises − logged spending; carryoverInto, tested). A short check is absorbed by money
+  // that actually survived, or the number goes honestly red — never a parkAmount-conjured pad.
+  const carryoverIn = carryoverInto(store, WEEKS, curWeek);
+  const committedHere = earmarkCommitted(store, wid);                    // the set-aside COMMITTED this week (a hold on this number)
+  const earmarkedIn = curWeek > 0 ? earmarkCommitted(store, weekId(WEEKS[curWeek - 1])) : 0;   // arrives inside carryoverIn — display only
+  // Next week short? parkAmount survives ONLY as this SUGGESTION — nothing moves until Ronny commits it.
+  let suggest = null;
+  if (!short && committedHere === 0){
     const nextW = WEEKS[curWeek + 1];
     if (nextW){
       const nb = billsInWindow(store, nextW).reduce((a, b) => a + (b.state === "skipped" ? 0 : b.plan), 0);
       const nextNet = checkAmount(store, weekId(nextW), nextW.amount) - nb;
-      if (nextNet < 0){ earmark = parkAmount(nextNet); earmarkFor = { w: nextW, net: nextNet }; }
+      if (nextNet < 0) suggest = { w: nextW, net: nextNet, amt: parkAmount(nextNet) };
     }
-  } else if (curWeek > 0){
-    const prevW = WEEKS[curWeek - 1];
-    const pb = billsInWindow(store, prevW).reduce((a, b) => a + (b.state === "skipped" ? 0 : b.plan), 0);
-    const prevNet = checkAmount(store, weekId(prevW), prevW.amount) - pb;
-    if (prevNet >= 0) cover = parkAmount(net);   // prior big check wasn't short → it parked this week's cover
   }
-  // Safe-to-spend subtracts what's actually been SPENT and SAVED this week — both read from the store inside
-  // weekSafeToSpend (the tested source of truth), NOT the planned savings target. So skipping savings (or
-  // removing a deposit) leaves the money spendable. Can go honestly negative when a budget is blown.
-  const safe = weekSafeToSpend(store, wid, { checkAmt, billsSum, oneOffSum, earmark, cover });
+  // Safe-to-spend subtracts what's actually been SPENT and SAVED this week + the COMMITTED earmark + this
+  // week's reconcile adjustments — all read from the store inside weekSafeToSpend (the tested source of
+  // truth). carryoverIn is injected from the window graph. Can go honestly negative when a budget is blown.
+  const safe = weekSafeToSpend(store, wid, { checkAmt, billsSum, oneOffSum, carryoverIn });
 
   const dObj = new Date(Date.UTC(w.year, w.month - 1, w.day)), eObj = new Date(w.end);   // payday (for day-of-week) → window end (may be next month)
   const isThis = curWeek === todayWeekIdx();
@@ -402,14 +402,38 @@ function renderWeekly(){
   document.getElementById("wPrev").disabled = curWeek === 0;
   document.getElementById("wNext").disabled = curWeek === WEEKS.length - 1;
 
+  // Short-check note now reports REAL coverage: what actually carried over (incl. this week's adjustments),
+  // against this check's shortfall — or the honest red when the money isn't there. availHere is also the
+  // headline "Carried over" display, so a bank-reconcile adjustment visibly moves it the moment it's logged.
   let carry = "";
-  if (short && cover > 0){
-    carry = `<div class="carry"><b>This check is short ${money(net)}.</b> Covered by the ${money(cover)} set aside from last week's big check.</div>`;
+  const availHere = carryoverIn + adjustInWeek(store, wid) + savedOutInWeek(store, wid);   // the real balance absorbing this check's shortfall (incl. this week's adjustments + hoard money pulled back — symmetric with the hero, Mac's 🟡)
+  if (short && availHere + net >= 0){
+    carry = `<div class="carry"><b>This check is short ${money(net)}.</b> Covered by the ${money(availHere)} that actually carried over${earmarkedIn > 0 ? ` (incl. the ${money(earmarkedIn)} set aside last week for this one)` : ""}.</div>`;
   } else if (short){
-    carry = `<div class="carry"><b>This check is short ${money(net)}.</b> Cover it from your big check.</div>`;
-  } else if (earmark > 0){
-    carry = `<div class="carry"><b>Set aside ${money(earmark)}</b> for ${earmarkFor.w.who === "You" ? "your" : "his"} short check on ${MNAMES[earmarkFor.w.month].slice(0,3)} ${earmarkFor.w.day} (short ${money(earmarkFor.net)}). It's taken out of this week's safe-to-spend.</div>`;
+    carry = `<div class="carry"><b>This check is short ${money(net)}</b> and only ${money(Math.max(0, availHere))} really carried over — you're ${money(Math.abs(availHere + net))} in the red until more comes in.</div>`;
   }
+  // The committed set-aside (decision 3) is its own line — visible whenever it's held, undoable in place.
+  // Until committed it's just a suggestion; commit adjusts Safe to Spend in real time, like logging spending.
+  let earmarkHtml = "";
+  if (committedHere > 0){
+    earmarkHtml = `<div class="carry"><b>${money(committedHere)} set aside for next week's short check</b> — committed, held out of this week's number. It rolls into next week's carried-over balance. <button class="linkbtn" id="unEarmark">undo</button></div>`;
+  } else if (suggest){
+    earmarkHtml = `<div class="carry"><b>Heads up: ${suggest.w.who === "You" ? "your" : "his"} check on ${MNAMES[suggest.w.month].slice(0,3)} ${suggest.w.day} is short ${money(suggest.net)}.</b> Nothing's set aside yet — committing it takes it out of this week's safe-to-spend for real. <button class="linkbtn" id="commitEarmark">Set aside ${money(suggest.amt)}</button></div>`;
+  }
+  // Reconcile ledger (decision 1) — this week's manual adjustments, each removable (auditable, never silent)
+  const adjEntries = Object.entries(store.balAdjust || {}).filter(([id, e]) => e.weekId === wid);
+  const adjLines = adjEntries.map(([id, e]) =>
+    `<div class="billrow"><span>${num(e.amount) >= 0 ? "+" : ""}${money2(num(e.amount))}${e.note ? ` <span class="spend-note">— ${escHtml(e.note)}</span>` : ""}</span>` +
+    `<span class="due"><button class="rm-adj" data-id="${esc(id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:15px;padding:0 0 0 6px">&times;</button></span></div>`
+  ).join("");
+  const carryPanel = `
+    <section>
+      <h2>Carried over <span class="note" style="font-weight:normal">— what actually rolled in from past weeks</span></h2>
+      <div class="billrow"><span><b>${money2(availHere)}</b>${earmarkedIn > 0 ? ` <span class="spend-note">incl. ${money(earmarkedIn)} earmarked last week for this one</span>` : ""}</span>
+        <span class="due"><button class="linkbtn" id="adjBal">adjust to bank</button></span></div>
+      ${adjLines}
+      <label class="note" style="display:flex;gap:6px;align-items:center;cursor:pointer"><input type="checkbox" id="billsModeCb"${store.billsMode === "paid" ? " checked" : ""}> Count only bills marked <b>paid</b> in the carried balance (unchecked counts them when due)</label>
+    </section>`;
 
   let billsHtml = windowBills.map(b => {
     const struck = b.state === "paid" || b.state === "skipped";
@@ -483,14 +507,16 @@ function renderWeekly(){
     <div class="hero ${safe < 0 ? "short" : ""}">
       <div class="lbl">Safe to spend this week</div>
       <div class="amt">${money(safe)}</div>
-      <div class="sub">after this week's bills${weekSpent > 0 ? ", spending" : ""}${savedThis > 0 ? ", savings" : ""}${oneOffSum > 0 ? ", surprises" : ""}${earmark > 0 ? ", next week's set-aside" : ""}${cover > 0 ? ", incl. last week's cover" : ""}</div>
+      <div class="sub">after this week's bills${weekSpent > 0 ? ", spending" : ""}${savedThis > 0 ? ", savings" : ""}${oneOffSum > 0 ? ", surprises" : ""}${committedHere > 0 ? ", next week's set-aside" : ""} — incl. what really carried over</div>
     </div>
     <div class="ministats">
       <div class="ministat"><div class="h">Came in</div><div class="v"><input class="checkin" inputmode="decimal" value="${esc((store.payActual && store.payActual[wid] !== undefined) ? store.payActual[wid] : "")}" placeholder="${money(w.amount)}" data-wid="${esc(wid)}" aria-label="What this check actually came in at — blank uses ${money(w.amount)}"></div></div>
       <div class="ministat"><div class="h">Bills this wk</div><div class="v">${money(billsSum)}</div></div>
       <div class="ministat"><div class="h">Savings</div><div class="v">${money(savedThis)}</div></div>
     </div>
+    ${carryPanel}
     ${carry}
+    ${earmarkHtml}
     <section><h2>Bills before your next check</h2>${billsHtml}</section>
     <section>
       <h2>Surprise expenses${oneOffSum > 0 ? ` <span class="note" style="font-weight:normal">— ${money(oneOffSum)} this week</span>` : ""}</h2>
@@ -585,6 +611,44 @@ function renderWeekly(){
       removeLeaf([mk, "oneOffs", id]); renderWeekly();
     };
   });
+  // CARRYOVER: commit / undo the next-week set-aside (decision 3) — one leaf per week, adjusts the hero live
+  const ce = document.getElementById("commitEarmark");
+  if (ce) ce.onclick = () => {
+    store.earmarks = store.earmarks || {};
+    store.earmarks[wid] = { amount: suggest.amt, ts: Date.now() };
+    saveLeaf(["earmarks", wid], store.earmarks[wid]);
+    renderWeekly();
+  };
+  const ue = document.getElementById("unEarmark");
+  if (ue) ue.onclick = () => {
+    if (store.earmarks) delete store.earmarks[wid];
+    removeLeaf(["earmarks", wid]);
+    renderWeekly();
+  };
+  // CARRYOVER: bank-reconcile adjustment (decision 1) — a signed delta on the id-keyed balAdjust ledger,
+  // attributed to the week being viewed (fixing an old week reflows every later balance, on purpose)
+  const ab = document.getElementById("adjBal");
+  if (ab) ab.onclick = () => {
+    const v = prompt("Adjust the carried balance to match the bank.\nEnter the difference: positive if the bank has MORE than the app shows, negative if it has less.\n(e.g. 1.27 or -5)");
+    if (v === null || v.trim() === "") return;
+    const amt = num(v); if (!amt) return;
+    const note = (prompt("Note (optional) — e.g. \"bank reconcile\"") || "").trim();
+    store.balAdjust = store.balAdjust || {};
+    const id = newId();
+    store.balAdjust[id] = { weekId: wid, amount: amt, note, ts: Date.now() };
+    saveLeaf(["balAdjust", id], store.balAdjust[id]);
+    renderWeekly();
+  };
+  document.querySelectorAll('#weeklyBody .rm-adj').forEach(btn => {
+    btn.onclick = () => { const id = btn.dataset.id; if (store.balAdjust) delete store.balAdjust[id]; removeLeaf(["balAdjust", id]); renderWeekly(); };
+  });
+  // CARRYOVER: bills due/paid mode (decision 2) — one synced top-level flag; default (unchecked) = due
+  const bm = document.getElementById("billsModeCb");
+  if (bm) bm.onchange = () => {
+    store.billsMode = bm.checked ? "paid" : "due";
+    saveLeaf(["billsMode"], store.billsMode);
+    renderWeekly();
+  };
   document.getElementById("toMonth").onclick = () => { curYear = w.year; curMonth = w.month; setView("sheet"); };
 }
 
@@ -872,7 +936,10 @@ function withdrawSavings(goal){
   if (v === null || v.trim() === "") return;
   const amt = num(v); if (amt <= 0) return;
   if (amt > bal){ alert(`That's more than the ${money(bal)} in "${goal}". Enter ${money(bal)} or less.`); return; }   // F6: no overdraw past the balance
-  ledgerAdd({ kind: "out", goal, amount: amt, ym: mkey(curMonth, curYear), ts: Date.now() });
+  // weekId: a withdrawal returns money to checking NOW — tag it to today's window so the running
+  // carryover balance credits it back from this week forward (carryover redesign; legacy untagged
+  // outs aren't attributable and get absorbed by a bank-reconcile adjustment instead)
+  ledgerAdd({ kind: "out", goal, amount: amt, ym: mkey(curMonth, curYear), weekId: weekId(WEEKS[todayWeekIdx()]), ts: Date.now() });
   renderSheet();
 }
 function moveSavings(from){
