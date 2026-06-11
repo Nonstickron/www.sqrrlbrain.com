@@ -12,10 +12,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Budget">
-<!-- B token layer: Sqrrlbrain brand type, mirrored verbatim from the site's loader (font-display:swap
-     + the system fallback stack = graceful PWA-offline degrade, no self-hosting needed) -->
+<!-- B token layer (amended 2026-06-11: NO SERIF — Ronny's call; Lora dropped, headings are bold DM Sans):
+     DM Sans + DM Mono only, font-display:swap + system fallback = graceful PWA-offline degrade -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
 <style>
   :root{
     --teal:#1F4E5F; --teal2:#2E6E78; --teallt:#4A8C95;
@@ -25,11 +25,13 @@
   }
   *{box-sizing:border-box}
   body{margin:0;font-family:'DM Sans',Arial,Helvetica,system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.4;font-variant-numeric:tabular-nums}
-  /* B layer: Lora heads · DM Mono on the purely-numeric containers (scannable figures; in-sentence
-     amounts stay in the body face) · vermilion = brand garnish ONLY (header identity + focus rings) —
-     never an action color: #c8421a next to --red would make every button read as a warning */
-  header h1,section h2,.card h3{font-family:Lora,Georgia,serif}
-  .hero .amt,.ministat .v,.ministat .checkin,.card .big,.pd .num,.net,td.r,input.amt,.wbucket .amt-in,.carryamt{font-family:'DM Mono',ui-monospace,Consolas,monospace}
+  /* B layer (no-serif amendment): bold DM Sans heads · DM Mono on the purely-numeric containers
+     (scannable figures; in-sentence amounts stay in the body face) · vermilion = brand garnish ONLY
+     (header identity + focus rings) — never an action color next to --red on a money app */
+  header h1,section h2,.card h3,.cal-detail .cd-head b{font-family:'DM Sans',system-ui,sans-serif;font-weight:700;letter-spacing:.01em}
+  /* section descriptors drop to their own line under the title — no mid-title orphans (Ronny 06-11) */
+  section h2 .note{display:block;font-weight:normal;font-size:12px;margin-top:2px}
+  .hero .amt,.ministat .v,.ministat .checkin,.card .big,.pd .num,.net,td.r,input.amt,.wbucket .amt-in,.balamt{font-family:'DM Mono',ui-monospace,Consolas,monospace}
   header{border-bottom:3px solid #c8421a}
   button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #c8421a;outline-offset:1px}
   .wrap{max-width:1040px;margin:0 auto;padding:0 16px 60px}
@@ -88,16 +90,17 @@
   .billrow.paid > span:first-child::before{content:"✓ ";color:var(--green);font-weight:bold}
   .billrow.skipped{color:#9aa6ad}
   .billrow .due{color:var(--muted)}
-  /* carried-over panel: headline number first-class, pill action, quiet adjustment rows, settings row last */
-  .carryrow{display:flex;justify-content:space-between;align-items:center;gap:12px}
-  .carryamt{font-size:17px;font-weight:bold;line-height:1.2}
-  .carryamt.neg{color:var(--red)}
-  .carrysub{font-size:12px;color:var(--muted);margin-top:2px}
-  .adjbtn{white-space:nowrap;flex-shrink:0;border:1px solid var(--teal2);border-radius:999px;padding:6px 12px}
+  /* carried-over panel (locked recipe): the balance IS the focal — title / descriptor / BIG number +
+     small pill / quiet adjustments / hairline / tertiary setting. The action never outweighs the number. */
+  .balrow{display:flex;justify-content:space-between;align-items:center;gap:12px}
+  .balamt{font-size:24px;font-weight:500;line-height:1.2}
+  .balamt.neg{color:var(--red)}
+  .baltag{font-size:12px;color:var(--muted);margin-top:2px}
+  .adjbtn{white-space:nowrap;flex-shrink:0;border:1px solid var(--teal2);border-radius:999px;padding:5px 11px;font-size:12px}
   .billrow.adjrow{font-size:12px;color:var(--muted);border-bottom:none;padding:3px 0}
-  .modechk{display:flex;gap:8px;align-items:flex-start;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);cursor:pointer}
-  .modechk input{flex-shrink:0;margin:1px 0 0}
-  .modechk b{color:var(--ink)}
+  .setrow{display:flex;gap:8px;align-items:flex-start;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);cursor:pointer}
+  .setrow input{flex-shrink:0;margin:1px 0 0}
+  .setrow b{color:var(--ink)}
   .wbucket{margin-bottom:14px}
   .wbucket:last-child{margin-bottom:0}
   .wbucket .top{display:flex;justify-content:space-between;align-items:center;font-size:13px;margin-bottom:5px}
@@ -251,7 +254,7 @@
       <div class="cal-detail" id="calDetail" hidden></div>
     </section>
     <section>
-      <h2>Spending split <span class="note" style="font-weight:normal">— how each month's money splits across spending + savings, and what's left (flex)</span></h2>
+      <h2>Spending split <span class="note" style="font-weight:normal">how each month's money splits across spending + savings, and what's left (flex)</span></h2>
       <table>
         <thead><tr><th>Bucket</th><th class="r">Plan / mo</th><th class="r">Actual</th></tr></thead>
         <tbody id="splitBody"></tbody>
@@ -261,7 +264,7 @@
       <div class="note" id="oneOffNote"></div>
     </section>
     <section>
-      <h2>Savings split <span class="note" style="font-weight:normal">— divvy your savings pool (the Savings line above) into hoards</span></h2>
+      <h2>Savings split <span class="note" style="font-weight:normal">divvy your savings pool (the Savings line above) into hoards</span></h2>
       <table>
         <thead><tr><th>Hoard</th><th class="r">Allocation</th><th class="r">Saved</th><th></th></tr></thead>
         <tbody id="savBody"></tbody>
@@ -277,7 +280,7 @@
       <div class="note" id="halvesNote"></div>
     </section>
     <section>
-      <h2>Bills <span class="note" style="font-weight:normal">— set each bill's status (paid / pushed / skipped) and type the real amount in "Actual" as the month happens</span></h2>
+      <h2>Bills <span class="note" style="font-weight:normal">set each bill's status (paid / pushed / skipped) and type the real amount in "Actual" as the month happens</span></h2>
       <table id="billsTable">
         <thead><tr><th>Bill</th><th class="r">Due</th><th class="r">Planned</th><th class="r">Actual</th><th class="c">Status</th><th></th></tr></thead>
         <tbody id="billsBody"></tbody>
@@ -459,16 +462,16 @@ function renderWeekly(){
   ).join("");
   const carryPanel = `
     <section>
-      <h2>Carried over <span class="note" style="font-weight:normal">— from past weeks</span></h2>
-      <div class="carryrow">
+      <h2>Carried over <span class="note" style="font-weight:normal">what really rolled in from past weeks</span></h2>
+      <div class="balrow">
         <div>
-          <div class="carryamt${availHere < 0 ? " neg" : ""}">${money2(availHere)}</div>
-          ${earmarkedIn > 0 ? `<div class="carrysub">incl. ${money(earmarkedIn)} earmarked last week for this one</div>` : ""}
+          <div class="balamt${availHere < 0 ? " neg" : ""}">${money2(availHere)}</div>
+          ${earmarkedIn > 0 ? `<div class="baltag">incl. ${money2(earmarkedIn)} earmarked last week for this one</div>` : ""}
         </div>
         <button class="linkbtn adjbtn" id="adjBal">adjust to bank</button>
       </div>
       ${adjLines}
-      <label class="modechk"><input type="checkbox" id="billsModeCb"${store.billsMode === "paid" ? " checked" : ""}><span>Count bills in the carried balance when marked <b>paid</b> (off = when due)</span></label>
+      <label class="setrow"><input type="checkbox" id="billsModeCb"${store.billsMode === "paid" ? " checked" : ""}><span>Count bills in the carried balance when marked <b>paid</b> (off = when due)</span></label>
     </section>`;
 
   let billsHtml = windowBills.map(b => {
@@ -529,7 +532,7 @@ function renderWeekly(){
     .join("");
   const savPanel = `
     <section>
-      <h2>This week's savings <span class="note" style="font-weight:normal">— ${savTgt > 0 ? "move money into your hoards" : "usually saved from your $2k weeks — but anything you stash here counts"}</span></h2>
+      <h2>This week's savings <span class="note" style="font-weight:normal">${savTgt > 0 ? "move money into your hoards" : "usually saved from your $2k weeks — but anything you stash here counts"}</span></h2>
       ${savTgt > 0
         ? `<div class="wbucket"><div class="top"><span>&#128063; Into savings</span><span class="tgt ${savOver ? "over" : ""}">${money2(savedThis)} of $${savTgt}${savOver ? " · over" : ""}</span></div><div class="wbar ${savOver ? "over" : ""}"><div style="width:${savOver ? 100 : savPct}%"></div></div></div>`
         : `<div class="note">Smaller check, so no savings target this week — but anything you move to a hoard still comes out of your safe-to-spend.</div>`}
@@ -557,12 +560,12 @@ function renderWeekly(){
     ${earmarkHtml}
     <section><h2>Bills before your next check</h2>${billsHtml}</section>
     <section>
-      <h2>Surprise expenses${oneOffSum > 0 ? ` <span class="note" style="font-weight:normal">— ${money(oneOffSum)} this week</span>` : ""}</h2>
+      <h2>Surprise expenses${oneOffSum > 0 ? ` <span class="note" style="font-weight:normal">${money(oneOffSum)} this week</span>` : ""}</h2>
       ${oneOffsHtml || '<div class="note">None this week.</div>'}
       <button class="linkbtn" id="addOneOff">+ Add a surprise expense</button>
     </section>
     <section>
-      <h2>This week's spending <span class="note" style="font-weight:normal">— ${w.who === "You" ? "big-shop week, money's here" : "lighter week — lean on your big-shop"}</span></h2>
+      <h2>This week's spending <span class="note" style="font-weight:normal">${w.who === "You" ? "big-shop week, money's here" : "lighter week — lean on your big-shop"}</span></h2>
       <div class="logrow">
         <input id="spendAmt" class="amt-in" inputmode="decimal" placeholder="$ amount">
         <select id="spendCat" aria-label="Category">${catOpts}</select>
