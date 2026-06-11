@@ -382,15 +382,18 @@ export function carryoverInto(store, weeks, idx) {
 // deposits not a fixed target) + surprise expenses + the set-aside you actively COMMITTED for next week's
 // short check (earmarkCommitted — decision 3: a hold on this week's number; the money stays in the running
 // balance and arrives in next week's carryoverIn), minus what's already been SPENT (weekSpendTotal), plus any
-// bank-reconcile adjustments logged to this week (adjustInWeek, signed). Everything the household LOGS reads
-// straight from the store so the hero can't drift from the ledgers; carryoverIn is injected (the view computes
-// it from the window graph via carryoverInto). The old earmark/cover params are GONE — the cover was a
-// parkAmount-padded assumption that could show money not actually in the account. Returns the raw number;
-// goes honestly negative when the real balance can't cover the week (the UI styles it "short").
+// bank-reconcile adjustments logged to this week (adjustInWeek, signed) and any hoard money pulled BACK this
+// week (savedOutInWeek, + — symmetric with deposits: a withdrawal un-fences the money the moment it happens,
+// so withdraw-and-spend nets zero and reconciling to the bank can't double-count it next week [Mac's 🟡,
+// review 2026-06-11]). Everything the household LOGS reads straight from the store so the hero can't drift
+// from the ledgers; carryoverIn is injected (the view computes it from the window graph via carryoverInto).
+// The old earmark/cover params are GONE — the cover was a parkAmount-padded assumption that could show money
+// not actually in the account. Returns the raw number; goes honestly negative when the real balance can't
+// cover the week (the UI styles it "short").
 export function weekSafeToSpend(store, weekId, { checkAmt, billsSum, oneOffSum = 0, carryoverIn = 0 }) {
   const saved = savedInWeek(store, weekId);   // actual hoard deposits this week (not the planned target)
-  return carryoverIn + checkAmt + adjustInWeek(store, weekId) - billsSum - saved - oneOffSum
-       - earmarkCommitted(store, weekId) - weekSpendTotal(store, weekId);
+  return carryoverIn + checkAmt + adjustInWeek(store, weekId) + savedOutInWeek(store, weekId)
+       - billsSum - saved - oneOffSum - earmarkCommitted(store, weekId) - weekSpendTotal(store, weekId);
 }
 
 // Per-category spend for a month = sum across that month's paycheck-week buckets.

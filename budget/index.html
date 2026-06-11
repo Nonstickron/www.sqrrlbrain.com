@@ -406,7 +406,7 @@ function renderWeekly(){
   // against this check's shortfall — or the honest red when the money isn't there. availHere is also the
   // headline "Carried over" display, so a bank-reconcile adjustment visibly moves it the moment it's logged.
   let carry = "";
-  const availHere = carryoverIn + adjustInWeek(store, wid);   // the real balance absorbing this check's shortfall
+  const availHere = carryoverIn + adjustInWeek(store, wid) + savedOutInWeek(store, wid);   // the real balance absorbing this check's shortfall (incl. this week's adjustments + hoard money pulled back — symmetric with the hero, Mac's 🟡)
   if (short && availHere + net >= 0){
     carry = `<div class="carry"><b>This check is short ${money(net)}.</b> Covered by the ${money(availHere)} that actually carried over${earmarkedIn > 0 ? ` (incl. the ${money(earmarkedIn)} set aside last week for this one)` : ""}.</div>`;
   } else if (short){
