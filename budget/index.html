@@ -29,6 +29,7 @@
      (scannable figures; in-sentence amounts stay in the body face) · vermilion = brand garnish ONLY
      (header identity + focus rings) — never an action color next to --red on a money app */
   header h1,section h2,.card h3,.cal-detail .cd-head b{font-family:'DM Sans',system-ui,sans-serif;font-weight:700;letter-spacing:.01em}
+  button,select,input,textarea{font-family:inherit}  /* form controls don't inherit body font from the UA sheet — without this every button stays Arial (the numeric DM Mono rules below are more specific and still win) */
   /* section descriptors drop to their own line under the title — no mid-title orphans (Ronny 06-11) */
   section h2 .note{display:block;font-weight:normal;font-size:12px;margin-top:2px}
   .hero .amt,.ministat .v,.ministat .checkin,.card .big,.pd .num,.net,td.r,input.amt,.wbucket .amt-in,.balamt{font-family:'DM Mono',ui-monospace,Consolas,monospace}
@@ -89,6 +90,7 @@
   .billrow.paid{color:#9aa6ad}
   .billrow.paid > span:first-child::before{content:"✓ ";color:var(--green);font-weight:bold}
   .billrow.skipped{color:#9aa6ad}
+  .billrow.ghost{color:#9aa6ad;font-style:italic}  /* pushed-away breadcrumb: muted, NO ✓ — the bill left, it wasn't paid here */
   .billrow .due{color:var(--muted)}
   /* carried-over panel (locked recipe): the balance IS the focal — title / descriptor / BIG number +
      small pill / quiet adjustments / hairline / tertiary setting. The action never outweighs the number. */
@@ -1087,7 +1089,7 @@ function renderCalendar(c){
     }
     if (bills.length){
       h += `<div class="cd-bills">` + bills.map(b => {
-        if (b.ghost) return `<div class="billrow paid"><span>${escHtml(b.name)} <em style="font-style:normal;color:var(--muted)">&rarr; pushed to ${fmtDay(b.ghostTo)}</em></span><span class="due"></span></div>`;
+        if (b.ghost) return `<div class="billrow ghost"><span>${escHtml(b.name)} <em style="font-style:normal;color:var(--muted)">&rarr; pushed to ${fmtDay(b.ghostTo)}</em></span><span class="due"></span></div>`;
         const tag = b.state === "skipped" ? " · skipped" : b.movedIn ? ` · pushed from ${fmtDay(b.pushedIn.from)}` : b.movedHere ? " · pushed here" : b.state === "pushed" ? " · pushed" : b.paid ? " · paid" : "";
         return `<div class="billrow ${b.paid ? 'paid' : b.state === 'skipped' ? 'skipped' : ''}"><span>${escHtml(b.name)}${tag}</span><span class="due">${money(b.plan)}</span></div>`;
       }).join("") + `</div>`;
