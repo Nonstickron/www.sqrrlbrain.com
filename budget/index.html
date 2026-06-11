@@ -103,6 +103,7 @@
   .setrow{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
   .setrow label{display:flex;gap:4px;align-items:center;cursor:pointer}
   .setrow input{margin:0}
+  .setopts{display:flex;gap:12px;flex-shrink:0;white-space:nowrap}  /* the option pair is ATOMIC (Ronny's layout rule: the two choices never split) — only sanctioned wrap is heading line 1, both options together on line 2 */
   .wbucket{margin-bottom:14px}
   .wbucket:last-child{margin-bottom:0}
   .wbucket .top{display:flex;justify-content:space-between;align-items:center;font-size:13px;margin-bottom:5px}
@@ -473,9 +474,11 @@ function renderWeekly(){
         <button class="linkbtn adjbtn" id="adjBal">adjust to bank</button>
       </div>
       ${adjLines}
-      <div class="setrow"><span class="setlbl">Bills leave the balance:</span>
-        <label><input type="radio" name="billsMode" value="due"${store.billsMode === "paid" ? "" : " checked"}> when due</label>
-        <label><input type="radio" name="billsMode" value="paid"${store.billsMode === "paid" ? " checked" : ""}> when marked paid</label>
+      <div class="setrow"><span class="setlbl">Bills leave the balance when:</span>
+        <span class="setopts">
+          <label><input type="radio" name="billsMode" value="due"${store.billsMode === "paid" ? "" : " checked"}> due</label>
+          <label><input type="radio" name="billsMode" value="paid"${store.billsMode === "paid" ? " checked" : ""}> marked paid</label>
+        </span>
       </div>
     </section>`;
 
