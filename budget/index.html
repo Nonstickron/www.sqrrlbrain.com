@@ -323,7 +323,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js"></script>
 <script type="module">
 import { ANCHOR, MONTHS, YEAR, MNAMES, DOW, FIXED, SPLIT_DEF, SAV_DEF,
-         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor, savingsFor, checkAmount, paycheckWindows, billsInWindow,
+         monthsForYear, mkey, ms, paydays, billsFor, sumWindow, calc, money, money2, num, oneOffsFor, debtPaymentsFor, debtBillOverpaid, savingsFor, checkAmount, paycheckWindows, billsInWindow,
          SPEND_CATS, monthSpendByCat, monthlyTrend, weeklySpendTrend, yearSummary, monthSummary,
          savingsBalances, savedInWeek, monthSaved, savingsSplitTotal, savingsAllocated, parkAmount, weekSafeToSpend, weekSpendTotal,
          adjustInWeek, earmarkCommitted, savedOutInWeek, windowBillsTotal, carryoverInto } from './budget-logic.mjs';
@@ -398,6 +398,7 @@ function spendEntries(w, key){
 }
 
 /* ============================ WEEKLY VIEW ============================ */
+let debtFormOpen = false;   // collapsed-when-empty: the "+ Extra debt payment" form stays hidden until opened (or entries exist)
 function renderWeekly(){
   const w = WEEKS[curWeek];
   const wid = weekId(w), checkAmt = checkAmount(store, wid, w.amount);   // #4: actual amount this check came in (blank → nominal)
@@ -406,6 +407,8 @@ function renderWeekly(){
   const billsSum = windowBills.reduce((a, b) => a + (b.state === "skipped" ? 0 : b.plan), 0);  // V2: skipped bills don't count
   const windowOneOffs = oneOffsFor(store, w.month, w.year).filter(o => o.day === w.day);   // surprises are tagged to their check's payday
   const oneOffSum = windowOneOffs.reduce((a, o) => a + o.amount, 0);
+  const windowDebtPays = debtPaymentsFor(store, w.month, w.year).filter(d => d.day === w.day);   // extra debt payments tagged to this check's payday
+  const debtPaySum = windowDebtPays.reduce((a, d) => a + d.amount, 0);
   const savThisWeek = w.who === "You" ? (savingsSplitTotal(store, w.month, w.year) / w.herCount) : 0;   // #1: savings set-aside comes from the big checks
   const net = checkAmt - billsSum;                                       // #4: actual check (or nominal) — drives the short-check note
   const short = net < 0;
@@ -429,7 +432,7 @@ function renderWeekly(){
   // Safe-to-spend subtracts what's actually been SPENT and SAVED this week + the COMMITTED earmark + this
   // week's reconcile adjustments — all read from the store inside weekSafeToSpend (the tested source of
   // truth). carryoverIn is injected from the window graph. Can go honestly negative when a budget is blown.
-  const safe = weekSafeToSpend(store, wid, { checkAmt, billsSum, oneOffSum, carryoverIn });
+  const safe = weekSafeToSpend(store, wid, { checkAmt, billsSum, oneOffSum, debtPaySum, carryoverIn });
 
   const dObj = new Date(Date.UTC(w.year, w.month - 1, w.day)), eObj = new Date(w.end);   // payday (for day-of-week) → window end (may be next month)
   const isThis = curWeek === todayWeekIdx();
@@ -496,6 +499,18 @@ function renderWeekly(){
     `<div class="billrow"><span>🚨 ${escHtml(o.name)}</span><span class="due">${money(o.amount)} &middot; ${MNAMES[w.month].slice(0,3)} ${o.day} <button class="rm-oneoff" data-id="${esc(o.id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:14px;padding:0 0 0 4px">&times;</button></span></div>`
   ).join("");
 
+  // Extra debt payments landing in this window (spec: separate box, collapsed-when-empty)
+  const debtPayLines = windowDebtPays.map(d =>
+    `<div class="billrow"><span>💳 ${escHtml(d.debt)}</span><span class="due">${money(d.amount)} <button class="rm-debtpay" data-id="${esc(d.id)}" title="remove" style="border:none;background:none;color:var(--muted);cursor:pointer;font-size:14px;padding:0 0 0 4px">&times;</button></span></div>`
+  ).join("");
+  const debtOpts = billsFor(store, w.month, w.year).map(b => `<option value="${esc(b.name)}">${escHtml(b.name)}</option>`).join("");   // live bill list → new debts auto-appear (spec §10)
+  const hasDebt = windowDebtPays.length > 0, showDebtForm = hasDebt || debtFormOpen;
+  const debtHdr = hasDebt ? `<h2>Extra debt payments <span class="note" style="font-weight:normal">${money(debtPaySum)} this week</span></h2>` : "";
+  const debtForm = showDebtForm
+    ? `<div class="logrow"><input id="debtPayAmt" class="amt-in" inputmode="decimal" placeholder="$ amount"><select id="debtPaySel" aria-label="Debt">${debtOpts}</select><button class="linkbtn" id="addDebtPay">Add</button></div>`
+    : `<button class="linkbtn" id="openDebtForm">+ Extra debt payment</button>`;
+  const debtSection = `<section>${debtHdr}${debtPayLines}${debtForm}</section>`;
+
   const weeksInMonth = w.weeksInMonth;   // paychecks in this check's owning month (from the window)
   // B-flat: weekly goals DERIVE (read-only) from the monthly Spending Split ÷ weeks in the month — flat
   // across every week (spending is chaotic week-to-week, so no per-week weighting / fake precision).
@@ -556,7 +571,7 @@ function renderWeekly(){
     <div class="hero ${safe < 0 ? "short" : ""}">
       <div class="lbl">Safe to spend this week</div>
       <div class="amt">${money(safe)}</div>
-      <div class="sub">after this week's bills${weekSpent > 0 ? ", spending" : ""}${savedThis > 0 ? ", savings" : ""}${oneOffSum > 0 ? ", surprises" : ""}${committedHere > 0 ? ", next week's set-aside" : ""} — incl. what really carried over</div>
+      <div class="sub">after this week's bills${weekSpent > 0 ? ", spending" : ""}${savedThis > 0 ? ", savings" : ""}${oneOffSum > 0 ? ", surprises" : ""}${debtPaySum > 0 ? ", extra debt" : ""}${committedHere > 0 ? ", next week's set-aside" : ""} — incl. what really carried over</div>
     </div>
     <div class="ministats">
       <div class="ministat"><div class="h">Came in</div><div class="v"><input class="checkin" inputmode="decimal" value="${esc((store.payActual && store.payActual[wid] !== undefined) ? store.payActual[wid] : "")}" placeholder="${money(w.amount)}" data-wid="${esc(wid)}" aria-label="What this check actually came in at — blank uses ${money(w.amount)}"></div></div>
@@ -572,6 +587,7 @@ function renderWeekly(){
       ${oneOffsHtml || '<div class="note">None this week.</div>'}
       <button class="linkbtn" id="addOneOff">+ Add a surprise expense</button>
     </section>
+    ${debtSection}
     <section>
       <h2>This week's spending <span class="note" style="font-weight:normal">${w.who === "You" ? "big-shop week, money's here" : "lighter week — lean on your big-shop"}</span></h2>
       <div class="logrow">
@@ -658,6 +674,31 @@ function renderWeekly(){
       const mk = mkey(w.month, w.year), id = btn.dataset.id, st = ms(store, w.month, w.year);
       if (st.oneOffs) delete st.oneOffs[id];
       removeLeaf([mk, "oneOffs", id]); renderWeekly();
+    };
+  });
+  // Extra debt payment — open the collapsed form, add (with the double-count guard), remove. Mirrors one-offs +
+  // the savings logrow; ties to a specific debt (the select), tagged to this check's payday.
+  const odf = document.getElementById("openDebtForm");
+  if (odf) odf.onclick = () => { debtFormOpen = true; renderWeekly(); };
+  const adp = document.getElementById("addDebtPay");
+  if (adp) adp.onclick = () => {
+    const sel = document.getElementById("debtPaySel"), amtEl = document.getElementById("debtPayAmt");
+    const debt = sel ? sel.value : "", amt = amtEl ? amtEl.value : "";
+    if (!debt || amt === null || amt.trim() === "") return;
+    // Double-count guard (spec §7): the debt's bill already records a payment above its scheduled plan → warn
+    if (debtBillOverpaid(store, debt, w.month, w.year) &&
+        !confirm(`"${debt}" already shows a payment above its scheduled amount on the bills side. Log the extra HERE or there — not both, or it double-counts.\n\nLog it here anyway?`)) return;
+    const mk = mkey(w.month, w.year), id = newId(), st = ms(store, w.month, w.year);
+    st.debtPayments = st.debtPayments || {};
+    st.debtPayments[id] = { debt, amount: num(amt), day: w.day };
+    saveLeaf([mk, "debtPayments", id], st.debtPayments[id]);
+    debtFormOpen = false; renderWeekly();
+  };
+  document.querySelectorAll('#weeklyBody .rm-debtpay').forEach(btn => {
+    btn.onclick = () => {
+      const mk = mkey(w.month, w.year), id = btn.dataset.id, st = ms(store, w.month, w.year);
+      if (st.debtPayments) delete st.debtPayments[id];
+      removeLeaf([mk, "debtPayments", id]); renderWeekly();
     };
   });
   // CARRYOVER: commit / undo the next-week set-aside (decision 3) — one leaf per week, adjusts the hero live
@@ -1146,25 +1187,25 @@ function renderTrends(){
   trendCharts = [];
 
   const cats = SPEND_CATS;
-  let labels, byCatSeries, incomeSeries, spentSeries, savedSeries, billsSeries, oneOffSeries;
+  let labels, byCatSeries, incomeSeries, spentSeries, savedSeries, billsSeries, oneOffSeries, debtPaidSeries;
   if (trendRange === "week"){
     const wk = weeklySpendTrend(store, curMonth, curYear);
     labels = wk.map(x => `${MNAMES[curMonth].slice(0, 3)} ${x.day}`);
     byCatSeries = cats.map(c => wk.map(x => x.byCat[c]));
     incomeSeries = wk.map(x => x.income); spentSeries = wk.map(x => x.spent);
-    savedSeries = null; billsSeries = null; oneOffSeries = null;   // bills/savings/surprises are month-grained — omit on the weekly view
+    savedSeries = null; billsSeries = null; oneOffSeries = null; debtPaidSeries = null;   // bills/savings/surprises/debt are month-grained — omit on the weekly view
   } else if (trendRange === "year"){
     const ys = YEARS.map(y => yearSummary(store, y));
     labels = YEARS.map(String);
     byCatSeries = cats.map(c => ys.map(x => x.byCat[c]));
     incomeSeries = ys.map(x => x.income); spentSeries = ys.map(x => x.spent);
-    savedSeries = ys.map(x => x.savedActual); billsSeries = ys.map(x => x.billsSpent); oneOffSeries = ys.map(x => x.oneOffs);
+    savedSeries = ys.map(x => x.savedActual); billsSeries = ys.map(x => x.billsSpent); oneOffSeries = ys.map(x => x.oneOffs); debtPaidSeries = ys.map(x => x.extraDebtPaid);
   } else {
     const mt = monthlyTrend(store, curYear);
     labels = mt.map(x => MNAMES[x.month].slice(0, 3));
     byCatSeries = cats.map(c => mt.map(x => x.byCat[c]));
     incomeSeries = mt.map(x => x.income); spentSeries = mt.map(x => x.spent);
-    savedSeries = mt.map(x => x.savedActual); billsSeries = mt.map(x => x.billsSpent); oneOffSeries = mt.map(x => x.oneOffs);
+    savedSeries = mt.map(x => x.savedActual); billsSeries = mt.map(x => x.billsSpent); oneOffSeries = mt.map(x => x.oneOffs); debtPaidSeries = mt.map(x => x.extraDebtPaid);
   }
   const cur = monthSummary(store, curMonth, curYear);   // current month → budget-vs-actual + donut
 
@@ -1178,7 +1219,7 @@ function renderTrends(){
 
   const COL = { groceries: "#1e7d4f", gas: "#c8421a", fun: "#2E6E78", other: "#9a7b4f" };
   const CL = { groceries: "Groceries", gas: "Gas", fun: "Fun", other: "Other" };
-  const BILLS_COL = "#b00020", SAV_COL = "#2f7d4f", ONE_COL = "#d98a00";
+  const BILLS_COL = "#b00020", SAV_COL = "#2f7d4f", ONE_COL = "#d98a00", DEBT_COL = "#6a3fa0";
   const money0 = v => "$" + Math.round(v).toLocaleString();
   const base = { responsive: true, maintainAspectRatio: false, plugins: { legend: { labels: { boxWidth: 12, font: { size: 11 } } } } };
   const mk = (id, cfg) => { const el = document.getElementById(id); if (el) trendCharts.push(new Chart(el, cfg)); };
@@ -1190,6 +1231,7 @@ function renderTrends(){
     ...cats.map(c => ({ label: CL[c], data: byCatSeries[cats.indexOf(c)], backgroundColor: COL[c] })),
     ...(savedSeries ? [{ label: "Savings", data: savedSeries, backgroundColor: SAV_COL }] : []),
     ...(oneOffSeries ? [{ label: "Surprises", data: oneOffSeries, backgroundColor: ONE_COL }] : []),
+    ...(debtPaidSeries ? [{ label: "Extra debt paid", data: debtPaidSeries, backgroundColor: DEBT_COL }] : []),
   ];
   mk("cChart", { type: "bar", data: { labels, datasets: outDatasets },
     options: { ...base, scales: { x: { stacked: true }, y: { stacked: true, ticks: { callback: money0 } } } } });

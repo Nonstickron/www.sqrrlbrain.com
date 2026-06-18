@@ -193,6 +193,22 @@ export function oneOffsFor(store, m, year = YEAR) {
   return Object.entries(s.oneOffs || {}).map(([id, o]) => ({ id, name: o.name, amount: num(o.amount), day: num(o.day) }));
 }
 
+// Extra debt payments for a month — id-keyed MAP (clobber-safe leaf writes), mirrors oneOffsFor.
+// Each: { debt, amount, day }. 'day' places it in a paycheck window exactly like a one-off.
+export function debtPaymentsFor(store, m, year = YEAR) {
+  const s = ms(store, m, year);
+  return Object.entries(s.debtPayments || {}).map(([id, d]) => ({ id, debt: d.debt, amount: num(d.amount), day: num(d.day) }));
+}
+
+// Double-count guard trigger (spec §7): the debt's bill already records a payment ABOVE its scheduled plan.
+// Keyed off the bill's ACTUAL (not paid-state) — billActual is stored independently of paid, and billsSpent
+// counts the actual regardless of the due/paid toggle, so a bumped actual double-counts Trends even unpaid.
+export function debtBillOverpaid(store, debtName, m, year = YEAR) {
+  const bill = billsFor(store, m, year).find(b => b.name === debtName);
+  if (!bill) return false;
+  return bill.actual !== undefined && bill.actual !== "" && num(bill.actual) > bill.plan;
+}
+
 // V2.1 — savings goals. The 3 SAV_DEF defaults PLUS any the user adds. `customSavings` is a top-level
 // map keyed by goal name (like customBills) — { name: { plan, note? } } — so add/remove are clobber-safe
 // leaf writes on the shared doc. A DEFAULT is retired via savMeta[name].removed (can't delete a hardcoded
@@ -293,8 +309,9 @@ export function calc(store, m, year = YEAR) {
   const moneyInAct = pds.reduce((a, p) => a + checkAmount(store, mkey(m, year) + "-" + p.day, p.amount), 0);  // #4: roll up per-paycheck actuals (each defaults to its nominal check)
   const leftAct = moneyInAct - billActTot - savActTot;
   const oneOffTot = Object.values(s.oneOffs || {}).reduce((a, o) => a + num(o.amount), 0);  // V2: surprise/one-off expenses (id-keyed map)
-  const flexAct = leftAct - splitActTot - oneOffTot;
-  return { s, pds, bills, moneyIn, billPlanTot, billActTot, savPlanTot, savActTot, splitPlanTot, splitActTot, leftPlan, flexPlan, moneyInAct, leftAct, flexAct, oneOffTot, sp };
+  const extraDebtTot = Object.values(s.debtPayments || {}).reduce((a, d) => a + num(d.amount), 0);  // extra debt paydown — real money out (id-keyed map); empty store → 0 → golden-safe
+  const flexAct = leftAct - splitActTot - oneOffTot - extraDebtTot;
+  return { s, pds, bills, moneyIn, billPlanTot, billActTot, savPlanTot, savActTot, splitPlanTot, splitActTot, leftPlan, flexPlan, moneyInAct, leftAct, flexAct, oneOffTot, extraDebtTot, sp };
 }
 
 /* ============================ TRENDS — week/month/year rollups ============================
@@ -371,8 +388,9 @@ export function carryoverInto(store, weeks, idx) {
   for (let j = 0; j < idx; j++) {
     const w = weeks[j], wid = `${w.year}-${w.month}-${w.day}`;
     const oneOffs = oneOffsFor(store, w.month, w.year).reduce((a, o) => a + (o.day === w.day ? o.amount : 0), 0);
+    const debtPays = debtPaymentsFor(store, w.month, w.year).reduce((a, d) => a + (d.day === w.day ? d.amount : 0), 0);
     bal += checkAmount(store, wid, w.amount) + adjustInWeek(store, wid) + savedOutInWeek(store, wid)
-         - windowBillsTotal(store, w, mode) - savedInWeek(store, wid) - oneOffs - weekSpendTotal(store, wid);
+         - windowBillsTotal(store, w, mode) - savedInWeek(store, wid) - oneOffs - debtPays - weekSpendTotal(store, wid);
   }
   return bal;
 }
@@ -390,10 +408,10 @@ export function carryoverInto(store, weeks, idx) {
 // The old earmark/cover params are GONE — the cover was a parkAmount-padded assumption that could show money
 // not actually in the account. Returns the raw number; goes honestly negative when the real balance can't
 // cover the week (the UI styles it "short").
-export function weekSafeToSpend(store, weekId, { checkAmt, billsSum, oneOffSum = 0, carryoverIn = 0 }) {
+export function weekSafeToSpend(store, weekId, { checkAmt, billsSum, oneOffSum = 0, debtPaySum = 0, carryoverIn = 0 }) {
   const saved = savedInWeek(store, weekId);   // actual hoard deposits this week (not the planned target)
   return carryoverIn + checkAmt + adjustInWeek(store, weekId) + savedOutInWeek(store, weekId)
-       - billsSum - saved - oneOffSum - earmarkCommitted(store, weekId) - weekSpendTotal(store, weekId);
+       - billsSum - saved - oneOffSum - debtPaySum - earmarkCommitted(store, weekId) - weekSpendTotal(store, weekId);
 }
 
 // Per-category spend for a month = sum across that month's paycheck-week buckets.
@@ -406,6 +424,12 @@ export function monthSpendByCat(store, m, year = YEAR) {
   return out;
 }
 
+// Extra debt paid in a month = sum of that month's debtPayments map. Its OWN Trends series — never folded
+// into spent or billsSpent. Empty store → 0 → golden-safe.
+export function monthExtraDebtPaid(store, m, year = YEAR) {
+  return Object.values(ms(store, m, year).debtPayments || {}).reduce((a, d) => a + num(d.amount), 0);
+}
+
 // One month's planner summary: income, bill/debt load, savings, spend-by-category + total.
 // `billsSpent` (#3) = real money out on bills for the charts — each bill's actual where entered, else its
 // plan; skipped + pushed-to-a-later-month bills excluded. (`billsActual` stays the strict sum-of-actuals.)
@@ -416,7 +440,7 @@ export function monthSummary(store, m, year = YEAR) {
   const billsSpent = c.bills.reduce((a, b) =>
     a + ((b.state === "skipped" || b.pushedAway) ? 0 : (b.actual !== undefined && b.actual !== "" ? num(b.actual) : b.plan)), 0);
   return { year, month: m, income: c.moneyInAct, billsActual: c.billActTot, billsPlanned: c.billPlanTot,
-    billsSpent, savedActual: c.savActTot, byCat, spent, oneOffs: c.oneOffTot };
+    billsSpent, savedActual: c.savActTot, byCat, spent, oneOffs: c.oneOffTot, extraDebtPaid: c.extraDebtTot };
 }
 
 // Monthly series across a year's covered months (2026 = Jun–Dec, later years full) — month-granularity charts.
@@ -439,5 +463,5 @@ export function yearSummary(store, year = YEAR) {
   const sum = k => months.reduce((a, x) => a + x[k], 0);
   const byCat = {}; SPEND_CATS.forEach(c => byCat[c] = months.reduce((a, x) => a + x.byCat[c], 0));
   return { year, income: sum("income"), billsActual: sum("billsActual"), billsPlanned: sum("billsPlanned"),
-    billsSpent: sum("billsSpent"), savedActual: sum("savedActual"), byCat, spent: sum("spent"), oneOffs: sum("oneOffs") };
+    billsSpent: sum("billsSpent"), savedActual: sum("savedActual"), byCat, spent: sum("spent"), oneOffs: sum("oneOffs"), extraDebtPaid: sum("extraDebtPaid") };
 }
