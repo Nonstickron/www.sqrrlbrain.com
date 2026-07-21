@@ -189,7 +189,7 @@
   <div class="page-wrap">
     <p class="eyebrow">Legal</p>
     <h1>Privacy Policy</h1>
-    <p class="effective">Effective date: June 14, 2026 &nbsp;&middot;&nbsp; Sqrrlbrain Studio LLC</p>
+    <p class="effective">Effective date: July 21, 2026 &nbsp;&middot;&nbsp; Sqrrlbrain Studio LLC</p>
 
     <p>Sqrrlbrain Studio LLC ("we," "our," or "us") operates the website at <a href="https://sqrrlbrain.com">sqrrlbrain.com</a> and develops software products including <strong>Wyrdspinner</strong> (formerly Inkwell). This Privacy Policy describes how we handle information across the site and our apps.</p>
 
@@ -201,18 +201,19 @@
     <h2>Wyrdspinner</h2>
     <p>Wyrdspinner offers two paths for AI-powered storytelling. What we collect depends on which path you use.</p>
 
-    <p><strong>IAP path (Sign in with Apple + In-App Purchases).</strong> When you sign in with Apple to use Wyrdspinner's token-based service, we collect:</p>
+    <p><strong>Token path (app accounts + In-App Purchases).</strong> Wyrdspinner's native app creates an anonymous account automatically on first launch. You can optionally link it by signing in with Apple (iOS) or Google (Android) so your purchases and tokens can be recovered on a new device. When you use the token-based service, we collect:</p>
     <ul>
-      <li><strong>Apple identifier</strong> &mdash; a stable but opaque user identifier provided by Apple when you sign in. We never receive your real Apple ID password. If you choose Apple's "Hide My Email" option, the relay address is what we see; we never receive your underlying personal email through Sign in with Apple.</li>
-      <li><strong>Email address (optional)</strong> &mdash; only if you choose to share your real email during Sign in with Apple (rather than the private-relay option). Used for account-related transactional communication only, never for marketing.</li>
-      <li><strong>Transaction records</strong> &mdash; when you make an in-app purchase, Apple sends us a signed receipt confirming the purchase. We use this to grant tokens or activate your subscription. We never see your payment card number, billing address, or Apple ID password &mdash; Apple handles all payment processing on their side.</li>
+      <li><strong>Sign-in identifier</strong> &mdash; a stable but opaque user identifier provided by Apple or Google if you link your account. We never receive your Apple ID or Google password. If you choose Apple's "Hide My Email" option, the relay address is what we see; we never receive your underlying personal email through Sign in with Apple.</li>
+      <li><strong>Email address (optional)</strong> &mdash; only if you choose to share your real email during sign-in (rather than Apple's private-relay option). Used for account-related transactional communication only, never for marketing.</li>
+      <li><strong>Transaction records</strong> &mdash; when you make an in-app purchase, Apple or Google Play sends us a signed confirmation of the purchase. We use this to grant tokens or activate your subscription. We never see your payment card number or billing address &mdash; Apple and Google handle all payment processing on their side.</li>
       <li><strong>Token balance and subscription state</strong> &mdash; your current token count plus your subscription tier (if any).</li>
-      <li><strong>Usage metadata</strong> &mdash; for each AI-generated action, we log the action type (e.g., chapter generation), the model used (e.g., Gemini 2.5 Flash), and the token counts consumed. This powers the in-app Token History UI and lets us monitor per-action cost. We do <strong>not</strong> log the content of your prompts, story text, character data, or saves &mdash; only the metadata about the action itself.</li>
+      <li><strong>Usage metadata</strong> &mdash; for each AI-generated action, we log the action type (e.g., chapter generation), the model used (e.g., Gemini 3.1 Flash-Lite), and the token counts consumed. This powers the in-app Token History UI and lets us monitor per-action cost. We do <strong>not</strong> log the content of your prompts, story text, character data, or saves &mdash; only the metadata about the action itself.</li>
+      <li><strong>Generated scene images</strong> &mdash; images you create with View Scene are stored privately for your account so they reload with your story. They are deleted automatically when you delete your account.</li>
     </ul>
 
-    <p><strong>BYOK path (Bring Your Own Key).</strong> If you choose to provide your own Google Gemini API key instead of using our token service, we collect <strong>nothing</strong> on our servers. Your API key and all gameplay (prompts, story responses, saves, choices) stay on your device. Your API key never reaches our servers; it is sent directly from your device to Google's API.</p>
+    <p><strong>BYOK path (Bring Your Own Key).</strong> If you provide your own Google Gemini API key, your story turns are generated directly from your device to Google's API &mdash; <strong>your API key never reaches our servers</strong>. In the native app, BYOK is unlocked by a purchase, so the account data described above (sign-in identifier, transaction records, and generated scene images) still applies. In the web demo, we collect nothing on our servers: your key and all gameplay stay in your browser.</p>
 
-    <p><strong>Story data (both paths).</strong> Your choices, story progress, saved adventures, custom themes, and reader settings are stored locally on your device only. We never receive this data on our servers. Deleting the app from your device removes this data; you can also export it at any time as a portable file via the in-app Export feature.</p>
+    <p><strong>Story data.</strong> Your story progress, saved adventures, custom-created themes, and reader settings stay on your device (or, in the web demo, in your browser) &mdash; story text is never stored on our servers. You can delete individual saved stories at any time in-app via the Save Manager, and you can export any story as a portable file via the in-app Export feature. The one server-stored piece of story-related content is generated scene images, described above.</p>
 
     <p><strong>Reporting content.</strong> If you report a passage of AI-generated content using the in-app Report control, the reported excerpt and any note you add are sent to us for review. This is the one exception to story content remaining on your device, and we use it solely to review and improve content safety.</p>
 
@@ -235,8 +236,8 @@
     <p>We rely on the following third parties to operate Wyrdspinner. They process limited data on our behalf as documented below:</p>
     <ul>
       <li><strong>Apple Inc.</strong> &mdash; Sign in with Apple authentication, App Store and TestFlight distribution, In-App Purchase processing, and App Store Server Notifications. Apple's data handling is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</li>
-      <li><strong>Supabase Inc.</strong> &mdash; backend database and authentication infrastructure. Stores your Apple identifier, transaction records, token balance, subscription state, and usage metadata. Server region: <em>us-east-1</em> (United States). Supabase's data handling is governed by <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</li>
-      <li><strong>Google LLC (Gemini API)</strong> &mdash; generates AI story narrative. Receives the prompts and context needed to produce each response. Google's API terms state that API content is not used to train their models. Google's data handling is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+      <li><strong>Supabase Inc.</strong> &mdash; backend database and authentication infrastructure. Stores your sign-in identifier (Apple or Google), transaction records, token balance, subscription state, usage metadata, and generated scene images. Server region: <em>us-east-1</em> (United States). Supabase's data handling is governed by <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</li>
+      <li><strong>Google LLC</strong> &mdash; the Gemini API generates AI story narrative and receives the prompts and context needed to produce each response; Google's API terms state that API content is not used to train their models. On Android, Google additionally provides Google Play distribution, Google Play Billing, and Google Sign-In. Google's data handling is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
       <li><strong>Vercel Inc.</strong> &mdash; hosts the Wyrdspinner web app at wyrdspinner-story-engine.vercel.app and our marketing site sqrrlbrain.com. Vercel's data handling is governed by <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener">Vercel's Privacy Policy</a>.</li>
     </ul>
     <p>We may also disclose information when required by law (court orders, subpoenas, regulatory requests), to enforce our Terms of Service, or to investigate suspected fraud or security incidents. We do not share data with data brokers, ad networks, or analytics firms.</p>
@@ -244,8 +245,9 @@
     <h2>Data retention</h2>
     <p>We retain personal data only as long as needed to provide the service or as required by law:</p>
     <ul>
-      <li><strong>Account data</strong> (Apple identifier, email, token balance, subscription state, usage metadata, transaction records) &mdash; retained while your account exists. When you delete your account via Settings &rarr; Account &rarr; Delete Account, all of this data is removed from our active systems immediately, including transaction records.</li>
+      <li><strong>Account data</strong> (sign-in identifier, email, token balance, subscription state, usage metadata, transaction records) &mdash; retained while your account exists. When you delete your account via Settings &rarr; Account &rarr; Delete Account, all of this data is removed from our active systems immediately, including transaction records.</li>
       <li><strong>Story content, prompts, saves, custom themes</strong> &mdash; never stored on our servers, so there is nothing for us to retain. These live on your device only; deleting the app removes them.</li>
+      <li><strong>Generated scene images</strong> &mdash; stored privately while your account exists and deleted automatically when you delete your account.</li>
       <li><strong>Database backups</strong> &mdash; automated backups are retained on a rolling 30-day basis. Data removed from active systems is also removed from backups within 30 days.</li>
     </ul>
 
