@@ -445,7 +445,6 @@
   <footer>
     <p>&copy; 2026 Sqrrlbrain Studio LLC</p>
     <a href="/projects.html">Projects</a>
-    <a href="/reading-room.html">Reading Room</a>
   </footer>
 
   <div class="modal" id="project-modal" hidden>
@@ -1214,7 +1213,7 @@
 
     if (opts.tools !== false) {
       const tools = el('div', 'tools-quick');
-      [['Crucible','/crucible.html'],['Billing','/sqrrlbrain-billing.html']].forEach(([name, href]) => {
+      [['Crucible','/crucible.html'],['Billing','/sqrrlbrain-billing.html'],['Reading Room','/reading-room.html']].forEach(([name, href]) => {
         const a = el('a', 'tool-link', name);
         a.href = href;
         tools.appendChild(a);
