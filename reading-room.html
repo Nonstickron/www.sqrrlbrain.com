@@ -146,9 +146,9 @@
   <div class="wrap">
     <p class="eyebrow">The home library · spoiler-free</p>
     <h1>The Reading Room</h1>
-    <p class="lede">Fifty-four series on our shelves, summed up without spoiling a thing — grouped by mood, so you can pick by how you feel like reading rather than by title.</p>
+    <p class="lede">Sixty series on our shelves, summed up without spoiling a thing — grouped by mood, so you can pick by how you feel like reading rather than by title.</p>
     <div class="metabar">
-      <span><b>54</b> series</span>
+      <span><b>60</b> series</span>
       <span><b>9</b> shelves</span>
       <span>Every summary is setup only — no twists</span>
     </div>
@@ -246,6 +246,17 @@ const BOOKS=[
    d:"A sweeping, multi-generational epic in the world of Vis, where two peoples — one fair, one dark — collide through war, prophecy, and the rise and fall of god-kings across nearly a century. Grand-scale mythic fantasy.",
    h:"Dark and adult."},
 
+  {s:"epic", t:"The Fionavar Tapestry", a:"Guy Gavriel Kay", tags:["trilogy","high-mythic"],
+   d:"Five modern university students are pulled into Fionavar, the first and truest of all worlds, on the eve of its war against a bound and vengeful dark god. Guy Gavriel Kay's debut — lush, emotional, and steeped in Tolkien and Arthurian legend."},
+  {s:"epic", t:"The Last Kingdom", a:"Bernard Cornwell", tags:["13 books","historical · Vikings","TV series"],
+   d:"A Saxon-born, Dane-raised warrior is torn between two peoples as Alfred the Great fights to forge a single England from kingdoms crumbling under Viking assault. A sweeping, battle-heavy saga of ninth-century Britain.",
+   h:"Historical fiction — no fantasy or magic, just history and a lot of shield-wall combat."},
+  {s:"epic", t:"Shadows of the Apt", a:"Adrian Tchaikovsky", tags:["10 books","inventive · war"],
+   d:"In a world where each human kinden borrows the traits of an insect — mantis-warriors, beetle-artificers, wasp-imperialists — an industrial empire marches to conquer while a scholar-spymaster scrambles to stop it. A big, inventive, war-driven epic; Tchaikovsky's sprawling debut series."},
+  {s:"epic", t:"The Demon Cycle", a:"Peter V. Brett", tags:["5 books + novellas","propulsive · grim"],
+   d:"Every night demons rise from the earth, and only ancient warding magic holds them back — until a handful of people begin turning the wards from shields into weapons and daring to fight back. A propulsive, escalating dark epic.",
+   h:"Contains sexual violence and other dark cultural content."},
+
   // ---- dark ----
   {s:"dark", t:"The First Law", a:"Joe Abercrombie", tags:["trilogy +more","savage · funny"],
    d:"Grimdark's sharpest stylist gleefully inverts every epic-fantasy trope with a cast of unforgettable bastards: a crippled torturer, a preening swordsman, a barbarian who'd honestly rather not. Bloody, cynical, and very funny.",
@@ -313,6 +324,11 @@ const BOOKS=[
    d:"A WWII combat nurse touches a standing stone and is flung to eighteenth-century Scotland, torn between the husband of her own time and a Highlander of the past. Sweeping historical romance with time-travel and real doorstopper heft.",
    h:"Contains sexual violence."},
 
+  {s:"rom", t:"Caraval", a:"Stephanie Garber", tags:["trilogy","YA · magical game"],
+   d:"Two sisters flee their cruel father to reach Caraval — a legendary once-a-year immersive game run by the elusive Legend, where the audience is part of the show and almost nothing is what it seems. Whimsical, twisty YA romantic fantasy about not losing yourself in the illusion."},
+  {s:"rom", t:"The Knight and the Moth", a:"Rachel Gillig", tags:["Stonewater Kingdom #1","gothic romantasy"],
+   d:"A cathedral foundling who serves as a Diviner — dreaming prophecies from six unearthly Omens — flees with a heretic knight to find her vanishing sisters, and uncovers something darker beneath the faith. Gothic, slow-burn romantic fantasy; opens the Stonewater Kingdom duology (book two due 2026)."},
+
   // ---- urban ----
   {s:"urban", t:"The Dresden Files", a:"Jim Butcher", tags:["17+ books · ongoing","fun · escalating"],
    d:"Chicago's only professional wizard works as a private eye, taking the supernatural cases the police can't touch — noir detective story meets escalating urban fantasy. Starts pulpy and light; deepens a great deal as it runs."},
@@ -351,7 +367,7 @@ const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const chiprow=document.getElementById("chiprow");
 const allChip=document.createElement("button");
 allChip.className="chip"; allChip.type="button"; allChip.dataset.f="all";
-allChip.setAttribute("aria-pressed","true"); allChip.textContent="All 54";
+allChip.setAttribute("aria-pressed","true"); allChip.textContent="All 60";
 chiprow.appendChild(allChip);
 SHELVES.forEach(s=>{
   const b=document.createElement("button");
