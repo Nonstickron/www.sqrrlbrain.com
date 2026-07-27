@@ -1,0 +1,412 @@
+<title>The Reading Room — a spoiler-free shelf guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --bg:#ece7db; --panel:#f4f1e8; --card:#fbf9f2; --ink:#25231e; --ink-soft:#494539;
+    --muted:#746e60; --line:#dbd4c3; --accent:#8a6a24; --accent-soft:#a4823a;
+    --shadow:0 1px 2px rgba(40,34,20,.06), 0 8px 22px rgba(40,34,20,.07);
+    --flag-bg:#f0e6cf; --flag-ink:#6b5320;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+    --sans:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#14151a; --panel:#1b1d24; --card:#212430; --ink:#e9e4d6; --ink-soft:#c9c4b5;
+      --muted:#948e80; --line:#31333f; --accent:#cba450; --accent-soft:#dcc078;
+      --shadow:0 1px 2px rgba(0,0,0,.30), 0 10px 28px rgba(0,0,0,.32);
+      --flag-bg:#2a2718; --flag-ink:#d8bd74;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#ece7db; --panel:#f4f1e8; --card:#fbf9f2; --ink:#25231e; --ink-soft:#494539;
+    --muted:#746e60; --line:#dbd4c3; --accent:#8a6a24; --accent-soft:#a4823a;
+    --shadow:0 1px 2px rgba(40,34,20,.06), 0 8px 22px rgba(40,34,20,.07);
+    --flag-bg:#f0e6cf; --flag-ink:#6b5320;
+  }
+  :root[data-theme="dark"]{
+    --bg:#14151a; --panel:#1b1d24; --card:#212430; --ink:#e9e4d6; --ink-soft:#c9c4b5;
+    --muted:#948e80; --line:#31333f; --accent:#cba450; --accent-soft:#dcc078;
+    --shadow:0 1px 2px rgba(0,0,0,.30), 0 10px 28px rgba(0,0,0,.32);
+    --flag-bg:#2a2718; --flag-ink:#d8bd74;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--serif); line-height:1.6;
+    font-size:17px; letter-spacing:.005em;
+  }
+  .wrap{max-width:1120px; margin:0 auto; padding:0 clamp(18px,4vw,40px)}
+
+  /* ---- masthead ---- */
+  header.mast{padding:clamp(36px,7vw,68px) 0 26px; border-bottom:1px solid var(--line)}
+  .eyebrow{
+    font-family:var(--sans); text-transform:uppercase; letter-spacing:.22em;
+    font-size:12px; font-weight:600; color:var(--accent); margin:0 0 14px;
+  }
+  h1{
+    font-family:var(--serif); font-weight:600; text-wrap:balance;
+    font-size:clamp(34px,6vw,54px); line-height:1.04; letter-spacing:-.01em;
+    margin:0 0 16px;
+  }
+  .lede{
+    font-size:clamp(17px,2.4vw,20px); color:var(--ink-soft); max-width:60ch;
+    margin:0 0 22px;
+  }
+  .metabar{
+    display:flex; flex-wrap:wrap; gap:8px 20px; font-family:var(--sans);
+    font-size:12.5px; color:var(--muted); text-transform:uppercase; letter-spacing:.12em;
+  }
+  .metabar b{color:var(--ink-soft); font-weight:600}
+
+  /* ---- filter chips ---- */
+  nav.filters{
+    position:sticky; top:0; z-index:5; background:color-mix(in srgb,var(--bg) 88%, transparent);
+    backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line); padding:12px 0;
+  }
+  .chiprow{display:flex; flex-wrap:wrap; gap:8px}
+  .chip{
+    font-family:var(--sans); font-size:12.5px; font-weight:500; letter-spacing:.02em;
+    color:var(--ink-soft); background:transparent; border:1px solid var(--line);
+    padding:7px 13px; border-radius:999px; cursor:pointer; display:inline-flex;
+    align-items:center; gap:7px; transition:border-color .15s, color .15s, background .15s;
+  }
+  .chip .dot{width:8px; height:8px; border-radius:50%; background:var(--h,var(--muted)); flex:none}
+  .chip:hover{border-color:var(--accent-soft); color:var(--ink)}
+  .chip[aria-pressed="true"]{
+    color:var(--bg); background:var(--ink); border-color:var(--ink);
+  }
+  .chip[aria-pressed="true"] .dot{outline:1.5px solid var(--bg)}
+  .chip:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+  /* ---- shelves ---- */
+  main{padding:14px 0 40px}
+  section.shelf{padding:34px 0 6px; scroll-margin-top:64px}
+  .shelfhead{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; margin-bottom:4px}
+  .shelfhead .marker{width:11px; height:11px; border-radius:50%; background:var(--h); align-self:center; flex:none}
+  .shelfhead h2{
+    font-family:var(--sans); text-transform:uppercase; letter-spacing:.14em;
+    font-size:14px; font-weight:700; margin:0; color:var(--ink);
+  }
+  .shelfhead .count{font-family:var(--sans); font-size:12px; color:var(--muted); letter-spacing:.08em}
+  .shelfsub{color:var(--muted); font-size:15px; font-style:italic; margin:0 0 20px; max-width:64ch}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:16px}
+  @media (max-width:560px){ .grid{grid-template-columns:1fr} }
+
+  article.card{
+    background:var(--card); border:1px solid var(--line); border-radius:12px;
+    padding:20px 20px 18px; box-shadow:var(--shadow); position:relative; overflow:hidden;
+  }
+  article.card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--h); opacity:.85}
+  .card h3{
+    font-family:var(--serif); font-weight:600; font-size:20px; line-height:1.15;
+    margin:0 0 3px; letter-spacing:-.005em; text-wrap:balance;
+  }
+  .byline{font-family:var(--sans); font-size:12.5px; color:var(--muted); margin:0 0 11px; letter-spacing:.02em}
+  .tags{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 12px}
+  .tag{
+    font-family:var(--sans); font-size:11px; font-weight:600; text-transform:uppercase;
+    letter-spacing:.07em; color:var(--ink-soft); background:color-mix(in srgb,var(--h) 16%, transparent);
+    border:1px solid color-mix(in srgb,var(--h) 34%, transparent); padding:3px 8px; border-radius:5px;
+    font-variant-numeric:tabular-nums;
+  }
+  .summary{margin:0; color:var(--ink-soft); font-size:15.5px; line-height:1.58}
+  .heads{
+    margin:13px 0 0; display:flex; gap:9px; align-items:flex-start;
+    font-family:var(--sans); font-size:12.5px; line-height:1.45; color:var(--flag-ink);
+    background:var(--flag-bg); border-radius:7px; padding:8px 11px;
+  }
+  .heads .lbl{font-weight:700; text-transform:uppercase; letter-spacing:.06em; flex:none; font-size:11px; padding-top:1px}
+
+  .empty{display:none; color:var(--muted); font-style:italic; padding:30px 0}
+
+  /* ---- footer ---- */
+  footer{border-top:1px solid var(--line); padding:26px 0 46px; color:var(--muted);
+    font-family:var(--sans); font-size:13px; line-height:1.6; display:flex; flex-wrap:wrap; gap:8px 28px; justify-content:space-between}
+  footer .legend{display:flex; align-items:center; gap:8px}
+  footer .swatch{width:10px;height:10px;border-radius:50%;background:var(--accent)}
+
+  @media (prefers-reduced-motion:no-preference){
+    article.card{animation:rise .32s ease both}
+    @keyframes rise{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+  }
+
+  /* ---- auth gate (SqrrlAuth — Firebase Auth + approved-users allowlist) ---- */
+  #sqrrl-gate{position:fixed; inset:0; background:var(--bg); color:var(--muted);
+    display:flex; align-items:center; justify-content:center; z-index:10000;
+    font-family:var(--sans); text-transform:uppercase; letter-spacing:.2em; font-size:12px;}
+</style>
+
+<div id="sqrrl-gate">Verifying access&hellip;</div>
+
+<header class="mast">
+  <div class="wrap">
+    <p class="eyebrow">The home library · spoiler-free</p>
+    <h1>The Reading Room</h1>
+    <p class="lede">Fifty-four series on our shelves, summed up without spoiling a thing — grouped by mood, so you can pick by how you feel like reading rather than by title.</p>
+    <div class="metabar">
+      <span><b>54</b> series</span>
+      <span><b>9</b> shelves</span>
+      <span>Every summary is setup only — no twists</span>
+    </div>
+  </div>
+</header>
+
+<nav class="filters" aria-label="Filter by shelf">
+  <div class="wrap"><div class="chiprow" id="chiprow"></div></div>
+</nav>
+
+<main><div class="wrap" id="shelves"></div>
+  <div class="wrap"><p class="empty" id="empty">Nothing on that shelf.</p></div>
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;width:100%">
+    <span class="legend"><span class="swatch"></span> A <b style="color:var(--ink-soft);font-weight:600">Heads-up</b> flag marks content worth knowing before you start — a navigation note, not a warning-off.</span>
+    <span>Book counts are scope, not homework. Ongoing series are marked as such.</span>
+  </div>
+</footer>
+
+<script>
+const SHELVES=[
+  {id:"space", name:"Space Opera & Adventure SF", h:"#7f9bc4",
+   sub:"Big canvases, moving ships, war and wonder — SF that pulls you along."},
+  {id:"idea", name:"Big-Idea & Literary SF", h:"#5ea89f",
+   sub:"Cerebral, classic, built around one enormous concept. Slower burns, deeper water."},
+  {id:"epic", name:"Epic Fantasy — the long journeys", h:"#8f9a52",
+   sub:"Doorstopper sagas you live inside for months. Big commitment, big payoff."},
+  {id:"dark", name:"Dark & Grimdark Fantasy", h:"#b45c4f",
+   sub:"Morally grey, bloody, and sharp. Heroes are scarce; consequences aren't."},
+  {id:"lit", name:"Standalone-Scale & Literary Fantasy", h:"#9a86c4",
+   sub:"Shorter runs and stronger prose — fantasy you can finish without a wall chart."},
+  {id:"rom", name:"Romantasy & Romantic Fantasy", h:"#cc7fa4",
+   sub:"Romance in the driver's seat, fantasy world around it. Emotion-forward; several run steamy."},
+  {id:"urban", name:"Vampires & Urban Fantasy", h:"#8f8797",
+   sub:"Magic in a recognizable world — detectives, the undead, and cities that bite back."},
+  {id:"litrpg", name:"litRPG & Progression", h:"#66a97f",
+   sub:"Game-logic worlds of levels, classes and power creep. Propulsive and moreish."},
+  {id:"dyst", name:"Dystopia & Post-Apocalypse", h:"#b58a55",
+   sub:"Broken futures and buried societies. Survival, systems, and the cost of the truth."},
+];
+
+const BOOKS=[
+  // ---- space ----
+  {s:"space", t:"The Expanse", a:"James S.A. Corey", tags:["9 books","propulsive","TV series"],
+   d:"A colonized solar system — Earth, Mars, and the resource-stripped Belt — tips toward war when a derelict ship and a missing woman drag a mismatched crew into something far bigger than local politics. Grounded, fast, and led by its characters."},
+  {s:"space", t:"Old Man's War", a:"John Scalzi", tags:["6 books","brisk · witty"],
+   d:"Humanity's interstellar army recruits the elderly and issues them young, engineered bodies in exchange for a tour among hostile stars. Fast, funny, and openly in the Starship Troopers tradition — an easy, satisfying on-ramp to space war."},
+  {s:"space", t:"The Forever War", a:"Joe Haldeman", tags:["trilogy","elegiac"],
+   d:"A reluctant conscript fights a centuries-long interstellar war in which relativity returns him, after each tour, to an Earth he no longer recognizes. A landmark of military SF and, underneath, a quiet anti-war novel drawn from Vietnam."},
+  {s:"space", t:"Company Wars", a:"C.J. Cherryh", tags:["Alliance-Union","cerebral"],
+   d:"Dense, political space opera set on a besieged station caught between Earth and its breakaway colonies, where survival runs on trade, loyalty, and nerve. Immersive and demanding; the books stand largely on their own."},
+  {s:"space", t:"Zones of Thought", a:"Vernor Vinge", tags:["3 books","big-idea"],
+   d:"A galaxy divided into regions where the ceiling on intelligence itself changes with location — from barely-thinking to godlike. Enormous concepts with real adventure and menace underneath them."},
+  {s:"space", t:"Space Odyssey", a:"Arthur C. Clarke", tags:["4 books","awe"],
+   d:"The novels Clarke developed alongside Kubrick's film: an alien monolith nudges humanity toward the stars, each book coolly resetting its science to match the era it was written in. Spare, wondering, foundational."},
+  {s:"space", t:"The Murderbot Diaries", a:"Martha Wells", tags:["novellas + novels","wry","award sweep"],
+   d:"A security android quietly hacks its own governor module, gains free will, and mostly wants to be left alone to watch its shows — except its humans keep needing to be kept alive. Warm, funny, and very bingeable."},
+
+  // ---- idea ----
+  {s:"idea", t:"Hyperion Cantos", a:"Dan Simmons", tags:["4 books","rich · literary"],
+   d:"Seven pilgrims travel toward a world of strange time-warped tombs and the lethal thing that guards them, each telling their own story on the way. Built like Canterbury Tales, spanning genres; the first two volumes form one complete arc."},
+  {s:"idea", t:"Culture", a:"Iain M. Banks", tags:["~10 standalone","humane · clever"],
+   d:"A post-scarcity galactic civilization run by benevolent superintelligent Minds, seen mostly through the agents it sends to meddle at its rougher edges. Witty, humane, idea-dense — and readable in almost any order."},
+  {s:"idea", t:"Remembrance of Earth's Past", a:"Cixin Liu", tags:["trilogy","cerebral","translated"],
+   d:"Chinese hard SF that opens with humanity's first contact with a civilization from a chaotic three-sun system, then scales relentlessly toward the cosmic. Begins as The Three-Body Problem; ideas are the main event."},
+  {s:"idea", t:"Hainish Cycle", a:"Ursula K. Le Guin", tags:["standalone","thoughtful"],
+   d:"Loosely linked worlds seeded long ago by a common ancestor species — less adventure than anthropology, each novel taking one society seriously on its own terms. The Left Hand of Darkness and The Dispossessed are the landmarks; read in any order."},
+  {s:"idea", t:"Solar Cycle", a:"Gene Wolfe", tags:["12 books","dense · literary"],
+   d:"Wolfe's towering, interlocking masterwork: the dying far-future Earth of the New Sun, the generation-ship of the Long Sun, and the Short Sun that binds them — narrated by unreliable men, in prose built to be reread. Demanding, and worth it.",
+   h:"Deep end of the genre — rewards patience and re-reading."},
+  {s:"idea", t:"Sprawl", a:"William Gibson", tags:["trilogy","cool · influential"],
+   d:"The trilogy that coined “cyberspace” and set the whole cyberpunk template: hackers, AIs, and corporate intrigue in a neon-and-rain near future. Neuromancer is the one that changed everything after it."},
+
+  // ---- epic ----
+  {s:"epic", t:"Malazan: Book of the Fallen", a:"Steven Erikson", tags:["10 books","vast"],
+   d:"A monumental, famously complex epic — warring gods, doomed armies, and dozens of threads converging across a crumbling empire, told with almost no hand-holding. The deep end of epic fantasy: steep entry, enormous payoff.",
+   h:"Throws you in cold on purpose. Reward for sticking with it is legendary."},
+  {s:"epic", t:"The Wheel of Time", a:"Robert Jordan / Brandon Sanderson", tags:["14 books","huge","TV series"],
+   d:"A farm boy is swept into a millennia-spanning war as prophecy names him the world's champion, and a village threat widens into a continent-spanning epic. The genre's defining long journey, finished by Sanderson after Jordan's death."},
+  {s:"epic", t:"Osten Ard", a:"Tad Williams", tags:["~8 books","classic slow-burn"],
+   d:"Memory, Sorrow and Thorn — a kitchen boy caught in a war against an undying enemy — plus its modern sequels. The influential slow-burn epic that a young George R.R. Martin credits with showing him what the genre could do."},
+  {s:"epic", t:"Cosmere", a:"Brandon Sanderson", tags:["20+ books","intricate"],
+   d:"Every adult fantasy Sanderson writes shares one hidden universe: Mistborn, The Stormlight Archive, and more, each built on a rigorously logical magic system and quietly linked by a larger metanarrative. Dependable plotting at enormous scale."},
+  {s:"epic", t:"The Legend of Drizzt", a:"R.A. Salvatore", tags:["30+ books","adventure"],
+   d:"A heroic dark-elf ranger turns his back on his people's cruelty to find friendship and renown on the surface world — the sprawling flagship of Forgotten Realms sword-and-sorcery. Comfort-food adventure by the shelf-load."},
+  {s:"epic", t:"Thomas Covenant", a:"Stephen R. Donaldson", tags:["10 books","challenging"],
+   d:"A cynical, embittered leper is pulled into a magical Land that needs him as its foretold savior — and flatly refuses to believe any of it is real. A genre landmark built, on purpose, around one of fantasy's most difficult protagonists.",
+   h:"The protagonist commits a rape early in book one. He is meant to be hard to like; many readers bounce, by design."},
+  {s:"epic", t:"Realm of the Elderlings", a:"Robin Hobb", tags:["16 books","slow-burn · emotional"],
+   d:"Robin Hobb's sixteen-book saga, opening with the Farseer Trilogy: the unacknowledged bastard of a prince is raised in the shadows of a coastal keep and quietly trained as a royal assassin, bound by an old magic to both hounds and kings. Deeply character-driven, slow-burn epic fantasy that follows one life across several linked series — the Farseer, Liveship Traders, Tawny Man, Rain Wilds, and Fitz and the Fool books."},
+
+  {s:"epic", t:"The Wars of Vis", a:"Tanith Lee", tags:["trilogy","mythic epic"],
+   d:"A sweeping, multi-generational epic in the world of Vis, where two peoples — one fair, one dark — collide through war, prophecy, and the rise and fall of god-kings across nearly a century. Grand-scale mythic fantasy.",
+   h:"Dark and adult."},
+
+  // ---- dark ----
+  {s:"dark", t:"The First Law", a:"Joe Abercrombie", tags:["trilogy +more","savage · funny"],
+   d:"Grimdark's sharpest stylist gleefully inverts every epic-fantasy trope with a cast of unforgettable bastards: a crippled torturer, a preening swordsman, a barbarian who'd honestly rather not. Bloody, cynical, and very funny.",
+   h:"Heavy violence and torture, handled with black comedy."},
+  {s:"dark", t:"The Black Company", a:"Glen Cook", tags:["~10 books","grim · grounded"],
+   d:"Military fantasy told from the mud-level ranks of a mercenary company serving on the wrong side of a war between terrible powers. Gritty and morally grey — it helped invent grimdark decades before the label existed."},
+  {s:"dark", t:"Elric of Melniboné", a:"Michael Moorcock", tags:["several","tragic · strange"],
+   d:"The doomed albino emperor of a decadent dynasty and his soul-devouring black sword — a deliberate anti-Conan that rewired fantasy's whole idea of a hero. Fevered, tragic, and hugely influential."},
+  {s:"dark", t:"The Poppy War", a:"R.F. Kuang", tags:["trilogy","harrowing"],
+   d:"A war orphan claws her way into an elite military academy and discovers a lethal, godlike power — in a fantasy drawn hard from twentieth-century Chinese history. Brilliant, propulsive, and genuinely brutal.",
+   h:"Graphic war atrocities, genocide, and self-harm. Does not look away."},
+  {s:"dark", t:"The Witcher", a:"Andrzej Sapkowski", tags:["8 books","dark · wry","games · TV"],
+   d:"A mutated monster-hunter for hire walks a world where the real monsters are usually people, in morally grey tales steeped in Slavic folklore. The Polish saga behind the games and the show — start with the two story collections.",
+   h:"Dark themes and sexual content throughout."},
+  {s:"dark", t:"Empire of the Vampire", a:"Jay Kristoff", tags:["2 books · ongoing","grim · gothic"],
+   d:"In a world where the sun is failing and vampires spread with the lengthening dark, the last silversaint of a fallen holy order tells the story of his life from a prison cell — to the vampire sent to record his confession. A bleak, blood-soaked gothic epic told in braided flashback.",
+   h:"Graphic violence, gore, and explicit sexual content; relentlessly bleak."},
+  {s:"dark", t:"The Nevernight Chronicle", a:"Jay Kristoff", tags:["trilogy","brutal · stylish"],
+   d:"A girl who survived the slaughter of her family talks her way into a hidden school for assassins, learning to command shadow and blade so she can hunt the men who destroyed her house. Ornate, footnoted, sharp-edged dark fantasy built on a long revenge.",
+   h:"Graphic violence and explicit sexual content."},
+
+  {s:"dark", t:"The Birthgrave Trilogy", a:"Tanith Lee", tags:["trilogy","dark S&S · 1970s"],
+   d:"A woman wakes with no memory beneath a dying volcano — cursed, feared, and perhaps more than human — and crosses a savage ancient world to find out what she is. A landmark of feminist sword-and-sorcery: sweeping, strange, and lushly written.",
+   h:"Dark and adult, with the rough edges of its era."},
+
+  // ---- lit ----
+  {s:"lit", t:"Earthsea", a:"Ursula K. Le Guin", tags:["~6 books","luminous"],
+   d:"A gifted, headstrong boy trains as a wizard in a world of islands where knowing a thing's true name is to hold power over it. Quiet, wise, and beautifully spare — fantasy as coming-of-age and moral education."},
+  {s:"lit", t:"The Broken Earth", a:"N.K. Jemisin", tags:["trilogy","fierce · original"],
+   d:"On a world wracked by apocalyptic geological upheaval, the people who can still earthquakes are feared and enslaved for it. The only trilogy to win the Hugo for all three volumes — furious, formally daring, unlike anything around it."},
+  {s:"lit", t:"His Dark Materials", a:"Philip Pullman", tags:["trilogy","bold"],
+   d:"Across parallel worlds, a fierce girl with a truth-telling instrument and a boy with a reality-cutting knife are pulled into a war that reaches the foundations of everything. Middle-grade on the surface, genuinely big underneath."},
+  {s:"lit", t:"The Daevabad Trilogy", a:"S.A. Chakraborty", tags:["trilogy","lush"],
+   d:"A Cairo con artist with real, unexplained magic is swept into the deadly politics of a legendary brass-walled city of warring djinn. Lush Middle-Eastern-inspired epic fantasy with court intrigue and a slow-burn romance."},
+  {s:"lit", t:"Orcs: First Blood", a:"Stan Nicholls", tags:["trilogy","pulpy"],
+   d:"The cult trilogy that flips the board: the orcs are the heroes — a warband fighting to survive in a world where humans turn out to be the real monsters. Fast, pulpy, and knowingly against the grain."},
+
+  {s:"lit", t:"Tales from the Flat Earth", a:"Tanith Lee", tags:["5 books","lush · mythic"],
+   d:"Five volumes of ornate, interwoven myth set on a flat earth where demon-lords — Night, Death, Delusion — reach in to twist mortal fates. Decadent, fairy-tale-dark storytelling showcasing some of Lee's most admired prose.",
+   h:"Adult and sensual throughout."},
+  {s:"lit", t:"Tanith Lee: Standalones & Collections", a:"Tanith Lee", tags:["15 books","genre-spanning"],
+   d:"Her standalone novels and story collections in the set, ranging across fantasy, SF and horror — SF-noir vampire (Sabella), post-apocalyptic (Days of Grass), a Renaissance Romeo-and-Juliet (Sung in Shadow), dark fairy-tale retellings (Redder than Blood), and more. Lush and prose-forward; pick one by mood.",
+   h:"Adult; her standalones run dark and sensual."},
+
+  // ---- rom ----
+  {s:"rom", t:"A Court of Thorns and Roses", a:"Sarah J. Maas", tags:["5 books","romantic"],
+   d:"A huntress is taken into a faerie court as punishment for a kill, and the fae world's beauty and danger pull her steadily deeper. A romantasy juggernaut — fairytale bones, high emotion, stakes that keep escalating.",
+   h:"Explicit; the later books run notably steamy."},
+  {s:"rom", t:"Crescent City", a:"Sarah J. Maas", tags:["3 books · ongoing","propulsive"],
+   d:"In a modern-feeling magical metropolis, a half-fae party girl and a fallen-angel enforcer are thrown together by a murder investigation. Maas's most contemporary setting — urban fantasy with a strong romance at its core.",
+   h:"Explicit content."},
+  {s:"rom", t:"Empyrean", a:"Rebecca Yarros", tags:["ongoing","addictive","Fourth Wing"],
+   d:"A physically fragile scholar is forced into a brutal war-college where cadets bond with dragons or die in the attempt. The blockbuster dragon-rider romantasy — high tension, high heat, hard to put down.",
+   h:"Explicit; war-college violence and peril."},
+  {s:"rom", t:"Throne of Glass", a:"Sarah J. Maas", tags:["8 books","epic romantasy"],
+   d:"A young assassin fights for her freedom in a competition run by a tyrant king — and the series grows, book over book, from court intrigue into sprawling high fantasy. A long arc that builds to a big payoff."},
+  {s:"rom", t:"Blood and Ash", a:"Jennifer L. Armentrout", tags:["7+ books · ongoing","steamy"],
+   d:"A “Maiden” raised in sacred isolation, forbidden ordinary human contact, is guarded by a golden warrior who tests every rule she's ever been given. Fast, emotional, unabashedly steamy paranormal-flavored romantasy.",
+   h:"Explicit content."},
+  {s:"rom", t:"Covenant", a:"Jennifer L. Armentrout", tags:["5 books","YA romance"],
+   d:"Descendants of demigods train to fight the monsters of Greek myth, and a girl caught between two worlds falls for the one instructor she is absolutely forbidden. YA paranormal romance rooted in Greek mythology. (One of two “Covenant” series on the shelf.)"},
+  {s:"rom", t:"Grisha Trilogy", a:"Leigh Bardugo", tags:["trilogy","brisk","Netflix"],
+   d:"In a Tsarist-Russia-flavored world split by a wall of monster-filled darkness, an orphan soldier discovers she may hold a rare and coveted magic. The gateway into the wider Grishaverse — brisk, atmospheric YA fantasy."},
+  {s:"rom", t:"Outlander", a:"Diana Gabaldon", tags:["9+ books","sweeping","TV series"],
+   d:"A WWII combat nurse touches a standing stone and is flung to eighteenth-century Scotland, torn between the husband of her own time and a Highlander of the past. Sweeping historical romance with time-travel and real doorstopper heft.",
+   h:"Contains sexual violence."},
+
+  // ---- urban ----
+  {s:"urban", t:"The Dresden Files", a:"Jim Butcher", tags:["17+ books · ongoing","fun · escalating"],
+   d:"Chicago's only professional wizard works as a private eye, taking the supernatural cases the police can't touch — noir detective story meets escalating urban fantasy. Starts pulpy and light; deepens a great deal as it runs."},
+  {s:"urban", t:"Sookie Stackhouse", a:"Charlaine Harris", tags:["13 books","breezy","True Blood"],
+   d:"A telepathic Louisiana waitress falls in with vampires in a South where the undead have gone public — small-town mystery, romance, and bite in equal measure. The basis for True Blood; light and moreish."},
+  {s:"urban", t:"The Vampire Chronicles", a:"Anne Rice", tags:["~13 books","gothic · lavish"],
+   d:"Lush, philosophizing gothic that redefined the vampire through the seductive, immortal Lestat — centuries of beauty, guilt, and hunger. Ornate, atmospheric, and endlessly imitated."},
+
+  {s:"urban", t:"Anita Blake, Vampire Hunter", a:"Laurell K. Hamilton", tags:["30+ books · ongoing","noir → paranormal"],
+   d:"In a St. Louis where vampires and shapeshifters have won legal rights, Anita Blake raises the dead for a living and moonlights as a court-licensed vampire executioner, pulled into the supernatural murders the police can't touch. Begins as hard-boiled monster-hunting noir and grows into a sprawling, long-running paranormal saga.",
+   h:"Shifts hard from noir horror into explicit erotica from around book 10 (Narcissus in Chains) on."},
+
+  // ---- litrpg ----
+  {s:"litrpg", t:"Dungeon Crawler Carl", a:"Matt Dinniman", tags:["7+ books · ongoing","hilarious"],
+   d:"Aliens demolish Earth into a lethal, livestreamed dungeon game show, and an ordinary guy plus his ex's furious talking cat have to descend floor by floor to survive. Riotously funny, surprisingly moving, and wildly popular.",
+   h:"Crude humor and strong profanity — and it'll still gut-punch you."},
+  {s:"litrpg", t:"The Magitech Chronicles", a:"Chris Fox", tags:["13 books","fast · fun"],
+   d:"A galaxy where mages and starships coexist and dragons are living weapons; a young tech-mage is pulled into a war against an ancient, devouring enemy. Breakneck science-fantasy built on steady power-progression."},
+
+  // ---- dyst ----
+  {s:"dyst", t:"Red Rising", a:"Pierce Brown", tags:["6+ books · ongoing","brutal · propulsive"],
+   d:"In a rigid color-caste future, a lowborn miner is surgically remade to pass among the tyrannical ruling elite and break them from the inside. Starts Hunger-Games-adjacent, then becomes sweeping, savage space-dystopia.",
+   h:"Intense, sustained violence."},
+  {s:"dyst", t:"Silo", a:"Hugh Howey", tags:["trilogy","tense · twisty","Apple TV+"],
+   d:"Generations live sealed in a vast underground silo where stepping outside is a death sentence and asking why is forbidden. A claustrophobic, twist-driven post-apocalyptic mystery — the self-published breakout behind the show. (Your shelf: the Wool omnibus.)"},
+  {s:"dyst", t:"Tunnels", a:"Roderick Gordon & Brian Williams", tags:["6 books","dark adventure"],
+   d:"A boy obsessed with digging goes after his vanished father and breaks into a brutal, authoritarian society living beneath London. Grim middle-grade adventure that keeps getting darker the deeper it goes."},
+  {s:"dyst", t:"The Books of Ember", a:"Jeanne DuPrau", tags:["4 books","middle-grade"],
+   d:"Generations after it was built to outlast a catastrophe, the underground city of Ember is running low on supplies and failing power, its way out long forgotten — until two kids start chasing the clues that might lead to the surface. A warm middle-grade post-apocalypse about curiosity against a dying system."},
+];
+
+const shelfById=Object.fromEntries(SHELVES.map(s=>[s.id,s]));
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+
+// build chips
+const chiprow=document.getElementById("chiprow");
+const allChip=document.createElement("button");
+allChip.className="chip"; allChip.type="button"; allChip.dataset.f="all";
+allChip.setAttribute("aria-pressed","true"); allChip.textContent="All 54";
+chiprow.appendChild(allChip);
+SHELVES.forEach(s=>{
+  const b=document.createElement("button");
+  b.className="chip"; b.type="button"; b.dataset.f=s.id; b.setAttribute("aria-pressed","false");
+  b.style.setProperty("--h",s.h);
+  const n=BOOKS.filter(x=>x.s===s.id).length;
+  b.innerHTML=`<span class="dot"></span>${esc(s.name.split(" — ")[0].split(" & ")[0])} <span style="opacity:.6">${n}</span>`;
+  chiprow.appendChild(b);
+});
+
+// build shelves
+const host=document.getElementById("shelves");
+SHELVES.forEach(s=>{
+  const items=BOOKS.filter(x=>x.s===s.id);
+  const sec=document.createElement("section");
+  sec.className="shelf"; sec.id="shelf-"+s.id; sec.style.setProperty("--h",s.h);
+  sec.innerHTML=`
+    <div class="shelfhead"><span class="marker"></span>
+      <h2>${esc(s.name)}</h2><span class="count">${items.length} series</span></div>
+    <p class="shelfsub">${esc(s.sub)}</p>
+    <div class="grid">${items.map(cardHTML).join("")}</div>`;
+  host.appendChild(sec);
+});
+
+function cardHTML(b){
+  const tags=(b.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("");
+  const heads=b.h?`<p class="heads"><span class="lbl">Heads-up</span><span>${esc(b.h)}</span></p>`:"";
+  return `<article class="card">
+    <h3>${esc(b.t)}</h3>
+    <p class="byline">${esc(b.a)}</p>
+    <div class="tags">${tags}</div>
+    <p class="summary">${esc(b.d)}</p>${heads}</article>`;
+}
+
+// filter
+const empty=document.getElementById("empty");
+chiprow.addEventListener("click",e=>{
+  const btn=e.target.closest(".chip"); if(!btn) return;
+  const f=btn.dataset.f;
+  [...chiprow.children].forEach(c=>c.setAttribute("aria-pressed", c===btn?"true":"false"));
+  let shown=0;
+  SHELVES.forEach(s=>{
+    const on = f==="all" || f===s.id;
+    document.getElementById("shelf-"+s.id).style.display = on?"":"none";
+    if(on) shown++;
+  });
+  empty.style.display = shown?"none":"block";
+  if(f!=="all"){ const el=document.getElementById("shelf-"+f);
+    window.scrollTo({top: el.offsetTop-58, behavior: matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"}); }
+});
+</script>
+
+<!-- Sqrrlbrain auth gate: same Firebase Auth + approved-users allowlist as the dashboard -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+<script src="auth.js"></script>
+<script>SqrrlAuth.check();</script>
