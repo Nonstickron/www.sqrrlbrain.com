@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>The Reading Room — a spoiler-free shelf guide</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -146,10 +147,10 @@
   <div class="wrap">
     <p class="eyebrow">The home library · spoiler-free</p>
     <h1>The Reading Room</h1>
-    <p class="lede">Sixty series on our shelves, summed up without spoiling a thing — grouped by mood, so you can pick by how you feel like reading rather than by title.</p>
+    <p class="lede">Every series on my device, summed up without spoiling a thing — grouped by mood, so you can pick by how you feel like reading rather than by title.</p>
     <div class="metabar">
-      <span><b>60</b> series</span>
-      <span><b>9</b> shelves</span>
+      <span><b>128</b> series</span>
+      <span><b>10</b> shelves</span>
       <span>Every summary is setup only — no twists</span>
     </div>
   </div>
@@ -190,6 +191,8 @@ const SHELVES=[
    sub:"Game-logic worlds of levels, classes and power creep. Propulsive and moreish."},
   {id:"dyst", name:"Dystopia & Post-Apocalypse", h:"#b58a55",
    sub:"Broken futures and buried societies. Survival, systems, and the cost of the truth."},
+  {id:"nonfic", name:"Narrative Nonfiction", h:"#a98d6b",
+   sub:"True stories that read like thrillers — history, crime, and adventure from the real world."},
 ];
 
 const BOOKS=[
@@ -225,7 +228,7 @@ const BOOKS=[
    d:"The trilogy that coined “cyberspace” and set the whole cyberpunk template: hackers, AIs, and corporate intrigue in a neon-and-rain near future. Neuromancer is the one that changed everything after it."},
 
   // ---- epic ----
-  {s:"epic", t:"Malazan: Book of the Fallen", a:"Steven Erikson", tags:["10 books","vast"],
+  {s:"epic", t:"Malazan Empire", a:"Steven Erikson", tags:["24 books","vast"],
    d:"A monumental, famously complex epic — warring gods, doomed armies, and dozens of threads converging across a crumbling empire, told with almost no hand-holding. The deep end of epic fantasy: steep entry, enormous payoff.",
    h:"Throws you in cold on purpose. Reward for sticking with it is legendary."},
   {s:"epic", t:"The Wheel of Time", a:"Robert Jordan / Brandon Sanderson", tags:["14 books","huge","TV series"],
@@ -358,6 +361,185 @@ const BOOKS=[
    d:"A boy obsessed with digging goes after his vanished father and breaks into a brutal, authoritarian society living beneath London. Grim middle-grade adventure that keeps getting darker the deeper it goes."},
   {s:"dyst", t:"The Books of Ember", a:"Jeanne DuPrau", tags:["4 books","middle-grade"],
    d:"Generations after it was built to outlast a catastrophe, the underground city of Ember is running low on supplies and failing power, its way out long forgotten — until two kids start chasing the clues that might lead to the surface. A warm middle-grade post-apocalypse about curiosity against a dying system."},
+
+  // ===== full device catalogue 2026-08-05 =====
+  // ---- space ----
+  {s:"space", t:"Andy Weir", a:"Andy Weir", tags:["3 standalones","fun · problem-solving"],
+   d:"Three standalone hard-SF crowd-pleasers: an astronaut science-ing his way off Mars (The Martian), a heist on the Moon (Artemis), and a lone amnesiac waking to a desperate first-contact mission (Project Hail Mary). Relentlessly readable science-as-adventure, heavy on ingenuity and humor."},
+  {s:"space", t:"The Gap Cycle", a:"Stephen R. Donaldson", tags:["5 books","brutal · operatic"],
+   d:"A savage five-book space opera of piracy, corporate rot, and a shifting three-way struggle among a cop, a criminal, and the woman caught between them — consciously modeled on Wagner's Ring. Ferociously dark and grand in scale.",
+   h:"Extremely dark: sustained abuse and sexual violence, especially early."},
+  {s:"space", t:"Heaven's Shadow", a:"David S. Goyer & Michael Cassutt", tags:["trilogy","first-contact"],
+   d:"Rival crewed missions race to a near-Earth object that turns out to be far more than an asteroid — and something inside it is watching back. Big-screen-flavored first-contact SF."},
+  {s:"space", t:"The First Sister", a:"Linden A. Lewis", tags:["trilogy","political · queer"],
+   d:"A voiceless comfort-woman aboard a warship and an augmented soldier on the other side of a solar-system war are pulled toward the same buried conspiracy. Sharp, character-driven space opera with a strong queer core."},
+  {s:"space", t:"The Stars Are Legion", a:"Kameron Hurley", tags:["standalone","strange · visceral"],
+   d:"On a fleet of vast, decaying, wholly organic worldships crewed entirely by women, an amnesiac is told she is the key to saving — or destroying — everything. Wildly inventive, body-horror-tinged space opera."},
+
+  // ---- idea ----
+  {s:"idea", t:"Dune", a:"Frank Herbert", tags:["6 books +prequels","monumental","films"],
+   d:"On the desert planet Arrakis — sole source of the spice that makes interstellar travel possible — a young heir is thrust into a war of empire, ecology, religion, and prophecy. The towering cornerstone of SF; your set includes the later Herbert novels plus the Brian Herbert / Kevin J. Anderson prequels."},
+  {s:"idea", t:"The Machineries of Empire", a:"Yoon Ha Lee", tags:["3 books + stories","dense · inventive"],
+   d:"In an empire whose technology runs on collectively-enforced belief, a disgraced captain is bound to the preserved ghost of its most brilliant, murderous traitor to retake an impregnable fortress. Ninefox Gambit — cerebral, math-flavored military SF.",
+   h:"Steep, deliberately disorienting entry."},
+  {s:"idea", t:"Children of Time", a:"Adrian Tchaikovsky", tags:["trilogy","big-idea · deep-time"],
+   d:"A dying human remnant flees a poisoned Earth toward a terraformed world accidentally seeded with uplifted life of its own. Award-winning deep-time SF about intelligence taking shapes we would never expect — vast, patient, and quietly staggering."},
+  {s:"idea", t:"Dark Matter", a:"Blake Crouch", tags:["standalone","twisty thriller"],
+   d:"A contented physics professor is knocked out and wakes to a life that isn't quite his — the start of a breakneck chase across the versions of a life he might have lived. High-concept SF thriller built to be devoured in a sitting."},
+  {s:"idea", t:"Glasshouse", a:"Charles Stross", tags:["standalone","clever post-human"],
+   d:"In a far future of casual body-swapping and edited memory, a veteran volunteers for an experiment recreating our own murky 'dark ages' — and realizes the simulation is a trap. Sharp, ideas-first post-human SF."},
+  {s:"idea", t:"The Flight of the Silvers", a:"Daniel Price", tags:["trilogy","alt-world SF"],
+   d:"Six strangers are pulled from a dying Earth into a parallel America where time itself is a tool — and a shadowy power wants them for reasons no one will explain. A big, propulsive, superhero-flavored SF mystery."},
+
+  // ---- epic ----
+  {s:"epic", t:"Shannara", a:"Terry Brooks", tags:["30+ books","classic adventure","TV series"],
+   d:"Generations after the old world fell, magic returns to a far-future Four Lands, and the scattered heirs of Shannara are called up, age after age, against each era's rising dark. Sprawling, accessible flagship high fantasy — comfort reading by the shelf-load."},
+  {s:"epic", t:"Valdemar", a:"Mercedes Lackey", tags:["40+ books","heroic · big-hearted"],
+   d:"A vast, long-running world defended by Heralds and their telepathic Companion horses, told across many linked sub-series and generations. Warm, character-first heroic fantasy — found-family, duty, and belonging, with a strong thread of identity running through it."},
+  {s:"epic", t:"Riyria Revelations", a:"Michael J. Sullivan", tags:["6 books","fun · classic caper"],
+   d:"Two wry thieves-for-hire — a cynical mercenary and an elegant swordsman — take one bad job too many and get tangled in kingdom-shaking conspiracy. Beloved, plot-tight adventure fantasy; easy, satisfying, and built to be reread."},
+  {s:"epic", t:"The Bound and the Broken", a:"Ryan Cahill", tags:["4 books · ongoing","classic · dragons"],
+   d:"A young smith in an occupied land is drawn toward an old magic, a bond with a dragon, and a rebellion against an immortal empire. An unabashed, big-hearted classic epic in the Wheel-of-Time / Eragon tradition — and a self-pub sensation."},
+  {s:"epic", t:"The Dandelion Dynasty", a:"Ken Liu", tags:["4 books","silkpunk · political"],
+   d:"Two unlikely friends — a charming bandit and a stern strategist — topple an empire together, then find winning the peace far harder than winning the war. Ken Liu's 'silkpunk' epic: East-Asian-inspired, invention-rich, and deeply concerned with how power really works."},
+  {s:"epic", t:"A Song of Ice and Fire", a:"George R.R. Martin", tags:["5 books · ongoing","political · brutal","Game of Thrones"],
+   d:"Noble houses scheme, betray, and bleed for a continent's throne while an ancient threat gathers unheeded in the north. The genre-defining, POV-driven low-magic epic behind Game of Thrones — sprawling, unsentimental, famously unfinished.",
+   h:"Graphic violence and sexual content throughout."},
+  {s:"epic", t:"Death Gate Cycle", a:"Margaret Weis & Tracy Hickman", tags:["7 books","inventive · classic"],
+   d:"A sundered world of four elemental realms — sky, sea, stone, and fire — and two ancient rival races playing a long game across them, seen through a rune-wielding wanderer. A clever, big-concept 90s epic from the Dragonlance duo."},
+  {s:"epic", t:"Dragonlance", a:"Margaret Weis & Tracy Hickman", tags:["Chronicles + Legends","classic D&D"],
+   d:"The founding Dragonlance saga: a band of companions takes up arms as dragons and a dark goddess return to the world (Chronicles), followed by a time-spanning tale of its most tragic mage (Legends). Foundational shared-world sword-and-sorcery."},
+  {s:"epic", t:"Magic Kingdom of Landover", a:"Terry Brooks", tags:["6 books","light · comic"],
+   d:"A burned-out Chicago lawyer buys a magic kingdom out of a Christmas catalog — and discovers the throne comes with a broken land, a sardonic court, and very real danger. Brooks at his most playful: warm, funny portal fantasy."},
+  {s:"epic", t:"Obsidian & the Enduring Flame", a:"Mercedes Lackey & James Mallory", tags:["6 books","classic high fantasy"],
+   d:"Across two linked trilogies, an ordinary young man discovers a world-shaping magic and a returning ancient enemy in a richly traditional high-fantasy world. Big, comfortable, wizards-and-demons epic."},
+  {s:"epic", t:"Saberhagen's Swords", a:"Fred Saberhagen", tags:["12 books","mythic adventure"],
+   d:"Twelve god-forged Swords, each with a terrible unique power, are loosed into the world for gods and mortals to fight over — across the original Books of Swords and the longer Lost Swords sequence. Fast, inventive, board-game-clever adventure fantasy."},
+  {s:"epic", t:"Book of the Gods", a:"Fred Saberhagen", tags:["~7 books","myth retold"],
+   d:"Greek myth reframed as high adventure, where the gods are powerful 'Faces' that possess mortal hosts — Apollo, Hercules, Vulcan — passing their power hand to hand. Brisk, clever mythological fantasy."},
+  {s:"epic", t:"Firemane", a:"Raymond E. Feist", tags:["trilogy","classic epic"],
+   d:"On a world of five great kingdoms, the sole hidden survivor of a slaughtered royal house is raised in secret while the powers that destroyed his family circle closer. Feist's post-Riftwar epic — traditional, propulsive sword-and-sorcery.",
+   h:"A separate world from the Riftwar Cycle."},
+  {s:"epic", t:"The Serpentwar Saga", a:"Raymond E. Feist", tags:["4 books","classic epic"],
+   d:"A demonic host gathers behind a scheming serpent-queen while two young men from the docks are swept into an empire-wide war — one of the strongest arcs of Feist's larger Riftwar Cycle. Comfortable, big-cast adventure fantasy."},
+  {s:"epic", t:"The Chain Breaker", a:"D.K. Holmberg", tags:["13 books","fast · classic"],
+   d:"A young thief in a port city discovers a rare magic tied to ancient chained gods, and is pulled into a widening conflict over who holds that power. Brisk, easy-reading indie epic from one of self-pub fantasy's most prolific hands."},
+  {s:"epic", t:"The Dark Ability", a:"D.K. Holmberg", tags:["7+ books","elemental · progression"],
+   d:"A discarded 'talentless' boy turns out to wield a forbidden ability to travel by shadow, and rises through a world of elemental magic and warring guilds. Fast, moreish progression-flavored fantasy."},
+  {s:"epic", t:"The Stormborn Saga", a:"J.T. Williams", tags:["triple trilogy","indie S&S"],
+   d:"An omnibus gathering three linked trilogies of the Dwemhar Realms — elves, dwarves, and old blood magic across a war-torn world. Sprawling, old-school indie sword-and-sorcery for readers who want a lot of story in one place."},
+  {s:"epic", t:"Addicted to Heaven", a:"Susan Forest", tags:["ongoing","dark epic"],
+   d:"In a kingdom where magic is fueled by an addictive holy drug, a disgraced royal and those around her are caught among faith, addiction, and a gathering war. A grim, ambitious Canadian epic (Bursts of Fire).",
+   h:"Addiction and abuse themes."},
+  {s:"epic", t:"Tir Alainn", a:"Anne Bishop", tags:["trilogy","celtic · witchy"],
+   d:"In a land where witches quietly hold the roads between the human world and a fading faerie realm, a rising tide of persecution threatens to sever the two forever. Lyrical, romantic Celtic-flavored fantasy from the author of the Black Jewels books."},
+
+  // ---- dark ----
+  {s:"dark", t:"The Broken Empire", a:"Mark Lawrence", tags:["trilogy","savage · sharp"],
+   d:"A brilliant, brutal teenage prince cuts his way back toward a stolen throne, across a ruined far-future world where the old sciences linger as magic. Prince of Thorns — grimdark's most charismatic monster, narrated with unsettling wit.",
+   h:"An intentionally monstrous protagonist; opens with sexual violence."},
+  {s:"dark", t:"Black Jewels", a:"Anne Bishop", tags:["~10 books","dark · romantic"],
+   d:"In a matriarchal world of blood-ranked magic and vicious court politics, a prophesied queen is born into terrible danger, and three damaged, powerful men set out to protect her. Lush, operatic dark fantasy with intense romance.",
+   h:"Heavy content: sexual violence, abuse, and cruelty."},
+  {s:"dark", t:"Lightbringer", a:"Brent Weeks", tags:["5 books","inventive · propulsive"],
+   d:"In a world where a single chosen 'Prism' balances all magic by splitting light into physical color, a bastard boy's very existence threatens a fragile empire — and the most powerful man alive. Big, twisty, magic-system-driven epic with grimdark edges."},
+  {s:"dark", t:"Night Angel", a:"Brent Weeks", tags:["trilogy +","brutal · assassins"],
+   d:"A guttersnipe apprentices himself to the deadliest 'wetboy' assassin in a rotten city, trading everything human for the skills to survive it. Brent Weeks's breakout — fast, dark, and bloody.",
+   h:"Violence and abuse, especially early."},
+  {s:"dark", t:"The Green Bone Saga", a:"Fonda Lee", tags:["trilogy + stories","gangster fantasy"],
+   d:"On an Asia-inspired island where bioenergetic jade grants warriors superhuman power, two crime-family dynasties fight for control of the trade — and each other. The Godfather by way of urban fantasy: sharp, adult, and gripping.",
+   h:"Organized-crime violence."},
+  {s:"dark", t:"The Lotus War", a:"Jay Kristoff", tags:["trilogy","grim · Japanese-flavored"],
+   d:"In a dying, chi-poisoned empire modeled on feudal Japan, a girl who can speak to beasts is sent to capture a mythical griffin — and falls in with a brewing rebellion. Blood-soaked, steampunk-tinged dark fantasy.",
+   h:"Graphic violence."},
+  {s:"dark", t:"Empire of the Wolf", a:"Richard Swan", tags:["trilogy","grim · legal"],
+   d:"A feared Justice — judge, investigator, and executioner in one — rides a fraying empire enforcing the law, as heresy, necromancy, and politics conspire to break it. Smart, dark, procedural grimdark (The Justice of Kings).",
+   h:"Violence and dark themes."},
+  {s:"dark", t:"Godkiller", a:"Hannah Kaner", tags:["3 books","grim · brisk"],
+   d:"In a land where gods are outlawed after a devastating divine war, a licensed god-killer reluctantly escorts a hidden noble, a haunted knight, and a small living god across dangerous country. Fast, sharp, contemporary grimdark."},
+  {s:"dark", t:"The Serpent Gate", a:"A.K. Larkwood", tags:["duology","strange · queer"],
+   d:"A girl saved from sacrifice becomes the sword-hand of a scheming wizard, traveling ruined worlds through the doors of a dead snake-god. Inventive, queer, darkly playful epic fantasy (The Unspoken Name)."},
+  {s:"dark", t:"The Horus Heresy", a:"Various (Black Library)", tags:["huge · omnibus set","grimdark war"],
+   d:"The civil war that broke the far-future Imperium of Warhammer 40,000: superhuman legions turned on each other when the Emperor's favored son fell. Vast, bombastic, relentlessly grim military science-fantasy across many authors.",
+   h:"Wall-to-wall war and atrocity — 40K, by design."},
+  {s:"dark", t:"The First Law: Standalones", a:"Joe Abercrombie", tags:["3 books","savage · funny"],
+   d:"Three standalone novels set after the First Law trilogy — a poisoner's revenge (Best Served Cold), a single brutal battle from every side (The Heroes), and a fantasy Western (Red Country). Standalone doorways into Abercrombie's grimdark world.",
+   h:"Heavy violence, handled with black comedy."},
+
+  // ---- lit ----
+  {s:"lit", t:"Guy Gavriel Kay", a:"Guy Gavriel Kay", tags:["10 standalones","lyrical · historical"],
+   d:"Beyond his Fionavar debut, Kay writes gorgeous self-contained novels set in fantasy-tinged real history — Renaissance Italy (Tigana), Moorish Spain (The Lions of Al-Rassan), Tang and Song China (Under Heaven, River of Stars). Elegiac, character-deep prose you slow down for; pick one by setting."},
+  {s:"lit", t:"The Radiant Emperor", a:"Shelley Parker-Chan", tags:["duology","historical · fierce"],
+   d:"A peasant girl in Mongol-ruled China seizes her dead brother's name and the greatness prophesied for someone else. She Who Became the Sun — a queer, ferociously ambitious reimagining of the rise of the Ming.",
+   h:"War and cruelty, unflinching."},
+  {s:"lit", t:"Alix E. Harrow", a:"Alix E. Harrow", tags:["standalones + novellas","lush · feminist"],
+   d:"Warm, bookish, folklore-soaked standalones — a door-hunting Edwardian girl (The Ten Thousand Doors of January), rediscovered witches (The Once and Future Witches), a haunted house (Starling House) — plus her sharp Fractured Fables novellas. Beautiful prose and big heart."},
+  {s:"lit", t:"Wayward Children", a:"Seanan McGuire", tags:["10 novellas · ongoing","poignant · dark"],
+   d:"A boarding school for children who fell through doors into other worlds and were sent back, aching to return. Bittersweet, sharp-edged portal-fantasy novellas — a fast read, each standing largely alone.",
+   h:"Grief, self-harm, and darkness under the whimsy."},
+  {s:"lit", t:"The Locked Tomb", a:"Tamsyn Muir", tags:["3 books · ongoing","gothic · genre-bending"],
+   d:"Necromancers and their sworn swordswomen are summoned to a decaying palace to compete for a place among the undying — 'lesbian necromancers in space,' by way of gothic mystery and internet-baroque wit. Gideon the Ninth. Unlike anything else.",
+   h:"Body horror and violence."},
+  {s:"lit", t:"The Old Kingdom", a:"Garth Nix", tags:["7 books","YA · atmospheric"],
+   d:"On the wrong side of a wall that divides a modern nation from an old land of Free Magic and the walking dead, a schoolgirl inherits the bells and grim duty of the Abhorsen, who binds the dead. Sabriel — clean, eerie, beloved YA fantasy."},
+  {s:"lit", t:"Incarnations of Immortality", a:"Piers Anthony", tags:["~8 books","concept · classic"],
+   d:"What if Death, Time, Fate, War, and Nature were jobs held by ordinary people? Each book hands one office to a new mortal caught between Good and Evil playing a longer game. A clever high-concept 80s fantasy sequence."},
+  {s:"lit", t:"Howl's Moving Castle", a:"Diana Wynne Jones", tags:["standalone","warm · witty"],
+   d:"A practical young hatter is cursed into old age and takes shelter in the wandering castle of a vain, slippery wizard — and finds untangling both their curses more tangled than it looks. Charming, clever comfort fantasy (behind the Miyazaki film)."},
+  {s:"lit", t:"Light From Uncommon Stars", a:"Ryka Aoki", tags:["standalone","warm · genre-blending"],
+   d:"A violin teacher who owes souls to hell, a runaway trans girl with extraordinary talent, and an alien family running a donut shop collide in the San Gabriel Valley. A tender, funny, wholly original mix of Faustian bargain and space opera."},
+  {s:"lit", t:"Wrath Goddess Sing", a:"Maya Deane", tags:["standalone","mythic · trans"],
+   d:"A fierce retelling of the Iliad in which Achilles is a trans woman, remade by the gods and sent to a war that will make her a legend. Brutal, lyrical, and mythic — the Trojan War refracted through a new lens.",
+   h:"War violence."},
+  {s:"lit", t:"The Sapling Cage", a:"Margaret Killjoy", tags:["ongoing","YA · witchy"],
+   d:"A trans girl takes her friend's place among a coven of witches sworn to defend the wild against a spreading blight — and grows into herself as she learns their craft. Warm, adventurous YA fantasy (Daughters of the Empty Throne)."},
+  {s:"lit", t:"The Edge Chronicles", a:"Paul Stewart & Chris Riddell", tags:["13 books","illustrated · adventure"],
+   d:"A vertiginous world of floating rock, sky-pirates, and the vast Deepwoods, followed across generations of young wanderers. Gorgeously illustrated middle-grade adventure fantasy with real teeth."},
+
+  // ---- rom ----
+  {s:"rom", t:"Crowns of Nyaxia", a:"Carissa Broadbent", tags:["6 books · ongoing","vampire romantasy · steamy"],
+   d:"In a world abandoned by its gods, a human raised among vampires and a cursed vampire prince are forced together in a deadly divine tournament. The Serpent and the Wings of Night — lush, high-heat vampire romantasy, a runaway self-pub hit.",
+   h:"Explicit."},
+  {s:"rom", t:"Moonfall", a:"Sarah A. Parker", tags:["2 books · ongoing","romantasy · lush"],
+   d:"When the Moon Hatched: in a world where the moon is an egg and the dead leave threads behind, a woman with a lethal secret and a warrior commander circle a kingdom-shaking truth. Atmospheric, dense-worldbuilt, slow-burning romantasy.",
+   h:"Explicit."},
+  {s:"rom", t:"Kushiel's Legacy", a:"Jacqueline Carey", tags:["9 books","lush · erotic epic"],
+   d:"In a fantasy Renaissance France whose founding creed is 'love as thou wilt,' a courtesan-spy marked by the gods to feel pain as pleasure threads the deadly intrigues of nations. Sumptuous, intelligent erotic epic fantasy.",
+   h:"Explicit, with BDSM throughout."},
+  {s:"rom", t:"Daughter of the Pirate King", a:"Tricia Levenseller", tags:["3 books","YA · swashbuckling"],
+   d:"A pirate captain's daughter lets herself be 'captured' to steal a map from a rival ship — and finds the enemy's charming first mate harder to outmaneuver than she planned. Fast, funny YA pirate romance."},
+  {s:"rom", t:"Warrior of the Wild", a:"Tricia Levenseller", tags:["standalone","YA · Norse"],
+   d:"A chieftain's daughter is exiled and told to kill, alone, the immortal god who bleeds her village dry. A brisk, satisfying standalone YA Norse-flavored adventure romance."},
+  {s:"rom", t:"Sacred Dark", a:"May Peterson", tags:["3 books","lyrical · queer"],
+   d:"In a world where the murdered can return wearing strange animal souls, an immortal cursed to steal others' spirits falls for the man he was sent to kill. Dreamlike, prose-forward romantic fantasy (Lord of the Last Heartbeat).",
+   h:"Adult; dark themes."},
+  {s:"rom", t:"Stealing Thunder", a:"Alina Boyden", tags:["2 books","Mughal-inspired · trans"],
+   d:"A trans princess turned courtesan and thief, hiding among a community of hijra, schemes to reclaim her birthright — with a war-prince and a stolen flying beast in the mix. Vivid, romantic Mughal-India-inspired fantasy."},
+  {s:"rom", t:"Black Trans Fairy Tales", a:"S.T. Lynn & Tami Veldura", tags:["3 novellas","sweet · romantic"],
+   d:"Cinderella, the little mermaid, and Beauty retold as Black trans women's stories — short, warm romances that hand their heroines the happy endings the originals never offered. Gentle, tropey, and kind."},
+
+  // ---- urban ----
+  {s:"urban", t:"Alpha and Omega", a:"Patricia Briggs", tags:["6 books","werewolf romance"],
+   d:"A rare, gentle 'Omega' wolf and the enforcer son of the continent's most feared pack-leader build a marriage while cleaning up the supernatural world's ugliest problems. Warm paranormal romance set in the Mercy Thompson universe."},
+  {s:"urban", t:"The Shadow Saga", a:"Christopher Golden", tags:["~6 books","vampire noir"],
+   d:"A centuries-old vampire who fights on humanity's side works as a Boston P.I., tangling with rogue immortals and older horrors. Pulpy, propulsive vampire urban fantasy."},
+  {s:"urban", t:"Nemesis", a:"April Daniels", tags:["2 books","superhero · trans"],
+   d:"A trans teenager inherits the mantle — and reality-shaping powers — of the world's greatest superhero, and has to become the hero while a brilliant villain hunts her. Sharp, angry, joyful YA superhero SF (Dreadnought)."},
+  {s:"urban", t:"Saberhagen's Dracula", a:"Fred Saberhagen", tags:["~10 books","sly · revisionist"],
+   d:"Dracula retold from the Count's own wry point of view — the misunderstood antihero of his own long, tangled history, occasionally teaming up with a certain detective. Clever, genre-savvy vampire fiction."},
+
+  // ---- litrpg ----
+  {s:"litrpg", t:"Backstage at the Pineapple Cabaret", a:"Matt Dinniman", tags:["novella · 7 parts","companion"],
+   d:"A Dungeon Crawler Carl side-story, released as bonus chapters at the back of the hardcover editions — a peek behind the curtain at the Dungeon's monstrous showbiz underworld. For readers already down the crawl.",
+   h:"Read after the main DCC books."},
+
+  // ---- dyst ----
+  {s:"dyst", t:"Divergent", a:"Veronica Roth", tags:["trilogy +","YA · propulsive","films"],
+   d:"In a walled Chicago sorted into virtue-based factions, a girl who fits no single category discovers that not fitting is itself dangerous. A defining YA dystopia of the 2010s — fast, high-stakes, romance-laced."},
+
+  // ---- nonfic ----
+  {s:"nonfic", t:"David Grann", a:"David Grann", tags:["3 books","narrative nonfiction"],
+   d:"True stories told with a thriller's grip: an obsessive hunt for a lost Amazon city (The Lost City of Z), the Osage murders and the birth of the FBI (Killers of the Flower Moon), and a shipwreck's descent into mutiny (The Wager). Meticulous, gripping, and they read like novels."},
 ];
 
 const shelfById=Object.fromEntries(SHELVES.map(s=>[s.id,s]));
@@ -367,7 +549,7 @@ const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 const chiprow=document.getElementById("chiprow");
 const allChip=document.createElement("button");
 allChip.className="chip"; allChip.type="button"; allChip.dataset.f="all";
-allChip.setAttribute("aria-pressed","true"); allChip.textContent="All 60";
+allChip.setAttribute("aria-pressed","true"); allChip.textContent="All 128";
 chiprow.appendChild(allChip);
 SHELVES.forEach(s=>{
   const b=document.createElement("button");
