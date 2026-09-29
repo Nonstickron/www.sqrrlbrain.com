@@ -210,15 +210,20 @@
   <script>
   (async function () {
     const grid = document.getElementById('shop-grid');
+    // A URL is "ready" only once a real Stripe link replaces the REPLACE placeholder.
+    const ready = (u) => !!u && !u.includes('REPLACE');
 
     function card(p) {
       const sold = p.status === 'sold';
       const badge = sold
         ? '<span class="shop-badge sold">Sold</span>'
         : (p.type === 'made-to-order' && p.leadTime) ? `<span class="shop-badge">${p.leadTime}</span>` : '';
+      const hasReal = (p.variants && p.variants.length) ? p.variants.some(v => ready(v.buyUrl)) : ready(p.buyUrl);
       let action;
       if (sold) {
         action = '<span class="shop-btn sold">Sold</span>';
+      } else if (!hasReal) {
+        action = '<span class="shop-btn sold">Coming soon</span>';
       } else if (p.variants && p.variants.length) {
         const sizes = p.variants.map((v, i) =>
           `<button type="button" class="shop-size${i === 0 ? ' active' : ''}" data-url="${v.buyUrl}">${v.label}</button>`).join('');
@@ -245,7 +250,7 @@
       const data = await res.json();
 
       const tip = document.getElementById('tip-btn');
-      if (data.tipUrl) tip.href = data.tipUrl; else tip.closest('.shop-section').style.display = 'none';
+      if (ready(data.tipUrl)) tip.href = data.tipUrl; else tip.closest('.shop-section').style.display = 'none';
 
       const products = data.products || [];
       if (!products.length) { grid.innerHTML = '<p class="status">New pieces coming soon.</p>'; return; }
