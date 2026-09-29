@@ -81,7 +81,13 @@
     .lede { font-size: 1.05rem; line-height: 1.75; color: var(--brown-mid); max-width: 60ch; margin-bottom: 2rem; padding-bottom: 1.4rem; border-bottom: 1px solid var(--rule-soft); }
 
     /* Filter chips — mirrors the Notes-page tag filter (warm-yellow active) */
-    .shop-filter { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+    .shop-filters { display: flex; flex-direction: column; gap: .7rem; margin-bottom: 2.2rem; }
+    .filter-row { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+    .filter-row[hidden] { display: none; }
+    #subcat-filter .filter-chip { font-size: .58rem; padding: .4rem .75rem; }
+    .avail-toggle { margin-left: auto; }
+    .avail-toggle::before { content: '\25CB'; margin-right: .4em; }
+    .avail-toggle.active::before { content: '\25CF'; }
     .filter-chip { font-family: var(--mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--brown-mid); padding: .5rem .9rem; border: 1px solid var(--rule); background: var(--paper); cursor: pointer; transition: all .15s; }
     .filter-chip:hover { border-color: var(--brown-mid); }
     .filter-chip.active { background: var(--warm-yellow); border-color: var(--warm-yellow); color: var(--ink); }
@@ -177,9 +183,11 @@
     <h1>Made here, <em>sold here<svg class="acorn-period" aria-hidden="true"><use href="#acorn"/></svg></em></h1>
     <p class="lede">Hand-carved pieces, relief prints, and made-to-order goods &mdash; each one cut, printed, and shipped by me&hellip;a human. Free shipping within the US.</p>
 
-    <div class="shop-filter" id="shop-filter" role="group" aria-label="Filter products">
-      <button type="button" class="filter-chip active" data-filter="all">All</button>
-      <button type="button" class="filter-chip" data-filter="available">Available</button>
+    <div class="shop-filters">
+      <div class="filter-row" id="cat-filter" role="group" aria-label="Filter by category">
+        <button type="button" class="filter-chip avail-toggle" id="avail-toggle" aria-pressed="false">Available only</button>
+      </div>
+      <div class="filter-row" id="subcat-filter" role="group" aria-label="Filter by subcategory" hidden></div>
     </div>
 
     <div id="shop-grid" class="shop-grid"><p id="shop-loading" class="status">Loading&hellip;</p></div>
@@ -232,10 +240,10 @@
       } else {
         action = `<a class="shop-btn" target="_blank" rel="noopener" href="${p.buyUrl}">Buy</a>`;
       }
-      return `<div class="shop-card${sold ? ' is-sold' : ''}" data-status="${sold ? 'sold' : 'available'}">
+      return `<div class="shop-card${sold ? ' is-sold' : ''}" data-status="${sold ? 'sold' : 'available'}" data-category="${p.category || ''}" data-subcategory="${p.subcategory || ''}">
         <img src="${p.image}" alt="${p.title}" loading="lazy" />
         <div class="shop-card-body">
-          <span class="shop-cat">${p.category}</span>
+          <span class="shop-cat">${p.category || ''}${p.subcategory ? ' &middot; ' + p.subcategory : ''}</span>
           <span class="shop-title">${p.title}</span>
           <p class="shop-desc">${p.description || ''}</p>
           <span class="shop-price">${p.price}</span>
@@ -252,33 +260,84 @@
       const tip = document.getElementById('tip-btn');
       if (ready(data.tipUrl)) tip.href = data.tipUrl; else tip.closest('.shop-section').style.display = 'none';
 
+      const cats = data.categories || [];
       const products = data.products || [];
-      if (!products.length) { grid.innerHTML = '<p class="status">New pieces coming soon.</p>'; return; }
 
-      grid.innerHTML = products.map(card).join('');
-
-      // Apparel: size click updates the Buy link.
-      grid.querySelectorAll('[data-variant-group]').forEach(group => {
-        const buy = group.parentElement.querySelector('[data-buy]');
-        group.querySelectorAll('.shop-size').forEach(btn => btn.addEventListener('click', () => {
-          group.querySelectorAll('.shop-size').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          buy.href = btn.dataset.url;
-        }));
-      });
-
-      // Filter: All / Available.
-      const filter = document.getElementById('shop-filter');
-      filter.addEventListener('click', (e) => {
-        const chip = e.target.closest('.filter-chip');
-        if (!chip) return;
-        filter.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
-        const mode = chip.dataset.filter;
-        grid.querySelectorAll('.shop-card').forEach(c => {
-          c.style.display = (mode === 'available' && c.dataset.status === 'sold') ? 'none' : '';
+      if (!products.length) {
+        grid.innerHTML = '<p class="status">New pieces coming soon.</p>';
+      } else {
+        grid.innerHTML = products.map(card).join('');
+        // Apparel: size click updates the Buy link.
+        grid.querySelectorAll('[data-variant-group]').forEach(group => {
+          const buy = group.parentElement.querySelector('[data-buy]');
+          group.querySelectorAll('.shop-size').forEach(btn => btn.addEventListener('click', () => {
+            group.querySelectorAll('.shop-size').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            buy.href = btn.dataset.url;
+          }));
         });
+      }
+
+      // Two-level category filter + availability toggle.
+      const catFilter = document.getElementById('cat-filter');
+      const subFilter = document.getElementById('subcat-filter');
+      const availToggle = document.getElementById('avail-toggle');
+      const chip = (cls, label, value, active) =>
+        `<button type="button" class="filter-chip ${cls}${active ? ' active' : ''}" data-value="${value}">${label}</button>`;
+      const state = { cat: 'all', sub: 'all', availableOnly: false };
+
+      catFilter.insertAdjacentHTML('afterbegin',
+        chip('cat-chip', 'All', 'all', true) + cats.map(c => chip('cat-chip', c.name, c.name, false)).join(''));
+
+      function apply() {
+        const cards = grid.querySelectorAll('.shop-card');
+        cards.forEach(c => {
+          const okCat = state.cat === 'all' || c.dataset.category === state.cat;
+          const okSub = state.sub === 'all' || c.dataset.subcategory === state.sub;
+          const okAvail = !state.availableOnly || c.dataset.status !== 'sold';
+          c.style.display = (okCat && okSub && okAvail) ? '' : 'none';
+        });
+        let empty = grid.querySelector('.shop-empty');
+        const anyVisible = [...cards].some(c => c.style.display !== 'none');
+        if (!anyVisible && cards.length) {
+          if (!empty) { empty = document.createElement('p'); empty.className = 'status shop-empty'; empty.textContent = 'No pieces in this category yet — check back soon.'; grid.appendChild(empty); }
+          empty.style.display = '';
+        } else if (empty) { empty.style.display = 'none'; }
+      }
+
+      function renderSubcats() {
+        const catObj = cats.find(c => c.name === state.cat);
+        const subs = (catObj && catObj.subcategories) || [];
+        if (state.cat === 'all' || !subs.length) { subFilter.hidden = true; subFilter.innerHTML = ''; return; }
+        subFilter.innerHTML = chip('sub-chip', 'All', 'all', true) + subs.map(s => chip('sub-chip', s, s, false)).join('');
+        subFilter.hidden = false;
+      }
+
+      catFilter.addEventListener('click', (e) => {
+        const c = e.target.closest('.cat-chip');
+        if (!c) return;
+        catFilter.querySelectorAll('.cat-chip').forEach(x => x.classList.remove('active'));
+        c.classList.add('active');
+        state.cat = c.dataset.value; state.sub = 'all';
+        renderSubcats(); apply();
       });
+
+      subFilter.addEventListener('click', (e) => {
+        const c = e.target.closest('.sub-chip');
+        if (!c) return;
+        subFilter.querySelectorAll('.sub-chip').forEach(x => x.classList.remove('active'));
+        c.classList.add('active');
+        state.sub = c.dataset.value; apply();
+      });
+
+      availToggle.addEventListener('click', () => {
+        state.availableOnly = !state.availableOnly;
+        availToggle.classList.toggle('active', state.availableOnly);
+        availToggle.setAttribute('aria-pressed', String(state.availableOnly));
+        apply();
+      });
+
+      apply();
     } catch (e) {
       console.error(e);
       grid.innerHTML = '<p class="status error">Couldn’t load the shop right now. Please refresh, or email hello@sqrrlbrain.com.</p>';

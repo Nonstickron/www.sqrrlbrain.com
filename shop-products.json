@@ -1,10 +1,16 @@
 {
   "tipUrl": "https://buy.stripe.com/REPLACE_TIP_LINK",
+  "categories": [
+    { "name": "3D Prints",     "subcategories": ["Wall-Art", "Decor", "Storage", "Toys"] },
+    { "name": "Carvings",      "subcategories": ["Figurines", "Signs", "Ornaments"] },
+    { "name": "Relief Prints", "subcategories": ["Wall-Art", "Apparel", "Patches"] }
+  ],
   "products": [
     {
       "id": "carving-owl-01",
       "title": "Hand-carved Owl",
       "category": "Carvings",
+      "subcategory": "Figurines",
       "price": "$120",
       "image": "images/shop/placeholder.svg",
       "description": "One-of-a-kind basswood carving, ~6 in. Oiled finish.",
@@ -16,6 +22,7 @@
       "id": "fox-3d-01",
       "title": "3D-printed Fox",
       "category": "3D Prints",
+      "subcategory": "Decor",
       "price": "$35",
       "image": "images/shop/placeholder.svg",
       "description": "PLA, hand-finished and sealed.",
@@ -27,7 +34,8 @@
     {
       "id": "tee-raven",
       "title": "Raven Relief Tee",
-      "category": "Apparel",
+      "category": "Relief Prints",
+      "subcategory": "Apparel",
       "price": "$28",
       "image": "images/shop/placeholder.svg",
       "description": "Hand block-printed from a carved plate onto a cotton tee.",
