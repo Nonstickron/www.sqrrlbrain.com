@@ -150,9 +150,13 @@ git commit -m "feat(shop): shop.html skeleton — chrome, sections, grid/card st
 
 ---
 
-## Task 2: Render products from `shop-products.json`
+## Task 2: Render products from `shop-products.json` + Available filter
 
 **Files:** Create `shop-products.json` (with the 3 example items above), add a render script to `shop.html`.
+
+**Brand conformance (per `work/sqrrlbrain-brand-guide.html`):** cards use `--warm` background (card/inset tone) with `border-color:var(--accent)` on hover; product titles in Lora; category/price/badges in DM Mono; the H1 carries one italic-vermilion phrase + the acorn-period glyph; grain overlay via `body::before`.
+
+**Sold-out + filter (Ronny 2026-09-29):** sold items STAY in the grid with a "Sold" badge + disabled action (never removed). A filter chip row — **All** (default) / **Available** — sits above the grid, styled like the Notes-page tag filter (DM Mono chips, **warm-yellow active state**). "Available" hides `status:"sold"` items; "All" shows everything.
 
 - [ ] **Step 1 — Create `shop-products.json`** using the Data contract above (keep the 3 examples as placeholders; Ronny swaps in real items + URLs in Task 5).
 
