@@ -234,6 +234,7 @@
     <div class="mobile-nav" id="mobile-nav">
       <span class="mobile-nav-section">Navigate</span>
       <a href="/">Home</a>
+      <a href="/shop.html">Shop</a>
       <a href="/services.html">Services</a>
       <a href="/projects.html">Projects</a>
       <a href="/work.html">Work</a>
@@ -321,6 +322,10 @@
     const status   = document.getElementById('cf-status');
     const RATE_KEY = 'sqrrl_contact_last';
     const RATE_MS  = 60_000;
+
+    // Commissions deep-link: /contact.html?subject=... pre-fills the subject field.
+    const presetSubject = new URLSearchParams(location.search).get('subject');
+    if (presetSubject) document.getElementById('cf-subject').value = presetSubject.slice(0, 200);
 
     function setStatus(msg, kind) {
       status.textContent = msg;

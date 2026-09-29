@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Photo coming soon">
+  <rect width="400" height="500" fill="#f2ebe0"/>
+  <g transform="translate(200 230) scale(3.2) rotate(11)" fill="#b88c5a">
+    <rect x="11.3" y="2.6" width="1.4" height="2.2" rx=".5" transform="translate(-12 -12)"/>
+    <path d="M4 8.6 Q4 4.8 12 4.8 Q20 4.8 20 8.6 L19.3 10.4 Q17.3 11 15.3 10.4 Q13.5 11 12 10.4 Q10.5 11 8.7 10.4 Q6.7 11 4.7 10.4 Z" transform="translate(-12 -12)"/>
+    <path d="M5.5 10.3 Q5 16 8 19.5 Q10 22 12 22.5 Q14 22 16 19.5 Q19 16 18.5 10.3 Z" transform="translate(-12 -12)"/>
+  </g>
+  <text x="200" y="330" text-anchor="middle" font-family="'DM Mono', monospace" font-size="15" letter-spacing="2.5" fill="#b88c5a">PHOTO SOON</text>
+</svg>
