@@ -1,10 +1,46 @@
 {
   "tipUrl": "https://buy.stripe.com/REPLACE_TIP_LINK",
   "categories": [
-    { "name": "3D Prints",     "subcategories": ["Wall-Art", "Decor", "Storage", "Toys"] },
-    { "name": "Carvings",      "subcategories": ["Figurines", "Signs", "Ornaments"] },
-    { "name": "Relief Prints", "subcategories": ["Wall-Art", "Apparel", "Patches"] },
-    { "name": "Notebooks",     "subcategories": ["Pocket (3×5)", "Pocket (3.5×5.5)", "A4 (8.3×11.7)", "A5 (5.8×8.3)", "A6 (4.1×5.8)", "B5 (6.9×9.8)"] }
+    {
+      "name": "3D Prints",
+      "description": "",
+      "subcategories": [
+        { "name": "Wall-Art", "description": "" },
+        { "name": "Decor", "description": "" },
+        { "name": "Storage", "description": "" },
+        { "name": "Toys", "description": "" }
+      ]
+    },
+    {
+      "name": "Carvings",
+      "description": "",
+      "subcategories": [
+        { "name": "Figurines", "description": "" },
+        { "name": "Signs", "description": "" },
+        { "name": "Ornaments", "description": "" }
+      ]
+    },
+    {
+      "name": "Relief Prints",
+      "description": "",
+      "subcategories": [
+        { "name": "Wall-Art", "description": "" },
+        { "name": "Apparel", "description": "" },
+        { "name": "Patches", "description": "" }
+      ]
+    },
+    {
+      "name": "Notebooks",
+      "description": "",
+      "subcategories": [
+        { "name": "Pocket (3×5)", "description": "" },
+        { "name": "Pocket (3.5×5.5)", "description": "" },
+        { "name": "A4 (8.3×11.7)", "description": "" },
+        { "name": "A5 (5.8×8.3)", "description": "" },
+        { "name": "A6 (4.1×5.8)", "description": "" },
+        { "name": "B5 (6.9×9.8)", "description": "" }
+      ]
+    }
   ],
   "products": [
     {

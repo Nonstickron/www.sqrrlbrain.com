@@ -88,6 +88,8 @@
     .avail-toggle { margin-left: auto; }
     .avail-toggle::before { content: '\25CB'; margin-right: .4em; }
     .avail-toggle.active::before { content: '\25CF'; }
+    .shop-cat-desc { font-size: .95rem; line-height: 1.7; color: var(--brown-mid); margin: -.4rem 0 2.2rem; max-width: 62ch; padding-left: 1rem; border-left: 2px solid var(--accent); }
+    .shop-cat-desc[hidden] { display: none; }
     .filter-chip { font-family: var(--mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--brown-mid); padding: .5rem .9rem; border: 1px solid var(--rule); background: var(--paper); cursor: pointer; transition: all .15s; }
     .filter-chip:hover { border-color: var(--brown-mid); }
     .filter-chip.active { background: var(--warm-yellow); border-color: var(--warm-yellow); color: var(--ink); }
@@ -197,6 +199,8 @@
       <div class="filter-row" id="subcat-filter" role="group" aria-label="Filter by subcategory" hidden></div>
     </div>
 
+    <p id="shop-cat-desc" class="shop-cat-desc" hidden></p>
+
     <div id="shop-grid" class="shop-grid"><p id="shop-loading" class="status">Loading&hellip;</p></div>
 
     <section id="commissions" class="shop-section">
@@ -290,6 +294,7 @@
       const catFilter = document.getElementById('cat-filter');
       const subFilter = document.getElementById('subcat-filter');
       const availToggle = document.getElementById('avail-toggle');
+      const descEl = document.getElementById('shop-cat-desc');
       const chip = (cls, label, value, active) =>
         `<button type="button" class="filter-chip ${cls}${active ? ' active' : ''}" data-value="${value}">${label}</button>`;
       const state = { cat: 'all', sub: 'all', availableOnly: false };
@@ -317,8 +322,22 @@
         const catObj = cats.find(c => c.name === state.cat);
         const subs = (catObj && catObj.subcategories) || [];
         if (state.cat === 'all' || !subs.length) { subFilter.hidden = true; subFilter.innerHTML = ''; return; }
-        subFilter.innerHTML = chip('sub-chip', 'All', 'all', true) + subs.map(s => chip('sub-chip', s, s, false)).join('');
+        subFilter.innerHTML = chip('sub-chip', 'All', 'all', true) + subs.map(s => chip('sub-chip', s.name, s.name, false)).join('');
         subFilter.hidden = false;
+      }
+
+      function renderDesc() {
+        const catObj = cats.find(c => c.name === state.cat);
+        let text = '';
+        if (catObj) {
+          if (state.sub !== 'all') {
+            const subObj = (catObj.subcategories || []).find(s => s.name === state.sub);
+            text = (subObj && subObj.description) || '';
+          }
+          if (!text) text = catObj.description || '';
+        }
+        descEl.textContent = text;
+        descEl.hidden = !text;
       }
 
       catFilter.addEventListener('click', (e) => {
@@ -327,7 +346,7 @@
         catFilter.querySelectorAll('.cat-chip').forEach(x => x.classList.remove('active'));
         c.classList.add('active');
         state.cat = c.dataset.value; state.sub = 'all';
-        renderSubcats(); apply();
+        renderSubcats(); renderDesc(); apply();
       });
 
       subFilter.addEventListener('click', (e) => {
@@ -335,7 +354,7 @@
         if (!c) return;
         subFilter.querySelectorAll('.sub-chip').forEach(x => x.classList.remove('active'));
         c.classList.add('active');
-        state.sub = c.dataset.value; apply();
+        state.sub = c.dataset.value; renderDesc(); apply();
       });
 
       availToggle.addEventListener('click', () => {
