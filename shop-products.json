@@ -57,17 +57,17 @@
       "buyUrl": "https://buy.stripe.com/REPLACE"
     },
     {
-      "id": "hueforge-panel-01",
-      "title": "Custom HueForge Panel",
+      "id": "hueforge-display-custom",
+      "title": "Custom HueForge Display",
       "category": "3D Prints",
       "subcategory": "Wall-Art",
-      "price": "$45",
+      "price": "$40/panel + $50 art fee",
       "image": "images/shop/placeholder.svg",
-      "description": "A custom image printed in layered filament color, built from tiling hex panels.",
+      "description": "Your image printed in layered filament color across modular panels (up to 10×10 in each) that tile into one display. Every panel ships with the mounting bracket, command strips, and magnets already installed. Pricing is $40 per panel plus a one-time $50 art fee per image (one image per order) — set your panel count at checkout. After checkout, email your image and order number to hello@sqrrlbrain.com and I'll confirm it'll work as a HueForge before printing. Custom pieces are final, but if an image can't be made to work I'll refund it.",
       "type": "made-to-order",
-      "leadTime": "made to order — ships in ~7 days",
+      "leadTime": "made to order — ships in ~1–2 weeks",
       "status": "available",
-      "buyUrl": "https://buy.stripe.com/REPLACE"
+      "buyUrl": "https://buy.stripe.com/REPLACE_HUEFORGE"
     },
     {
       "id": "tee-raven",
