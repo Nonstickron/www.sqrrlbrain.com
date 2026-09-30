@@ -8,13 +8,13 @@
   ],
   "products": [
     {
-      "id": "carving-owl-01",
-      "title": "Hand-carved Owl",
+      "id": "carving-gnome-01",
+      "title": "Hand-carved Gnome",
       "category": "Carvings",
       "subcategory": "Figurines",
-      "price": "$120",
+      "price": "$60",
       "image": "images/shop/placeholder.svg",
-      "description": "One-of-a-kind basswood carving, ~6 in. Oiled finish.",
+      "description": "One-of-a-kind basswood carving, ~3 in. Oiled finish.",
       "type": "original",
       "status": "available",
       "buyUrl": "https://buy.stripe.com/REPLACE"
