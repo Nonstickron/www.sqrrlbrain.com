@@ -5,10 +5,11 @@
       "name": "3D Prints",
       "description": "Printed and hand-finished here, then sealed. Made to order, so they don't sell out — they just take a few days to make.",
       "subcategories": [
-        { "name": "Wall-Art", "description": "" },
-        { "name": "Decor", "description": "" },
-        { "name": "Storage", "description": "" },
-        { "name": "Toys", "description": "" }
+        { "name": "Wall-Art", "description": "Custom images printed in layered filament color, built up from tiling hex panels." },
+        { "name": "Signs & Nameplates", "description": "Custom desk nameplates and small signs — a name, a saying, whatever it should read." },
+        { "name": "Bookmarks", "description": "Printed bookmarks to keep your place." },
+        { "name": "Buttons", "description": "Small printed buttons." },
+        { "name": "Cases", "description": "Custom-fit printed cases, personalized with your image." }
       ]
     },
     {
@@ -16,29 +17,29 @@
       "description": "Carved from wood by hand, one at a time. One of a kind — when a piece sells, it's gone.",
       "subcategories": [
         { "name": "Figurines", "description": "Small hand-carved figures, about 3 to 4 inches tall." },
-        { "name": "Signs", "description": "" },
-        { "name": "Ornaments", "description": "" }
+        { "name": "Signs", "description": "Carved wooden signs." },
+        { "name": "Ornaments", "description": "Carved ornaments to hang or set out." }
       ]
     },
     {
       "name": "Relief Prints",
       "description": "Blocks carved, inked, and pressed by hand — on paper, apparel, and patches. Every pull varies a little; that's the nature of block printing.",
       "subcategories": [
-        { "name": "Wall-Art", "description": "" },
-        { "name": "Apparel", "description": "" },
-        { "name": "Patches", "description": "" }
+        { "name": "Wall-Art", "description": "Block prints pulled by hand on paper, ready to frame." },
+        { "name": "Apparel", "description": "Carved designs hand block-printed onto shirts and more — printed to order." },
+        { "name": "Patches", "description": "Small block-printed fabric patches to sew or iron on." }
       ]
     },
     {
       "name": "Notebooks",
       "description": "Hand-bound and hand-sewn in a range of sizes, from pocket carry up to full-size journals. Made to order.",
       "subcategories": [
-        { "name": "Pocket (3×5)", "description": "" },
-        { "name": "Pocket (3.5×5.5)", "description": "" },
-        { "name": "A4 (8.3×11.7)", "description": "" },
-        { "name": "A5 (5.8×8.3)", "description": "" },
-        { "name": "A6 (4.1×5.8)", "description": "" },
-        { "name": "B5 (6.9×9.8)", "description": "" }
+        { "name": "Pocket (3×5)", "description": "Pocket carry — fits a shirt or jacket pocket." },
+        { "name": "Pocket (3.5×5.5)", "description": "Field-notes size — a touch larger, still pocketable." },
+        { "name": "A4 (8.3×11.7)", "description": "Full-size — room to sketch or take real notes." },
+        { "name": "A5 (5.8×8.3)", "description": "The everyday journal size — the most versatile." },
+        { "name": "A6 (4.1×5.8)", "description": "Compact — bigger than pocket, still easy to carry." },
+        { "name": "B5 (6.9×9.8)", "description": "Roomier than A5, smaller than A4 — a generous writing size." }
       ]
     }
   ],
@@ -56,15 +57,15 @@
       "buyUrl": "https://buy.stripe.com/REPLACE"
     },
     {
-      "id": "fox-3d-01",
-      "title": "3D-printed Fox",
+      "id": "hueforge-panel-01",
+      "title": "Custom HueForge Panel",
       "category": "3D Prints",
-      "subcategory": "Decor",
-      "price": "$35",
+      "subcategory": "Wall-Art",
+      "price": "$45",
       "image": "images/shop/placeholder.svg",
-      "description": "PLA, hand-finished and sealed.",
+      "description": "A custom image printed in layered filament color, built from tiling hex panels.",
       "type": "made-to-order",
-      "leadTime": "made to order — ships in ~5 days",
+      "leadTime": "made to order — ships in ~7 days",
       "status": "available",
       "buyUrl": "https://buy.stripe.com/REPLACE"
     },
