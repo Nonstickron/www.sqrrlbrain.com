@@ -5,7 +5,7 @@
       "name": "3D Prints",
       "description": "Printed and hand-finished here, then sealed. Made to order, so they don't sell out — they just take a few days to make.",
       "subcategories": [
-        { "name": "Wall-Art", "description": "Custom images printed in layered filament color, built up from tiling hex panels." },
+        { "name": "Wall-Art", "description": "Custom images printed in layered filament color, built up from tiling panels in your choice of shape." },
         { "name": "Signs & Nameplates", "description": "Custom desk nameplates and small signs — a name, a saying, whatever it should read." },
         { "name": "Bookmarks", "description": "Printed bookmarks to keep your place." },
         { "name": "Buttons", "description": "Small printed buttons." },
@@ -57,17 +57,17 @@
       "buyUrl": "https://buy.stripe.com/REPLACE"
     },
     {
-      "id": "hueforge-display-custom",
-      "title": "Custom HueForge Display",
+      "id": "image-display-custom",
+      "title": "3D-Printed Image Display",
       "category": "3D Prints",
       "subcategory": "Wall-Art",
-      "price": "$40/panel + $50 art fee",
+      "price": "$40/panel + $50 image fee",
       "image": "images/shop/placeholder.svg",
-      "description": "Your image printed in layered filament color across modular panels (up to 10×10 in each) that tile into one display. Every panel ships with the mounting bracket, command strips, and magnets already installed. Pricing is $40 per panel plus a one-time $50 art fee per image (one image per order) — set your panel count at checkout. After checkout, email your image and order number to hello@sqrrlbrain.com and I'll confirm it'll work as a HueForge before printing. Custom pieces are final, but if an image can't be made to work I'll refund it.",
+      "description": "Your photo or artwork turned into a 3D-printed display — built up from layers of colored filament for real depth and rich color (the technique's called HueForge). Individual panels, up to 10×10 in, tile into one piece in your choice of shape: hexagon, circle, or square. Each panel ships ready to hang — mounting bracket, command strips, and magnets installed. $40 per panel plus a one-time $50 image processing fee; pick your shape and panel count at checkout, then email your image + order number to hello@sqrrlbrain.com and I'll confirm it'll work before printing. Custom pieces are final, but if an image can't be made to work I'll refund it.",
       "type": "made-to-order",
       "leadTime": "made to order — ships in ~1–2 weeks",
       "status": "available",
-      "buyUrl": "https://buy.stripe.com/REPLACE_HUEFORGE"
+      "buyUrl": "https://buy.stripe.com/REPLACE_IMAGE_DISPLAY"
     },
     {
       "id": "tee-raven",
