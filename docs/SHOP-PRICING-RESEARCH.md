@@ -25,6 +25,11 @@ A market scan of comparable handmade / indie listings (mostly Etsy) for the curr
   - *Worked example:* 60 g PLA, ~5 hr print, ~30 min finishing → material ~$1.30 + machine ~$4, ×3 ≈ $16, + ~$8 finishing ≈ **$24**.
 - **⚠️ Model rights — a real gotcha:** only sell prints of models you **designed** or have **explicit commercial-use rights** to. Many free/hobby STLs (Thingiverse "non-commercial," lots of Patreon models "personal use only") are NOT licensed for resale — selling those risks takedowns or worse. Your own designs sidestep it entirely and let you charge for the design, too.
 
+### HueForge panels (custom filament image art) — your flagship 3D piece
+- **Market (finished, custom):** a standard ~8×8 in (200 mm) custom HueForge print runs **$40–60**; framed ~$50; small/simple ones $10–15; larger or multi-piece work **$60–90+** (a double-panel Star Wars piece hit $90). Digital STL files go $6–22, but that's a different product from a finished print.
+- **Your multi-hex-panel format:** price per unit and scale with size — a single small panel around the standard-print level, a multi-panel image toward the top of the range and beyond, since more panels = more filament, more print time, and more layout work.
+- **Add a per-order design/setup fee for custom images.** Converting a customer's photo into a good HueForge is real work every time — bake it into the price or list a "custom" tier. On your own site (not Etsy's floor), with that design work per order, **$50+ for a standard custom panel is fair**, more for multi-panel.
+
 ### Relief Prints — on paper
 - **Market:** $3–28+. Mini $3–5; standard small $10–17; larger/detailed (4×6+) $18–28+.
 - **Suggested for yours: $12–25** standard; **$25–40** for larger or numbered editions (signing + numbering earns the upper end).
