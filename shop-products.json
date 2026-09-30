@@ -3,7 +3,8 @@
   "categories": [
     { "name": "3D Prints",     "subcategories": ["Wall-Art", "Decor", "Storage", "Toys"] },
     { "name": "Carvings",      "subcategories": ["Figurines", "Signs", "Ornaments"] },
-    { "name": "Relief Prints", "subcategories": ["Wall-Art", "Apparel", "Patches"] }
+    { "name": "Relief Prints", "subcategories": ["Wall-Art", "Apparel", "Patches"] },
+    { "name": "Notebooks",     "subcategories": ["Pocket", "Journal", "Traveller's"] }
   ],
   "products": [
     {
@@ -48,6 +49,19 @@
         { "label": "L", "buyUrl": "https://buy.stripe.com/REPLACE_L" },
         { "label": "XL", "buyUrl": "https://buy.stripe.com/REPLACE_XL" }
       ]
+    },
+    {
+      "id": "notebook-pocket-01",
+      "title": "Hand-bound Pocket Notebook",
+      "category": "Notebooks",
+      "subcategory": "Pocket",
+      "price": "$18",
+      "image": "images/shop/placeholder.svg",
+      "description": "Hand-sewn pocket notebook, ~3.5 × 5.5 in.",
+      "type": "made-to-order",
+      "leadTime": "made to order — ships in ~5 days",
+      "status": "available",
+      "buyUrl": "https://buy.stripe.com/REPLACE"
     }
   ]
 }
