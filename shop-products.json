@@ -3,7 +3,7 @@
   "categories": [
     {
       "name": "3D Prints",
-      "description": "",
+      "description": "Printed and hand-finished here, then sealed. Made to order, so they don't sell out — they just take a few days to make.",
       "subcategories": [
         { "name": "Wall-Art", "description": "" },
         { "name": "Decor", "description": "" },
@@ -13,16 +13,16 @@
     },
     {
       "name": "Carvings",
-      "description": "",
+      "description": "Carved from wood by hand, one at a time. One of a kind — when a piece sells, it's gone.",
       "subcategories": [
-        { "name": "Figurines", "description": "" },
+        { "name": "Figurines", "description": "Small hand-carved figures, about 3 to 4 inches tall." },
         { "name": "Signs", "description": "" },
         { "name": "Ornaments", "description": "" }
       ]
     },
     {
       "name": "Relief Prints",
-      "description": "",
+      "description": "Blocks carved, inked, and pressed by hand — on paper, apparel, and patches. Every pull varies a little; that's the nature of block printing.",
       "subcategories": [
         { "name": "Wall-Art", "description": "" },
         { "name": "Apparel", "description": "" },
@@ -31,7 +31,7 @@
     },
     {
       "name": "Notebooks",
-      "description": "",
+      "description": "Hand-bound and hand-sewn in a range of sizes, from pocket carry up to full-size journals. Made to order.",
       "subcategories": [
         { "name": "Pocket (3×5)", "description": "" },
         { "name": "Pocket (3.5×5.5)", "description": "" },
