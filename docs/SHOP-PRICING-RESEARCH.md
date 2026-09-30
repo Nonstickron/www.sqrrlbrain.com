@@ -18,6 +18,12 @@ A market scan of comparable handmade / indie listings (mostly Etsy) for the curr
 ### 3D Prints (decor / toys / wall-art / storage)
 - **Market:** $1.75–16, most $8–10. **The price-sensitive category** — everyone has a printer, so the floor is low (articulated dragon $8, T-Rex $10, fidget set $16).
 - **Suggested for yours: $12–30** by size + finish. Your hand-finishing/sealing/curation is the differentiator, but don't expect carving margins here.
+- **Price each one by its inputs (they vary a lot):** **price ≈ (filament + print time) × ~3, plus finishing labor.**
+  - *Filament:* grams × ~$0.02/g for PLA (≈$1 per 50 g); resin runs 2–4× that, plus failed-print waste.
+  - *Print / machine time:* ~$0.50–1.50/hr for power + printer wear (a 6-hr print ≈ $3–9).
+  - *Finishing labor (the real driver):* your hands-on time — support removal, sanding, priming, paint, seal, pack — at a real hourly rate ($15–25/hr). This dominates a finished piece.
+  - *Worked example:* 60 g PLA, ~5 hr print, ~30 min finishing → material ~$1.30 + machine ~$4, ×3 ≈ $16, + ~$8 finishing ≈ **$24**.
+- **⚠️ Model rights — a real gotcha:** only sell prints of models you **designed** or have **explicit commercial-use rights** to. Many free/hobby STLs (Thingiverse "non-commercial," lots of Patreon models "personal use only") are NOT licensed for resale — selling those risks takedowns or worse. Your own designs sidestep it entirely and let you charge for the design, too.
 
 ### Relief Prints — on paper
 - **Market:** $3–28+. Mini $3–5; standard small $10–17; larger/detailed (4×6+) $18–28+.
