@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commission Policy — Sqrrlbrain Studio</title>
+  <meta name="description" content="How commissions work at Sqrrlbrain Studio: scope and quote, non-refundable deposit, proof approval, timelines, rights, and final custom sales." />
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 1000; padding: 10px 14px; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-radius: 4px; }
+    .skip-link:focus { left: 12px; top: 12px; outline: 2px solid var(--accent); outline-offset: 2px; }
+    :root {
+      --ink: #3a1a00; --brown-mid: #7a4520; --brown-light: #b88c5a; --paper: #faf6f0; --warm: #f2ebe0;
+      --rule: rgba(58,26,0,.1); --rule-soft: rgba(58,26,0,.05); --accent: #c8421a; --warm-yellow: #f4bc43;
+      --mono: 'DM Mono', monospace; --serif: 'Lora', serif; --sans: 'DM Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 300; overflow-x: hidden; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 3rem; border-bottom: 1px solid var(--rule); position: relative; }
+    .logo-wrap img { height: 46px; width: auto; display: block; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--brown-mid); transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-nav { display: none; position: absolute; top: 100%; right: 1rem; min-width: 260px; max-width: calc(100vw - 2rem); background: var(--paper); border: 1px solid rgba(58,26,0,.12); box-shadow: 0 12px 28px rgba(58,26,0,.10); z-index: 200; padding: 1rem 1.5rem 1.5rem; flex-direction: column; gap: 0; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-section { font-family: var(--mono); font-size: .56rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown-light); padding: .8rem 0 .3rem; }
+    .mobile-nav a { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; padding: .55rem 0; display: block; border-bottom: 1px solid rgba(58,26,0,.05); }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--ink); }
+
+    .page-wrap { max-width: 64ch; margin: 0 auto; padding: 4rem 2rem 5rem; }
+    .eyebrow { font-family: var(--mono); font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown-light); margin-bottom: 1.2rem; }
+    h1 { font-family: var(--serif); font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 700; line-height: 1.1; letter-spacing: -.02em; margin-bottom: .7rem; }
+    .lede { font-size: 1.05rem; line-height: 1.75; color: var(--brown-mid); margin-bottom: 2rem; padding-bottom: 1.4rem; border-bottom: 1px solid var(--rule-soft); }
+    .policy h2 { font-family: var(--serif); font-size: 1.35rem; font-weight: 700; color: var(--ink); margin: 2.2rem 0 .6rem; }
+    .policy p { font-size: 1rem; line-height: 1.75; color: var(--ink); margin-bottom: 1rem; }
+    .policy ol { margin: 0 0 1rem 1.2rem; }
+    .policy li { font-size: 1rem; line-height: 1.7; color: var(--ink); margin-bottom: .5rem; }
+    .policy a { color: var(--accent); text-decoration: none; }
+    .policy a:hover { color: var(--ink); }
+    .policy .updated { font-family: var(--mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-light); margin-top: 2.6rem; padding-top: 1.2rem; border-top: 1px solid var(--rule-soft); }
+
+    footer { display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 3rem; border-top: 1px solid var(--rule); }
+    footer p, footer a { font-family: var(--mono); font-size: .62rem; letter-spacing: .1em; color: var(--brown-light); text-transform: uppercase; text-decoration: none; }
+    footer a:hover { color: var(--ink); }
+    @media (max-width: 760px) {
+      header { padding: 1rem 1.4rem; }
+      .page-wrap { padding: 2.4rem 1.4rem 3rem; }
+      footer { padding: 1.2rem 1.4rem; flex-direction: column; gap: .6rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header>
+    <div class="logo-wrap"><a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a></div>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="mobile-nav" id="mobile-nav">
+      <span class="mobile-nav-section">Navigate</span>
+      <a href="/">Home</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/services.html">Services</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/work.html">Work</a>
+      <a href="/notes.html">Notes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+  <div class="page-wrap">
+    <p class="eyebrow">Commission Policy</p>
+    <h1>Custom work, start to finish.</h1>
+    <p class="lede">A commission is a piece made specifically for you — a carving, a relief print, something cut for a particular spot. Here's how one runs, so we're on the same page before anything starts.</p>
+
+    <div class="policy">
+      <h2>How it works</h2>
+      <ol>
+        <li>You tell me what you have in mind through the <a href="/contact.html?subject=Commission%20inquiry">commission inquiry</a>.</li>
+        <li>I come back with a scope, a price, and a rough timeline.</li>
+        <li>You pay a deposit — that holds your spot on the bench and I begin.</li>
+        <li>I share a proof or checkpoint for your approval before I finish.</li>
+        <li>Once it's approved and done, the balance is due, then I ship it.</li>
+      </ol>
+
+      <h2>Deposit</h2>
+      <p>A deposit is required to start, and it's <strong>non-refundable once work begins</strong>. It reserves your place in the queue and covers the materials and time already spent — much of which can't be reused on someone else's piece.</p>
+
+      <h2>Commissions are final</h2>
+      <p>Because a commission is made for you specifically, completed custom work can't be refunded, returned, or exchanged. This is why the proof step matters — you sign off before I take it to the finish.</p>
+
+      <h2>Approval &amp; revisions</h2>
+      <p>We'll settle the scope up front so there are no surprises. I'll share a proof at a sensible checkpoint, and reasonable adjustments at that stage are part of the process. Changes that go beyond the agreed scope — a new direction, added elements — may add cost and time, and I'll tell you before doing them, never after.</p>
+
+      <h2>Timeline</h2>
+      <p>Any date I give is an honest estimate, not a guarantee. Handmade work moves at the speed of the material, and I'd rather it be right than rushed. I'll keep you posted if something shifts.</p>
+
+      <h2>Rights</h2>
+      <p>You own the physical piece. I keep the right to photograph the finished work and show it as part of my portfolio unless we agree otherwise in writing beforehand.</p>
+
+      <h2>Damaged in transit</h2>
+      <p>If your finished commission arrives damaged, email me at <a href="mailto:hello@sqrrlbrain.com">hello@sqrrlbrain.com</a> within 7 days of delivery with a photo and I'll make it right.</p>
+
+      <h2>Starting one</h2>
+      <p>Ready, or just curious what's possible? Send me the idea through the <a href="/contact.html?subject=Commission%20inquiry">commission inquiry</a> and we'll go from there. Shop purchases have their own terms — see the <a href="/shop-policy.html">Shop Policy</a>.</p>
+
+      <p class="updated">Last updated 2026-09-30 · Sqrrlbrain Studio LLC, Edgewater, Florida</p>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    <img src="images/logo-website.svg" alt="Sqrrlbrain.com" style="height:28px;width:auto;opacity:.45;" />
+    <span><a href="/terms.html">Terms</a> &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/support.html">Support</a></span>
+  </footer>
+
+  <script>
+    (function(){
+      const hb = document.getElementById('hamburger'); const mn = document.getElementById('mobile-nav');
+      if (hb && mn) hb.addEventListener('click', () => { hb.classList.toggle('open'); mn.classList.toggle('open'); });
+    })();
+  </script>
+</body>
+</html>
