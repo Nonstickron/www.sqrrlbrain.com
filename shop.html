@@ -98,11 +98,14 @@
     .shop-card { border: 1px solid var(--rule); display: flex; flex-direction: column; background: var(--warm); transition: border-color .15s; }
     .shop-card:hover { border-color: var(--accent); }
     .shop-card.is-sold { opacity: .72; }
+    .shop-card-media { display: block; }
     .shop-card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; background: var(--paper); }
+    .shop-title-link { text-decoration: none; color: inherit; }
+    .shop-title-link:hover .shop-title { color: var(--accent); }
     .shop-card-body { padding: 1rem 1.1rem 1.3rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
     .shop-cat { font-family: var(--mono); font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brown-light); }
     .shop-title { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; line-height: 1.2; color: var(--ink); }
-    .shop-desc { font-size: .9rem; line-height: 1.55; color: var(--brown-mid); }
+    .shop-desc { font-size: .9rem; line-height: 1.55; color: var(--brown-mid); display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
     .shop-price { font-family: var(--mono); font-size: .95rem; color: var(--ink); }
     .shop-badge { font-family: var(--mono); font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); }
     .shop-badge.sold { color: var(--accent); }
@@ -252,12 +255,12 @@
       } else {
         action = `<a class="shop-btn" target="_blank" rel="noopener" href="${p.buyUrl}">Buy</a>`;
       }
-      return `<div class="shop-card${sold ? ' is-sold' : ''}" data-status="${sold ? 'sold' : 'available'}" data-category="${p.category || ''}" data-subcategory="${p.subcategory || ''}">
-        <img src="${p.image}" alt="${p.title}" loading="lazy" />
+      return `<div class="shop-card${sold ? ' is-sold' : ''}" data-status="${sold ? 'sold' : 'available'}" data-buyable="${hasReal ? 'true' : 'false'}" data-category="${p.category || ''}" data-subcategory="${p.subcategory || ''}">
+        <a class="shop-card-media" href="product.html?id=${p.id}"><img src="${(p.gallery && p.gallery.length) ? p.gallery[0] : p.image}" alt="${p.title}" loading="lazy" /></a>
         <div class="shop-card-body">
           <span class="shop-cat">${p.category || ''}${p.subcategory ? ' &middot; ' + p.subcategory : ''}</span>
-          <span class="shop-title">${p.title}</span>
-          <p class="shop-desc">${p.description || ''}</p>
+          <a class="shop-title-link" href="product.html?id=${p.id}"><span class="shop-title">${p.title}</span></a>
+          <p class="shop-desc">${p.blurb || p.description || ''}</p>
           <span class="shop-price">${p.price}</span>
           ${badge}
           ${action}
@@ -307,7 +310,7 @@
         cards.forEach(c => {
           const okCat = state.cat === 'all' || c.dataset.category === state.cat;
           const okSub = state.sub === 'all' || c.dataset.subcategory === state.sub;
-          const okAvail = !state.availableOnly || c.dataset.status !== 'sold';
+          const okAvail = !state.availableOnly || (c.dataset.status !== 'sold' && c.dataset.buyable === 'true');
           c.style.display = (okCat && okSub && okAvail) ? '' : 'none';
         });
         let empty = grid.querySelector('.shop-empty');

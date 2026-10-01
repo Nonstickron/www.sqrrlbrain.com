@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Sqrrlbrain Studio</title>
+  <meta name="description" content="A hand-made or made-to-order piece from Sqrrlbrain Studio. Made and shipped by Ronny Goodrich. Free shipping in the US." />
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 1000; padding: 10px 14px; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; border-radius: 4px; }
+    .skip-link:focus { left: 12px; top: 12px; outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    :root {
+      --ink:         #3a1a00;
+      --brown-mid:   #7a4520;
+      --brown-light: #b88c5a;
+      --paper:       #faf6f0;
+      --warm:        #f2ebe0;
+      --rule:        rgba(58,26,0,.1);
+      --rule-soft:   rgba(58,26,0,.05);
+      --error:       #8b2a18;
+      --success:     #386038;
+      --accent:      #c8421a;
+      --warm-yellow: #f4bc43;
+      --mono:        'DM Mono', monospace;
+      --serif:       'Lora', serif;
+      --sans:        'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; background: var(--paper); }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+    /* Brand grain — subtle fixed noise overlay (see brand guide) */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      border-bottom: 1px solid var(--rule);
+      position: relative;
+    }
+    .logo-wrap img { height: 46px; width: auto; display: block; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: .4rem; }
+    .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--brown-mid); transition: all .25s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+    .mobile-nav { display: none; position: absolute; top: 100%; right: 1rem; min-width: 260px; max-width: calc(100vw - 2rem); background: var(--paper); border: 1px solid rgba(58,26,0,.12); box-shadow: 0 12px 28px rgba(58,26,0,.10); z-index: 200; padding: 1rem 1.5rem 1.5rem; flex-direction: column; gap: 0; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav-section { font-family: var(--mono); font-size: .56rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown-light); padding: .8rem 0 .3rem; border-top: 1px solid rgba(58,26,0,.06); margin-top: .4rem; }
+    .mobile-nav-section:first-child { border-top: none; margin-top: 0; }
+    .mobile-nav a { font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; padding: .55rem 0; display: block; border-bottom: 1px solid rgba(58,26,0,.05); }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--ink); }
+
+    .page-wrap { max-width: 1040px; margin: 0 auto; padding: 3rem 3rem 5rem; }
+
+    .breadcrumb { font-family: var(--mono); font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brown-light); margin-bottom: 2rem; }
+    .breadcrumb a { color: var(--brown-mid); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+    .breadcrumb span { color: var(--brown-light); }
+
+    /* Two-column detail: media + info */
+    .product-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
+    .product-media img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; background: var(--paper); border: 1px solid var(--rule); }
+    .product-thumbs { display: flex; gap: .5rem; margin-top: .6rem; flex-wrap: wrap; }
+    .product-thumb { width: 60px; height: 75px; object-fit: cover; cursor: pointer; border: 1px solid var(--rule); background: var(--paper); transition: border-color .15s; }
+    .product-thumb:hover { border-color: var(--brown-mid); }
+    .product-thumb.active { border-color: var(--accent); }
+
+    .product-eyebrow { font-family: var(--mono); font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; color: var(--brown-light); margin-bottom: .8rem; }
+    .product-title { font-family: var(--serif); font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 700; line-height: 1.12; letter-spacing: -.02em; color: var(--ink); margin-bottom: .7rem; }
+    .product-price { font-family: var(--mono); font-size: 1.15rem; color: var(--ink); margin-bottom: 1rem; }
+    .product-badge { display: inline-block; font-family: var(--mono); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); border: 1px solid var(--rule); padding: .35rem .7rem; margin-bottom: 1.4rem; }
+    .product-badge.sold { color: var(--accent); border-color: var(--accent); }
+    .product-desc { font-size: 1rem; line-height: 1.75; color: var(--ink); margin-bottom: 1.2rem; }
+    .product-details p { font-size: .98rem; line-height: 1.75; color: var(--brown-mid); margin-bottom: 1rem; }
+    .product-details { margin-bottom: 1.4rem; padding-top: 1.2rem; border-top: 1px solid var(--rule-soft); }
+
+    .product-variant-label { display: block; font-family: var(--mono); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--brown-mid); margin-bottom: .5rem; }
+    .shop-sizes { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .shop-size { font-family: var(--mono); font-size: .75rem; border: 1px solid var(--rule); padding: .4rem .7rem; cursor: pointer; background: var(--paper); color: var(--brown-mid); }
+    .shop-size.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .shop-btn { font-family: var(--mono); font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--paper); background: var(--accent); border: none; padding: .9rem 1.8rem; cursor: pointer; text-decoration: none; display: inline-block; transition: background .2s; }
+    .shop-btn:hover { background: var(--ink); }
+    .shop-btn.sold { background: var(--brown-light); pointer-events: none; cursor: default; }
+
+    .product-fine { margin-top: 2rem; padding-top: 1.4rem; border-top: 1px solid var(--rule-soft); }
+    .product-fine p { font-size: .88rem; line-height: 1.65; color: var(--brown-mid); margin-bottom: .8rem; }
+    .product-fine a { color: var(--accent); text-decoration: none; }
+    .product-fine a:hover { color: var(--ink); }
+    .product-fineprint { font-family: var(--mono); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; }
+    .product-fineprint a { color: var(--brown-light); text-decoration: none; }
+    .product-fineprint a:hover { color: var(--accent); }
+
+    .back-link { display: inline-block; margin-top: 2.6rem; font-family: var(--mono); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--brown-mid); text-decoration: none; }
+    .back-link:hover { color: var(--accent); }
+
+    .status { font-family: var(--mono); font-size: .76rem; letter-spacing: .04em; line-height: 1.5; color: var(--brown-mid); }
+    .status.error { color: var(--error); }
+
+    footer { display: flex; justify-content: space-between; align-items: center; padding: 1.6rem 3rem; border-top: 1px solid var(--rule); }
+    footer p, footer a { font-family: var(--mono); font-size: .62rem; letter-spacing: .1em; color: var(--brown-light); text-transform: uppercase; text-decoration: none; }
+    footer a:hover { color: var(--ink); }
+
+    @media (max-width: 760px) {
+      header { padding: 1rem 1.4rem; }
+      .page-wrap { padding: 2rem 1.4rem 3rem; }
+      .product-detail { grid-template-columns: 1fr; gap: 1.8rem; }
+      footer { padding: 1.2rem 1.4rem; flex-direction: column; gap: .6rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+    <symbol id="acorn" viewBox="0 0 24 24">
+      <g transform="rotate(11 12 16)" fill="currentColor">
+        <rect x="11.3" y="2.6" width="1.4" height="2.2" rx=".5"/>
+        <path d="M4 8.6 Q4 4.8 12 4.8 Q20 4.8 20 8.6 L19.3 10.4 Q17.3 11 15.3 10.4 Q13.5 11 12 10.4 Q10.5 11 8.7 10.4 Q6.7 11 4.7 10.4 Z"/>
+        <path d="M5.5 10.3 Q5 16 8 19.5 Q10 22 12 22.5 Q14 22 16 19.5 Q19 16 18.5 10.3 Z"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="logo-wrap">
+      <a href="/"><img src="images/logo-horizontal.svg" alt="Sqrrlbrain Studio" /></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-nav" id="mobile-nav">
+      <span class="mobile-nav-section">Navigate</span>
+      <a href="/">Home</a>
+      <a href="/shop.html">Shop</a>
+      <a href="/services.html">Services</a>
+      <a href="/projects.html">Projects</a>
+      <a href="/work.html">Work</a>
+      <a href="/notes.html">Notes</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <script>
+    (function(){
+      const hb = document.getElementById('hamburger');
+      const mn = document.getElementById('mobile-nav');
+      if (hb && mn) hb.addEventListener('click', () => { hb.classList.toggle('open'); mn.classList.toggle('open'); });
+    })();
+  </script>
+
+  <div class="page-wrap">
+    <div id="product-root"><p class="status">Loading&hellip;</p></div>
+  </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
+    <img src="images/logo-website.svg" alt="Sqrrlbrain.com" style="height:28px;width:auto;opacity:.45;" />
+    <span><a href="/terms.html">Terms</a> &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/support.html">Support</a> &middot; <a href="https://instagram.com/sqrrlbrain" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram @sqrrlbrain" style="display:inline-flex;align-items:center;vertical-align:middle;"><img src="images/insta-icon_vermillion.svg" alt="Instagram" width="18" height="18" style="vertical-align:middle;display:inline-block;" /></a><a href="https://discord.gg/HTfVhtHUHF" target="_blank" rel="noopener" aria-label="Discord" title="Sqrrlbrain Discord" style="display:inline-flex;align-items:center;vertical-align:middle;margin-left:6px;"><img src="images/discord-icon_vermillion.svg" alt="Discord" width="18" height="18" style="vertical-align:middle;display:inline-block;" /></a></span>
+  </footer>
+
+  <script>
+  (async function () {
+    const root = document.getElementById('product-root');
+    // A URL is "ready" only once a real Stripe link replaces the REPLACE placeholder.
+    const ready = (u) => !!u && !u.includes('REPLACE');
+    const id = new URLSearchParams(location.search).get('id');
+
+    function actionBlock(p) {
+      const sold = p.status === 'sold';
+      const hasReal = (p.variants && p.variants.length) ? p.variants.some(v => ready(v.buyUrl)) : ready(p.buyUrl);
+      if (sold) return '<span class="shop-btn sold">Sold</span>';
+      if (!hasReal) return '<span class="shop-btn sold">Coming soon</span>';
+      if (p.variants && p.variants.length) {
+        const opts = p.variants.map((v, i) =>
+          `<button type="button" class="shop-size${i === 0 ? ' active' : ''}" data-url="${v.buyUrl}">${v.label}</button>`).join('');
+        return `<span class="product-variant-label">${p.variantLabel || 'Options'}</span>
+                <div class="shop-sizes" data-variant-group>${opts}</div>
+                <a class="shop-btn" data-buy target="_blank" rel="noopener" href="${p.variants[0].buyUrl}">Buy</a>`;
+      }
+      return `<a class="shop-btn" target="_blank" rel="noopener" href="${p.buyUrl}">Buy</a>`;
+    }
+
+    function mediaBlock(p) {
+      const imgs = (p.gallery && p.gallery.length) ? p.gallery : [p.image];
+      const main = imgs[0];
+      const thumbs = imgs.length > 1
+        ? `<div class="product-thumbs">${imgs.map((src, i) =>
+            `<img class="product-thumb${i === 0 ? ' active' : ''}" src="${src}" data-full="${src}" alt="${p.title} view ${i + 1}" loading="lazy" />`).join('')}</div>`
+        : '';
+      return `<div class="product-media">
+        <img id="product-main-img" src="${main}" alt="${p.title}" />
+        ${thumbs}
+      </div>`;
+    }
+
+    function detailsBlock(p) {
+      if (!p.details) return '';
+      const paras = Array.isArray(p.details) ? p.details : [p.details];
+      return `<div class="product-details">${paras.map(t => `<p>${t}</p>`).join('')}</div>`;
+    }
+
+    function badgeBlock(p) {
+      if (p.status === 'sold') return '<span class="product-badge sold">Sold</span>';
+      if (p.type === 'made-to-order' && p.leadTime) return `<span class="product-badge">${p.leadTime}</span>`;
+      return '';
+    }
+
+    function detail(p) {
+      const crumb = `<a href="/shop.html">Shop</a> <span>&rsaquo;</span> ${p.category || ''}${p.subcategory ? ' <span>&rsaquo;</span> ' + p.subcategory : ''}`;
+      return `
+        <nav class="breadcrumb">${crumb}</nav>
+        <div class="product-detail">
+          ${mediaBlock(p)}
+          <div class="product-info">
+            <p class="product-eyebrow">${p.category || ''}${p.subcategory ? ' &middot; ' + p.subcategory : ''}</p>
+            <h1 class="product-title">${p.title}</h1>
+            <p class="product-price">${p.price || ''}</p>
+            ${badgeBlock(p)}
+            <p class="product-desc">${p.description || ''}</p>
+            ${detailsBlock(p)}
+            ${actionBlock(p)}
+            <div class="product-fine">
+              <p>Handmade or made-to-order &mdash; expect natural variation and small imperfections. That&rsquo;s the nature of the work, not a defect.</p>
+              <p class="product-fineprint"><a href="/shop-policy.html">Shop policy</a> &middot; <a href="/commission-policy.html">Commissions</a> &middot; <a href="/contact.html">Questions?</a></p>
+            </div>
+          </div>
+        </div>
+        <a class="back-link" href="/shop.html">&larr; Back to shop</a>`;
+    }
+
+    function notFound() {
+      return `<nav class="breadcrumb"><a href="/shop.html">Shop</a></nav>
+        <p class="status">That piece isn&rsquo;t here &mdash; it may have sold or the link&rsquo;s off.</p>
+        <a class="back-link" href="/shop.html">&larr; Back to shop</a>`;
+    }
+
+    function wire(scope) {
+      scope.querySelectorAll('[data-variant-group]').forEach(group => {
+        const buy = group.parentElement.querySelector('[data-buy]');
+        group.querySelectorAll('.shop-size').forEach(btn => btn.addEventListener('click', () => {
+          group.querySelectorAll('.shop-size').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          if (buy) buy.href = btn.dataset.url;
+        }));
+      });
+      const main = scope.querySelector('#product-main-img');
+      scope.querySelectorAll('.product-thumb').forEach(t => t.addEventListener('click', () => {
+        scope.querySelectorAll('.product-thumb').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        if (main) main.src = t.dataset.full;
+      }));
+    }
+
+    if (!id) { root.innerHTML = notFound(); return; }
+    try {
+      const res = await fetch('shop-products.json', { cache: 'no-store' });
+      const data = await res.json();
+      const p = (data.products || []).find(x => x.id === id);
+      if (!p) { root.innerHTML = notFound(); return; }
+      document.title = `${p.title} — Sqrrlbrain Studio`;
+      root.innerHTML = detail(p);
+      wire(root);
+    } catch (e) {
+      console.error(e);
+      root.innerHTML = '<p class="status error">Couldn’t load this product right now. Please refresh, or email hello@sqrrlbrain.com.</p>';
+    }
+  })();
+  </script>
+
+</body>
+</html>
