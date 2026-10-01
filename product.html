@@ -81,7 +81,13 @@
 
     /* Two-column detail: media + info */
     .product-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 3rem; align-items: start; }
-    .product-media img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; background: var(--paper); border: 1px solid var(--rule); }
+    .product-media img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; background: var(--paper); border: 1px solid var(--rule); cursor: zoom-in; }
+
+    .lightbox { position: fixed; inset: 0; z-index: 10000; display: none; align-items: center; justify-content: center; background: rgba(26,12,0,.88); padding: 4vh 4vw; cursor: zoom-out; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 92vw; max-height: 92vh; object-fit: contain; border: 1px solid rgba(250,246,240,.15); box-shadow: 0 24px 70px rgba(0,0,0,.55); }
+    .lightbox-close { position: absolute; top: 1rem; right: 1.4rem; background: none; border: none; color: var(--paper); font-size: 2.6rem; line-height: 1; cursor: pointer; font-family: var(--sans); padding: .1rem .5rem; opacity: .85; }
+    .lightbox-close:hover { color: var(--accent); opacity: 1; }
     .product-thumbs { display: flex; gap: .5rem; margin-top: .6rem; flex-wrap: wrap; }
     .product-thumb { width: 60px; height: 75px; object-fit: cover; cursor: pointer; border: 1px solid var(--rule); background: var(--paper); transition: border-color .15s; }
     .product-thumb:hover { border-color: var(--brown-mid); }
@@ -179,6 +185,11 @@
   </div>
 
   </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Expanded image">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
 
   <footer>
     <p>&copy; 2026 Sqrrlbrain Studio LLC &middot; Edgewater, Florida</p>
@@ -279,6 +290,18 @@
       }));
     }
 
+    function setupLightbox(scope) {
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      if (!lb || !lbImg) return;
+      const main = scope.querySelector('#product-main-img');
+      const close = () => { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); lbImg.src = ''; document.body.style.overflow = ''; };
+      const open = () => { if (!main) return; lbImg.src = main.src; lbImg.alt = main.alt || ''; lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; };
+      if (main) main.addEventListener('click', open);
+      lb.addEventListener('click', close);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    }
+
     if (!id) { root.innerHTML = notFound(); return; }
     try {
       const res = await fetch('shop-products.json', { cache: 'no-store' });
@@ -288,6 +311,7 @@
       document.title = `${p.title} — Sqrrlbrain Studio`;
       root.innerHTML = detail(p);
       wire(root);
+      setupLightbox(root);
     } catch (e) {
       console.error(e);
       root.innerHTML = '<p class="status error">Couldn’t load this product right now. Please refresh, or email hello@sqrrlbrain.com.</p>';
