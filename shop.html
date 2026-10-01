@@ -278,6 +278,14 @@
       const cats = data.categories || [];
       const products = data.products || [];
 
+      // Order: buyable first, then Coming soon, then Sold (stable within each group).
+      const rank = (p) => {
+        if (p.status === 'sold') return 2;
+        const hasReal = (p.variants && p.variants.length) ? p.variants.some(v => ready(v.buyUrl)) : ready(p.buyUrl);
+        return hasReal ? 0 : 1;
+      };
+      products.sort((a, b) => rank(a) - rank(b));
+
       if (!products.length) {
         grid.innerHTML = '<p class="status">New pieces coming soon.</p>';
       } else {
