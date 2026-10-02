@@ -276,15 +276,14 @@
       if (ready(data.tipUrl)) tip.href = data.tipUrl; else tip.closest('.shop-section').style.display = 'none';
 
       const cats = data.categories || [];
-      const products = data.products || [];
+      const hasReal = (p) => (p.variants && p.variants.length) ? p.variants.some(v => ready(v.buyUrl)) : ready(p.buyUrl);
+      // "Ready" = something a visitor can act on: a live buy link, or a sold piece kept on display.
+      // Anything else (placeholder / not-yet-listed) stays in the file but is hidden from the shop.
+      const isReady = (p) => p.status === 'sold' || hasReal(p);
+      const products = (data.products || []).filter(isReady);
 
-      // Order: buyable first, then Coming soon, then Sold (stable within each group).
-      const rank = (p) => {
-        if (p.status === 'sold') return 2;
-        const hasReal = (p.variants && p.variants.length) ? p.variants.some(v => ready(v.buyUrl)) : ready(p.buyUrl);
-        return hasReal ? 0 : 1;
-      };
-      products.sort((a, b) => rank(a) - rank(b));
+      // Order: available first, then Sold (stable within each group).
+      products.sort((a, b) => (a.status === 'sold' ? 1 : 0) - (b.status === 'sold' ? 1 : 0));
 
       if (!products.length) {
         grid.innerHTML = '<p class="status">New pieces coming soon.</p>';
@@ -310,8 +309,18 @@
         `<button type="button" class="filter-chip ${cls}${active ? ' active' : ''}" data-value="${value}">${label}</button>`;
       const state = { cat: 'all', sub: 'all', availableOnly: false };
 
-      catFilter.insertAdjacentHTML('afterbegin',
-        chip('cat-chip', 'All', 'all', true) + cats.map(c => chip('cat-chip', c.name, c.name, false)).join(''));
+      // Only surface categories that actually have a ready product; drop filters with nothing to do.
+      const visibleCats = cats.filter(c => products.some(p => p.category === c.name));
+      const hasSold = products.some(p => p.status === 'sold');
+      if (visibleCats.length >= 2) {
+        catFilter.insertAdjacentHTML('afterbegin',
+          chip('cat-chip', 'All', 'all', true) + visibleCats.map(c => chip('cat-chip', c.name, c.name, false)).join(''));
+      }
+      if (!hasSold) availToggle.style.display = 'none';
+      if (visibleCats.length < 2 && !hasSold) {
+        const filters = document.querySelector('.shop-filters');
+        if (filters) filters.style.display = 'none';
+      }
 
       function apply() {
         const cards = grid.querySelectorAll('.shop-card');
@@ -332,8 +341,10 @@
       function renderSubcats() {
         const catObj = cats.find(c => c.name === state.cat);
         const subs = (catObj && catObj.subcategories) || [];
-        if (state.cat === 'all' || !subs.length) { subFilter.hidden = true; subFilter.innerHTML = ''; return; }
-        subFilter.innerHTML = chip('sub-chip', 'All', 'all', true) + subs.map(s => chip('sub-chip', s.name, s.name, false)).join('');
+        // Only subcategories that have a ready product in the current category.
+        const subsShown = subs.filter(s => products.some(p => p.category === state.cat && p.subcategory === s.name));
+        if (state.cat === 'all' || subsShown.length < 2) { subFilter.hidden = true; subFilter.innerHTML = ''; return; }
+        subFilter.innerHTML = chip('sub-chip', 'All', 'all', true) + subsShown.map(s => chip('sub-chip', s.name, s.name, false)).join('');
         subFilter.hidden = false;
       }
 
