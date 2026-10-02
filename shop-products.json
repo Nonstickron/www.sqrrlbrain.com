@@ -89,21 +89,6 @@
       "buyUrl": "https://buy.stripe.com/REPLACE_CIRCLE"
     },
     {
-      "id": "image-display-square",
-      "title": "Custom Square Image Display",
-      "category": "3D Prints",
-      "subcategory": "Wall-Art",
-      "price": "$40/panel + $35 image fee",
-      "image": "images/shop/placeholder.svg",
-      "gallery": [],
-      "blurb": "Your image across square panels — a clean grid tiling. Coming soon.",
-      "description": "Your photo or artwork turned into a 3D-printed display — built up from layers of colored filament for real depth and rich color (the technique's called HueForge). The result is a bold, artistic take on your image's color — not a literal photo print. Square panels tile into a clean, continuous grid. Each panel ships ready to hang — mounting bracket, command strips, and magnets installed. $40 per panel plus a one-time $35 image processing fee; set your panel count at checkout, then email your image + order number to hello@sqrrlbrain.com and I'll confirm it'll print well before I start. Custom pieces are final, but if an image can't be made to work I'll refund it.",
-      "type": "made-to-order",
-      "leadTime": "made to order — ships in ~1–2 weeks",
-      "status": "available",
-      "buyUrl": "https://buy.stripe.com/REPLACE_SQUARE"
-    },
-    {
       "id": "tee-raven",
       "title": "Raven Relief Tee",
       "category": "Relief Prints",
