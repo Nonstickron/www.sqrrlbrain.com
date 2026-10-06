@@ -109,6 +109,8 @@
     .shop-price { font-family: var(--mono); font-size: .95rem; color: var(--ink); }
     .shop-badge { font-family: var(--mono); font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-mid); }
     .shop-badge.sold { color: var(--accent); }
+    .shop-badge.draft { display: inline-block; color: var(--paper); background: var(--accent); padding: .15rem .5rem; letter-spacing: .12em; }
+    .preview-banner { background: var(--warm-yellow); color: var(--ink); font-family: var(--mono); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; padding: .7rem 1rem; margin-bottom: 1.6rem; border: 1px solid var(--ink); text-align: center; }
     .shop-sizes { display: flex; gap: .4rem; flex-wrap: wrap; }
     .shop-size { font-family: var(--mono); font-size: .7rem; border: 1px solid var(--rule); padding: .35rem .6rem; cursor: pointer; background: var(--paper); color: var(--brown-mid); }
     .shop-size.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
@@ -235,6 +237,8 @@
     const grid = document.getElementById('shop-grid');
     // A URL is "ready" only once a real Stripe link replaces the REPLACE placeholder.
     const ready = (u) => !!u && !u.includes('REPLACE');
+    // Preview/staging mode (unlisted): shop.html?preview reveals not-yet-live products as drafts.
+    const previewMode = new URLSearchParams(location.search).has('preview');
 
     function card(p) {
       const sold = p.status === 'sold';
@@ -242,6 +246,7 @@
         ? '<span class="shop-badge sold">Sold</span>'
         : (p.type === 'made-to-order' && p.leadTime) ? `<span class="shop-badge">${p.leadTime}</span>` : '';
       const hasReal = (p.variants && p.variants.length) ? p.variants.some(v => ready(v.buyUrl)) : ready(p.buyUrl);
+      const draftBadge = (previewMode && !sold && !hasReal) ? '<span class="shop-badge draft">Draft</span>' : '';
       let action;
       if (sold) {
         action = '<span class="shop-btn sold">Sold</span>';
@@ -262,7 +267,7 @@
           <a class="shop-title-link" href="product.html?id=${p.id}"><span class="shop-title">${p.title}</span></a>
           <p class="shop-desc">${p.blurb || p.description || ''}</p>
           <span class="shop-price">${p.price}</span>
-          ${badge}
+          ${draftBadge}${badge}
           ${action}
         </div>
       </div>`;
@@ -280,10 +285,15 @@
       // "Ready" = something a visitor can act on: a live buy link, or a sold piece kept on display.
       // Anything else (placeholder / not-yet-listed) stays in the file but is hidden from the shop.
       const isReady = (p) => p.status === 'sold' || hasReal(p);
-      const products = (data.products || []).filter(isReady);
+      const products = previewMode ? (data.products || []).slice() : (data.products || []).filter(isReady);
 
       // Order: available first, then Sold (stable within each group).
       products.sort((a, b) => (a.status === 'sold' ? 1 : 0) - (b.status === 'sold' ? 1 : 0));
+
+      if (previewMode) {
+        grid.insertAdjacentHTML('beforebegin',
+          '<div class="preview-banner">Preview mode — showing staged &amp; unlisted products (not the public view). &ldquo;Draft&rdquo; = no live buy link yet.</div>');
+      }
 
       if (!products.length) {
         grid.innerHTML = '<p class="status">New pieces coming soon.</p>';
